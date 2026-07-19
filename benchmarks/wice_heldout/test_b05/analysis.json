@@ -1,0 +1,2681 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 5 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section or a specific batch of data.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "In only 5 games, Watt finished with 11 tackles and 2 passes defended.",
+   "markers": [
+    "jjwatt"
+   ],
+   "paper_ids": [
+    "fc886923259fe0e386faf44c175ef22d3f22d216"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8589,
+   "evidence": {
+    "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+    "source_title": "jjwatt",
+    "supported": false,
+    "sentence": "#InjuriesSuck @JJWatt \u00e2\u0080\u0094 TJ Watt (@_TJWatt) October 9, 2017 It is a great shame that one of the league's transcendent talents and one of its great ambassadors won't be able to finish out a campaign, on a playoff contender no less, for the second straight season.",
+    "page": 1,
+    "snippet": "#InjuriesSuck @JJWatt \u00e2\u0080\u0094 TJ Watt (@_TJWatt) October",
+    "cosine": 0.8589,
+    "reason": "The passage does not contain any statistics about J.J. Watt's performance in games, including tackles or passes defended.",
+    "window": "Heartbroken For You Brother. #InjuriesSuck @JJWatt \u00e2\u0080\u0094 TJ Watt (@_TJWatt) October 9, 2017 It is a great shame that one of the league's transcendent talents and one of its great ambassadors won't be able to finish out a campaign, on a playoff contender no less, for the second straight season. Previous Article Next Article"
+   },
+   "evidences": [
+    {
+     "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+     "source_title": "jjwatt",
+     "supported": false,
+     "sentence": "#InjuriesSuck @JJWatt \u00e2\u0080\u0094 TJ Watt (@_TJWatt) October 9, 2017 It is a great shame that one of the league's transcendent talents and one of its great ambassadors won't be able to finish out a campaign, on a playoff contender no less, for the second straight season.",
+     "page": 1,
+     "snippet": "#InjuriesSuck @JJWatt \u00e2\u0080\u0094 TJ Watt (@_TJWatt) October",
+     "cosine": 0.8589,
+     "reason": "The passage does not contain any statistics about J.J. Watt's performance in games, including tackles or passes defended.",
+     "window": "Heartbroken For You Brother. #InjuriesSuck @JJWatt \u00e2\u0080\u0094 TJ Watt (@_TJWatt) October 9, 2017 It is a great shame that one of the league's transcendent talents and one of its great ambassadors won't be able to finish out a campaign, on a playoff contender no less, for the second straight season. Previous Article Next Article"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Watt finished with 11 tackles and 2 passes defended in only 5 games.",
+    "reason": "The passage directly states facts and statistics about Watt's performance, which are expected to be proven by the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific statistics of 11 tackles and 2 passes defended in only 5 games are entirely absent from the cited source.",
+    "rewrite_suggestion": "Watt was injured during the fifth game of the 2017 season and did not finish the year, but no tackle or pass defended totals are given in the source.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text discusses J.J. Watt's season-ending injury and his pressure statistics, but it never mentions the number of games he played (only 'first four games' and 'Sunday's game'), nor does it list any tackle or pass defended figures. None of the components of the claim (5 games, 11 tackles, 2 passes defended) appear anywhere in the provided source, so the author must either add a citation that contains these statistics or rewrite the claim to omit unsupported details."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Trump afterwards gave him the pen.",
+   "markers": [
+    "andrewnliveris"
+   ],
+   "paper_ids": [
+    "078380236d81114a7c4680715abd9d991bf78ebf"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "078380236d81114a7c4680715abd9d991bf78ebf",
+    "source_title": "andrewnliveris",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris.",
+    "page": 1,
+    "snippet": "When Trump signed an executive order in",
+    "reason": "",
+    "votes": "2-0",
+    "window": "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris."
+   },
+   "evidences": [
+    {
+     "paper_id": "078380236d81114a7c4680715abd9d991bf78ebf",
+     "source_title": "andrewnliveris",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris.",
+     "page": 1,
+     "snippet": "When Trump signed an executive order in",
+     "reason": "",
+     "votes": "2-0",
+     "window": "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Trump gave the pen to Dow's chief executive",
+      "paper_id": "078380236d81114a7c4680715abd9d991bf78ebf",
+      "source_title": "andrewnliveris",
+      "sentence": "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris.",
+      "page": 1,
+      "snippet": "When Trump signed an executive order in"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "078380236d81114a7c4680715abd9d991bf78ebf",
+      "source_title": "andrewnliveris",
+      "text": "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states Trump gave the pen to Dow's chief executive, not to 'him'.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "When Trump signed an executive order in February mandating the creation of task forces at federal agencies to roll back government regulations, he gave the pen as a souvenir to Dow's chief executive and thanked Liveris."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence directly states that Trump gave the pen as a souvenir to Dow's chief executive (Andrew Liveris) and thanked Liveris, covering all components of the claim including the temporal 'afterwards' (implied by the signing event). No conflict exists in the source."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "According to Duraid Hikmat, an expert on minority relationships and resident of Mosul, the Christians were fearful to attend.",
+   "markers": [
+    "mosul"
+   ],
+   "paper_ids": [
+    "f69376fcc6ce17b086345b0a4da2e76ccbd315e8"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+    "source_title": "mosul",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul.",
+    "page": 1,
+    "snippet": "\"We were so afraid to go,\" said",
+    "reason": "The passage explicitly states that Duraid Hikmat, an expert on minorities who had done research for years in Mosul, said 'We were so afraid to go.' This directly supports the claim that Christians were fearful to attend, as attributed to him.",
+    "votes": "2-0",
+    "window": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul."
+   },
+   "evidences": [
+    {
+     "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+     "source_title": "mosul",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul.",
+     "page": 1,
+     "snippet": "\"We were so afraid to go,\" said",
+     "reason": "The passage explicitly states that Duraid Hikmat, an expert on minorities who had done research for years in Mosul, said 'We were so afraid to go.' This directly supports the claim that Christians were fearful to attend, as attributed to him.",
+     "votes": "2-0",
+     "window": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Duraid Hikmat, an expert on minorities who had done research for years in Mosul, said 'We were so afraid to go.' This directly supports the claim that Christians were fearful to attend, as attributed to him.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Duraid Hikmat is an expert on minority relationships",
+      "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+      "source_title": "mosul",
+      "sentence": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul.",
+      "page": 1,
+      "snippet": "\"We were so afraid to go,\" said"
+     },
+     {
+      "component": "the Christians were fearful to attend",
+      "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+      "source_title": "mosul",
+      "sentence": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul.",
+      "page": 1,
+      "snippet": "\"We were so afraid to go,\" said"
+     },
+     {
+      "component": "Duraid Hikmat is a resident of Mosul",
+      "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+      "source_title": "mosul",
+      "sentence": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul.",
+      "page": 1,
+      "snippet": "\"We were so afraid to go,\" said",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+      "source_title": "mosul",
+      "text": "\"We were so afraid to go,\" said Duraid Hikmat, an expert on minorities who had done research for years in Mosul.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "However, it was important that Serena was blonde and Blair was brunette, so Meester dyed her hair brown for the role.",
+   "markers": [
+    "leightonmeester"
+   ],
+   "paper_ids": [
+    "e7328ccb0d388d0ce0d9948f3a0ad7c4a99b8956"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e7328ccb0d388d0ce0d9948f3a0ad7c4a99b8956",
+    "source_title": "leightonmeester",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "So, [Leighton] went to the sink and dyed her hair.",
+    "page": 1,
+    "snippet": "So, [Leighton] went to the sink and",
+    "reason": "The passage does not state that Blair was brunette or that Leighton Meester dyed her hair brown for the role.",
+    "votes": "2-0",
+    "window": "So, [Leighton] went to the sink and dyed her hair. And Blake was blonde, obviously; Serena had to be blonde. But there was one problem: she was blonde. Schwartz recalled Meester's audition, and her determination to get the part, vividly: \"She came in and she was really funny, and really smart and played vulnerable."
+   },
+   "evidences": [
+    {
+     "paper_id": "e7328ccb0d388d0ce0d9948f3a0ad7c4a99b8956",
+     "source_title": "leightonmeester",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "So, [Leighton] went to the sink and dyed her hair.",
+     "page": 1,
+     "snippet": "So, [Leighton] went to the sink and",
+     "reason": "The passage does not state that Blair was brunette or that Leighton Meester dyed her hair brown for the role.",
+     "votes": "2-0",
+     "window": "So, [Leighton] went to the sink and dyed her hair. And Blake was blonde, obviously; Serena had to be blonde. But there was one problem: she was blonde. Schwartz recalled Meester's audition, and her determination to get the part, vividly: \"She came in and she was really funny, and really smart and played vulnerable."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Blair was brunette or that Leighton Meester dyed her hair brown for the role.",
+   "component_check": {
+    "found": [
+     "Serena was blonde"
+    ],
+    "missing": [
+     "Blair was brunette",
+     "Meester dyed her hair brown for the role"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Serena was blonde",
+      "paper_id": "e7328ccb0d388d0ce0d9948f3a0ad7c4a99b8956",
+      "source_title": "leightonmeester",
+      "sentence": "And Blake was blonde, obviously; Serena had to be blonde.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Meester dyed her hair brown for the role.",
+    "reason": "The passage states a specific fact about the actress's hair color for the role, which is directly attributed to the cited source. This is a factual claim that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim adds that Meester dyed her hair 'brown', but the source only states she dyed her hair, without specifying the color",
+    "rewrite_suggestion": "However, because Serena was blonde and Blair was brunette, Meester dyed her hair for the role.",
+    "proofs": [
+     "She came in and she was really funny, and really smart and played vulnerable. But there was one problem: she was blonde. And Blake was blonde, obviously; Serena had to be blonde. So, [Leighton] went to the sink and dyed her hair. She wanted it."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence only mentions that Meester dyed her hair, but the claim includes two additional components: that it was important that Serena was blonde and Blair was brunette, and that the dye was brown. The importance and the hair-color contrast are provable from the source (the full Schwartz quote and the earlier description of Blair as a brunette), but the tool did not show those sentences. Moreover, the source never states the color 'brown'\u2014it only says she dyed her hair. Since the claim contains both a component unsupported by the source (the brown color) and components that are provable but not shown, the author's problem dominates, requiring a rewrite or a new citation."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "On 15 January 2019, Martin O'Neill was appointed as the new manager and Ireland therefore continued as a member of the staff.",
+   "markers": [
+    "simonireland"
+   ],
+   "paper_ids": [
+    "ebbcc6a5b5167503b62124e3171310ce448466b7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ebbcc6a5b5167503b62124e3171310ce448466b7",
+    "source_title": "simonireland",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "There is no news yet on whether Roy Keane, the former Forest midfielder who assisted O'Neill during his five years as Republic of Ireland manager, will also be returning to the club.",
+    "page": 1,
+    "snippet": "There is no news yet on whether",
+    "reason": "The passage states Martin O'Neill was appointed manager of Nottingham Forest, not Ireland, and does not mention Ireland continuing as a member of any staff.",
+    "votes": "2-0",
+    "window": "There is no news yet on whether Roy Keane, the former Forest midfielder who assisted O'Neill during his five years as Republic of Ireland manager, will also be returning to the club. He left his role as Ireland boss in November. Photograph: Tim Goode/PA Nottingham Forest have named Martin O'Neill as their new manager. The 66-year-old, a former Forest player who won two European Cups at the City Ground, replaces Aitor Karanka in the job after the Spaniard's departure last week."
+   },
+   "evidences": [
+    {
+     "paper_id": "ebbcc6a5b5167503b62124e3171310ce448466b7",
+     "source_title": "simonireland",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "There is no news yet on whether Roy Keane, the former Forest midfielder who assisted O'Neill during his five years as Republic of Ireland manager, will also be returning to the club.",
+     "page": 1,
+     "snippet": "There is no news yet on whether",
+     "reason": "The passage states Martin O'Neill was appointed manager of Nottingham Forest, not Ireland, and does not mention Ireland continuing as a member of any staff.",
+     "votes": "2-0",
+     "window": "There is no news yet on whether Roy Keane, the former Forest midfielder who assisted O'Neill during his five years as Republic of Ireland manager, will also be returning to the club. He left his role as Ireland boss in November. Photograph: Tim Goode/PA Nottingham Forest have named Martin O'Neill as their new manager. The 66-year-old, a former Forest player who won two European Cups at the City Ground, replaces Aitor Karanka in the job after the Spaniard's departure last week."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Martin O'Neill was appointed manager of Nottingham Forest, not Ireland, and does not mention Ireland continuing as a member of any staff.",
+   "component_check": {
+    "found": [
+     "Martin O'Neill was appointed as the new manager on 15 January 2019"
+    ],
+    "missing": [
+     "Ireland continued as a member of the staff"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Martin O'Neill was appointed as the new manager on 15 January 2019",
+      "paper_id": "ebbcc6a5b5167503b62124e3171310ce448466b7",
+      "source_title": "simonireland",
+      "sentence": "# Martin O'Neill confirmed as new manager of Nottingham Forest",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On 15 January 2019, Martin O'Neill was appointed as the new manager and Ireland therefore continued as a member of the staff.",
+    "reason": "The passage asserts a specific fact (appointment date and consequence) that the citation is expected to prove. There is no indication that the citation is only for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Ireland therefore continued as a member of the staff",
+    "rewrite_suggestion": "On 15 January 2019, Martin O'Neill was appointed as the new manager of Nottingham Forest.",
+    "proofs": [
+     "Martin O'Neill confirmed as new manager of Nottingham Forest",
+     "Nottingham Forest have named Martin O'Neill as their new manager."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the tool (about Roy Keane) does not support any part of the claim. The first component (O'Neill's appointment on 15 Jan 2019) is provable from the source text, but the second component (that 'Ireland' continued as a staff member) is not found anywhere in the source. Since a substantive subclaim is entirely unsupported by the cited source, the author must add a citation or rewrite the claim down to only what the source supports."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "Filming began in early February 2018 and later that month Priya Anand was signed to play the female lead opposite Ganesh.",
+   "markers": [
+    "orange2018film"
+   ],
+   "paper_ids": [
+    "d824219e2b464e756bcface097e9e2796e405c1f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d824219e2b464e756bcface097e9e2796e405c1f",
+    "source_title": "orange2018film",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Sources close to the film unit say that when the team was scouting for a suitable heroine to play Ganesh's love interest in this rom com, they zeroed in on Priya Anand after her performance in Rajakumara won her accolades.",
+    "page": 1,
+    "snippet": "Sources close to the film unit say",
+    "reason": "The passage does not state that Priya Anand was signed to play the female lead opposite Ganesh.",
+    "votes": "2-0",
+    "window": "Sources close to the film unit say that when the team was scouting for a suitable heroine to play Ganesh's love interest in this rom com, they zeroed in on Priya Anand after her performance in Rajakumara won her accolades. The shooting for the film commenced on February 11 and is progressing at a rapid pace."
+   },
+   "evidences": [
+    {
+     "paper_id": "d824219e2b464e756bcface097e9e2796e405c1f",
+     "source_title": "orange2018film",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Sources close to the film unit say that when the team was scouting for a suitable heroine to play Ganesh's love interest in this rom com, they zeroed in on Priya Anand after her performance in Rajakumara won her accolades.",
+     "page": 1,
+     "snippet": "Sources close to the film unit say",
+     "reason": "The passage does not state that Priya Anand was signed to play the female lead opposite Ganesh.",
+     "votes": "2-0",
+     "window": "Sources close to the film unit say that when the team was scouting for a suitable heroine to play Ganesh's love interest in this rom com, they zeroed in on Priya Anand after her performance in Rajakumara won her accolades. The shooting for the film commenced on February 11 and is progressing at a rapid pace."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Priya Anand was signed to play the female lead opposite Ganesh.",
+   "subject_guard": {
+    "subject": "filming",
+    "missing_from": [
+     "d824219e2b464e756bcface097e9e2796e405c1f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Filming began in early February 2018 and later that month Priya Anand was signed to play the female lead opposite Ganesh.",
+    "reason": "The passage asserts specific facts (dates, casting) that the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The shooting for the film commenced on February 11 and is progressing at a rapid pace.",
+     "According to reports, she has signed a new project in Kannada titled Orange and it will be directed by Prashanth Raj."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions that the team 'zeroed in on' Priya Anand, but does not establish when filming began or that she was actually signed. Both components are provable from other sentences in the source text (filming started on February 11, and she signed for the project), but those sentences were not presented. Therefore the tool has provided insufficient evidence, and the correct remedy is to show the proper supporting sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t7",
+   "text": "Amnesty International has confirmed that the RPF committed war crimes and crimes against humanity, but the crimes have largely escaped international notice.",
+   "markers": [
+    "petererlinder"
+   ],
+   "paper_ids": [
+    "5bd392b19cafad3cd93911dc610f313b192fcdfc"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9386,
+   "evidence": {
+    "paper_id": "5bd392b19cafad3cd93911dc610f313b192fcdfc",
+    "source_title": "petererlinder",
+    "supported": true,
+    "sentence": "In addition, Amnesty International also called on the ICTR to ensure that it immediately prosecutes members of the Rwanda Patriotic Front (RPF), who are also suspected of having committed war crimes and crimes against humanity before, during and after the 1994 genocide in Rwanda.",
+    "page": 1,
+    "snippet": "In addition, Amnesty International also called on",
+    "cosine": 0.9386,
+    "reason": "The passage states that Amnesty International documented killings by RPF forces and called for the prosecution of RPF members suspected of war crimes and crimes against humanity, while noting the ICTR has not prosecuted any RPF members.",
+    "window": "Amnesty International has called on the ICTR, and especially the Office of the Prosecutor, to ensure that it deals with all the outstanding cases, without prejudice to the accused persons' rights to a fair trial. In addition, Amnesty International also called on the ICTR to ensure that it immediately prosecutes members of the Rwanda Patriotic Front (RPF), who are also suspected of having committed war crimes and crimes against humanity before, during and after the 1994 genocide in Rwanda. Amnesty International documented numerous killings by RPF forces during this period, but the ICTR, which was established to prosecute crimes committed by individuals regardless of affiliation, has not prosecuted a single member of the RPF or their civilian superiors in the past 14 years."
+   },
+   "evidences": [
+    {
+     "paper_id": "5bd392b19cafad3cd93911dc610f313b192fcdfc",
+     "source_title": "petererlinder",
+     "supported": true,
+     "sentence": "In addition, Amnesty International also called on the ICTR to ensure that it immediately prosecutes members of the Rwanda Patriotic Front (RPF), who are also suspected of having committed war crimes and crimes against humanity before, during and after the 1994 genocide in Rwanda.",
+     "page": 1,
+     "snippet": "In addition, Amnesty International also called on",
+     "cosine": 0.9386,
+     "reason": "The passage states that Amnesty International documented killings by RPF forces and called for the prosecution of RPF members suspected of war crimes and crimes against humanity, while noting the ICTR has not prosecuted any RPF members.",
+     "window": "Amnesty International has called on the ICTR, and especially the Office of the Prosecutor, to ensure that it deals with all the outstanding cases, without prejudice to the accused persons' rights to a fair trial. In addition, Amnesty International also called on the ICTR to ensure that it immediately prosecutes members of the Rwanda Patriotic Front (RPF), who are also suspected of having committed war crimes and crimes against humanity before, during and after the 1994 genocide in Rwanda. Amnesty International documented numerous killings by RPF forces during this period, but the ICTR, which was established to prosecute crimes committed by individuals regardless of affiliation, has not prosecuted a single member of the RPF or their civilian superiors in the past 14 years."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Amnesty International documented killings by RPF forces and called for the prosecution of RPF members suspected of war crimes and crimes against humanity, while noting the ICTR has not prosecuted any RPF members.",
+   "covering": {
+    "covered": [
+     {
+      "component": "RPF committed war crimes and crimes against humanity",
+      "paper_id": "5bd392b19cafad3cd93911dc610f313b192fcdfc",
+      "source_title": "petererlinder",
+      "sentence": "In addition, Amnesty International also called on the ICTR to ensure that it immediately prosecutes members of the Rwanda Patriotic Front (RPF), who are also suspected of having committed war crimes and crimes against humanity before, during and after the 1994 genocide in Rwanda.",
+      "page": 1,
+      "snippet": "In addition, Amnesty International also called on"
+     },
+     {
+      "component": "crimes have largely escaped international notice",
+      "paper_id": "5bd392b19cafad3cd93911dc610f313b192fcdfc",
+      "source_title": "petererlinder",
+      "sentence": "Amnesty International documented numerous killings by RPF forces during this period, but the ICTR, which was established to prosecute crimes committed by individuals regardless of affiliation, has not prosecuted a single member of the RPF or their civilian superiors in the past 14 years.",
+      "page": 1,
+      "snippet": "Amnesty International documented numerous killings by RPF"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5bd392b19cafad3cd93911dc610f313b192fcdfc",
+      "source_title": "petererlinder",
+      "text": "In addition, Amnesty International also called on the ICTR to ensure that it immediately prosecutes members of the Rwanda Patriotic Front (RPF), who are also suspected of having committed war crimes and crimes against humanity before, during and after the 1994 genocide in Rwanda. Amnesty International documented numerous killings by RPF forces during this period, but the ICTR, which was established to prosecute crimes committed by individuals regardless of affiliation, has not prosecuted a single member of the RPF or their civilian superiors in the past 14 years.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t8",
+   "text": "Upon announcing his retirement, Brodeur was hired by the Blues as a special assistant to general manager Doug Armstrong.",
+   "markers": [
+    "martinbrodeur"
+   ],
+   "paper_ids": [
+    "b8a16725511bec9976bc99766808459781e4eca6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b8a16725511bec9976bc99766808459781e4eca6",
+    "source_title": "martinbrodeur",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The 42-year-old Montreal native will remain with the organization as a senior adviser to general manager Doug Armstrong.",
+    "page": 1,
+    "snippet": "The 42-year-old Montreal native will remain with",
+    "reason": "The passage states Brodeur was hired as a senior adviser, not a special assistant.",
+    "votes": "2-0",
+    "window": "The 42-year-old Montreal native will remain with the organization as a senior adviser to general manager Doug Armstrong."
+   },
+   "evidences": [
+    {
+     "paper_id": "b8a16725511bec9976bc99766808459781e4eca6",
+     "source_title": "martinbrodeur",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The 42-year-old Montreal native will remain with the organization as a senior adviser to general manager Doug Armstrong.",
+     "page": 1,
+     "snippet": "The 42-year-old Montreal native will remain with",
+     "reason": "The passage states Brodeur was hired as a senior adviser, not a special assistant.",
+     "votes": "2-0",
+     "window": "The 42-year-old Montreal native will remain with the organization as a senior adviser to general manager Doug Armstrong."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Brodeur was hired as a senior adviser, not a special assistant.",
+   "subject_guard": {
+    "subject": "upon",
+    "missing_from": [
+     "b8a16725511bec9976bc99766808459781e4eca6"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Brodeur was hired by the Blues as a special assistant to general manager Doug Armstrong.",
+    "reason": "The passage states a factual event about Brodeur's post-retirement employment. The citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the title 'special assistant' (source says 'senior adviser')",
+    "rewrite_suggestion": "Upon announcing his retirement, Brodeur remained with the Blues as a senior adviser to general manager Doug Armstrong.",
+    "proofs": [
+     "The 42-year-old Montreal native will remain with the organization as a senior adviser to general manager Doug Armstrong."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The 42-year-old Montreal native will remain with the organization as a senior adviser to general manager Doug Armstrong.",
+     "why": "The source states the role is 'senior adviser', but the claim says 'special assistant', which is a different title."
+    },
+    "why": "The claim asserts that Brodeur was hired as a 'special assistant' to the GM, but the cited source describes him as a 'senior adviser'. This title is not present anywhere in the source text, making it an unsourced component. Additionally, the source says 'remain' rather than 'hired', though the main issue is the incorrect title. Therefore the author must either provide a citation for 'special assistant' or rewrite the claim to match the source's actual wording."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "He is best known for his work in Talakjung vs Tulke and Pashupati Prasad.",
+   "markers": [
+    "khagendralamichhane"
+   ],
+   "paper_ids": [
+    "9879de1e5f806e94fa412eaaa60a10d99c6e82e1"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "9879de1e5f806e94fa412eaaa60a10d99c6e82e1",
+    "source_title": "khagendralamichhane",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "He had great success in \"Pashupati Prasad\".",
+    "page": 1,
+    "snippet": "He had great success in \"Pashupati Prasad\".",
+    "reason": "The passage explicitly states that the author had great success in 'Pashupati Prasad' and that 'Talakjung vs Tulke' was his debut movie which gained prominent attention and was a super-hit movie.",
+    "votes": "2-0",
+    "window": "He had great success in \"Pashupati Prasad\". ## Movies and Dramas Damaruko DandibiyoDhanapati along side Surakshya PantaPashupati Prasad (Nepali Feature Film)Talakjung vs Tulke (Nepali Feature Film)Badhshala ( Nepali Feature Film)Maya Devika Sapana (Drama, 2010)Hajurbako Katha (Solo Drama, 2008)Peeda Geet (Solo Drama, 2007)Katro (Drama, 2004)Sirumarani (Drama, 2003) #### Facebook Comments Actor Khagendra-Lamichhane Search for: However, his debut movie is Talakjung Vs Tulke which gained a prominent attention from the audience. Similarly his previous movie Talakjung vs Tulke was also super-hit movie that was also based on the national issue."
+   },
+   "evidences": [
+    {
+     "paper_id": "9879de1e5f806e94fa412eaaa60a10d99c6e82e1",
+     "source_title": "khagendralamichhane",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "He had great success in \"Pashupati Prasad\".",
+     "page": 1,
+     "snippet": "He had great success in \"Pashupati Prasad\".",
+     "reason": "The passage explicitly states that the author had great success in 'Pashupati Prasad' and that 'Talakjung vs Tulke' was his debut movie which gained prominent attention and was a super-hit movie.",
+     "votes": "2-0",
+     "window": "He had great success in \"Pashupati Prasad\". ## Movies and Dramas Damaruko DandibiyoDhanapati along side Surakshya PantaPashupati Prasad (Nepali Feature Film)Talakjung vs Tulke (Nepali Feature Film)Badhshala ( Nepali Feature Film)Maya Devika Sapana (Drama, 2010)Hajurbako Katha (Solo Drama, 2008)Peeda Geet (Solo Drama, 2007)Katro (Drama, 2004)Sirumarani (Drama, 2003) #### Facebook Comments Actor Khagendra-Lamichhane Search for: However, his debut movie is Talakjung Vs Tulke which gained a prominent attention from the audience. Similarly his previous movie Talakjung vs Tulke was also super-hit movie that was also based on the national issue."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the author had great success in 'Pashupati Prasad' and that 'Talakjung vs Tulke' was his debut movie which gained prominent attention and was a super-hit movie.",
+   "covering": {
+    "covered": [
+     {
+      "component": "best known for work in Talakjung vs Tulke",
+      "paper_id": "9879de1e5f806e94fa412eaaa60a10d99c6e82e1",
+      "source_title": "khagendralamichhane",
+      "sentence": "However, his debut movie is Talakjung Vs Tulke which gained a prominent attention from the audience.",
+      "page": 1,
+      "snippet": "However, his debut movie is Talakjung Vs"
+     },
+     {
+      "component": "best known for work in Pashupati Prasad",
+      "paper_id": "9879de1e5f806e94fa412eaaa60a10d99c6e82e1",
+      "source_title": "khagendralamichhane",
+      "sentence": "He had great success in \"Pashupati Prasad\".",
+      "page": 1,
+      "snippet": "He had great success in \"Pashupati Prasad\"."
+     }
+    ],
+    "uncovered": [
+     "He is best known for his work"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "9879de1e5f806e94fa412eaaa60a10d99c6e82e1",
+      "source_title": "khagendralamichhane",
+      "text": "He had great success in \"Pashupati Prasad\". [\u2026] However, his debut movie is Talakjung Vs Tulke which gained a prominent attention from the audience.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The superlative 'best known' is not supported by the source; the source only states that Pashupati Prasad was a great success and that Talakjung vs Tulke was his debut movie that gained prominent attention, but does not rank these as his primary works or use the phrase 'best known.'",
+    "rewrite_suggestion": "He is known for his work in Talakjung vs Tulke and Pashupati Prasad, with Pashupati Prasad being a great success and Talakjung vs Tulke being his debut that gained prominent attention.",
+    "proofs": [
+     "He had great success in \"Pashupati Prasad\".",
+     "However, his debut movie is Talakjung Vs Tulke which gained a prominent attention from the audience."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the subject is 'best known' for two specific works, but the source text does not contain any superlative or ranking that would establish that he is best known for these films. It only notes that Pashupati Prasad was a great success and that Talakjung vs Tulke was his debut and gained attention. Since the 'best known' component is not provable from the source at all, the author must either add a citation that supports that claim or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "The Bill was signed into law by Governor Sandoval in May 2017.",
+   "markers": [
+    "lisakrasner"
+   ],
+   "paper_ids": [
+    "fe093484ad00dbda43e58592e33e68df7d747969"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9093,
+   "evidence": {
+    "paper_id": "fe093484ad00dbda43e58592e33e68df7d747969",
+    "source_title": "lisakrasner",
+    "supported": false,
+    "sentence": "In the 2015 legislative session, the Nevada Legislature implemented the largest tax hike in Nevada history.",
+    "page": 1,
+    "snippet": "In the 2015 legislative session, the Nevada",
+    "cosine": 0.9093,
+    "reason": "The passage does not mention Governor Sandoval, a bill being signed into law, or the month of May 2017.",
+    "window": "\"I do not support a tax hike this session. In the 2015 legislative session, the Nevada Legislature implemented the largest tax hike in Nevada history. We now need to effectively and efficiently spend these taxpayer dollars."
+   },
+   "evidences": [
+    {
+     "paper_id": "fe093484ad00dbda43e58592e33e68df7d747969",
+     "source_title": "lisakrasner",
+     "supported": false,
+     "sentence": "In the 2015 legislative session, the Nevada Legislature implemented the largest tax hike in Nevada history.",
+     "page": 1,
+     "snippet": "In the 2015 legislative session, the Nevada",
+     "cosine": 0.9093,
+     "reason": "The passage does not mention Governor Sandoval, a bill being signed into law, or the month of May 2017.",
+     "window": "\"I do not support a tax hike this session. In the 2015 legislative session, the Nevada Legislature implemented the largest tax hike in Nevada history. We now need to effectively and efficiently spend these taxpayer dollars."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Governor Sandoval; bill",
+    "missing_from": [
+     "fe093484ad00dbda43e58592e33e68df7d747969"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Bill was signed into law by Governor Sandoval in May 2017.",
+    "reason": "The passage asserts a specific fact (the date the Bill was signed into law) that the cited source is expected to prove. This falls under the 'full' scope as it's a direct factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 that a specific bill was signed into law by Governor Sandoval in May 2017 \u2014 is absent from the cited source.",
+    "rewrite_suggestion": "The source does not mention any such bill signing; remove this statement or cite a different source that supports it.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is an interview with Assemblywoman Lisa Krasner from January 2017 and contains no reference to any bill signed by Governor Sandoval in May 2017. Therefore, every component of the claim is unprovable from this source, making it an author-side problem requiring a citation or rewrite."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "On June 26, 2018, parent company E. W. Scripps announced that it would sell KXBL - along with its sister stations, KBEZ, KFAQ, KHTT, and KVOO to Griffin Communications.",
+   "markers": [
+    "kxbl"
+   ],
+   "paper_ids": [
+    "89c75296e3fb8aeee9dd01353048ee27b3729163"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "89c75296e3fb8aeee9dd01353048ee27b3729163",
+    "source_title": "kxbl",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Scripps Sells Tulsa Cluster To Griffin Communications - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-06-25T10:37:02+00:00 RadioInsight - Radio Industry News Commentary Discussions # Scripps Sells Tulsa Cluster To Griffin Communications By Lance Venta On Jun 25, 2018 EW Scripps has announced the first of its planned divestments of its radio properties with the sale of its five stations in Tulsa OK to Griffin Communications for $12.5 million.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Scripps Sells Tulsa Cluster",
+    "reason": "The article states the announcement was made on June 25, 2018, not June 26, 2018.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Scripps Sells Tulsa Cluster To Griffin Communications - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-06-25T10:37:02+00:00 RadioInsight - Radio Industry News Commentary Discussions # Scripps Sells Tulsa Cluster To Griffin Communications By Lance Venta On Jun 25, 2018 EW Scripps has announced the first of its planned divestments of its radio properties with the sale of its five stations in Tulsa OK to Griffin Communications for $12.5 million. Oklahoma-based Griffin is purchasing KFAQ (1170 AM), KHTT (106.9 FM), KVOO (98.5 FM), KXBL (99.5 FM) and KBEZ (92.9 FM). Scripps Company (NASDAQ: SSP) has reached an agreement to sell its group of five radio stations in Tulsa, Oklahoma, to Griffin Communications for $12.5 million. The stations involved in the sale are: Classic Hits \"92.9 The Drive\" KBEZ, Country 98.5 KVOO, Classic Country \"Big Country 99.5\" KXBL, CHR \"106.9 K-Hits\" KHTT, and News/Talk 1170 KFAQ."
+   },
+   "evidences": [
+    {
+     "paper_id": "89c75296e3fb8aeee9dd01353048ee27b3729163",
+     "source_title": "kxbl",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Scripps Sells Tulsa Cluster To Griffin Communications - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-06-25T10:37:02+00:00 RadioInsight - Radio Industry News Commentary Discussions # Scripps Sells Tulsa Cluster To Griffin Communications By Lance Venta On Jun 25, 2018 EW Scripps has announced the first of its planned divestments of its radio properties with the sale of its five stations in Tulsa OK to Griffin Communications for $12.5 million.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Scripps Sells Tulsa Cluster",
+     "reason": "The article states the announcement was made on June 25, 2018, not June 26, 2018.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Scripps Sells Tulsa Cluster To Griffin Communications - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-06-25T10:37:02+00:00 RadioInsight - Radio Industry News Commentary Discussions # Scripps Sells Tulsa Cluster To Griffin Communications By Lance Venta On Jun 25, 2018 EW Scripps has announced the first of its planned divestments of its radio properties with the sale of its five stations in Tulsa OK to Griffin Communications for $12.5 million. Oklahoma-based Griffin is purchasing KFAQ (1170 AM), KHTT (106.9 FM), KVOO (98.5 FM), KXBL (99.5 FM) and KBEZ (92.9 FM). Scripps Company (NASDAQ: SSP) has reached an agreement to sell its group of five radio stations in Tulsa, Oklahoma, to Griffin Communications for $12.5 million. The stations involved in the sale are: Classic Hits \"92.9 The Drive\" KBEZ, Country 98.5 KVOO, Classic Country \"Big Country 99.5\" KXBL, CHR \"106.9 K-Hits\" KHTT, and News/Talk 1170 KFAQ."
+    }
+   ],
+   "votes": null,
+   "reason": "The article states the announcement was made on June 25, 2018, not June 26, 2018.",
+   "component_check": {
+    "found": [
+     "The sale included KXBL.",
+     "The sale also included sister stations KBEZ, KFAQ, KHTT, and KVOO."
+    ],
+    "missing": [
+     "On June 26, 2018, E. W. Scripps announced a sale.",
+     "E. W. Scripps is the parent company."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The sale included KXBL.",
+      "paper_id": "89c75296e3fb8aeee9dd01353048ee27b3729163",
+      "source_title": "kxbl",
+      "sentence": "The stations involved in the sale are: Classic Hits \"92.9 The Drive\" KBEZ, Country 98.5 KVOO, Classic Country \"Big Country 99.5\" KXBL, CHR \"106.9 K-Hits\" KHTT, and News/Talk 1170 KFAQ.",
+      "page": 1
+     },
+     {
+      "component": "The sale also included sister stations KBEZ, KFAQ, KHTT, and KVOO.",
+      "paper_id": "89c75296e3fb8aeee9dd01353048ee27b3729163",
+      "source_title": "kxbl",
+      "sentence": "The stations involved in the sale are: Classic Hits \"92.9 The Drive\" KBEZ, Country 98.5 KVOO, Classic Country \"Big Country 99.5\" KXBL, CHR \"106.9 K-Hits\" KHTT, and News/Talk 1170 KFAQ.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On June 26, 2018, parent company E. W. Scripps announced that it would sell KXBL - along with its sister stations, KBEZ, KFAQ, KHTT, and KVOO to Griffin Communications.",
+    "reason": "The passage directly states a factual event (a sale announcement) and attributes it to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date 'June 26, 2018' is not mentioned in the source text; the source only has a publication date of June 25, 2018, and no statement about when the announcement occurred.",
+    "rewrite_suggestion": "In 2018, parent company E. W. Scripps announced that it would sell KXBL - along with its sister stations, KBEZ, KFAQ, KHTT, and KVOO to Griffin Communications.",
+    "proofs": [
+     "EW Scripps has announced the first of its planned divestments of its radio properties with the sale of its five stations in Tulsa OK to Griffin Communications for $12.5 million.",
+     "The stations involved in the sale are: Classic Hits \"92.9 The Drive\" KBEZ, Country 98.5 KVOO, Classic Country \"Big Country 99.5\" KXBL, CHR \"106.9 K-Hits\" KHTT, and News/Talk 1170 KFAQ.",
+     "The E.W. Scripps Company (NASDAQ: SSP) has reached an agreement to sell its group of five radio stations in Tulsa, Oklahoma, to Griffin Communications for $12.5 million."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific date (June 26, 2018) that is not found in the cited source text. The source mentions a publication date of June 25, 2018, but never states when the announcement was made. Therefore, that component is unsupported. Other components (the parties, stations, and sale) are present in the source, but the shown sentences do not include them. Because a substantive component (the date) is entirely absent from the source, the author must either add a citation for that date or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "released on CD in 2005.",
+   "markers": [
+    "anandashankar"
+   ],
+   "paper_ids": [
+    "1b8da4c853f34a7e55feec3b7a45cfc221824559"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8659,
+   "evidence": {
+    "paper_id": "1b8da4c853f34a7e55feec3b7a45cfc221824559",
+    "source_title": "anandashankar",
+    "supported": false,
+    "sentence": "\u2013 Alan James, June 1999, taken from the liner notes of Walking On.",
+    "page": 1,
+    "snippet": "\u2013 Alan James, June 1999, taken from",
+    "cosine": 0.8659,
+    "reason": "The passage mentions a release titled 'Walking On' but does not state it was released on CD in 2005.",
+    "window": "Ananda Shankar born 11 December 1942; died 26 March 1999. \u2013 Alan James, June 1999, taken from the liner notes of Walking On. The Ananda Shankar Experience ## Releases ### Walking On The Ananda Shankar Experience Sitarist Ananda Shankar was an illustrious cult figure in the secret history of pop culture, a pioneer of '60s Indo-funk."
+   },
+   "evidences": [
+    {
+     "paper_id": "1b8da4c853f34a7e55feec3b7a45cfc221824559",
+     "source_title": "anandashankar",
+     "supported": false,
+     "sentence": "\u2013 Alan James, June 1999, taken from the liner notes of Walking On.",
+     "page": 1,
+     "snippet": "\u2013 Alan James, June 1999, taken from",
+     "cosine": 0.8659,
+     "reason": "The passage mentions a release titled 'Walking On' but does not state it was released on CD in 2005.",
+     "window": "Ananda Shankar born 11 December 1942; died 26 March 1999. \u2013 Alan James, June 1999, taken from the liner notes of Walking On. The Ananda Shankar Experience ## Releases ### Walking On The Ananda Shankar Experience Sitarist Ananda Shankar was an illustrious cult figure in the secret history of pop culture, a pioneer of '60s Indo-funk."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The CD was released in 2005.",
+    "reason": "The passage asserts a specific fact (release date) that the citation is expected to prove. This falls under the 'full' scope as it's a direct claim about the cited work's content.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the release year 2005 and the CD format of the album",
+    "rewrite_suggestion": "released on CD (year not specified in the cited source)",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the album was released on CD in 2005, but the provided source text contains no mention of a 2005 release date or any CD format. The only date referenced is June 1999 (the liner notes), and no release year for any album is given. Therefore, the source does not support the claim, and the author must either add a citation for the year and format or rewrite the claim to remove the unsupported components."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "During the Second Boer War, the regiment took part in the Battle of Belmont and the Battle of Modder River in November 1899, as well as the Battle of Magersfontein in December 1899, Relief of Kimberley in winter 1899 and the subsequent Battle of Paardeberg which resulted in Piet Cronj\u00e9\u2019s surrender in February 1900.",
+   "markers": [
+    "9thqueensroyallancers"
+   ],
+   "paper_ids": [
+    "1d9d46e0b66b152a39bba99d93b14885b9423d6c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+    "source_title": "9thqueensroyallancers",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "About 9th January 1900 the regiment took part in a raid into the Orange Free State.",
+    "page": 1,
+    "snippet": "About 9th January 1900 the regiment took",
+    "reason": "the passage does not mention the Relief of Kimberley in winter 1899 or the Battle of Paardeberg resulting in Piet Cronj\u00e9\u2019s surrender in February 1900.",
+    "votes": "2-0",
+    "window": "About 9th January 1900 the regiment took part in a raid into the Orange Free State. Paardeberg (17 to 26 February); actions at Poplar Grove, Driefontein, Karee Siding, Houtnek (Thoba Mountain), Vet River (5 and 6 May) and Zand River; was present during the operations in the Transvaal in May and June, 1900, including actions near Johannesburg, Pretoria and Diamond Hill (11 and 12 At Belmont, 23rd November 1899 (see 3rd Grenadier Guards), the regiment had very responsible work\u2014two squadrons with one of Mounted Infantry protecting the left flank; one squadron and some of Rimington's Guides and a company of Mounted Infantry worked to the east. At Magersfontein, 11th December, the regiment did much dismounted work on the right flank, and their services were very valuable. At Modder River, 28th November, the 9th Lancers and Mounted Infantry protected the right flank, where the Boers were threatening all day."
+   },
+   "evidences": [
+    {
+     "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+     "source_title": "9thqueensroyallancers",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "About 9th January 1900 the regiment took part in a raid into the Orange Free State.",
+     "page": 1,
+     "snippet": "About 9th January 1900 the regiment took",
+     "reason": "the passage does not mention the Relief of Kimberley in winter 1899 or the Battle of Paardeberg resulting in Piet Cronj\u00e9\u2019s surrender in February 1900.",
+     "votes": "2-0",
+     "window": "About 9th January 1900 the regiment took part in a raid into the Orange Free State. Paardeberg (17 to 26 February); actions at Poplar Grove, Driefontein, Karee Siding, Houtnek (Thoba Mountain), Vet River (5 and 6 May) and Zand River; was present during the operations in the Transvaal in May and June, 1900, including actions near Johannesburg, Pretoria and Diamond Hill (11 and 12 At Belmont, 23rd November 1899 (see 3rd Grenadier Guards), the regiment had very responsible work\u2014two squadrons with one of Mounted Infantry protecting the left flank; one squadron and some of Rimington's Guides and a company of Mounted Infantry worked to the east. At Magersfontein, 11th December, the regiment did much dismounted work on the right flank, and their services were very valuable. At Modder River, 28th November, the 9th Lancers and Mounted Infantry protected the right flank, where the Boers were threatening all day."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention the Relief of Kimberley in winter 1899 or the Battle of Paardeberg resulting in Piet Cronj\u00e9\u2019s surrender in February 1900.",
+   "component_check": {
+    "found": [
+     "During the Second Boer War, the regiment took part in the Battle of Belmont in November 1899.",
+     "The regiment took part in the Battle of Modder River in November 1899.",
+     "The regiment took part in the Battle of Magersfontein in December 1899.",
+     "The regiment took part in the Relief of Kimberley in winter 1899."
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "During the Second Boer War, the regiment took part in the Battle of Belmont in November 1899.",
+      "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+      "source_title": "9thqueensroyallancers",
+      "sentence": "He served with much distinction in the South African War, 1899-1902, and was present at the advance on Kimberley, including the actions at Belmont, Enslin and Magersfontein; Relief of Kimberley; took part in the operations in the Orange Free State, February to May 1900, including operations at",
+      "page": 1
+     },
+     {
+      "component": "The regiment took part in the Battle of Modder River in November 1899.",
+      "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+      "source_title": "9thqueensroyallancers",
+      "sentence": "At Modder River, 28th November, the 9th Lancers and Mounted Infantry protected the right flank, where the Boers were threatening all day.",
+      "page": 1
+     },
+     {
+      "component": "The regiment took part in the Battle of Magersfontein in December 1899.",
+      "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+      "source_title": "9thqueensroyallancers",
+      "sentence": "At Magersfontein, 11th December, the regiment did much dismounted work on the right flank, and their services were very valuable.",
+      "page": 1
+     },
+     {
+      "component": "The regiment took part in the Relief of Kimberley in winter 1899.",
+      "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+      "source_title": "9thqueensroyallancers",
+      "sentence": "He served with much distinction in the South African War, 1899-1902, and was present at the advance on Kimberley, including the actions at Belmont, Enslin and Magersfontein; Relief of Kimberley; took part in the operations in the Orange Free State, February to May 1900, including operations at",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "During the Second Boer War, the regiment took part in the Battle of Belmont and the Battle of Modder River in November 1899, as well as the Battle of Magersfontein in December 1899, Relief of Kimberley in winter 1899 and the subsequent Battle of Paardeberg which resulted in Piet Cronj\u00e9\u2019s surrender in February 1900.",
+    "reason": "The passage asserts specific historical facts and events, including battles, dates, and outcomes, which are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Relief of Kimberley occurred in winter 1899 and that the Battle of Paardeberg resulted in Piet Cronj\u00e9's surrender are unsupported by the source.",
+    "rewrite_suggestion": "During the Second Boer War, the regiment took part in the Battle of Belmont (23 November 1899), the Battle of Modder River (28 November 1899), the Battle of Magersfontein (11 December 1899), the Relief of Kimberley (February 1900), and operations at Paardeberg (February 1900).",
+    "proofs": [
+     "At Belmont, 23rd November 1899 (see 3rd Grenadier Guards), the regiment had very responsible work\u2014two squadrons with one of Mounted Infantry protecting the left flank; one squadron and some of Rimington's Guides and a company of Mounted Infantry worked to the east.",
+     "At Modder River, 28th November, the 9th Lancers and Mounted Infantry protected the right flank, where the Boers were threatening all day.",
+     "At Magersfontein, 11th December, the regiment did much dismounted work on the right flank, and their services were very valuable.",
+     "When the march to Kimberley commenced on 11th February the 9th and 16th formed the 3rd Cavalry Brigade under Brigadier General J R P Gordon. In the rush through the Boer position on the morning of the 15th February the 9th and 16th had a prominent place, heading the charge, and they did very well"
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "When the march to Kimberley commenced on 11th February the 9th and 16th formed the 3rd Cavalry Brigade under Brigadier General J R P Gordon.",
+     "why": "The source places the Relief of Kimberley in February 1900, contradicting the author's claim that it occurred in 'winter 1899'."
+    },
+    "why": "The shown sentence does not support any part of the claim. The source text supports the regiment's participation in the battles of Belmont, Modder River, Magersfontein, the Relief of Kimberley (in February 1900), and operations at Paardeberg, but does not state that the Relief occurred in winter 1899, nor that the Battle of Paardeberg resulted in Cronj\u00e9's surrender. Therefore the claim contains unsourced subcomponents that require author correction."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "His famous speech, in which he said, \"I came through and I shall return\", was first made at Terowie railway station in South Australia, on 20 March, where he changed trains.",
+   "markers": [
+    "douglasmacarthursescapef"
+   ],
+   "paper_ids": [
+    "8274d828e4aeb7d30a5714362513d2134a4624bb"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8508,
+   "evidence": {
+    "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+    "source_title": "douglasmacarthursescapef",
+    "supported": true,
+    "sentence": "I came through and I shall return.\"",
+    "page": 1,
+    "snippet": "I came through and I shall return.\"",
+    "cosine": 0.8508,
+    "reason": "The passage directly quotes the claim's assertion about the speech and states it was made at the Terowie Railway Station in South Australia.",
+    "window": "On being asked if his would reach the United States he said:- \"The President of the United States ordered me to break through the Japanese lines and proceed to Corregidor to Australia for the purpose, as I understand it, of organising an American offensive against Japan, the primary purpose of which is the relief of the Philippines. I came through and I shall return.\" ## Location Address:Railway Station, Terowie, 5421State:SAArea:ForeignGPS Coordinates:Lat: -33.150403Long: 138.921392Note: GPS Coordinates are approximate."
+   },
+   "evidences": [
+    {
+     "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+     "source_title": "douglasmacarthursescapef",
+     "supported": true,
+     "sentence": "I came through and I shall return.\"",
+     "page": 1,
+     "snippet": "I came through and I shall return.\"",
+     "cosine": 0.8508,
+     "reason": "The passage directly quotes the claim's assertion about the speech and states it was made at the Terowie Railway Station in South Australia.",
+     "window": "On being asked if his would reach the United States he said:- \"The President of the United States ordered me to break through the Japanese lines and proceed to Corregidor to Australia for the purpose, as I understand it, of organising an American offensive against Japan, the primary purpose of which is the relief of the Philippines. I came through and I shall return.\" ## Location Address:Railway Station, Terowie, 5421State:SAArea:ForeignGPS Coordinates:Lat: -33.150403Long: 138.921392Note: GPS Coordinates are approximate."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes the claim's assertion about the speech and states it was made at the Terowie Railway Station in South Australia.",
+   "covering": {
+    "covered": [
+     {
+      "component": "speech content",
+      "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+      "source_title": "douglasmacarthursescapef",
+      "sentence": "I came through and I shall return.\"",
+      "page": 1,
+      "snippet": "I came through and I shall return.\""
+     },
+     {
+      "component": "speech location",
+      "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+      "source_title": "douglasmacarthursescapef",
+      "sentence": "View Google Map ## Details Monument Type:PlaqueMonument Theme:ConflictSub-Theme:WW2Actual Event STart Date:20-March-1942Actual Event End Date:20-March-1942 ## Dedication Front Inscription \" I CAME OUT OF BATAAN AND I SHALL RETURN\" This historic message that echoed around the world was given on this spot by US General Douglas MacArthur at his first press interview in Australia, 20.3.1942 Source: MA,TOH Monument details supplied by Monument Australia - www.monumentaustralia.org.au",
+      "page": 1,
+      "snippet": "View Google Map ## Details Monument Type:PlaqueMonument"
+     },
+     {
+      "component": "speech date",
+      "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+      "source_title": "douglasmacarthursescapef",
+      "sentence": "View Google Map ## Details Monument Type:PlaqueMonument Theme:ConflictSub-Theme:WW2Actual Event STart Date:20-March-1942Actual Event End Date:20-March-1942 ## Dedication Front Inscription \" I CAME OUT OF BATAAN AND I SHALL RETURN\" This historic message that echoed around the world was given on this spot by US General Douglas MacArthur at his first press interview in Australia, 20.3.1942 Source: MA,TOH Monument details supplied by Monument Australia - www.monumentaustralia.org.au",
+      "page": 1,
+      "snippet": "View Google Map ## Details Monument Type:PlaqueMonument"
+     },
+     {
+      "component": "reason for being at location",
+      "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+      "source_title": "douglasmacarthursescapef",
+      "sentence": "On being asked if his would reach the United States he said:- \"The President of the United States ordered me to break through the Japanese lines and proceed to Corregidor to Australia for the purpose, as I understand it, of organising an American offensive against Japan, the primary purpose of which is the relief of the Philippines.",
+      "page": 1,
+      "snippet": "On being asked if his would reach"
+     },
+     {
+      "component": "Terowie",
+      "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+      "source_title": "douglasmacarthursescapef",
+      "sentence": "Douglas McArthur arrived at Terowie Railway Station and much to MacArthur`s surprise his \"secret\" arrival in Terowie was not so secret.",
+      "page": 1,
+      "snippet": "Douglas McArthur arrived at Terowie Railway Station",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "South Australia"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+      "source_title": "douglasmacarthursescapef",
+      "text": "Douglas McArthur arrived at Terowie Railway Station and much to MacArthur`s surprise his \"secret\" arrival in Terowie was not so secret. A huge cheer went up from the locals who had gathered when he left the train. General MacArthur responded by striding towards an opening between a line of railway carriages and saluted the people of Terowie on the other side of the carriages and some passengers on a nearby train. MacArthur was dressed in a loose hanging jacket and slacks and wore no decorations or insignia except for a laurel wreathed peak on his cap and another emblem. On being asked if his would reach the United States he said:- \"The President of the United States ordered me to break through the Japanese lines and proceed to Corregidor to Australia for the purpose, as I understand it, of organising an American offensive against Japan, the primary purpose of which is the relief of the Philippines. I came through and I shall return.\" ## Location Address:Railway Station, Terowie, 5421State:SAArea:ForeignGPS Coordinates:Lat: -33.150403Long: 138.921392Note: GPS Coordinates are approximate. View Google Map ## Details Monument Type:PlaqueMonument Theme:ConflictSub-Theme:WW2Actual Event STart Date:20-March-1942Actual Event End Date:20-March-1942 ## Dedication Front Inscription \" I CAME OUT OF BATAAN AND I SHALL RETURN\" This historic message that echoed around the world was given on this spot by US General Douglas MacArthur at his first press interview in Australia, 20.3.1942 Source: MA,TOH Monument details supplied by Monument Australia - www.monumentaustralia.org.au",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that he changed trains at Terowie railway station",
+    "rewrite_suggestion": "His famous speech, in which he said 'I came through and I shall return', was first made at Terowie railway station in South Australia on 20 March.",
+    "proofs": [
+     "I came through and I shall return.",
+     "Douglas McArthur arrived at Terowie Railway Station",
+     "This historic message that echoed around the world was given on this spot by US General Douglas MacArthur at his first press interview in Australia, 20.3.1942"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the detail 'where he changed trains', but the source text never mentions changing trains\u2014only arriving at the station. All other components (fame, exact quote, location, and date) are supported by the shown sentences. Since the missing component is not provable from the source at all, the author must either add a citation for the train change or remove that phrase."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "Academically, Gronkowski was in the National Honor Society, citing math as his best subject, and English the worst.",
+   "markers": [
+    "robgronkowski"
+   ],
+   "paper_ids": [
+    "ef0094efba438653f83f937ef8ecda5915b1ec62"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8897,
+   "evidence": {
+    "paper_id": "ef0094efba438653f83f937ef8ecda5915b1ec62",
+    "source_title": "robgronkowski",
+    "supported": false,
+    "sentence": "Gronkowski landed at the University of Arizona, a Division I school that would serve as the perfect platform to showcase his talent.",
+    "page": 1,
+    "snippet": "Gronkowski landed at the University of Arizona,",
+    "cosine": 0.8897,
+    "reason": "The passage does not contain any information about Gronkowski's academic achievements, including his involvement in the National Honor Society or his performance in specific subjects.",
+    "window": "None would be as successful as Rob, though. Gronkowski landed at the University of Arizona, a Division I school that would serve as the perfect platform to showcase his talent. But a back injury sidelined him for the duration of his junior year, and the promise of being an early draft pick dissipated."
+   },
+   "evidences": [
+    {
+     "paper_id": "ef0094efba438653f83f937ef8ecda5915b1ec62",
+     "source_title": "robgronkowski",
+     "supported": false,
+     "sentence": "Gronkowski landed at the University of Arizona, a Division I school that would serve as the perfect platform to showcase his talent.",
+     "page": 1,
+     "snippet": "Gronkowski landed at the University of Arizona,",
+     "cosine": 0.8897,
+     "reason": "The passage does not contain any information about Gronkowski's academic achievements, including his involvement in the National Honor Society or his performance in specific subjects.",
+     "window": "None would be as successful as Rob, though. Gronkowski landed at the University of Arizona, a Division I school that would serve as the perfect platform to showcase his talent. But a back injury sidelined him for the duration of his junior year, and the promise of being an early draft pick dissipated."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "National Honor Society; academically",
+    "missing_from": [
+     "ef0094efba438653f83f937ef8ecda5915b1ec62"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Gronkowski was in the National Honor Society, citing math as his best subject, and English the worst.",
+    "reason": "The passage asserts facts about Gronkowski's academic performance, which the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim\u2014including National Honor Society membership and specific best/worst subjects\u2014is absent from the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a biographical article about Rob Gronkowski focusing on his football career, family, and lifestyle. It contains no mention of National Honor Society, his academic subjects, or any ranking of math or English. Therefore, every component of the claim is unsupported by the source, requiring the author to either add a proper citation or rewrite the claim to remove these unsourced assertions."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "An Associated Press investigation outlined that the military coalition in Yemen actively reduced AQAP in Yemen without military intervention, instead by offering them deals and even actively recruiting them in the coalition because \"they are considered as exceptional fighters\".",
+   "markers": [
+    "yemenicivilwar2015presen"
+   ],
+   "paper_ids": [
+    "408523dbfcb2ac0461fbbb9c76e89f329b213d05"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+    "source_title": "yemenicivilwar2015presen",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found.",
+    "page": 1,
+    "snippet": "That's because the coalition cut secret deals",
+    "reason": "The passage explicitly states that the coalition cut secret deals with al-Qaida fighters, paid some to leave, and allowed others to retreat with weapons and cash, and that coalition-backed militias actively recruit al-Qaida militants because they are considered exceptional fighters, as found by the Associated Press.",
+    "votes": "2-0",
+    "window": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found. Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found. Under the accord, thousands of local tribal fighters were to be enlisted in the UAE-funded Shabwa Elite Force militia. He said commanders received weapons and other aid from the coalition and distributed it to all the fighters, including al-Qaida militants. For every 1,000 fighters, 50 to 70 would be al-Qaida members, the mediator and two officials said. One liberal activist took up arms alongside other men from his neighborhood to defend the city, and they found themselves fighting side by side with al-Qaida members. In that light, it would almost be more startling if the militants were not involved against the Houthis, especially since al-Qaida militants are extremist Sunnis seeking the defeat of the Shiite rebels. The agreement also included a provision that 10,000 local tribesmen \u2014 including 250 al-Qaida militants \u2014 be incorporated into the Security Belt, the UAE-backed Yemeni force in the area, four Yemeni officials said."
+   },
+   "evidences": [
+    {
+     "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+     "source_title": "yemenicivilwar2015presen",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found.",
+     "page": 1,
+     "snippet": "That's because the coalition cut secret deals",
+     "reason": "The passage explicitly states that the coalition cut secret deals with al-Qaida fighters, paid some to leave, and allowed others to retreat with weapons and cash, and that coalition-backed militias actively recruit al-Qaida militants because they are considered exceptional fighters, as found by the Associated Press.",
+     "votes": "2-0",
+     "window": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found. Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found. Under the accord, thousands of local tribal fighters were to be enlisted in the UAE-funded Shabwa Elite Force militia. He said commanders received weapons and other aid from the coalition and distributed it to all the fighters, including al-Qaida militants. For every 1,000 fighters, 50 to 70 would be al-Qaida members, the mediator and two officials said. One liberal activist took up arms alongside other men from his neighborhood to defend the city, and they found themselves fighting side by side with al-Qaida members. In that light, it would almost be more startling if the militants were not involved against the Houthis, especially since al-Qaida militants are extremist Sunnis seeking the defeat of the Shiite rebels. The agreement also included a provision that 10,000 local tribesmen \u2014 including 250 al-Qaida militants \u2014 be incorporated into the Security Belt, the UAE-backed Yemeni force in the area, four Yemeni officials said."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the coalition cut secret deals with al-Qaida fighters, paid some to leave, and allowed others to retreat with weapons and cash, and that coalition-backed militias actively recruit al-Qaida militants because they are considered exceptional fighters, as found by the Associated Press.",
+   "covering": {
+    "covered": [
+     {
+      "component": "military coalition in Yemen actively reduced AQAP",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found.",
+      "page": 1,
+      "snippet": "That's because the coalition cut secret deals"
+     },
+     {
+      "component": "military coalition in Yemen actively reduced AQAP",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "Again, the central provision was that the coalition and U.S. drones cease all bombings as AQAP pulled out with its weapons, the mediators said.",
+      "page": 1,
+      "snippet": "Again, the central provision was that the"
+     },
+     {
+      "component": "by offering them deals",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found.",
+      "page": 1,
+      "snippet": "That's because the coalition cut secret deals"
+     },
+     {
+      "component": "even actively recruiting them in the coalition",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found.",
+      "page": 1,
+      "snippet": "Coalition-backed militias actively recruit al-Qaida militants, or"
+     },
+     {
+      "component": "because \"they are considered as exceptional fighters\"",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found.",
+      "page": 1,
+      "snippet": "Coalition-backed militias actively recruit al-Qaida militants, or"
+     }
+    ],
+    "uncovered": [
+     "without military intervention"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "text": "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found. [\u2026] Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found. [\u2026] Again, the central provision was that the coalition and U.S. drones cease all bombings as AQAP pulled out with its weapons, the mediators said.",
+      "n_used": 3
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found.",
+      "Again, the central provision was that the coalition and U.S. drones cease all bombings as AQAP pulled out with its weapons, the mediators said.",
+      "Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found."
+     ],
+     "why": "All components of the claim are directly proven by the shown sentences: the AP investigation attribution, the coalition's secret deals and cessation of bombings (without military intervention), the active recruitment of al-Qaida militants, and the stated reason that they are considered exceptional fighters. No contradiction exists in the source text."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "That's because the coalition cut secret deals with al-Qaida fighters, paying some to leave key cities and towns and letting others retreat with weapons, equipment and wads of looted cash, an investigation by The Associated Press has found.",
+     "Again, the central provision was that the coalition and U.S. drones cease all bombings as AQAP pulled out with its weapons, the mediators said.",
+     "Coalition-backed militias actively recruit al-Qaida militants, or those who were recently members, because they're considered exceptional fighters, the AP found."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "All components of the claim are directly proven by the shown sentences: the AP investigation attribution, the coalition's secret deals and cessation of bombings (without military intervention), the active recruitment of al-Qaida militants, and the stated reason that they are considered exceptional fighters. No contradiction exists in the source text."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "In addition, there was a foreword by Cahal Moran (co-author of The Econocracy), and an appendix \"The Five Stages of Economic Grief\" on how the economics profession is coming to terms with its role in the great financial crisis, which was excerpted in \"Evonomics\".",
+   "markers": [
+    "economyths"
+   ],
+   "paper_ids": [
+    "0f321941bad8a850fa8858b1024f11d086c1b25b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0f321941bad8a850fa8858b1024f11d086c1b25b",
+    "source_title": "economyths",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "And since that time, economists have been working their way slowly and painfully through the different stages or aspects of the grief process, as they realise that their elegant models not only failed to predict the crisis, but also helped to create it.",
+    "page": 1,
+    "snippet": "And since that time, economists have been",
+    "reason": "The passage does not mention a foreword by Cahal Moran or an appendix titled 'The Five Stages of Economic Grief'.",
+    "votes": "2-0",
+    "window": "And since that time, economists have been working their way slowly and painfully through the different stages or aspects of the grief process, as they realise that their elegant models not only failed to predict the crisis, but also helped to create it. This extract from Economyths draws on her model of grief as inspiration to chart the long, arduous, but ultimately healthy and healing (we hope, it's not over yet) process as the economics profession slowly comes to terms with its role in the Great Financial Crisis. When Economyths first came out, most economists were in a state of denial \u2013 especially those at the top of the profession. Let's make a deal As anger started to burn out, the next stage of the drawn-out and generally exhausting grief process involved bargaining: both with the future \u2013 perhaps we can put things right \u2013 and in a kind of retroactive bargaining with the past, saying that the event would not have occurred if only something had been done differently."
+   },
+   "evidences": [
+    {
+     "paper_id": "0f321941bad8a850fa8858b1024f11d086c1b25b",
+     "source_title": "economyths",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "And since that time, economists have been working their way slowly and painfully through the different stages or aspects of the grief process, as they realise that their elegant models not only failed to predict the crisis, but also helped to create it.",
+     "page": 1,
+     "snippet": "And since that time, economists have been",
+     "reason": "The passage does not mention a foreword by Cahal Moran or an appendix titled 'The Five Stages of Economic Grief'.",
+     "votes": "2-0",
+     "window": "And since that time, economists have been working their way slowly and painfully through the different stages or aspects of the grief process, as they realise that their elegant models not only failed to predict the crisis, but also helped to create it. This extract from Economyths draws on her model of grief as inspiration to chart the long, arduous, but ultimately healthy and healing (we hope, it's not over yet) process as the economics profession slowly comes to terms with its role in the Great Financial Crisis. When Economyths first came out, most economists were in a state of denial \u2013 especially those at the top of the profession. Let's make a deal As anger started to burn out, the next stage of the drawn-out and generally exhausting grief process involved bargaining: both with the future \u2013 perhaps we can put things right \u2013 and in a kind of retroactive bargaining with the past, saying that the event would not have occurred if only something had been done differently."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention a foreword by Cahal Moran or an appendix titled 'The Five Stages of Economic Grief'.",
+   "subject_guard": {
+    "subject": "Cahal Moran",
+    "missing_from": [
+     "0f321941bad8a850fa8858b1024f11d086c1b25b"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage states that there was an appendix \"The Five Stages of Economic Grief\" on how the economics profession is coming to terms with its role in the great financial crisis, which was excerpted in \"Evonomics\".",
+    "reason": "The passage describes the content of an appendix and its excerpting, implying that the cited source contains this information. This is a factual assertion about the content of the cited work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states there is a foreword by Cahal Moran and an appendix titled 'The Five Stages of Economic Grief'; neither of these is mentioned in the provided source text (the Evonomics article). The source only contains an adapted extract from Economyths without that exact title or any mention of a foreword.",
+    "rewrite_suggestion": "There was an excerpt from David Orrell's Economyths, titled 'How the Economics Profession Is Coming to Terms with Its Role in the Great Financial Crisis', published in Evonomics, which discusses the profession's grief process over its role in the crisis.",
+    "proofs": [
+     "How the Economics Profession Is Coming to Terms with Its Role in the Great Financial Crisis",
+     "This extract from Economyths draws on her model of grief as inspiration to chart the long, arduous, but ultimately healthy and healing (we hope, it's not over yet) process as the economics profession slowly comes to terms with its role in the Great Financial Crisis.",
+     "Adapted from Economyths: 11 Ways That Economics Gets it Wrong, Icon Books; 2nd edition edition (September 12, 2017)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence ('And since that time...') does not address any component of the claim\u2014it omits the foreword, the appendix title, and the fact that it was excerpted in Evonomics. The source text itself (the Evonomics article) confirms that an extract from Economyths was published there and discusses the profession's grief, but it never mentions a foreword by Cahal Moran or an appendix with the specific title 'The Five Stages of Economic Grief'. Therefore, those components are entirely unsourced from this source, making this an author-level problem (add_citation_or_rewrite). The fetchable components (the description and the fact of the excerpt) are provable from the source, but the missing subclaims dominate."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Originally proposed by the Olmsted Brothers, architects involved in the planning for Portland's Lewis and Clark Centennial Exposition of 1905, it has expanded to a projected 140 miles (230 km), encircling the city and connecting parks along the Columbia, Sandy, and Willamette rivers and Johnson Creek.",
+   "markers": [
+    "columbiaslough"
+   ],
+   "paper_ids": [
+    "63c07256340dda293ac699711be5c4253bc619e8"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+    "source_title": "columbiaslough",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The trail connects parks along the Columbia, Sandy, and Willamette Rivers and Johnson Creek in an almost continuous loop.",
+    "page": 1,
+    "snippet": "The trail connects parks along the Columbia,",
+    "reason": "The passage explicitly states that the Olmsted Brothers proposed the loop in 1904 as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair, and that the planned loop trail has lengthened to more than 140 miles encircling the city and connecting parks along the Columbia, Sandy, and Willamette rivers and Johnson Creek.",
+    "votes": "2-0",
+    "window": "The trail connects parks along the Columbia, Sandy, and Willamette Rivers and Johnson Creek in an almost continuous loop. The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile Loop Land Trust ### Main menu Skip to primary content Skip to secondary content # History of the Loop The 40-Mile Loop was originally proposed in 1904 by the Olmsted Brothers (Frederick Law, Jr. and John Charles, sons of Frederick Law Olmstead) who were brought to Portland from Boston to propose a park system as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair. The name, 40-Mile Loop stuck, even as the planned loop trail has lengthened to more than 140 miles to include all of Multnomah County and to connect more than 30 parks. That connected system was to be a 40-Mile Loop encircling the city."
+   },
+   "evidences": [
+    {
+     "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+     "source_title": "columbiaslough",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The trail connects parks along the Columbia, Sandy, and Willamette Rivers and Johnson Creek in an almost continuous loop.",
+     "page": 1,
+     "snippet": "The trail connects parks along the Columbia,",
+     "reason": "The passage explicitly states that the Olmsted Brothers proposed the loop in 1904 as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair, and that the planned loop trail has lengthened to more than 140 miles encircling the city and connecting parks along the Columbia, Sandy, and Willamette rivers and Johnson Creek.",
+     "votes": "2-0",
+     "window": "The trail connects parks along the Columbia, Sandy, and Willamette Rivers and Johnson Creek in an almost continuous loop. The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile Loop Land Trust ### Main menu Skip to primary content Skip to secondary content # History of the Loop The 40-Mile Loop was originally proposed in 1904 by the Olmsted Brothers (Frederick Law, Jr. and John Charles, sons of Frederick Law Olmstead) who were brought to Portland from Boston to propose a park system as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair. The name, 40-Mile Loop stuck, even as the planned loop trail has lengthened to more than 140 miles to include all of Multnomah County and to connect more than 30 parks. That connected system was to be a 40-Mile Loop encircling the city."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the Olmsted Brothers proposed the loop in 1904 as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair, and that the planned loop trail has lengthened to more than 140 miles encircling the city and connecting parks along the Columbia, Sandy, and Willamette rivers and Johnson Creek.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Originally proposed by the Olmsted Brothers",
+      "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+      "source_title": "columbiaslough",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile Loop Land Trust ### Main menu Skip to primary content Skip to secondary content # History of the Loop The 40-Mile Loop was originally proposed in 1904 by the Olmsted Brothers (Frederick Law, Jr. and John Charles, sons of Frederick Law Olmstead) who were brought to Portland from Boston to propose a park system as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile"
+     },
+     {
+      "component": "architects involved in the planning for Portland's Lewis and Clark Centennial Exposition of 1905",
+      "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+      "source_title": "columbiaslough",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile Loop Land Trust ### Main menu Skip to primary content Skip to secondary content # History of the Loop The 40-Mile Loop was originally proposed in 1904 by the Olmsted Brothers (Frederick Law, Jr. and John Charles, sons of Frederick Law Olmstead) who were brought to Portland from Boston to propose a park system as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile"
+     },
+     {
+      "component": "expanded to a projected 140 miles (230 km)",
+      "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+      "source_title": "columbiaslough",
+      "sentence": "The name, 40-Mile Loop stuck, even as the planned loop trail has lengthened to more than 140 miles to include all of Multnomah County and to connect more than 30 parks.",
+      "page": 1,
+      "snippet": "The name, 40-Mile Loop stuck, even as"
+     },
+     {
+      "component": "connecting parks along the Columbia, Sandy, and Willamette rivers and Johnson Creek",
+      "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+      "source_title": "columbiaslough",
+      "sentence": "The trail connects parks along the Columbia, Sandy, and Willamette Rivers and Johnson Creek in an almost continuous loop.",
+      "page": 1,
+      "snippet": "The trail connects parks along the Columbia,"
+     },
+     {
+      "component": "encircling the city",
+      "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+      "source_title": "columbiaslough",
+      "sentence": "That connected system was to be a 40-Mile Loop encircling the city.",
+      "page": 1,
+      "snippet": "That connected system was to be a",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+      "source_title": "columbiaslough",
+      "text": "The Wayback Machine - https://web.archive.org/web/20150809215451/http://40mileloop.org/wordpress/?page_id=6 # 40-Mile Loop Land Trust ### Main menu Skip to primary content Skip to secondary content # History of the Loop The 40-Mile Loop was originally proposed in 1904 by the Olmsted Brothers (Frederick Law, Jr. and John Charles, sons of Frederick Law Olmstead) who were brought to Portland from Boston to propose a park system as part of the planning for the Lewis and Clark Centennial Exposition and World's Fair. [\u2026] That connected system was to be a 40-Mile Loop encircling the city. The name, 40-Mile Loop stuck, even as the planned loop trail has lengthened to more than 140 miles to include all of Multnomah County and to connect more than 30 parks. Now, a century later the 40-Mile Loop is nearly complete. The trail connects parks along the Columbia, Sandy, and Willamette Rivers and Johnson Creek in an almost continuous loop.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t19",
+   "text": "Frederick (Fredrak) W. Fraske (March 8, 1872 \u2013 June 18, 1973) is believed to have been the last surviving veteran of the Indian Wars.",
+   "markers": [
+    "frederickfraske"
+   ],
+   "paper_ids": [
+    "d02fc1e79ed8ffd217d9ee18b6e211f26c18b294"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d02fc1e79ed8ffd217d9ee18b6e211f26c18b294",
+    "source_title": "frederickfraske",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars.",
+    "page": 1,
+    "snippet": "Fraske died on June 8th, 1973, at",
+    "reason": "The passage states Fraske died on June 8th, 1973, not June 18th, 1973.",
+    "votes": "2-0",
+    "window": "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars. Frederick Fraske was born in Prussia in 1872, and emigrated to the US as a young child. In 1894 the age of 21, he enlisted in the US Army and served with company F of the 17th infantry at Fort D.A."
+   },
+   "evidences": [
+    {
+     "paper_id": "d02fc1e79ed8ffd217d9ee18b6e211f26c18b294",
+     "source_title": "frederickfraske",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars.",
+     "page": 1,
+     "snippet": "Fraske died on June 8th, 1973, at",
+     "reason": "The passage states Fraske died on June 8th, 1973, not June 18th, 1973.",
+     "votes": "2-0",
+     "window": "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars. Frederick Fraske was born in Prussia in 1872, and emigrated to the US as a young child. In 1894 the age of 21, he enlisted in the US Army and served with company F of the 17th infantry at Fort D.A."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Fraske died on June 8th, 1973, not June 18th, 1973.",
+   "component_check": {
+    "found": [
+     "Fraske is believed to have been the last surviving veteran of the Indian Wars."
+    ],
+    "missing": [
+     "Frederick (Fredrak) W. Fraske was born on March 8, 1872.",
+     "Frederick (Fredrak) W. Fraske died on June 18, 1973."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Fraske is believed to have been the last surviving veteran of the Indian Wars.",
+      "paper_id": "d02fc1e79ed8ffd217d9ee18b6e211f26c18b294",
+      "source_title": "frederickfraske",
+      "sentence": "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a specific fact (that Frederick W. Fraske is believed to have been the last surviving veteran of the Indian Wars) and attributes this information implicitly to the cited source by including it. This falls under the 'full' scope as the citation is expected to prove the stated fact.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Birth date March 8, 1872; middle name Fredrak and initial W.; death date June 18, 1973 (source gives June 8, 1973)",
+    "rewrite_suggestion": "Frederick Fraske (born 1872, died June 8, 1973) is widely considered to have been the last surviving veteran of the Indian Wars.",
+    "proofs": [
+     "Frederick Fraske was born in Prussia in 1872,",
+     "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Fraske died on June 8th, 1973, at the age 0f 101 and is widely considered to be the last veteran of the Indian Wars.",
+     "why": "The claim states death on June 18, 1973, but the source says June 8, 1973, a direct contradiction."
+    },
+    "why": "The claim includes specific birth and death dates and a middle name/initial that are not present in the source; the death date is actually contradicted by the source. The status component is supported by the shown sentence, but the unsourced and conflicting details require the author to add a citation or rewrite the claim to match what the source actually provides."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "After which he moved back to Tanzania from Germany, and became a member of parliament and held various positions as minister.",
+   "markers": [
+    "ahmedhassandiria"
+   ],
+   "paper_ids": [
+    "11935b5ba2b712a50972758d85543e9e2f6d0975"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9214,
+   "evidence": {
+    "paper_id": "11935b5ba2b712a50972758d85543e9e2f6d0975",
+    "source_title": "ahmedhassandiria",
+    "supported": false,
+    "sentence": "He became Tanzania's ambassador to Zaire before he was transferred to West Germany and later to Egypt, Japan and India.",
+    "page": 1,
+    "snippet": "He became Tanzania's ambassador to Zaire before",
+    "cosine": 0.9214,
+    "reason": "The passage does not mention the individual moving back to Tanzania from Germany or becoming a member of parliament.",
+    "window": "After the Zanzibar Revolution in 1964, he was appointed Area Commissioner for Pemba. He became Tanzania's ambassador to Zaire before he was transferred to West Germany and later to Egypt, Japan and India. He was appointed Minister for Information and Broadcasting in 1989, a position he held up to 1994."
+   },
+   "evidences": [
+    {
+     "paper_id": "11935b5ba2b712a50972758d85543e9e2f6d0975",
+     "source_title": "ahmedhassandiria",
+     "supported": false,
+     "sentence": "He became Tanzania's ambassador to Zaire before he was transferred to West Germany and later to Egypt, Japan and India.",
+     "page": 1,
+     "snippet": "He became Tanzania's ambassador to Zaire before",
+     "cosine": 0.9214,
+     "reason": "The passage does not mention the individual moving back to Tanzania from Germany or becoming a member of parliament.",
+     "window": "After the Zanzibar Revolution in 1964, he was appointed Area Commissioner for Pemba. He became Tanzania's ambassador to Zaire before he was transferred to West Germany and later to Egypt, Japan and India. He was appointed Minister for Information and Broadcasting in 1989, a position he held up to 1994."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "held various positions as minister"
+    ],
+    "missing": [
+     "he moved back to Tanzania from Germany",
+     "became a member of parliament"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "held various positions as minister",
+      "paper_id": "11935b5ba2b712a50972758d85543e9e2f6d0975",
+      "source_title": "ahmedhassandiria",
+      "sentence": "He was subsequently Ambassador to the United States and Minister for Mineral Resources.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts factual biographical information about an individual, which is directly attributable to the cited source. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts that he moved back to Tanzania from Germany, became a member of parliament, and held various positions as minister, but the source provides no evidence for the move from Germany or parliamentary membership, and documents only one specific minister post (Minister for Information and Broadcasting) without supporting 'various'.",
+    "rewrite_suggestion": "After his diplomatic postings, he became Minister for Information and Broadcasting and later moved to the Ministry of Foreign Affairs and International Co-operation.",
+    "proofs": [
+     "He was appointed Minister for Information and Broadcasting in 1989, a position he held up to 1994.",
+     "He was then moved to the Ministry of Foreign Affairs and International Co-operation."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence discusses his ambassadorial postings but does not support any component of the claim. The source text does not state that he moved back to Tanzania from Germany, nor does it mention him becoming a member of parliament. Additionally, the claim of 'various positions as minister' is overstated, as only one minister post is explicitly named (Minister for Information and Broadcasting); the subsequent role in the Ministry of Foreign Affairs is not explicitly called a minister position. Therefore the author must add citations for the unsupported parts or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "Elsa D'Silva served as the Vice President, Network Planning at Kingfisher Airlines where she headed the Network Planning & Charters department.",
+   "markers": [
+    "elsadsilva"
+   ],
+   "paper_ids": [
+    "fd643296ca150e3c5e24b899c5ecd575d162abde"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fd643296ca150e3c5e24b899c5ecd575d162abde",
+    "source_title": "elsadsilva",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Secondly, as a woman who had risen to the top of the career ladder (my last portfolio was Vice President Network Planning) I realised that not many women make it to the top.",
+    "page": 1,
+    "snippet": "Secondly, as a woman who had risen",
+    "reason": "The passage does not mention Kingfisher Airlines or the department she headed.",
+    "votes": "2-0",
+    "window": "Secondly, as a woman who had risen to the top of the career ladder (my last portfolio was Vice President Network Planning) I realised that not many women make it to the top."
+   },
+   "evidences": [
+    {
+     "paper_id": "fd643296ca150e3c5e24b899c5ecd575d162abde",
+     "source_title": "elsadsilva",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Secondly, as a woman who had risen to the top of the career ladder (my last portfolio was Vice President Network Planning) I realised that not many women make it to the top.",
+     "page": 1,
+     "snippet": "Secondly, as a woman who had risen",
+     "reason": "The passage does not mention Kingfisher Airlines or the department she headed.",
+     "votes": "2-0",
+     "window": "Secondly, as a woman who had risen to the top of the career ladder (my last portfolio was Vice President Network Planning) I realised that not many women make it to the top."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Kingfisher Airlines or the department she headed.",
+   "subject_guard": {
+    "subject": "Kingfisher Airlines",
+    "missing_from": [
+     "fd643296ca150e3c5e24b899c5ecd575d162abde"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Elsa D'Silva served as the Vice President, Network Planning at Kingfisher Airlines where she headed the Network Planning & Charters department.",
+    "reason": "The passage directly states facts about Elsa D'Silva's employment history, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim specifies that Elsa D'Silva worked at Kingfisher Airlines and headed the 'Network Planning & Charters' department, but neither the shown sentence nor any part of the source text contains these details. The source only supports the title 'Vice President Network Planning' without naming the airline or the specific department.",
+    "rewrite_suggestion": "Elsa D'Silva served as Vice President, Network Planning (her last portfolio) in the aviation industry.",
+    "proofs": [
+     "Secondly, as a woman who had risen to the top of the career ladder (my last portfolio was Vice President Network Planning) I realised that not many women make it to the top."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports that Elsa D'Silva held the title 'Vice President Network Planning', but the claim adds that this was at Kingfisher Airlines and that she headed a specific 'Network Planning & Charters' department. Neither the shown sentence nor any other part of the source text mentions Kingfisher Airlines or the 'Network Planning & Charters' department. Therefore, these components are unsourced and the claim requires a citation or rewrite to remove them."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "In 1861, he was elected an officer in a Georgia military unit but was not allowed to serve because of his youth; in 1863, he went to England to secure ships for blockade running.",
+   "markers": [
+    "isidorstraus"
+   ],
+   "paper_ids": [
+    "34d78f47fb830f39d1f42a55393f2a3d6fe760ac"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8757,
+   "evidence": {
+    "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+    "source_title": "isidorstraus",
+    "supported": true,
+    "sentence": "He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth.",
+    "page": 1,
+    "snippet": "He was elected lieutenant of a Georgia",
+    "cosine": 0.8757,
+    "reason": "The passage directly states that Isidor Straus was elected lieutenant of a Georgia company in 1861 but not allowed to serve due to his youth, and that in 1863 he went to England to secure ships for blockade running.",
+    "window": "Isidor Straus: Merchant; eldest son of Lazarus Straus; born at Otterberg Feb. 6, 1845 He accompanied his parents to the United States in 1854, and was educated at Collinsworth Institute. He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth. In 1863 he went to England to secure ships for blockade-running."
+   },
+   "evidences": [
+    {
+     "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+     "source_title": "isidorstraus",
+     "supported": true,
+     "sentence": "He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth.",
+     "page": 1,
+     "snippet": "He was elected lieutenant of a Georgia",
+     "cosine": 0.8757,
+     "reason": "The passage directly states that Isidor Straus was elected lieutenant of a Georgia company in 1861 but not allowed to serve due to his youth, and that in 1863 he went to England to secure ships for blockade running.",
+     "window": "Isidor Straus: Merchant; eldest son of Lazarus Straus; born at Otterberg Feb. 6, 1845 He accompanied his parents to the United States in 1854, and was educated at Collinsworth Institute. He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth. In 1863 he went to England to secure ships for blockade-running."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Isidor Straus was elected lieutenant of a Georgia company in 1861 but not allowed to serve due to his youth, and that in 1863 he went to England to secure ships for blockade running.",
+   "covering": {
+    "covered": [
+     {
+      "component": "elected officer in Georgia military unit in 1861",
+      "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+      "source_title": "isidorstraus",
+      "sentence": "He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth.",
+      "page": 1,
+      "snippet": "He was elected lieutenant of a Georgia"
+     },
+     {
+      "component": "not allowed to serve because of youth",
+      "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+      "source_title": "isidorstraus",
+      "sentence": "He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth.",
+      "page": 1,
+      "snippet": "He was elected lieutenant of a Georgia"
+     },
+     {
+      "component": "went to England in 1863 to secure ships for blockade running",
+      "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+      "source_title": "isidorstraus",
+      "sentence": "In 1863 he went to England to secure ships for blockade-running.",
+      "page": 1,
+      "snippet": "In 1863 he went to England to"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+      "source_title": "isidorstraus",
+      "text": "He was elected lieutenant of a Georgia company at the opening of the Civil war, but was not allowed to serve on account of his youth. In 1863 he went to England to secure ships for blockade-running.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t23",
+   "text": "\"Jack the Writer\" is the fourth episode of the first season of the American situation comedy \"30 Rock\", which aired on November 1, 2006 on the NBC network in the United States, and on November 1, 2007 in the United Kingdom.",
+   "markers": [
+    "jackthewriter"
+   ],
+   "paper_ids": [
+    "a15c0f5c8e71025d2919c889d7f87020dc571edd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a15c0f5c8e71025d2919c889d7f87020dc571edd",
+    "source_title": "jackthewriter",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "30 Rock 10.40pm, Five Four episodes in, and this backstage sitcom just gets funnier.",
+    "page": 1,
+    "snippet": "30 Rock 10.40pm, Five Four episodes in,",
+    "reason": "The passage does not state that \"Jack the Writer\" is the fourth episode of the first season of \"30 Rock\", nor does it mention its air date in the United States or the United Kingdom.",
+    "votes": "2-0",
+    "window": "30 Rock 10.40pm, Five Four episodes in, and this backstage sitcom just gets funnier."
+   },
+   "evidences": [
+    {
+     "paper_id": "a15c0f5c8e71025d2919c889d7f87020dc571edd",
+     "source_title": "jackthewriter",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "30 Rock 10.40pm, Five Four episodes in, and this backstage sitcom just gets funnier.",
+     "page": 1,
+     "snippet": "30 Rock 10.40pm, Five Four episodes in,",
+     "reason": "The passage does not state that \"Jack the Writer\" is the fourth episode of the first season of \"30 Rock\", nor does it mention its air date in the United States or the United Kingdom.",
+     "votes": "2-0",
+     "window": "30 Rock 10.40pm, Five Four episodes in, and this backstage sitcom just gets funnier."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that \"Jack the Writer\" is the fourth episode of the first season of \"30 Rock\", nor does it mention its air date in the United States or the United Kingdom.",
+   "subject_guard": {
+    "subject": "United Kingdom; United States",
+    "missing_from": [
+     "a15c0f5c8e71025d2919c889d7f87020dc571edd"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the episode, including its title, episode number, season, series, air date, and network, which are directly attributable to the cited source. The attribution test is met as the passage presents information that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "All specific details about the episode (title, season, airdates, networks) are absent from the cited source.",
+    "rewrite_suggestion": "The Guardian's Anna Pickard noted that the fourth episode of '30 Rock' was airing on Five at 10.40pm.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text from The Guardian contains no mention of the episode title 'Jack the Writer', its season number, the NBC network, or the airdates (November 1, 2006 in the US and November 1, 2007 in the UK). The shown sentence only describes a preview of '30 Rock' on Five at 10.40pm, calling it 'Four episodes in'. None of the claim's substantive components are provable from this source, so the author must either supply a new citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "The band's earlier songs, recorded on two- and four-track equipment, needed to be reworked into a multitrack format that is essential in providing feedback to players.",
+   "markers": [
+    "thebeatlesrockband"
+   ],
+   "paper_ids": [
+    "cf44fb84d09b402cd3c82d9ee5c367b4dbba83c8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cf44fb84d09b402cd3c82d9ee5c367b4dbba83c8",
+    "source_title": "thebeatlesrockband",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "But \"Rock Band\" needs to devote a separate audio track to each instrument, so MTV had to figure out how to split those tracks into separate files in order to include the earlier songs in the game.",
+    "page": 1,
+    "snippet": "But \"Rock Band\" needs to devote a",
+    "reason": "The passage does not mention that the earlier songs were recorded on two- and four-track equipment.",
+    "votes": "2-0",
+    "window": "But \"Rock Band\" needs to devote a separate audio track to each instrument, so MTV had to figure out how to split those tracks into separate files in order to include the earlier songs in the game. Rock Band requires each of the main instruments to be played in isolation, but on the Beatles early hits the drums and guitars would often be recorded on the same piece of tape. He developed a filtering method that split these instruments into separate tracks."
+   },
+   "evidences": [
+    {
+     "paper_id": "cf44fb84d09b402cd3c82d9ee5c367b4dbba83c8",
+     "source_title": "thebeatlesrockband",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "But \"Rock Band\" needs to devote a separate audio track to each instrument, so MTV had to figure out how to split those tracks into separate files in order to include the earlier songs in the game.",
+     "page": 1,
+     "snippet": "But \"Rock Band\" needs to devote a",
+     "reason": "The passage does not mention that the earlier songs were recorded on two- and four-track equipment.",
+     "votes": "2-0",
+     "window": "But \"Rock Band\" needs to devote a separate audio track to each instrument, so MTV had to figure out how to split those tracks into separate files in order to include the earlier songs in the game. Rock Band requires each of the main instruments to be played in isolation, but on the Beatles early hits the drums and guitars would often be recorded on the same piece of tape. He developed a filtering method that split these instruments into separate tracks."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention that the earlier songs were recorded on two- and four-track equipment.",
+   "component_check": {
+    "found": [
+     "These songs needed to be reworked into a multitrack format."
+    ],
+    "missing": [
+     "The band's earlier songs were recorded on two- and four-track equipment.",
+     "A multitrack format is essential in providing feedback to players."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "These songs needed to be reworked into a multitrack format.",
+      "paper_id": "cf44fb84d09b402cd3c82d9ee5c367b4dbba83c8",
+      "source_title": "thebeatlesrockband",
+      "sentence": "But \"Rock Band\" needs to devote a separate audio track to each instrument, so MTV had to figure out how to split those tracks into separate files in order to include the earlier songs in the game.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The band's earlier songs, recorded on two- and four-track equipment, needed to be reworked into a multitrack format that is essential in providing feedback to players.",
+    "reason": "The passage directly states a need for reworking the band's earlier songs into a multitrack format, implying this is a finding or statement that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "\"recorded on two- and four-track equipment\" and \"essential in providing feedback to players\"",
+    "rewrite_suggestion": "The band's earlier songs, which were recorded with limited track separation (e.g., drums and guitar on the same track), needed to be split into separate audio tracks for the game.",
+    "proofs": [
+     "On \"Taxman,\" for example, the drums and guitar were recorded on the same track.",
+     "But \"Rock Band\" needs to devote a separate audio track to each instrument, so MTV had to figure out how to split those tracks into separate files in order to include the earlier songs in the game."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two substantive components that are not supported by the source text: the specific detail about 'two- and four-track equipment' is not stated (the source only mentions tracks being shared), and the assertion that the multitrack format is 'essential in providing feedback to players' is entirely absent from the source. While the shown sentence covers the need to split tracks for inclusion, the missing components require either a new citation or a rewrite to align with what the source actually says."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "Group A was contested in Rouen, France running from 12 to 18 April 2015, and Group B in Beijing, China, running from 6 to 12 April 2015.",
+   "markers": [
+    "2015iihfwomensworldchamp"
+   ],
+   "paper_ids": [
+    "d7084bd93c54fb18cb01eb42fae166896b1aa9df"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+    "source_title": "2015iihfwomensworldchamp",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014",
+    "page": 1,
+    "snippet": "2015 IIHF Ice Hockey Women's World Championship",
+    "reason": "",
+    "votes": "2-0",
+    "window": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014 2015 IIHF Ice Hockey Women's World Championship Division I Group BIn Beijing, China, 6-12 April 2015Participants: Slovakia, China, Hungary, Netherlands, DPR Korea, Italy"
+   },
+   "evidences": [
+    {
+     "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+     "source_title": "2015iihfwomensworldchamp",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014",
+     "page": 1,
+     "snippet": "2015 IIHF Ice Hockey Women's World Championship",
+     "reason": "",
+     "votes": "2-0",
+     "window": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014 2015 IIHF Ice Hockey Women's World Championship Division I Group BIn Beijing, China, 6-12 April 2015Participants: Slovakia, China, Hungary, Netherlands, DPR Korea, Italy"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Group A contested in Rouen, France",
+      "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+      "source_title": "2015iihfwomensworldchamp",
+      "sentence": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014",
+      "page": 1,
+      "snippet": "2015 IIHF Ice Hockey Women's World Championship"
+     },
+     {
+      "component": "Group A running from 12 to 18 April 2015",
+      "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+      "source_title": "2015iihfwomensworldchamp",
+      "sentence": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014",
+      "page": 1,
+      "snippet": "2015 IIHF Ice Hockey Women's World Championship"
+     },
+     {
+      "component": "Group B in Beijing, China",
+      "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+      "source_title": "2015iihfwomensworldchamp",
+      "sentence": "2015 IIHF Ice Hockey Women's World Championship Division I Group BIn Beijing, China, 6-12 April 2015Participants: Slovakia, China, Hungary, Netherlands, DPR Korea, Italy",
+      "page": 1,
+      "snippet": "2015 IIHF Ice Hockey Women's World Championship"
+     },
+     {
+      "component": "Group B running from 6 to 12 April 2015",
+      "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+      "source_title": "2015iihfwomensworldchamp",
+      "sentence": "2015 IIHF Ice Hockey Women's World Championship Division I Group BIn Beijing, China, 6-12 April 2015Participants: Slovakia, China, Hungary, Netherlands, DPR Korea, Italy",
+      "page": 1,
+      "snippet": "2015 IIHF Ice Hockey Women's World Championship"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+      "source_title": "2015iihfwomensworldchamp",
+      "text": "2015 IIHF Ice Hockey Women's World Championship Division I Group AIn Rouen, France, 12-18 April 2015Participants: CZE/JPN*, Norway, Denmark, France, Austria, Latvia*Qualification Series to be played in autumn 2014 2015 IIHF Ice Hockey Women's World Championship Division I Group BIn Beijing, China, 6-12 April 2015Participants: Slovakia, China, Hungary, Netherlands, DPR Korea, Italy",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t26",
+   "text": "The singer later revealed that because of the dye, her hair started to fall out, so she got a boy's haircut and wore a wig.",
+   "markers": [
+    "electraheart"
+   ],
+   "paper_ids": [
+    "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+    "source_title": "electraheart",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Didn't all your hair fall out because of the dye?",
+    "page": 1,
+    "snippet": "Didn't all your hair fall out because",
+    "reason": "The passage directly states that the singer's hair fell out due to dye, leading her to get a boy's haircut and wear a wig.",
+    "votes": "2-0",
+    "window": "Didn't all your hair fall out because of the dye? I basically cut it into a boy's cut and then wore a wig."
+   },
+   "evidences": [
+    {
+     "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+     "source_title": "electraheart",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Didn't all your hair fall out because of the dye?",
+     "page": 1,
+     "snippet": "Didn't all your hair fall out because",
+     "reason": "The passage directly states that the singer's hair fell out due to dye, leading her to get a boy's haircut and wear a wig.",
+     "votes": "2-0",
+     "window": "Didn't all your hair fall out because of the dye? I basically cut it into a boy's cut and then wore a wig."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the singer's hair fell out due to dye, leading her to get a boy's haircut and wear a wig.",
+   "covering": {
+    "covered": [
+     {
+      "component": "hair started to fall out because of the dye",
+      "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+      "source_title": "electraheart",
+      "sentence": "Didn't all your hair fall out because of the dye?",
+      "page": 1,
+      "snippet": "Didn't all your hair fall out because"
+     },
+     {
+      "component": "got a boy's haircut",
+      "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+      "source_title": "electraheart",
+      "sentence": "I basically cut it into a boy's cut and then wore a wig.",
+      "page": 1,
+      "snippet": "I basically cut it into a boy's"
+     },
+     {
+      "component": "wore a wig",
+      "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+      "source_title": "electraheart",
+      "sentence": "I basically cut it into a boy's cut and then wore a wig.",
+      "page": 1,
+      "snippet": "I basically cut it into a boy's"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+      "source_title": "electraheart",
+      "text": "Didn't all your hair fall out because of the dye? It did! I bleached it and then when we were doing the cover shoot the guy was like, \"You've got a little bit of breakage at the back\" \u2013 and I was like, \"So are you telling me I'm going bald?\" I basically cut it into a boy's cut and then wore a wig.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "f69376fcc6ce17b086345b0a4da2e76ccbd315e8": {
+    "title": "mosul",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ef0094efba438653f83f937ef8ecda5915b1ec62": {
+    "title": "robgronkowski",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8274d828e4aeb7d30a5714362513d2134a4624bb": {
+    "title": "douglasmacarthursescapef",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fd643296ca150e3c5e24b899c5ecd575d162abde": {
+    "title": "elsadsilva",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d02fc1e79ed8ffd217d9ee18b6e211f26c18b294": {
+    "title": "frederickfraske",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1": {
+    "title": "electraheart",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "0f321941bad8a850fa8858b1024f11d086c1b25b": {
+    "title": "economyths",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a15c0f5c8e71025d2919c889d7f87020dc571edd": {
+    "title": "jackthewriter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "11935b5ba2b712a50972758d85543e9e2f6d0975": {
+    "title": "ahmedhassandiria",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5bd392b19cafad3cd93911dc610f313b192fcdfc": {
+    "title": "petererlinder",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "e7328ccb0d388d0ce0d9948f3a0ad7c4a99b8956": {
+    "title": "leightonmeester",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "cf44fb84d09b402cd3c82d9ee5c367b4dbba83c8": {
+    "title": "thebeatlesrockband",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fe093484ad00dbda43e58592e33e68df7d747969": {
+    "title": "lisakrasner",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d824219e2b464e756bcface097e9e2796e405c1f": {
+    "title": "orange2018film",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fc886923259fe0e386faf44c175ef22d3f22d216": {
+    "title": "jjwatt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1b8da4c853f34a7e55feec3b7a45cfc221824559": {
+    "title": "anandashankar",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ebbcc6a5b5167503b62124e3171310ce448466b7": {
+    "title": "simonireland",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "408523dbfcb2ac0461fbbb9c76e89f329b213d05": {
+    "title": "yemenicivilwar2015presen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "34d78f47fb830f39d1f42a55393f2a3d6fe760ac": {
+    "title": "isidorstraus",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "1d9d46e0b66b152a39bba99d93b14885b9423d6c": {
+    "title": "9thqueensroyallancers",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "89c75296e3fb8aeee9dd01353048ee27b3729163": {
+    "title": "kxbl",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "078380236d81114a7c4680715abd9d991bf78ebf": {
+    "title": "andrewnliveris",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d7084bd93c54fb18cb01eb42fae166896b1aa9df": {
+    "title": "2015iihfwomensworldchamp",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9879de1e5f806e94fa412eaaa60a10d99c6e82e1": {
+    "title": "khagendralamichhane",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b8a16725511bec9976bc99766808459781e4eca6": {
+    "title": "martinbrodeur",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "63c07256340dda293ac699711be5c4253bc619e8": {
+    "title": "columbiaslough",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 10,
+   "unsupported": 16,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:58:39",
+  "marker_errors": [],
+  "processing_time_seconds": 443.8,
+  "source_hashes": {
+   "jjwatt.txt": "d3a37dbea6f57b736de35a59de4e5f333e0cd297",
+   "andrewnliveris.txt": "9f10c6e60ea196aa4fe669ba2d52b5cf7c5a2132",
+   "mosul.txt": "ed71d602211fa69c330b34ed8fe4bcbc9689b828",
+   "leightonmeester.txt": "a731ac4e62071f2102c30aaae6fda245ade0fc23",
+   "simonireland.txt": "991b7b81f6b003afee0280935737cf025e045b3c",
+   "orange2018film.txt": "0d4c88001b53c0f9d6b39e93f20c738b7b70d26c",
+   "petererlinder.txt": "7f668678ab049de483848b118d6dd0b888326bb9",
+   "martinbrodeur.txt": "c8c0791375f5a715084d7bf3f9fa8d2c9a5fdc17",
+   "khagendralamichhane.txt": "e692a12f1783d14359a5144a53cf8d2b103eaec0",
+   "lisakrasner.txt": "c8d93f7b0b4f427d16f6d41daaeea7a3748420eb",
+   "kxbl.txt": "b76aa77972c9e99ad24ce7ad935ca27406a384f8",
+   "anandashankar.txt": "5274d1ca43832cf7e6cbacbb4d2186978de28fd7",
+   "9thqueensroyallancers.txt": "584b98f6662048eabdb2531318941d30f9c8d62a",
+   "douglasmacarthursescapef.txt": "b2c2349bb135a408ea2558ec0e51f0ad5fff6322",
+   "robgronkowski.txt": "3bf0e58b62b62a4a9e160c2145c908597e6e9aa5",
+   "yemenicivilwar2015presen.txt": "2e3b657683dd0287a682d0b8042813b4efd9353a",
+   "economyths.txt": "23dbd1962258b126d8ba79037b13258a1ef34577",
+   "columbiaslough.txt": "018bb77802e94b320a63ae4244808a57ae9eb02b",
+   "frederickfraske.txt": "704140b059b0bef932de2afb12ce6ff20197f3d2",
+   "ahmedhassandiria.txt": "78b675cbdef41bba12576f83e0d897422abe41f8",
+   "elsadsilva.txt": "f62c0e12f48c2c9a986594d6cd3c749c2f522c07",
+   "isidorstraus.txt": "af257d2db77173e5f860e76e20c644273a059380",
+   "jackthewriter.txt": "fb13d7f56bd4d33874cc65188ecbd69f51138208",
+   "thebeatlesrockband.txt": "fcb9b96f23a30e468e0969b35477f253b01e6518",
+   "2015iihfwomensworldchamp.txt": "59549b97557864d2e7c31bdbe7200f1b68f3ab22",
+   "electraheart.txt": "22378127b108c882a1fdb2682016881738bacd68"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 378,
+    "prompt_tokens": 417890,
+    "completion_tokens": 19533,
+    "cost_usd": 0.049704
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 24,
+    "prompt_tokens": 93128,
+    "completion_tokens": 54701,
+    "cost_usd": 0.022454
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 16,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 20,
+   "actions": {
+    "add_citation_or_rewrite": 17,
+    "supported": 2,
+    "wrong_or_insufficient_evidence": 1
+   },
+   "proof_may_exist": [
+    "t6"
+   ],
+   "conflicts": [
+    "t8",
+    "t13",
+    "t19"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t16"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+   "key": "jjwatt",
+   "filename": "jjwatt.txt",
+   "title": "jjwatt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "078380236d81114a7c4680715abd9d991bf78ebf",
+   "key": "andrewnliveris",
+   "filename": "andrewnliveris.txt",
+   "title": "andrewnliveris",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f69376fcc6ce17b086345b0a4da2e76ccbd315e8",
+   "key": "mosul",
+   "filename": "mosul.txt",
+   "title": "mosul",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e7328ccb0d388d0ce0d9948f3a0ad7c4a99b8956",
+   "key": "leightonmeester",
+   "filename": "leightonmeester.txt",
+   "title": "leightonmeester",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ebbcc6a5b5167503b62124e3171310ce448466b7",
+   "key": "simonireland",
+   "filename": "simonireland.txt",
+   "title": "simonireland",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d824219e2b464e756bcface097e9e2796e405c1f",
+   "key": "orange2018film",
+   "filename": "orange2018film.txt",
+   "title": "orange2018film",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5bd392b19cafad3cd93911dc610f313b192fcdfc",
+   "key": "petererlinder",
+   "filename": "petererlinder.txt",
+   "title": "petererlinder",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b8a16725511bec9976bc99766808459781e4eca6",
+   "key": "martinbrodeur",
+   "filename": "martinbrodeur.txt",
+   "title": "martinbrodeur",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9879de1e5f806e94fa412eaaa60a10d99c6e82e1",
+   "key": "khagendralamichhane",
+   "filename": "khagendralamichhane.txt",
+   "title": "khagendralamichhane",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fe093484ad00dbda43e58592e33e68df7d747969",
+   "key": "lisakrasner",
+   "filename": "lisakrasner.txt",
+   "title": "lisakrasner",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "89c75296e3fb8aeee9dd01353048ee27b3729163",
+   "key": "kxbl",
+   "filename": "kxbl.txt",
+   "title": "kxbl",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1b8da4c853f34a7e55feec3b7a45cfc221824559",
+   "key": "anandashankar",
+   "filename": "anandashankar.txt",
+   "title": "anandashankar",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1d9d46e0b66b152a39bba99d93b14885b9423d6c",
+   "key": "9thqueensroyallancers",
+   "filename": "9thqueensroyallancers.txt",
+   "title": "9thqueensroyallancers",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8274d828e4aeb7d30a5714362513d2134a4624bb",
+   "key": "douglasmacarthursescapef",
+   "filename": "douglasmacarthursescapef.txt",
+   "title": "douglasmacarthursescapef",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ef0094efba438653f83f937ef8ecda5915b1ec62",
+   "key": "robgronkowski",
+   "filename": "robgronkowski.txt",
+   "title": "robgronkowski",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+   "key": "yemenicivilwar2015presen",
+   "filename": "yemenicivilwar2015presen.txt",
+   "title": "yemenicivilwar2015presen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0f321941bad8a850fa8858b1024f11d086c1b25b",
+   "key": "economyths",
+   "filename": "economyths.txt",
+   "title": "economyths",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "63c07256340dda293ac699711be5c4253bc619e8",
+   "key": "columbiaslough",
+   "filename": "columbiaslough.txt",
+   "title": "columbiaslough",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d02fc1e79ed8ffd217d9ee18b6e211f26c18b294",
+   "key": "frederickfraske",
+   "filename": "frederickfraske.txt",
+   "title": "frederickfraske",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "11935b5ba2b712a50972758d85543e9e2f6d0975",
+   "key": "ahmedhassandiria",
+   "filename": "ahmedhassandiria.txt",
+   "title": "ahmedhassandiria",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fd643296ca150e3c5e24b899c5ecd575d162abde",
+   "key": "elsadsilva",
+   "filename": "elsadsilva.txt",
+   "title": "elsadsilva",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "34d78f47fb830f39d1f42a55393f2a3d6fe760ac",
+   "key": "isidorstraus",
+   "filename": "isidorstraus.txt",
+   "title": "isidorstraus",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a15c0f5c8e71025d2919c889d7f87020dc571edd",
+   "key": "jackthewriter",
+   "filename": "jackthewriter.txt",
+   "title": "jackthewriter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cf44fb84d09b402cd3c82d9ee5c367b4dbba83c8",
+   "key": "thebeatlesrockband",
+   "filename": "thebeatlesrockband.txt",
+   "title": "thebeatlesrockband",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d7084bd93c54fb18cb01eb42fae166896b1aa9df",
+   "key": "2015iihfwomensworldchamp",
+   "filename": "2015iihfwomensworldchamp.txt",
+   "title": "2015iihfwomensworldchamp",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "180cd99ae7ada2d2ce25bfa487e25d5f518d72e1",
+   "key": "electraheart",
+   "filename": "electraheart.txt",
+   "title": "electraheart",
+   "num_claims": 0
+  }
+ ]
+}

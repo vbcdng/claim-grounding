@@ -1,0 +1,18 @@
+You are checking whether two cited papers are INDEPENDENT pieces of evidence, or whether they are correlated (a reader counting them as two separate confirmations would be misled).
+
+Paper A: {PAPER_A}
+Paper B: {PAPER_B}
+
+An automatic check flagged them as possibly dependent because: {SIGNALS}
+
+Classify the relationship. Use ONLY the metadata above — do not invent facts about the papers' contents.
+
+- "same_team": substantially the same authors or research group.
+- "same_study": both report the same underlying study, dataset, or experiment.
+- "derivative": one paper's relevant content restates or relies on the other (e.g. a review or commentary citing the original).
+- "independent": distinct teams and distinct underlying evidence; the flagged signal is coincidental (e.g. a common surname, or ordinary field-level citation overlap).
+
+Be conservative in BOTH directions: do not call papers dependent on a common surname alone, and do not call them independent when they clearly share authors. If the metadata is insufficient to decide, keep the flag (pick the flagged relation, independent=false) and say so in "why".
+
+Respond with JSON only:
+{"relation": "same_team|same_study|derivative|independent", "independent": true|false, "why": "<one sentence>"}

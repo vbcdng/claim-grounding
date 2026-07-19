@@ -1,0 +1,644 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 9,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "djburnone": {
+   "wice_id": "test03168",
+   "split_index": 208,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     20,
+     24,
+     28
+    ],
+    [
+     21,
+     24,
+     28
+    ],
+    [
+     20,
+     24,
+     25
+    ],
+    [
+     24,
+     25,
+     26
+    ],
+    [
+     20,
+     24,
+     25,
+     26
+    ],
+    [
+     20,
+     24,
+     25,
+     28
+    ],
+    [
+     20,
+     21,
+     24,
+     25
+    ],
+    [
+     24,
+     25,
+     26,
+     28
+    ],
+    [
+     21,
+     24,
+     25,
+     26
+    ],
+    [
+     21,
+     24,
+     25,
+     26,
+     28
+    ],
+    [
+     20,
+     21,
+     24,
+     25,
+     26
+    ],
+    [
+     20,
+     24,
+     25,
+     26,
+     28
+    ],
+    [
+     20,
+     21,
+     24,
+     25,
+     28
+    ]
+   ],
+   "n_source_sentences": 107
+  },
+  "borisbecker": {
+   "wice_id": "test03568",
+   "split_index": 209,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     54
+    ]
+   ],
+   "n_source_sentences": 127
+  },
+  "weirdtales": {
+   "wice_id": "test01537",
+   "split_index": 210,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     38
+    ],
+    [
+     36,
+     38
+    ],
+    [
+     36,
+     37,
+     38
+    ]
+   ],
+   "n_source_sentences": 54
+  },
+  "washingtonstateroute520": {
+   "wice_id": "test00373",
+   "split_index": 211,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     232,
+     251,
+     338
+    ],
+    [
+     232,
+     240,
+     338
+    ],
+    [
+     217,
+     232,
+     251
+    ],
+    [
+     217,
+     232,
+     240
+    ],
+    [
+     232,
+     239,
+     240,
+     338
+    ],
+    [
+     217,
+     232,
+     239,
+     240
+    ]
+   ],
+   "n_source_sentences": 389
+  },
+  "scarlettjohansson": {
+   "wice_id": "test00784",
+   "split_index": 212,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     21,
+     36
+    ],
+    [
+     28,
+     29,
+     36
+    ],
+    [
+     21,
+     28,
+     29,
+     36
+    ]
+   ],
+   "n_source_sentences": 126
+  },
+  "judaismandsexuality": {
+   "wice_id": "test03288",
+   "split_index": 213,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 91
+  },
+  "orpheomccord": {
+   "wice_id": "test00732",
+   "split_index": 214,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     57,
+     58
+    ],
+    [
+     3,
+     57,
+     58
+    ],
+    [
+     2,
+     52,
+     57,
+     58
+    ]
+   ],
+   "n_source_sentences": 97
+  },
+  "thermonectusmarmoratus": {
+   "wice_id": "test03232",
+   "split_index": 215,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7,
+     13
+    ],
+    [
+     6,
+     7,
+     13
+    ],
+    [
+     7,
+     8,
+     9,
+     13
+    ],
+    [
+     6,
+     7,
+     8,
+     9,
+     13
+    ]
+   ],
+   "n_source_sentences": 15
+  },
+  "garrettbasch": {
+   "wice_id": "test00276",
+   "split_index": 216,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     26
+    ]
+   ],
+   "n_source_sentences": 223
+  },
+  "downtownseattletransittu": {
+   "wice_id": "test03989",
+   "split_index": 217,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     96,
+     103,
+     104
+    ],
+    [
+     96,
+     99,
+     103
+    ],
+    [
+     101,
+     102,
+     103,
+     104
+    ],
+    [
+     99,
+     101,
+     102,
+     103
+    ],
+    [
+     96,
+     101,
+     103,
+     104
+    ],
+    [
+     96,
+     99,
+     103,
+     104
+    ],
+    [
+     99,
+     101,
+     102,
+     103,
+     104
+    ],
+    [
+     96,
+     99,
+     101,
+     103,
+     104
+    ]
+   ],
+   "n_source_sentences": 152
+  },
+  "2019cricketworldcup": {
+   "wice_id": "test01296",
+   "split_index": 218,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     86
+    ]
+   ],
+   "n_source_sentences": 137
+  },
+  "mosquitolagoon": {
+   "wice_id": "test00837",
+   "split_index": 219,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     22
+    ],
+    [
+     19,
+     22
+    ]
+   ],
+   "n_source_sentences": 53
+  },
+  "violadavis": {
+   "wice_id": "test01299",
+   "split_index": 220,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     25,
+     41,
+     42,
+     54
+    ]
+   ],
+   "n_source_sentences": 218
+  },
+  "minneapolis": {
+   "wice_id": "test02272",
+   "split_index": 221,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 128
+  },
+  "yemenicivilwar2015presen": {
+   "wice_id": "test02672",
+   "split_index": 222,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     8,
+     9
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     9,
+     17
+    ],
+    [
+     9,
+     14,
+     15
+    ],
+    [
+     8,
+     9,
+     14
+    ],
+    [
+     8,
+     9,
+     17
+    ],
+    [
+     9,
+     14,
+     15,
+     17
+    ],
+    [
+     8,
+     9,
+     14,
+     15
+    ]
+   ],
+   "n_source_sentences": 71
+  },
+  "futurelearn": {
+   "wice_id": "test01643",
+   "split_index": 223,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     102
+    ],
+    [
+     10
+    ],
+    [
+     99,
+     145
+    ]
+   ],
+   "n_source_sentences": 187
+  },
+  "luisladariaferrer": {
+   "wice_id": "test02423",
+   "split_index": 224,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4,
+     5,
+     7
+    ],
+    [
+     0,
+     3,
+     4
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     7
+    ]
+   ],
+   "n_source_sentences": 27
+  },
+  "ashlynharris": {
+   "wice_id": "test00258",
+   "split_index": 225,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     153,
+     160
+    ],
+    [
+     46,
+     160
+    ],
+    [
+     153,
+     160,
+     163
+    ],
+    [
+     46,
+     160,
+     163
+    ]
+   ],
+   "n_source_sentences": 168
+  },
+  "electoralcollegesforthes": {
+   "wice_id": "test01759",
+   "split_index": 226,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     19,
+     25
+    ],
+    [
+     19,
+     23
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     19,
+     20,
+     62
+    ],
+    [
+     21,
+     23,
+     25
+    ],
+    [
+     19,
+     20,
+     21,
+     25,
+     62
+    ]
+   ],
+   "n_source_sentences": 128
+  },
+  "autumnpeltier": {
+   "wice_id": "test00820",
+   "split_index": 227,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     73
+    ],
+    [
+     72,
+     73
+    ],
+    [
+     70,
+     73
+    ]
+   ],
+   "n_source_sentences": 114
+  },
+  "aarondford": {
+   "wice_id": "test01702",
+   "split_index": 228,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     2
+    ],
+    [
+     2,
+     15
+    ]
+   ],
+   "n_source_sentences": 93
+  },
+  "frankflood": {
+   "wice_id": "test00265",
+   "split_index": 229,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     8,
+     9
+    ],
+    [
+     7,
+     9
+    ],
+    [
+     8,
+     9,
+     10,
+     12
+    ]
+   ],
+   "n_source_sentences": 143
+  },
+  "veratsuweiling": {
+   "wice_id": "test02220",
+   "split_index": 230,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     35
+    ]
+   ],
+   "n_source_sentences": 197
+  },
+  "fyrefestival": {
+   "wice_id": "test01413",
+   "split_index": 231,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     61
+    ]
+   ],
+   "n_source_sentences": 77
+  },
+  "iknowwhatyoudidlastsumme": {
+   "wice_id": "test01486",
+   "split_index": 232,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     10
+    ],
+    [
+     7,
+     10
+    ]
+   ],
+   "n_source_sentences": 37
+  },
+  "2018concacafchampionslea": {
+   "wice_id": "test00223",
+   "split_index": 233,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     16,
+     19
+    ],
+    [
+     11,
+     16,
+     19
+    ],
+    [
+     7,
+     16,
+     19
+    ],
+    [
+     7,
+     11,
+     16,
+     19
+    ]
+   ],
+   "n_source_sentences": 40
+  }
+ }
+}

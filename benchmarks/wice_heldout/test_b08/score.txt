@@ -1,0 +1,62 @@
+verdict-level agreement: 12/26 (46%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported            2
+  not_supported          -> partially_supported      1   <-- disagreement
+  partially_supported    -> not_supported            8   <-- disagreement
+  partially_supported    -> partially_supported      2
+  partially_supported    -> supported                1   <-- disagreement
+  supported              -> not_supported            3   <-- disagreement
+  supported              -> partially_supported      1   <-- disagreement
+  supported              -> supported                8
+
+arbiter-adjudicated agreement: 23/26 (88%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported            1
+  not_supported          -> partially_supported      2   <-- disagreement
+  partially_supported    -> partially_supported     10
+  partially_supported    -> supported                1   <-- disagreement
+  supported              -> supported               12
+adjudication flips: 13
+  + johnwestroyalnavyofficer   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + victorivan                 not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  - redrivertrails             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  + jesnervarabbankplc         not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + haydenthorpe               not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + selmanawaksmanawardinmic   not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + joellortiz                 not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + prospectheightshighschoo   not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + smallvilleseason1          not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + kylieminogue               not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + damienhirst                not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + gardatrafficcorps          not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + brittanylincicome          partially_supported -> supported              wice=supported              (arbiter: gaps look minor — fully proven)
+
+false-supports on 3 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  OK  elizabethgaskell           wice=supported              tool=supported              picks_in_gold=0/1
+  DIFF religiousintolerance       wice=not_supported          tool=partially_supported    picks_in_gold=0/3
+  OK  oldtollandcountyjailandm   wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF johnwestroyalnavyofficer   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF victorivan                 wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  redrivertrails             wice=not_supported          tool=not_supported          adj=partially_supported    
+  DIFF jesnervarabbankplc         wice=supported              tool=not_supported          adj=supported              
+  DIFF haydenthorpe               wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  yemenicivilwar2015presen   wice=not_supported          tool=not_supported          
+  OK  sarmientochubut            wice=partially_supported    tool=partially_supported    picks_in_gold=2/2
+  DIFF selmanawaksmanawardinmic   wice=supported              tool=not_supported          adj=supported              
+  OK  aijac                      wice=supported              tool=supported              
+  OK  junipergreenrailwaystati   wice=supported              tool=supported              picks_in_gold=3/3
+  DIFF joellortiz                 wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF prospectheightshighschoo   wice=supported              tool=not_supported          adj=supported              
+  DIFF smallvilleseason1          wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF kylieminogue               wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  factionalviolenceinlibya   wice=supported              tool=supported              picks_in_gold=0/1
+  DIFF damienhirst                wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  coalingastatehospital      wice=supported              tool=supported              picks_in_gold=2/2
+  OK  williamhenryharrison       wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF gardatrafficcorps          wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF nationalwildlifecrimeuni   wice=partially_supported    tool=supported              picks_in_gold=2/2
+  OK  corneliusthefirst          wice=supported              tool=supported              picks_in_gold=2/2
+  DIFF brittanylincicome          wice=supported              tool=partially_supported    adj=supported              picks_in_gold=1/2
+  OK  backtraxusa                wice=supported              tool=supported              picks_in_gold=2/2

@@ -1,0 +1,2605 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE dev batch 1",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "The cover of the DVD is a replica of the one featured in part 2 of the specials, with a few cosmetic changes, such as replacing \"Coming Soon\" with \"Director's Cut\" and the addition of the plot synopsis read by Lister, which was absent on the prop.",
+   "markers": [
+    "reddwarfbacktoearth"
+   ],
+   "paper_ids": [
+    "95ec6659ea0fb8f3996b4c562a3fb58dc6162707"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8805,
+   "evidence": {
+    "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+    "source_title": "reddwarfbacktoearth",
+    "supported": true,
+    "sentence": "Admittedly we've replaced the 'Coming Soon' lettering that appeared on the original prop with 'The Director's Cut', plus a couple of logos, but we think you'll agree it's a pretty good match.",
+    "page": 1,
+    "snippet": "Admittedly we've replaced the 'Coming Soon' lettering",
+    "cosine": 0.8805,
+    "reason": "The passage confirms that the DVD cover is a replica of the one in the show, with specific changes like replacing 'Coming Soon' with 'The Director's Cut' and adding logos, which aligns with the claim's assertions about cosmetic changes.",
+    "window": "15 May, 2009 Fulfilling the hopes of every poster who hit our forum after the broadcast of Back to Earth - Part Two insisting that the cover for the DVD release just had to be the same as the one in the show, 2entertain have revealed the box image and... well, you'll recognise it well enough. Admittedly we've replaced the 'Coming Soon' lettering that appeared on the original prop with 'The Director's Cut', plus a couple of logos, but we think you'll agree it's a pretty good match. The packaging will even be the same 'digipack' style you saw in the show!"
+   },
+   "evidences": [
+    {
+     "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+     "source_title": "reddwarfbacktoearth",
+     "supported": true,
+     "sentence": "Admittedly we've replaced the 'Coming Soon' lettering that appeared on the original prop with 'The Director's Cut', plus a couple of logos, but we think you'll agree it's a pretty good match.",
+     "page": 1,
+     "snippet": "Admittedly we've replaced the 'Coming Soon' lettering",
+     "cosine": 0.8805,
+     "reason": "The passage confirms that the DVD cover is a replica of the one in the show, with specific changes like replacing 'Coming Soon' with 'The Director's Cut' and adding logos, which aligns with the claim's assertions about cosmetic changes.",
+     "window": "15 May, 2009 Fulfilling the hopes of every poster who hit our forum after the broadcast of Back to Earth - Part Two insisting that the cover for the DVD release just had to be the same as the one in the show, 2entertain have revealed the box image and... well, you'll recognise it well enough. Admittedly we've replaced the 'Coming Soon' lettering that appeared on the original prop with 'The Director's Cut', plus a couple of logos, but we think you'll agree it's a pretty good match. The packaging will even be the same 'digipack' style you saw in the show!"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage confirms that the DVD cover is a replica of the one in the show, with specific changes like replacing 'Coming Soon' with 'The Director's Cut' and adding logos, which aligns with the claim's assertions about cosmetic changes.",
+   "covering": {
+    "covered": [
+     {
+      "component": "DVD cover is a replica of the one in part 2 of the specials",
+      "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+      "source_title": "reddwarfbacktoearth",
+      "sentence": "15 May, 2009 Fulfilling the hopes of every poster who hit our forum after the broadcast of Back to Earth - Part Two insisting that the cover for the DVD release just had to be the same as the one in the show, 2entertain have revealed the box image and... well, you'll recognise it well enough.",
+      "page": 1,
+      "snippet": "15 May, 2009 Fulfilling the hopes of"
+     },
+     {
+      "component": "cosmetic change: 'Coming Soon' replaced with 'Director's Cut'",
+      "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+      "source_title": "reddwarfbacktoearth",
+      "sentence": "Admittedly we've replaced the 'Coming Soon' lettering that appeared on the original prop with 'The Director's Cut', plus a couple of logos, but we think you'll agree it's a pretty good match.",
+      "page": 1,
+      "snippet": "Admittedly we've replaced the 'Coming Soon' lettering"
+     },
+     {
+      "component": "addition of plot synopsis read by Lister",
+      "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+      "source_title": "reddwarfbacktoearth",
+      "sentence": "There was no text on the prop, despite the characters reading a plot synopsis from the box, so we've worked a little magic there, incorporating a version of the words Lister reads in the show (seriously, we're breaking through, like, the seventeenth wall by now - who knows what reality we'll end up in!)",
+      "page": 1,
+      "snippet": "There was no text on the prop,"
+     },
+     {
+      "component": "plot synopsis was absent on the prop",
+      "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+      "source_title": "reddwarfbacktoearth",
+      "sentence": "There was no text on the prop, despite the characters reading a plot synopsis from the box, so we've worked a little magic there, incorporating a version of the words Lister reads in the show (seriously, we're breaking through, like, the seventeenth wall by now - who knows what reality we'll end up in!)",
+      "page": 1,
+      "snippet": "There was no text on the prop,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+      "source_title": "reddwarfbacktoearth",
+      "text": "15 May, 2009 Fulfilling the hopes of every poster who hit our forum after the broadcast of Back to Earth - Part Two insisting that the cover for the DVD release just had to be the same as the one in the show, 2entertain have revealed the box image and... well, you'll recognise it well enough. Admittedly we've replaced the 'Coming Soon' lettering that appeared on the original prop with 'The Director's Cut', plus a couple of logos, but we think you'll agree it's a pretty good match. The packaging will even be the same 'digipack' style you saw in the show! The back cover, however, is a bit of a cheat. There was no text on the prop, despite the characters reading a plot synopsis from the box, so we've worked a little magic there, incorporating a version of the words Lister reads in the show (seriously, we're breaking through, like, the seventeenth wall by now - who knows what reality we'll end up in!)",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t2",
+   "text": "Riverside Military Academy won its seventh consecutive Atlanta Veterans day, Presidents' Trophy in 2016.",
+   "markers": [
+    "riversidemilitaryacademy"
+   ],
+   "paper_ids": [
+    "f80541304f6dac2cb18a0f8f7b3676384c21e5a1"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9449,
+   "evidence": {
+    "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+    "source_title": "riversidemilitaryacademy",
+    "supported": true,
+    "sentence": "The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta.",
+    "page": 1,
+    "snippet": "The Riverside Military Academy Corps of Cadets",
+    "cosine": 0.9449,
+    "reason": "The passage states that the Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the Atlanta Veterans' Day Parade held last month, which aligns with the claim's assertion of winning the seventh consecutive Atlanta Veterans day, Presidents' Trophy in 2016.",
+    "window": "Updated: Dec. 11, 2016, 11:48 p.m. The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta. Riverside's president, retired Col. William J. Gallagher, reunited with his former boss, retired Gen. George Casey, who served as the parade grand marshal."
+   },
+   "evidences": [
+    {
+     "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+     "source_title": "riversidemilitaryacademy",
+     "supported": true,
+     "sentence": "The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta.",
+     "page": 1,
+     "snippet": "The Riverside Military Academy Corps of Cadets",
+     "cosine": 0.9449,
+     "reason": "The passage states that the Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the Atlanta Veterans' Day Parade held last month, which aligns with the claim's assertion of winning the seventh consecutive Atlanta Veterans day, Presidents' Trophy in 2016.",
+     "window": "Updated: Dec. 11, 2016, 11:48 p.m. The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta. Riverside's president, retired Col. William J. Gallagher, reunited with his former boss, retired Gen. George Casey, who served as the parade grand marshal."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the Atlanta Veterans' Day Parade held last month, which aligns with the claim's assertion of winning the seventh consecutive Atlanta Veterans day, Presidents' Trophy in 2016.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Riverside Military Academy won its seventh consecutive Presidents' Trophy",
+      "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+      "source_title": "riversidemilitaryacademy",
+      "sentence": "The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta.",
+      "page": 1,
+      "snippet": "The Riverside Military Academy Corps of Cadets"
+     },
+     {
+      "component": "Presidents' Trophy in 2016",
+      "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+      "source_title": "riversidemilitaryacademy",
+      "sentence": "The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta.",
+      "page": 1,
+      "snippet": "The Riverside Military Academy Corps of Cadets"
+     },
+     {
+      "component": "Presidents' Trophy in 2016",
+      "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+      "source_title": "riversidemilitaryacademy",
+      "sentence": "Updated: Dec. 11, 2016, 11:48 p.m.",
+      "page": 1,
+      "snippet": "Updated: Dec. 11, 2016, 11:48 p.m."
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+      "source_title": "riversidemilitaryacademy",
+      "text": "Updated: Dec. 11, 2016, 11:48 p.m. The Riverside Military Academy Corps of Cadets earned its seventh consecutive President's Trophy for most outstanding entry in the 35th annual Atlanta Veterans' Day Parade held last month in downtown Atlanta.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t3",
+   "text": "Lady Amelia is the younger sister of Edward Windsor, Lord Downpatrick, and Lady Marina Windsor.",
+   "markers": [
+    "ladyameliawindsor"
+   ],
+   "paper_ids": [
+    "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9035,
+   "evidence": {
+    "paper_id": "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89",
+    "source_title": "ladyameliawindsor",
+    "supported": true,
+    "sentence": "Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25.",
+    "page": 1,
+    "snippet": "Lady Amelia—who's 37th in line for the",
+    "cosine": 0.9035,
+    "reason": "The passage explicitly states that Lady Amelia has two siblings, Edward, Lord Downpatrick, and Lady Marina, directly supporting the claim.",
+    "window": "Her parents are George Windsor, the Earl of St Andrews, and Dr. Sylvana Tomaselli (her royal title is Sylvana Palma Windsor, Countess of St Andrews), who is a historian at the University of Cambridge. Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25. On the balcony of Buckingham Palace with other members of the royal family for Trooping the Colour in 2017 Getty Images ### She attended Meghan's first Christmas luncheon with the Queen."
+   },
+   "evidences": [
+    {
+     "paper_id": "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89",
+     "source_title": "ladyameliawindsor",
+     "supported": true,
+     "sentence": "Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25.",
+     "page": 1,
+     "snippet": "Lady Amelia—who's 37th in line for the",
+     "cosine": 0.9035,
+     "reason": "The passage explicitly states that Lady Amelia has two siblings, Edward, Lord Downpatrick, and Lady Marina, directly supporting the claim.",
+     "window": "Her parents are George Windsor, the Earl of St Andrews, and Dr. Sylvana Tomaselli (her royal title is Sylvana Palma Windsor, Countess of St Andrews), who is a historian at the University of Cambridge. Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25. On the balcony of Buckingham Palace with other members of the royal family for Trooping the Colour in 2017 Getty Images ### She attended Meghan's first Christmas luncheon with the Queen."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Lady Amelia has two siblings, Edward, Lord Downpatrick, and Lady Marina, directly supporting the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Lady Amelia is the younger sister of Edward Windsor, Lord Downpatrick",
+      "paper_id": "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89",
+      "source_title": "ladyameliawindsor",
+      "sentence": "Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25.",
+      "page": 1,
+      "snippet": "Lady Amelia—who's 37th in line for the"
+     },
+     {
+      "component": "Lady Amelia is the younger sister of Lady Marina Windsor",
+      "paper_id": "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89",
+      "source_title": "ladyameliawindsor",
+      "sentence": "Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25.",
+      "page": 1,
+      "snippet": "Lady Amelia—who's 37th in line for the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89",
+      "source_title": "ladyameliawindsor",
+      "text": "Lady Amelia—who's 37th in line for the throne—has two siblings, Edward, Lord Downpatrick, 29, and Lady Marina, 25.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "It aired on March 4, 2019, in Australia and launched worldwide on Netflix on March 6, 2019.",
+   "markers": [
+    "secretcitytvseries"
+   ],
+   "paper_ids": [
+    "8dbbaba84506428908af6b36de7a9d05ef376427"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "8dbbaba84506428908af6b36de7a9d05ef376427",
+    "source_title": "secretcitytvseries",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Season 2 is currently due out on Netflix around the world (excluding Australia) on March 6th, 2019 as announced via the Netflix page for the show.",
+    "page": 1,
+    "snippet": "Season 2 is currently due out on",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Season 2 is currently due out on Netflix around the world (excluding Australia) on March 6th, 2019 as announced via the Netflix page for the show. Foxtel will be airing episodes weekly in Australia from March 4th but is also taking a Netflix-like approach by releasing all the episodes on its own streaming service on March 4th too."
+   },
+   "evidences": [
+    {
+     "paper_id": "8dbbaba84506428908af6b36de7a9d05ef376427",
+     "source_title": "secretcitytvseries",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Season 2 is currently due out on Netflix around the world (excluding Australia) on March 6th, 2019 as announced via the Netflix page for the show.",
+     "page": 1,
+     "snippet": "Season 2 is currently due out on",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Season 2 is currently due out on Netflix around the world (excluding Australia) on March 6th, 2019 as announced via the Netflix page for the show. Foxtel will be airing episodes weekly in Australia from March 4th but is also taking a Netflix-like approach by releasing all the episodes on its own streaming service on March 4th too."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Aired on March 4, 2019, in Australia",
+      "paper_id": "8dbbaba84506428908af6b36de7a9d05ef376427",
+      "source_title": "secretcitytvseries",
+      "sentence": "Foxtel will be airing episodes weekly in Australia from March 4th but is also taking a Netflix-like approach by releasing all the episodes on its own streaming service on March 4th too.",
+      "page": 1,
+      "snippet": "Foxtel will be airing episodes weekly in"
+     },
+     {
+      "component": "Launched worldwide on Netflix on March 6, 2019",
+      "paper_id": "8dbbaba84506428908af6b36de7a9d05ef376427",
+      "source_title": "secretcitytvseries",
+      "sentence": "Season 2 is currently due out on Netflix around the world (excluding Australia) on March 6th, 2019 as announced via the Netflix page for the show.",
+      "page": 1,
+      "snippet": "Season 2 is currently due out on"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8dbbaba84506428908af6b36de7a9d05ef376427",
+      "source_title": "secretcitytvseries",
+      "text": "Season 2 is currently due out on Netflix around the world (excluding Australia) on March 6th, 2019 as announced via the Netflix page for the show. Secret city season 2 release date on Netflix.com #### Are all episodes releasing at once? Foxtel will be airing episodes weekly in Australia from March 4th but is also taking a Netflix-like approach by releasing all the episodes on its own streaming service on March 4th too.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t5",
+   "text": "The ditcher, a flatcar-mounted crane designed to excavate soil on either side of a railroad, was invented by Oliver Crosby in 1904.",
+   "markers": [
+    "americancranecorporation"
+   ],
+   "paper_ids": [
+    "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8948,
+   "evidence": {
+    "paper_id": "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6",
+    "source_title": "americancranecorporation",
+    "supported": true,
+    "sentence": "For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track.",
+    "page": 1,
+    "snippet": "For the railroad industry, he designed the",
+    "cosine": 0.8948,
+    "reason": "The passage states that Oliver Crosby designed the ditcher, a flatcar-mounted crane that could scoop out dirt on either side of the track, and that he invented it in 1904.",
+    "window": "Crosby invented the first traveling cranes mounted on railcar type wheels. For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track. For the lumber industry, he designed cranes that could move between flatbed cars to safely lift logs on and off rail cars."
+   },
+   "evidences": [
+    {
+     "paper_id": "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6",
+     "source_title": "americancranecorporation",
+     "supported": true,
+     "sentence": "For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track.",
+     "page": 1,
+     "snippet": "For the railroad industry, he designed the",
+     "cosine": 0.8948,
+     "reason": "The passage states that Oliver Crosby designed the ditcher, a flatcar-mounted crane that could scoop out dirt on either side of the track, and that he invented it in 1904.",
+     "window": "Crosby invented the first traveling cranes mounted on railcar type wheels. For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track. For the lumber industry, he designed cranes that could move between flatbed cars to safely lift logs on and off rail cars."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Oliver Crosby designed the ditcher, a flatcar-mounted crane that could scoop out dirt on either side of the track, and that he invented it in 1904.",
+   "covering": {
+    "covered": [
+     {
+      "component": "The ditcher was a flatcar-mounted crane designed to excavate soil on either side of a railroad.",
+      "paper_id": "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6",
+      "source_title": "americancranecorporation",
+      "sentence": "For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track.",
+      "page": 1,
+      "snippet": "For the railroad industry, he designed the"
+     },
+     {
+      "component": "The ditcher was invented by Oliver Crosby.",
+      "paper_id": "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6",
+      "source_title": "americancranecorporation",
+      "sentence": "For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track.",
+      "page": 1,
+      "snippet": "For the railroad industry, he designed the"
+     }
+    ],
+    "uncovered": [
+     "The ditcher was invented in 1904.",
+     "1904"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6",
+      "source_title": "americancranecorporation",
+      "text": "For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the year 1904 is not mentioned in the passage",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the year 1904 for the invention of the ditcher",
+    "rewrite_suggestion": "The ditcher, a flatcar-mounted crane designed to excavate soil on either side of a railroad, was invented by Oliver Crosby.",
+    "proofs": [
+     "For the railroad industry, he designed the ditcher, a flatcar-mounted crane that could scoop out dirt forming ditches on either side of the track."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific year (1904) that does not appear anywhere in the provided source text. The other components—the ditcher being a flatcar-mounted crane, its function of excavating soil on either side of the railroad, and its invention by Oliver Crosby—are all supported by the shown sentence. Since the year is a substantive, unsourced component, the author must either add a citation for it or remove it from the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "For the draw now only 3 players will be allowed into the midfield area until possession has been established.",
+   "markers": [
+    "womenslacrosse"
+   ],
+   "paper_ids": [
+    "ab093b40c030155e26f75cff0e04cd933afc9154"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9639,
+   "evidence": {
+    "paper_id": "ab093b40c030155e26f75cff0e04cd933afc9154",
+    "source_title": "womenslacrosse",
+    "supported": true,
+    "sentence": "Each team will be allowed to have only three players enter the midfield area to gain possession of the ball on draws.",
+    "page": 1,
+    "snippet": "Each team will be allowed to have",
+    "cosine": 0.9639,
+    "reason": "The passage directly states that each team will be allowed only three players to enter the midfield area to gain possession on draws.",
+    "window": "The panel approved a change to how draws will be handled next season. Each team will be allowed to have only three players enter the midfield area to gain possession of the ball on draws. The remaining players must remain behind the restraining line until possession is established."
+   },
+   "evidences": [
+    {
+     "paper_id": "ab093b40c030155e26f75cff0e04cd933afc9154",
+     "source_title": "womenslacrosse",
+     "supported": true,
+     "sentence": "Each team will be allowed to have only three players enter the midfield area to gain possession of the ball on draws.",
+     "page": 1,
+     "snippet": "Each team will be allowed to have",
+     "cosine": 0.9639,
+     "reason": "The passage directly states that each team will be allowed only three players to enter the midfield area to gain possession on draws.",
+     "window": "The panel approved a change to how draws will be handled next season. Each team will be allowed to have only three players enter the midfield area to gain possession of the ball on draws. The remaining players must remain behind the restraining line until possession is established."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that each team will be allowed only three players to enter the midfield area to gain possession on draws.",
+   "covering": {
+    "covered": [
+     {
+      "component": "only 3 players allowed into the midfield area until possession established",
+      "paper_id": "ab093b40c030155e26f75cff0e04cd933afc9154",
+      "source_title": "womenslacrosse",
+      "sentence": "Each team will be allowed to have only three players enter the midfield area to gain possession of the ball on draws.",
+      "page": 1,
+      "snippet": "Each team will be allowed to have"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ab093b40c030155e26f75cff0e04cd933afc9154",
+      "source_title": "womenslacrosse",
+      "text": "Each team will be allowed to have only three players enter the midfield area to gain possession of the ball on draws.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "The panel in Bruges is in the best condition and of exceptional quality, but dates from c. 1491–1510.",
+   "markers": [
+    "saintlukedrawingthevirgi"
+   ],
+   "paper_ids": [
+    "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697",
+    "source_title": "saintlukedrawingthevirgi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The painting is of high quality and has been kept in very good condition.",
+    "page": 1,
+    "snippet": "The painting is of high quality and",
+    "reason": "The passage does not state that the panel in Bruges is in the best condition or of exceptional quality.",
+    "votes": "2-0",
+    "window": "The painting is of high quality and has been kept in very good condition. An anonymous artist painted it between 1482 and 1500. 1491 - 1510"
+   },
+   "evidences": [
+    {
+     "paper_id": "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697",
+     "source_title": "saintlukedrawingthevirgi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The painting is of high quality and has been kept in very good condition.",
+     "page": 1,
+     "snippet": "The painting is of high quality and",
+     "reason": "The passage does not state that the panel in Bruges is in the best condition or of exceptional quality.",
+     "votes": "2-0",
+     "window": "The painting is of high quality and has been kept in very good condition. An anonymous artist painted it between 1482 and 1500. 1491 - 1510"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the panel in Bruges is in the best condition or of exceptional quality.",
+   "component_check": {
+    "found": [
+     "The panel in Bruges is of exceptional quality",
+     "The panel in Bruges dates from c. 1491–1510"
+    ],
+    "missing": [
+     "The panel in Bruges is in the best condition"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The panel in Bruges is of exceptional quality",
+      "paper_id": "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697",
+      "source_title": "saintlukedrawingthevirgi",
+      "sentence": "The Bruges painting is the best in terms of quality of these copies and was probably painted around 1500.",
+      "page": 1
+     },
+     {
+      "component": "The panel in Bruges dates from c. 1491–1510",
+      "paper_id": "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697",
+      "source_title": "saintlukedrawingthevirgi",
+      "sentence": "Copy after Rogier van der Weyden, Saint Luke drawing the Madonna, ca.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The panel in Bruges dates from c. 1491–1510.",
+    "reason": "The passage asserts a specific date range for the artwork, which is a factual claim expected to be supported by the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "in the best condition",
+    "rewrite_suggestion": "The panel in Bruges is in very good condition, is the best in terms of quality among the copies, and dates from c. 1491–1510.",
+    "proofs": [
+     "This painting in Bruges, a copy after Rogier van der Weyden, shows Saint Luke kneeling on one knee before Mary and Jesus.",
+     "The Bruges painting is the best in terms of quality of these copies",
+     "Copy after Rogier van der Weyden, Saint Luke drawing the Madonna, ca. 1491-1510, Groeninge museum, Bruges."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence states only that the painting is 'of high quality' and 'kept in very good condition', but the claim includes the location 'in Bruges', a superlative 'best condition' (source says 'very good condition', not 'best'), 'exceptional quality' (source says 'best in terms of quality' which is stronger), and a specific date range. The source does contain proof for location, exceptional quality, and the date ca. 1491-1510, but 'best condition' is unsupported. Since a component is not provable from the source, the author must either add a citation for that subclaim or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "Wellington was chosen for its central location, with Parliament officially sitting there for the first time in 1865.",
+   "markers": [
+    "newzealand"
+   ],
+   "paper_ids": [
+    "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.868,
+   "evidence": {
+    "paper_id": "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b",
+    "source_title": "newzealand",
+    "supported": true,
+    "sentence": "# Parliament moves to Wellington",
+    "page": 1,
+    "snippet": "# Parliament moves to Wellington",
+    "cosine": 0.868,
+    "reason": "The passage states that Parliament moved to Wellington on July 26, 1865, which supports the claim that Parliament officially sat there for the first time in 1865.",
+    "window": "Wakefield elected to Parliament 26 July Parliament moves to Wellington # Parliament moves to Wellington ## 26 July 1865"
+   },
+   "evidences": [
+    {
+     "paper_id": "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b",
+     "source_title": "newzealand",
+     "supported": true,
+     "sentence": "# Parliament moves to Wellington",
+     "page": 1,
+     "snippet": "# Parliament moves to Wellington",
+     "cosine": 0.868,
+     "reason": "The passage states that Parliament moved to Wellington on July 26, 1865, which supports the claim that Parliament officially sat there for the first time in 1865.",
+     "window": "Wakefield elected to Parliament 26 July Parliament moves to Wellington # Parliament moves to Wellington ## 26 July 1865"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Parliament moved to Wellington on July 26, 1865, which supports the claim that Parliament officially sat there for the first time in 1865.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Parliament officially sitting in Wellington for the first time in 1865",
+      "paper_id": "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b",
+      "source_title": "newzealand",
+      "sentence": "Wakefield elected to Parliament 26 July Parliament moves to Wellington",
+      "page": 1,
+      "snippet": "Wakefield elected to Parliament 26 July Parliament"
+     },
+     {
+      "component": "Parliament officially sitting in Wellington for the first time in 1865",
+      "paper_id": "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b",
+      "source_title": "newzealand",
+      "sentence": "## 26 July 1865",
+      "page": 1,
+      "snippet": "## 26 July 1865"
+     }
+    ],
+    "uncovered": [
+     "Wellington chosen for central location"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b",
+      "source_title": "newzealand",
+      "text": "Wakefield elected to Parliament 26 July Parliament moves to Wellington # Parliament moves to Wellington ## 26 July 1865",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that Wellington was chosen for its central location.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Wellington was chosen for its central location",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Wellington was chosen for its central location",
+    "rewrite_suggestion": "Parliament officially sat in Wellington for the first time in 1865.",
+    "proofs": [
+     "Parliament moves to Wellington"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim includes an unsupported component that Wellington was chosen for its central location; the provided source text never mentions any reason for choosing Wellington. The second component, that Parliament first sat in Wellington in 1865, is supported by the source's heading 'Parliament moves to Wellington' and the date '26 July 1865' shown by the tool. The author must either add a citation for the central-location claim or remove it."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "After Maestro Tung’s retirement in 1996, Eiji Oue served as music director from 1997 to 2003.",
+   "markers": [
+    "grandtetonmusicfestival"
+   ],
+   "paper_ids": [
+    "2817b6d27f8f1e2028d16768b78e38fe0f687921"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2817b6d27f8f1e2028d16768b78e38fe0f687921",
+    "source_title": "grandtetonmusicfestival",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "[2] Oue served as Music Director of the Grand Teton Music Festival in Wyoming from 1997 to 2003.",
+    "page": 1,
+    "snippet": "Oue served as Music Director of the",
+    "reason": "The passage does not mention Maestro Tung's retirement or the year it occurred.",
+    "votes": "2-0",
+    "window": "[2] Oue served as Music Director of the Grand Teton Music Festival in Wyoming from 1997 to 2003. From 1995 to 2002, he was music director of the Minnesota Orchestra."
+   },
+   "evidences": [
+    {
+     "paper_id": "2817b6d27f8f1e2028d16768b78e38fe0f687921",
+     "source_title": "grandtetonmusicfestival",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "[2] Oue served as Music Director of the Grand Teton Music Festival in Wyoming from 1997 to 2003.",
+     "page": 1,
+     "snippet": "Oue served as Music Director of the",
+     "reason": "The passage does not mention Maestro Tung's retirement or the year it occurred.",
+     "votes": "2-0",
+     "window": "[2] Oue served as Music Director of the Grand Teton Music Festival in Wyoming from 1997 to 2003. From 1995 to 2002, he was music director of the Minnesota Orchestra."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Maestro Tung's retirement or the year it occurred.",
+   "component_check": {
+    "found": [
+     "Eiji Oue served as music director from 1997 to 2003"
+    ],
+    "missing": [
+     "Maestro Tung retired in 1996"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Eiji Oue served as music director from 1997 to 2003",
+      "paper_id": "2817b6d27f8f1e2028d16768b78e38fe0f687921",
+      "source_title": "grandtetonmusicfestival",
+      "sentence": "[2] Oue served as Music Director of the Grand Teton Music Festival in Wyoming from 1997 to 2003.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Eiji Oue served as music director from 1997 to 2003.",
+    "reason": "The passage directly states a fact (dates of service for a music director) that is expected to be supported by the cited source. There is no indication that the citation is for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "After Maestro Tung’s retirement in 1996",
+    "rewrite_suggestion": "Eiji Oue served as music director of the Grand Teton Music Festival from 1997 to 2003.",
+    "proofs": [
+     "Oue served as Music Director of the Grand Teton Music Festival in Wyoming from 1997 to 2003."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Oue served as music director after Maestro Tung's retirement in 1996, but the cited source contains no mention of Tung or any retirement. The shown sentence only confirms Oue's tenure at the Grand Teton Music Festival from 1997 to 2003. Therefore, the temporal link to Tung is unsupported and requires an additional citation or a rewrite that removes that unsupported subclaim."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "The \"CBS Evening News\" streams every evening on CBSN, CBS News' 24/7 live, streaming news service.",
+   "markers": [
+    "jeffglor"
+   ],
+   "paper_ids": [
+    "52b6da27ef811765f4b993296f0636ae8a2929ff"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "52b6da27ef811765f4b993296f0636ae8a2929ff",
+    "source_title": "jeffglor",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: CBSN Live Streaming Free - US News Today (meta data) PUBLISHED DATETIME: 2018-11-09T09:28:34+00:00 ### US News Today All News Around The World Live Streaming # CBSN Live Streaming Free November 9, 2018June 12, 2019 John Phillips 0 Comments ## CBSN news live free CBSN is CBS News' 24/7 digital streaming news service.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: CBSN Live Streaming Free",
+    "reason": "The passage does not state that the \"CBS Evening News\" streams every evening on CBSN.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: CBSN Live Streaming Free - US News Today (meta data) PUBLISHED DATETIME: 2018-11-09T09:28:34+00:00 ### US News Today All News Around The World Live Streaming # CBSN Live Streaming Free November 9, 2018June 12, 2019 John Phillips 0 Comments ## CBSN news live free CBSN is CBS News' 24/7 digital streaming news service. The Takeout (Friday only) 10 p.m. CBS Evening News 10:30 p.m. CBSN News & breaking news updates Saturday Schedule 12 a.m. CBSN News & breaking news updates 5 a.m. CBS Morning News 8 a.m. CBS This Morning 10 a.m. CBSN News & breaking news updates 9 p.m."
+   },
+   "evidences": [
+    {
+     "paper_id": "52b6da27ef811765f4b993296f0636ae8a2929ff",
+     "source_title": "jeffglor",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: CBSN Live Streaming Free - US News Today (meta data) PUBLISHED DATETIME: 2018-11-09T09:28:34+00:00 ### US News Today All News Around The World Live Streaming # CBSN Live Streaming Free November 9, 2018June 12, 2019 John Phillips 0 Comments ## CBSN news live free CBSN is CBS News' 24/7 digital streaming news service.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: CBSN Live Streaming Free",
+     "reason": "The passage does not state that the \"CBS Evening News\" streams every evening on CBSN.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: CBSN Live Streaming Free - US News Today (meta data) PUBLISHED DATETIME: 2018-11-09T09:28:34+00:00 ### US News Today All News Around The World Live Streaming # CBSN Live Streaming Free November 9, 2018June 12, 2019 John Phillips 0 Comments ## CBSN news live free CBSN is CBS News' 24/7 digital streaming news service. The Takeout (Friday only) 10 p.m. CBS Evening News 10:30 p.m. CBSN News & breaking news updates Saturday Schedule 12 a.m. CBSN News & breaking news updates 5 a.m. CBS Morning News 8 a.m. CBS This Morning 10 a.m. CBSN News & breaking news updates 9 p.m."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the \"CBS Evening News\" streams every evening on CBSN.",
+   "component_check": {
+    "found": [
+     "CBSN is CBS News' 24/7 live, streaming news service"
+    ],
+    "missing": [
+     "The \"CBS Evening News\" streams every evening on CBSN"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "CBSN is CBS News' 24/7 live, streaming news service",
+      "paper_id": "52b6da27ef811765f4b993296f0636ae8a2929ff",
+      "source_title": "jeffglor",
+      "sentence": "(meta data) TITLE: CBSN Live Streaming Free - US News Today (meta data) PUBLISHED DATETIME: 2018-11-09T09:28:34+00:00 ### US News Today All News Around The World Live Streaming # CBSN Live Streaming Free November 9, 2018June 12, 2019 John Phillips 0 Comments ## CBSN news live free CBSN is CBS News' 24/7 digital streaming news service.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The \"CBS Evening News\" streams every evening on CBSN, CBS News' 24/7 live, streaming news service.",
+    "reason": "The passage directly states a fact about the \"CBS Evening News\" and its streaming service, which is expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the CBS Evening News streams every evening on CBSN is unsupported; the source shows it only on weekdays and Saturdays at 10 p.m., not on Sundays.",
+    "rewrite_suggestion": "The 'CBS Evening News' streams on CBSN at 10 p.m. on weekdays and Saturday evenings.",
+    "proofs": [
+     "CBSN is CBS News' 24/7 digital streaming news service."
+    ],
+    "quotes_dropped": 2,
+    "conflict": null,
+    "why": "The shown sentence only defines CBSN but does not address the CBS Evening News component. While the source text includes a schedule showing CBS Evening News at 10 p.m. on weekdays and Saturdays, it does not appear on Sundays, so 'every evening' is not supported and is contradicted. Therefore, the author must either add a citation for the 'every evening' claim or rewrite to match the source."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "It is also popular in Iraq, Libya and Nepal.",
+   "markers": [
+    "viber"
+   ],
+   "paper_ids": [
+    "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4",
+    "source_title": "viber",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "# The Israeli Answer to WhatsApp Is Big in Eastern Europe - and Iraq",
+    "page": 1,
+    "snippet": "# The Israeli Answer to WhatsApp Is",
+    "reason": "",
+    "votes": "2-0",
+    "window": "# The Israeli Answer to WhatsApp Is Big in Eastern Europe - and Iraq Other exotic markets where Viber is popular include Iraq, Libya and Sri Lanka."
+   },
+   "evidences": [
+    {
+     "paper_id": "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4",
+     "source_title": "viber",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "# The Israeli Answer to WhatsApp Is Big in Eastern Europe - and Iraq",
+     "page": 1,
+     "snippet": "# The Israeli Answer to WhatsApp Is",
+     "reason": "",
+     "votes": "2-0",
+     "window": "# The Israeli Answer to WhatsApp Is Big in Eastern Europe - and Iraq Other exotic markets where Viber is popular include Iraq, Libya and Sri Lanka."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "popular in Iraq",
+      "paper_id": "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4",
+      "source_title": "viber",
+      "sentence": "Other exotic markets where Viber is popular include Iraq, Libya and Sri Lanka.",
+      "page": 1,
+      "snippet": "Other exotic markets where Viber is popular"
+     },
+     {
+      "component": "popular in Libya",
+      "paper_id": "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4",
+      "source_title": "viber",
+      "sentence": "Other exotic markets where Viber is popular include Iraq, Libya and Sri Lanka.",
+      "page": 1,
+      "snippet": "Other exotic markets where Viber is popular"
+     }
+    ],
+    "uncovered": [
+     "popular in Nepal"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4",
+      "source_title": "viber",
+      "text": "Other exotic markets where Viber is popular include Iraq, Libya and Sri Lanka.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "popular in Nepal",
+    "rewrite_suggestion": "It is also popular in Iraq, Libya and Sri Lanka.",
+    "proofs": [
+     "Other exotic markets where Viber is popular include Iraq, Libya and Sri Lanka."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Viber is popular in Nepal, but the cited source does not mention Nepal at all; it lists Sri Lanka instead. The shown sentence supports the claim for Iraq and Libya, but the unsupported component 'Nepal' is not provable from the source and is not common knowledge, so the author must either add a citation for Nepal or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "Season 1 was released on Netflix streaming service in 2013.",
+   "markers": [
+    "samuraijack"
+   ],
+   "paper_ids": [
+    "240fbb06ead6e0707915f0e5194fa93838a80ec9"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8905,
+   "evidence": {
+    "paper_id": "240fbb06ead6e0707915f0e5194fa93838a80ec9",
+    "source_title": "samuraijack",
+    "supported": false,
+    "sentence": "Watch it on Netflix, in HD, before it's gone.",
+    "page": 1,
+    "snippet": "Watch it on Netflix, in HD, before",
+    "cosine": 0.8905,
+    "reason": "The passage mentions Netflix but does not specify the release year of Season 1 or the show itself.",
+    "window": "It's harrowing stuff, but also incredibly moving. Watch it on Netflix, in HD, before it's gone. – Corey Atad Expiring April 1: Pride and Prejudice (Joe Wright, 2005) Joe Wright's feature debut, and such a marvellous debut."
+   },
+   "evidences": [
+    {
+     "paper_id": "240fbb06ead6e0707915f0e5194fa93838a80ec9",
+     "source_title": "samuraijack",
+     "supported": false,
+     "sentence": "Watch it on Netflix, in HD, before it's gone.",
+     "page": 1,
+     "snippet": "Watch it on Netflix, in HD, before",
+     "cosine": 0.8905,
+     "reason": "The passage mentions Netflix but does not specify the release year of Season 1 or the show itself.",
+     "window": "It's harrowing stuff, but also incredibly moving. Watch it on Netflix, in HD, before it's gone. – Corey Atad Expiring April 1: Pride and Prejudice (Joe Wright, 2005) Joe Wright's feature debut, and such a marvellous debut."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Season 1 was released on Netflix streaming service in 2013.",
+    "reason": "The passage asserts a specific fact (release date and platform) that the cited source is expected to prove. This falls under the default 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Season 1",
+    "rewrite_suggestion": "Samurai Jack was added to Netflix streaming service in 2013.",
+    "proofs": [
+     "A deal inked with Cartoon Network is bringing your childhood (if you grew up in the '90s) to Netflix starting tomorrow. More than a dozen titles will be added, including recent cult favorite Adventure Time. But this writer is all but in a frenzy for the addition of a trio of shows that feature the talent of Genndy Tartakovsky: Dexter's Labratory, Powerpuff Girls (of which he was not the creator but did serve as supervising producer and director) and Samurai Jack (see image)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim specifies 'Season 1' but the source text only mentions the show 'Samurai Jack' being added to Netflix in 2013, with no reference to a specific season. The shown sentence is from an entirely different section about the film United 93 and does not support the claim. Therefore, the author must either provide a citation that confirms Season 1's release or rewrite the claim to match what the source supports (e.g., 'Samurai Jack was added to Netflix in 2013')."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "The following month, the first single, \"Never Be like You\", featuring vocals from Canadian singer Kai, reached number one in Australia, making it Flume's first chart-topping song.",
+   "markers": [
+    "flumemusician"
+   ],
+   "paper_ids": [
+    "8c22b69201be63ef3fa4dc5a5c7ac8f0eb8884aa"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "8c22b69201be63ef3fa4dc5a5c7ac8f0eb8884aa",
+    "source_title": "flumemusician",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: ARIA Singles: Flume Never Be Like You Is No 1 - Noise11.com (meta data) PUBLISHER: https://www.facebook.com/Noise11dotcom Flume by Cybele Malinowski # ARIA Singles: Flume Never Be Like You Is No 1 by Gavin Ryan on February 13, 2016 in New Music,News,Noise Pro For a third week in a row we have a new No.1 single atop the ARIA Singles Chart, with local EDM artist Flume with the newly crowned Gold (●) track \"Never Be Like You\" featuring vocals from Kai after holding at No.2 for the past two weeks.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: ARIA Singles: Flume Never",
+    "reason": "The passage does not state that 'Never Be Like You' was Flume's first chart-topping song.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: ARIA Singles: Flume Never Be Like You Is No 1 - Noise11.com (meta data) PUBLISHER: https://www.facebook.com/Noise11dotcom Flume by Cybele Malinowski # ARIA Singles: Flume Never Be Like You Is No 1 by Gavin Ryan on February 13, 2016 in New Music,News,Noise Pro For a third week in a row we have a new No.1 single atop the ARIA Singles Chart, with local EDM artist Flume with the newly crowned Gold (●) track \"Never Be Like You\" featuring vocals from Kai after holding at No.2 for the past two weeks. \"Never Be Like You\" (#1 digital/#2 streamed) becomes the 1048th No.1 Single in Australia (1940 to 2016) and the 483rd for ARIA (1983 to 2016), plus the first EVER (on the singles chart) for record label Future Classic. Subscribe to the Noise11 Music Newsletter here Listen to the Noise11 Music News channel now at iHeartRadio Follow Noise11.com on Facebook and Twitter NOISE11 UPDATES are now in Apple News ### Comments Tagged as: ARIA Singles: Flume Never Be Like You Is No 1, ARIA."
+   },
+   "evidences": [
+    {
+     "paper_id": "8c22b69201be63ef3fa4dc5a5c7ac8f0eb8884aa",
+     "source_title": "flumemusician",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: ARIA Singles: Flume Never Be Like You Is No 1 - Noise11.com (meta data) PUBLISHER: https://www.facebook.com/Noise11dotcom Flume by Cybele Malinowski # ARIA Singles: Flume Never Be Like You Is No 1 by Gavin Ryan on February 13, 2016 in New Music,News,Noise Pro For a third week in a row we have a new No.1 single atop the ARIA Singles Chart, with local EDM artist Flume with the newly crowned Gold (●) track \"Never Be Like You\" featuring vocals from Kai after holding at No.2 for the past two weeks.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: ARIA Singles: Flume Never",
+     "reason": "The passage does not state that 'Never Be Like You' was Flume's first chart-topping song.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: ARIA Singles: Flume Never Be Like You Is No 1 - Noise11.com (meta data) PUBLISHER: https://www.facebook.com/Noise11dotcom Flume by Cybele Malinowski # ARIA Singles: Flume Never Be Like You Is No 1 by Gavin Ryan on February 13, 2016 in New Music,News,Noise Pro For a third week in a row we have a new No.1 single atop the ARIA Singles Chart, with local EDM artist Flume with the newly crowned Gold (●) track \"Never Be Like You\" featuring vocals from Kai after holding at No.2 for the past two weeks. \"Never Be Like You\" (#1 digital/#2 streamed) becomes the 1048th No.1 Single in Australia (1940 to 2016) and the 483rd for ARIA (1983 to 2016), plus the first EVER (on the singles chart) for record label Future Classic. Subscribe to the Noise11 Music Newsletter here Listen to the Noise11 Music News channel now at iHeartRadio Follow Noise11.com on Facebook and Twitter NOISE11 UPDATES are now in Apple News ### Comments Tagged as: ARIA Singles: Flume Never Be Like You Is No 1, ARIA."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that 'Never Be Like You' was Flume's first chart-topping song.",
+   "component_check": {
+    "found": [
+     "\"Never Be like You\" featured vocals from Canadian singer Kai."
+    ],
+    "missing": [
+     "The first single was \"Never Be like You\".",
+     "\"Never Be like You\" reached number one in Australia the following month.",
+     "This made \"Never Be like You\" Flume's first chart-topping song."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "\"Never Be like You\" featured vocals from Canadian singer Kai.",
+      "paper_id": "8c22b69201be63ef3fa4dc5a5c7ac8f0eb8884aa",
+      "source_title": "flumemusician",
+      "sentence": "(meta data) TITLE: ARIA Singles: Flume Never Be Like You Is No 1 - Noise11.com (meta data) PUBLISHER: https://www.facebook.com/Noise11dotcom Flume by Cybele Malinowski # ARIA Singles: Flume Never Be Like You Is No 1 by Gavin Ryan on February 13, 2016 in New Music,News,Noise Pro For a third week in a row we have a new No.1 single atop the ARIA Singles Chart, with local EDM artist Flume with the newly crowned Gold (●) track \"Never Be Like You\" featuring vocals from Kai after holding at No.2 for the past two weeks.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific fact (the single reaching number one in Australia) and attributes it implicitly to the cited source by its placement. This is a factual claim that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes unsourced details: 'the following month', 'the first single', 'Canadian singer', and 'first chart-topping song'. Remove or cite these.",
+    "rewrite_suggestion": "In February 2016, the track 'Never Be Like You' featuring Kai reached number one in Australia.",
+    "proofs": [
+     "For a third week in a row we have a new No.1 single atop the ARIA Singles Chart, with local EDM artist Flume with the newly crowned Gold (●) track \"Never Be Like You\" featuring vocals from Kai after holding at No.2 for the past two weeks."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that 'Never Be Like You' reached #1 in Australia and features vocals from Kai, but it does not support the relative time 'the following month', the claim that it is the 'first single', Kai's nationality as 'Canadian', or the assertion that it is Flume's 'first chart-topping song'. None of these missing components appear in the source text, so the author must either add citations for them or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "In Hebrew, \"Rahab\" (רהב), from a Biblical sea monster mentioned in the Book of Psalms, was selected in a vote managed by the Academy of the Hebrew Language in 2009 as the official name for the planet, even though the existing Latin term \"Neptun\" (נפטון) is commonly used.",
+   "markers": [
+    "neptune"
+   ],
+   "paper_ids": [
+    "c0181abf7d90c70cc15e08616a57cd6550fc1cc6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c0181abf7d90c70cc15e08616a57cd6550fc1cc6",
+    "source_title": "neptune",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Rahab, like Neptune, comes from the nautical world: It is the name of a sea monster in the Bible and Talmud.",
+    "page": 1,
+    "snippet": "Rahab, like Neptune, comes from the nautical",
+    "reason": "The passage does not state that 'Rahab' was selected in a vote managed by the Academy of the Hebrew Language in 2009.",
+    "votes": "2-0",
+    "window": "Rahab, like Neptune, comes from the nautical world: It is the name of a sea monster in the Bible and Talmud. Henceforth, Uranus will be known as \"Oron\" and Neptune as \"Rahab.\" הצעות אלו הועברו לחֶבֶר שיפוט בהשתתפות אסטרופיזיקאים בכירים ונציגי האקדמיה ללשון העברית. השם המקביל לו במסורת היהודית הוא רַהַב – שמו של שר הים, \"שָׂרוֹ של ים\". רַהַב – ההצעה באה בעקבות משמעות השם נֶפְּטון – שמו של אל הים. ארבעה שמות עלו לבסוף אל שלב הגמר והועמדו להצבעה: אלפי אנשים השתתפו בהצבעה האלקטרונית ובחרו בין החלופות."
+   },
+   "evidences": [
+    {
+     "paper_id": "c0181abf7d90c70cc15e08616a57cd6550fc1cc6",
+     "source_title": "neptune",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Rahab, like Neptune, comes from the nautical world: It is the name of a sea monster in the Bible and Talmud.",
+     "page": 1,
+     "snippet": "Rahab, like Neptune, comes from the nautical",
+     "reason": "The passage does not state that 'Rahab' was selected in a vote managed by the Academy of the Hebrew Language in 2009.",
+     "votes": "2-0",
+     "window": "Rahab, like Neptune, comes from the nautical world: It is the name of a sea monster in the Bible and Talmud. Henceforth, Uranus will be known as \"Oron\" and Neptune as \"Rahab.\" הצעות אלו הועברו לחֶבֶר שיפוט בהשתתפות אסטרופיזיקאים בכירים ונציגי האקדמיה ללשון העברית. השם המקביל לו במסורת היהודית הוא רַהַב – שמו של שר הים, \"שָׂרוֹ של ים\". רַהַב – ההצעה באה בעקבות משמעות השם נֶפְּטון – שמו של אל הים. ארבעה שמות עלו לבסוף אל שלב הגמר והועמדו להצבעה: אלפי אנשים השתתפו בהצבעה האלקטרונית ובחרו בין החלופות."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that 'Rahab' was selected in a vote managed by the Academy of the Hebrew Language in 2009.",
+   "component_check": {
+    "found": [
+     "In Hebrew, 'Rahab' (רהב) is from a Biblical sea monster mentioned in the Book of Psalms."
+    ],
+    "missing": [
+     "In 2009, 'Rahab' was selected as the official name for the planet in a vote managed by the Academy of the Hebrew Language.",
+     "The existing Latin term 'Neptun' (נפטון) is commonly used."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In Hebrew, 'Rahab' (רהב) is from a Biblical sea monster mentioned in the Book of Psalms.",
+      "paper_id": "c0181abf7d90c70cc15e08616a57cd6550fc1cc6",
+      "source_title": "neptune",
+      "sentence": "Rahab, like Neptune, comes from the nautical world: It is the name of a sea monster in the Bible and Talmud.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In Hebrew, \"Rahab\" (רהב), from a Biblical sea monster mentioned in the Book of Psalms, was selected in a vote managed by the Academy of the Hebrew Language in 2009 as the official name for the planet, even though the existing Latin term \"Neptun\" (נפטון) is commonly used.",
+    "reason": "The passage asserts specific facts about the naming of the planet Neptune, including the Hebrew name, its origin, the year of selection, and the managing body. These are factual claims that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Rahab, like Neptune, comes from the nautical world: It is the name of a sea monster in the Bible and Talmud.",
+     "The vote, which was conducted via the web, was jointly managed by the university unit and the Hebrew Language Academy under the title 'A Hebrew Star is Born'.",
+     "Nearly 3,000 voters preferred 'Rahab' for Neptune, more than double those who wished to see it named Tarshish.",
+     "Henceforth, Uranus will be known as 'Oron' and Neptune as 'Rahab.'"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only establishes that Rahab is a sea monster from the Bible and Talmud, but it does not cover the vote, the involvement of the Academy of the Hebrew Language, the year 2009, the official adoption of the name, or the existing Latin term. All these components are provable from the source text (as quoted in proof_sentences), so the tool's evidence is insufficient. The tool should display the additional sentences that fully support the claim.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t15",
+   "text": "Late the following year, Harris left the band and Dennis Whitted took over from Davidson on drums.",
+   "markers": [
+    "listofpaulbutterfieldblu"
+   ],
+   "paper_ids": [
+    "74f04664e9fec29b756ec73b9c371a03c9c151d2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "74f04664e9fec29b756ec73b9c371a03c9c151d2",
+    "source_title": "listofpaulbutterfieldblu",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Then there's the rendition of \"The Boxer,\" which takes a left turn into Allmans territory with drummer Dennis Whitted taking an extended solo for the ages that probably furrowed brows of the audience members coming to hear \"Born in Chicago\" and instead getting a pretty good Jaimoe.",
+    "page": 1,
+    "snippet": "Then there's the rendition of \"The Boxer,\"",
+    "reason": "The passage does not mention when Harris left the band or that Dennis Whitted took over from Davidson on drums.",
+    "votes": "2-0",
+    "window": "Then there's the rendition of \"The Boxer,\" which takes a left turn into Allmans territory with drummer Dennis Whitted taking an extended solo for the ages that probably furrowed brows of the audience members coming to hear \"Born in Chicago\" and instead getting a pretty good Jaimoe. This double LP, recorded in 1970 as Butterfield's star was mostly dimmed, features a later-model Butterfield Blues Band lineup in which only the bandleader was left from the debut. Original guitarist Mike Bloomfield, better known as the guitarist on Dylan's Highway 61 Revisited, was also foundational to hits like \"Born in Chicago.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "74f04664e9fec29b756ec73b9c371a03c9c151d2",
+     "source_title": "listofpaulbutterfieldblu",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Then there's the rendition of \"The Boxer,\" which takes a left turn into Allmans territory with drummer Dennis Whitted taking an extended solo for the ages that probably furrowed brows of the audience members coming to hear \"Born in Chicago\" and instead getting a pretty good Jaimoe.",
+     "page": 1,
+     "snippet": "Then there's the rendition of \"The Boxer,\"",
+     "reason": "The passage does not mention when Harris left the band or that Dennis Whitted took over from Davidson on drums.",
+     "votes": "2-0",
+     "window": "Then there's the rendition of \"The Boxer,\" which takes a left turn into Allmans territory with drummer Dennis Whitted taking an extended solo for the ages that probably furrowed brows of the audience members coming to hear \"Born in Chicago\" and instead getting a pretty good Jaimoe. This double LP, recorded in 1970 as Butterfield's star was mostly dimmed, features a later-model Butterfield Blues Band lineup in which only the bandleader was left from the debut. Original guitarist Mike Bloomfield, better known as the guitarist on Dylan's Highway 61 Revisited, was also foundational to hits like \"Born in Chicago.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention when Harris left the band or that Dennis Whitted took over from Davidson on drums.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a factual claim about personnel changes in a band, which is directly attributable to the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts that Harris left the band and that Dennis Whitted replaced a drummer named Davidson; neither of these events is mentioned anywhere in the source text.",
+    "rewrite_suggestion": "Dennis Whitted was the drummer for the Paul Butterfield Blues Band on their 1970 live album Live New York 1970.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not contain any reference to a band member named 'Harris' or a drummer named 'Davidson', nor does it state that anyone left or was replaced. The only drummer mentioned is Dennis Whitted, who is described as taking a solo on one track. Since every substantive component of the claim is absent from the source, the author must either add a citation for those facts or rewrite the claim to reflect only what the source actually says."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "Without dialogue, the film stars Marilyn Castonguay as a woman who has a strange erotic experience after unexpectedly finding a python in her apartment.",
+   "markers": [
+    "wildskin"
+   ],
+   "paper_ids": [
+    "839cff54e2e91a51fd00b7ec28982c50a42f4ff9"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "839cff54e2e91a51fd00b7ec28982c50a42f4ff9",
+    "source_title": "wildskin",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result.",
+    "page": 1,
+    "snippet": "One of these is Ariane Louis-Seize, whose",
+    "reason": "",
+    "votes": "2-0",
+    "window": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result."
+   },
+   "evidences": [
+    {
+     "paper_id": "839cff54e2e91a51fd00b7ec28982c50a42f4ff9",
+     "source_title": "wildskin",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result.",
+     "page": 1,
+     "snippet": "One of these is Ariane Louis-Seize, whose",
+     "reason": "",
+     "votes": "2-0",
+     "window": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "woman who has a strange erotic experience",
+      "paper_id": "839cff54e2e91a51fd00b7ec28982c50a42f4ff9",
+      "source_title": "wildskin",
+      "sentence": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result.",
+      "page": 1,
+      "snippet": "One of these is Ariane Louis-Seize, whose"
+     },
+     {
+      "component": "unexpectedly finding a python in her apartment",
+      "paper_id": "839cff54e2e91a51fd00b7ec28982c50a42f4ff9",
+      "source_title": "wildskin",
+      "sentence": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result.",
+      "page": 1,
+      "snippet": "One of these is Ariane Louis-Seize, whose"
+     }
+    ],
+    "uncovered": [
+     "film stars Marilyn Castonguay",
+     "without dialogue"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "839cff54e2e91a51fd00b7ec28982c50a42f4ff9",
+      "source_title": "wildskin",
+      "text": "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Marilyn Castonguay stars in the film is not supported by the source.",
+    "rewrite_suggestion": "Without dialogue, the film revolves around a young woman who has a strange erotic experience after unexpectedly finding a python in her apartment.",
+    "proofs": [
+     "One of these is Ariane Louis-Seize, whose wordless 19-minute short \"The Wild Skin\" revolves around the peculiar experiences of a young woman who discovers a python in her apartment and undergoes a strange erotic experience as a result."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the source supports the claim that the film is wordless, involves a python discovery, and a strange erotic experience. However, the source does not mention Marilyn Castonguay as an actress or star; the director Ariane Louis-Seize is named, but the actress is unspecified. Therefore the author must either provide a citation for the actress's name or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Ben Davis was a national footballer who signed a professional contract with Fulham Football Club (FC) in 2017 and was offered a second professional contract to Davis in 2018.",
+   "markers": [
+    "nationalserviceinsingapo"
+   ],
+   "paper_ids": [
+    "4282c9cb91c7f9d68a299bfe3ad1aebd21e58b3c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4282c9cb91c7f9d68a299bfe3ad1aebd21e58b3c",
+    "source_title": "nationalserviceinsingapo",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to main content # The Straits Times ## Sport # Football: Singaporean Ben Davis, 17, signs professional contract with EPL club Fulham Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018.",
+    "page": 1,
+    "snippet": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to",
+    "reason": "The passage does not state that Ben Davis was a national footballer.",
+    "votes": "2-0",
+    "window": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to main content # The Straits Times ## Sport # Football: Singaporean Ben Davis, 17, signs professional contract with EPL club Fulham Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018. He was called up to the Singaporean senior national team in 2018 but has not been capped."
+   },
+   "evidences": [
+    {
+     "paper_id": "4282c9cb91c7f9d68a299bfe3ad1aebd21e58b3c",
+     "source_title": "nationalserviceinsingapo",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to main content # The Straits Times ## Sport # Football: Singaporean Ben Davis, 17, signs professional contract with EPL club Fulham Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018.",
+     "page": 1,
+     "snippet": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to",
+     "reason": "The passage does not state that Ben Davis was a national footballer.",
+     "votes": "2-0",
+     "window": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to main content # The Straits Times ## Sport # Football: Singaporean Ben Davis, 17, signs professional contract with EPL club Fulham Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018. He was called up to the Singaporean senior national team in 2018 but has not been capped."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Ben Davis was a national footballer.",
+   "component_check": {
+    "found": [
+     "Ben Davis was offered a second professional contract by Fulham Football Club (FC) in 2018"
+    ],
+    "missing": [
+     "Ben Davis was a national footballer",
+     "Ben Davis signed a professional contract with Fulham Football Club (FC) in 2017"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Ben Davis was offered a second professional contract by Fulham Football Club (FC) in 2018",
+      "paper_id": "4282c9cb91c7f9d68a299bfe3ad1aebd21e58b3c",
+      "source_title": "nationalserviceinsingapo",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20180801125049/https://www.straitstimes.com/sport/football/football-singaporean-ben-davis-17-signs-professional-contract-with-epl-club-fulham Skip to main content # The Straits Times ## Sport # Football: Singaporean Ben Davis, 17, signs professional contract with EPL club Fulham Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Ben Davis was a national footballer who signed a professional contract with Fulham Football Club (FC) in 2017 and was offered a second professional contract to Davis in 2018.",
+    "reason": "The passage asserts specific facts and events (signing a contract, being offered a second contract, dates) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are presented as statements of fact from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Ben Davis signed a professional contract in 2017 and was offered a second contract in 2018 is not found in the source. Additionally, the source does not call him a 'national footballer' (it says he was called up but not capped).",
+    "rewrite_suggestion": "Ben Davis, a Singaporean footballer, signed a professional contract with Fulham FC on July 13, 2018, and was called up to the Singapore senior national team that year.",
+    "proofs": [
+     "Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018.",
+     "He was called up to the Singaporean senior national team in 2018 but has not been capped."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Singaporean Ben Davis signed a professional contract with Fulham of the English Premier League on July 13, 2018.",
+     "why": "The claim states the contract was signed in 2017 and that a second contract was offered in 2018, but the source says the only contract was signed in 2018, contradicting both the year and the existence of a second offer."
+    },
+    "why": "The claim's components are almost entirely unsupported by the source. The source shows a contract signed in 2018, not 2017, and makes no mention of a second contract or offer. The description 'national footballer' is not directly stated (the source says 'called up' but not capped). Since at least one substantive component is not provable from the source at all, the author must add citations or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "In 2013, Gaetz announced that in 2016 he would run for the 1st District state senate seat then held by his father, state senator Don Gaetz, who was due to be term-limited out of the Senate in 2016.",
+   "markers": [
+    "mattgaetz"
+   ],
+   "paper_ids": [
+    "ec96913cb5d628b3f7591ce5e50befef33fe8ff3"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ec96913cb5d628b3f7591ce5e50befef33fe8ff3",
+    "source_title": "mattgaetz",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016.",
+    "page": 1,
+    "snippet": "Rep. Matt Gaetz, R-Shalimar, made his bid",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016."
+   },
+   "evidences": [
+    {
+     "paper_id": "ec96913cb5d628b3f7591ce5e50befef33fe8ff3",
+     "source_title": "mattgaetz",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016.",
+     "page": 1,
+     "snippet": "Rep. Matt Gaetz, R-Shalimar, made his bid",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Gaetz announced in 2013 he would run for the 1st District state senate seat in 2016",
+      "paper_id": "ec96913cb5d628b3f7591ce5e50befef33fe8ff3",
+      "source_title": "mattgaetz",
+      "sentence": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016.",
+      "page": 1,
+      "snippet": "Rep. Matt Gaetz, R-Shalimar, made his bid"
+     },
+     {
+      "component": "the seat was then held by his father, state senator Don Gaetz",
+      "paper_id": "ec96913cb5d628b3f7591ce5e50befef33fe8ff3",
+      "source_title": "mattgaetz",
+      "sentence": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016.",
+      "page": 1,
+      "snippet": "Rep. Matt Gaetz, R-Shalimar, made his bid"
+     }
+    ],
+    "uncovered": [
+     "Don Gaetz was due to be term-limited out of the Senate in 2016"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ec96913cb5d628b3f7591ce5e50befef33fe8ff3",
+      "source_title": "mattgaetz",
+      "text": "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the seat was the 1st District and that Don Gaetz was due to be term-limited out of the Senate in 2016",
+    "rewrite_suggestion": "In 2013, Gaetz announced his candidacy for the Florida Senate seat held by his father, Don Gaetz, by filing paperwork to run in 2016.",
+    "proofs": [
+     "Rep. Matt Gaetz, R-Shalimar, made his bid official for the Florida Senate seat held by his father, Senate President Don Gaetz, R-Destin, by filing his paperwork to run in 2016."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence proves that Gaetz announced his candidacy for the seat held by his father and that he plans to run in 2016, and the article date confirms the year 2013. However, the claim includes two components not found anywhere in the source: that the seat is the 1st District and that Don Gaetz was term-limited out in 2016. These are substantive factual assertions requiring citation, so the author must either add a source for them or rewrite the claim to omit them."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "Baldacci's novels have been published in over 45 languages and in more than 80 countries, with over 130 million worldwide sales as of 2018.",
+   "markers": [
+    "davidbaldacci"
+   ],
+   "paper_ids": [
+    "283630bcf2dce7ec7a8bc10b70989d42c8042e5f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "283630bcf2dce7ec7a8bc10b70989d42c8042e5f",
+    "source_title": "davidbaldacci",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"I always get inspiration,\" says Baldacci, whose novels have sold 110 million copies worldwide.",
+    "page": 1,
+    "snippet": "\"I always get inspiration,\" says Baldacci, whose",
+    "reason": "The passage does not mention the number of languages or countries in which Baldacci's novels have been published, nor does it provide worldwide sales figures as of 2018.",
+    "votes": "2-0",
+    "window": "\"I always get inspiration,\" says Baldacci, whose novels have sold 110 million copies worldwide. And everything he does seems to lead to another idea for a story."
+   },
+   "evidences": [
+    {
+     "paper_id": "283630bcf2dce7ec7a8bc10b70989d42c8042e5f",
+     "source_title": "davidbaldacci",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"I always get inspiration,\" says Baldacci, whose novels have sold 110 million copies worldwide.",
+     "page": 1,
+     "snippet": "\"I always get inspiration,\" says Baldacci, whose",
+     "reason": "The passage does not mention the number of languages or countries in which Baldacci's novels have been published, nor does it provide worldwide sales figures as of 2018.",
+     "votes": "2-0",
+     "window": "\"I always get inspiration,\" says Baldacci, whose novels have sold 110 million copies worldwide. And everything he does seems to lead to another idea for a story."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the number of languages or countries in which Baldacci's novels have been published, nor does it provide worldwide sales figures as of 2018.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Baldacci's novels have been published in over 45 languages and in more than 80 countries, with over 130 million worldwide sales as of 2018.",
+    "reason": "The passage directly states facts and figures (languages, countries, sales numbers, and a date) that are attributed to the cited source. The ATTRIBUTION TEST applies here, indicating 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes specific figures (45 languages, 80 countries, 130 million sales) that are not supported by the cited source; the source only mentions 110 million sales as of 2013.",
+    "rewrite_suggestion": "Baldacci's novels had sold 110 million copies worldwide as of 2013, according to a USA Today article.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "\"I always get inspiration,\" says Baldacci, whose novels have sold 110 million copies worldwide.",
+     "why": "The source states 110 million copies sold, which contradicts the claim's figure of over 130 million sales."
+    },
+    "why": "The shown sentence only mentions 110 million sales, not the 130 million claimed, and says nothing about 45 languages or 80 countries. The source text from 2013 confirms 110 million, conflicting with the 130 million figure. Since none of the claim's specific numbers are present in the source, the author must either add a citation or rewrite the claim to match the available evidence."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The band's third album, \"Emotive\", was released on November 2, 2004 – the actual U.S Presidential Election Day.",
+   "markers": [
+    "aperfectcircle"
+   ],
+   "paper_ids": [
+    "b5d1119962525767586a4662430a30310836ba4c"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b5d1119962525767586a4662430a30310836ba4c",
+    "source_title": "aperfectcircle",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "eMOTIVe hits stores on Election Day, November 2.",
+    "page": 1,
+    "snippet": "eMOTIVe hits stores on Election Day, November",
+    "reason": "",
+    "votes": "2-0",
+    "window": "eMOTIVe hits stores on Election Day, November 2."
+   },
+   "evidences": [
+    {
+     "paper_id": "b5d1119962525767586a4662430a30310836ba4c",
+     "source_title": "aperfectcircle",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "eMOTIVe hits stores on Election Day, November 2.",
+     "page": 1,
+     "snippet": "eMOTIVe hits stores on Election Day, November",
+     "reason": "",
+     "votes": "2-0",
+     "window": "eMOTIVe hits stores on Election Day, November 2."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "The band's third album, \"Emotive\", was released on November 2, 2004",
+      "paper_id": "b5d1119962525767586a4662430a30310836ba4c",
+      "source_title": "aperfectcircle",
+      "sentence": "eMOTIVe hits stores on Election Day, November 2.",
+      "page": 1,
+      "snippet": "eMOTIVe hits stores on Election Day, November"
+     },
+     {
+      "component": "the actual U.S Presidential Election Day",
+      "paper_id": "b5d1119962525767586a4662430a30310836ba4c",
+      "source_title": "aperfectcircle",
+      "sentence": "eMOTIVe hits stores on Election Day, November 2.",
+      "page": 1,
+      "snippet": "eMOTIVe hits stores on Election Day, November"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b5d1119962525767586a4662430a30310836ba4c",
+      "source_title": "aperfectcircle",
+      "text": "eMOTIVe hits stores on Election Day, November 2.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t21",
+   "text": "TagMaster is a public company and its shares are traded on the First North Stock Exchange in Stockholm, Sweden.",
+   "markers": [
+    "balogdemankobk"
+   ],
+   "paper_ids": [
+    "12c580f7e69c16df69695d46c4e87d1e03709598"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8808,
+   "evidence": {
+    "paper_id": "12c580f7e69c16df69695d46c4e87d1e03709598",
+    "source_title": "balogdemankobk",
+    "supported": false,
+    "sentence": "TagMaster's head office is located in Stockholm, Sweden.",
+    "page": 1,
+    "snippet": "TagMaster's head office is located in Stockholm,",
+    "cosine": 0.8808,
+    "reason": "The passage states TagMaster's head office is in Stockholm, Sweden, but does not mention if it is a public company or traded on the First North Stock Exchange.",
+    "window": "With over 40 years of experience, we can offer a deep understanding of our clients' specific application needs within Traffic Solutions and Rail Solutions. TagMaster's head office is located in Stockholm, Sweden. CitySync office is located in Stevenage, Hertfordshire, UK."
+   },
+   "evidences": [
+    {
+     "paper_id": "12c580f7e69c16df69695d46c4e87d1e03709598",
+     "source_title": "balogdemankobk",
+     "supported": false,
+     "sentence": "TagMaster's head office is located in Stockholm, Sweden.",
+     "page": 1,
+     "snippet": "TagMaster's head office is located in Stockholm,",
+     "cosine": 0.8808,
+     "reason": "The passage states TagMaster's head office is in Stockholm, Sweden, but does not mention if it is a public company or traded on the First North Stock Exchange.",
+     "window": "With over 40 years of experience, we can offer a deep understanding of our clients' specific application needs within Traffic Solutions and Rail Solutions. TagMaster's head office is located in Stockholm, Sweden. CitySync office is located in Stevenage, Hertfordshire, UK."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "TagMaster is a public company and its shares are traded on the First North Stock Exchange in Stockholm, Sweden.",
+    "reason": "The passage asserts factual information about TagMaster's company status and stock exchange listing, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "TagMaster's status as a public company and its listing on the First North Stock Exchange in Stockholm, Sweden",
+    "rewrite_suggestion": "TagMaster's head office is located in Stockholm, Sweden.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text (TagMaster history page) does not state that TagMaster is a public company or that its shares are traded on any stock exchange. The tool's shown sentence only gives the location of the head office. Since both components of the claim are absent from the source, the author must add a proper citation for those facts or rewrite the claim to reflect only what the source supports."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Additional new operas are currently in the development phase and will receive their premieres in 2018 and beyond.",
+   "markers": [
+    "virginiaartsfestival"
+   ],
+   "paper_ids": [
+    "0abb2903d06bac4231fce7136222803267a365b4"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0abb2903d06bac4231fce7136222803267a365b4",
+    "source_title": "virginiaartsfestival",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "She also writes lyrics and libretti; she and composer Kristin Kuster will premiere their first opera, Kept, in 2017, thanks to support from the Virginia Arts Festival's John Duffy Composer's Institute.",
+    "page": 1,
+    "snippet": "She also writes lyrics and libretti; she",
+    "reason": "The passage mentions an opera premiering in 2017, but does not mention any operas in development for 2018 or beyond.",
+    "votes": "2-0",
+    "window": "She also writes lyrics and libretti; she and composer Kristin Kuster will premiere their first opera, Kept, in 2017, thanks to support from the Virginia Arts Festival's John Duffy Composer's Institute."
+   },
+   "evidences": [
+    {
+     "paper_id": "0abb2903d06bac4231fce7136222803267a365b4",
+     "source_title": "virginiaartsfestival",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "She also writes lyrics and libretti; she and composer Kristin Kuster will premiere their first opera, Kept, in 2017, thanks to support from the Virginia Arts Festival's John Duffy Composer's Institute.",
+     "page": 1,
+     "snippet": "She also writes lyrics and libretti; she",
+     "reason": "The passage mentions an opera premiering in 2017, but does not mention any operas in development for 2018 or beyond.",
+     "votes": "2-0",
+     "window": "She also writes lyrics and libretti; she and composer Kristin Kuster will premiere their first opera, Kept, in 2017, thanks to support from the Virginia Arts Festival's John Duffy Composer's Institute."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage mentions an opera premiering in 2017, but does not mention any operas in development for 2018 or beyond.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Additional new operas will receive their premieres in 2018 and beyond.",
+    "reason": "The passage asserts a future event tied to a specific date, which is a factual claim expected to be supported by the cited source. There is no indication that the citation is for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts that multiple new operas will premiere in 2018 and beyond, but the cited source only mentions one opera (Kept) premiering in 2017, and provides no information about any opera premiering in 2018 or later.",
+    "rewrite_suggestion": "A new opera, Kept, is in development and will premiere in 2017.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states 'additional new operas' will have premieres in '2018 and beyond', but the only opera mentioned in the source text premieres in 2017, not 2018 or later. Moreover, the source discusses only one opera, not multiple. Therefore, the claim contains components that are entirely unprovable from the provided source text, requiring the author to either add a proper citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "In 1954, the United States Supreme Court ruled on the case \"Brown v. Board of Education of Topeka, Kansas\" and declared that all public schools in the country must desegregate.",
+   "markers": [
+    "beverlylongactivist"
+   ],
+   "paper_ids": [
+    "89e7cec8eeaa51759e4e5667ab4ea84035f431b2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "89e7cec8eeaa51759e4e5667ab4ea84035f431b2",
+    "source_title": "beverlylongactivist",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Brown v. Board of Education - HISTORY (meta data) AUTHOR: History.com Editors (meta data) PUBLISHED DATETIME: 2009-10-27T07:09:50-04:00 # Brown v. Board of Education Author:History.com Editors ## Contents SEPARATE BUT EQUAL BROWN V. BOARD OF EDUCATION VERDICT LITTLE ROCK NINE IMPACT OF BROWN V. BOARD OF EDUCATION Sources Brown v. Board of Education of Topeka was a landmark 1954 Supreme Court case in which the justices ruled unanimously that racial segregation of children in public schools was unconstitutional.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Brown v. Board of",
+    "reason": "The passage does not state that all public schools in the country must desegregate, only that racial segregation of children in public schools was unconstitutional.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Brown v. Board of Education - HISTORY (meta data) AUTHOR: History.com Editors (meta data) PUBLISHED DATETIME: 2009-10-27T07:09:50-04:00 # Brown v. Board of Education Author:History.com Editors ## Contents SEPARATE BUT EQUAL BROWN V. BOARD OF EDUCATION VERDICT LITTLE ROCK NINE IMPACT OF BROWN V. BOARD OF EDUCATION Sources Brown v. Board of Education of Topeka was a landmark 1954 Supreme Court case in which the justices ruled unanimously that racial segregation of children in public schools was unconstitutional. In the decision, issued on May 17, 1954, Warren wrote that \"in the field of public education the doctrine of 'separate but equal' has no place,\" as segregated schools are \"inherently unequal.\" As a result, the Court ruled that the plaintiffs were being \"deprived of the equal protection of the laws guaranteed by the 14th Amendment.\" ## LITTLE ROCK NINE In its verdict, the Supreme Court did not specify how exactly schools should be integrated, but asked for further arguments about it."
+   },
+   "evidences": [
+    {
+     "paper_id": "89e7cec8eeaa51759e4e5667ab4ea84035f431b2",
+     "source_title": "beverlylongactivist",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Brown v. Board of Education - HISTORY (meta data) AUTHOR: History.com Editors (meta data) PUBLISHED DATETIME: 2009-10-27T07:09:50-04:00 # Brown v. Board of Education Author:History.com Editors ## Contents SEPARATE BUT EQUAL BROWN V. BOARD OF EDUCATION VERDICT LITTLE ROCK NINE IMPACT OF BROWN V. BOARD OF EDUCATION Sources Brown v. Board of Education of Topeka was a landmark 1954 Supreme Court case in which the justices ruled unanimously that racial segregation of children in public schools was unconstitutional.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Brown v. Board of",
+     "reason": "The passage does not state that all public schools in the country must desegregate, only that racial segregation of children in public schools was unconstitutional.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Brown v. Board of Education - HISTORY (meta data) AUTHOR: History.com Editors (meta data) PUBLISHED DATETIME: 2009-10-27T07:09:50-04:00 # Brown v. Board of Education Author:History.com Editors ## Contents SEPARATE BUT EQUAL BROWN V. BOARD OF EDUCATION VERDICT LITTLE ROCK NINE IMPACT OF BROWN V. BOARD OF EDUCATION Sources Brown v. Board of Education of Topeka was a landmark 1954 Supreme Court case in which the justices ruled unanimously that racial segregation of children in public schools was unconstitutional. In the decision, issued on May 17, 1954, Warren wrote that \"in the field of public education the doctrine of 'separate but equal' has no place,\" as segregated schools are \"inherently unequal.\" As a result, the Court ruled that the plaintiffs were being \"deprived of the equal protection of the laws guaranteed by the 14th Amendment.\" ## LITTLE ROCK NINE In its verdict, the Supreme Court did not specify how exactly schools should be integrated, but asked for further arguments about it."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that all public schools in the country must desegregate, only that racial segregation of children in public schools was unconstitutional.",
+   "component_check": {
+    "found": [
+     "In 1954, the United States Supreme Court ruled on the case \"Brown v. Board of Education of Topeka, Kansas\""
+    ],
+    "missing": [
+     "The ruling declared that all public schools in the country must desegregate"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 1954, the United States Supreme Court ruled on the case \"Brown v. Board of Education of Topeka, Kansas\"",
+      "paper_id": "89e7cec8eeaa51759e4e5667ab4ea84035f431b2",
+      "source_title": "beverlylongactivist",
+      "sentence": "(meta data) TITLE: Brown v. Board of Education - HISTORY (meta data) AUTHOR: History.com Editors (meta data) PUBLISHED DATETIME: 2009-10-27T07:09:50-04:00 # Brown v. Board of Education Author:History.com Editors ## Contents SEPARATE BUT EQUAL BROWN V. BOARD OF EDUCATION VERDICT LITTLE ROCK NINE IMPACT OF BROWN V. BOARD OF EDUCATION Sources Brown v. Board of Education of Topeka was a landmark 1954 Supreme Court case in which the justices ruled unanimously that racial segregation of children in public schools was unconstitutional.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1954, the United States Supreme Court ruled on the case \"Brown v. Board of Education of Topeka, Kansas\" and declared that all public schools in the country must desegregate.",
+    "reason": "The passage asserts a specific historical fact and date, directly attributing the ruling and its declaration to the cited source. This falls under the 'full' scope as the citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Brown v. Board of Education of Topeka was a landmark 1954 Supreme Court case in which the justices ruled unanimously that racial segregation of children in public schools was unconstitutional."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence explicitly states the year (1954), identifies the Supreme Court case, and declares that the justices ruled unanimously that racial segregation in public schools was unconstitutional. This directly corresponds to the claim's statement that the Court declared all public schools must desegregate, as ruling segregation unconstitutional necessarily requires desegregation. All components of the claim are proven by the shown sentence."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "It was released on October 27, 2014, by Stereotypes Music and Mass Appeal, in association with BMG Rights Management.",
+   "markers": [
+    "dk3"
+   ],
+   "paper_ids": [
+    "42bfd13fc628ebb3054ddb0f57a5c13273ba776f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "42bfd13fc628ebb3054ddb0f57a5c13273ba776f",
+    "source_title": "dk3",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "That's right, Aubrey O'Day and Shannon Bex announced that their new album, DK3, will be hitting stores October 28.",
+    "page": 1,
+    "snippet": "That's right, Aubrey O'Day and Shannon Bex",
+    "reason": "The release date of October 27, 2014, is not supported by the passage, which states October 28.",
+    "votes": "2-0",
+    "window": "That's right, Aubrey O'Day and Shannon Bex announced that their new album, DK3, will be hitting stores October 28."
+   },
+   "evidences": [
+    {
+     "paper_id": "42bfd13fc628ebb3054ddb0f57a5c13273ba776f",
+     "source_title": "dk3",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "That's right, Aubrey O'Day and Shannon Bex announced that their new album, DK3, will be hitting stores October 28.",
+     "page": 1,
+     "snippet": "That's right, Aubrey O'Day and Shannon Bex",
+     "reason": "The release date of October 27, 2014, is not supported by the passage, which states October 28.",
+     "votes": "2-0",
+     "window": "That's right, Aubrey O'Day and Shannon Bex announced that their new album, DK3, will be hitting stores October 28."
+    }
+   ],
+   "votes": null,
+   "reason": "The release date of October 27, 2014, is not supported by the passage, which states October 28.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The release date and associated entities of the work are stated.",
+    "reason": "The passage asserts specific factual information (release date, associated entities) that the cited source is expected to prove. This falls under the default 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the release date of October 27, 2014, and the record labels Stereotypes Music, Mass Appeal, in association with BMG Rights Management",
+    "rewrite_suggestion": "The album DK3 was announced for release on October 28, 2014.",
+    "proofs": [
+     "That's right, Aubrey O'Day and Shannon Bex announced that their new album, DK3, will be hitting stores October 28."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "That's right, Aubrey O'Day and Shannon Bex announced that their new album, DK3, will be hitting stores October 28.",
+     "why": "The source states the release date as October 28, which directly contradicts the claim's date of October 27."
+    },
+    "why": "The claim asserts a release date of October 27, 2014, but the cited source explicitly says the album will be released on October 28. Additionally, the claim includes record labels (Stereotypes Music, Mass Appeal, BMG Rights Management) that are not mentioned anywhere in the source text. Since substantive components are either contradicted or unsupported by the source, the author must either add a citation for these details or rewrite the claim to align with the source."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "A business case for the upgrade of the North Auckland Line and the Marsden Point Branch's construction was prepared by New Zealand Ministry of Transport and published May 2019.",
+   "markers": [
+    "marsdenpointbranch"
+   ],
+   "paper_ids": [
+    "5cb00f275b8201c47f84a819dffb00e4c34ef48b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5cb00f275b8201c47f84a819dffb00e4c34ef48b",
+    "source_title": "marsdenpointbranch",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport.",
+    "page": 1,
+    "snippet": "The Ministry of Transport business case examined",
+    "reason": "the passage does not mention the North Auckland Line or the publication date of May 2019",
+    "votes": "2-0",
+    "window": "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport."
+   },
+   "evidences": [
+    {
+     "paper_id": "5cb00f275b8201c47f84a819dffb00e4c34ef48b",
+     "source_title": "marsdenpointbranch",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport.",
+     "page": 1,
+     "snippet": "The Ministry of Transport business case examined",
+     "reason": "the passage does not mention the North Auckland Line or the publication date of May 2019",
+     "votes": "2-0",
+     "window": "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention the North Auckland Line or the publication date of May 2019",
+   "component_check": {
+    "found": [
+     "A business case for the upgrade of the North Auckland Line and the Marsden Point Branch's construction was prepared",
+     "New Zealand Ministry of Transport prepared the business case"
+    ],
+    "missing": [
+     "The business case was published May 2019"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "A business case for the upgrade of the North Auckland Line and the Marsden Point Branch's construction was prepared",
+      "paper_id": "5cb00f275b8201c47f84a819dffb00e4c34ef48b",
+      "source_title": "marsdenpointbranch",
+      "sentence": "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport.",
+      "page": 1
+     },
+     {
+      "component": "New Zealand Ministry of Transport prepared the business case",
+      "paper_id": "5cb00f275b8201c47f84a819dffb00e4c34ef48b",
+      "source_title": "marsdenpointbranch",
+      "sentence": "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "A business case for the upgrade of the North Auckland Line and the Marsden Point Branch's construction was prepared by New Zealand Ministry of Transport and published May 2019.",
+    "reason": "The passage directly attributes the preparation and publication of a business case to the cited source. This falls under the 'full' scope as the citation is expected to prove the existence and content of this business case.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "published May 2019",
+    "rewrite_suggestion": "A business case for the upgrade of the North Auckland Line and the Marsden Point Branch's construction was prepared by the New Zealand Ministry of Transport.",
+    "proofs": [
+     "The Ministry of Transport business case examined the cost of upgrading the rail line between Auckland and Whangārei, reopening the mothballed tracks north to Moerewa and west to Dargaville, and constructing a new spur east to Northport."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms that a Ministry of Transport business case exists covering the rail upgrade and new spur, but the claim includes a specific publication date 'May 2019' which is not stated anywhere in the provided source text. Since this date component is not provable from the source, the author must either provide a citation for it or remove it from the claim."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "Inez joined the band again for their West Coast and Japanese tour in 2003.",
+   "markers": [
+    "aliceinchains"
+   ],
+   "paper_ids": [
+    "4cbe90c6bcb52641e334c939df67ff95715cba88"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8536,
+   "evidence": {
+    "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+    "source_title": "aliceinchains",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Former Ozzy/Alice In Chains",
+    "cosine": 0.8536,
+    "reason": "The passage explicitly states that Mike Inez would be playing bass for Black Label Society during their West Coast dates and subsequent Japanese tour in 2003.",
+    "window": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour. In related news, a message on the same site states that a \"major announcement\" will follow soon regarding the bassist position in OZZY's band (presumably referring to Jason Newsted)."
+   },
+   "evidences": [
+    {
+     "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+     "source_title": "aliceinchains",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Former Ozzy/Alice In Chains",
+     "cosine": 0.8536,
+     "reason": "The passage explicitly states that Mike Inez would be playing bass for Black Label Society during their West Coast dates and subsequent Japanese tour in 2003.",
+     "window": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour. In related news, a message on the same site states that a \"major announcement\" will follow soon regarding the bassist position in OZZY's band (presumably referring to Jason Newsted)."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Mike Inez would be playing bass for Black Label Society during their West Coast dates and subsequent Japanese tour in 2003.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Inez joined the band again for their West Coast and Japanese tour",
+      "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+      "source_title": "aliceinchains",
+      "sentence": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Former Ozzy/Alice In Chains"
+     },
+     {
+      "component": "in 2003",
+      "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+      "source_title": "aliceinchains",
+      "sentence": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Former Ozzy/Alice In Chains"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+      "source_title": "aliceinchains",
+      "text": "(meta data) TITLE: Former Ozzy/Alice In Chains Bassist To Tour With Black Label Society - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # Former OZZY/ALICE IN CHAINS Bassist To Tour With BLACK LABEL SOCIETY March 5, 2003 According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states Mike Inez will play bass for Black Label Society, not that he rejoined a band.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the word 'again' implying Inez had previously been a member of the band",
+    "rewrite_suggestion": "Inez played bass for Black Label Society on their West Coast and Japanese tour in 2003.",
+    "proofs": [
+     "According to www.zakkwylde.com, former OZZY OSBOURNE/ALICE IN CHAINS bassist Mike Inez will be playing bass for BLACK LABEL SOCIETY during the group's forthcoming West Coast dates and subsequent Japanese tour."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Inez 'joined the band again', implying a prior membership with that band. The cited source does not mention any previous association with Black Label Society or any 'again' — it only reports that Inez will be playing bass for Black Label Society on their West Coast and Japanese tour. Therefore the 'again' component is unsupported by the source text, and the author must either provide a citation for that subclaim or rewrite the claim to remove the implication."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "283630bcf2dce7ec7a8bc10b70989d42c8042e5f": {
+    "title": "davidbaldacci",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b": {
+    "title": "newzealand",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "c0181abf7d90c70cc15e08616a57cd6550fc1cc6": {
+    "title": "neptune",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "839cff54e2e91a51fd00b7ec28982c50a42f4ff9": {
+    "title": "wildskin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ab093b40c030155e26f75cff0e04cd933afc9154": {
+    "title": "womenslacrosse",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4282c9cb91c7f9d68a299bfe3ad1aebd21e58b3c": {
+    "title": "nationalserviceinsingapo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "89e7cec8eeaa51759e4e5667ab4ea84035f431b2": {
+    "title": "beverlylongactivist",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8dbbaba84506428908af6b36de7a9d05ef376427": {
+    "title": "secretcitytvseries",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "74f04664e9fec29b756ec73b9c371a03c9c151d2": {
+    "title": "listofpaulbutterfieldblu",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ec96913cb5d628b3f7591ce5e50befef33fe8ff3": {
+    "title": "mattgaetz",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "2817b6d27f8f1e2028d16768b78e38fe0f687921": {
+    "title": "grandtetonmusicfestival",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "52b6da27ef811765f4b993296f0636ae8a2929ff": {
+    "title": "jeffglor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89": {
+    "title": "ladyameliawindsor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "0abb2903d06bac4231fce7136222803267a365b4": {
+    "title": "virginiaartsfestival",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "42bfd13fc628ebb3054ddb0f57a5c13273ba776f": {
+    "title": "dk3",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8c22b69201be63ef3fa4dc5a5c7ac8f0eb8884aa": {
+    "title": "flumemusician",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "240fbb06ead6e0707915f0e5194fa93838a80ec9": {
+    "title": "samuraijack",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f80541304f6dac2cb18a0f8f7b3676384c21e5a1": {
+    "title": "riversidemilitaryacademy",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4": {
+    "title": "viber",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "12c580f7e69c16df69695d46c4e87d1e03709598": {
+    "title": "balogdemankobk",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "95ec6659ea0fb8f3996b4c562a3fb58dc6162707": {
+    "title": "reddwarfbacktoearth",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5cb00f275b8201c47f84a819dffb00e4c34ef48b": {
+    "title": "marsdenpointbranch",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4cbe90c6bcb52641e334c939df67ff95715cba88": {
+    "title": "aliceinchains",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6": {
+    "title": "americancranecorporation",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697": {
+    "title": "saintlukedrawingthevirgi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b5d1119962525767586a4662430a30310836ba4c": {
+    "title": "aperfectcircle",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 12,
+   "unsupported": 14,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 21:05:42",
+  "marker_errors": [],
+  "processing_time_seconds": 244.3,
+  "source_hashes": {
+   "reddwarfbacktoearth.txt": "baec19a476e7596ae70aba782565c4a3175c2d26",
+   "riversidemilitaryacademy.txt": "7ea55607951b46c320488e5fb59a933275c9079c",
+   "ladyameliawindsor.txt": "abc5e891752bc9752d8cd889ca17d9ef7e2a9624",
+   "secretcitytvseries.txt": "bf6c02e71397d5e3b7e927ca43ede67aca09cb8a",
+   "americancranecorporation.txt": "8b8765af6c250b69cce22217957daa654ef27ef3",
+   "womenslacrosse.txt": "0cee097c7eae2d45eeb0271a112a81830cac305f",
+   "saintlukedrawingthevirgi.txt": "7fb4e4de740a5349181e9e1297078bfab8c3102b",
+   "newzealand.txt": "403df7da924982bbb0d96f0a0b4fd287cd8840b1",
+   "grandtetonmusicfestival.txt": "442c395cc6a3d684dd47ade51b90776462687a16",
+   "jeffglor.txt": "492541f097b6a10cc56e5f0bfdc1a1a34b78987f",
+   "viber.txt": "327916aeca9fd2281549e649ea0d870e8fc2fd77",
+   "samuraijack.txt": "50063bb4d3b7687366d941e1d2997b234fb69c3c",
+   "flumemusician.txt": "deccfad51f6ea8926c1ce8c8ddf88d7c2a920c70",
+   "neptune.txt": "dcc5c55739fde039a33a65f5c3a6cdf0b08004b5",
+   "listofpaulbutterfieldblu.txt": "076baa743eb15d090b47685188c702dbf77c42a5",
+   "wildskin.txt": "f100a7e258f6072189b81fadc74757a30f732bfc",
+   "nationalserviceinsingapo.txt": "58e41f7da2f8d63f3cfcb41441d334239d88e1fa",
+   "mattgaetz.txt": "54dfd01fc939bfc381bbf457fc3f308a3cecf308",
+   "davidbaldacci.txt": "eb5e2c3705c6158b8fea04b6e39488f8d064f624",
+   "aperfectcircle.txt": "0ae3091b74998830a607611c390dfa1b94f8e3a8",
+   "balogdemankobk.txt": "accefb02903083d0dc02aaf2bb2ed1b472c736ec",
+   "virginiaartsfestival.txt": "37727ae9711901bdef9fab0d08ecc246ebd6d724",
+   "beverlylongactivist.txt": "9eff76ce405e8a3d9f6ee61ba0e55256144eaf41",
+   "dk3.txt": "d14dc486e4017eabe9d5307b5edda76485021ce6",
+   "marsdenpointbranch.txt": "b2079d2f11f6a4c72f345d10f776c502c6ab72d7",
+   "aliceinchains.txt": "adbe4a33730d764de710027158fe2067f3f890af"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 370,
+    "prompt_tokens": 368878,
+    "completion_tokens": 17668,
+    "cost_usd": 0.043996
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 23,
+    "prompt_tokens": 63528,
+    "completion_tokens": 51329,
+    "cost_usd": 0.018911
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 14,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 20,
+   "actions": {
+    "add_citation_or_rewrite": 18,
+    "wrong_or_insufficient_evidence": 1,
+    "supported": 1
+   },
+   "proof_may_exist": [
+    "t14"
+   ],
+   "conflicts": [
+    "t17",
+    "t19",
+    "t24"
+   ],
+   "rescued": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "95ec6659ea0fb8f3996b4c562a3fb58dc6162707",
+   "key": "reddwarfbacktoearth",
+   "filename": "reddwarfbacktoearth.txt",
+   "title": "reddwarfbacktoearth",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f80541304f6dac2cb18a0f8f7b3676384c21e5a1",
+   "key": "riversidemilitaryacademy",
+   "filename": "riversidemilitaryacademy.txt",
+   "title": "riversidemilitaryacademy",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7b39882ac0d9f3251a2a1359b9ea2f9989dbbd89",
+   "key": "ladyameliawindsor",
+   "filename": "ladyameliawindsor.txt",
+   "title": "ladyameliawindsor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8dbbaba84506428908af6b36de7a9d05ef376427",
+   "key": "secretcitytvseries",
+   "filename": "secretcitytvseries.txt",
+   "title": "secretcitytvseries",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4fa1e1a3899e6aa146d4f3c1f49dcf5eaacb9cd6",
+   "key": "americancranecorporation",
+   "filename": "americancranecorporation.txt",
+   "title": "americancranecorporation",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ab093b40c030155e26f75cff0e04cd933afc9154",
+   "key": "womenslacrosse",
+   "filename": "womenslacrosse.txt",
+   "title": "womenslacrosse",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "84cf56e5f6e845f703e4d2e7e1f9c3631b22c697",
+   "key": "saintlukedrawingthevirgi",
+   "filename": "saintlukedrawingthevirgi.txt",
+   "title": "saintlukedrawingthevirgi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b2b9916a388a3b4e02fe629a6ce1ecf095dce33b",
+   "key": "newzealand",
+   "filename": "newzealand.txt",
+   "title": "newzealand",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2817b6d27f8f1e2028d16768b78e38fe0f687921",
+   "key": "grandtetonmusicfestival",
+   "filename": "grandtetonmusicfestival.txt",
+   "title": "grandtetonmusicfestival",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "52b6da27ef811765f4b993296f0636ae8a2929ff",
+   "key": "jeffglor",
+   "filename": "jeffglor.txt",
+   "title": "jeffglor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "024e0e9ec5fd3de89ed3eab0577a8f7cf5f241d4",
+   "key": "viber",
+   "filename": "viber.txt",
+   "title": "viber",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "240fbb06ead6e0707915f0e5194fa93838a80ec9",
+   "key": "samuraijack",
+   "filename": "samuraijack.txt",
+   "title": "samuraijack",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8c22b69201be63ef3fa4dc5a5c7ac8f0eb8884aa",
+   "key": "flumemusician",
+   "filename": "flumemusician.txt",
+   "title": "flumemusician",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c0181abf7d90c70cc15e08616a57cd6550fc1cc6",
+   "key": "neptune",
+   "filename": "neptune.txt",
+   "title": "neptune",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "74f04664e9fec29b756ec73b9c371a03c9c151d2",
+   "key": "listofpaulbutterfieldblu",
+   "filename": "listofpaulbutterfieldblu.txt",
+   "title": "listofpaulbutterfieldblu",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "839cff54e2e91a51fd00b7ec28982c50a42f4ff9",
+   "key": "wildskin",
+   "filename": "wildskin.txt",
+   "title": "wildskin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4282c9cb91c7f9d68a299bfe3ad1aebd21e58b3c",
+   "key": "nationalserviceinsingapo",
+   "filename": "nationalserviceinsingapo.txt",
+   "title": "nationalserviceinsingapo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ec96913cb5d628b3f7591ce5e50befef33fe8ff3",
+   "key": "mattgaetz",
+   "filename": "mattgaetz.txt",
+   "title": "mattgaetz",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "283630bcf2dce7ec7a8bc10b70989d42c8042e5f",
+   "key": "davidbaldacci",
+   "filename": "davidbaldacci.txt",
+   "title": "davidbaldacci",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b5d1119962525767586a4662430a30310836ba4c",
+   "key": "aperfectcircle",
+   "filename": "aperfectcircle.txt",
+   "title": "aperfectcircle",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "12c580f7e69c16df69695d46c4e87d1e03709598",
+   "key": "balogdemankobk",
+   "filename": "balogdemankobk.txt",
+   "title": "balogdemankobk",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0abb2903d06bac4231fce7136222803267a365b4",
+   "key": "virginiaartsfestival",
+   "filename": "virginiaartsfestival.txt",
+   "title": "virginiaartsfestival",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "89e7cec8eeaa51759e4e5667ab4ea84035f431b2",
+   "key": "beverlylongactivist",
+   "filename": "beverlylongactivist.txt",
+   "title": "beverlylongactivist",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "42bfd13fc628ebb3054ddb0f57a5c13273ba776f",
+   "key": "dk3",
+   "filename": "dk3.txt",
+   "title": "dk3",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5cb00f275b8201c47f84a819dffb00e4c34ef48b",
+   "key": "marsdenpointbranch",
+   "filename": "marsdenpointbranch.txt",
+   "title": "marsdenpointbranch",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+   "key": "aliceinchains",
+   "filename": "aliceinchains.txt",
+   "title": "aliceinchains",
+   "num_claims": 0
+  }
+ ]
+}

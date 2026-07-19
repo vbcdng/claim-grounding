@@ -1,0 +1,2603 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 12 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Behring died on June 25, 2019 in Contra Costa County, California.",
+   "markers": [
+    "kenbehring"
+   ],
+   "paper_ids": [
+    "0bb2b7cebe82ecd4badb21083ad6d987f94b9ba0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0bb2b7cebe82ecd4badb21083ad6d987f94b9ba0",
+    "source_title": "kenbehring",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks.",
+    "page": 1,
+    "snippet": "His death, at his home in Blackhawk,",
+    "reason": "The passage does not state the specific date of Behring's death, only that it was announced on Tuesday, June 30, 2019.",
+    "votes": "2-0",
+    "window": "His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks. 's Seattle Seahawks in the late 1980s and 1990s, a turbulent time for the franchise marked by largely mediocre seasons and Mr. Behring's unsuccessful quest to move the team to Southern California, died on Tuesday in the San Francisco Bay Area. He was 91. His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks. 's Seattle Seahawks in the late 1980s and 1990s, a turbulent time for the franchise marked by largely mediocre seasons and Mr. Behring's unsuccessful quest to move the team to Southern California, died on Tuesday in the San Francisco Bay Area."
+   },
+   "evidences": [
+    {
+     "paper_id": "0bb2b7cebe82ecd4badb21083ad6d987f94b9ba0",
+     "source_title": "kenbehring",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks.",
+     "page": 1,
+     "snippet": "His death, at his home in Blackhawk,",
+     "reason": "The passage does not state the specific date of Behring's death, only that it was announced on Tuesday, June 30, 2019.",
+     "votes": "2-0",
+     "window": "His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks. 's Seattle Seahawks in the late 1980s and 1990s, a turbulent time for the franchise marked by largely mediocre seasons and Mr. Behring's unsuccessful quest to move the team to Southern California, died on Tuesday in the San Francisco Bay Area. He was 91. His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks. 's Seattle Seahawks in the late 1980s and 1990s, a turbulent time for the franchise marked by largely mediocre seasons and Mr. Behring's unsuccessful quest to move the team to Southern California, died on Tuesday in the San Francisco Bay Area."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the specific date of Behring's death, only that it was announced on Tuesday, June 30, 2019.",
+   "component_check": {
+    "found": [
+     "Behring died in Contra Costa County, California"
+    ],
+    "missing": [
+     "Behring died on June 25, 2019"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Behring died in Contra Costa County, California",
+      "paper_id": "0bb2b7cebe82ecd4badb21083ad6d987f94b9ba0",
+      "source_title": "kenbehring",
+      "sentence": "His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Behring died on June 25, 2019 in Contra Costa County, California.",
+    "reason": "The passage directly states a fact about the cited person's death, which the citation is expected to prove. This falls under the 'full' scope as it's a factual assertion attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the exact date of death (June 25, 2019)",
+    "rewrite_suggestion": "Behring died in Contra Costa County, California.",
+    "proofs": [
+     "Ken Behring, the California-based real estate developer and philanthropist who owned the N.F.L. 's Seattle Seahawks in the late 1980s and 1990s, a turbulent time for the franchise marked by largely mediocre seasons and Mr. Behring's unsuccessful quest to move the team to Southern California, died on Tuesday in the San Francisco Bay Area.",
+     "His death, at his home in Blackhawk, a large planned development he built in Contra Costa County, was announced by the Seahawks."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Behring died specifically on June 25, 2019, but the cited source only says he died on 'Tuesday' relative to the publication date (June 30, 2019) and never mentions the exact date. The location (Contra Costa County) and the fact of death are supported, but the exact date is an unsourced component. Therefore the author must either provide a citation for the date or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "In 2012, King's article on Maines's misuse of classical material was awarded the Barbara McManus Prize of the Women's Classical Caucus.",
+   "markers": [
+    "rachelmaines"
+   ],
+   "paper_ids": [
+    "1b7f7eeeb7df0be0c23c9aba9a45f19489ae5f93"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1b7f7eeeb7df0be0c23c9aba9a45f19489ae5f93",
+    "source_title": "rachelmaines",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\u2022 On January 3, 2012, the Women's Classical Caucus recognized a paper by Helen King of the Open University, UK, \"Galen and the widow: Towards a history of therapeutic masturbation in ancient gynaecology,\" which appeared in the first issue of Eugesta, awarding it the Barbara McManus prize for the best article published in the last three years relating to the WCC's mission of \"fostering the study of gender, sexuality, feminist theory, or women's history.\"",
+    "page": 1,
+    "snippet": "\u2022 On January 3, 2012, the Women's",
+    "reason": "The passage states the prize was awarded for King's article on Galen and the widow, not for an article on Maines's misuse of classical material.",
+    "votes": "2-0",
+    "window": "\u2022 On January 3, 2012, the Women's Classical Caucus recognized a paper by Helen King of the Open University, UK, \"Galen and the widow: Towards a history of therapeutic masturbation in ancient gynaecology,\" which appeared in the first issue of Eugesta, awarding it the Barbara McManus prize for the best article published in the last three years relating to the WCC's mission of \"fostering the study of gender, sexuality, feminist theory, or women's history.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "1b7f7eeeb7df0be0c23c9aba9a45f19489ae5f93",
+     "source_title": "rachelmaines",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\u2022 On January 3, 2012, the Women's Classical Caucus recognized a paper by Helen King of the Open University, UK, \"Galen and the widow: Towards a history of therapeutic masturbation in ancient gynaecology,\" which appeared in the first issue of Eugesta, awarding it the Barbara McManus prize for the best article published in the last three years relating to the WCC's mission of \"fostering the study of gender, sexuality, feminist theory, or women's history.\"",
+     "page": 1,
+     "snippet": "\u2022 On January 3, 2012, the Women's",
+     "reason": "The passage states the prize was awarded for King's article on Galen and the widow, not for an article on Maines's misuse of classical material.",
+     "votes": "2-0",
+     "window": "\u2022 On January 3, 2012, the Women's Classical Caucus recognized a paper by Helen King of the Open University, UK, \"Galen and the widow: Towards a history of therapeutic masturbation in ancient gynaecology,\" which appeared in the first issue of Eugesta, awarding it the Barbara McManus prize for the best article published in the last three years relating to the WCC's mission of \"fostering the study of gender, sexuality, feminist theory, or women's history.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the prize was awarded for King's article on Galen and the widow, not for an article on Maines's misuse of classical material.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2012, King's article on Maines's misuse of classical material was awarded the Barbara McManus Prize of the Women's Classical Caucus.",
+    "reason": "The passage directly states a fact about an award given to an article, which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the description of King's article as 'on Maines's misuse of classical material'",
+    "rewrite_suggestion": "In 2012, King's article 'Galen and the widow: Towards a history of therapeutic masturbation in ancient gynaecology' was awarded the Barbara McManus Prize of the Women's Classical Caucus.",
+    "proofs": [
+     "\u2022 On January 3, 2012, the Women's Classical Caucus recognized a paper by Helen King of the Open University, UK, \"Galen and the widow: Towards a history of therapeutic masturbation in ancient gynaecology,\" which appeared in the first issue of Eugesta, awarding it the Barbara McManus prize for the best article published in the last three years relating to the WCC's mission of \"fostering the study of gender, sexuality, feminist theory, or women's history.\""
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence and source text prove that King's article was awarded the Barbara McManus Prize in 2012 by the Women's Classical Caucus, and correctly identify the article's actual title. However, the claim adds an unsourced characterization that the article is 'on Maines's misuse of classical material,' which appears nowhere in the source. This component cannot be verified from the cited source, so the author must either add a separate citation for that claim or rewrite to match the article title as shown."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "A 2006 report by Alexander Stubb MEP highlighted that by only using English, French and German costs could be reduced from \u20ac118,000 per day (for 21 languages then \u2013 Romanian, Bulgarian and Croatian having not yet been included) to \u20ac8,900 per day.",
+   "markers": [
+    "europeanparliament"
+   ],
+   "paper_ids": [
+    "85277e32ea30e23c760955ed4aff975f4af8ac61"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "85277e32ea30e23c760955ed4aff975f4af8ac61",
+    "source_title": "europeanparliament",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "But it also noted that interpretation costs for parliament could be reduced to 8,900 euros per day if only three languages were used.",
+    "page": 1,
+    "snippet": "But it also noted that interpretation costs",
+    "reason": "The report is not attributed to Alexander Stubb MEP.",
+    "votes": "2-0",
+    "window": "But it also noted that interpretation costs for parliament could be reduced to 8,900 euros per day if only three languages were used. With 21 official languages, the right of Europe's representatives to debate the finer points of horticultural gems \u2013 or anything else \u2013 in their mother tongue can cost EU taxpayers as much as 118,000 euros per day."
+   },
+   "evidences": [
+    {
+     "paper_id": "85277e32ea30e23c760955ed4aff975f4af8ac61",
+     "source_title": "europeanparliament",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "But it also noted that interpretation costs for parliament could be reduced to 8,900 euros per day if only three languages were used.",
+     "page": 1,
+     "snippet": "But it also noted that interpretation costs",
+     "reason": "The report is not attributed to Alexander Stubb MEP.",
+     "votes": "2-0",
+     "window": "But it also noted that interpretation costs for parliament could be reduced to 8,900 euros per day if only three languages were used. With 21 official languages, the right of Europe's representatives to debate the finer points of horticultural gems \u2013 or anything else \u2013 in their mother tongue can cost EU taxpayers as much as 118,000 euros per day."
+    }
+   ],
+   "votes": null,
+   "reason": "The report is not attributed to Alexander Stubb MEP.",
+   "component_check": {
+    "found": [
+     "The cost was \u20ac118,000 per day for 21 languages then",
+     "The reduced cost would be \u20ac8,900 per day"
+    ],
+    "missing": [
+     "A 2006 report by Alexander Stubb MEP highlighted costs could be reduced by only using English, French and German",
+     "Romanian, Bulgarian and Croatian had not yet been included"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The cost was \u20ac118,000 per day for 21 languages then",
+      "paper_id": "85277e32ea30e23c760955ed4aff975f4af8ac61",
+      "source_title": "europeanparliament",
+      "sentence": "With 21 official languages, the right of Europe's representatives to debate the finer points of horticultural gems \u2013 or anything else \u2013 in their mother tongue can cost EU taxpayers as much as 118,000 euros per day.",
+      "page": 1
+     },
+     {
+      "component": "The reduced cost would be \u20ac8,900 per day",
+      "paper_id": "85277e32ea30e23c760955ed4aff975f4af8ac61",
+      "source_title": "europeanparliament",
+      "sentence": "But it also noted that interpretation costs for parliament could be reduced to 8,900 euros per day if only three languages were used.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "A 2006 report by Alexander Stubb MEP highlighted that by only using English, French and German costs could be reduced from \u20ac118,000 per day to \u20ac8,900 per day.",
+    "reason": "The passage directly attributes a specific finding (cost reduction figures) to the cited report. This falls under the 'full' scope as the citation is expected to prove these stated facts and figures.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specification of the three languages as English, French, and German, and the parenthetical listing of Romanian, Bulgarian, and Croatian as not yet included, are absent from the source and must be cited or removed.",
+    "rewrite_suggestion": "A 2006 report by Alexander Stubb MEP noted that interpretation costs could be reduced from \u20ac118,000 per day (for 21 languages) to \u20ac8,900 per day if only three languages were used.",
+    "proofs": [
+     "So a year ago the 30-something parliamentarian \u2013 whose website (offered in five languages) features him doing push-ups in a T-shirt and jeans \u2013 set out to investigate how the Strasbourg, France-based lawmaking body could cut down on costs.",
+     "His final, toned-down report \u2013 passed unanimously last week by Parliament \u2013 took pains to emphasize the importance of multilingualism as a form of cultural diversity, a value Stubb readily supports.",
+     "But it also noted that interpretation costs for parliament could be reduced to 8,900 euros per day if only three languages were used.",
+     "With 21 official languages, the right of Europe's representatives to debate the finer points of horticultural gems \u2013 or anything else \u2013 in their mother tongue can cost EU taxpayers as much as 118,000 euros per day."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions a reduction to 8,900 euros if three languages are used, but omits the reporter (Stubb), the starting cost, the year, and the specific languages. More critically, the claim includes two components not found anywhere in the source: the three languages are named as English, French, and German, and a parenthetical states that Romanian, Bulgarian, and Croatian were not yet included. Since these substantive components cannot be proven from the source at all, the claim requires author revision\u2014either adding a citation for those details or rewriting to match what the source actually says."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Following the play-off final financial problems began to emerge with Xia struggling to move money out of China to maintain basic football operations.",
+   "markers": [
+    "historyofastonvillafc196"
+   ],
+   "paper_ids": [
+    "100679aefcf9a85ff0856d419dbbfad6b3bab7e8"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8632,
+   "evidence": {
+    "paper_id": "100679aefcf9a85ff0856d419dbbfad6b3bab7e8",
+    "source_title": "historyofastonvillafc196",
+    "supported": true,
+    "sentence": "There is no suggestion that Xia is struggling financially.",
+    "page": 1,
+    "snippet": "There is no suggestion that Xia is",
+    "cosine": 0.8632,
+    "reason": "The passage states that the owner is alleged to be struggling with cash-flow issues in China which restricts money leaving the country, directly supporting the claim that financial problems emerged with the owner struggling to move money out of China.",
+    "window": "Dr Tony Xia, the owner and chairman, is alleged to be struggling with cash-flow issues in China, which restricts the distribution of money leaving the country. There is no suggestion that Xia is struggling financially. Xia told Villa insiders on Monday that the club is not for sale, yet Steve Bruce's failure to beat Fulham in the Championship play-off final was always likely to have severe ramifications."
+   },
+   "evidences": [
+    {
+     "paper_id": "100679aefcf9a85ff0856d419dbbfad6b3bab7e8",
+     "source_title": "historyofastonvillafc196",
+     "supported": true,
+     "sentence": "There is no suggestion that Xia is struggling financially.",
+     "page": 1,
+     "snippet": "There is no suggestion that Xia is",
+     "cosine": 0.8632,
+     "reason": "The passage states that the owner is alleged to be struggling with cash-flow issues in China which restricts money leaving the country, directly supporting the claim that financial problems emerged with the owner struggling to move money out of China.",
+     "window": "Dr Tony Xia, the owner and chairman, is alleged to be struggling with cash-flow issues in China, which restricts the distribution of money leaving the country. There is no suggestion that Xia is struggling financially. Xia told Villa insiders on Monday that the club is not for sale, yet Steve Bruce's failure to beat Fulham in the Championship play-off final was always likely to have severe ramifications."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the owner is alleged to be struggling with cash-flow issues in China which restricts money leaving the country, directly supporting the claim that financial problems emerged with the owner struggling to move money out of China.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Xia struggling to move money out of China",
+      "paper_id": "100679aefcf9a85ff0856d419dbbfad6b3bab7e8",
+      "source_title": "historyofastonvillafc196",
+      "sentence": "Dr Tony Xia, the owner and chairman, is alleged to be struggling with cash-flow issues in China, which restricts the distribution of money leaving the country.",
+      "page": 1,
+      "snippet": "Dr Tony Xia, the owner and chairman,"
+     },
+     {
+      "component": "financial problems began to emerge",
+      "paper_id": "100679aefcf9a85ff0856d419dbbfad6b3bab7e8",
+      "source_title": "historyofastonvillafc196",
+      "sentence": "On Tuesday night it emerged that former Chelsea executive Trevor Birch, who has also worked at Everton and Derby, is now assisting Villa in a bid to help ease their financial worries.",
+      "page": 1,
+      "snippet": "On Tuesday night it emerged that former"
+     }
+    ],
+    "uncovered": [
+     "to maintain basic football operations"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "100679aefcf9a85ff0856d419dbbfad6b3bab7e8",
+      "source_title": "historyofastonvillafc196",
+      "text": "Dr Tony Xia, the owner and chairman, is alleged to be struggling with cash-flow issues in China, which restricts the distribution of money leaving the country. There is no suggestion that Xia is struggling financially. Xia told Villa insiders on Monday that the club is not for sale, yet Steve Bruce's failure to beat Fulham in the Championship play-off final was always likely to have severe ramifications. Xia held crisis talks with Wyness on Tuesday morning and opted to suspend the former Everton chief executive with immediate effect. Chief executive Keith Wyness has been suspended Credit: Wyness was recruited by Xia when he completed his \u00a376m takeover in 2016, but is the first casualty of the play-off final defeat. His departure is not linked to the unpaid tax bill. On Tuesday night it emerged that former Chelsea executive Trevor Birch, who has also worked at Everton and Derby, is now assisting Villa in a bid to help ease their financial worries.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage states there is no suggestion that Xia is struggling financially, which contradicts the claim that financial problems began to emerge with Xia struggling to move money.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the purpose 'to maintain basic football operations' is attributed to the source but not stated; the source does not specify that the money moving out of China was intended for basic football operations.",
+    "rewrite_suggestion": "Following the play-off final, financial problems began to emerge, with Xia allegedly struggling with cash-flow issues in China that restrict the distribution of money leaving the country.",
+    "proofs": [
+     "Steve Bruce's failure to beat Fulham in the Championship play-off final was always likely to have severe ramifications.",
+     "Aston Villa have been plunged into turmoil after being hit with a \u00a34.2m tax bill by HMRC, while the Championship club have also suspended chief executive Keith Wyness.",
+     "Dr Tony Xia, the owner and chairman, is alleged to be struggling with cash-flow issues in China, which restricts the distribution of money leaving the country."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "There is no suggestion that Xia is struggling financially.",
+     "why": "The claim states that Xia is struggling to move money out of China, which is a financial struggle, but the source explicitly says there is no suggestion that Xia is struggling financially, creating a direct contradiction."
+    },
+    "why": "The claimed purpose 'to maintain basic football operations' is not found in the source text, making it an unsourced attribution that the author must either support with a new citation or remove. Other components (timing, emergence of financial problems, and Xia's cash-flow issues) are provable from the source but not all are covered by the shown sentences, and one shown sentence directly contradicts the claim's implication of financial struggle. The dominant problem is the missing purpose, so the author needs to rewrite the claim or add a citation."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "In May 2018, he was named in Tite\u2019s final 23-man squad for the 2018 FIFA World Cup in Russia.",
+   "markers": [
+    "gabrieljesus"
+   ],
+   "paper_ids": [
+    "487e2bddb76a2066780db175ea87ff34a17c8999"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "487e2bddb76a2066780db175ea87ff34a17c8999",
+    "source_title": "gabrieljesus",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Manchester City quartet Ederson, Danilo, Fernandinho and Gabriel Jesus are among the Premier League-based players named in the squad.",
+    "page": 1,
+    "snippet": "Manchester City quartet Ederson, Danilo, Fernandinho and",
+    "reason": "The passage does not mention the specific date 'May 2018' or the coach's name 'Tite'.",
+    "votes": "2-0",
+    "window": "Manchester City quartet Ederson, Danilo, Fernandinho and Gabriel Jesus are among the Premier League-based players named in the squad. Brazil have named injured Paris St-Germain forward Neymar in their 23-man squad for the World Cup in Russia. They are joined by Liverpool's Roberto Firmino and Chelsea's Willian. Neymar, 26, had an operation on a fractured metatarsal in March and the Brazil team doctor said he would be out of action for three months."
+   },
+   "evidences": [
+    {
+     "paper_id": "487e2bddb76a2066780db175ea87ff34a17c8999",
+     "source_title": "gabrieljesus",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Manchester City quartet Ederson, Danilo, Fernandinho and Gabriel Jesus are among the Premier League-based players named in the squad.",
+     "page": 1,
+     "snippet": "Manchester City quartet Ederson, Danilo, Fernandinho and",
+     "reason": "The passage does not mention the specific date 'May 2018' or the coach's name 'Tite'.",
+     "votes": "2-0",
+     "window": "Manchester City quartet Ederson, Danilo, Fernandinho and Gabriel Jesus are among the Premier League-based players named in the squad. Brazil have named injured Paris St-Germain forward Neymar in their 23-man squad for the World Cup in Russia. They are joined by Liverpool's Roberto Firmino and Chelsea's Willian. Neymar, 26, had an operation on a fractured metatarsal in March and the Brazil team doctor said he would be out of action for three months."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the specific date 'May 2018' or the coach's name 'Tite'.",
+   "component_check": {
+    "found": [
+     "for the 2018 FIFA World Cup in Russia"
+    ],
+    "missing": [
+     "In May 2018, he was named in Tite\u2019s final 23-man squad"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "for the 2018 FIFA World Cup in Russia",
+      "paper_id": "487e2bddb76a2066780db175ea87ff34a17c8999",
+      "source_title": "gabrieljesus",
+      "sentence": "Brazil have named injured Paris St-Germain forward Neymar in their 23-man squad for the World Cup in Russia.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific fact (Gabriel Jesus being named in the 2018 FIFA World Cup squad) and the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes the squad to 'Tite\u2019s', but the cited source does not mention Tite at all\u2014it refers only to 'Brazil's 23-man squad'.",
+    "rewrite_suggestion": "In May 2018, he was named in Brazil's 23-man squad for the 2018 FIFA World Cup in Russia.",
+    "proofs": [
+     "14 May 2018 From the section World Cup",
+     "Manchester City quartet Ederson, Danilo, Fernandinho and Gabriel Jesus are among the Premier League-based players named in the squad.",
+     "Forward: Neymar (PSG), Taison (Shakhtar Donetsk), Gabriel Jesus (Manchester City), Roberto Firmino (Liverpool)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms Gabriel Jesus was among the players named, but it lacks the date ('May 2018') and the attribution to 'Tite\u2019s' squad. Moreover, the source text does not contain the name 'Tite' at all\u2014it consistently refers to 'Brazil's squad'. Therefore, the author must either add a citation that names Tite as the coach or rewrite the claim to omit that unverified attribution."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "On February 22, 2018, Bell Media sold international rights to the format to Sony Pictures Television; the company began to sell the first season of the Canadian version, and develop a British version through its production house Electric Ray.",
+   "markers": [
+    "thelaunch"
+   ],
+   "paper_ids": [
+    "db2e49882f118b0499fd258e86884f2491a94c89"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+    "source_title": "thelaunch",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada.",
+    "page": 1,
+    "snippet": "Variety Intelligence Platform February 22, 2018 2:29AM",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada. SPT will sell the finished Canadian version and the remake rights, with its London-based production company Electric Ray assigned to working up a U.K. version."
+   },
+   "evidences": [
+    {
+     "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+     "source_title": "thelaunch",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada.",
+     "page": 1,
+     "snippet": "Variety Intelligence Platform February 22, 2018 2:29AM",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada. SPT will sell the finished Canadian version and the remake rights, with its London-based production company Electric Ray assigned to working up a U.K. version."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Bell Media sold international rights to the format on February 22, 2018",
+      "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+      "source_title": "thelaunch",
+      "sentence": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform February 22, 2018 2:29AM"
+     },
+     {
+      "component": "Sony Pictures Television began to sell the first season of the Canadian version",
+      "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+      "source_title": "thelaunch",
+      "sentence": "SPT will sell the finished Canadian version and the remake rights, with its London-based production company Electric Ray assigned to working up a U.K. version.",
+      "page": 1,
+      "snippet": "SPT will sell the finished Canadian version"
+     },
+     {
+      "component": "Sony Pictures Television developed a British version through its production house Electric Ray",
+      "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+      "source_title": "thelaunch",
+      "sentence": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform February 22, 2018 2:29AM"
+     },
+     {
+      "component": "Sony Pictures Television developed a British version through its production house Electric Ray",
+      "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+      "source_title": "thelaunch",
+      "sentence": "SPT will sell the finished Canadian version and the remake rights, with its London-based production company Electric Ray assigned to working up a U.K. version.",
+      "page": 1,
+      "snippet": "SPT will sell the finished Canadian version"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+      "source_title": "thelaunch",
+      "text": "Variety Intelligence Platform February 22, 2018 2:29AM PT # Sony Prepares 'The Launch' for International Take Off CREDIT: SPT Sony Pictures Television has scooped the international rights to \"The Launch\" and is prepping a U.K. and other local versions of the singing format, which has fared well in Canada. Season one has just wrapped on free-TV network CTV. SPT will sell the finished Canadian version and the remake rights, with its London-based production company Electric Ray assigned to working up a U.K. version.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "England won the game by scoring 74 points, and Australia came second with 69 points.",
+   "markers": [
+    "2019cricketworldcup"
+   ],
+   "paper_ids": [
+    "735e7299e408be383b4926091d507474af3ead96"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+    "source_title": "2019cricketworldcup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "### And we have reached the conclusion of the 60-second challenge event, with England moving to the top of the ladder with 74 points!",
+    "page": 1,
+    "snippet": "### And we have reached the conclusion",
+    "reason": "The passage states that England reached the top of the ladder with 74 points, and that Australia's score was also 74 points, not 69.",
+    "votes": "2-0",
+    "window": "### And we have reached the conclusion of the 60-second challenge event, with England moving to the top of the ladder with 74 points! That's Australia's score, and the defending world champions are also the leaders in the 60-second challenge at the moment. England pip arch-rivals Australia in this event, and perhaps Eoin Morgan and company will hope to keep the party going once the main event starts Tomorrow."
+   },
+   "evidences": [
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "sentence": "### And we have reached the conclusion of the 60-second challenge event, with England moving to the top of the ladder with 74 points!",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "sentence": "69! That's Australia's score, and the defending world champions are also the leaders in the 60-second challenge at the moment.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "sentence": "England pip arch-rivals Australia in this event, and perhaps Eoin Morgan and company will hope to keep the party going once the main event starts Tomorrow.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states England scored 74 points and Australia scored 69 points in the 60-second challenge event. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "England scored 74 points",
+     "Australia scored 69 points"
+    ],
+    "missing": [
+     "England won the game",
+     "Australia came second"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "England scored 74 points",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "### And we have reached the conclusion of the 60-second challenge event, with England moving to the top of the ladder with 74 points!",
+      "page": 1
+     },
+     {
+      "component": "Australia scored 69 points",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "That's Australia's score, and the defending world champions are also the leaders in the 60-second challenge at the moment.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "### And we have reached the conclusion of the 60-second challenge event, with England moving to the top of the ladder with 74 points!",
+     "69! That's Australia's score, and the defending world champions are also the leaders in the 60-second challenge at the moment.",
+     "England pip arch-rivals Australia in this event, and perhaps Eoin Morgan and company will hope to keep the party going once the main event starts Tomorrow."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves England scored 74 and moved to the top, but does not show Australia's score of 69 or that Australia came second. Both pieces of information are present in the source text, so the tool should have included the sentence stating Australia's score and the context that England pip Australia, making this a case of insufficient/incorrect evidence shown.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t8",
+   "text": "He also has three siblings: Wade, Shane and Bailey.",
+   "markers": [
+    "beaubennett"
+   ],
+   "paper_ids": [
+    "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9052,
+   "evidence": {
+    "paper_id": "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22",
+    "source_title": "beaubennett",
+    "supported": true,
+    "sentence": "He and his three siblings \u2014 Wade, 26; Shane, 22; and Bailey, 18 \u2014 have all played hockey, but not before they promised their parents, Kirk and Louanna, that they would also take up a more artistic hobby.",
+    "page": 1,
+    "snippet": "He and his three siblings \u2014 Wade,",
+    "cosine": 0.9052,
+    "reason": "The passage explicitly lists the three siblings of the subject as Wade, Shane, and Bailey.",
+    "window": "Bennett grew up in Gardena, Calif., south of Los Angeles. He and his three siblings \u2014 Wade, 26; Shane, 22; and Bailey, 18 \u2014 have all played hockey, but not before they promised their parents, Kirk and Louanna, that they would also take up a more artistic hobby. \"We could tell they were athletes,\" Kirk Bennett said recently, \"but we wanted them to be well rounded.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22",
+     "source_title": "beaubennett",
+     "supported": true,
+     "sentence": "He and his three siblings \u2014 Wade, 26; Shane, 22; and Bailey, 18 \u2014 have all played hockey, but not before they promised their parents, Kirk and Louanna, that they would also take up a more artistic hobby.",
+     "page": 1,
+     "snippet": "He and his three siblings \u2014 Wade,",
+     "cosine": 0.9052,
+     "reason": "The passage explicitly lists the three siblings of the subject as Wade, Shane, and Bailey.",
+     "window": "Bennett grew up in Gardena, Calif., south of Los Angeles. He and his three siblings \u2014 Wade, 26; Shane, 22; and Bailey, 18 \u2014 have all played hockey, but not before they promised their parents, Kirk and Louanna, that they would also take up a more artistic hobby. \"We could tell they were athletes,\" Kirk Bennett said recently, \"but we wanted them to be well rounded.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly lists the three siblings of the subject as Wade, Shane, and Bailey.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He has three siblings: Wade, Shane and Bailey",
+      "paper_id": "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22",
+      "source_title": "beaubennett",
+      "sentence": "He and his three siblings \u2014 Wade, 26; Shane, 22; and Bailey, 18 \u2014 have all played hockey, but not before they promised their parents, Kirk and Louanna, that they would also take up a more artistic hobby.",
+      "page": 1,
+      "snippet": "He and his three siblings \u2014 Wade,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22",
+      "source_title": "beaubennett",
+      "text": "He and his three siblings \u2014 Wade, 26; Shane, 22; and Bailey, 18 \u2014 have all played hockey, but not before they promised their parents, Kirk and Louanna, that they would also take up a more artistic hobby.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t9",
+   "text": "As of 2015 the average high temperatures have risen raging from the low to mid 90's.",
+   "markers": [
+    "huntingtonparkcalifornia"
+   ],
+   "paper_ids": [
+    "2d5adf6f848a953f16b4d71decb58f413152eb96"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2d5adf6f848a953f16b4d71decb58f413152eb96",
+    "source_title": "huntingtonparkcalifornia",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "By the 2050s, New York City could see up to seven heat waves per year, with maximum temperatures at or above 90 degrees Fahrenheit for about 60 days \u2014 twice what the city currently experiences.",
+    "page": 1,
+    "snippet": "By the 2050s, New York City could",
+    "reason": "The passage does not mention average high temperatures as of 2015 or provide temperature ranges in the low to mid 90s.",
+    "votes": "2-0",
+    "window": "By the 2050s, New York City could see up to seven heat waves per year, with maximum temperatures at or above 90 degrees Fahrenheit for about 60 days \u2014 twice what the city currently experiences."
+   },
+   "evidences": [
+    {
+     "paper_id": "2d5adf6f848a953f16b4d71decb58f413152eb96",
+     "source_title": "huntingtonparkcalifornia",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "By the 2050s, New York City could see up to seven heat waves per year, with maximum temperatures at or above 90 degrees Fahrenheit for about 60 days \u2014 twice what the city currently experiences.",
+     "page": 1,
+     "snippet": "By the 2050s, New York City could",
+     "reason": "The passage does not mention average high temperatures as of 2015 or provide temperature ranges in the low to mid 90s.",
+     "votes": "2-0",
+     "window": "By the 2050s, New York City could see up to seven heat waves per year, with maximum temperatures at or above 90 degrees Fahrenheit for about 60 days \u2014 twice what the city currently experiences."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention average high temperatures as of 2015 or provide temperature ranges in the low to mid 90s.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "As of 2015 the average high temperatures have risen raging from the low to mid 90's.",
+    "reason": "The passage asserts a specific fact (average high temperatures) and provides a date, which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific year 2015 and the range 'low to mid 90's' for average high temperatures",
+    "rewrite_suggestion": "Since the early 1900s, average temperatures have risen in every US state.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific date (2015) and a precise temperature range (low to mid 90's) that are not present in the source text. The source discusses average temperature increases since 1900 and future projections, but never states that average high temperatures were in that range by 2015. Therefore, the author must either provide a citation for those unsupported details or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "However, after recording a new album with the band, Nelson left in July 2009 and was replaced for future tour dates by Bush.",
+   "markers": [
+    "listofanthraxmembers"
+   ],
+   "paper_ids": [
+    "b426f05dffb75363f78de25e5c18618a9bce0d32"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+    "source_title": "listofanthraxmembers",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"ANTHRAX is thrilled to announce that they will play the August 1 Sonisphere festival in Knebworth, England, with their good friend John Bush [ANTHRAX's singer from 1992 to 2005] joining them for a very special one-off performance.",
+    "page": 1,
+    "snippet": "\"ANTHRAX is thrilled to announce that they",
+    "reason": "the passage does not state that Nelson left in July 2009 or that Bush replaced him for future tour dates.",
+    "votes": "2-0",
+    "window": "\"ANTHRAX is thrilled to announce that they will play the August 1 Sonisphere festival in Knebworth, England, with their good friend John Bush [ANTHRAX's singer from 1992 to 2005] joining them for a very special one-off performance. \"The members of ANTHRAX have confirmed the departure of vocalist Dan Nelson."
+   },
+   "evidences": [
+    {
+     "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+     "source_title": "listofanthraxmembers",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"ANTHRAX is thrilled to announce that they will play the August 1 Sonisphere festival in Knebworth, England, with their good friend John Bush [ANTHRAX's singer from 1992 to 2005] joining them for a very special one-off performance.",
+     "page": 1,
+     "snippet": "\"ANTHRAX is thrilled to announce that they",
+     "reason": "the passage does not state that Nelson left in July 2009 or that Bush replaced him for future tour dates.",
+     "votes": "2-0",
+     "window": "\"ANTHRAX is thrilled to announce that they will play the August 1 Sonisphere festival in Knebworth, England, with their good friend John Bush [ANTHRAX's singer from 1992 to 2005] joining them for a very special one-off performance. \"The members of ANTHRAX have confirmed the departure of vocalist Dan Nelson."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that Nelson left in July 2009 or that Bush replaced him for future tour dates.",
+   "component_check": {
+    "found": [
+     "Nelson left in July 2009"
+    ],
+    "missing": [
+     "Nelson recorded a new album with the band",
+     "Bush replaced Nelson for future tour dates"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Nelson left in July 2009",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "(meta data) TITLE: Anthrax Splits With Singer Dan Nelson; John Bush To Fill In For U.K.'S Sonisphere - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # ANTHRAX Splits With Singer DAN NELSON; JOHN BUSH To Fill In For U.K.'s SONISPHERE July 21, 2009 ANTHRAX's manager, Izvor Zivkovic of Split Media, has released the following statement to BLABBERMOUTH.NET: \"As announced last week, thrash legends ANTHRAX regretfully cancelled the first three dates on the second leg of their European tour due to new vocalist Dan Nelson's unexpected illness.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Nelson left in July 2009 and was replaced for future tour dates by Bush.",
+    "reason": "The passage asserts a specific factual event (Nelson's departure and replacement) that the cited source is expected to prove. This falls under the default 'full' scope as it's a direct statement of fact attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "was replaced for future tour dates by John Bush",
+    "rewrite_suggestion": "However, after recording a new album with the band, Nelson left in July 2009, and John Bush filled in for a one-off performance at the Sonisphere festival.",
+    "proofs": [
+     "ANTHRAX Splits With Singer DAN NELSON; JOHN BUSH To Fill In For U.K.'s SONISPHERE July 21, 2009",
+     "The members of ANTHRAX have confirmed the departure of vocalist Dan Nelson.",
+     "It is not presently clear if Dan Nelson's tracks will be erased from the CD."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "ANTHRAX is thrilled to announce that they will play the August 1 Sonisphere festival in Knebworth, England, with their good friend John Bush [ANTHRAX's singer from 1992 to 2005] joining them for a very special one-off performance.",
+     "why": "The claim states Bush replaced Nelson for future tour dates, but the source explicitly says he was joining only for a one-off performance, contradicting the notion of ongoing replacement."
+    },
+    "why": "The shown sentence only mentions a one-off performance with John Bush and does not cover Nelson's departure, recording, or replacement. The source text supports Nelson leaving in July 2009 and that he recorded tracks on a new album, but it does not support that Bush replaced him for future tour dates\u2014only that Bush filled in for a single show. Therefore the author must either add a citation for the unsourced replacement claim or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Her Painting was influenced by the Buddhistischen Thangka Technik, according to her statement.",
+   "markers": [
+    "nominbold"
+   ],
+   "paper_ids": [
+    "f5b23c167bb8076b16be71816bea1285e522b2f5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9025,
+   "evidence": {
+    "paper_id": "f5b23c167bb8076b16be71816bea1285e522b2f5",
+    "source_title": "nominbold",
+    "supported": false,
+    "sentence": "Trained in the traditional Mongol Zurag painting style, Nomin has become well known for her work mixing Buddhist imagery, which she uses as motifs and symbols of past traditions, and modernism.",
+    "page": 1,
+    "snippet": "Trained in the traditional Mongol Zurag painting",
+    "cosine": 0.9025,
+    "reason": "The passage states the artist was trained in Mongol Zurag and mixes Buddhist imagery, but does not mention the Buddhistischen Thangka Technik or attribute this influence to her statement.",
+    "window": "(meta data) TITLE: Beautiful Humans | Nomin Bold (meta data) PUBLISHER: https://www.facebook.com/beautifulhumansmagazine ## 21 May Nomin Bold Posted at 20:22h in Art, Painter by Beautiful Humans ###### Photo by Baatarzorig # Nomin Bold Nomin Bold is a rising artist in Mongolia. Trained in the traditional Mongol Zurag painting style, Nomin has become well known for her work mixing Buddhist imagery, which she uses as motifs and symbols of past traditions, and modernism. Through her paintings, Nomin raises awareness on the cultural identity crisis and hopes to ignite a reflection on the importance of keeping tradition alive in the modern world."
+   },
+   "evidences": [
+    {
+     "paper_id": "f5b23c167bb8076b16be71816bea1285e522b2f5",
+     "source_title": "nominbold",
+     "supported": false,
+     "sentence": "Trained in the traditional Mongol Zurag painting style, Nomin has become well known for her work mixing Buddhist imagery, which she uses as motifs and symbols of past traditions, and modernism.",
+     "page": 1,
+     "snippet": "Trained in the traditional Mongol Zurag painting",
+     "cosine": 0.9025,
+     "reason": "The passage states the artist was trained in Mongol Zurag and mixes Buddhist imagery, but does not mention the Buddhistischen Thangka Technik or attribute this influence to her statement.",
+     "window": "(meta data) TITLE: Beautiful Humans | Nomin Bold (meta data) PUBLISHER: https://www.facebook.com/beautifulhumansmagazine ## 21 May Nomin Bold Posted at 20:22h in Art, Painter by Beautiful Humans ###### Photo by Baatarzorig # Nomin Bold Nomin Bold is a rising artist in Mongolia. Trained in the traditional Mongol Zurag painting style, Nomin has become well known for her work mixing Buddhist imagery, which she uses as motifs and symbols of past traditions, and modernism. Through her paintings, Nomin raises awareness on the cultural identity crisis and hopes to ignite a reflection on the importance of keeping tradition alive in the modern world."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Her Painting was influenced by the Buddhistischen Thangka Technik.",
+    "reason": "The passage directly attributes the influence of the Buddhistischen Thangka Technik to the artist, as stated by the artist. This is a factual claim that the citation is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that her painting was influenced by Buddhist thangka technique, and that she stated so, is not present in the source. The source does not contain any statement from Nomin Bold about her painting being influenced by Buddhist thangka techniques; instead, she notes that those techniques were impossible to recover.",
+    "rewrite_suggestion": "Nomin Bold stated that Buddhist thangka drawing techniques were impossible to recover after the 1921 Revolution, which affected the Mongol Zurag style.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Consequently, it was impossible to recover the Buddhist thangka drawing techniques and to reconsider and show interest in past history as well.",
+     "why": "This sentence directly states that Buddhist thangka drawing techniques were impossible to recover, which contradicts the claim that her painting was influenced by those techniques."
+    },
+    "why": "The claim asserts that Nomin Bold's painting was influenced by Buddhist thangka technique according to her statement, but the source does not contain any such statement. Instead, the source quotes her saying that it was impossible to recover those techniques, which conflicts with the claimed influence. The shown sentence only mentions Buddhist imagery in general, not thangka technique, and does not cover the core components of the claim. Therefore, the author must either provide a citation for the influence statement or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "Students are known to give speeches at Ivy Day to commemorate their time and work at the college.",
+   "markers": [
+    "ivydayunitedstates"
+   ],
+   "paper_ids": [
+    "c9c4095402fa673212d43f05baff93c732e94321"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c9c4095402fa673212d43f05baff93c732e94321",
+    "source_title": "ivydayunitedstates",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future.",
+    "page": 1,
+    "snippet": "This tradition, currently called Ivy Day, seems",
+    "reason": "The passage explicitly states that Ivy Day involves speeches and the planting of ivy by the graduating class to commemorate its time at the university.",
+    "votes": "2-0",
+    "window": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future. Renovations in McClelland Hall prevented the class of 1987 from celebrating its Hey Day on Junior Balcony, so the class placed its stone there to commemorate the renovation and also to link the class of 1987 to previous and subsequent Hey Days, just as the stone itself links the class to previous and subsequent Ivy Days. The vast majority of the men's stones include the date of Ivy Day and are generally vertical in orientation; the women's stones are virtually a horizontal and do not include the date of Ivy Day. Individually and collectively, the Ivy Day stones function as effective public art can: to foster a sense of place and common purpose by using a visual vocabulary of design, text, and placement Thus, each class remembers and is remembered in the greater context of the University of Pennsylvania. Unlike moribund traditions such as the Bowl Fight, the Ivy Day stone tradition has remained an active part of Penn because its original purpose is as valid for each graduating class as it was for the class of 1873 \"to leave some memorial to bear witness in the future to her devotion to the University.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "c9c4095402fa673212d43f05baff93c732e94321",
+     "source_title": "ivydayunitedstates",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future.",
+     "page": 1,
+     "snippet": "This tradition, currently called Ivy Day, seems",
+     "reason": "The passage explicitly states that Ivy Day involves speeches and the planting of ivy by the graduating class to commemorate its time at the university.",
+     "votes": "2-0",
+     "window": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future. Renovations in McClelland Hall prevented the class of 1987 from celebrating its Hey Day on Junior Balcony, so the class placed its stone there to commemorate the renovation and also to link the class of 1987 to previous and subsequent Hey Days, just as the stone itself links the class to previous and subsequent Ivy Days. The vast majority of the men's stones include the date of Ivy Day and are generally vertical in orientation; the women's stones are virtually a horizontal and do not include the date of Ivy Day. Individually and collectively, the Ivy Day stones function as effective public art can: to foster a sense of place and common purpose by using a visual vocabulary of design, text, and placement Thus, each class remembers and is remembered in the greater context of the University of Pennsylvania. Unlike moribund traditions such as the Bowl Fight, the Ivy Day stone tradition has remained an active part of Penn because its original purpose is as valid for each graduating class as it was for the class of 1873 \"to leave some memorial to bear witness in the future to her devotion to the University.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Ivy Day involves speeches and the planting of ivy by the graduating class to commemorate its time at the university.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Students give speeches at Ivy Day",
+      "paper_id": "c9c4095402fa673212d43f05baff93c732e94321",
+      "source_title": "ivydayunitedstates",
+      "sentence": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future.",
+      "page": 1,
+      "snippet": "This tradition, currently called Ivy Day, seems"
+     },
+     {
+      "component": "Ivy Day commemorates time and work at college",
+      "paper_id": "c9c4095402fa673212d43f05baff93c732e94321",
+      "source_title": "ivydayunitedstates",
+      "sentence": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future.",
+      "page": 1,
+      "snippet": "This tradition, currently called Ivy Day, seems"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c9c4095402fa673212d43f05baff93c732e94321",
+      "source_title": "ivydayunitedstates",
+      "text": "This tradition, currently called Ivy Day, seems to have started as a modest ceremony involving speeches and the planting of ivy by the graduating class to commemorate its time at the university Like many traditions, these ceremonies paid tribute to the past and to lessons learned, while also pointing toward the future.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "In December 2017, The Walt Disney Company agreed to a 52.4-billion-dollar deal to acquire 21st Century Fox, including the film rights for \"Percy Jackson & The Olympians\"; it's unknown if Disney (the owners of Disney Hyperion) will continue the series or reboot it.",
+   "markers": [
+    "percyjacksonfilmseries"
+   ],
+   "paper_ids": [
+    "f120787f7325a099d686c24fdb04e57eb469188e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f120787f7325a099d686c24fdb04e57eb469188e",
+    "source_title": "percyjacksonfilmseries",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "NEW YORK \u2014 The Walt Disney Company announced Thursday that it will acquire the majority of assets from rival 21st Century Fox, a megamerger that aims to reset the balance of power in an industry under siege from Silicon Valley.",
+    "page": 1,
+    "snippet": "NEW YORK \u2014 The Walt Disney Company",
+    "reason": "The passage does not mention the film rights for 'Percy Jackson & The Olympians' or whether Disney will continue the series or reboot it.",
+    "votes": "2-0",
+    "window": "NEW YORK \u2014 The Walt Disney Company announced Thursday that it will acquire the majority of assets from rival 21st Century Fox, a megamerger that aims to reset the balance of power in an industry under siege from Silicon Valley. The deal takes Murdoch out of much of the scripted television game and all of the film business, ending a Hollywood association that began more than three decades ago when Murdoch bought Twentieth Century Fox from industrialist Marvin Davis and crested as recently as 2014 when Fox led all studios by market share for the first time this century. Disney will pay $52.4 billion for Fox, which for its part will spin off Fox broadcast networks, the Fox News Channel and Fox Business Channel, the Fox studio lot in Los Angeles and several national sports channels, leaving them in the hands of 21st Century Fox chairman Rupert Murdoch and his family."
+   },
+   "evidences": [
+    {
+     "paper_id": "f120787f7325a099d686c24fdb04e57eb469188e",
+     "source_title": "percyjacksonfilmseries",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "NEW YORK \u2014 The Walt Disney Company announced Thursday that it will acquire the majority of assets from rival 21st Century Fox, a megamerger that aims to reset the balance of power in an industry under siege from Silicon Valley.",
+     "page": 1,
+     "snippet": "NEW YORK \u2014 The Walt Disney Company",
+     "reason": "The passage does not mention the film rights for 'Percy Jackson & The Olympians' or whether Disney will continue the series or reboot it.",
+     "votes": "2-0",
+     "window": "NEW YORK \u2014 The Walt Disney Company announced Thursday that it will acquire the majority of assets from rival 21st Century Fox, a megamerger that aims to reset the balance of power in an industry under siege from Silicon Valley. The deal takes Murdoch out of much of the scripted television game and all of the film business, ending a Hollywood association that began more than three decades ago when Murdoch bought Twentieth Century Fox from industrialist Marvin Davis and crested as recently as 2014 when Fox led all studios by market share for the first time this century. Disney will pay $52.4 billion for Fox, which for its part will spin off Fox broadcast networks, the Fox News Channel and Fox Business Channel, the Fox studio lot in Los Angeles and several national sports channels, leaving them in the hands of 21st Century Fox chairman Rupert Murdoch and his family."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the film rights for 'Percy Jackson & The Olympians' or whether Disney will continue the series or reboot it.",
+   "subject_guard": {
+    "subject": "Percy Jackson",
+    "missing_from": [
+     "f120787f7325a099d686c24fdb04e57eb469188e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Walt Disney Company agreed to a 52.4-billion-dollar deal to acquire 21st Century Fox, including the film rights for \"Percy Jackson & The Olympians\".",
+    "reason": "The passage directly states a fact (the acquisition deal and its value) attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the deal included film rights for 'Percy Jackson & The Olympians' and that it's unknown if Disney will continue or reboot the series is not supported by the cited source; the source does not mention Percy Jackson or Disney Hyperion.",
+    "rewrite_suggestion": "In December 2017, The Walt Disney Company agreed to a $52.4 billion deal to acquire 21st Century Fox, as reported by The Washington Post.",
+    "proofs": [
+     "NEW YORK \u2014 The Walt Disney Company announced Thursday that it will acquire the majority of assets from rival 21st Century Fox, a megamerger that aims to reset the balance of power in an industry under siege from Silicon Valley.",
+     "Disney will pay $52.4 billion for Fox, which for its part will spin off Fox broadcast networks, the Fox News Channel and Fox Business Channel, the Fox studio lot in Los Angeles and several national sports channels, leaving them in the hands of 21st Century Fox chairman Rupert Murdoch and his family.",
+     "By Steven Zeitchik Steven Zeitchik Reporter covering the business of entertainment in the U.S. and beyond December 14, 2017"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the announcement of the acquisition but omits the price and date, which are present elsewhere in the source. More critically, the claim includes a substantive component about the film rights for 'Percy Jackson & The Olympians' and subsequent uncertainty about Disney's plans, neither of which appears anywhere in the cited Washington Post article. Therefore the author must either add a citation that supports those components or rewrite the claim to omit them."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "The Commercial is one of at least 5,000 pubs which were built or rebuilt by breweries in England during the inter-war years.",
+   "markers": [
+    "thecommercialhernehill"
+   ],
+   "paper_ids": [
+    "857d12abc39769fb6b7579cd4c360b05beb0edc9"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "857d12abc39769fb6b7579cd4c360b05beb0edc9",
+    "source_title": "thecommercialhernehill",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Image copyright Historic England At least 5,000 pubs were built in England during the inter-war years.",
+    "page": 1,
+    "snippet": "Image copyright Historic England At least 5,000",
+    "reason": "the passage does not state that 'The Commercial' was one of these pubs.",
+    "votes": "2-0",
+    "window": "Image copyright Historic England At least 5,000 pubs were built in England during the inter-war years. Breweries were eager to widen their customer bases, and cut the perceived links that many establishments had with drunkenness and debauchery - a hangover from the Victorian era. Image copyright Mitchell and Butlers/Historic England The Mitchells and Butlers Brewery - which was built in 1927 - was at the forefront of the improved pub movement in the Midlands. Image copyright Historic England The 1920s and 30s saw the growth of the \"improved\" pub movement."
+   },
+   "evidences": [
+    {
+     "paper_id": "857d12abc39769fb6b7579cd4c360b05beb0edc9",
+     "source_title": "thecommercialhernehill",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Image copyright Historic England At least 5,000 pubs were built in England during the inter-war years.",
+     "page": 1,
+     "snippet": "Image copyright Historic England At least 5,000",
+     "reason": "the passage does not state that 'The Commercial' was one of these pubs.",
+     "votes": "2-0",
+     "window": "Image copyright Historic England At least 5,000 pubs were built in England during the inter-war years. Breweries were eager to widen their customer bases, and cut the perceived links that many establishments had with drunkenness and debauchery - a hangover from the Victorian era. Image copyright Mitchell and Butlers/Historic England The Mitchells and Butlers Brewery - which was built in 1927 - was at the forefront of the improved pub movement in the Midlands. Image copyright Historic England The 1920s and 30s saw the growth of the \"improved\" pub movement."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that 'The Commercial' was one of these pubs.",
+   "subject_guard": {
+    "subject": "commercial",
+    "missing_from": [
+     "857d12abc39769fb6b7579cd4c360b05beb0edc9"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Commercial is one of at least 5,000 pubs which were built or rebuilt by breweries in England during the inter-war years.",
+    "reason": "The passage asserts a specific fact about the number of pubs built by breweries during a certain period, directly attributing this information to the cited source. This falls under the 'full' scope as the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The identification of 'The Commercial' as one of the 5,000 inter-war pubs, and the assertion that those pubs were built or rebuilt by breweries (the source only states they were built, and does not specify that all were by breweries)",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "At least 5,000 pubs were built in England during the inter-war years."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only supports the number, location, and time period of the claim. However, the claim also states that 'The Commercial' is one of these pubs and that they were 'built or rebuilt by breweries'. The source text never mentions 'The Commercial', and while it discusses breweries building some pubs, it does not state that all 5,000 were built or rebuilt by breweries. Therefore, two substantive components are unprovable from the source, requiring the author to either add a citation for those subclaims or rewrite the claim down to what the source supports."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "Raised Roman Catholic, he claims to have been experiencing spiritual and paranormal events since the age of four.",
+   "markers": [
+    "chrisfleming"
+   ],
+   "paper_ids": [
+    "e183fd6c2e5f221ce9568e036dac5ff0bbba7691"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8664,
+   "evidence": {
+    "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+    "source_title": "chrisfleming",
+    "supported": true,
+    "sentence": "He has also felt the presence of the divine.",
+    "page": 1,
+    "snippet": "He has also felt the presence of",
+    "cosine": 0.8664,
+    "reason": "The passage states the subject had encounters with various spiritual and paranormal entities since childhood, which supports the claim of experiencing spiritual and paranormal events since the age of four.",
+    "window": "As a child, he had encounters with ghosts, unexplained entities, angels and a variety of dark forces. He has also felt the presence of the divine. Chris explains his mediumship this way."
+   },
+   "evidences": [
+    {
+     "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+     "source_title": "chrisfleming",
+     "supported": true,
+     "sentence": "He has also felt the presence of the divine.",
+     "page": 1,
+     "snippet": "He has also felt the presence of",
+     "cosine": 0.8664,
+     "reason": "The passage states the subject had encounters with various spiritual and paranormal entities since childhood, which supports the claim of experiencing spiritual and paranormal events since the age of four.",
+     "window": "As a child, he had encounters with ghosts, unexplained entities, angels and a variety of dark forces. He has also felt the presence of the divine. Chris explains his mediumship this way."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the subject had encounters with various spiritual and paranormal entities since childhood, which supports the claim of experiencing spiritual and paranormal events since the age of four.",
+   "covering": {
+    "covered": [
+     {
+      "component": "claims to have been experiencing spiritual and paranormal events since the age of four",
+      "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+      "source_title": "chrisfleming",
+      "sentence": "As a child, he had encounters with ghosts, unexplained entities, angels and a variety of dark forces.",
+      "page": 1,
+      "snippet": "As a child, he had encounters with"
+     }
+    ],
+    "uncovered": [
+     "Raised Roman Catholic"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+      "source_title": "chrisfleming",
+      "text": "As a child, he had encounters with ghosts, unexplained entities, angels and a variety of dark forces.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not state that he was raised Roman Catholic or that he has been experiencing spiritual and paranormal events since the age of four.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "he was raised Roman Catholic",
+      "found_in": [],
+      "searched": 0
+     },
+     {
+      "component": "he has been experiencing spiritual and paranormal events since the age of four",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Raised Roman Catholic, and the specific onset age of four",
+    "rewrite_suggestion": "He claims to have been experiencing spiritual and paranormal events since childhood.",
+    "proofs": [
+     "As a child, he had encounters with ghosts, unexplained entities, angels and a variety of dark forces.",
+     "He has also felt the presence of the divine."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source does not state that Chris Fleming was raised Roman Catholic, nor does it mention that his spiritual/paranormal experiences began at age four. It only says he had such experiences as a child. Since these components are not provable from the cited source, the author must either add a separate citation for them or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "In March 2009, VentureBeat signed a partnership agreement with IDG to produce DEMO Conference, a conference for startups to announce their launches and raise funding from venture capitalists and angel investors.",
+   "markers": [
+    "venturebeat"
+   ],
+   "paper_ids": [
+    "bd5be954b953322309fffaa289463b8c27ed53da"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bd5be954b953322309fffaa289463b8c27ed53da",
+    "source_title": "venturebeat",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: DEMO Gets Desperate: Shipley Out, Marshall In \u2013 TechCrunch (meta data) AUTHOR: Erick Schonfeld (meta data) PUBLISHER: https://www.facebook.com/techcrunch # DEMO Gets Desperate: Shipley Out, Marshall In Erick Schonfeld 11 years Things are changing at DEMO, the startup and product-launch conference owned by IDG that competes with our own TechCrunch50 conference.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: DEMO Gets Desperate: Shipley",
+    "reason": "The passage does not state that VentureBeat signed a partnership agreement with IDG in March 2009 to produce DEMO Conference.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: DEMO Gets Desperate: Shipley Out, Marshall In \u2013 TechCrunch (meta data) AUTHOR: Erick Schonfeld (meta data) PUBLISHER: https://www.facebook.com/techcrunch # DEMO Gets Desperate: Shipley Out, Marshall In Erick Schonfeld 11 years Things are changing at DEMO, the startup and product-launch conference owned by IDG that competes with our own TechCrunch50 conference. After 13 years, conference organizer Chris Shipley will make way for Matt Marshall, editor of VentureBeat. The two will co-produce DEMO as Marshall gets up to speed, then he will take over. And VentureBeat could use the extra cash that the deal will bring it."
+   },
+   "evidences": [
+    {
+     "paper_id": "bd5be954b953322309fffaa289463b8c27ed53da",
+     "source_title": "venturebeat",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: DEMO Gets Desperate: Shipley Out, Marshall In \u2013 TechCrunch (meta data) AUTHOR: Erick Schonfeld (meta data) PUBLISHER: https://www.facebook.com/techcrunch # DEMO Gets Desperate: Shipley Out, Marshall In Erick Schonfeld 11 years Things are changing at DEMO, the startup and product-launch conference owned by IDG that competes with our own TechCrunch50 conference.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: DEMO Gets Desperate: Shipley",
+     "reason": "The passage does not state that VentureBeat signed a partnership agreement with IDG in March 2009 to produce DEMO Conference.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: DEMO Gets Desperate: Shipley Out, Marshall In \u2013 TechCrunch (meta data) AUTHOR: Erick Schonfeld (meta data) PUBLISHER: https://www.facebook.com/techcrunch # DEMO Gets Desperate: Shipley Out, Marshall In Erick Schonfeld 11 years Things are changing at DEMO, the startup and product-launch conference owned by IDG that competes with our own TechCrunch50 conference. After 13 years, conference organizer Chris Shipley will make way for Matt Marshall, editor of VentureBeat. The two will co-produce DEMO as Marshall gets up to speed, then he will take over. And VentureBeat could use the extra cash that the deal will bring it."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that VentureBeat signed a partnership agreement with IDG in March 2009 to produce DEMO Conference.",
+   "component_check": {
+    "found": [
+     "DEMO Conference is a conference for startups to announce their launches."
+    ],
+    "missing": [
+     "In March 2009, VentureBeat signed a partnership agreement with IDG.",
+     "The partnership was to produce DEMO Conference.",
+     "DEMO Conference is a conference for startups to raise funding from venture capitalists and angel investors."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "DEMO Conference is a conference for startups to announce their launches.",
+      "paper_id": "bd5be954b953322309fffaa289463b8c27ed53da",
+      "source_title": "venturebeat",
+      "sentence": "(meta data) TITLE: DEMO Gets Desperate: Shipley Out, Marshall In \u2013 TechCrunch (meta data) AUTHOR: Erick Schonfeld (meta data) PUBLISHER: https://www.facebook.com/techcrunch # DEMO Gets Desperate: Shipley Out, Marshall In Erick Schonfeld 11 years Things are changing at DEMO, the startup and product-launch conference owned by IDG that competes with our own TechCrunch50 conference.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "VentureBeat signed a partnership agreement with IDG to produce DEMO Conference in March 2009.",
+    "reason": "The passage directly states a fact (a partnership agreement and its date) that is attributed to VentureBeat, implying the cited source is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific date 'March 2009' and the claim that startups raise funding from venture capitalists and angel investors at the conference",
+    "rewrite_suggestion": "In 2009, VentureBeat entered into a partnership with IDG to co-produce DEMO Conference, a startup product-launch conference.",
+    "proofs": [
+     "After 13 years, conference organizer Chris Shipley will make way for Matt Marshall, editor of VentureBeat.",
+     "The two will co-produce DEMO as Marshall gets up to speed, then he will take over.",
+     "VentureBeat will share in the profits of the conference.",
+     "Things are changing at DEMO, the startup and product-launch conference owned by IDG that competes with our own TechCrunch50 conference."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the specific date 'March 2009' and the assertion that startups raise funding from venture capitalists and angel investors at the conference. The provided source text does not mention any date, nor does it refer to fundraising or angel investors. Therefore, these components are unsupported by the source. The author must either add a citation for those subclaims or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Yemeni refugee female and children are extremely susceptible to smuggling and human trafficking.",
+   "markers": [
+    "yemenicivilwar2015presen"
+   ],
+   "paper_ids": [
+    "408523dbfcb2ac0461fbbb9c76e89f329b213d05"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+    "source_title": "yemenicivilwar2015presen",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Documented activity of highly organized trafficking rings in the region reveals the targeting of refugees, particularly female refugees, said Al Jazeera.",
+    "page": 1,
+    "snippet": "Documented activity of highly organized trafficking rings",
+    "reason": "The passage explicitly states that trafficking rings target refugees, particularly female refugees, which directly supports the claim that Yemeni refugee females and children are susceptible to smuggling and human trafficking.",
+    "votes": "2-0",
+    "window": "Documented activity of highly organized trafficking rings in the region reveals the targeting of refugees, particularly female refugees, said Al Jazeera."
+   },
+   "evidences": [
+    {
+     "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+     "source_title": "yemenicivilwar2015presen",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Documented activity of highly organized trafficking rings in the region reveals the targeting of refugees, particularly female refugees, said Al Jazeera.",
+     "page": 1,
+     "snippet": "Documented activity of highly organized trafficking rings",
+     "reason": "The passage explicitly states that trafficking rings target refugees, particularly female refugees, which directly supports the claim that Yemeni refugee females and children are susceptible to smuggling and human trafficking.",
+     "votes": "2-0",
+     "window": "Documented activity of highly organized trafficking rings in the region reveals the targeting of refugees, particularly female refugees, said Al Jazeera."
+    }
+   ],
+   "votes": null,
+   "reason": "'yemeni' is never mentioned in the cited source's text \u2014 topically similar passages cannot prove a claim about an entity the source does not name",
+   "subject_guard": {
+    "subject": "yemeni",
+    "missing_from": [
+     "408523dbfcb2ac0461fbbb9c76e89f329b213d05"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Yemeni refugee female and children are extremely susceptible to smuggling and human trafficking.",
+    "reason": "The passage directly asserts a fact about the susceptibility of Yemeni refugee females and children to smuggling and human trafficking, which the cited source is expected to support. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes 'Yemeni' refugees (i.e., from Yemen) and 'children', neither of which appear in the source; the source only discusses refugees arriving in Yemen and specifically female refugees.",
+    "rewrite_suggestion": "Refugees arriving in Yemen, especially female refugees, are susceptible to smuggling and human trafficking.",
+    "proofs": [
+     "Documented activity of highly organized trafficking rings in the region reveals the targeting of refugees, particularly female refugees, said Al Jazeera."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that Yemeni refugee women and children are extremely susceptible, but the cited source only discusses the targeting of refugees (arriving in Yemen) and specifically female refugees. There is no mention of children or of refugees who are Yemeni nationals. Therefore, the author must either provide additional citations for those components or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Nihilistic wanted to show that the brutal killings are considered natural by Conan and not executed out of a thirst for blood.",
+   "markers": [
+    "conan2007videogame"
+   ],
+   "paper_ids": [
+    "2469954577b7ef6e5595725a6a3b634e1d62b81b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+    "source_title": "conan2007videogame",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "RH: Violence is part of it, but Conan's attitude toward that violence is key as well.",
+    "page": 1,
+    "snippet": "RH: Violence is part of it, but",
+    "reason": "The passage does not mention Nihilistic or their intentions, nor does it state that Conan considers the killings natural or not executed out of a thirst for blood.",
+    "votes": "2-0",
+    "window": "RH: Violence is part of it, but Conan's attitude toward that violence is key as well. In Conan's world, he isn't the cause of the violence; it's all the pesky people who keep trying to tell him what to do, throw him in jail, or infringe on his Crom-given freedoms that caused the violence by putting themselves on a collision course with his sword. We want the game to convey that Conan worldview. Conan isn't a deep, brooding hero, but he's always in the moment."
+   },
+   "evidences": [
+    {
+     "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+     "source_title": "conan2007videogame",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "RH: Violence is part of it, but Conan's attitude toward that violence is key as well.",
+     "page": 1,
+     "snippet": "RH: Violence is part of it, but",
+     "reason": "The passage does not mention Nihilistic or their intentions, nor does it state that Conan considers the killings natural or not executed out of a thirst for blood.",
+     "votes": "2-0",
+     "window": "RH: Violence is part of it, but Conan's attitude toward that violence is key as well. In Conan's world, he isn't the cause of the violence; it's all the pesky people who keep trying to tell him what to do, throw him in jail, or infringe on his Crom-given freedoms that caused the violence by putting themselves on a collision course with his sword. We want the game to convey that Conan worldview. Conan isn't a deep, brooding hero, but he's always in the moment."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Nihilistic or their intentions, nor does it state that Conan considers the killings natural or not executed out of a thirst for blood.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The brutal killings are considered natural by Conan and not executed out of a thirst for blood.",
+    "reason": "The passage directly attributes a statement about Conan's motivations to the cited source, implying the source is expected to prove this assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "In Conan's world, he isn't the cause of the violence; it's all the pesky people who keep trying to tell him what to do, throw him in jail, or infringe on his Crom-given freedoms that caused the violence by putting themselves on a collision course with his sword.",
+     "We want the game to convey that Conan worldview."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions that Conan's attitude toward violence is key, but it does not prove that Nihilistic wanted to show the killings as natural and not bloodthirsty. However, the source text contains explicit statements from Robert Huebner describing Conan's violence as reactive and justified by others' actions, which supports every component of the claim. The tool failed to show these relevant sentences, so the error belongs to the tool.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t19",
+   "text": "In 2016, their first-round pick was stripped as punishment for the Deflategate incident.",
+   "markers": [
+    "listofnewenglandpatriots"
+   ],
+   "paper_ids": [
+    "f0bf36fbec4dcc6a0d5a7b4090eadf04a7d97997"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f0bf36fbec4dcc6a0d5a7b4090eadf04a7d97997",
+    "source_title": "listofnewenglandpatriots",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "But after Wells absolved the organization and in particular coach Bill Belichick of any wrongdoing, the league still took first- and fourth-round draft picks from the Patriots and hit them with the biggest team fine in NFL history, $1 million.",
+    "page": 1,
+    "snippet": "But after Wells absolved the organization and",
+    "reason": "The passage does not mention the year 2016 or the Deflategate incident.",
+    "votes": "2-0",
+    "window": "But after Wells absolved the organization and in particular coach Bill Belichick of any wrongdoing, the league still took first- and fourth-round draft picks from the Patriots and hit them with the biggest team fine in NFL history, $1 million. In 2007 the team and Belichick were sanctioned a total of $750,000 and docked a first-round draft choice for illegally videotaping coaching signals on the opposing sidelines."
+   },
+   "evidences": [
+    {
+     "paper_id": "f0bf36fbec4dcc6a0d5a7b4090eadf04a7d97997",
+     "source_title": "listofnewenglandpatriots",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "But after Wells absolved the organization and in particular coach Bill Belichick of any wrongdoing, the league still took first- and fourth-round draft picks from the Patriots and hit them with the biggest team fine in NFL history, $1 million.",
+     "page": 1,
+     "snippet": "But after Wells absolved the organization and",
+     "reason": "The passage does not mention the year 2016 or the Deflategate incident.",
+     "votes": "2-0",
+     "window": "But after Wells absolved the organization and in particular coach Bill Belichick of any wrongdoing, the league still took first- and fourth-round draft picks from the Patriots and hit them with the biggest team fine in NFL history, $1 million. In 2007 the team and Belichick were sanctioned a total of $750,000 and docked a first-round draft choice for illegally videotaping coaching signals on the opposing sidelines."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the year 2016 or the Deflategate incident.",
+   "component_check": {
+    "found": [
+     "as punishment for the Deflategate incident"
+    ],
+    "missing": [
+     "In 2016, their first-round pick was stripped"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "as punishment for the Deflategate incident",
+      "paper_id": "f0bf36fbec4dcc6a0d5a7b4090eadf04a7d97997",
+      "source_title": "listofnewenglandpatriots",
+      "sentence": "(meta data) TITLE: Deflategate penalty: NFL suspends Brady, fines Pats, takes draft picks | SI.com # The NFL Drops the Hammer, and Sends a Message Simon Bruty/Sports Illustrated/The MMQB The severity of the NFL's Deflategate punishment for Tom Brady and the Patriots was one of the harshest rebukes ever to an alltime great player, and a signal to the other 31 teams that it does not play favorites.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2016, their first-round pick was stripped as punishment for the Deflategate incident.",
+    "reason": "The passage asserts a specific fact (the stripping of a draft pick) and attributes it to the cited source implicitly by its placement. This falls under the default 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific year '2016' is not mentioned in the source; the source only states that draft picks were taken without specifying the year.",
+    "rewrite_suggestion": "Their first-round pick was stripped as punishment for the Deflategate incident.",
+    "proofs": [
+     "But after Wells absolved the organization and in particular coach Bill Belichick of any wrongdoing, the league still took first- and fourth-round draft picks from the Patriots and hit them with the biggest team fine in NFL history, $1 million."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific year '2016' that is not mentioned anywhere in the provided source text. The source confirms that the Patriots lost first- and fourth-round draft picks as punishment for Deflategate, but does not specify which year's picks. Therefore the author must either provide a citation for the year or rewrite the claim to remove the unsupported temporal component."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "However, in 2012, Shaddix started rapping again in the album \"The Connection\".",
+   "markers": [
+    "jacobyshaddix"
+   ],
+   "paper_ids": [
+    "78646a5b3511aaed8a1d042474a5c101928fa61a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.927,
+   "evidence": {
+    "paper_id": "78646a5b3511aaed8a1d042474a5c101928fa61a",
+    "source_title": "jacobyshaddix",
+    "supported": true,
+    "sentence": "Shaddix said that the follow-up to 2012's \"The Connection\" is \"probably the most positive record we've written.",
+    "page": 1,
+    "snippet": "Shaddix said that the follow-up to 2012's",
+    "cosine": 0.927,
+    "reason": "The passage explicitly mentions the album \"The Connection\" released in 2012, which aligns with the claim that Shaddix started rapping again in that year with that album.",
+    "window": "(Face Everything And Rise)\", which will come out in early 2015. Shaddix said that the follow-up to 2012's \"The Connection\" is \"probably the most positive record we've written. The element is from the darkness to the light.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "78646a5b3511aaed8a1d042474a5c101928fa61a",
+     "source_title": "jacobyshaddix",
+     "supported": true,
+     "sentence": "Shaddix said that the follow-up to 2012's \"The Connection\" is \"probably the most positive record we've written.",
+     "page": 1,
+     "snippet": "Shaddix said that the follow-up to 2012's",
+     "cosine": 0.927,
+     "reason": "The passage explicitly mentions the album \"The Connection\" released in 2012, which aligns with the claim that Shaddix started rapping again in that year with that album.",
+     "window": "(Face Everything And Rise)\", which will come out in early 2015. Shaddix said that the follow-up to 2012's \"The Connection\" is \"probably the most positive record we've written. The element is from the darkness to the light.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly mentions the album \"The Connection\" released in 2012, which aligns with the claim that Shaddix started rapping again in that year with that album.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Shaddix released the album \"The Connection\" in 2012",
+      "paper_id": "78646a5b3511aaed8a1d042474a5c101928fa61a",
+      "source_title": "jacobyshaddix",
+      "sentence": "Shaddix said that the follow-up to 2012's \"The Connection\" is \"probably the most positive record we've written.",
+      "page": 1,
+      "snippet": "Shaddix said that the follow-up to 2012's",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Shaddix started rapping again in 2012"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "78646a5b3511aaed8a1d042474a5c101928fa61a",
+      "source_title": "jacobyshaddix",
+      "text": "Shaddix said that the follow-up to 2012's \"The Connection\" is \"probably the most positive record we've written.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 that Shaddix started rapping again in 2012 on the album 'The Connection' \u2014 is not supported by the cited source. The source does not mention rapping on 'The Connection' and instead indicates that Shaddix brought back rapping on the later album 'F.E.A.R.'",
+    "rewrite_suggestion": "However, Shaddix stated that on the 2015 album 'F.E.A.R.' he brought back some rapping, a departure from the previous album 'The Connection'.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "I bring back some of the rapping in some of the songs, which is freakin' killer.",
+     "why": "This sentence says Shaddix brings back rapping on the album 'F.E.A.R.' (the follow-up to 'The Connection'), implying that rapping was absent before 'F.E.A.R.', contradicting the claim that he started rapping again on 'The Connection' in 2012."
+    },
+    "why": "The claim asserts that Shaddix resumed rapping on the 2012 album 'The Connection', but the cited source contains no statement to that effect. Instead, it discusses bringing back rapping on the 2015 album 'F.E.A.R.', which directly conflicts with the claim. Since none of the claim's components are provable from the source, the author must either add a citation that supports the claim or rewrite it to match the source."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "She argued that Aaliyah's second album \"One in a Million\" was \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced\", referring to collaborators Timbaland and Missy Elliott and that the sound, which \"really stood out\" at its time, was being replicated.",
+   "markers": [
+    "aaliyah"
+   ],
+   "paper_ids": [
+    "fec5e91a16bb5555937903bb7ebf9f7bb763752e"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9059,
+   "evidence": {
+    "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+    "source_title": "aaliyah",
+    "supported": true,
+    "sentence": "Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced.",
+    "page": 1,
+    "snippet": "Timbaland's and Missy Elliott's writing and production",
+    "cosine": 0.9059,
+    "reason": "The passage directly quotes the claim's assertion about the album being 'very much ahead of its time, with the bass and electro kind of R&B sounds that they produced' and that the sound 'really stood out' at the time, with similar elements now being heard in current music.",
+    "window": "In the '90s, \"there weren't many artists using the kind of soft vocals the ways she was using it, and now you see a lot of artists doing that and finding success,\" says Billboard.com associate editor Erika Ramirez. Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced. Now you hear a lot of that, like Auto-Tune and electronic elements in R&B and rap, but at the time, it really stood out.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+     "source_title": "aaliyah",
+     "supported": true,
+     "sentence": "Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced.",
+     "page": 1,
+     "snippet": "Timbaland's and Missy Elliott's writing and production",
+     "cosine": 0.9059,
+     "reason": "The passage directly quotes the claim's assertion about the album being 'very much ahead of its time, with the bass and electro kind of R&B sounds that they produced' and that the sound 'really stood out' at the time, with similar elements now being heard in current music.",
+     "window": "In the '90s, \"there weren't many artists using the kind of soft vocals the ways she was using it, and now you see a lot of artists doing that and finding success,\" says Billboard.com associate editor Erika Ramirez. Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced. Now you hear a lot of that, like Auto-Tune and electronic elements in R&B and rap, but at the time, it really stood out.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes the claim's assertion about the album being 'very much ahead of its time, with the bass and electro kind of R&B sounds that they produced' and that the sound 'really stood out' at the time, with similar elements now being heard in current music.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Aaliyah's second album \"One in a Million\" was \"very much ahead of its time\"",
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "sentence": "Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced.",
+      "page": 1,
+      "snippet": "Timbaland's and Missy Elliott's writing and production"
+     },
+     {
+      "component": "the album featured \"bass and electro kind of R&B sounds\"",
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "sentence": "Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced.",
+      "page": 1,
+      "snippet": "Timbaland's and Missy Elliott's writing and production"
+     },
+     {
+      "component": "these sounds were produced by collaborators Timbaland and Missy Elliott",
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "sentence": "Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced.",
+      "page": 1,
+      "snippet": "Timbaland's and Missy Elliott's writing and production"
+     },
+     {
+      "component": "the sound \"really stood out\" at its time",
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "sentence": "Now you hear a lot of that, like Auto-Tune and electronic elements in R&B and rap, but at the time, it really stood out.\"",
+      "page": 1,
+      "snippet": "Now you hear a lot of that,"
+     },
+     {
+      "component": "the sound was being replicated",
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "sentence": "In the '90s, \"there weren't many artists using the kind of soft vocals the ways she was using it, and now you see a lot of artists doing that and finding success,\" says Billboard.com associate editor Erika Ramirez.",
+      "page": 1,
+      "snippet": "In the '90s, \"there weren't many artists"
+     },
+     {
+      "component": "the sound was being replicated",
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "sentence": "Although fans may tune into Lifetime's controversial biopic Aaliyah: The Princess of R&B (premiering Saturday, 8 p.m. ET/PT) to get their fix of the much-mythologized singer, all they really need to do is turn on the radio, where the breathy vocals and laid-back beats of up-and-comers Tinashe and Jhen\u00e9 Aiko call to mind the icon.",
+      "page": 1,
+      "snippet": "Although fans may tune into Lifetime's controversial"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+      "source_title": "aaliyah",
+      "text": "Although fans may tune into Lifetime's controversial biopic Aaliyah: The Princess of R&B (premiering Saturday, 8 p.m. ET/PT) to get their fix of the much-mythologized singer, all they really need to do is turn on the radio, where the breathy vocals and laid-back beats of up-and-comers Tinashe and Jhen\u00e9 Aiko call to mind the icon. In the '90s, \"there weren't many artists using the kind of soft vocals the ways she was using it, and now you see a lot of artists doing that and finding success,\" says Billboard.com associate editor Erika Ramirez. Timbaland's and Missy Elliott's writing and production on Aaliyah's second album, 1996's One in a Million, was also \"very much ahead of its time, with the bass and electro kind of R&B sounds that they produced. Now you hear a lot of that, like Auto-Tune and electronic elements in R&B and rap, but at the time, it really stood out.\"",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t22",
+   "text": "Following the film's premiere, Executive Producer Ted Dintersmith took the film on a 50-state tour, screening the film for learning communities across the country.",
+   "markers": [
+    "mostlikelytosucceedfilm"
+   ],
+   "paper_ids": [
+    "170919a86f97f73f2dc872c641f21a8dd4cf887a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8185,
+   "evidence": {
+    "paper_id": "170919a86f97f73f2dc872c641f21a8dd4cf887a",
+    "source_title": "mostlikelytosucceedfilm",
+    "supported": true,
+    "sentence": "By Ted Dintersmith Once in a blue moon, our nation focuses a modest amount of attention on our schools, and their purpose.",
+    "page": 1,
+    "snippet": "By Ted Dintersmith Once in a blue",
+    "cosine": 0.8185,
+    "reason": "The passage states that Ted Dintersmith is conducting a 50-state tour to encourage communities to re-think the purpose of school, which directly supports the claim about his tour and its purpose.",
+    "window": "And he is conducting a 50-state tour to encourage communities all over the country to re-think the purpose of school. By Ted Dintersmith Once in a blue moon, our nation focuses a modest amount of attention on our schools, and their purpose. Last year, William Deresiewicz' excellently titled book \"Excellent Sheep\" triggered a flurry of discussion, as he argued that education should help students in \"building a soul\" after \"teaching kids to think.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "170919a86f97f73f2dc872c641f21a8dd4cf887a",
+     "source_title": "mostlikelytosucceedfilm",
+     "supported": true,
+     "sentence": "By Ted Dintersmith Once in a blue moon, our nation focuses a modest amount of attention on our schools, and their purpose.",
+     "page": 1,
+     "snippet": "By Ted Dintersmith Once in a blue",
+     "cosine": 0.8185,
+     "reason": "The passage states that Ted Dintersmith is conducting a 50-state tour to encourage communities to re-think the purpose of school, which directly supports the claim about his tour and its purpose.",
+     "window": "And he is conducting a 50-state tour to encourage communities all over the country to re-think the purpose of school. By Ted Dintersmith Once in a blue moon, our nation focuses a modest amount of attention on our schools, and their purpose. Last year, William Deresiewicz' excellently titled book \"Excellent Sheep\" triggered a flurry of discussion, as he argued that education should help students in \"building a soul\" after \"teaching kids to think.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Ted Dintersmith is conducting a 50-state tour to encourage communities to re-think the purpose of school, which directly supports the claim about his tour and its purpose.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Executive Producer Ted Dintersmith took the film on a 50-state tour",
+      "paper_id": "170919a86f97f73f2dc872c641f21a8dd4cf887a",
+      "source_title": "mostlikelytosucceedfilm",
+      "sentence": "And he is conducting a 50-state tour to encourage communities all over the country to re-think the purpose of school.",
+      "page": 1,
+      "snippet": "And he is conducting a 50-state tour"
+     },
+     {
+      "component": "screening the film for learning communities across the country",
+      "paper_id": "170919a86f97f73f2dc872c641f21a8dd4cf887a",
+      "source_title": "mostlikelytosucceedfilm",
+      "sentence": "And he is conducting a 50-state tour to encourage communities all over the country to re-think the purpose of school.",
+      "page": 1,
+      "snippet": "And he is conducting a 50-state tour"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "170919a86f97f73f2dc872c641f21a8dd4cf887a",
+      "source_title": "mostlikelytosucceedfilm",
+      "text": "And he is conducting a 50-state tour to encourage communities all over the country to re-think the purpose of school.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t23",
+   "text": "Weeks later, Assange was indicted on 18 charges under the 1917 wartime Espionage Act.",
+   "markers": [
+    "danielellsberg"
+   ],
+   "paper_ids": [
+    "f6f5ad4f445ee2a510f04e9e71ad1ca495f22ed3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f6f5ad4f445ee2a510f04e9e71ad1ca495f22ed3",
+    "source_title": "danielellsberg",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The U.S. Justice Department on Thursday indicted Assange on 17 new counts under the Espionage Act.",
+    "page": 1,
+    "snippet": "The U.S. Justice Department on Thursday indicted",
+    "reason": "the passage states Assange was indicted on 17 charges, not 18.",
+    "votes": "2-0",
+    "window": "The U.S. Justice Department on Thursday indicted Assange on 17 new counts under the Espionage Act. The U.S. Department of Justice on Thursday indicted WikiLeaks founder Julian Assange on 17 new charges under the Espionage Act for his alleged role in unlawfully obtaining and disclosing classified national defense materials from ex-Army intelligence analyst Chelsea Manning \"Today the government charged Julian Assange under the Espionage Act for encouraging sources to provide him truthful information and for publishing that information,\" Pollack said."
+   },
+   "evidences": [
+    {
+     "paper_id": "f6f5ad4f445ee2a510f04e9e71ad1ca495f22ed3",
+     "source_title": "danielellsberg",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The U.S. Justice Department on Thursday indicted Assange on 17 new counts under the Espionage Act.",
+     "page": 1,
+     "snippet": "The U.S. Justice Department on Thursday indicted",
+     "reason": "the passage states Assange was indicted on 17 charges, not 18.",
+     "votes": "2-0",
+     "window": "The U.S. Justice Department on Thursday indicted Assange on 17 new counts under the Espionage Act. The U.S. Department of Justice on Thursday indicted WikiLeaks founder Julian Assange on 17 new charges under the Espionage Act for his alleged role in unlawfully obtaining and disclosing classified national defense materials from ex-Army intelligence analyst Chelsea Manning \"Today the government charged Julian Assange under the Espionage Act for encouraging sources to provide him truthful information and for publishing that information,\" Pollack said."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage states Assange was indicted on 17 charges, not 18.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual claim about Assange being indicted on specific charges under a particular act. This is a direct statement of fact that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that the indictment was for 18 charges (the source says 17 new charges) and that the Espionage Act is specifically called '1917 wartime' (source only says 'Espionage Act')",
+    "rewrite_suggestion": "Weeks later, Assange was indicted on 17 new charges under the Espionage Act.",
+    "proofs": [
+     "The U.S. Department of Justice on Thursday indicted WikiLeaks founder Julian Assange on 17 new charges under the Espionage Act for his alleged role in unlawfully obtaining and disclosing classified national defense materials from ex-Army intelligence analyst Chelsea Manning",
+     "The decision came after Assange was arrested in April at the Ecuadorian Embassy in London and charged by the U.S. government with one count of conspiracy to commit computer intrusion in relation to a 2010 WikiLeaks mass release of classified American military reports about the Afghanistan and Iraq wars."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The U.S. Justice Department on Thursday indicted Assange on 17 new counts under the Espionage Act.",
+     "why": "The source states 17 new counts, while the claim asserts 18 charges, a direct numerical contradiction."
+    },
+    "why": "The shown sentence only covers the indictment under the Espionage Act but gives 17 counts, not 18, and omits the '1917 wartime' descriptor and the timing. The source text does contain support for the timing and the event, but the number and the precise statute name are not provable; the number is actually contradicted. Therefore the author must either add a citation for the unsupported subclaims or rewrite the claim to match what the source says."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "On October 30, 2017, WSDZ changed their format from conservative talk (which moved to recently purchased sister station KXFN) to urban gospel, branded as \"Praise 95.1 & 1260\".",
+   "markers": [
+    "wsdz"
+   ],
+   "paper_ids": [
+    "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041",
+    "source_title": "wsdz",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\".",
+    "page": 1,
+    "snippet": "Conservative Talk \"1260 The Answer\" WSDZ Belleville",
+    "reason": "The passage does not state that the format change occurred on October 30, 2017, nor does it mention the specific branding \"Praise 95.1 & 1260\".",
+    "votes": "2-0",
+    "window": "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\". That move will clear the way for the launch of Gospel \"Praise 95.1\" on Monday, October 23 on WSDZ and 95.1 K236CS St. Louis. The station will be called Praise 95.1, \"The St. Louis Gospel Experience\" and will be heard on WSDZ 95.1 FM and 1260 AM. -Salem Media Group, Inc. (NASDAQ: SALM), announced today that it will launch a contemporary urban gospel radio station on Monday, October 23."
+   },
+   "evidences": [
+    {
+     "paper_id": "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041",
+     "source_title": "wsdz",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\".",
+     "page": 1,
+     "snippet": "Conservative Talk \"1260 The Answer\" WSDZ Belleville",
+     "reason": "The passage does not state that the format change occurred on October 30, 2017, nor does it mention the specific branding \"Praise 95.1 & 1260\".",
+     "votes": "2-0",
+     "window": "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\". That move will clear the way for the launch of Gospel \"Praise 95.1\" on Monday, October 23 on WSDZ and 95.1 K236CS St. Louis. The station will be called Praise 95.1, \"The St. Louis Gospel Experience\" and will be heard on WSDZ 95.1 FM and 1260 AM. -Salem Media Group, Inc. (NASDAQ: SALM), announced today that it will launch a contemporary urban gospel radio station on Monday, October 23."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the format change occurred on October 30, 2017, nor does it mention the specific branding \"Praise 95.1 & 1260\".",
+   "component_check": {
+    "found": [
+     "The format changed from conservative talk",
+     "Conservative talk moved to sister station KXFN"
+    ],
+    "missing": [
+     "On October 30, 2017, WSDZ changed their format",
+     "KXFN was recently purchased"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The format changed from conservative talk",
+      "paper_id": "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041",
+      "source_title": "wsdz",
+      "sentence": "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\".",
+      "page": 1
+     },
+     {
+      "component": "Conservative talk moved to sister station KXFN",
+      "paper_id": "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041",
+      "source_title": "wsdz",
+      "sentence": "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\".",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On October 30, 2017, WSDZ changed their format from conservative talk to urban gospel, branded as \"Praise 95.1 & 1260\".",
+    "reason": "The passage asserts a specific fact (a date and a format change) that is directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The date is incorrect (source says October 23, not 30) and 'recently purchased sister station' for KXFN is not mentioned in the source.",
+    "rewrite_suggestion": "On October 23, 2017, WSDZ changed format from conservative talk (which moved to KXFN) to urban gospel, branded as 'Praise 95.1 & 1260'.",
+    "proofs": [
+     "Conservative Talk \"1260 The Answer\" WSDZ Belleville IL has moved to 1380 KXFN/105.3 K287BY St. Louis replacing Health/Wellness Talk \"1380 The Pulse\".",
+     "That move will clear the way for the launch of Gospel \"Praise 95.1\" on Monday, October 23 on WSDZ and 95.1 K236CS St. Louis.",
+     "Salem Media Group, Inc. (NASDAQ: SALM), announced today that it will launch a contemporary urban gospel radio station on Monday, October 23.",
+     "The station will be called Praise 95.1, \"The St. Louis Gospel Experience\" and will be heard on WSDZ 95.1 FM and 1260 AM."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The new Praise 95.1 officially launches at Midnight, October 23, 2017.",
+     "why": "The claim states October 30, 2017, which directly contradicts the source's stated launch date of October 23, 2017."
+    },
+    "why": "The claim includes a specific date (October 30) that is not only unsupported but contradicted by the source, which says October 23. Additionally, the description 'recently purchased sister station' for KXFN has no basis in the provided source text. While the format change, brand name, and move to KXFN are provable from the source, the tool only showed one sentence that did not cover all components. Because at least one substantive component cannot be verified from the source at all, the author must fix the claim by correcting the date and removing the 'recently purchased' phrase, or by adding a separate citation for those details."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "Sharon gained custody of their minor child Ashley, who for a while was estranged from her father.",
+   "markers": [
+    "neilbush"
+   ],
+   "paper_ids": [
+    "163cf12a7de0e55095747dfe8d4359e77a9b94d7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "163cf12a7de0e55095747dfe8d4359e77a9b94d7",
+    "source_title": "neilbush",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "She was known for her charity work, her winning smile, and her devotion to her three children, Lauren, 19, Pierce, 17, and Ashley, 15.",
+    "page": 1,
+    "snippet": "She was known for her charity work,",
+    "reason": "The passage does not state that Sharon gained custody of Ashley or that Ashley was estranged from her father.",
+    "votes": "2-0",
+    "window": "She was known for her charity work, her winning smile, and her devotion to her three children, Lauren, 19, Pierce, 17, and Ashley, 15. In February 2004 she had attended a counseling session with Ashley and Neil that was supposed to help Ashley deal with the new family situation."
+   },
+   "evidences": [
+    {
+     "paper_id": "163cf12a7de0e55095747dfe8d4359e77a9b94d7",
+     "source_title": "neilbush",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "She was known for her charity work, her winning smile, and her devotion to her three children, Lauren, 19, Pierce, 17, and Ashley, 15.",
+     "page": 1,
+     "snippet": "She was known for her charity work,",
+     "reason": "The passage does not state that Sharon gained custody of Ashley or that Ashley was estranged from her father.",
+     "votes": "2-0",
+     "window": "She was known for her charity work, her winning smile, and her devotion to her three children, Lauren, 19, Pierce, 17, and Ashley, 15. In February 2004 she had attended a counseling session with Ashley and Neil that was supposed to help Ashley deal with the new family situation."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Sharon gained custody of Ashley or that Ashley was estranged from her father.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Sharon gained custody of their minor child Ashley, who for a while was estranged from her father.",
+    "reason": "The passage asserts facts about the custody arrangement and the child's relationship with her father, which the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Neither component\u2014Sharon gaining custody of Ashley nor Ashley being estranged from her father\u2014is stated or directly established in the provided source text.",
+    "rewrite_suggestion": "Sharon had a minor child Ashley, who was 15 at the time.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only lists Ashley as one of Sharon's children, with no mention of custody or estrangement. The source text does not contain any explicit statement that Sharon gained custody of Ashley or that Ashley was estranged from her father; child support payments imply but do not state custody, and the article describes ongoing interactions (including a counseling session) rather than estrangement. Hence the claim has components not provable from the cited source, requiring the author to add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "When constructed in 1882, the route was originally part of the D&RGW's transcontinental line to Salt Lake City and remained so until more direct routes were built in the early 20th Century.",
+   "markers": [
+    "cerrosummit"
+   ],
+   "paper_ids": [
+    "b252cdbe8ee9a875dd95e473a722233e1950a6de"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b252cdbe8ee9a875dd95e473a722233e1950a6de",
+    "source_title": "cerrosummit",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "West was an outlet to Montrose, Grand Junction and the lucrative route to Salt Lake City.",
+    "page": 1,
+    "snippet": "West was an outlet to Montrose, Grand",
+    "reason": "the passage does not state that the route was originally part of the D&RGW's transcontinental line to Salt Lake City or that it remained so until more direct routes were built in the early 20th Century.",
+    "votes": "2-0",
+    "window": "West was an outlet to Montrose, Grand Junction and the lucrative route to Salt Lake City. CONSTRUCTION THROUGH THE BLACK CANYONConstruction of the fifteen miles of Denver and Rio Grande Narrow Gauge Railroad through the Black Canyon of the Gunnison, from Sapinero to Cimarron continued throughout the winter of 1881-82. When the first Denver and Rio Grande train passed through the upper reaches of the Black Canyon of the Gunnison in August 1882, the passengers gazed with wonder at the steep walls above them, the cascading waterfalls and the towering granite point of Curecanti Needle. The final cost of building the narrow gauge railroad through the Black Canyon was $165,000 a mile."
+   },
+   "evidences": [
+    {
+     "paper_id": "b252cdbe8ee9a875dd95e473a722233e1950a6de",
+     "source_title": "cerrosummit",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "West was an outlet to Montrose, Grand Junction and the lucrative route to Salt Lake City.",
+     "page": 1,
+     "snippet": "West was an outlet to Montrose, Grand",
+     "reason": "the passage does not state that the route was originally part of the D&RGW's transcontinental line to Salt Lake City or that it remained so until more direct routes were built in the early 20th Century.",
+     "votes": "2-0",
+     "window": "West was an outlet to Montrose, Grand Junction and the lucrative route to Salt Lake City. CONSTRUCTION THROUGH THE BLACK CANYONConstruction of the fifteen miles of Denver and Rio Grande Narrow Gauge Railroad through the Black Canyon of the Gunnison, from Sapinero to Cimarron continued throughout the winter of 1881-82. When the first Denver and Rio Grande train passed through the upper reaches of the Black Canyon of the Gunnison in August 1882, the passengers gazed with wonder at the steep walls above them, the cascading waterfalls and the towering granite point of Curecanti Needle. The final cost of building the narrow gauge railroad through the Black Canyon was $165,000 a mile."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the route was originally part of the D&RGW's transcontinental line to Salt Lake City or that it remained so until more direct routes were built in the early 20th Century.",
+   "component_check": {
+    "found": [
+     "The route was constructed in 1882."
+    ],
+    "missing": [
+     "The route was originally part of the D&RGW's transcontinental line to Salt Lake City.",
+     "More direct routes were built in the early 20th Century.",
+     "The route remained part of the D&RGW's transcontinental line until more direct routes were built."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The route was constructed in 1882.",
+      "paper_id": "b252cdbe8ee9a875dd95e473a722233e1950a6de",
+      "source_title": "cerrosummit",
+      "sentence": "RIDING THROUGH THE BLACK CANYONThe editor of the Gunnison Review-Press newspaper was on that first train through the canyon in August 1882.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The route was constructed in 1882 and was originally part of the D&RGW's transcontinental line to Salt Lake City until more direct routes were built in the early 20th Century.",
+    "reason": "The passage asserts historical facts and dates about the route, which are directly attributed to the cited source. The attribution test is met as the passage presents information that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the route was part of a 'transcontinental line' to Salt Lake City (the source only mentions a 'lucrative route to Salt Lake City') and that it remained so until 'more direct routes were built in the early 20th Century' (the source discusses standard gauge routes leading to demise but does not specify that they were more direct to Salt Lake City or that the route ceased being part of such a line at that time).",
+    "rewrite_suggestion": "When constructed in 1882, the route provided an outlet to Montrose, Grand Junction, and Salt Lake City, and remained a key narrow gauge route until standard gauge lines diminished its importance beginning in the early 20th century.",
+    "proofs": [
+     "When the first Denver and Rio Grande train passed through the upper reaches of the Black Canyon of the Gunnison in August 1882, the passengers gazed with wonder at the steep walls above them, the cascading waterfalls and the towering granite point of Curecanti Needle.",
+     "West was an outlet to Montrose, Grand Junction and the lucrative route to Salt Lake City."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence mentions only a route to Salt Lake City, but the claim adds 'transcontinental line' and a specific timeline about 'more direct routes' in the early 20th century. The source does not contain the term 'transcontinental' or state that the route remained part of such a line until more direct routes were built; it discusses standard gauge routes causing a general decline. The construction date and the route to Salt Lake City are provable from the source, but the missing components are not, so the author must add a citation or rewrite the claim."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "f6f5ad4f445ee2a510f04e9e71ad1ca495f22ed3": {
+    "title": "danielellsberg",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "78646a5b3511aaed8a1d042474a5c101928fa61a": {
+    "title": "jacobyshaddix",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "85277e32ea30e23c760955ed4aff975f4af8ac61": {
+    "title": "europeanparliament",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f120787f7325a099d686c24fdb04e57eb469188e": {
+    "title": "percyjacksonfilmseries",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2d5adf6f848a953f16b4d71decb58f413152eb96": {
+    "title": "huntingtonparkcalifornia",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "408523dbfcb2ac0461fbbb9c76e89f329b213d05": {
+    "title": "yemenicivilwar2015presen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "487e2bddb76a2066780db175ea87ff34a17c8999": {
+    "title": "gabrieljesus",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f0bf36fbec4dcc6a0d5a7b4090eadf04a7d97997": {
+    "title": "listofnewenglandpatriots",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041": {
+    "title": "wsdz",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "100679aefcf9a85ff0856d419dbbfad6b3bab7e8": {
+    "title": "historyofastonvillafc196",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "db2e49882f118b0499fd258e86884f2491a94c89": {
+    "title": "thelaunch",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "f5b23c167bb8076b16be71816bea1285e522b2f5": {
+    "title": "nominbold",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1b7f7eeeb7df0be0c23c9aba9a45f19489ae5f93": {
+    "title": "rachelmaines",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22": {
+    "title": "beaubennett",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "2469954577b7ef6e5595725a6a3b634e1d62b81b": {
+    "title": "conan2007videogame",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0bb2b7cebe82ecd4badb21083ad6d987f94b9ba0": {
+    "title": "kenbehring",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fec5e91a16bb5555937903bb7ebf9f7bb763752e": {
+    "title": "aaliyah",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "857d12abc39769fb6b7579cd4c360b05beb0edc9": {
+    "title": "thecommercialhernehill",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b252cdbe8ee9a875dd95e473a722233e1950a6de": {
+    "title": "cerrosummit",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c9c4095402fa673212d43f05baff93c732e94321": {
+    "title": "ivydayunitedstates",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "170919a86f97f73f2dc872c641f21a8dd4cf887a": {
+    "title": "mostlikelytosucceedfilm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b426f05dffb75363f78de25e5c18618a9bce0d32": {
+    "title": "listofanthraxmembers",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bd5be954b953322309fffaa289463b8c27ed53da": {
+    "title": "venturebeat",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "735e7299e408be383b4926091d507474af3ead96": {
+    "title": "2019cricketworldcup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "163cf12a7de0e55095747dfe8d4359e77a9b94d7": {
+    "title": "neilbush",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e183fd6c2e5f221ce9568e036dac5ff0bbba7691": {
+    "title": "chrisfleming",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 9,
+   "unsupported": 17,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:57:45",
+  "marker_errors": [],
+  "processing_time_seconds": 490.8,
+  "source_hashes": {
+   "kenbehring.txt": "a2bba938acb0e49fd684ce616592d0de21957b32",
+   "rachelmaines.txt": "0e3a4e55e637d0686ebdef8607e38b17c6e1c163",
+   "europeanparliament.txt": "cb5e65eee72990c1df23976ffa52f24e25db12bf",
+   "historyofastonvillafc196.txt": "2474e4a9ea605e875f167d5cb58190dbbe6c2410",
+   "gabrieljesus.txt": "2c2df6a3f3840b796e36d72cee4c6b573d9df9d6",
+   "thelaunch.txt": "e5b21bcd72bb1151e5f56662ad20a9436139b4be",
+   "2019cricketworldcup.txt": "92b1b49ec330a1489ee3ce333d7e587ee73fb3db",
+   "beaubennett.txt": "9a638b4032cfccbc3e3347b11362552fa4ed72f3",
+   "huntingtonparkcalifornia.txt": "616ba1c027079e04ad614588126ee66283ccbb98",
+   "listofanthraxmembers.txt": "45df1c61d0dd3ddc57d4b29f590d074ee08caad3",
+   "nominbold.txt": "0f75b8948dedade9aa135f71ebed2318cbc23069",
+   "ivydayunitedstates.txt": "091dfe7a8d8910648a30074ebab27568d757c018",
+   "percyjacksonfilmseries.txt": "57c9708a2a0adfc487f0199385cabcf80ab705ce",
+   "thecommercialhernehill.txt": "793777bbf86fa1b9d07e3021d70ad6bad6fc4ae2",
+   "chrisfleming.txt": "0b9f594e2ea5b300449f4739211c0ec9941ed7c0",
+   "venturebeat.txt": "ed356d774c23102c8e0c3f477fb59e21e506d0a0",
+   "yemenicivilwar2015presen.txt": "8d0904056165e8a735d2c0e79cbf0ff00ccbd384",
+   "conan2007videogame.txt": "7ba3d26779db6bac7030ef2684105fa4e492ba02",
+   "listofnewenglandpatriots.txt": "e6792d81185a7ad3d23a2fc9ab061bc6dfc78ad6",
+   "jacobyshaddix.txt": "70f057aa0ec18c9885f70bbf05e8e67e8598ce0e",
+   "aaliyah.txt": "a3da74ca1bbe36f1521c95cea1813e703c731fe4",
+   "mostlikelytosucceedfilm.txt": "ff614b8e3b74a390e57cae817b9d724945cbb1fd",
+   "danielellsberg.txt": "57fb51448a136410a761bd789c6cd6bfdb7c8dad",
+   "wsdz.txt": "8779debd8a0d41f8946e6ccbf6d8259a9eba345f",
+   "neilbush.txt": "855ad651cbdc4b372ed9febc5de6e0bf52973749",
+   "cerrosummit.txt": "d82505aa5f361ac66fcba2a8bada7d8be741bfe5"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 397,
+    "prompt_tokens": 410789,
+    "completion_tokens": 19717,
+    "cost_usd": 0.048966
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 25,
+    "prompt_tokens": 79261,
+    "completion_tokens": 63753,
+    "cost_usd": 0.024276
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 18,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 21,
+   "actions": {
+    "add_citation_or_rewrite": 19,
+    "wrong_or_insufficient_evidence": 2
+   },
+   "proof_may_exist": [
+    "t7",
+    "t18"
+   ],
+   "conflicts": [
+    "t4",
+    "t10",
+    "t11",
+    "t20",
+    "t23",
+    "t24"
+   ],
+   "rescued": [
+    "t7"
+   ],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "0bb2b7cebe82ecd4badb21083ad6d987f94b9ba0",
+   "key": "kenbehring",
+   "filename": "kenbehring.txt",
+   "title": "kenbehring",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1b7f7eeeb7df0be0c23c9aba9a45f19489ae5f93",
+   "key": "rachelmaines",
+   "filename": "rachelmaines.txt",
+   "title": "rachelmaines",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "85277e32ea30e23c760955ed4aff975f4af8ac61",
+   "key": "europeanparliament",
+   "filename": "europeanparliament.txt",
+   "title": "europeanparliament",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "100679aefcf9a85ff0856d419dbbfad6b3bab7e8",
+   "key": "historyofastonvillafc196",
+   "filename": "historyofastonvillafc196.txt",
+   "title": "historyofastonvillafc196",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "487e2bddb76a2066780db175ea87ff34a17c8999",
+   "key": "gabrieljesus",
+   "filename": "gabrieljesus.txt",
+   "title": "gabrieljesus",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "db2e49882f118b0499fd258e86884f2491a94c89",
+   "key": "thelaunch",
+   "filename": "thelaunch.txt",
+   "title": "thelaunch",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+   "key": "2019cricketworldcup",
+   "filename": "2019cricketworldcup.txt",
+   "title": "2019cricketworldcup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6d4c1a6deebcb709d4dd2180ebf9b024e12bea22",
+   "key": "beaubennett",
+   "filename": "beaubennett.txt",
+   "title": "beaubennett",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2d5adf6f848a953f16b4d71decb58f413152eb96",
+   "key": "huntingtonparkcalifornia",
+   "filename": "huntingtonparkcalifornia.txt",
+   "title": "huntingtonparkcalifornia",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+   "key": "listofanthraxmembers",
+   "filename": "listofanthraxmembers.txt",
+   "title": "listofanthraxmembers",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f5b23c167bb8076b16be71816bea1285e522b2f5",
+   "key": "nominbold",
+   "filename": "nominbold.txt",
+   "title": "nominbold",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c9c4095402fa673212d43f05baff93c732e94321",
+   "key": "ivydayunitedstates",
+   "filename": "ivydayunitedstates.txt",
+   "title": "ivydayunitedstates",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f120787f7325a099d686c24fdb04e57eb469188e",
+   "key": "percyjacksonfilmseries",
+   "filename": "percyjacksonfilmseries.txt",
+   "title": "percyjacksonfilmseries",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "857d12abc39769fb6b7579cd4c360b05beb0edc9",
+   "key": "thecommercialhernehill",
+   "filename": "thecommercialhernehill.txt",
+   "title": "thecommercialhernehill",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+   "key": "chrisfleming",
+   "filename": "chrisfleming.txt",
+   "title": "chrisfleming",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bd5be954b953322309fffaa289463b8c27ed53da",
+   "key": "venturebeat",
+   "filename": "venturebeat.txt",
+   "title": "venturebeat",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+   "key": "yemenicivilwar2015presen",
+   "filename": "yemenicivilwar2015presen.txt",
+   "title": "yemenicivilwar2015presen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+   "key": "conan2007videogame",
+   "filename": "conan2007videogame.txt",
+   "title": "conan2007videogame",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f0bf36fbec4dcc6a0d5a7b4090eadf04a7d97997",
+   "key": "listofnewenglandpatriots",
+   "filename": "listofnewenglandpatriots.txt",
+   "title": "listofnewenglandpatriots",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "78646a5b3511aaed8a1d042474a5c101928fa61a",
+   "key": "jacobyshaddix",
+   "filename": "jacobyshaddix.txt",
+   "title": "jacobyshaddix",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fec5e91a16bb5555937903bb7ebf9f7bb763752e",
+   "key": "aaliyah",
+   "filename": "aaliyah.txt",
+   "title": "aaliyah",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "170919a86f97f73f2dc872c641f21a8dd4cf887a",
+   "key": "mostlikelytosucceedfilm",
+   "filename": "mostlikelytosucceedfilm.txt",
+   "title": "mostlikelytosucceedfilm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f6f5ad4f445ee2a510f04e9e71ad1ca495f22ed3",
+   "key": "danielellsberg",
+   "filename": "danielellsberg.txt",
+   "title": "danielellsberg",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "da8a5c21a5d629d9d2ec19c2c58bf9e891a76041",
+   "key": "wsdz",
+   "filename": "wsdz.txt",
+   "title": "wsdz",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "163cf12a7de0e55095747dfe8d4359e77a9b94d7",
+   "key": "neilbush",
+   "filename": "neilbush.txt",
+   "title": "neilbush",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b252cdbe8ee9a875dd95e473a722233e1950a6de",
+   "key": "cerrosummit",
+   "filename": "cerrosummit.txt",
+   "title": "cerrosummit",
+   "num_claims": 0
+  }
+ ]
+}

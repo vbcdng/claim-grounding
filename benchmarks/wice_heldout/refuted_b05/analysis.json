@@ -1,0 +1,2204 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train heldout batch 5 (refuted)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Bezos was a multi-billionaire who hung his clothes on a rack in his Amazon headquarters office and drove a 1996 Honda Accord.",
+   "markers": [
+    "jeffbezos"
+   ],
+   "paper_ids": [
+    "aeb4de9b950a9db0193c89a70453d6a35fbf2dbe"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.881,
+   "evidence": {
+    "paper_id": "aeb4de9b950a9db0193c89a70453d6a35fbf2dbe",
+    "source_title": "jeffbezos",
+    "supported": false,
+    "sentence": "Reveals He Was Busted for Smoking Pot at Disneyland ### Must Read ### Inside the Spider-Man Split: Finger-Pointing and Executive Endgames ### Album Review: Taylor Swift's 'Lover' ### Hasbro Acquires Entertainment One in $4 Billion All-Cash Deal ### Sign Up for Daily Insider Newsletter Please fill out this field with valid email address.",
+    "page": 1,
+    "snippet": "Reveals He Was Busted for Smoking Pot",
+    "cosine": 0.881,
+    "reason": "The provided passage is a table of contents and does not contain any information about Jeff Bezos's personal life, wealth, or possessions.",
+    "window": "### Popular on Variety Loading comments... ### Most Viewed ### 'Lizzie McGuire' Reboot Series in the Works at Disney Plus ### 'Phineas and Ferb' Disney Plus Movie Details, Including Title, Revealed at D23 ### Robert Downey Jr. Reveals He Was Busted for Smoking Pot at Disneyland ### Must Read ### Inside the Spider-Man Split: Finger-Pointing and Executive Endgames ### Album Review: Taylor Swift's 'Lover' ### Hasbro Acquires Entertainment One in $4 Billion All-Cash Deal ### Sign Up for Daily Insider Newsletter Please fill out this field with valid email address. ### More Biz ### Weinstein Can Get a Fair Trial in Manhattan, Says D.A."
+   },
+   "evidences": [
+    {
+     "paper_id": "aeb4de9b950a9db0193c89a70453d6a35fbf2dbe",
+     "source_title": "jeffbezos",
+     "supported": false,
+     "sentence": "Reveals He Was Busted for Smoking Pot at Disneyland ### Must Read ### Inside the Spider-Man Split: Finger-Pointing and Executive Endgames ### Album Review: Taylor Swift's 'Lover' ### Hasbro Acquires Entertainment One in $4 Billion All-Cash Deal ### Sign Up for Daily Insider Newsletter Please fill out this field with valid email address.",
+     "page": 1,
+     "snippet": "Reveals He Was Busted for Smoking Pot",
+     "cosine": 0.881,
+     "reason": "The provided passage is a table of contents and does not contain any information about Jeff Bezos's personal life, wealth, or possessions.",
+     "window": "### Popular on Variety Loading comments... ### Most Viewed ### 'Lizzie McGuire' Reboot Series in the Works at Disney Plus ### 'Phineas and Ferb' Disney Plus Movie Details, Including Title, Revealed at D23 ### Robert Downey Jr. Reveals He Was Busted for Smoking Pot at Disneyland ### Must Read ### Inside the Spider-Man Split: Finger-Pointing and Executive Endgames ### Album Review: Taylor Swift's 'Lover' ### Hasbro Acquires Entertainment One in $4 Billion All-Cash Deal ### Sign Up for Daily Insider Newsletter Please fill out this field with valid email address. ### More Biz ### Weinstein Can Get a Fair Trial in Manhattan, Says D.A."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about Jeff Bezos's personal habits and possessions, which are directly attributable to the cited source. The attribution test applies here as the passage presents these as statements of fact that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 Bezos's multi-billionaire status, hanging clothes on a rack in his office, and driving a 1996 Honda Accord \u2014 is not supported by the cited source. Each component requires a new citation or the claim must be rewritten.",
+    "rewrite_suggestion": "Jeff Bezos is the founder and CEO of Amazon.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is a miscellaneous headline unrelated to the claim, and the full source text (a 2013 Variety article about Amazon delivery drones) contains no mention of Bezos's wealth, his office decor, or his car. All three components of the claim are absent from the cited source, so the author must either add appropriate citations or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "As the Medical Director of CURE Children's Hospital of Uganda, Warf pioneered a low-cost, low-risk alternative to the typical treatment for hydrocephalus.",
+   "markers": [
+    "benjaminwarf"
+   ],
+   "paper_ids": [
+    "50ced167b8c7626d90f8ca9324b2670799d264de"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.6701,
+   "evidence": {
+    "paper_id": "50ced167b8c7626d90f8ca9324b2670799d264de",
+    "source_title": "benjaminwarf",
+    "supported": false,
+    "sentence": "### Admissions, through the Ages",
+    "page": 1,
+    "snippet": "### Admissions, through the Ages",
+    "cosine": 0.6701,
+    "reason": "The passage does not mention Warf, hydrocephalus, or any medical treatments.",
+    "window": "September-October 2019 more Harvardiana Illustration by Mark Steele ### Yesterday's News Headlines from Harvard's history September-October 2019 Dwight Miller Photograph by Jim Harrison ### Admissions, through the Ages College admissions stalwart Dwight Miller retires."
+   },
+   "evidences": [
+    {
+     "paper_id": "50ced167b8c7626d90f8ca9324b2670799d264de",
+     "source_title": "benjaminwarf",
+     "supported": false,
+     "sentence": "### Admissions, through the Ages",
+     "page": 1,
+     "snippet": "### Admissions, through the Ages",
+     "cosine": 0.6701,
+     "reason": "The passage does not mention Warf, hydrocephalus, or any medical treatments.",
+     "window": "September-October 2019 more Harvardiana Illustration by Mark Steele ### Yesterday's News Headlines from Harvard's history September-October 2019 Dwight Miller Photograph by Jim Harrison ### Admissions, through the Ages College admissions stalwart Dwight Miller retires."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Medical Director of CURE Children's Hospital of Uganda; medical director cure children's hospital uganda",
+    "missing_from": [
+     "50ced167b8c7626d90f8ca9324b2670799d264de"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage attributes the pioneering of a treatment to the cited individual, implying the source is expected to prove this statement. This falls under the 'full' scope as it asserts a factual claim directly linked to the cited work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Neither Warf's role as Medical Director of CURE Children's Hospital of Uganda nor his pioneering of a low-cost, low-risk alternative for hydrocephalus is mentioned anywhere in the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source (Harvard Magazine article about MacArthur Grants) contains no information about Benjamin Warf's position or medical innovations. The claim attributes specific facts to this source that it does not contain, so the author must either add a supporting citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "In 2019, there were more than 411 service stations supplying E85 fuel, comprising 85 percent ethanol and 15 percent gasoline.",
+   "markers": [
+    "minnesota"
+   ],
+   "paper_ids": [
+    "4ffdc81368008ce20fcb117fbf06e3ccc15cbd26"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8841,
+   "evidence": {
+    "paper_id": "4ffdc81368008ce20fcb117fbf06e3ccc15cbd26",
+    "source_title": "minnesota",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Alternative Fuels Data Center: Alternative Fueling Station Counts by State 213 captures 16 Nov 2018 - 31 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive The Internet Archive discovers and captures web pages through many different web crawls.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Alternative Fuels Data Center:",
+    "cosine": 0.8841,
+    "reason": "The passage does not contain the specific claim about the number of service stations or the composition of E85 fuel in 2019.",
+    "window": "(meta data) TITLE: Alternative Fuels Data Center: Alternative Fueling Station Counts by State 213 captures 16 Nov 2018 - 31 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive The Internet Archive discovers and captures web pages through many different web crawls. At any given time several distinct crawls are running, some for months, and some every day or longer."
+   },
+   "evidences": [
+    {
+     "paper_id": "4ffdc81368008ce20fcb117fbf06e3ccc15cbd26",
+     "source_title": "minnesota",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Alternative Fuels Data Center: Alternative Fueling Station Counts by State 213 captures 16 Nov 2018 - 31 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive The Internet Archive discovers and captures web pages through many different web crawls.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Alternative Fuels Data Center:",
+     "cosine": 0.8841,
+     "reason": "The passage does not contain the specific claim about the number of service stations or the composition of E85 fuel in 2019.",
+     "window": "(meta data) TITLE: Alternative Fuels Data Center: Alternative Fueling Station Counts by State 213 captures 16 Nov 2018 - 31 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive The Internet Archive discovers and captures web pages through many different web crawls. At any given time several distinct crawls are running, some for months, and some every day or longer."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2019, there were more than 411 service stations supplying E85 fuel, comprising 85 percent ethanol and 15 percent gasoline.",
+    "reason": "The passage directly states facts and figures about the number of service stations and the composition of E85 fuel in 2019, which are expected to be proven by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific count of E85 stations (>411) and the year 2019",
+    "rewrite_suggestion": "E85 fuel is composed of 85 percent ethanol and 15 percent gasoline.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text contains only metadata and table headers, with no actual station counts, dates, or fuel composition data. None of the claim's substantive components (the year, the number of stations, or the fuel blend) are present in the source. The composition of E85 is common knowledge, but the core numerical claim is entirely unsupported."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "He has \"Brazil\", \"Nosferatu\", \"Freaks\" and \"Bram Stoker's Dracula\" listed among his favourite movies.",
+   "markers": [
+    "guillermodeltoro"
+   ],
+   "paper_ids": [
+    "f5cc78d6bac74c370d9a108b7a473e67de21e0cf"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8803,
+   "evidence": {
+    "paper_id": "f5cc78d6bac74c370d9a108b7a473e67de21e0cf",
+    "source_title": "guillermodeltoro",
+    "supported": false,
+    "sentence": "Watch: A List of Stephen King's Favorite Horror Films",
+    "page": 1,
+    "snippet": "Watch: A List of Stephen King's Favorite",
+    "cosine": 0.8803,
+    "reason": "The passage mentions Guillermo del Toro's top ten film pairings but does not list his favorite movies or any specific titles.",
+    "window": "Save Almost 50% on Criterion's Horror Films Until Saturday Watch: A List of Stephen King's Favorite Horror Films Guillermo Del Toro's 'Sadistic' List of Top Ten Film Pairings and Where You Can Watch Them"
+   },
+   "evidences": [
+    {
+     "paper_id": "f5cc78d6bac74c370d9a108b7a473e67de21e0cf",
+     "source_title": "guillermodeltoro",
+     "supported": false,
+     "sentence": "Watch: A List of Stephen King's Favorite Horror Films",
+     "page": 1,
+     "snippet": "Watch: A List of Stephen King's Favorite",
+     "cosine": 0.8803,
+     "reason": "The passage mentions Guillermo del Toro's top ten film pairings but does not list his favorite movies or any specific titles.",
+     "window": "Save Almost 50% on Criterion's Horror Films Until Saturday Watch: A List of Stephen King's Favorite Horror Films Guillermo Del Toro's 'Sadistic' List of Top Ten Film Pairings and Where You Can Watch Them"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Bram Stoker's Dracula",
+    "missing_from": [
+     "f5cc78d6bac74c370d9a108b7a473e67de21e0cf"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The cited source lists \"Brazil\", \"Nosferatu\", \"Freaks\", and \"Bram Stoker's Dracula\" among his favorite movies.",
+    "reason": "The passage directly attributes a list of movies as favorites to the cited source. This is a factual claim that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific list of movies (Brazil, Nosferatu, Freaks, Bram Stoker's Dracula) as favorites of the subject",
+    "rewrite_suggestion": "The cited source does not list these movies; the author should either remove the citation or rewrite to something like 'Guillermo del Toro has a list of favorite surrealistically creepy films (the source does not specify titles).'",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence references Stephen King, not Guillermo del Toro. The provided source text contains no mention of any of the claimed movies (Brazil, Nosferatu, Freaks, Bram Stoker's Dracula) as favorites of del Toro. Therefore, every component of the claim is unprovable from the source, requiring author action."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "The series' setting, Beach City, is loosely based on Delaware beaches Rehoboth Beach, Bethany Beach and Dewey Beach, all of which Rebecca Sugar visited as a child.",
+   "markers": [
+    "stevenuniverse"
+   ],
+   "paper_ids": [
+    "8deaad643c1585951767b8d822e63cec5a6a1bcc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8144,
+   "evidence": {
+    "paper_id": "8deaad643c1585951767b8d822e63cec5a6a1bcc",
+    "source_title": "stevenuniverse",
+    "supported": false,
+    "sentence": "Her dream to do precisely what she's now doing was launched many years ago, a coast and an ocean away, back home in Montgomery County.",
+    "page": 1,
+    "snippet": "Her dream to do precisely what she's",
+    "cosine": 0.8144,
+    "reason": "The passage does not mention Beach City, Delaware beaches, or Rebecca Sugar's childhood visits to them.",
+    "window": "Sugar's creative vision, after all, wasn't just born at Cartoon Network's studios in Burbank, Calif. Her dream to do precisely what she's now doing was launched many years ago, a coast and an ocean away, back home in Montgomery County. \"You can't wait for someone to give you a show,\" says Sugar."
+   },
+   "evidences": [
+    {
+     "paper_id": "8deaad643c1585951767b8d822e63cec5a6a1bcc",
+     "source_title": "stevenuniverse",
+     "supported": false,
+     "sentence": "Her dream to do precisely what she's now doing was launched many years ago, a coast and an ocean away, back home in Montgomery County.",
+     "page": 1,
+     "snippet": "Her dream to do precisely what she's",
+     "cosine": 0.8144,
+     "reason": "The passage does not mention Beach City, Delaware beaches, or Rebecca Sugar's childhood visits to them.",
+     "window": "Sugar's creative vision, after all, wasn't just born at Cartoon Network's studios in Burbank, Calif. Her dream to do precisely what she's now doing was launched many years ago, a coast and an ocean away, back home in Montgomery County. \"You can't wait for someone to give you a show,\" says Sugar."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Bethany Beach; Rehoboth Beach",
+    "missing_from": [
+     "8deaad643c1585951767b8d822e63cec5a6a1bcc"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The series' setting, Beach City, is loosely based on Delaware beaches Rehoboth Beach, Bethany Beach and Dewey Beach, all of which Rebecca Sugar visited as a child.",
+    "reason": "The passage directly states facts about the inspiration for the series' setting, which are attributed to the cited source. This falls under the default 'full' scope as the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Beach City is loosely based on Delaware beaches Rehoboth Beach, Bethany Beach and Dewey Beach, and that Rebecca Sugar visited them as a child",
+    "rewrite_suggestion": "The series' setting, Beach City, is loosely based on Rebecca Sugar's childhood experiences in Silver Spring, Maryland, where she grew up.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not mention Beach City or Delaware beaches. The source text only discusses Sugar's upbringing in Montgomery County, Maryland, and makes no reference to Delaware beaches or her visiting them. Therefore, the claim includes components that are entirely unprovable from the cited source, requiring the author to add a citation or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "The Bill and Melinda Gates Foundation is the largest shareholder, owning over 11% of the company.",
+   "markers": [
+    "vietnamenterpriseinvestm"
+   ],
+   "paper_ids": [
+    "0325c64715b91803d3a7405dd21b5d926e0d8e18"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.845,
+   "evidence": {
+    "paper_id": "0325c64715b91803d3a7405dd21b5d926e0d8e18",
+    "source_title": "vietnamenterpriseinvestm",
+    "supported": false,
+    "sentence": "-Mail: mwhite@jefferies.com / invcos@jefferies.com DGCP or VEIL.LN Significant shareholders directors' interest in shares Vietnam Enterprise Investments Limited NAV (M) USD 1508.32 GBP 1231.63",
+    "page": 1,
+    "snippet": "-Mail: mwhite@jefferies.com / invcos@jefferies.com DGCP or VEIL.LN",
+    "cosine": 0.845,
+    "reason": "The passage does not mention the Bill and Melinda Gates Foundation or its shareholding in any company.",
+    "window": "Jefferies International Limited | Contact: Michele White / Trevor Hunt; Phone: +44 207 898 7140 / +44 207 898 7127; E -Mail: mwhite@jefferies.com / invcos@jefferies.com DGCP or VEIL.LN Significant shareholders directors' interest in shares Vietnam Enterprise Investments Limited NAV (M) USD 1508.32 GBP 1231.63 (As at 22/08/2019)NAV / SHARE"
+   },
+   "evidences": [
+    {
+     "paper_id": "0325c64715b91803d3a7405dd21b5d926e0d8e18",
+     "source_title": "vietnamenterpriseinvestm",
+     "supported": false,
+     "sentence": "-Mail: mwhite@jefferies.com / invcos@jefferies.com DGCP or VEIL.LN Significant shareholders directors' interest in shares Vietnam Enterprise Investments Limited NAV (M) USD 1508.32 GBP 1231.63",
+     "page": 1,
+     "snippet": "-Mail: mwhite@jefferies.com / invcos@jefferies.com DGCP or VEIL.LN",
+     "cosine": 0.845,
+     "reason": "The passage does not mention the Bill and Melinda Gates Foundation or its shareholding in any company.",
+     "window": "Jefferies International Limited | Contact: Michele White / Trevor Hunt; Phone: +44 207 898 7140 / +44 207 898 7127; E -Mail: mwhite@jefferies.com / invcos@jefferies.com DGCP or VEIL.LN Significant shareholders directors' interest in shares Vietnam Enterprise Investments Limited NAV (M) USD 1508.32 GBP 1231.63 (As at 22/08/2019)NAV / SHARE"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Melinda Gates Foundation; bill",
+    "missing_from": [
+     "0325c64715b91803d3a7405dd21b5d926e0d8e18"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Bill and Melinda Gates Foundation is the largest shareholder, owning over 11% of the company.",
+    "reason": "The passage asserts a specific fact (shareholding percentage) that is directly attributed to the cited source and is expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The Bill and Melinda Gates Foundation is the largest shareholder, owning over 11% of the company.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is about Vietnam Enterprise Investments Limited (VEIL), a fund, and does not mention the Bill and Melinda Gates Foundation, any shareholder percentages, or any claim about being the largest shareholder. All components of the claim are entirely absent from the source, so the author must provide a proper citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "He served in the Wisconsin State Assembly from 1999 until his retirement from the legislature in 2013.",
+   "markers": [
+    "danmeyerwisconsinpolitic"
+   ],
+   "paper_ids": [
+    "0aca9724700f06085a3a74c1dae1f00c14fd9f38"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8593,
+   "evidence": {
+    "paper_id": "0aca9724700f06085a3a74c1dae1f00c14fd9f38",
+    "source_title": "danmeyerwisconsinpolitic",
+    "supported": false,
+    "sentence": "Todd graduated from Eastern Michigan University in 1980 with a Bachelor of Science in Political Science/Speech.",
+    "page": 1,
+    "snippet": "Todd graduated from Eastern Michigan University in",
+    "cosine": 0.8593,
+    "reason": "The passage does not mention the individual's service in the Wisconsin State Assembly or the specific years of his tenure.",
+    "window": "His extensive experience in both state government and nonprofit organizations includes serving as executive director of two statewide river organizations, policy director for the Ohio Attorney General and senior policy analyst for the Wisconsin Department of Justice. Todd graduated from Eastern Michigan University in 1980 with a Bachelor of Science in Political Science/Speech. Last revised: Monday January 28 2019"
+   },
+   "evidences": [
+    {
+     "paper_id": "0aca9724700f06085a3a74c1dae1f00c14fd9f38",
+     "source_title": "danmeyerwisconsinpolitic",
+     "supported": false,
+     "sentence": "Todd graduated from Eastern Michigan University in 1980 with a Bachelor of Science in Political Science/Speech.",
+     "page": 1,
+     "snippet": "Todd graduated from Eastern Michigan University in",
+     "cosine": 0.8593,
+     "reason": "The passage does not mention the individual's service in the Wisconsin State Assembly or the specific years of his tenure.",
+     "window": "His extensive experience in both state government and nonprofit organizations includes serving as executive director of two statewide river organizations, policy director for the Ohio Attorney General and senior policy analyst for the Wisconsin Department of Justice. Todd graduated from Eastern Michigan University in 1980 with a Bachelor of Science in Political Science/Speech. Last revised: Monday January 28 2019"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual statement (dates of service) that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that the person served in the Wisconsin State Assembly from 1999 until retirement in 2013 is not present in the provided source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is about Todd Ambs's career at the Wisconsin DNR and does not mention any service in the Wisconsin State Assembly or any legislative tenure from 1999 to 2013. The shown sentence about his graduation is irrelevant. Therefore, the claim cannot be supported by this source, and the author must either add a correct citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "The scene in the film's end credits showing a resurgence of the yellow power ring of fear, with Sinestro becoming corrupted by its dark power, teased the planned sequel.",
+   "markers": [
+    "greenlanternfilm"
+   ],
+   "paper_ids": [
+    "4152f19feb4716aab74a71744472e7eab23af5cf"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9236,
+   "evidence": {
+    "paper_id": "4152f19feb4716aab74a71744472e7eab23af5cf",
+    "source_title": "greenlanternfilm",
+    "supported": false,
+    "sentence": "Warner Bros. is already planning a sequel to Ryan Reynolds' superhero pic Green Lantern, despite the film's soft performance at the box office.",
+    "page": 1,
+    "snippet": "Warner Bros. is already planning a sequel",
+    "cosine": 0.9236,
+    "reason": "The passage discusses Warner Bros. planning a sequel to 'Green Lantern' but does not mention the end credits scene or Sinestro's corruption.",
+    "window": "The Wayback Machine - https://web.archive.org/web/20110628215633/http://www.hollywoodreporter.com:80/news/warner-bros-pursue-green-lantern-205703 Industry Tools Daily PDF Log out Log in Hot Topics ### BET Awards Winners, performances ### True Blood Premiere news, photos ### Emmys Lead-up to TV's big night # Warner Bros. to Pursue 'Green Lantern' Sequel 1:23 PM 6/26/2011 by Pamela McClintock Courtesy of Warner Bros. Pictures ## The studio won't walk away from the superhero franchise, despite the film's soft box office performance. Warner Bros. is already planning a sequel to Ryan Reynolds' superhero pic Green Lantern, despite the film's soft performance at the box office. our editor recommendsBox Office Report: 'Green Lantern' Falls Saturday for Soft $52.7 Million Weekend Total'Green Lantern' Fares Better with Fans Than Critics Sources say Warners still believes in the franchise, even if the studio is \"somewhat disappointed\" with Green Lantern's result."
+   },
+   "evidences": [
+    {
+     "paper_id": "4152f19feb4716aab74a71744472e7eab23af5cf",
+     "source_title": "greenlanternfilm",
+     "supported": false,
+     "sentence": "Warner Bros. is already planning a sequel to Ryan Reynolds' superhero pic Green Lantern, despite the film's soft performance at the box office.",
+     "page": 1,
+     "snippet": "Warner Bros. is already planning a sequel",
+     "cosine": 0.9236,
+     "reason": "The passage discusses Warner Bros. planning a sequel to 'Green Lantern' but does not mention the end credits scene or Sinestro's corruption.",
+     "window": "The Wayback Machine - https://web.archive.org/web/20110628215633/http://www.hollywoodreporter.com:80/news/warner-bros-pursue-green-lantern-205703 Industry Tools Daily PDF Log out Log in Hot Topics ### BET Awards Winners, performances ### True Blood Premiere news, photos ### Emmys Lead-up to TV's big night # Warner Bros. to Pursue 'Green Lantern' Sequel 1:23 PM 6/26/2011 by Pamela McClintock Courtesy of Warner Bros. Pictures ## The studio won't walk away from the superhero franchise, despite the film's soft box office performance. Warner Bros. is already planning a sequel to Ryan Reynolds' superhero pic Green Lantern, despite the film's soft performance at the box office. our editor recommendsBox Office Report: 'Green Lantern' Falls Saturday for Soft $52.7 Million Weekend Total'Green Lantern' Fares Better with Fans Than Critics Sources say Warners still believes in the franchise, even if the studio is \"somewhat disappointed\" with Green Lantern's result."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "This scene teased the planned sequel."
+    ],
+    "missing": [
+     "The film's end credits showed a resurgence of the yellow power ring of fear.",
+     "Sinestro became corrupted by its dark power."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "This scene teased the planned sequel.",
+      "paper_id": "4152f19feb4716aab74a71744472e7eab23af5cf",
+      "source_title": "greenlanternfilm",
+      "sentence": "Warner Bros. is already planning a sequel to Ryan Reynolds' superhero pic Green Lantern, despite the film's soft performance at the box office.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The scene in the film's end credits showing a resurgence of the yellow power ring of fear, with Sinestro becoming corrupted by its dark power, teased the planned sequel.",
+    "reason": "The passage directly attributes the content of the scene and its implication of a planned sequel to the cited source. This falls under the 'full' scope as the citation is expected to prove the factual content described.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The description of the end-credits scene (yellow power ring, Sinestro's corruption) and the claim that it teased the sequel are entirely absent from the cited source.",
+    "rewrite_suggestion": "Warner Bros. planned a sequel to 'Green Lantern' despite the film's soft box office performance.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only states that Warner Bros. planned a sequel, but does not mention any end-credits scene, yellow power ring, Sinestro, or corruption. The source text contains no information about such a scene. Therefore, every substantive component of the claim is unprovable from the source, requiring the author to either add a citation for the scene or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "The remainder of the field participates in a round-robin series at one subregional site.",
+   "markers": [
+    "legendsclassicbasketball"
+   ],
+   "paper_ids": [
+    "0e09164d267fc2e2bd883f85a87c98117e454b2c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8543,
+   "evidence": {
+    "paper_id": "0e09164d267fc2e2bd883f85a87c98117e454b2c",
+    "source_title": "legendsclassicbasketball",
+    "supported": false,
+    "sentence": "## SCHEDULE COMPLETE FOR GOTPRINT.COM LEGENDS CLASSIC PRESENTED BY OLD TRAPPER ###### St. John's, Temple, VCU, and California to square off at Barclays Center Nov. 19-20.",
+    "page": 1,
+    "snippet": "## SCHEDULE COMPLETE FOR GOTPRINT.COM LEGENDS CLASSIC",
+    "cosine": 0.8543,
+    "reason": "The passage mentions a specific tournament with four teams playing at one site, but it does not describe a general practice for the remainder of a field participating in a round-robin series.",
+    "window": "VIEW TOP 10 ## LOOKING BACK AT LEGENDS CLASSIC WITH ANDY KATZ ###### A look back at the history of the legends classic including top performances and players creating their own legacy. ## SCHEDULE COMPLETE FOR GOTPRINT.COM LEGENDS CLASSIC PRESENTED BY OLD TRAPPER ###### St. John's, Temple, VCU, and California to square off at Barclays Center Nov. 19-20. FULL RELEASE ## ABOUT"
+   },
+   "evidences": [
+    {
+     "paper_id": "0e09164d267fc2e2bd883f85a87c98117e454b2c",
+     "source_title": "legendsclassicbasketball",
+     "supported": false,
+     "sentence": "## SCHEDULE COMPLETE FOR GOTPRINT.COM LEGENDS CLASSIC PRESENTED BY OLD TRAPPER ###### St. John's, Temple, VCU, and California to square off at Barclays Center Nov. 19-20.",
+     "page": 1,
+     "snippet": "## SCHEDULE COMPLETE FOR GOTPRINT.COM LEGENDS CLASSIC",
+     "cosine": 0.8543,
+     "reason": "The passage mentions a specific tournament with four teams playing at one site, but it does not describe a general practice for the remainder of a field participating in a round-robin series.",
+     "window": "VIEW TOP 10 ## LOOKING BACK AT LEGENDS CLASSIC WITH ANDY KATZ ###### A look back at the history of the legends classic including top performances and players creating their own legacy. ## SCHEDULE COMPLETE FOR GOTPRINT.COM LEGENDS CLASSIC PRESENTED BY OLD TRAPPER ###### St. John's, Temple, VCU, and California to square off at Barclays Center Nov. 19-20. FULL RELEASE ## ABOUT"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "at one subregional site"
+    ],
+    "missing": [
+     "The remainder of the field participates in a round-robin series"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "at one subregional site",
+      "paper_id": "0e09164d267fc2e2bd883f85a87c98117e454b2c",
+      "source_title": "legendsclassicbasketball",
+      "sentence": "###### Detroit Mercy wins Subregional Championship",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The remainder of the field participates in a round-robin series at one subregional site.",
+    "reason": "The passage directly states a fact about the field's participation in a round-robin series. The citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific detail that the remainder of the field engages in a round-robin format at a single subregional venue",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no sentence describing a round-robin series or a subregional site for the remainder of the field. The only mention of 'subregional' is a headline about Detroit Mercy winning a subregional championship, which does not address the format or participation of other teams. The shown sentence about St. John's, Temple, VCU, and California at Barclays Center is unrelated and does not support the claim."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Ren\u00e9 Descartes believed that non-humans are automata\u2060 \u2060\u2014 complex machines with no soul, mind, or reason.",
+   "markers": [
+    "crueltytoanimals"
+   ],
+   "paper_ids": [
+    "e67cf3a9a7d6355287a25ae995f8d025b445f423"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8081,
+   "evidence": {
+    "paper_id": "e67cf3a9a7d6355287a25ae995f8d025b445f423",
+    "source_title": "crueltytoanimals",
+    "supported": false,
+    "sentence": "The Wayback Machine - https://web.archive.org/web/20151208053932/http://www.newstatesman.com/node/149215 ## Visit our partner site Follow us on Twitter New Statesman ## Search form 24 May 1999 # Descartes' prisoners By Mary Midgley This article first appeared in the 24 May 1999 issue of the New Statesman, Luvvies, stop moaning ## Most Popular Last 24 hours ##### Forget ending poverty.",
+    "page": 1,
+    "snippet": "The Wayback Machine - https://web.archive.org/web/20151208053932/http://www.newstatesman.com/node/149215 ## Visit",
+    "cosine": 0.8081,
+    "reason": "The provided passage is a webpage header and metadata, not the content of the article by Mary Midgley, and therefore does not contain the information needed to verify the claim about Descartes' beliefs.",
+    "window": "This is part of the Internet Archive's attempt to rid the web of broken links. The Wayback Machine - https://web.archive.org/web/20151208053932/http://www.newstatesman.com/node/149215 ## Visit our partner site Follow us on Twitter New Statesman ## Search form 24 May 1999 # Descartes' prisoners By Mary Midgley This article first appeared in the 24 May 1999 issue of the New Statesman, Luvvies, stop moaning ## Most Popular Last 24 hours ##### Forget ending poverty. Cameron just wants to stop measuring it"
+   },
+   "evidences": [
+    {
+     "paper_id": "e67cf3a9a7d6355287a25ae995f8d025b445f423",
+     "source_title": "crueltytoanimals",
+     "supported": false,
+     "sentence": "The Wayback Machine - https://web.archive.org/web/20151208053932/http://www.newstatesman.com/node/149215 ## Visit our partner site Follow us on Twitter New Statesman ## Search form 24 May 1999 # Descartes' prisoners By Mary Midgley This article first appeared in the 24 May 1999 issue of the New Statesman, Luvvies, stop moaning ## Most Popular Last 24 hours ##### Forget ending poverty.",
+     "page": 1,
+     "snippet": "The Wayback Machine - https://web.archive.org/web/20151208053932/http://www.newstatesman.com/node/149215 ## Visit",
+     "cosine": 0.8081,
+     "reason": "The provided passage is a webpage header and metadata, not the content of the article by Mary Midgley, and therefore does not contain the information needed to verify the claim about Descartes' beliefs.",
+     "window": "This is part of the Internet Archive's attempt to rid the web of broken links. The Wayback Machine - https://web.archive.org/web/20151208053932/http://www.newstatesman.com/node/149215 ## Visit our partner site Follow us on Twitter New Statesman ## Search form 24 May 1999 # Descartes' prisoners By Mary Midgley This article first appeared in the 24 May 1999 issue of the New Statesman, Luvvies, stop moaning ## Most Popular Last 24 hours ##### Forget ending poverty. Cameron just wants to stop measuring it"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "concept",
+    "scoped_assertion": "non-humans are automata",
+    "reason": "The passage uses the citation to define or attribute a concept (automata) to Descartes. The substance of the passage is about Descartes' belief, not the authors' own study or argument.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Ren\u00e9 Descartes believed that non-humans are automata \u2014 complex machines with no soul, mind, or reason.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is only metadata and navigation from a web archive, and the provided source text contains no substantive content about Descartes' beliefs. The entire claim is unsupported because the cited source does not address the topic at all. The author must either cite a source that actually discusses Descartes' view on animal automata or rewrite the claim to reflect what this source (if it had relevant content) actually says."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "The survey research technology platform uses daily interviews with 6,000 Americans to provide daily tracking on nearly 2,000 companies, products and services.",
+   "markers": [
+    "morningconsult"
+   ],
+   "paper_ids": [
+    "a9caacb80c36aa1de69f9446a3931e30cbc99ac2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a9caacb80c36aa1de69f9446a3931e30cbc99ac2",
+    "source_title": "morningconsult",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "These days, Morning Consult is conducting 200 online surveys each about more than 500 companies every day to gauge public opinion on those businesses.",
+    "page": 1,
+    "snippet": "These days, Morning Consult is conducting 200",
+    "reason": "The passage does not state that the platform uses daily interviews with 6,000 Americans or that it provides daily tracking on nearly 2,000 companies, products and services.",
+    "votes": "2-0",
+    "window": "These days, Morning Consult is conducting 200 online surveys each about more than 500 companies every day to gauge public opinion on those businesses."
+   },
+   "evidences": [
+    {
+     "paper_id": "a9caacb80c36aa1de69f9446a3931e30cbc99ac2",
+     "source_title": "morningconsult",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "These days, Morning Consult is conducting 200 online surveys each about more than 500 companies every day to gauge public opinion on those businesses.",
+     "page": 1,
+     "snippet": "These days, Morning Consult is conducting 200",
+     "reason": "The passage does not state that the platform uses daily interviews with 6,000 Americans or that it provides daily tracking on nearly 2,000 companies, products and services.",
+     "votes": "2-0",
+     "window": "These days, Morning Consult is conducting 200 online surveys each about more than 500 companies every day to gauge public opinion on those businesses."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the platform uses daily interviews with 6,000 Americans or that it provides daily tracking on nearly 2,000 companies, products and services.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The survey research technology platform uses daily interviews with 6,000 Americans to provide daily tracking on nearly 2,000 companies, products and services.",
+    "reason": "The passage directly states facts and figures about the survey research technology platform, which are expected to be proven by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific numbers 6,000 Americans and nearly 2,000 companies, products and services are not found in the cited source.",
+    "rewrite_suggestion": "The survey research technology platform conducts 200 online surveys each about more than 500 companies every day to provide daily tracking of public opinion on those businesses.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that the platform uses daily interviews with 6,000 Americans and provides daily tracking on nearly 2,000 companies, products and services. The cited source text does not contain any mention of these figures; instead it says Morning Consult conducts 200 online surveys each about more than 500 companies every day. Since the crucial numeric components are absent from the source, the claim cannot be supported as written. The author must either add a citation for these specific numbers or rewrite the claim to match the source's actual data."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "In 2012, Bailey won a Best Supporting Actor award at the Hollywood Reel Independent Film Festival for the character of Kyle in the film \"Bank Roll\".",
+   "markers": [
+    "scottbaileyactor"
+   ],
+   "paper_ids": [
+    "c49a8b35fd960d0a3c9ee53ed4dd3fd67d6dbf29"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c49a8b35fd960d0a3c9ee53ed4dd3fd67d6dbf29",
+    "source_title": "scottbaileyactor",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "See more awards \u00bb",
+    "page": null,
+    "snippet": "See more awards \u00bb",
+    "reason": "The passage does not mention any awards won by Bailey, the year 2012, the Hollywood Reel Independent Film Festival, the character of Kyle, or the film \"Bank Roll\".",
+    "votes": "2-0",
+    "window": "See more awards \u00bb"
+   },
+   "evidences": [
+    {
+     "paper_id": "c49a8b35fd960d0a3c9ee53ed4dd3fd67d6dbf29",
+     "source_title": "scottbaileyactor",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "See more awards \u00bb",
+     "page": null,
+     "snippet": "See more awards \u00bb",
+     "reason": "The passage does not mention any awards won by Bailey, the year 2012, the Hollywood Reel Independent Film Festival, the character of Kyle, or the film \"Bank Roll\".",
+     "votes": "2-0",
+     "window": "See more awards \u00bb"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention any awards won by Bailey, the year 2012, the Hollywood Reel Independent Film Festival, the character of Kyle, or the film \"Bank Roll\".",
+   "component_check": {
+    "found": [
+     "in the film \"Bank Roll\""
+    ],
+    "missing": [
+     "In 2012, Bailey won a Best Supporting Actor award",
+     "at the Hollywood Reel Independent Film Festival",
+     "for the character of Kyle"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "in the film \"Bank Roll\"",
+      "paper_id": "c49a8b35fd960d0a3c9ee53ed4dd3fd67d6dbf29",
+      "source_title": "scottbaileyactor",
+      "sentence": "See more \u00bb #### Alternate Versions The version of 'Bank Roll' that played at various film festivals had music included in many of the scenes.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Bailey won a Best Supporting Actor award at the Hollywood Reel Independent Film Festival for the character of Kyle in the film \"Bank Roll\".",
+    "reason": "The passage asserts a specific fact (an award won by Bailey) and directly attributes it to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that Bailey won a Best Supporting Actor award at the Hollywood Reel Independent Film Festival in 2012 for the character of Kyle in 'Bank Roll' is unsupported; the source provides no information about any award for Bailey or any such festival.",
+    "rewrite_suggestion": "Scott Bailey appears in the 2012 film 'Bank Roll'.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text from IMDb does not mention any award for Scott Bailey, nor does it reference the Hollywood Reel Independent Film Festival or a Best Supporting Actor award. The only award-related text is '6 wins. See more awards \u00bb', which fails to specify the nature of those wins or any connection to Bailey. All substantive components of the claim are absent from the source, so the author must either add a new citation or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "Since the financial issues Regus experienced in 2003 the company has successfully turned it fortunes around, as the serviced office industry has continued to grow in popularity.",
+   "markers": [
+    "executivesuite"
+   ],
+   "paper_ids": [
+    "13b2bc7fb4569626900d39f4546cfd62a76a66b0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "13b2bc7fb4569626900d39f4546cfd62a76a66b0",
+    "source_title": "executivesuite",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The first half of the 2017 total is more than serviced office and co-working providers managed to account for in the whole of 2016 (853,178 sq ft) and is just a deal or two away from of the sector's average annual take-up for the last four years (908,971 sq ft).",
+    "page": 1,
+    "snippet": "The first half of the 2017 total",
+    "reason": "the passage does not mention Regus's financial situation in 2003 or any turnaround.",
+    "votes": "2-0",
+    "window": "The first half of the 2017 total is more than serviced office and co-working providers managed to account for in the whole of 2016 (853,178 sq ft) and is just a deal or two away from of the sector's average annual take-up for the last four years (908,971 sq ft). (meta data) TITLE: Flexible Office Providers Most Active on Leasing Front for First Time | FreeOfficeFinder Call now for live help: View Shortlist Flexible Office Providers Most Active on Leasing Front for First Time # Flexible Office Providers Most Active on Leasing Front for First Time Vera Jaman 12 Jul 2017 Property News Search Articles... Serviced office and co-working providers have set a record for the largest share of space leased in Central London for the first time, according to Cushman & Wakefield's latest research. During the first half of 2017, serviced office or co-working providers \u2013 such as WeWork, London Executive Offices and The Office Group \u2013 accounted for 884,235 sq ft of newly-leased office space in Central London. It is almost certain that serviced office and co-working providers will surpass in 2017 their record annual volume of 1,267,926 sq ft set in 2014."
+   },
+   "evidences": [
+    {
+     "paper_id": "13b2bc7fb4569626900d39f4546cfd62a76a66b0",
+     "source_title": "executivesuite",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The first half of the 2017 total is more than serviced office and co-working providers managed to account for in the whole of 2016 (853,178 sq ft) and is just a deal or two away from of the sector's average annual take-up for the last four years (908,971 sq ft).",
+     "page": 1,
+     "snippet": "The first half of the 2017 total",
+     "reason": "the passage does not mention Regus's financial situation in 2003 or any turnaround.",
+     "votes": "2-0",
+     "window": "The first half of the 2017 total is more than serviced office and co-working providers managed to account for in the whole of 2016 (853,178 sq ft) and is just a deal or two away from of the sector's average annual take-up for the last four years (908,971 sq ft). (meta data) TITLE: Flexible Office Providers Most Active on Leasing Front for First Time | FreeOfficeFinder Call now for live help: View Shortlist Flexible Office Providers Most Active on Leasing Front for First Time # Flexible Office Providers Most Active on Leasing Front for First Time Vera Jaman 12 Jul 2017 Property News Search Articles... Serviced office and co-working providers have set a record for the largest share of space leased in Central London for the first time, according to Cushman & Wakefield's latest research. During the first half of 2017, serviced office or co-working providers \u2013 such as WeWork, London Executive Offices and The Office Group \u2013 accounted for 884,235 sq ft of newly-leased office space in Central London. It is almost certain that serviced office and co-working providers will surpass in 2017 their record annual volume of 1,267,926 sq ft set in 2014."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention Regus's financial situation in 2003 or any turnaround.",
+   "component_check": {
+    "found": [
+     "The serviced office industry has continued to grow in popularity"
+    ],
+    "missing": [
+     "Regus experienced financial issues in 2003",
+     "Regus has successfully turned its fortunes around since 2003"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The serviced office industry has continued to grow in popularity",
+      "paper_id": "13b2bc7fb4569626900d39f4546cfd62a76a66b0",
+      "source_title": "executivesuite",
+      "sentence": "It is almost certain that serviced office and co-working providers will surpass in 2017 their record annual volume of 1,267,926 sq ft set in 2014.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "the company has successfully turned it fortunes around, as the serviced office industry has continued to grow in popularity.",
+    "reason": "The passage attributes the company's turnaround and the industry's growth to the cited source, implying the source is expected to prove these facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Regus experienced financial issues in 2003 and has since successfully turned its fortunes around",
+    "rewrite_suggestion": "The serviced office industry has continued to grow in popularity, as evidenced by record leasing activity in Central London.",
+    "proofs": [
+     "Serviced office and co-working providers have set a record for the largest share of space leased in Central London for the first time, according to Cushman & Wakefield's latest research.",
+     "The statistics are proof that the market is showing increasing demand for flexible office space."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not mention Regus at all, let alone its financial issues in 2003 or any subsequent turnaround. The shown sentence and the rest of the source only discuss leasing activity by flexible office providers in Central London in 2017, which supports the industry growth component but not the Regus-specific claims. Therefore, the author must either add a citation that covers Regus's 2003 issues and turnaround, or rewrite the claim to remove those unsupported elements."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "De Klerk's first language is Afrikaans and the earliest of his distant ancestors to arrive in what is now South Africa did so in the late 1680s.",
+   "markers": [
+    "fwdeklerk"
+   ],
+   "paper_ids": [
+    "e29421e26b3b7c1e0cd69e225bd01f6893e3a86e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8238,
+   "evidence": {
+    "paper_id": "e29421e26b3b7c1e0cd69e225bd01f6893e3a86e",
+    "source_title": "fwdeklerk",
+    "supported": false,
+    "sentence": "He discussed his autobiography, [The Last Trek: A New\u2026 read more Former President de Klerk participated by remote connection from New York City He discussed his autobiography, [The Last Trek: A New Beginning], and the June 5 presidential election in South Africa.",
+    "page": 1,
+    "snippet": "He discussed his autobiography, [The Last Trek:",
+    "cosine": 0.8238,
+    "reason": "The passage does not mention De Klerk's first language or the arrival date of his ancestors in South Africa.",
+    "window": "Former President de Klerk participated by remote connection from New York City. He discussed his autobiography, [The Last Trek: A New\u2026 read more Former President de Klerk participated by remote connection from New York City He discussed his autobiography, [The Last Trek: A New Beginning], and the June 5 presidential election in South Africa. He also responded to viewer telephone calls."
+   },
+   "evidences": [
+    {
+     "paper_id": "e29421e26b3b7c1e0cd69e225bd01f6893e3a86e",
+     "source_title": "fwdeklerk",
+     "supported": false,
+     "sentence": "He discussed his autobiography, [The Last Trek: A New\u2026 read more Former President de Klerk participated by remote connection from New York City He discussed his autobiography, [The Last Trek: A New Beginning], and the June 5 presidential election in South Africa.",
+     "page": 1,
+     "snippet": "He discussed his autobiography, [The Last Trek:",
+     "cosine": 0.8238,
+     "reason": "The passage does not mention De Klerk's first language or the arrival date of his ancestors in South Africa.",
+     "window": "Former President de Klerk participated by remote connection from New York City. He discussed his autobiography, [The Last Trek: A New\u2026 read more Former President de Klerk participated by remote connection from New York City He discussed his autobiography, [The Last Trek: A New Beginning], and the June 5 presidential election in South Africa. He also responded to viewer telephone calls."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "De Klerk's first language is Afrikaans and the earliest of his distant ancestors to arrive in what is now South Africa did so in the late 1680s.",
+    "reason": "The passage asserts specific facts about De Klerk's background, including his first language and the arrival date of his ancestors, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Both components: 'De Klerk's first language is Afrikaans' and 'the earliest of his distant ancestors to arrive in what is now South Africa did so in the late 1680s' are entirely absent from the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the tool and the entire provided source text (a C-SPAN program description) contain no mention of De Klerk's first language or his ancestors' arrival. Neither component is provable from this source, so the author must either add a proper citation for these facts or rewrite the claim to omit them."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "Boyer claimed he decided to drop publication because he was disappointed with the university's handling of movie rights.",
+   "markers": [
+    "glennboyer"
+   ],
+   "paper_ids": [
+    "7a3a89c03a11b1cd874cea0edecbadc4da54bb17"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "7a3a89c03a11b1cd874cea0edecbadc4da54bb17",
+    "source_title": "glennboyer",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "41 The Cason manuscript and other related materials had come into his hands through the cooperation of the Cason family, but the manuscript was disappointing.",
+    "page": 1,
+    "snippet": "41 The Cason manuscript and other related",
+    "reason": "The passage does not mention Boyer's disappointment with the university's handling of movie rights as a reason for dropping publication.",
+    "votes": "2-0",
+    "window": "41 The Cason manuscript and other related materials had come into his hands through the cooperation of the Cason family, but the manuscript was disappointing. Glenn Boyer began his work on the recollections of Josephine Sarah Marcus Earp with full knowledge of what Lake and Waters had done. Mrs. Earp said almost nothing about Tombstone\u2013and for good reason. She had little first-hand knowledge about the goings-on in Tombstone."
+   },
+   "evidences": [
+    {
+     "paper_id": "7a3a89c03a11b1cd874cea0edecbadc4da54bb17",
+     "source_title": "glennboyer",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "41 The Cason manuscript and other related materials had come into his hands through the cooperation of the Cason family, but the manuscript was disappointing.",
+     "page": 1,
+     "snippet": "41 The Cason manuscript and other related",
+     "reason": "The passage does not mention Boyer's disappointment with the university's handling of movie rights as a reason for dropping publication.",
+     "votes": "2-0",
+     "window": "41 The Cason manuscript and other related materials had come into his hands through the cooperation of the Cason family, but the manuscript was disappointing. Glenn Boyer began his work on the recollections of Josephine Sarah Marcus Earp with full knowledge of what Lake and Waters had done. Mrs. Earp said almost nothing about Tombstone\u2013and for good reason. She had little first-hand knowledge about the goings-on in Tombstone."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Boyer's disappointment with the university's handling of movie rights as a reason for dropping publication.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Boyer claimed he decided to drop publication because he was disappointed with the university's handling of movie rights.",
+    "reason": "The passage directly attributes a claim to the cited source, indicating that the source is expected to prove this statement. This falls under the 'full' scope as per the attribution test.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Boyer dropped publication because of disappointment with the university's handling of movie rights is entirely absent from the source. No mention of movie rights, university handling of rights, or a decision to drop publication appears anywhere in the provided text.",
+    "rewrite_suggestion": "Boyer found the Cason manuscript disappointing.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes to Boyer a specific reason for dropping publication\u2014disappointment with the university's handling of movie rights\u2014but the source text contains no mention of movie rights, university handling, or any decision to drop publication. The shown sentence about the manuscript being disappointing refers to its content, not to any decision or to movie rights. Therefore, the claim cannot be supported by this source, and the author must either add a citation for the unsupported subclaim or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "Countess Liliane Fawcett (born 1956), his younger daughter, has two daughters by her hedge fund manager husband, Christopher Fawcett.",
+   "markers": [
+    "graudmicheldepierredon"
+   ],
+   "paper_ids": [
+    "a03195e4ef67c3c75780f0afd479532470b9211b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9216,
+   "evidence": {
+    "paper_id": "a03195e4ef67c3c75780f0afd479532470b9211b",
+    "source_title": "graudmicheldepierredon",
+    "supported": false,
+    "sentence": "Peter is a member of the Worshipful Company of Skinners and a trustee of Tomorrow's Achievers, Young Enterprise, the Politics and the Economics Research Trust.",
+    "page": 1,
+    "snippet": "Peter is a member of the Worshipful",
+    "cosine": 0.9216,
+    "reason": "The passage does not mention Countess Liliane Fawcett, her birth year, her husband, or her children.",
+    "window": "Peter pioneered the idea of a recruitment agency dedicated to the voluntary sector in 1984 and remains Chairman of Charity and Fundraising Recruitment. Peter is a member of the Worshipful Company of Skinners and a trustee of Tomorrow's Achievers, Young Enterprise, the Politics and the Economics Research Trust. He is the former Chairman of the Fountain Society, the Public Monuments and Sculpture Association and the Hyde Park Estate Association."
+   },
+   "evidences": [
+    {
+     "paper_id": "a03195e4ef67c3c75780f0afd479532470b9211b",
+     "source_title": "graudmicheldepierredon",
+     "supported": false,
+     "sentence": "Peter is a member of the Worshipful Company of Skinners and a trustee of Tomorrow's Achievers, Young Enterprise, the Politics and the Economics Research Trust.",
+     "page": 1,
+     "snippet": "Peter is a member of the Worshipful",
+     "cosine": 0.9216,
+     "reason": "The passage does not mention Countess Liliane Fawcett, her birth year, her husband, or her children.",
+     "window": "Peter pioneered the idea of a recruitment agency dedicated to the voluntary sector in 1984 and remains Chairman of Charity and Fundraising Recruitment. Peter is a member of the Worshipful Company of Skinners and a trustee of Tomorrow's Achievers, Young Enterprise, the Politics and the Economics Research Trust. He is the former Chairman of the Fountain Society, the Public Monuments and Sculpture Association and the Hyde Park Estate Association."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Liliane Fawcett; countess liliane fawcett",
+    "missing_from": [
+     "a03195e4ef67c3c75780f0afd479532470b9211b"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states factual information about a person's family, which is expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: Countess Liliane Fawcett (born 1956), his younger daughter, has two daughters by her hedge fund manager husband, Christopher Fawcett.",
+    "rewrite_suggestion": "The claim has no support in the provided source text and must be removed or replaced with a properly cited statement.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text from Coram does not mention Countess Liliane Fawcett, Christopher Fawcett, or any daughters. The shown sentence about Peter Brown is completely irrelevant. None of the claim's components can be found anywhere in the source, so the author must either add a different citation or rewrite the claim to remove these unsupported details."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "As these ships were built in the 1960s, on 18 July 1996 the British Ministry of Defence awarded a \u00a3450 million contract for their replacements to Vickers Shipbuilding and Engineering Ltd (VSEL) in Barrow-in-Furness.",
+   "markers": [
+    "albionclasslandingplatfo"
+   ],
+   "paper_ids": [
+    "83c9ec599654964927a73a818140a42a57174668"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7934,
+   "evidence": {
+    "paper_id": "83c9ec599654964927a73a818140a42a57174668",
+    "source_title": "albionclasslandingplatfo",
+    "supported": false,
+    "sentence": "Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company #### Duramax Marine For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber... Duramax Marine ##### About For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber bearings for Military propulsion shaft applications.",
+    "page": 1,
+    "snippet": "Press Releases Regional Offices ### Make an",
+    "cosine": 0.7934,
+    "reason": "The passage does not mention the British Ministry of Defence, a contract award, the amount of the contract, or the company VSEL.",
+    "window": "Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company #### L-3 MAPPS L-3 MAPPS is a leading global supplier of integrated marine... L-3 MAPPS ##### About L-3 MAPPS is a leading global supplier of integrated marine control systems and simulation products for warships, submarines and high-end ocean-going commercial vessels worldwide. Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company #### Duramax Marine For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber... Duramax Marine ##### About For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber bearings for Military propulsion shaft applications. Press Releases Regional Offices ### Make an Enquiry Follow this company"
+   },
+   "evidences": [
+    {
+     "paper_id": "83c9ec599654964927a73a818140a42a57174668",
+     "source_title": "albionclasslandingplatfo",
+     "supported": false,
+     "sentence": "Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company #### Duramax Marine For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber... Duramax Marine ##### About For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber bearings for Military propulsion shaft applications.",
+     "page": 1,
+     "snippet": "Press Releases Regional Offices ### Make an",
+     "cosine": 0.7934,
+     "reason": "The passage does not mention the British Ministry of Defence, a contract award, the amount of the contract, or the company VSEL.",
+     "window": "Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company #### L-3 MAPPS L-3 MAPPS is a leading global supplier of integrated marine... L-3 MAPPS ##### About L-3 MAPPS is a leading global supplier of integrated marine control systems and simulation products for warships, submarines and high-end ocean-going commercial vessels worldwide. Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company #### Duramax Marine For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber... Duramax Marine ##### About For over 25 years, Duramax\u00ae Marine has supplied water-lubricated rubber bearings for Military propulsion shaft applications. Press Releases Regional Offices ### Make an Enquiry Follow this company"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Engineering Ltd VSEL; Ministry of Defence; Vickers Shipbuilding",
+    "missing_from": [
+     "83c9ec599654964927a73a818140a42a57174668"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On 18 July 1996, the British Ministry of Defence awarded a \u00a3450 million contract for their replacements to Vickers Shipbuilding and Engineering Ltd (VSEL) in Barrow-in-Furness.",
+    "reason": "The passage asserts specific facts (a contract award, date, amount, and recipient) that are directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: the 1960s construction, the 18 July 1996 date, the \u00a3450 million MoD contract, and the award to VSEL in Barrow-in-Furness are not present in the cited source text.",
+    "rewrite_suggestion": "Replace the claim with information actually found in the source, such as technical specifications of the Albion class LPD, or remove the citation and find a source that mentions the contract.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source text from 'Albion Class LPD (R) Landing Platform Dock' contains only technical specifications and company advertisements, with no mention of ships built in the 1960s, a 1996 contract award, the Ministry of Defence, \u00a3450 million, or Vickers/VSEL in Barrow-in-Furness. None of the claim's components are supported or even referenced in the source."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "She later admitted to being displeased with how the film turned out, adding that she found it hard to predict the quality of a project during production.",
+   "markers": [
+    "michellewilliamsactress"
+   ],
+   "paper_ids": [
+    "99f00d21f8b3d3b8a389f6836707d4e784d65b12"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8082,
+   "evidence": {
+    "paper_id": "99f00d21f8b3d3b8a389f6836707d4e784d65b12",
+    "source_title": "michellewilliamsactress",
+    "supported": true,
+    "sentence": "And you work just as hard on the movies that are bad as you do on the ones that are good.",
+    "page": 1,
+    "snippet": "And you work just as hard on",
+    "cosine": 0.8082,
+    "reason": "The passage directly supports the claim that the actress found it hard to predict the quality of a project during production.",
+    "window": "You really can't tell. And you work just as hard on the movies that are bad as you do on the ones that are good. So it's alway sort of a surprise how they turn out.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "99f00d21f8b3d3b8a389f6836707d4e784d65b12",
+     "source_title": "michellewilliamsactress",
+     "supported": true,
+     "sentence": "And you work just as hard on the movies that are bad as you do on the ones that are good.",
+     "page": 1,
+     "snippet": "And you work just as hard on",
+     "cosine": 0.8082,
+     "reason": "The passage directly supports the claim that the actress found it hard to predict the quality of a project during production.",
+     "window": "You really can't tell. And you work just as hard on the movies that are bad as you do on the ones that are good. So it's alway sort of a surprise how they turn out.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly supports the claim that the actress found it hard to predict the quality of a project during production.",
+   "covering": {
+    "covered": [
+     {
+      "component": "found it hard to predict the quality of a project during production",
+      "paper_id": "99f00d21f8b3d3b8a389f6836707d4e784d65b12",
+      "source_title": "michellewilliamsactress",
+      "sentence": "You really can't tell.",
+      "page": 1,
+      "snippet": "You really can't tell.",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "admitted to being displeased with how the film turned out"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "99f00d21f8b3d3b8a389f6836707d4e784d65b12",
+      "source_title": "michellewilliamsactress",
+      "text": "You really can't tell.",
+      "n_used": 1
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "You can never have a sense when you read something \u2013 or even while you're making it \u2013 if it's going to be good or not. You really can't tell."
+     ],
+     "why": "The shown sentences only cover the component about difficulty predicting quality, but they omit any admission of displeasure. The source text does contain a clear admission of displeasure ('Wow. Ouch. That one hurt.') which is necessary to fully support the claim. Since this proof exists in the source but was not shown, the tool must include it."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "You can never have a sense when you read something \u2013 or even while you're making it \u2013 if it's going to be good or not. You really can't tell."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentences only cover the component about difficulty predicting quality, but they omit any admission of displeasure. The source text does contain a clear admission of displeasure ('Wow. Ouch. That one hurt.') which is necessary to fully support the claim. Since this proof exists in the source but was not shown, the tool must include it."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "The Hillary Rodham Clinton School of Law is the largest Law School in Wales and ranks third in the UK for Criminology and twenty-second in the UK for Law (The Times Good University Guide 2019).",
+   "markers": [
+    "swanseauniversity"
+   ],
+   "paper_ids": [
+    "4a94bb82a8e3cdb6c5021cc27c12e998a3cd32fa"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7796,
+   "evidence": {
+    "paper_id": "4a94bb82a8e3cdb6c5021cc27c12e998a3cd32fa",
+    "source_title": "swanseauniversity",
+    "supported": false,
+    "sentence": "The Guardian University Guide 2018 shows that Swansea University is among the top 20 universities in the UK for a wide range of subjects, from medicine and maths to social work and engineering, with six subjects making the top 10.",
+    "page": 1,
+    "snippet": "The Guardian University Guide 2018 shows that",
+    "cosine": 0.7796,
+    "reason": "The passage does not mention the Hillary Rodham Clinton School of Law, its size, or its rankings for Criminology or Law in the UK.",
+    "window": "Latest newsLatest researchWhat's HappeningNews archive The Guardian University Guide 2018 shows that Swansea University is among the top 20 universities in the UK for a wide range of subjects, from medicine and maths to social work and engineering, with six subjects making the top 10. In the overall rankings, Swansea University is now ranked at 45, just three places behind Cardiff University."
+   },
+   "evidences": [
+    {
+     "paper_id": "4a94bb82a8e3cdb6c5021cc27c12e998a3cd32fa",
+     "source_title": "swanseauniversity",
+     "supported": false,
+     "sentence": "The Guardian University Guide 2018 shows that Swansea University is among the top 20 universities in the UK for a wide range of subjects, from medicine and maths to social work and engineering, with six subjects making the top 10.",
+     "page": 1,
+     "snippet": "The Guardian University Guide 2018 shows that",
+     "cosine": 0.7796,
+     "reason": "The passage does not mention the Hillary Rodham Clinton School of Law, its size, or its rankings for Criminology or Law in the UK.",
+     "window": "Latest newsLatest researchWhat's HappeningNews archive The Guardian University Guide 2018 shows that Swansea University is among the top 20 universities in the UK for a wide range of subjects, from medicine and maths to social work and engineering, with six subjects making the top 10. In the overall rankings, Swansea University is now ranked at 45, just three places behind Cardiff University."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Hillary Rodham Clinton School of Law ranks third in the UK for Criminology and twenty-second in the UK for Law (The Times Good University Guide 2019).",
+    "reason": "The passage directly attributes specific rankings to the cited source, indicating that the source is expected to prove these factual claims. This falls under the 'full' scope as it asserts findings from the cited guide.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim is unsupported by the provided source text. The source is a Guardian University Guide 2018 article about Swansea University, which does not mention the Hillary Rodham Clinton School of Law, Criminology, Law rankings, or The Times Good University Guide 2019.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim references The Times Good University Guide 2019 and specific rankings for a law school, but the provided source is a Guardian University Guide 2018 article that does not contain any of these details. No sentence in the source supports any component of the claim, so the author must either provide a correct citation or rewrite the claim to reflect what the source actually says."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "However, all flights to and from the station all go through Resolute Bay Airport, which is more than 500 km (310 mi) away.",
+   "markers": [
+    "mcgillarcticresearchstat"
+   ],
+   "paper_ids": [
+    "76ebd92700d74f077e9ddc6682a6279b301c3047"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "76ebd92700d74f077e9ddc6682a6279b301c3047",
+    "source_title": "mcgillarcticresearchstat",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Grise Fiord (~400 km) and Resolute Bay (~ 500 km)",
+    "page": 1,
+    "snippet": "Grise Fiord (~400 km) and Resolute Bay",
+    "reason": "the passage does not state that all flights go through Resolute Bay Airport",
+    "votes": "2-0",
+    "window": "Grise Fiord (~400 km) and Resolute Bay (~ 500 km) Nearest Medical Service Resolute Bay (500 km) Safety Considerations Wilderness First Aid (cert req'd), CPR (cert req'd), Firearms safety (FAC required), HF radio protocols (on site training), ATV/Snowmobile safety (on site\u2026 ), Glacier safety (formal training) $200/day/person full R&B $100/day/person Other Information The While Glacier mass balance record is the longest for a high Arctic valley glacier."
+   },
+   "evidences": [
+    {
+     "paper_id": "76ebd92700d74f077e9ddc6682a6279b301c3047",
+     "source_title": "mcgillarcticresearchstat",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Grise Fiord (~400 km) and Resolute Bay (~ 500 km)",
+     "page": 1,
+     "snippet": "Grise Fiord (~400 km) and Resolute Bay",
+     "reason": "the passage does not state that all flights go through Resolute Bay Airport",
+     "votes": "2-0",
+     "window": "Grise Fiord (~400 km) and Resolute Bay (~ 500 km) Nearest Medical Service Resolute Bay (500 km) Safety Considerations Wilderness First Aid (cert req'd), CPR (cert req'd), Firearms safety (FAC required), HF radio protocols (on site training), ATV/Snowmobile safety (on site\u2026 ), Glacier safety (formal training) $200/day/person full R&B $100/day/person Other Information The While Glacier mass balance record is the longest for a high Arctic valley glacier."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that all flights go through Resolute Bay Airport",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "all flights to and from the station all go through Resolute Bay Airport, which is more than 500 km (310 mi) away.",
+    "reason": "The passage asserts a factual statement about the location and distance of Resolute Bay Airport relative to the station. This is a direct claim that the cited source is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that all flights to and from MARS go through Resolute Bay Airport, and that the distance is 'more than 500 km' (the source only gives an approximate distance of '~500 km' to the community, not to an airport, and does not mention flight routing).",
+    "rewrite_suggestion": "However, the nearest community to MARS is Resolute Bay, approximately 500 km away.",
+    "proofs": [
+     "Nearest Community Grise Fiord (~400 km) and Resolute Bay (~ 500 km)",
+     "Nearest Medical Service Resolute Bay (500 km)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no mention of flights, airports, or routing through Resolute Bay. It only lists Resolute Bay as a nearby community and medical service with an approximate distance of 500 km, not the exact 'more than 500 km' claimed. Therefore, the claim contains substantive components not provable from the cited source, requiring the author to either add a citation for the flight routing and exact distance or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "According to \"TV Guide\", \"The Random Years\" is not available on any digital platform.",
+   "markers": [
+    "therandomyears"
+   ],
+   "paper_ids": [
+    "703bea7337d87e6975b3ee2169f83b0f537892dd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8828,
+   "evidence": {
+    "paper_id": "703bea7337d87e6975b3ee2169f83b0f537892dd",
+    "source_title": "therandomyears",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Random Years TV Show: News, Videos, Full Episodes and More | TV Guide 35 captures 09 Mar 2008 - 04 Sep 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Random Years TV Show:",
+    "cosine": 0.8828,
+    "reason": "The passage does not state whether 'The Random Years' is available on digital platforms.",
+    "window": "(meta data) TITLE: Random Years TV Show: News, Videos, Full Episodes and More | TV Guide 35 captures 09 Mar 2008 - 04 Sep 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period."
+   },
+   "evidences": [
+    {
+     "paper_id": "703bea7337d87e6975b3ee2169f83b0f537892dd",
+     "source_title": "therandomyears",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Random Years TV Show: News, Videos, Full Episodes and More | TV Guide 35 captures 09 Mar 2008 - 04 Sep 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Random Years TV Show:",
+     "cosine": 0.8828,
+     "reason": "The passage does not state whether 'The Random Years' is available on digital platforms.",
+     "window": "(meta data) TITLE: Random Years TV Show: News, Videos, Full Episodes and More | TV Guide 35 captures 09 Mar 2008 - 04 Sep 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "According to \"TV Guide\", \"The Random Years\" is not available on any digital platform.",
+    "reason": "The passage directly attributes a statement to the cited source (\"According to 'TV Guide'\"). This indicates the author expects the cited source to prove the claim about the availability of \"The Random Years\".",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the assertion that 'The Random Years' is not available on any digital platform",
+    "rewrite_suggestion": "According to TV Guide, 'The Random Years' is not listed as available on any digital platform.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text from TV Guide provides metadata and a show description but does not contain any sentence stating that 'The Random Years' is unavailable on digital platforms. The shown sentence is only metadata about the web capture and does not address availability. Therefore the claim's core component is not provable from the cited source; the author must either add a citation that explicitly supports the unavailability or rewrite the claim to reflect what the source actually says."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Cosworth, however, was one company that - aside from its V6 turbo project, which was only used for less than two years - had continued to build naturally aspirated V8s for F2 and a few of the least well funded F1 teams.",
+   "markers": [
+    "brianhart"
+   ],
+   "paper_ids": [
+    "3bfafebd4d0b9a5d96e3125b398d7a41335df3f8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9064,
+   "evidence": {
+    "paper_id": "3bfafebd4d0b9a5d96e3125b398d7a41335df3f8",
+    "source_title": "brianhart",
+    "supported": false,
+    "sentence": "At the end of 1996 a relationship was struck with the new Stewart Grand Prix and a new V10 engine was built.",
+    "page": 1,
+    "snippet": "At the end of 1996 a relationship",
+    "cosine": 0.9064,
+    "reason": "The passage does not mention Cosworth building naturally aspirated V8s for F2 or less well-funded F1 teams, nor does it mention their V6 turbo project.",
+    "window": "Benetton then switched to Renault power and Ford went through an unhappy period with Sauber as its factory team. At the end of 1996 a relationship was struck with the new Stewart Grand Prix and a new V10 engine was built. The Stewart-Ford program was not a great success and with Vickers looking to alter its emphasis the Cosworth company was put up for sale."
+   },
+   "evidences": [
+    {
+     "paper_id": "3bfafebd4d0b9a5d96e3125b398d7a41335df3f8",
+     "source_title": "brianhart",
+     "supported": false,
+     "sentence": "At the end of 1996 a relationship was struck with the new Stewart Grand Prix and a new V10 engine was built.",
+     "page": 1,
+     "snippet": "At the end of 1996 a relationship",
+     "cosine": 0.9064,
+     "reason": "The passage does not mention Cosworth building naturally aspirated V8s for F2 or less well-funded F1 teams, nor does it mention their V6 turbo project.",
+     "window": "Benetton then switched to Renault power and Ford went through an unhappy period with Sauber as its factory team. At the end of 1996 a relationship was struck with the new Stewart Grand Prix and a new V10 engine was built. The Stewart-Ford program was not a great success and with Vickers looking to alter its emphasis the Cosworth company was put up for sale."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Cosworth continued to build naturally aspirated V8s for F2 and a few of the least well funded F1 teams.",
+    "reason": "The passage directly states a fact about Cosworth's continued production of V8 engines, which is an assertion that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The duration of the V6 turbo project (less than two years) and the specific use of naturally aspirated V8s for F2 and least well funded F1 teams are not stated in the source.",
+    "rewrite_suggestion": "Cosworth built a turbocharged V6 for F1 and also produced the naturally aspirated DFV V8 and its derivatives.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes details about the V6 turbo project's duration and the specific application of naturally aspirated V8s for F2 and low-funded F1 teams, none of which are found in the provided source text. The source mentions the V6 turbo project and DFV derivatives but does not support the claimed time frame or target teams. The shown sentence about a V10 engine is irrelevant, and the source lacks the necessary evidence, so the author must add citations for these subclaims or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "The earliest mention of the name Yaquq is in the text \"Signs of the Tomb Inscription\" by Rabbi Jacob, emissary of the Yeshiva of Rabbi Jehiel of Paris (before 1257 CE).",
+   "markers": [
+    "yaquq"
+   ],
+   "paper_ids": [
+    "2c347761d3dce53c47e7ed20ed26f2c52a86cb7f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2c347761d3dce53c47e7ed20ed26f2c52a86cb7f",
+    "source_title": "yaquq",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Dark, Roman-Period and Byzantine Landscapes between Sepphoris and Nazareth, 87-102Nurit Lissovsky, Hukkok, Yaquq and Habakkuk's Tomb: Changes over Time and Space, 103-118Seth J. Frantzman and Ruth Kark, General Gordon, The Palestine Exploration Fund, and the Origins of 'Gordon's Cavalry' in the Holy Land, 119-136ReviewsT.",
+    "page": 1,
+    "snippet": "Dark, Roman-Period and Byzantine Landscapes between Sepphoris",
+    "reason": "The passage does not mention the text 'Signs of the Tomb Inscription' or Rabbi Jacob, emissary of the Yeshiva of Rabbi Jehiel of Paris.",
+    "votes": "2-0",
+    "window": "Dark, Roman-Period and Byzantine Landscapes between Sepphoris and Nazareth, 87-102Nurit Lissovsky, Hukkok, Yaquq and Habakkuk's Tomb: Changes over Time and Space, 103-118Seth J. Frantzman and Ruth Kark, General Gordon, The Palestine Exploration Fund, and the Origins of 'Gordon's Cavalry' in the Holy Land, 119-136ReviewsT."
+   },
+   "evidences": [
+    {
+     "paper_id": "2c347761d3dce53c47e7ed20ed26f2c52a86cb7f",
+     "source_title": "yaquq",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Dark, Roman-Period and Byzantine Landscapes between Sepphoris and Nazareth, 87-102Nurit Lissovsky, Hukkok, Yaquq and Habakkuk's Tomb: Changes over Time and Space, 103-118Seth J. Frantzman and Ruth Kark, General Gordon, The Palestine Exploration Fund, and the Origins of 'Gordon's Cavalry' in the Holy Land, 119-136ReviewsT.",
+     "page": 1,
+     "snippet": "Dark, Roman-Period and Byzantine Landscapes between Sepphoris",
+     "reason": "The passage does not mention the text 'Signs of the Tomb Inscription' or Rabbi Jacob, emissary of the Yeshiva of Rabbi Jehiel of Paris.",
+     "votes": "2-0",
+     "window": "Dark, Roman-Period and Byzantine Landscapes between Sepphoris and Nazareth, 87-102Nurit Lissovsky, Hukkok, Yaquq and Habakkuk's Tomb: Changes over Time and Space, 103-118Seth J. Frantzman and Ruth Kark, General Gordon, The Palestine Exploration Fund, and the Origins of 'Gordon's Cavalry' in the Holy Land, 119-136ReviewsT."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the text 'Signs of the Tomb Inscription' or Rabbi Jacob, emissary of the Yeshiva of Rabbi Jehiel of Paris.",
+   "subject_guard": {
+    "subject": "Yeshiva of Rabbi Jehiel of Paris",
+    "missing_from": [
+     "2c347761d3dce53c47e7ed20ed26f2c52a86cb7f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The earliest mention of the name Yaquq is in the text \"Signs of the Tomb Inscription\" by Rabbi Jacob, emissary of the Yeshiva of Rabbi Jehiel of Paris (before 1257 CE).",
+    "reason": "The passage directly states a historical fact attributed to a specific text and author, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: the earliest mention of the name Yaquq is in the text 'Signs of the Tomb Inscription' by Rabbi Jacob, emissary of the Yeshiva of Rabbi Jehiel of Paris (before 1257 CE) \u2014 none of these components are present in the provided source text (a table of contents listing an article title with 'Yaquq' but no content about that text or Rabbi Jacob).",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is only a table of contents for PEQ 140, 2008. It contains no mention of 'Signs of the Tomb Inscription', Rabbi Jacob, or the Yeshiva of Rabbi Jehiel of Paris. The sole occurrence of 'Yaquq' is in an article title, which does not support any component of the claim. Since the claim's substantive components (specific text, author, date) cannot be found anywhere in the supplied source, the author must either add a proper citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "Commercially, it peaked at number 22 in Lithuania.",
+   "markers": [
+    "mamialbum"
+   ],
+   "paper_ids": [
+    "bf2156f48d0b4359b7ccea1704184298f46ecbf0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8293,
+   "evidence": {
+    "paper_id": "bf2156f48d0b4359b7ccea1704184298f46ecbf0",
+    "source_title": "mamialbum",
+    "supported": false,
+    "sentence": "JUSTIN BIEBER MILEY CYRUS INNA feat.",
+    "page": 1,
+    "snippet": "JUSTIN BIEBER MILEY CYRUS INNA feat.",
+    "cosine": 0.8293,
+    "reason": "The passage lists song titles and artists but provides no information about chart performance in Lithuania or any other country.",
+    "window": "GUCCI MANE DAVID GUETTA feat. JUSTIN BIEBER MILEY CYRUS INNA feat. ERICK What About Us CAMILA CABELLO feat."
+   },
+   "evidences": [
+    {
+     "paper_id": "bf2156f48d0b4359b7ccea1704184298f46ecbf0",
+     "source_title": "mamialbum",
+     "supported": false,
+     "sentence": "JUSTIN BIEBER MILEY CYRUS INNA feat.",
+     "page": 1,
+     "snippet": "JUSTIN BIEBER MILEY CYRUS INNA feat.",
+     "cosine": 0.8293,
+     "reason": "The passage lists song titles and artists but provides no information about chart performance in Lithuania or any other country.",
+     "window": "GUCCI MANE DAVID GUETTA feat. JUSTIN BIEBER MILEY CYRUS INNA feat. ERICK What About Us CAMILA CABELLO feat."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "commercially",
+    "missing_from": [
+     "bf2156f48d0b4359b7ccea1704184298f46ecbf0"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Commercially, it peaked at number 22 in Lithuania.",
+    "reason": "The passage directly states a factual claim about the commercial performance of something, which is directly attributable to the cited source. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "peaked at number 22 in Lithuania",
+    "rewrite_suggestion": "It appeared on the M-1 Top 40 list in Lithuania.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text from 'mamialbum' is a web page listing songs for a Lithuanian radio station's Top 40, but it contains no numerical rankings or chart positions. The claim requires that the source state a peak at number 22, which is entirely absent. Therefore the author must either add a citation for that specific figure or rewrite the claim to match what the source actually shows (e.g., that the song appeared on the list without a rank)."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "Her initial contributions spanned the formulation of the program and subsequently expanded the initiative across all of Harvard's outlets.",
+   "markers": [
+    "claytonspencer"
+   ],
+   "paper_ids": [
+    "d5d46212383f24eae22185bb55dd38f0cdcba7bb"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.884,
+   "evidence": {
+    "paper_id": "d5d46212383f24eae22185bb55dd38f0cdcba7bb",
+    "source_title": "claytonspencer",
+    "supported": false,
+    "sentence": "President Bacow describes Harvard's multifaceted approach to \"a defining challenge of our time.\"",
+    "page": 1,
+    "snippet": "President Bacow describes Harvard's multifaceted approach to",
+    "cosine": 0.884,
+    "reason": "The passage does not mention the individual's contributions to a program or the expansion of an initiative across Harvard's outlets.",
+    "window": "September-October 2019 Lawrence S. Bacow ### Climate Change President Bacow describes Harvard's multifaceted approach to \"a defining challenge of our time.\" September-October 2019 more Arts Click on arrow at right to view full image gallery(1 of 4) Mak designed lighting for a 2019 staging of The Bridges of Madison County by the Philadelphia Theater Company."
+   },
+   "evidences": [
+    {
+     "paper_id": "d5d46212383f24eae22185bb55dd38f0cdcba7bb",
+     "source_title": "claytonspencer",
+     "supported": false,
+     "sentence": "President Bacow describes Harvard's multifaceted approach to \"a defining challenge of our time.\"",
+     "page": 1,
+     "snippet": "President Bacow describes Harvard's multifaceted approach to",
+     "cosine": 0.884,
+     "reason": "The passage does not mention the individual's contributions to a program or the expansion of an initiative across Harvard's outlets.",
+     "window": "September-October 2019 Lawrence S. Bacow ### Climate Change President Bacow describes Harvard's multifaceted approach to \"a defining challenge of our time.\" September-October 2019 more Arts Click on arrow at right to view full image gallery(1 of 4) Mak designed lighting for a 2019 staging of The Bridges of Madison County by the Philadelphia Theater Company."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes the author's contributions and their expansion of an initiative. There is no explicit attribution to the cited source, nor does it describe the authors' own study or argument. Therefore, it defaults to 'full' scope, implying the cited source is expected to support these factual claims about the contributions.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: that A. Clayton Spencer formulated a program and expanded it across all of Harvard's outlets is not supported by the cited source.",
+    "rewrite_suggestion": "The claim should be rewritten to reflect only what the source actually states, or a different citation should be provided.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence refers to President Bacow discussing climate change, not to A. Clayton Spencer. The cited source (the 'claytonspencer' article) is only represented by a headline and a snippet with no substantive text about her contributions. Therefore, the source provides no proof for any component of the claim."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "All candidates (pre- and post-2015) receive a Statement of Results, with those scoring high enough also receiving a certificate.",
+   "markers": [
+    "b2first"
+   ],
+   "paper_ids": [
+    "b2a71747696c308514d828b52fe2f364df8ea769"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8643,
+   "evidence": {
+    "paper_id": "b2a71747696c308514d828b52fe2f364df8ea769",
+    "source_title": "b2first",
+    "supported": false,
+    "sentence": "Results on the scale also give a greater insight into candidate progression from one exam to the next.",
+    "page": 1,
+    "snippet": "Results on the scale also give a",
+    "cosine": 0.8643,
+    "reason": "The passage discusses the benefits of exam alignment and candidate progression but does not mention the issuance of Statements of Results or certificates to candidates.",
+    "window": "Easy to compare performance \u2013 the alignment of our exams to the CEFR, to IELTS and to each other is clear. Results on the scale also give a greater insight into candidate progression from one exam to the next. Download a factsheet about the Cambridge English Scale"
+   },
+   "evidences": [
+    {
+     "paper_id": "b2a71747696c308514d828b52fe2f364df8ea769",
+     "source_title": "b2first",
+     "supported": false,
+     "sentence": "Results on the scale also give a greater insight into candidate progression from one exam to the next.",
+     "page": 1,
+     "snippet": "Results on the scale also give a",
+     "cosine": 0.8643,
+     "reason": "The passage discusses the benefits of exam alignment and candidate progression but does not mention the issuance of Statements of Results or certificates to candidates.",
+     "window": "Easy to compare performance \u2013 the alignment of our exams to the CEFR, to IELTS and to each other is clear. Results on the scale also give a greater insight into candidate progression from one exam to the next. Download a factsheet about the Cambridge English Scale"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes the outcomes and awards given to candidates, which are factual statements expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The source does not mention a 'Statement of Results' document or a certificate, and it only covers results from 2015 onward, not pre-2015 candidates.",
+    "rewrite_suggestion": "Candidates taking exams after the specified dates receive a score for each skill and an overall score on the Cambridge English Scale.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is irrelevant; it discusses candidate progression, not Statements of Results or certificates. The source text describes the Cambridge English Scale and results reporting, including detailed scores, but never states that all candidates receive a 'Statement of Results' or that high-scorers receive a certificate. Moreover, it only addresses post-2015 results, so the claim about pre-2015 candidates is unsourced. Therefore, the claim requires a new citation or a rewrite to match what the source actually says."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "f5cc78d6bac74c370d9a108b7a473e67de21e0cf": {
+    "title": "guillermodeltoro",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "aeb4de9b950a9db0193c89a70453d6a35fbf2dbe": {
+    "title": "jeffbezos",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8deaad643c1585951767b8d822e63cec5a6a1bcc": {
+    "title": "stevenuniverse",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0325c64715b91803d3a7405dd21b5d926e0d8e18": {
+    "title": "vietnamenterpriseinvestm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0e09164d267fc2e2bd883f85a87c98117e454b2c": {
+    "title": "legendsclassicbasketball",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d5d46212383f24eae22185bb55dd38f0cdcba7bb": {
+    "title": "claytonspencer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "99f00d21f8b3d3b8a389f6836707d4e784d65b12": {
+    "title": "michellewilliamsactress",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4ffdc81368008ce20fcb117fbf06e3ccc15cbd26": {
+    "title": "minnesota",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c49a8b35fd960d0a3c9ee53ed4dd3fd67d6dbf29": {
+    "title": "scottbaileyactor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e67cf3a9a7d6355287a25ae995f8d025b445f423": {
+    "title": "crueltytoanimals",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e29421e26b3b7c1e0cd69e225bd01f6893e3a86e": {
+    "title": "fwdeklerk",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "703bea7337d87e6975b3ee2169f83b0f537892dd": {
+    "title": "therandomyears",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "76ebd92700d74f077e9ddc6682a6279b301c3047": {
+    "title": "mcgillarcticresearchstat",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b2a71747696c308514d828b52fe2f364df8ea769": {
+    "title": "b2first",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3bfafebd4d0b9a5d96e3125b398d7a41335df3f8": {
+    "title": "brianhart",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a9caacb80c36aa1de69f9446a3931e30cbc99ac2": {
+    "title": "morningconsult",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7a3a89c03a11b1cd874cea0edecbadc4da54bb17": {
+    "title": "glennboyer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0aca9724700f06085a3a74c1dae1f00c14fd9f38": {
+    "title": "danmeyerwisconsinpolitic",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4a94bb82a8e3cdb6c5021cc27c12e998a3cd32fa": {
+    "title": "swanseauniversity",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2c347761d3dce53c47e7ed20ed26f2c52a86cb7f": {
+    "title": "yaquq",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4152f19feb4716aab74a71744472e7eab23af5cf": {
+    "title": "greenlanternfilm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "13b2bc7fb4569626900d39f4546cfd62a76a66b0": {
+    "title": "executivesuite",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "50ced167b8c7626d90f8ca9324b2670799d264de": {
+    "title": "benjaminwarf",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a03195e4ef67c3c75780f0afd479532470b9211b": {
+    "title": "graudmicheldepierredon",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bf2156f48d0b4359b7ccea1704184298f46ecbf0": {
+    "title": "mamialbum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "83c9ec599654964927a73a818140a42a57174668": {
+    "title": "albionclasslandingplatfo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 1,
+   "unsupported": 25,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:57:02",
+  "marker_errors": [],
+  "processing_time_seconds": 446.2,
+  "source_hashes": {
+   "jeffbezos.txt": "89680be2c7bb9df211e04869404c24113861d1ca",
+   "benjaminwarf.txt": "e6a966d498cbdcc99baf0600bfb410f9bb89956a",
+   "minnesota.txt": "e685bbd670fc43efb62122c1fe1c25edcfc3a6ea",
+   "guillermodeltoro.txt": "4097fea405bbe429f360813afa6b9b76b99844e2",
+   "stevenuniverse.txt": "20ef0556f26a47faa1117d4fb6c1bc203d670a80",
+   "vietnamenterpriseinvestm.txt": "50058bb1b7034d8ad8021b90221be6dc57a3cc9c",
+   "danmeyerwisconsinpolitic.txt": "aef8a59c4d72f195bb5906f3ebe79d2f8cff6400",
+   "greenlanternfilm.txt": "36b413444257c579789aca21be9cf23e2459a000",
+   "legendsclassicbasketball.txt": "a1d73b9797f9758478003ddc3cf4deaf91d9007e",
+   "crueltytoanimals.txt": "c7cf60a4bfff95424d8ce8c4a0cf0ffee0e0910c",
+   "morningconsult.txt": "78546218ef6b12f0699f16210c76bf8d9c51629b",
+   "scottbaileyactor.txt": "96febfa251f3afd41960109668c4b3943ec8f7d3",
+   "executivesuite.txt": "9f46e8b09d81b20b5a89580cedd2cb884509be6d",
+   "fwdeklerk.txt": "c5a8b0ee5ea77968bc30c1cd2f4bb3e981c09f79",
+   "glennboyer.txt": "734e54361ccdc2ea65e0d4a9e84800f67237b580",
+   "graudmicheldepierredon.txt": "69d443ae8d7596385c2bccfc71954256c3cc35e5",
+   "albionclasslandingplatfo.txt": "7449c6e3c6390d2807d2fd91909b4bb3cdfac22d",
+   "michellewilliamsactress.txt": "61cee9a55396de9a75a0144b827da3817e86013c",
+   "swanseauniversity.txt": "824da328a7a91036c0b40a5ea0ff4f2076e4437b",
+   "mcgillarcticresearchstat.txt": "a1ac4ee1a33f2ef66b894d28620599183d2e3bb2",
+   "therandomyears.txt": "f193942cddfcd5c07327ea3d00c287f79b4e5d54",
+   "brianhart.txt": "d6b4614183320a40141566064f062b73ecc74a87",
+   "yaquq.txt": "d44dc8bda8c59eb5fdd5246bbe29beb9b3e6106c",
+   "mamialbum.txt": "812bc4daa4f25fa9774d69efc56afd78cc45459e",
+   "claytonspencer.txt": "4a6a62fccf3692f3e833fc6cdc5b9463519ceda3",
+   "b2first.txt": "24fb1c11ecd3dfb0b69e11d41de8c32dfc3641cc"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 320,
+    "prompt_tokens": 336314,
+    "completion_tokens": 10102,
+    "cost_usd": 0.037815
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 30,
+    "prompt_tokens": 88176,
+    "completion_tokens": 52081,
+    "cost_usd": 0.021606
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 24,
+    "methods": 0,
+    "concept": 1,
+    "related": 0
+   },
+   "scoped_ids": [
+    "t10"
+   ]
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 26,
+   "actions": {
+    "add_citation_or_rewrite": 25,
+    "wrong_or_insufficient_evidence": 1
+   },
+   "proof_may_exist": [],
+   "conflicts": [],
+   "rescued": [],
+   "amber_resolved": [
+    "t18"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "aeb4de9b950a9db0193c89a70453d6a35fbf2dbe",
+   "key": "jeffbezos",
+   "filename": "jeffbezos.txt",
+   "title": "jeffbezos",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "50ced167b8c7626d90f8ca9324b2670799d264de",
+   "key": "benjaminwarf",
+   "filename": "benjaminwarf.txt",
+   "title": "benjaminwarf",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4ffdc81368008ce20fcb117fbf06e3ccc15cbd26",
+   "key": "minnesota",
+   "filename": "minnesota.txt",
+   "title": "minnesota",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f5cc78d6bac74c370d9a108b7a473e67de21e0cf",
+   "key": "guillermodeltoro",
+   "filename": "guillermodeltoro.txt",
+   "title": "guillermodeltoro",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8deaad643c1585951767b8d822e63cec5a6a1bcc",
+   "key": "stevenuniverse",
+   "filename": "stevenuniverse.txt",
+   "title": "stevenuniverse",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0325c64715b91803d3a7405dd21b5d926e0d8e18",
+   "key": "vietnamenterpriseinvestm",
+   "filename": "vietnamenterpriseinvestm.txt",
+   "title": "vietnamenterpriseinvestm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0aca9724700f06085a3a74c1dae1f00c14fd9f38",
+   "key": "danmeyerwisconsinpolitic",
+   "filename": "danmeyerwisconsinpolitic.txt",
+   "title": "danmeyerwisconsinpolitic",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4152f19feb4716aab74a71744472e7eab23af5cf",
+   "key": "greenlanternfilm",
+   "filename": "greenlanternfilm.txt",
+   "title": "greenlanternfilm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0e09164d267fc2e2bd883f85a87c98117e454b2c",
+   "key": "legendsclassicbasketball",
+   "filename": "legendsclassicbasketball.txt",
+   "title": "legendsclassicbasketball",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e67cf3a9a7d6355287a25ae995f8d025b445f423",
+   "key": "crueltytoanimals",
+   "filename": "crueltytoanimals.txt",
+   "title": "crueltytoanimals",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a9caacb80c36aa1de69f9446a3931e30cbc99ac2",
+   "key": "morningconsult",
+   "filename": "morningconsult.txt",
+   "title": "morningconsult",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c49a8b35fd960d0a3c9ee53ed4dd3fd67d6dbf29",
+   "key": "scottbaileyactor",
+   "filename": "scottbaileyactor.txt",
+   "title": "scottbaileyactor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "13b2bc7fb4569626900d39f4546cfd62a76a66b0",
+   "key": "executivesuite",
+   "filename": "executivesuite.txt",
+   "title": "executivesuite",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e29421e26b3b7c1e0cd69e225bd01f6893e3a86e",
+   "key": "fwdeklerk",
+   "filename": "fwdeklerk.txt",
+   "title": "fwdeklerk",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7a3a89c03a11b1cd874cea0edecbadc4da54bb17",
+   "key": "glennboyer",
+   "filename": "glennboyer.txt",
+   "title": "glennboyer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a03195e4ef67c3c75780f0afd479532470b9211b",
+   "key": "graudmicheldepierredon",
+   "filename": "graudmicheldepierredon.txt",
+   "title": "graudmicheldepierredon",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "83c9ec599654964927a73a818140a42a57174668",
+   "key": "albionclasslandingplatfo",
+   "filename": "albionclasslandingplatfo.txt",
+   "title": "albionclasslandingplatfo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "99f00d21f8b3d3b8a389f6836707d4e784d65b12",
+   "key": "michellewilliamsactress",
+   "filename": "michellewilliamsactress.txt",
+   "title": "michellewilliamsactress",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4a94bb82a8e3cdb6c5021cc27c12e998a3cd32fa",
+   "key": "swanseauniversity",
+   "filename": "swanseauniversity.txt",
+   "title": "swanseauniversity",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "76ebd92700d74f077e9ddc6682a6279b301c3047",
+   "key": "mcgillarcticresearchstat",
+   "filename": "mcgillarcticresearchstat.txt",
+   "title": "mcgillarcticresearchstat",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "703bea7337d87e6975b3ee2169f83b0f537892dd",
+   "key": "therandomyears",
+   "filename": "therandomyears.txt",
+   "title": "therandomyears",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3bfafebd4d0b9a5d96e3125b398d7a41335df3f8",
+   "key": "brianhart",
+   "filename": "brianhart.txt",
+   "title": "brianhart",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2c347761d3dce53c47e7ed20ed26f2c52a86cb7f",
+   "key": "yaquq",
+   "filename": "yaquq.txt",
+   "title": "yaquq",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bf2156f48d0b4359b7ccea1704184298f46ecbf0",
+   "key": "mamialbum",
+   "filename": "mamialbum.txt",
+   "title": "mamialbum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d5d46212383f24eae22185bb55dd38f0cdcba7bb",
+   "key": "claytonspencer",
+   "filename": "claytonspencer.txt",
+   "title": "claytonspencer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b2a71747696c308514d828b52fe2f364df8ea769",
+   "key": "b2first",
+   "filename": "b2first.txt",
+   "title": "b2first",
+   "num_claims": 0
+  }
+ ]
+}

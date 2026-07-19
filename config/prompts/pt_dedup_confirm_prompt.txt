@@ -1,0 +1,36 @@
+You are checking whether pairs of claims taken from TWO DIFFERENT papers assert
+the same thing. Below is a numbered list of claim pairs (A and B per pair, each
+from a different source).
+
+For each pair, classify the relationship:
+- "restatement"     : A and B assert the same fact or finding (different papers
+                      independently stating the same thing, or one citing the
+                      other's result).
+- "hedged_variant"  : the same core claim at different strengths or specificity
+                      (e.g. "X removes 95% of Y" vs "X effectively removes Y").
+- "different_claim" : they assert genuinely different things, even if the topic,
+                      method, or terminology overlaps. Two papers using the same
+                      model, equation, or procedure are NOT making the same claim
+                      unless the asserted content matches.
+
+Rules:
+- Be conservative in BOTH directions: shared domain vocabulary is NOT the same
+  claim, and different wording is NOT automatically a different claim.
+- A claim about a different quantity, material, condition, or direction of
+  effect than its pair is "different_claim" even when the sentences look alike.
+- Watch for ordinal/numeric switches (first vs second, 2024 vs 2025) — near-
+  identical sentences that differ in one such token are "different_claim".
+- A definition of a symbol or term and a claim about its measured value are
+  different claims ("Qm is the maximum capacity" vs "the capacity was 22 mg/g").
+- Do not merge claims merely because they belong to the same analysis, method,
+  or topic ("kinetic models were fitted" vs "the data fit the Langmuir model"
+  are different claims).
+- When uncertain, answer "different_claim" — a missed duplicate is a minor
+  loss, a wrong merge corrupts downstream counts.
+- "why" is one short clause.
+
+Return ONLY JSON, no prose, in exactly this shape:
+{"pairs": [{"n": <pair number>, "relation": "restatement|hedged_variant|different_claim", "why": "<one short clause>"}]}
+
+PAIRS:
+{PAIRS}

@@ -1,0 +1,2695 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 9 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Burn One credits the experience with teaching him how to \"sell\" music, from a marketing standpoint, to an interested customer.",
+   "markers": [
+    "djburnone"
+   ],
+   "paper_ids": [
+    "928b80b61066644732ef1b6b3a6012b572f09ba0"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "928b80b61066644732ef1b6b3a6012b572f09ba0",
+    "source_title": "djburnone",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody.",
+    "page": 1,
+    "snippet": "I started off in music working at",
+    "reason": "The passage explicitly states that Burn One's thought process in making music comes from how he would sell it to somebody, and that he tries to figure out the selling points when making his music.",
+    "votes": "2-0",
+    "window": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody. So I try to figure out what those selling points are when I'm making my music. People used to come in the store ands say \"Yo what's hot?\" So it's about picking the right records, putting them in the right order and presenting them in the right way."
+   },
+   "evidences": [
+    {
+     "paper_id": "928b80b61066644732ef1b6b3a6012b572f09ba0",
+     "source_title": "djburnone",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody.",
+     "page": 1,
+     "snippet": "I started off in music working at",
+     "reason": "The passage explicitly states that Burn One's thought process in making music comes from how he would sell it to somebody, and that he tries to figure out the selling points when making his music.",
+     "votes": "2-0",
+     "window": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody. So I try to figure out what those selling points are when I'm making my music. People used to come in the store ands say \"Yo what's hot?\" So it's about picking the right records, putting them in the right order and presenting them in the right way."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Burn One's thought process in making music comes from how he would sell it to somebody, and that he tries to figure out the selling points when making his music.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Burn One learned how to \"sell\" music from a marketing standpoint from his experience at Super Sounds.",
+      "paper_id": "928b80b61066644732ef1b6b3a6012b572f09ba0",
+      "source_title": "djburnone",
+      "sentence": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody.",
+      "page": 1,
+      "snippet": "I started off in music working at"
+     },
+     {
+      "component": "Burn One credits the experience with teaching him how to \"sell\" music, from a marketing standpoint, to an interested customer.",
+      "paper_id": "928b80b61066644732ef1b6b3a6012b572f09ba0",
+      "source_title": "djburnone",
+      "sentence": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody.",
+      "page": 1,
+      "snippet": "I started off in music working at"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "928b80b61066644732ef1b6b3a6012b572f09ba0",
+      "source_title": "djburnone",
+      "text": "I started off in music working at a mom and pop store called Super Sounds in Atlanta, so my whole thought process in making music comes from how I would sell it to somebody.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t2",
+   "text": "As a result, the British tabloids dubbed him \"Bonking Boris\".",
+   "markers": [
+    "borisbecker"
+   ],
+   "paper_ids": [
+    "36eae8a4161a3622be897ef8e6567ca27360a703"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+    "source_title": "borisbecker",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "When he suffered a similar loss to an unknown at Wimbledon months later, rumors swirled that he'd become too distracted by his girlfriend, Benedicte Courtin \u2014 the daughter of Monaco's chief of police \u2014 and the British tabloids dubbed him \"Bonking Boris.\"",
+    "page": 1,
+    "snippet": "When he suffered a similar loss to",
+    "reason": "The passage explicitly states that the British tabloids dubbed him \"Bonking Boris\" due to rumors of distraction by his girlfriend.",
+    "votes": "2-0",
+    "window": "When he suffered a similar loss to an unknown at Wimbledon months later, rumors swirled that he'd become too distracted by his girlfriend, Benedicte Courtin \u2014 the daughter of Monaco's chief of police \u2014 and the British tabloids dubbed him \"Bonking Boris.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+     "source_title": "borisbecker",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "When he suffered a similar loss to an unknown at Wimbledon months later, rumors swirled that he'd become too distracted by his girlfriend, Benedicte Courtin \u2014 the daughter of Monaco's chief of police \u2014 and the British tabloids dubbed him \"Bonking Boris.\"",
+     "page": 1,
+     "snippet": "When he suffered a similar loss to",
+     "reason": "The passage explicitly states that the British tabloids dubbed him \"Bonking Boris\" due to rumors of distraction by his girlfriend.",
+     "votes": "2-0",
+     "window": "When he suffered a similar loss to an unknown at Wimbledon months later, rumors swirled that he'd become too distracted by his girlfriend, Benedicte Courtin \u2014 the daughter of Monaco's chief of police \u2014 and the British tabloids dubbed him \"Bonking Boris.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the British tabloids dubbed him \"Bonking Boris\" due to rumors of distraction by his girlfriend.",
+   "covering": {
+    "covered": [
+     {
+      "component": "British tabloids dubbed him \"Bonking Boris\"",
+      "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+      "source_title": "borisbecker",
+      "sentence": "When he suffered a similar loss to an unknown at Wimbledon months later, rumors swirled that he'd become too distracted by his girlfriend, Benedicte Courtin \u2014 the daughter of Monaco's chief of police \u2014 and the British tabloids dubbed him \"Bonking Boris.\"",
+      "page": 1,
+      "snippet": "When he suffered a similar loss to"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+      "source_title": "borisbecker",
+      "text": "When he suffered a similar loss to an unknown at Wimbledon months later, rumors swirled that he'd become too distracted by his girlfriend, Benedicte Courtin \u2014 the daughter of Monaco's chief of police \u2014 and the British tabloids dubbed him \"Bonking Boris.\"",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t3",
+   "text": "The decision was made despite the protests of VanderMeer, and prompted her to end her association with the magazine.",
+   "markers": [
+    "weirdtales"
+   ],
+   "paper_ids": [
+    "f12f7c4c0fb939a54077df1939f316ce37e9ff58"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8872,
+   "evidence": {
+    "paper_id": "f12f7c4c0fb939a54077df1939f316ce37e9ff58",
+    "source_title": "weirdtales",
+    "supported": true,
+    "sentence": "The author Jeff Vandermeer said he would never submit to the magazine again while it was run by the current editorial staff, describing himself as \"just quite frankly livid and utterly enraged\", as did the writer NK Jemisin, hitting out at Weird Tales' \"brave commitment to racism\" in a blog post entitled \"This is how you destroy something beautiful\".",
+    "page": 1,
+    "snippet": "The author Jeff Vandermeer said he would",
+    "cosine": 0.8872,
+    "reason": "The passage states that Ann Vandermeer resigned from her position as contributing senior editor after the magazine ran an editorial defending a novel as non-racist, which aligns with the claim that she ended her association with the magazine due to a decision made despite her protests.",
+    "window": "When Weird Tales, America's oldest fantasy magazine, ran an editorial by Marvin Kaye last week defending the novel as \"a thoroughly non-racist book\" and announcing its intention to run an extract, it prompted a huge backlash from readers and writers. The author Jeff Vandermeer said he would never submit to the magazine again while it was run by the current editorial staff, describing himself as \"just quite frankly livid and utterly enraged\", as did the writer NK Jemisin, hitting out at Weird Tales' \"brave commitment to racism\" in a blog post entitled \"This is how you destroy something beautiful\". Ann Vandermeer, the former editor of the magazine who was pushed out when it was sold to new editor Kaye, resigned from her current position as contributing senior editor (her husband Jeff said she was \"personally devastat[ed] given that the new vision for Weird Tales seems to be so against everything that she envisioned for the future of the magazine\")."
+   },
+   "evidences": [
+    {
+     "paper_id": "f12f7c4c0fb939a54077df1939f316ce37e9ff58",
+     "source_title": "weirdtales",
+     "supported": true,
+     "sentence": "The author Jeff Vandermeer said he would never submit to the magazine again while it was run by the current editorial staff, describing himself as \"just quite frankly livid and utterly enraged\", as did the writer NK Jemisin, hitting out at Weird Tales' \"brave commitment to racism\" in a blog post entitled \"This is how you destroy something beautiful\".",
+     "page": 1,
+     "snippet": "The author Jeff Vandermeer said he would",
+     "cosine": 0.8872,
+     "reason": "The passage states that Ann Vandermeer resigned from her position as contributing senior editor after the magazine ran an editorial defending a novel as non-racist, which aligns with the claim that she ended her association with the magazine due to a decision made despite her protests.",
+     "window": "When Weird Tales, America's oldest fantasy magazine, ran an editorial by Marvin Kaye last week defending the novel as \"a thoroughly non-racist book\" and announcing its intention to run an extract, it prompted a huge backlash from readers and writers. The author Jeff Vandermeer said he would never submit to the magazine again while it was run by the current editorial staff, describing himself as \"just quite frankly livid and utterly enraged\", as did the writer NK Jemisin, hitting out at Weird Tales' \"brave commitment to racism\" in a blog post entitled \"This is how you destroy something beautiful\". Ann Vandermeer, the former editor of the magazine who was pushed out when it was sold to new editor Kaye, resigned from her current position as contributing senior editor (her husband Jeff said she was \"personally devastat[ed] given that the new vision for Weird Tales seems to be so against everything that she envisioned for the future of the magazine\")."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Ann Vandermeer resigned from her position as contributing senior editor after the magazine ran an editorial defending a novel as non-racist, which aligns with the claim that she ended her association with the magazine due to a decision made despite her protests.",
+   "covering": {
+    "covered": [
+     {
+      "component": "VanderMeer protested the decision",
+      "paper_id": "f12f7c4c0fb939a54077df1939f316ce37e9ff58",
+      "source_title": "weirdtales",
+      "sentence": "The author Jeff Vandermeer said he would never submit to the magazine again while it was run by the current editorial staff, describing himself as \"just quite frankly livid and utterly enraged\", as did the writer NK Jemisin, hitting out at Weird Tales' \"brave commitment to racism\" in a blog post entitled \"This is how you destroy something beautiful\".",
+      "page": 1,
+      "snippet": "The author Jeff Vandermeer said he would"
+     },
+     {
+      "component": "VanderMeer ended her association with the magazine",
+      "paper_id": "f12f7c4c0fb939a54077df1939f316ce37e9ff58",
+      "source_title": "weirdtales",
+      "sentence": "Ann Vandermeer, the former editor of the magazine who was pushed out when it was sold to new editor Kaye, resigned from her current position as contributing senior editor (her husband Jeff said she was \"personally devastat[ed] given that the new vision for Weird Tales seems to be so against everything that she envisioned for the future of the magazine\").",
+      "page": 1,
+      "snippet": "Ann Vandermeer, the former editor of the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f12f7c4c0fb939a54077df1939f316ce37e9ff58",
+      "source_title": "weirdtales",
+      "text": "The author Jeff Vandermeer said he would never submit to the magazine again while it was run by the current editorial staff, describing himself as \"just quite frankly livid and utterly enraged\", as did the writer NK Jemisin, hitting out at Weird Tales' \"brave commitment to racism\" in a blog post entitled \"This is how you destroy something beautiful\". Ann Vandermeer, the former editor of the magazine who was pushed out when it was sold to new editor Kaye, resigned from her current position as contributing senior editor (her husband Jeff said she was \"personally devastat[ed] given that the new vision for Weird Tales seems to be so against everything that she envisioned for the future of the magazine\").",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage does not state that Ann Vandermeer protested the decision.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Ann Vandermeer protested the decision",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the decision was made despite the protests of VanderMeer",
+    "rewrite_suggestion": "The decision prompted protests from Jeff VanderMeer and led to Ann VanderMeer ending her association with the magazine.",
+    "proofs": [
+     "When Weird Tales, America's oldest fantasy magazine, ran an editorial by Marvin Kaye last week defending the novel as \"a thoroughly non-racist book\" and announcing its intention to run an extract, it prompted a huge backlash from readers and writers.",
+     "Ann Vandermeer, the former editor of the magazine who was pushed out when it was sold to new editor Kaye, resigned from her current position as contributing senior editor (her husband Jeff said she was \"personally devastat[ed] given that the new vision for Weird Tales seems to be so against everything that she envisioned for the future of the magazine\")."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the decision was made despite protests from VanderMeer, but the source shows the protests occurred as a reaction to the decision, not that the decision was made in spite of them. This component is not supported by the source and is an unsourced aside. The other components (the decision itself and that it prompted Ann VanderMeer to resign) are provable from the source, but the 'despite' part requires the author to either add a citation or rewrite the claim to reflect the actual timeline."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "By the late 1990s, the bridge was carrying twice as much traffic as it was designed to handle, and calls from Eastside cities and companies for a replacement bridge intensified.",
+   "markers": [
+    "washingtonstateroute520"
+   ],
+   "paper_ids": [
+    "4ae4e50b982e084c4a2b723beadbb8b38244b798"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4ae4e50b982e084c4a2b723beadbb8b38244b798",
+    "source_title": "washingtonstateroute520",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Built to standards of the 1950s, the Evergreen Point Floating Bridge routinely carries twice as many vehicles as it was designed to handle.",
+    "page": 1,
+    "snippet": "Built to standards of the 1950s, the",
+    "reason": "The passage does not specify the late 1990s as the timeframe for the bridge carrying twice its designed capacity.",
+    "votes": "2-0",
+    "window": "Built to standards of the 1950s, the Evergreen Point Floating Bridge routinely carries twice as many vehicles as it was designed to handle. March 1996: Representatives of Boeing, Microsoft, Weyerhaeuser and other businesses ask the Regional Transit Authority to fund a study on expanding the 520 bridge. Almost as many of Microsoft's 9,000 Redmond employees commute to work from Seattle as from the Eastside. They urged the Regional Transit Authority (RTA) to include a $3 million study of Highway 520 and possible construction of new transit lanes across the lake in last fall's (successful) $3.9 billion ballot issue. -- An informal coalition of Eastside business leaders, backed by the city of Bellevue, has been meeting with legislators, and Seattle and Eastside residents to drum up support for a $3 million study of how best to move people and freight across the north end of Lake Washington. Meanwhile, traffic jams worsened as Microsoft led an employment boom that put thousands more commuters on the road. Microsoft has a huge stake in improving transportation between Seattle and the Eastside. Last spring, representatives from Boeing, Weyerhaeuser, Bellevue Square and other economic powerhouses met quietly on the Microsoft campus to discuss concerns that the region's economic vitality would wither should highways become so clogged employees couldn't get to work and freight couldn't get to market."
+   },
+   "evidences": [
+    {
+     "paper_id": "4ae4e50b982e084c4a2b723beadbb8b38244b798",
+     "source_title": "washingtonstateroute520",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Built to standards of the 1950s, the Evergreen Point Floating Bridge routinely carries twice as many vehicles as it was designed to handle.",
+     "page": 1,
+     "snippet": "Built to standards of the 1950s, the",
+     "reason": "The passage does not specify the late 1990s as the timeframe for the bridge carrying twice its designed capacity.",
+     "votes": "2-0",
+     "window": "Built to standards of the 1950s, the Evergreen Point Floating Bridge routinely carries twice as many vehicles as it was designed to handle. March 1996: Representatives of Boeing, Microsoft, Weyerhaeuser and other businesses ask the Regional Transit Authority to fund a study on expanding the 520 bridge. Almost as many of Microsoft's 9,000 Redmond employees commute to work from Seattle as from the Eastside. They urged the Regional Transit Authority (RTA) to include a $3 million study of Highway 520 and possible construction of new transit lanes across the lake in last fall's (successful) $3.9 billion ballot issue. -- An informal coalition of Eastside business leaders, backed by the city of Bellevue, has been meeting with legislators, and Seattle and Eastside residents to drum up support for a $3 million study of how best to move people and freight across the north end of Lake Washington. Meanwhile, traffic jams worsened as Microsoft led an employment boom that put thousands more commuters on the road. Microsoft has a huge stake in improving transportation between Seattle and the Eastside. Last spring, representatives from Boeing, Weyerhaeuser, Bellevue Square and other economic powerhouses met quietly on the Microsoft campus to discuss concerns that the region's economic vitality would wither should highways become so clogged employees couldn't get to work and freight couldn't get to market."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not specify the late 1990s as the timeframe for the bridge carrying twice its designed capacity.",
+   "component_check": {
+    "found": [
+     "By the late 1990s, the bridge was carrying twice as much traffic as it was designed to handle",
+     "calls from Eastside cities and companies for a replacement bridge intensified"
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "By the late 1990s, the bridge was carrying twice as much traffic as it was designed to handle",
+      "paper_id": "4ae4e50b982e084c4a2b723beadbb8b38244b798",
+      "source_title": "washingtonstateroute520",
+      "sentence": "Built to standards of the 1950s, the Evergreen Point Floating Bridge routinely carries twice as many vehicles as it was designed to handle.",
+      "page": 1
+     },
+     {
+      "component": "calls from Eastside cities and companies for a replacement bridge intensified",
+      "paper_id": "4ae4e50b982e084c4a2b723beadbb8b38244b798",
+      "source_title": "washingtonstateroute520",
+      "sentence": "-- Daniel Becker - Elected to the Medina City Council after opposing toll-financed bridge expansion, he has been named \"point man\" on the Highway 520 issue by the cities of Medina, Clyde Hill and Hunts Point.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "the bridge was carrying twice as much traffic as it was designed to handle",
+    "reason": "The passage asserts a specific fact about the bridge's traffic load, which is directly attributable to the cited source. The attribution test is met as the passage implies the source would provide this information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Built to standards of the 1950s, the Evergreen Point Floating Bridge routinely carries twice as many vehicles as it was designed to handle.",
+     "Support for the study seems to be growing and includes endorsements last week from the Seattle Chamber of Commerce and the Montlake Community Club.",
+     "An informal coalition of Eastside business leaders, backed by the city of Bellevue, has been meeting with legislators, and Seattle and Eastside residents to drum up support for a $3 million study of how best to move people and freight across the north end of Lake Washington."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves the traffic-volume component. The source also contains sentences that directly show intensifying calls for a solution (including a replacement bridge), such as 'Support for the study seems to be growing' and the description of business and city leaders pushing for a study. The tool did not display these, so the claim is provable from the source but not from the shown sentences alone.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t5",
+   "text": "The film was praised for its visual style, acting, and cinematography, but was controversial for whitewashing the cast, particularly Johansson's character, a cyborg who was meant to hold the memories of a Japanese woman.",
+   "markers": [
+    "scarlettjohansson"
+   ],
+   "paper_ids": [
+    "bd9036f79e98c965d62cb662bc61eb2cad0e7c5f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bd9036f79e98c965d62cb662bc61eb2cad0e7c5f",
+    "source_title": "scarlettjohansson",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"The original film is set in Japan, and the major cast members are Japanese,\" reads the petition.",
+    "page": 1,
+    "snippet": "\"The original film is set in Japan,",
+    "reason": "The passage does not mention praise for the film's visual style, acting, or cinematography.",
+    "votes": "2-0",
+    "window": "\"The original film is set in Japan, and the major cast members are Japanese,\" reads the petition. Photograph: Allstar/Europacorp Ben Child Friday 16 January 2015 07.23 EST Last modified on Friday 16 January 2015 07.27 EST Campaigners angered at the paucity of roles for east Asian actors in Hollywood have launched a petition calling for Scarlett Johansson to be dismissed from the forthcoming US remake of classic anime Ghost in the Shell. The campaign on thepetitionsite.com, which has picked up more than 15,000 signatures, calls for studio DreamWorks to replace her with an actor of Asian origin, and accuses Hollywood of \"whitewashing\". \"So why would the American remake star a white actress?"
+   },
+   "evidences": [
+    {
+     "paper_id": "bd9036f79e98c965d62cb662bc61eb2cad0e7c5f",
+     "source_title": "scarlettjohansson",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"The original film is set in Japan, and the major cast members are Japanese,\" reads the petition.",
+     "page": 1,
+     "snippet": "\"The original film is set in Japan,",
+     "reason": "The passage does not mention praise for the film's visual style, acting, or cinematography.",
+     "votes": "2-0",
+     "window": "\"The original film is set in Japan, and the major cast members are Japanese,\" reads the petition. Photograph: Allstar/Europacorp Ben Child Friday 16 January 2015 07.23 EST Last modified on Friday 16 January 2015 07.27 EST Campaigners angered at the paucity of roles for east Asian actors in Hollywood have launched a petition calling for Scarlett Johansson to be dismissed from the forthcoming US remake of classic anime Ghost in the Shell. The campaign on thepetitionsite.com, which has picked up more than 15,000 signatures, calls for studio DreamWorks to replace her with an actor of Asian origin, and accuses Hollywood of \"whitewashing\". \"So why would the American remake star a white actress?"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention praise for the film's visual style, acting, or cinematography.",
+   "component_check": {
+    "found": [
+     "The film was controversial for whitewashing the cast."
+    ],
+    "missing": [
+     "The film was praised for its visual style.",
+     "The film was praised for its acting.",
+     "The film was praised for its cinematography."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The film was controversial for whitewashing the cast.",
+      "paper_id": "bd9036f79e98c965d62cb662bc61eb2cad0e7c5f",
+      "source_title": "scarlettjohansson",
+      "sentence": "Hollywood has been criticised in the past for casting white actors in east Asian roles, with M Night Shyamalan's misfiring 2010 film The Last Airbender a notable recent example.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The film was praised for its visual style, acting, and cinematography, but was controversial for whitewashing the cast, particularly Johansson's character, a cyborg who was meant to hold the memories of a Japanese woman.",
+    "reason": "The passage asserts facts about the film's reception and controversy, directly attributing these points to the cited source. The ATTRIBUTION TEST applies here as the passage implies the cited source states these points.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the film was praised for visual style, acting, and cinematography, and the specific description of Johansson's character as a cyborg meant to hold the memories of a Japanese woman",
+    "rewrite_suggestion": "The film was controversial for whitewashing the cast, particularly casting Scarlett Johansson as a cyborg based on a Japanese character from the original anime.",
+    "proofs": [
+     "Campaigners angered at the paucity of roles for east Asian actors in Hollywood have launched a petition calling for Scarlett Johansson to be dismissed from the forthcoming US remake of classic anime Ghost in the Shell.",
+     "Johansson looks likely to play a character based on the cyborg detective, Major Motoko Kusanagi, a key figure in the original 1995 Ghost in the Shell film and the comic book series on which it is based."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text discusses the whitewashing controversy and identifies Johansson's role as a cyborg from the Japanese original, but it contains no mention of praise for visual style, acting, or cinematography. Additionally, the source does not describe the character as 'meant to hold the memories of a Japanese woman'\u2014that detail is unsupported. Since these components are not present in the cited source, the author must either provide a citation or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "However, there is another Torah commandment known as \"onah\" (Heb: \u05e2\u05d5\u05e0\u05d4) which obligates a man to provide sexual intercourse to his wife on a regular basis, regardless of whether they have already had children.",
+   "markers": [
+    "judaismandsexuality"
+   ],
+   "paper_ids": [
+    "12dfbee9a4fc5b1997b1fb901408c4ca483fd42c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8577,
+   "evidence": {
+    "paper_id": "12dfbee9a4fc5b1997b1fb901408c4ca483fd42c",
+    "source_title": "judaismandsexuality",
+    "supported": false,
+    "sentence": "\"Rationales for Conjugal Sex in Rabad's Ba'alei ha-Nefesh.\"",
+    "page": 1,
+    "snippet": "\"Rationales for Conjugal Sex in Rabad's Ba'alei",
+    "cosine": 0.8577,
+    "reason": "The passage does not contain any information about the Torah commandment of 'onah' or its obligations regarding sexual intercourse.",
+    "window": "Tel Aviv: 1995; Cohen, J. \"Rationales for Conjugal Sex in Rabad's Ba'alei ha-Nefesh.\" Jewish History 6 (1992), 65\u201378; Feldman, David."
+   },
+   "evidences": [
+    {
+     "paper_id": "12dfbee9a4fc5b1997b1fb901408c4ca483fd42c",
+     "source_title": "judaismandsexuality",
+     "supported": false,
+     "sentence": "\"Rationales for Conjugal Sex in Rabad's Ba'alei ha-Nefesh.\"",
+     "page": 1,
+     "snippet": "\"Rationales for Conjugal Sex in Rabad's Ba'alei",
+     "cosine": 0.8577,
+     "reason": "The passage does not contain any information about the Torah commandment of 'onah' or its obligations regarding sexual intercourse.",
+     "window": "Tel Aviv: 1995; Cohen, J. \"Rationales for Conjugal Sex in Rabad's Ba'alei ha-Nefesh.\" Jewish History 6 (1992), 65\u201378; Feldman, David."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage directly states a fact about a Torah commandment and its obligation, implying that the cited source is expected to prove this statement. There is no indication that the citation is for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about the onah commandment, its obligation, and the condition about having children is absent from the source text",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a metadata page listing references and does not contain any substantive statements about the onah commandment or its obligations. The shown sentence is merely a bibliographic title, not a supporting sentence. Therefore, no component of the claim is provable from this source, and the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "In 2014, McCord and Mikael Jorgensen (pianist/keyboardist for Wilco) formed the duo Prism Break, inspired by early 1970s German experimental rock.",
+   "markers": [
+    "orpheomccord"
+   ],
+   "paper_ids": [
+    "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+    "source_title": "orpheomccord",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\"",
+    "page": 1,
+    "snippet": "(Read more about the McCord family) In",
+    "reason": "",
+    "votes": "2-0",
+    "window": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\" Their music is described as an \"inspiration in early 70s German experimental music.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+     "source_title": "orpheomccord",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\"",
+     "page": 1,
+     "snippet": "(Read more about the McCord family) In",
+     "reason": "",
+     "votes": "2-0",
+     "window": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\" Their music is described as an \"inspiration in early 70s German experimental music.\""
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "McCord and Mikael Jorgensen formed the duo Prism Break",
+      "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+      "source_title": "orpheomccord",
+      "sentence": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\"",
+      "page": 1,
+      "snippet": "(Read more about the McCord family) In"
+     },
+     {
+      "component": "The duo was formed in 2014",
+      "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+      "source_title": "orpheomccord",
+      "sentence": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\"",
+      "page": 1,
+      "snippet": "(Read more about the McCord family) In"
+     },
+     {
+      "component": "The duo was inspired by early 1970s German experimental rock",
+      "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+      "source_title": "orpheomccord",
+      "sentence": "Their music is described as an \"inspiration in early 70s German experimental music.\"",
+      "page": 1,
+      "snippet": "Their music is described as an \"inspiration"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+      "source_title": "orpheomccord",
+      "text": "(Read more about the McCord family) In addition to being a new father, Orpheo joined forces with Mikael Jorgenson of Wilco in a new project called \"Prism Break.\" Their music is described as an \"inspiration in early 70s German experimental music.\"",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t8",
+   "text": "The diving beetle swims by thrusting its hind legs simultaneously, and can remain underwater for extended periods of time by storing an air bubble beneath its wings.",
+   "markers": [
+    "thermonectusmarmoratus"
+   ],
+   "paper_ids": [
+    "11fbfe07c83e599c834854c98f0bb10e14d50cc3"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "11fbfe07c83e599c834854c98f0bb10e14d50cc3",
+    "source_title": "thermonectusmarmoratus",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus marmoratus) and other members of the family (predaceous diving beetles) kick their hind legs simultaneously.",
+    "page": 1,
+    "snippet": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus marmoratus) and other members of the family (predaceous diving beetles) kick their hind legs simultaneously. Range Ponds and lakes from California to Texas Animal Facts They are powerful swimmers, and are able to stay under water for extended periods of time because they collect an air bubble under their wings that can be seen at the tip of their abdomen when they dive."
+   },
+   "evidences": [
+    {
+     "paper_id": "11fbfe07c83e599c834854c98f0bb10e14d50cc3",
+     "source_title": "thermonectusmarmoratus",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus marmoratus) and other members of the family (predaceous diving beetles) kick their hind legs simultaneously.",
+     "page": 1,
+     "snippet": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus marmoratus) and other members of the family (predaceous diving beetles) kick their hind legs simultaneously. Range Ponds and lakes from California to Texas Animal Facts They are powerful swimmers, and are able to stay under water for extended periods of time because they collect an air bubble under their wings that can be seen at the tip of their abdomen when they dive."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "The diving beetle swims by thrusting its hind legs simultaneously",
+      "paper_id": "11fbfe07c83e599c834854c98f0bb10e14d50cc3",
+      "source_title": "thermonectusmarmoratus",
+      "sentence": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus marmoratus) and other members of the family (predaceous diving beetles) kick their hind legs simultaneously.",
+      "page": 1,
+      "snippet": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus"
+     },
+     {
+      "component": "can remain underwater for extended periods of time by storing an air bubble beneath its wings",
+      "paper_id": "11fbfe07c83e599c834854c98f0bb10e14d50cc3",
+      "source_title": "thermonectusmarmoratus",
+      "sentence": "Range Ponds and lakes from California to Texas Animal Facts They are powerful swimmers, and are able to stay under water for extended periods of time because they collect an air bubble under their wings that can be seen at the tip of their abdomen when they dive.",
+      "page": 1,
+      "snippet": "Range Ponds and lakes from California to"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "11fbfe07c83e599c834854c98f0bb10e14d50cc3",
+      "source_title": "thermonectusmarmoratus",
+      "text": "Animal's BehaviorWhen swimming, sunburst diving beetles (Thermonectus marmoratus) and other members of the family (predaceous diving beetles) kick their hind legs simultaneously. Eating HabitsThey require at least a temporary water source. If the one they inhabited dries up, these diving beetles will fly until another water source is located. These beetles feed on other aquatic invertebrates including mosquito larvae and pupae. Range Ponds and lakes from California to Texas Animal Facts They are powerful swimmers, and are able to stay under water for extended periods of time because they collect an air bubble under their wings that can be seen at the tip of their abdomen when they dive.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t9",
+   "text": "In addition to scripted content, Basch produced the documentary film \"Life Itself\", for which he won the Producers Guild of America Award in 2015.",
+   "markers": [
+    "garrettbasch"
+   ],
+   "paper_ids": [
+    "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+    "source_title": "garrettbasch",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch.",
+    "page": 1,
+    "snippet": "\"Life Itself,\" the biographical film about the",
+    "reason": "The passage explicitly states that Garrett Basch produced the documentary film \"Life Itself\" and that it won the PGA documentary award, which is the Producers Guild of America Award.",
+    "votes": "2-0",
+    "window": "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch. Producers: Garrett Basch, Steve James, Zak Piper WINNER"
+   },
+   "evidences": [
+    {
+     "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+     "source_title": "garrettbasch",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch.",
+     "page": 1,
+     "snippet": "\"Life Itself,\" the biographical film about the",
+     "reason": "The passage explicitly states that Garrett Basch produced the documentary film \"Life Itself\" and that it won the PGA documentary award, which is the Producers Guild of America Award.",
+     "votes": "2-0",
+     "window": "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch. Producers: Garrett Basch, Steve James, Zak Piper WINNER"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Garrett Basch produced the documentary film \"Life Itself\" and that it won the PGA documentary award, which is the Producers Guild of America Award.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Basch produced the documentary film \"Life Itself\"",
+      "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+      "source_title": "garrettbasch",
+      "sentence": "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch.",
+      "page": 1,
+      "snippet": "\"Life Itself,\" the biographical film about the"
+     },
+     {
+      "component": "Basch won the Producers Guild of America Award for \"Life Itself\"",
+      "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+      "source_title": "garrettbasch",
+      "sentence": "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch.",
+      "page": 1,
+      "snippet": "\"Life Itself,\" the biographical film about the"
+     },
+     {
+      "component": "Basch won the Producers Guild of America Award for \"Life Itself\"",
+      "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+      "source_title": "garrettbasch",
+      "sentence": "Magnolia's \"Life Itself,\" based on Ebert's 2011 autobiography, topped \"The Green Prince,\" \"Merchants of Doubt,\" \"Particle Fever\" and \"Virunga\" \u2014 which was the only PGA nominee to also receive an Oscar nod FX's \"Fargo\" won the David L. Wolper Award for longform TV.",
+      "page": 1,
+      "snippet": "Magnolia's \"Life Itself,\" based on Ebert's 2011"
+     },
+     {
+      "component": "The award was won in 2015",
+      "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+      "source_title": "garrettbasch",
+      "sentence": "Variety Intelligence Platform January 24, 2015 8:18PM PT # 'Birdman' Wins Producers Guild Award for Best Movie \"Birdman\" has won the Producers Guild of America's Darryl F. Zanuck Award for best movie \u2014 elevating its status as an awards-season front-runner since the last seven PGA winners have gone on to win the Best Picture Oscar.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform January 24, 2015 8:18PM"
+     },
+     {
+      "component": "The award was won in 2015",
+      "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+      "source_title": "garrettbasch",
+      "sentence": "(meta data) TITLE: 'Birdman' Wins Producers Guild Award for Best Movie \u2013 Variety (meta data) AUTHOR: Dave McNary (meta data) PUBLISHED DATETIME: 2015-01-25T04:18:25+00:00 Read Next: Peter Fonda, Star of 'Easy Rider,' Dies at 79 Subscribe Today!",
+      "page": 1,
+      "snippet": "(meta data) TITLE: 'Birdman' Wins Producers Guild"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+      "source_title": "garrettbasch",
+      "text": "(meta data) TITLE: 'Birdman' Wins Producers Guild Award for Best Movie \u2013 Variety (meta data) AUTHOR: Dave McNary (meta data) PUBLISHED DATETIME: 2015-01-25T04:18:25+00:00 Read Next: Peter Fonda, Star of 'Easy Rider,' Dies at 79 Subscribe Today! Variety Intelligence Platform January 24, 2015 8:18PM PT # 'Birdman' Wins Producers Guild Award for Best Movie \"Birdman\" has won the Producers Guild of America's Darryl F. Zanuck Award for best movie \u2014 elevating its status as an awards-season front-runner since the last seven PGA winners have gone on to win the Best Picture Oscar. [\u2026] \"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch. Magnolia's \"Life Itself,\" based on Ebert's 2011 autobiography, topped \"The Green Prince,\" \"Merchants of Doubt,\" \"Particle Fever\" and \"Virunga\" \u2014 which was the only PGA nominee to also receive an Oscar nod FX's \"Fargo\" won the David L. Wolper Award for longform TV.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states that Garrett Basch won the PGA documentary award for 'Life Itself', but does not mention the year he won it.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "\"Life Itself,\" the biographical film about the late Roger Ebert, won the PGA documentary award for director Steve James, Zak Piper and Garrett Basch.",
+     "Variety Intelligence Platform January 24, 2015 8:18PM PT"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences include a direct statement that Garrett Basch won the PGA documentary award for 'Life Itself' (the Producers Guild of America Award), and the article's date confirms the award was in 2015. All components of the claim are covered verbatim."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "The tunnel was temporarily closed for nine days in December after a computer glitch disrupted the tunnel's new emergency-control system, which was repaired and replaced.",
+   "markers": [
+    "downtownseattletransittu"
+   ],
+   "paper_ids": [
+    "47b1c7ec4906a1e0021ad7c83b6f6512412d4aac"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "47b1c7ec4906a1e0021ad7c83b6f6512412d4aac",
+    "source_title": "downtownseattletransittu",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The glitch disrupted the tunnel's emergency-control systems, including backup power, signals, elevators and ventilation equipment.",
+    "page": 1,
+    "snippet": "The glitch disrupted the tunnel's emergency-control systems,",
+    "reason": "The passage does not state that the tunnel was closed for nine days or that the system was repaired and replaced.",
+    "votes": "2-0",
+    "window": "The glitch disrupted the tunnel's emergency-control systems, including backup power, signals, elevators and ventilation equipment. The Downtown Seattle Transit Tunnel will reopen for bus service this morning, after computer problems caused a shutdown last week. Since the closure last Wednesday, those buses have run on the street while contractors replaced and tested some allegedly defective circuit boards."
+   },
+   "evidences": [
+    {
+     "paper_id": "47b1c7ec4906a1e0021ad7c83b6f6512412d4aac",
+     "source_title": "downtownseattletransittu",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The glitch disrupted the tunnel's emergency-control systems, including backup power, signals, elevators and ventilation equipment.",
+     "page": 1,
+     "snippet": "The glitch disrupted the tunnel's emergency-control systems,",
+     "reason": "The passage does not state that the tunnel was closed for nine days or that the system was repaired and replaced.",
+     "votes": "2-0",
+     "window": "The glitch disrupted the tunnel's emergency-control systems, including backup power, signals, elevators and ventilation equipment. The Downtown Seattle Transit Tunnel will reopen for bus service this morning, after computer problems caused a shutdown last week. Since the closure last Wednesday, those buses have run on the street while contractors replaced and tested some allegedly defective circuit boards."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the tunnel was closed for nine days or that the system was repaired and replaced.",
+   "component_check": {
+    "found": [
+     "A computer glitch disrupted the tunnel's new emergency-control system."
+    ],
+    "missing": [
+     "The tunnel was temporarily closed for nine days in December.",
+     "The emergency-control system was repaired and replaced."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "A computer glitch disrupted the tunnel's new emergency-control system.",
+      "paper_id": "47b1c7ec4906a1e0021ad7c83b6f6512412d4aac",
+      "source_title": "downtownseattletransittu",
+      "sentence": "The glitch disrupted the tunnel's emergency-control systems, including backup power, signals, elevators and ventilation equipment.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the tunnel's closure and system repair, which the cited source is expected to prove. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states the tunnel was closed for nine days in December and that the emergency-control system was 'new' and 'repaired', but the source only mentions a shutdown last Wednesday (likely Dec 19) with reopening on Dec 27 (8 days), refers to 'emergency-control systems' without labeling them new, and says circuit boards were replaced\u2014not that the system itself was repaired.",
+    "rewrite_suggestion": "The tunnel was temporarily closed in December after a computer glitch disrupted the tunnel's emergency-control systems, which were repaired through replacement of circuit boards.",
+    "proofs": [
+     "The Downtown Seattle Transit Tunnel reopened for bus service this morning, after computer problems caused a shutdown last week.",
+     "Since the closure last Wednesday, those buses have run on the street while contractors replaced and tested some allegedly defective circuit boards.",
+     "The glitch disrupted the tunnel's emergency-control systems, including backup power, signals, elevators and ventilation equipment."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the glitch disruption but omits the closure duration and the repair/replacement. The source text does contain sentences that prove the shutdown, replacement of circuit boards, and the disruption, but it never states 'nine days' or 'new emergency-control system' or that the system was 'repaired' (only replaced). Since at least one substantive component (the nine-day duration and the adjective 'new') is entirely unsupported by the source, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "May 2019, a day before the start of the World Cup.",
+   "markers": [
+    "2019cricketworldcup"
+   ],
+   "paper_ids": [
+    "735e7299e408be383b4926091d507474af3ead96"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+    "source_title": "2019cricketworldcup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match ### CWC19 Opening Party ShareURL Copied The ICC Men's Cricket World Cup 2019 opened in style on the most famous street in the world with a host of cricket legends, alongside global dignitaries, celebrities and pop stars.",
+    "page": 1,
+    "snippet": "About ICC Hall of Fame ICC on",
+    "reason": "The passage does not mention the date May 2019 or a day before the start of the World Cup.",
+    "votes": "2-0",
+    "window": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match ### CWC19 Opening Party ShareURL Copied The ICC Men's Cricket World Cup 2019 opened in style on the most famous street in the world with a host of cricket legends, alongside global dignitaries, celebrities and pop stars. 30 May 19 Opening Party - ICC Men's Cricket World Cup 2019 The ten #CWC19 captains greeted the ticket ballot-winning fans in the crowd after meeting the Queen at Buckingham Palace earlier in the day."
+   },
+   "evidences": [
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match ### CWC19 Opening Party ShareURL Copied The ICC Men's Cricket World Cup 2019 opened in style on the most famous street in the world with a host of cricket legends, alongside global dignitaries, celebrities and pop stars.",
+     "page": 1,
+     "snippet": "About ICC Hall of Fame ICC on",
+     "reason": "The passage does not mention the date May 2019 or a day before the start of the World Cup.",
+     "votes": "2-0",
+     "window": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match ### CWC19 Opening Party ShareURL Copied The ICC Men's Cricket World Cup 2019 opened in style on the most famous street in the world with a host of cricket legends, alongside global dignitaries, celebrities and pop stars. 30 May 19 Opening Party - ICC Men's Cricket World Cup 2019 The ten #CWC19 captains greeted the ticket ballot-winning fans in the crowd after meeting the Queen at Buckingham Palace earlier in the day."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the date May 2019 or a day before the start of the World Cup.",
+   "component_check": {
+    "found": [
+     "May 2019"
+    ],
+    "missing": [
+     "a day before the start of the World Cup"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "May 2019",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match ### CWC19 Opening Party ShareURL Copied The ICC Men's Cricket World Cup 2019 opened in style on the most famous street in the world with a host of cricket legends, alongside global dignitaries, celebrities and pop stars.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "May 2019, a day before the start of the World Cup.",
+    "reason": "The passage states a specific date and event tied to the citation. This is a factual claim that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "a day before the start of the World Cup",
+    "rewrite_suggestion": "30 May 2019, the day of the World Cup's opening match",
+    "proofs": [
+     "30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match"
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "30 May 19 # A royal party opens Cricket World Cup on the Mall ahead of today's opening match",
+     "why": "This sentence states the party occurred on 30 May, 'ahead of today's opening match', meaning the same day as the opening match, contradicting the claim that it was a day before."
+    },
+    "why": "The claim states 'a day before the start of the World Cup,' but the source clearly indicates the opening party took place on 30 May 2019, the day of the opening match. The shown sentence includes the date and the phrase 'ahead of today's opening match,' which means the party and the match occurred on the same day, not a day before. Therefore, the component 'a day before' is not supported and is contradicted by the source. The author must either correct the timing or provide a different citation."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "The cities of New Smyrna Beach and Edgewater, the Merritt Island National Wildlife Refuge and the Kennedy Space Center adjoin the lagoon.",
+   "markers": [
+    "mosquitolagoon"
+   ],
+   "paper_ids": [
+    "aba5ad3b7d772a18d281a98b4e8c5d03a087ebcd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "aba5ad3b7d772a18d281a98b4e8c5d03a087ebcd",
+    "source_title": "mosquitolagoon",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Three public waterfront parks are located east of U.S. Highway 1 along Riverside Drive, in the city of Edgewater, adjacent to Mosquito Lagoon Aquatic Preserve: Kennedy Point Memorial Park.",
+    "page": 1,
+    "snippet": "Three public waterfront parks are located east",
+    "reason": "The passage does not mention New Smyrna Beach, Merritt Island National Wildlife Refuge, or the Kennedy Space Center adjoining the lagoon.",
+    "votes": "2-0",
+    "window": "Three public waterfront parks are located east of U.S. Highway 1 along Riverside Drive, in the city of Edgewater, adjacent to Mosquito Lagoon Aquatic Preserve: Kennedy Point Memorial Park."
+   },
+   "evidences": [
+    {
+     "paper_id": "aba5ad3b7d772a18d281a98b4e8c5d03a087ebcd",
+     "source_title": "mosquitolagoon",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Three public waterfront parks are located east of U.S. Highway 1 along Riverside Drive, in the city of Edgewater, adjacent to Mosquito Lagoon Aquatic Preserve: Kennedy Point Memorial Park.",
+     "page": 1,
+     "snippet": "Three public waterfront parks are located east",
+     "reason": "The passage does not mention New Smyrna Beach, Merritt Island National Wildlife Refuge, or the Kennedy Space Center adjoining the lagoon.",
+     "votes": "2-0",
+     "window": "Three public waterfront parks are located east of U.S. Highway 1 along Riverside Drive, in the city of Edgewater, adjacent to Mosquito Lagoon Aquatic Preserve: Kennedy Point Memorial Park."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention New Smyrna Beach, Merritt Island National Wildlife Refuge, or the Kennedy Space Center adjoining the lagoon.",
+   "component_check": {
+    "found": [
+     "Edgewater adjoins the lagoon."
+    ],
+    "missing": [
+     "New Smyrna Beach adjoins the lagoon.",
+     "Merritt Island National Wildlife Refuge adjoins the lagoon.",
+     "Kennedy Space Center adjoins the lagoon."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Edgewater adjoins the lagoon.",
+      "paper_id": "aba5ad3b7d772a18d281a98b4e8c5d03a087ebcd",
+      "source_title": "mosquitolagoon",
+      "sentence": "Three public waterfront parks are located east of U.S. Highway 1 along Riverside Drive, in the city of Edgewater, adjacent to Mosquito Lagoon Aquatic Preserve: Kennedy Point Memorial Park.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The cities of New Smyrna Beach and Edgewater, the Merritt Island National Wildlife Refuge and the Kennedy Space Center adjoin the lagoon.",
+    "reason": "The passage directly states facts about the geographical location of the lagoon and its adjoining areas. The citation is expected to prove these factual assertions.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "New Smyrna Beach, the Merritt Island National Wildlife Refuge, and the Kennedy Space Center adjoin the lagoon",
+    "rewrite_suggestion": "The city of Edgewater adjoins Mosquito Lagoon.",
+    "proofs": [
+     "Three public waterfront parks are located east of U.S. Highway 1 along Riverside Drive, in the city of Edgewater, adjacent to Mosquito Lagoon Aquatic Preserve: Kennedy Point Memorial Park."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only supports that Edgewater adjoins the lagoon (via the park adjacency statement). It contains no mention of New Smyrna Beach, the Merritt Island National Wildlife Refuge, or the Kennedy Space Center, so those components of the claim are entirely unsourced and cannot be proven from the provided text. Therefore the author must either add citations for those entities or rewrite the claim to include only Edgewater."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "She has been nominated for four Golden Globes Awards, two British Academy Film Awards winning one for each and by earning the Academy Award for Best Supporting Actress honor for \"Fences\", Davis became the first black actor to achieve the Triple Crown of Acting: winning a competitive Oscar, Emmy and Tony in acting categories.",
+   "markers": [
+    "violadavis"
+   ],
+   "paper_ids": [
+    "8bd3a714ae565f31230986302ba4414c6a57f93e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "8bd3a714ae565f31230986302ba4414c6a57f93e",
+    "source_title": "violadavis",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "When Viola Davis won the Best Supporting Actress prize at the Academy Awards, she became the 23rd person to achieve the triple crown of acting: a competitive Oscar, Emmy and Tony (two Tonys, in her case).",
+    "page": 1,
+    "snippet": "When Viola Davis won the Best Supporting",
+    "reason": "The passage does not mention any nominations or wins for Golden Globes or British Academy Film Awards.",
+    "votes": "2-0",
+    "window": "When Viola Davis won the Best Supporting Actress prize at the Academy Awards, she became the 23rd person to achieve the triple crown of acting: a competitive Oscar, Emmy and Tony (two Tonys, in her case). Viola Davis accepts the Best Supporting Actress prize for \"Fences\" on Sunday, Feb. 26. Viola Davis won her Oscar, after two prior nominations, for \"Fences,\" the film adaptation of the August Wilson play, for which she also won the second of her two Tonys. She is the first African American to join the club."
+   },
+   "evidences": [
+    {
+     "paper_id": "8bd3a714ae565f31230986302ba4414c6a57f93e",
+     "source_title": "violadavis",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "When Viola Davis won the Best Supporting Actress prize at the Academy Awards, she became the 23rd person to achieve the triple crown of acting: a competitive Oscar, Emmy and Tony (two Tonys, in her case).",
+     "page": 1,
+     "snippet": "When Viola Davis won the Best Supporting",
+     "reason": "The passage does not mention any nominations or wins for Golden Globes or British Academy Film Awards.",
+     "votes": "2-0",
+     "window": "When Viola Davis won the Best Supporting Actress prize at the Academy Awards, she became the 23rd person to achieve the triple crown of acting: a competitive Oscar, Emmy and Tony (two Tonys, in her case). Viola Davis accepts the Best Supporting Actress prize for \"Fences\" on Sunday, Feb. 26. Viola Davis won her Oscar, after two prior nominations, for \"Fences,\" the film adaptation of the August Wilson play, for which she also won the second of her two Tonys. She is the first African American to join the club."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention any nominations or wins for Golden Globes or British Academy Film Awards.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Davis became the first black actor to achieve the Triple Crown of Acting: winning a competitive Oscar, Emmy and Tony in acting categories.",
+    "reason": "The passage asserts specific achievements and a historical first for Viola Davis, directly attributing this accomplishment to the cited source. This falls under the 'full' scope as the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Viola Davis's nominations for four Golden Globes and two BAFTAs, winning one of each",
+    "rewrite_suggestion": "By winning the Academy Award for Best Supporting Actress for 'Fences', Viola Davis became the first black actor to achieve the Triple Crown of Acting (competitive Oscar, Emmy, and Tony).",
+    "proofs": [
+     "When Viola Davis won the Best Supporting Actress prize at the Academy Awards, she became the 23rd person to achieve the triple crown of acting: a competitive Oscar, Emmy and Tony (two Tonys, in her case).",
+     "She is the first African American to join the club.",
+     "23. Viola Davis won her Oscar, after two prior nominations, for 'Fences,' the film adaptation of the August Wilson play, for which she also won the second of her two Tonys."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes unsupported components about Golden Globe and BAFTA nominations/wins that are not present in the cited source. Additionally, the tool's shown sentence does not cover the 'first black actor' component or explicitly link the Oscar to 'Fences', but those are provable from the source. The author must either add a citation for the missing subclaim or rewrite the claim to only include what the source supports."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "In 2007 citing the city's bicycle lanes, buses and LRT, \"Forbes\" identified Minneapolis the world's fifth cleanest city.",
+   "markers": [
+    "minneapolis"
+   ],
+   "paper_ids": [
+    "5034d1ed048f1925b4d5b5ad7cd6285a758ec294"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8887,
+   "evidence": {
+    "paper_id": "5034d1ed048f1925b4d5b5ad7cd6285a758ec294",
+    "source_title": "minneapolis",
+    "supported": false,
+    "sentence": "In addition a city has to look closely at its transportation infrastructure (roads, rail, air, subways) and their impact upon being clean or going dirty or staying dirty.",
+    "page": 1,
+    "snippet": "In addition a city has to look",
+    "cosine": 0.8887,
+    "reason": "The passage discusses Minneapolis's transportation infrastructure and its impact on cleanliness but does not mention Forbes, the year 2007, or rank Minneapolis as the fifth cleanest city.",
+    "window": "Green only works well when it results in greenbacks. In addition a city has to look closely at its transportation infrastructure (roads, rail, air, subways) and their impact upon being clean or going dirty or staying dirty. The logistics infrastructure is also critical in terms of efficiency that can translate into money and fuel savings that in turn affect cleanliness (air quality, water quality and ground quality)."
+   },
+   "evidences": [
+    {
+     "paper_id": "5034d1ed048f1925b4d5b5ad7cd6285a758ec294",
+     "source_title": "minneapolis",
+     "supported": false,
+     "sentence": "In addition a city has to look closely at its transportation infrastructure (roads, rail, air, subways) and their impact upon being clean or going dirty or staying dirty.",
+     "page": 1,
+     "snippet": "In addition a city has to look",
+     "cosine": 0.8887,
+     "reason": "The passage discusses Minneapolis's transportation infrastructure and its impact on cleanliness but does not mention Forbes, the year 2007, or rank Minneapolis as the fifth cleanest city.",
+     "window": "Green only works well when it results in greenbacks. In addition a city has to look closely at its transportation infrastructure (roads, rail, air, subways) and their impact upon being clean or going dirty or staying dirty. The logistics infrastructure is also critical in terms of efficiency that can translate into money and fuel savings that in turn affect cleanliness (air quality, water quality and ground quality)."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Forbes identified Minneapolis the world's fifth cleanest city in 2007.",
+    "reason": "The passage directly attributes a finding (Minneapolis being the fifth cleanest city) to the cited source ('Forbes'). This falls under the 'full' scope as the citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that Forbes identified Minneapolis as the world's fifth cleanest city in 2007, citing bicycle lanes, buses, and LRT, is not supported by the provided source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes specific details (year, ranking, city, cited features) to a Forbes article, but the provided source text does not mention Minneapolis, a ranking of fifth, the year 2007, or bicycle lanes, buses, or LRT. The shown sentence about transportation infrastructure is a general statement and does not cover any component of the claim. Since none of the substantive components are provable from the source, the author must either add a proper citation for those claims or rewrite to match what the source actually says."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "A certification and assurance was announced by US Secretary of State Mike Pompeo stating that maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties in order to legally authorize American military to refuel coalition military aircraft and has affirmed to continued its support.",
+   "markers": [
+    "yemenicivilwar2015presen"
+   ],
+   "paper_ids": [
+    "408523dbfcb2ac0461fbbb9c76e89f329b213d05"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+    "source_title": "yemenicivilwar2015presen",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis.",
+    "page": 1,
+    "snippet": "The certification, announced by Secretary of State",
+    "reason": "The passage does not state that Mike Pompeo announced maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties.",
+    "votes": "2-0",
+    "window": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis. The certification signed by Mr. Pompeo said the Trump administration had recognized that \"civilian casualties have occurred at rates that are far too high.\" \"The governments of Saudi Arabia and United Arab Emirates are undertaking demonstrable actions to reduce the risk of harm to civilians and civilian infrastructure resulting from military operations of these governments,\" Mr. Pompeo said. He also said that ending the war in Yemen was \"a national security priority\" and that the United States would continue working with Gulf allies to pursue peace talks and ensure delivery of humanitarian aid."
+   },
+   "evidences": [
+    {
+     "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+     "source_title": "yemenicivilwar2015presen",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis.",
+     "page": 1,
+     "snippet": "The certification, announced by Secretary of State",
+     "reason": "The passage does not state that Mike Pompeo announced maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties.",
+     "votes": "2-0",
+     "window": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis. The certification signed by Mr. Pompeo said the Trump administration had recognized that \"civilian casualties have occurred at rates that are far too high.\" \"The governments of Saudi Arabia and United Arab Emirates are undertaking demonstrable actions to reduce the risk of harm to civilians and civilian infrastructure resulting from military operations of these governments,\" Mr. Pompeo said. He also said that ending the war in Yemen was \"a national security priority\" and that the United States would continue working with Gulf allies to pursue peace talks and ensure delivery of humanitarian aid."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Mike Pompeo announced maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties.",
+   "component_check": {
+    "found": [
+     "US Secretary of State Mike Pompeo announced a certification and assurance.",
+     "This is to legally authorize American military to refuel coalition military aircraft.",
+     "The US has affirmed to continue its support."
+    ],
+    "missing": [
+     "Maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "US Secretary of State Mike Pompeo announced a certification and assurance.",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis.",
+      "page": 1
+     },
+     {
+      "component": "This is to legally authorize American military to refuel coalition military aircraft.",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis.",
+      "page": 1
+     },
+     {
+      "component": "The US has affirmed to continue its support.",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "A certification and assurance was announced by US Secretary of State Mike Pompeo stating that maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties in order to legally authorize American military to refuel coalition military aircraft and has affirmed to continued its support.",
+    "reason": "The passage directly attributes a statement and an announcement to a specific individual (US Secretary of State Mike Pompeo) and describes actions taken by the Saudi-led coalition. This content is presented as factual information that the cited source is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that Pompeo stated 'maximum efforts are being taken by the Saudi-led coalition to avoid civilian casualties' \u2013 the source only says 'undertaking demonstrable actions to reduce the risk of harm', not 'maximum efforts'.",
+    "rewrite_suggestion": "A certification was announced by US Secretary of State Mike Pompeo stating that the Saudi-led coalition is undertaking demonstrable actions to reduce harm to civilians, which legally authorized American military to refuel coalition aircraft, and Pompeo affirmed continued US support.",
+    "proofs": [
+     "The certification, announced by Secretary of State Mike Pompeo, was legally required to allow American military aircraft to continue refueling warplanes belonging to the two Gulf nations, the dominant members of an Arab coalition fighting a brutal war in Yemen that has helped create the world's worst humanitarian crisis.",
+     "\"The governments of Saudi Arabia and United Arab Emirates are undertaking demonstrable actions to reduce the risk of harm to civilians and civilian infrastructure resulting from military operations of these governments,\" Mr. Pompeo said.",
+     "He also said that ending the war in Yemen was \"a national security priority\" and that the United States would continue working with Gulf allies to pursue peace talks and ensure delivery of humanitarian aid."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the certification announcement and its legal purpose, but omits the content of Pompeo's statement and the affirmation of continued support. Critically, the claim's phrase 'maximum efforts' is not present in the source text, which instead uses 'undertaking demonstrable actions'. Since a substantive component (the exact wording of the certification) is unsupported by the source, the author must rewrite or add a citation for that part."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "It is a Massive Open Online Course (MOOC) learning platform, and as of May 2018 included 143 UK and international partners, including non-university partners.",
+   "markers": [
+    "futurelearn"
+   ],
+   "paper_ids": [
+    "42547b57fb4649e4d9cb63d73d53daa29633ba7b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "42547b57fb4649e4d9cb63d73d53daa29633ba7b",
+    "source_title": "futurelearn",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Sign in Course providers # Current partners FutureLearn partners with top international universities and specialist organisations to offer online courses and degrees.",
+    "page": 1,
+    "snippet": "Sign in Course providers # Current partners",
+    "reason": "The passage does not state the number of UK and international partners or mention non-university partners.",
+    "votes": "2-0",
+    "window": "Sign in Course providers # Current partners FutureLearn partners with top international universities and specialist organisations to offer online courses and degrees."
+   },
+   "evidences": [
+    {
+     "paper_id": "42547b57fb4649e4d9cb63d73d53daa29633ba7b",
+     "source_title": "futurelearn",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Sign in Course providers # Current partners FutureLearn partners with top international universities and specialist organisations to offer online courses and degrees.",
+     "page": 1,
+     "snippet": "Sign in Course providers # Current partners",
+     "reason": "The passage does not state the number of UK and international partners or mention non-university partners.",
+     "votes": "2-0",
+     "window": "Sign in Course providers # Current partners FutureLearn partners with top international universities and specialist organisations to offer online courses and degrees."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the number of UK and international partners or mention non-university partners.",
+   "component_check": {
+    "found": [
+     "These partners included non-university partners."
+    ],
+    "missing": [
+     "It is a Massive Open Online Course (MOOC) learning platform.",
+     "As of May 2018, it included 143 UK and international partners."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "These partners included non-university partners.",
+      "paper_id": "42547b57fb4649e4d9cb63d73d53daa29633ba7b",
+      "source_title": "futurelearn",
+      "sentence": "Sign in Course providers # Current partners FutureLearn partners with top international universities and specialist organisations to offer online courses and degrees.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "as of May 2018 included 143 UK and international partners, including non-university partners",
+    "reason": "The passage asserts specific facts and figures about the MOOC platform, which are directly attributable to the cited source and expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the description as a Massive Open Online Course (MOOC) learning platform, and the specific count of 143 partners as of May 2018",
+    "rewrite_suggestion": "FutureLearn is an online learning platform that partners with top international universities and specialist organisations to offer online courses and degrees.",
+    "proofs": [
+     "FutureLearn partners with top international universities and specialist organisations to offer online courses and degrees."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that FutureLearn is a MOOC platform and that it had 143 partners as of May 2018, but neither the term 'MOOC' nor any date or count appears in the source text. The shown sentence and the source do support the existence of non-university partners (specialist organisations), but the missing components are not provable from this source at all. The author must either add citations for those subclaims or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "On 20 May 2018, Pope Francis announced that he planned to make Ladaria a cardinal on 28 June.",
+   "markers": [
+    "luisladariaferrer"
+   ],
+   "paper_ids": [
+    "32e18df55a89440730ed33a903fcfb8f73cda7d5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "32e18df55a89440730ed33a903fcfb8f73cda7d5",
+    "source_title": "luisladariaferrer",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The pope at his \"Regina Coeli\" announced that he will create 14 new cardinals June 29.",
+    "page": 1,
+    "snippet": "The pope at his \"Regina Coeli\" announced",
+    "reason": "The passage does not state that Pope Francis planned to make Ladaria a cardinal.",
+    "votes": "2-0",
+    "window": "The pope at his \"Regina Coeli\" announced that he will create 14 new cardinals June 29. Pope Francis arrives in procession to celebrate Mass marking the feast of Pentecost in St. Peter's Basilica at the Vatican May 20."
+   },
+   "evidences": [
+    {
+     "paper_id": "32e18df55a89440730ed33a903fcfb8f73cda7d5",
+     "source_title": "luisladariaferrer",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The pope at his \"Regina Coeli\" announced that he will create 14 new cardinals June 29.",
+     "page": 1,
+     "snippet": "The pope at his \"Regina Coeli\" announced",
+     "reason": "The passage does not state that Pope Francis planned to make Ladaria a cardinal.",
+     "votes": "2-0",
+     "window": "The pope at his \"Regina Coeli\" announced that he will create 14 new cardinals June 29. Pope Francis arrives in procession to celebrate Mass marking the feast of Pentecost in St. Peter's Basilica at the Vatican May 20."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Pope Francis planned to make Ladaria a cardinal.",
+   "component_check": {
+    "found": [
+     "Pope Francis announced on 20 May 2018"
+    ],
+    "missing": [
+     "he planned to make Ladaria a cardinal",
+     "on 28 June"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Pope Francis announced on 20 May 2018",
+      "paper_id": "32e18df55a89440730ed33a903fcfb8f73cda7d5",
+      "source_title": "luisladariaferrer",
+      "sentence": "Pope Francis arrives in procession to celebrate Mass marking the feast of Pentecost in St. Peter's Basilica at the Vatican May 20.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Pope Francis announced that he planned to make Ladaria a cardinal on 28 June.",
+    "reason": "The passage states a specific fact (a date and an announcement) that is directly attributed to the cited source. The ATTRIBUTION TEST applies here, indicating a 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that Pope Francis planned to make Ladaria a cardinal on 28 June",
+    "rewrite_suggestion": "On 20 May 2018, Pope Francis announced that he would create 14 new cardinals on 29 June.",
+    "proofs": [
+     "Pope Francis announces that he will create 14 new cardinals in June",
+     "The pope at his \"Regina Coeli\" announced that he will create 14 new cardinals June 29."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The pope at his \"Regina Coeli\" announced that he will create 14 new cardinals June 29.",
+     "why": "The claim states the consistory is on 28 June, but the source says June 29."
+    },
+    "why": "The claim includes two components not found in the source: the name 'Ladaria' is never mentioned, and the date '28 June' contradicts the source's 'June 29'. The shown sentence covers only a general announcement of 14 cardinals, not the specific person or the correct date. Since substantive components are missing from the source altogether, the author must either add a citation for those parts or rewrite the claim to match the source (e.g., omitting Ladaria and correcting the date)."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Each player received a key to the city from Mayor Bill de Blasio.",
+   "markers": [
+    "ashlynharris"
+   ],
+   "paper_ids": [
+    "be35d05f5b15dc531c2434c2e296cc680fcbe2dc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+    "source_title": "ashlynharris",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Megan Rapinoe shows off the key to the city she received on the steps of City Hall from Mayor Bill de Blasio, right, and First Lady Charlaine McCray, second from right, in New York City, July 10, 2015.",
+    "page": 1,
+    "snippet": "Megan Rapinoe shows off the key to",
+    "reason": "The passage states that the U.S. women's national soccer team received keys to the city, not each individual player.",
+    "votes": "2-0",
+    "window": "Megan Rapinoe shows off the key to the city she received on the steps of City Hall from Mayor Bill de Blasio, right, and First Lady Charlaine McCray, second from right, in New York City, July 10, 2015. U.S. women's national soccer team and reigning 2015 World Cup champions are showered in confetti at the end of a ceremony at City Hall in New York City after receiving keys to the city, July 10, 2015. Abby Wambach kisses the World Cup trophy on the steps of city hall after the team was given keys to New York City, 10, 2015."
+   },
+   "evidences": [
+    {
+     "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+     "source_title": "ashlynharris",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Megan Rapinoe shows off the key to the city she received on the steps of City Hall from Mayor Bill de Blasio, right, and First Lady Charlaine McCray, second from right, in New York City, July 10, 2015.",
+     "page": 1,
+     "snippet": "Megan Rapinoe shows off the key to",
+     "reason": "The passage states that the U.S. women's national soccer team received keys to the city, not each individual player.",
+     "votes": "2-0",
+     "window": "Megan Rapinoe shows off the key to the city she received on the steps of City Hall from Mayor Bill de Blasio, right, and First Lady Charlaine McCray, second from right, in New York City, July 10, 2015. U.S. women's national soccer team and reigning 2015 World Cup champions are showered in confetti at the end of a ceremony at City Hall in New York City after receiving keys to the city, July 10, 2015. Abby Wambach kisses the World Cup trophy on the steps of city hall after the team was given keys to New York City, 10, 2015."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the U.S. women's national soccer team received keys to the city, not each individual player.",
+   "component_check": {
+    "found": [
+     "from Mayor Bill de Blasio"
+    ],
+    "missing": [
+     "Each player received a key to the city"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "from Mayor Bill de Blasio",
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "sentence": "Also in the photo are New York City Mayor Bill de Blasio, center, First Lady Chirlaine McCray, second from right, and U.S. women's team coach Jill Ellis, far right.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Each player received a key to the city from Mayor Bill de Blasio.",
+    "reason": "The passage asserts a specific fact (receiving a key from the mayor) that the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the assertion that every individual player on the team received a key to the city",
+    "rewrite_suggestion": "Megan Rapinoe received a key to the city from Mayor Bill de Blasio.",
+    "proofs": [
+     "Megan Rapinoe shows off the key to the city she received on the steps of City Hall from Mayor Bill de Blasio, right, and First Lady Charlaine McCray, second from right, in New York City, July 10, 2015."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that each player received a key, but the shown sentence only documents Megan Rapinoe receiving one. The source text does not contain any statement that every player individually received a key from the mayor, so the 'each player' component is unsupported and cannot be proven from the provided source. The author must either add a citation supporting that all players received keys or rewrite the claim to match the evidence."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "Their members choose the Senators of the Dutch Senate, in a manner similar to the members of the provincial councils in the European Netherlands.",
+   "markers": [
+    "electoralcollegesforthes"
+   ],
+   "paper_ids": [
+    "f0e5dfdb3b95786bb6cbb0d728ae514c384b06ba"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f0e5dfdb3b95786bb6cbb0d728ae514c384b06ba",
+    "source_title": "electoralcollegesforthes",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "## Elections The 75 members of the Senate (Eerste Kamer) of the Dutch Parliament (the States General) are elected by the members of the twelve Provincial Councils and three Electoral Colleges from the Caribean part of the Netherlands.",
+    "page": 1,
+    "snippet": "## Elections The 75 members of the",
+    "reason": "The passage states that Senators are elected by members of Provincial Councils and Electoral Colleges from the Caribbean part of the Netherlands, not by members of provincial councils in the European Netherlands.",
+    "votes": "2-0",
+    "window": "## Elections The 75 members of the Senate (Eerste Kamer) of the Dutch Parliament (the States General) are elected by the members of the twelve Provincial Councils and three Electoral Colleges from the Caribean part of the Netherlands. Since the 1983 revision of the constitution the Senate is elected in its entirety every four years by the members of the Provincial Council. These elections are indirect: the voters elect the members of the Provincial Councils and the Electoral Colleges, who in turn elect the members of the Senate."
+   },
+   "evidences": [
+    {
+     "paper_id": "f0e5dfdb3b95786bb6cbb0d728ae514c384b06ba",
+     "source_title": "electoralcollegesforthes",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "## Elections The 75 members of the Senate (Eerste Kamer) of the Dutch Parliament (the States General) are elected by the members of the twelve Provincial Councils and three Electoral Colleges from the Caribean part of the Netherlands.",
+     "page": 1,
+     "snippet": "## Elections The 75 members of the",
+     "reason": "The passage states that Senators are elected by members of Provincial Councils and Electoral Colleges from the Caribbean part of the Netherlands, not by members of provincial councils in the European Netherlands.",
+     "votes": "2-0",
+     "window": "## Elections The 75 members of the Senate (Eerste Kamer) of the Dutch Parliament (the States General) are elected by the members of the twelve Provincial Councils and three Electoral Colleges from the Caribean part of the Netherlands. Since the 1983 revision of the constitution the Senate is elected in its entirety every four years by the members of the Provincial Council. These elections are indirect: the voters elect the members of the Provincial Councils and the Electoral Colleges, who in turn elect the members of the Senate."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Senators are elected by members of Provincial Councils and Electoral Colleges from the Caribbean part of the Netherlands, not by members of provincial councils in the European Netherlands.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Their members choose the Senators of the Dutch Senate, in a manner similar to the members of the provincial councils in the European Netherlands.",
+    "reason": "The passage directly states a fact about how members choose Senators, implying the cited source is expected to prove this statement. There is no indication that the citation is for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The 75 members of the Senate (Eerste Kamer) of the Dutch Parliament (the States General) are elected by the members of the twelve Provincial Councils and three Electoral Colleges from the Caribean part of the Netherlands.",
+     "These elections are indirect: the voters elect the members of the Provincial Councils and the Electoral Colleges, who in turn elect the members of the Senate."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that members of the Electoral Colleges elect Senators, but it does not address the claim's second component: that this manner is similar to how provincial council members choose Senators. That similarity is established in the source by the sentence describing the indirect election process for both groups. Since that proof exists in the source but was not shown, the tool must correct its evidence by including that sentence.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t20",
+   "text": "Peltier lives on the Unceded Anishinawbe Territory on Manitoulin Island in northern Ontario.",
+   "markers": [
+    "autumnpeltier"
+   ],
+   "paper_ids": [
+    "cdbe29ad1576aedae20db89504c43028810b7071"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7998,
+   "evidence": {
+    "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+    "source_title": "autumnpeltier",
+    "supported": true,
+    "sentence": "Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+    "page": 1,
+    "snippet": "Reserve a Free Ticket Autumn Peltier -",
+    "cosine": 0.7998,
+    "reason": "The passage explicitly states that Autumn Peltier is from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+    "window": "Please reserve yours in advance. Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island. She is also known as Mskwaa-Geezo Kwe (Red Moon Woman) of the eagle clan."
+   },
+   "evidences": [
+    {
+     "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+     "source_title": "autumnpeltier",
+     "supported": true,
+     "sentence": "Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+     "page": 1,
+     "snippet": "Reserve a Free Ticket Autumn Peltier -",
+     "cosine": 0.7998,
+     "reason": "The passage explicitly states that Autumn Peltier is from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+     "window": "Please reserve yours in advance. Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island. She is also known as Mskwaa-Geezo Kwe (Red Moon Woman) of the eagle clan."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Autumn Peltier is from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Peltier lives on the Unceded Anishinawbe Territory",
+      "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+      "source_title": "autumnpeltier",
+      "sentence": "Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+      "page": 1,
+      "snippet": "Reserve a Free Ticket Autumn Peltier -"
+     },
+     {
+      "component": "on Manitoulin Island",
+      "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+      "source_title": "autumnpeltier",
+      "sentence": "Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island.",
+      "page": 1,
+      "snippet": "Reserve a Free Ticket Autumn Peltier -"
+     },
+     {
+      "component": "in northern Ontario",
+      "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+      "source_title": "autumnpeltier",
+      "sentence": "She began her work in 2015 when she first attended the Children's Climate Summit in Sweden where she shared her story about the sacredness of water and the importance of clean drinking water for Indigenous people in Canada and especially in Ontario.",
+      "page": 1,
+      "snippet": "She began her work in 2015 when"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+      "source_title": "autumnpeltier",
+      "text": "Reserve a Free Ticket Autumn Peltier - Photo by Linda Roy Grandmother Josephine Mandamin (Feb 21, 1942 - Feb 22, 2019) ### Autumn Peltier Autumn is a 14-year-old from the Wikwemikong Unceded Anishinawbe Territory located on Manitoulin Island. She is also known as Mskwaa-Geezo Kwe (Red Moon Woman) of the eagle clan. Autumn is currently in grade 9 and attends the Manitoulin Secondary School. Autumn is being raised with her traditional ways, so she can pass our teachings onto her great grand-children in order to pass on the old ways and to protect our environment to ensure there is clean drinking water for our survival. Autumn is known as one of Canada's youngest Water Activists and has become internationally known for her advocacy work and teachings to women. She began her work in 2015 when she first attended the Children's Climate Summit in Sweden where she shared her story about the sacredness of water and the importance of clean drinking water for Indigenous people in Canada and especially in Ontario.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t21",
+   "text": "He also has a master's, juris doctor, and doctorate degree from Ohio State University.",
+   "markers": [
+    "aarondford"
+   ],
+   "paper_ids": [
+    "a52db556248fdead7458ed11682db466ae44bed4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8473,
+   "evidence": {
+    "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+    "source_title": "aarondford",
+    "supported": true,
+    "sentence": "I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University.",
+    "page": 1,
+    "snippet": "I went on to earn a Master's",
+    "cosine": 0.8473,
+    "reason": "The passage explicitly states that the individual earned a law degree and a Ph.D. from Ohio State University, which aligns with the claim of having a juris doctor and doctorate degree from that institution.",
+    "window": "I received a scholarship to Texas A&M University and ultimately, became the first in my family to graduate from college. I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University. I worked hard but I was lucky to also have champions in my corner, from my mother to Project Upward Bound."
+   },
+   "evidences": [
+    {
+     "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+     "source_title": "aarondford",
+     "supported": true,
+     "sentence": "I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University.",
+     "page": 1,
+     "snippet": "I went on to earn a Master's",
+     "cosine": 0.8473,
+     "reason": "The passage explicitly states that the individual earned a law degree and a Ph.D. from Ohio State University, which aligns with the claim of having a juris doctor and doctorate degree from that institution.",
+     "window": "I received a scholarship to Texas A&M University and ultimately, became the first in my family to graduate from college. I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University. I worked hard but I was lucky to also have champions in my corner, from my mother to Project Upward Bound."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the individual earned a law degree and a Ph.D. from Ohio State University, which aligns with the claim of having a juris doctor and doctorate degree from that institution.",
+   "covering": {
+    "covered": [
+     {
+      "component": "master's degree from Ohio State University",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University.",
+      "page": 1,
+      "snippet": "I went on to earn a Master's"
+     },
+     {
+      "component": "master's degree from Ohio State University",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "Armed with a master's from George Washington University and a Ph.D., a second master's and a law degree from the Ohio State University, Ford is running for the statewide office \"to be a champion for Nevadans who are struggling to pay their bills, battling addiction, growing up in unsafe neighborhoods or being taken advantage by unscrupulous scammers,\" details Ford.",
+      "page": 1,
+      "snippet": "Armed with a master's from George Washington"
+     },
+     {
+      "component": "juris doctor degree from Ohio State University",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University.",
+      "page": 1,
+      "snippet": "I went on to earn a Master's"
+     },
+     {
+      "component": "juris doctor degree from Ohio State University",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "Armed with a master's from George Washington University and a Ph.D., a second master's and a law degree from the Ohio State University, Ford is running for the statewide office \"to be a champion for Nevadans who are struggling to pay their bills, battling addiction, growing up in unsafe neighborhoods or being taken advantage by unscrupulous scammers,\" details Ford.",
+      "page": 1,
+      "snippet": "Armed with a master's from George Washington"
+     },
+     {
+      "component": "doctorate degree from Ohio State University",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University.",
+      "page": 1,
+      "snippet": "I went on to earn a Master's"
+     },
+     {
+      "component": "doctorate degree from Ohio State University",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "Armed with a master's from George Washington University and a Ph.D., a second master's and a law degree from the Ohio State University, Ford is running for the statewide office \"to be a champion for Nevadans who are struggling to pay their bills, battling addiction, growing up in unsafe neighborhoods or being taken advantage by unscrupulous scammers,\" details Ford.",
+      "page": 1,
+      "snippet": "Armed with a master's from George Washington"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "text": "Armed with a master's from George Washington University and a Ph.D., a second master's and a law degree from the Ohio State University, Ford is running for the statewide office \"to be a champion for Nevadans who are struggling to pay their bills, battling addiction, growing up in unsafe neighborhoods or being taken advantage by unscrupulous scammers,\" details Ford. [\u2026] I went on to earn a Master's degree from George Washington University and a Ph.D., a second Master's and a law degree from the Ohio State University.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t22",
+   "text": "The bridge over the River Tolka in Drumcondra at Millmount Avenue/Botanic Avenue was named Droichead Frank Flood on 14 March 2018.",
+   "markers": [
+    "frankflood"
+   ],
+   "paper_ids": [
+    "087796f4beb92c9d9e8a111d077d365c4eee41ca"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8121,
+   "evidence": {
+    "paper_id": "087796f4beb92c9d9e8a111d077d365c4eee41ca",
+    "source_title": "frankflood",
+    "supported": true,
+    "sentence": "March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra.",
+    "page": 1,
+    "snippet": "March 14, 2018 by Donal Dublin's newest",
+    "cosine": 0.8121,
+    "reason": "The passage states that Dublin's newest plaques were unveiled on the Frank Flood Bridge in Drumcondra on March 14, 2018, which directly supports the claim.",
+    "window": "Feeds: \u00ab Ringsend and Dublin's Football History Ballybough and the mysterious 'Suicide Plot' \u00bb ## Speech at the unveiling of Frank Flood Bridge, Drumcondra. March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra. They commemorate a young and fearless IRA Active Service Unit commander, a mere 19 years of age at the time of his execution."
+   },
+   "evidences": [
+    {
+     "paper_id": "087796f4beb92c9d9e8a111d077d365c4eee41ca",
+     "source_title": "frankflood",
+     "supported": true,
+     "sentence": "March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra.",
+     "page": 1,
+     "snippet": "March 14, 2018 by Donal Dublin's newest",
+     "cosine": 0.8121,
+     "reason": "The passage states that Dublin's newest plaques were unveiled on the Frank Flood Bridge in Drumcondra on March 14, 2018, which directly supports the claim.",
+     "window": "Feeds: \u00ab Ringsend and Dublin's Football History Ballybough and the mysterious 'Suicide Plot' \u00bb ## Speech at the unveiling of Frank Flood Bridge, Drumcondra. March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra. They commemorate a young and fearless IRA Active Service Unit commander, a mere 19 years of age at the time of his execution."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Dublin's newest plaques were unveiled on the Frank Flood Bridge in Drumcondra on March 14, 2018, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "naming date 14 March 2018",
+      "paper_id": "087796f4beb92c9d9e8a111d077d365c4eee41ca",
+      "source_title": "frankflood",
+      "sentence": "March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra.",
+      "page": 1,
+      "snippet": "March 14, 2018 by Donal Dublin's newest"
+     }
+    ],
+    "uncovered": [
+     "bridge over River Tolka in Drumcondra at Millmount Avenue/Botanic Avenue named Droichead Frank Flood"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "087796f4beb92c9d9e8a111d077d365c4eee41ca",
+      "source_title": "frankflood",
+      "text": "March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific geographic details: 'over the River Tolka in Drumcondra at Millmount Avenue/Botanic Avenue' are not stated in the source text.",
+    "rewrite_suggestion": "The bridge in Drumcondra was named Frank Flood Bridge on 14 March 2018.",
+    "proofs": [
+     "March 14, 2018 by Donal Dublin's newest plaques were unveiled today on the Frank Flood Bridge, Drumcondra."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves the name (Frank Flood Bridge) and the date (14 March 2018). However, the claim includes a precise location description (over the River Tolka at Millmount/Botanic) that is not present anywhere in the source text. Since that component is unsupported by the cited source, the author must either add a citation for that location or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "She would continue to learn from her father for another 13 years.",
+   "markers": [
+    "veratsuweiling"
+   ],
+   "paper_ids": [
+    "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9326,
+   "evidence": {
+    "paper_id": "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0",
+    "source_title": "veratsuweiling",
+    "supported": true,
+    "sentence": "\"I took lessons from my father for 13 years,\" she said.",
+    "page": 1,
+    "snippet": "\"I took lessons from my father for",
+    "cosine": 0.9326,
+    "reason": "The passage directly states that the subject took lessons from her father for 13 years.",
+    "window": "That's how I started.\" \"I took lessons from my father for 13 years,\" she said. \"When I started, it was the early '60s."
+   },
+   "evidences": [
+    {
+     "paper_id": "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0",
+     "source_title": "veratsuweiling",
+     "supported": true,
+     "sentence": "\"I took lessons from my father for 13 years,\" she said.",
+     "page": 1,
+     "snippet": "\"I took lessons from my father for",
+     "cosine": 0.9326,
+     "reason": "The passage directly states that the subject took lessons from her father for 13 years.",
+     "window": "That's how I started.\" \"I took lessons from my father for 13 years,\" she said. \"When I started, it was the early '60s."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the subject took lessons from her father for 13 years.",
+   "covering": {
+    "covered": [
+     {
+      "component": "learned from father for 13 years",
+      "paper_id": "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0",
+      "source_title": "veratsuweiling",
+      "sentence": "\"I took lessons from my father for 13 years,\" she said.",
+      "page": 1,
+      "snippet": "\"I took lessons from my father for"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0",
+      "source_title": "veratsuweiling",
+      "text": "\"I took lessons from my father for 13 years,\" she said.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t24",
+   "text": "The Bahamas Ministry of Tourism apologized on behalf of the nation, and denied having any responsibility for how the events unfolded.",
+   "markers": [
+    "fyrefestival"
+   ],
+   "paper_ids": [
+    "62fdba630aec34706b45596158cb0237b20ee262"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "62fdba630aec34706b45596158cb0237b20ee262",
+    "source_title": "fyrefestival",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Meanwhile, the Bahamas Ministry of Tourism has apologised to festival-goers on behalf of the nation.",
+    "page": 1,
+    "snippet": "Meanwhile, the Bahamas Ministry of Tourism has",
+    "reason": "The passage does not state that the Bahamas Ministry of Tourism denied having any responsibility for how the events unfolded.",
+    "votes": "2-0",
+    "window": "Meanwhile, the Bahamas Ministry of Tourism has apologised to festival-goers on behalf of the nation."
+   },
+   "evidences": [
+    {
+     "paper_id": "62fdba630aec34706b45596158cb0237b20ee262",
+     "source_title": "fyrefestival",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Meanwhile, the Bahamas Ministry of Tourism has apologised to festival-goers on behalf of the nation.",
+     "page": 1,
+     "snippet": "Meanwhile, the Bahamas Ministry of Tourism has",
+     "reason": "The passage does not state that the Bahamas Ministry of Tourism denied having any responsibility for how the events unfolded.",
+     "votes": "2-0",
+     "window": "Meanwhile, the Bahamas Ministry of Tourism has apologised to festival-goers on behalf of the nation."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the Bahamas Ministry of Tourism denied having any responsibility for how the events unfolded.",
+   "component_check": {
+    "found": [
+     "The Bahamas Ministry of Tourism apologized on behalf of the nation."
+    ],
+    "missing": [
+     "The Bahamas Ministry of Tourism denied having any responsibility for how the events unfolded."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Bahamas Ministry of Tourism apologized on behalf of the nation.",
+      "paper_id": "62fdba630aec34706b45596158cb0237b20ee262",
+      "source_title": "fyrefestival",
+      "sentence": "Meanwhile, the Bahamas Ministry of Tourism has apologised to festival-goers on behalf of the nation.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a statement of fact attributed to the Bahamas Ministry of Tourism, which the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "denied having any responsibility for how the events unfolded",
+    "rewrite_suggestion": "The Bahamas Ministry of Tourism apologized to festival-goers on behalf of the nation.",
+    "proofs": [
+     "Meanwhile, the Bahamas Ministry of Tourism has apologised to festival-goers on behalf of the nation."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that the Ministry apologized, which is one component of the claim. However, the claim also states that the Ministry 'denied having any responsibility', which is not mentioned anywhere in the source text. This component is an unsourced addition by the author. Since a substantive component is not provable from the source at all, the author must either add a citation for the denial or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "They are seen weathering a sandstorm, followed by a snowstorm and a rainstorm which culminates in a standoff of sorts .",
+   "markers": [
+    "iknowwhatyoudidlastsumme"
+   ],
+   "paper_ids": [
+    "25ba71903b98de46372175cd20bb5679a3eb715c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "25ba71903b98de46372175cd20bb5679a3eb715c",
+    "source_title": "iknowwhatyoudidlastsumme",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "As the tension heightens, they face rain, snow and storms (but never peel their eyes from each other), culminating in a soaking wet standoff of sorts as they attempt to repair their relationship.",
+    "page": 1,
+    "snippet": "As the tension heightens, they face rain,",
+    "reason": "The passage does not mention a sandstorm.",
+    "votes": "2-0",
+    "window": "As the tension heightens, they face rain, snow and storms (but never peel their eyes from each other), culminating in a soaking wet standoff of sorts as they attempt to repair their relationship. But in the track's accompanying music video, released Friday (Nov. 20), Shawn and Camila turn the turmoil up several notches while they weather one hell of a storm."
+   },
+   "evidences": [
+    {
+     "paper_id": "25ba71903b98de46372175cd20bb5679a3eb715c",
+     "source_title": "iknowwhatyoudidlastsumme",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "As the tension heightens, they face rain, snow and storms (but never peel their eyes from each other), culminating in a soaking wet standoff of sorts as they attempt to repair their relationship.",
+     "page": 1,
+     "snippet": "As the tension heightens, they face rain,",
+     "reason": "The passage does not mention a sandstorm.",
+     "votes": "2-0",
+     "window": "As the tension heightens, they face rain, snow and storms (but never peel their eyes from each other), culminating in a soaking wet standoff of sorts as they attempt to repair their relationship. But in the track's accompanying music video, released Friday (Nov. 20), Shawn and Camila turn the turmoil up several notches while they weather one hell of a storm."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention a sandstorm.",
+   "component_check": {
+    "found": [
+     "followed by a snowstorm",
+     "and a rainstorm",
+     "which culminates in a standoff of sorts"
+    ],
+    "missing": [
+     "They are seen weathering a sandstorm"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "followed by a snowstorm",
+      "paper_id": "25ba71903b98de46372175cd20bb5679a3eb715c",
+      "source_title": "iknowwhatyoudidlastsumme",
+      "sentence": "But in the track's accompanying music video, released Friday (Nov. 20), Shawn and Camila turn the turmoil up several notches while they weather one hell of a storm.",
+      "page": 1
+     },
+     {
+      "component": "and a rainstorm",
+      "paper_id": "25ba71903b98de46372175cd20bb5679a3eb715c",
+      "source_title": "iknowwhatyoudidlastsumme",
+      "sentence": "But in the track's accompanying music video, released Friday (Nov. 20), Shawn and Camila turn the turmoil up several notches while they weather one hell of a storm.",
+      "page": 1
+     },
+     {
+      "component": "which culminates in a standoff of sorts",
+      "paper_id": "25ba71903b98de46372175cd20bb5679a3eb715c",
+      "source_title": "iknowwhatyoudidlastsumme",
+      "sentence": "As the tension heightens, they face rain, snow and storms (but never peel their eyes from each other), culminating in a soaking wet standoff of sorts as they attempt to repair their relationship.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes events and a plot point that are directly attributed to the content of the cited source. There is no indication that the citation is for methods, concepts, or related work; it is expected to support the narrative described.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "They are seen weathering a sandstorm",
+    "rewrite_suggestion": "They are seen weathering rain, snow, and storms, culminating in a standoff of sorts.",
+    "proofs": [
+     "As the tension heightens, they face rain, snow and storms (but never peel their eyes from each other), culminating in a soaking wet standoff of sorts as they attempt to repair their relationship."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a 'sandstorm' that is not mentioned anywhere in the source text. The shown sentence supports facing rain, snow, and storms, and the standoff, but the sandstorm component is entirely absent and cannot be proven from the provided source. Therefore the author must either add a citation for the sandstorm or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "The first legs were played on March 6\u20137, and the second legs were played on March 13\u201314, 2018.",
+   "markers": [
+    "2018concacafchampionslea"
+   ],
+   "paper_ids": [
+    "299669f1432ec994303ec116b3e3a44b335b8d45"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+    "source_title": "2018concacafchampionslea",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The second leg quarterfinals will be played the following week, March 13-14.",
+    "page": 1,
+    "snippet": "The second leg quarterfinals will be played",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "The second leg quarterfinals will be played the following week, March 13-14. The quarterfinals will begin on Tuesday, March 6, 2018, in Mexico City, when seven-time CONCACAF champion Club America host Tauro FC at 8:00 pm ET. Club Tijuana won its round of 16 series 2-1 over Motagua FC.The first leg quarterfinals will continue the following night, Wednesday, March 7, 2018 in Seattle and Toronto. Tigres UANL (MEX) v. Toronto FC (CAN)Wednesday, March 14, 201820:00"
+   },
+   "evidences": [
+    {
+     "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+     "source_title": "2018concacafchampionslea",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The second leg quarterfinals will be played the following week, March 13-14.",
+     "page": 1,
+     "snippet": "The second leg quarterfinals will be played",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "The second leg quarterfinals will be played the following week, March 13-14. The quarterfinals will begin on Tuesday, March 6, 2018, in Mexico City, when seven-time CONCACAF champion Club America host Tauro FC at 8:00 pm ET. Club Tijuana won its round of 16 series 2-1 over Motagua FC.The first leg quarterfinals will continue the following night, Wednesday, March 7, 2018 in Seattle and Toronto. Tigres UANL (MEX) v. Toronto FC (CAN)Wednesday, March 14, 201820:00"
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "first legs played on March 6\u20137",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "The quarterfinals will begin on Tuesday, March 6, 2018, in Mexico City, when seven-time CONCACAF champion Club America host Tauro FC at 8:00 pm ET.",
+      "page": 1,
+      "snippet": "The quarterfinals will begin on Tuesday, March"
+     },
+     {
+      "component": "first legs played on March 6\u20137",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "Club America (MEX) v. Tauro FC (PAN)22:00 Club Tijuana (MEX) v. New York Red Bulls (USA)Wednesday, March 7, 201820:00",
+      "page": 1,
+      "snippet": "Club America (MEX) v. Tauro FC (PAN)22:00"
+     },
+     {
+      "component": "second legs played on March 13\u201314",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "The second leg quarterfinals will be played the following week, March 13-14.",
+      "page": 1,
+      "snippet": "The second leg quarterfinals will be played"
+     },
+     {
+      "component": "second legs played on March 13\u201314",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "Seattle Sounders FC (USA) v. CD Guadalajara (MEX)Tuesday, March 13, 201820:00",
+      "page": 1,
+      "snippet": "Seattle Sounders FC (USA) v. CD Guadalajara"
+     },
+     {
+      "component": "year 2018",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "Club Tijuana won its round of 16 series 2-1 over Motagua FC.The first leg quarterfinals will continue the following night, Wednesday, March 7, 2018 in Seattle and Toronto.",
+      "page": 1,
+      "snippet": "Club Tijuana won its round of 16"
+     },
+     {
+      "component": "year 2018",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "The quarterfinals will begin on Tuesday, March 6, 2018, in Mexico City, when seven-time CONCACAF champion Club America host Tauro FC at 8:00 pm ET.",
+      "page": 1,
+      "snippet": "The quarterfinals will begin on Tuesday, March"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "text": "The quarterfinals will begin on Tuesday, March 6, 2018, in Mexico City, when seven-time CONCACAF champion Club America host Tauro FC at 8:00 pm ET. The Mexican side qualified to this stage after overcoming Deportivo Saprissa 6-2 on aggregate, while Tauro FC overcame the 2016 MLS Supporters' Shield and 2016 US Open Cup Champions on away goal tiebreaker. That same night, the New York Red Bulls will travel to Tijuana's Estadio Caliente to face Club Tijuana at 10:00 pm ET. The MLS side earned a sport in the quarterfinals with an aggregate score of 3-1, over CD Olimpia. Club Tijuana won its round of 16 series 2-1 over Motagua FC.The first leg quarterfinals will continue the following night, Wednesday, March 7, 2018 in Seattle and Toronto. Defending MLS and Canadian Champions Toronto FC will face current Liga MX Champions, Tigres UANL at 8:00 pm ET, followed by Seattle Sounders FC vs CD Guadalajara at 10:00 pm ET. Toronto and Tigres advanced to the second round of the competition after defeating the Colorado Rapids 2-0 and CS Herediano 5-3 respectively. The second leg quarterfinals will be played the following week, March 13-14. The New York Red Bulls and Tigres UANL will host Club Tijuana and Toronto FC on Tuesday, followed by Tauro FC vs Club America and CD Guadalajara vs Seattle Sounders FC on Wednesday. All quarterfinal matches will be broadcast by Univision Deportes on UDN and its digital platforms; Fox Sports Latam, Verizon and its family of media properties, including go90 and rights partners across the Confederation. For more information, please check your local TV listings. The range of dates for semifinal, first-leg games is April 3-5, while second-leg play is scheduled for April 10-12. The finals \u2013 home-and-away, as well \u2013 are set for the last two weeks of April. The winner of the 2018 CONCACAF Champions League will represent the region in the 2018 FIFA Club World Cup in the United Arab Emirates.2018 Scotiabank CONCACAF Champions League \u2013 Quarterfinal Schedule*ET and home team listed firstTuesday, March 6, 201820:00 Club America (MEX) v. Tauro FC (PAN)22:00 Club Tijuana (MEX) v. New York Red Bulls (USA)Wednesday, March 7, 201820:00 Toronto FC (CAN) v. Tigres UANL (MEX)22:00 Seattle Sounders FC (USA) v. CD Guadalajara (MEX)Tuesday, March 13, 201820:00",
+      "n_used": 5
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "aba5ad3b7d772a18d281a98b4e8c5d03a087ebcd": {
+    "title": "mosquitolagoon",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "928b80b61066644732ef1b6b3a6012b572f09ba0": {
+    "title": "djburnone",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "be35d05f5b15dc531c2434c2e296cc680fcbe2dc": {
+    "title": "ashlynharris",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "25ba71903b98de46372175cd20bb5679a3eb715c": {
+    "title": "iknowwhatyoudidlastsumme",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "299669f1432ec994303ec116b3e3a44b335b8d45": {
+    "title": "2018concacafchampionslea",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0": {
+    "title": "veratsuweiling",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "47b1c7ec4906a1e0021ad7c83b6f6512412d4aac": {
+    "title": "downtownseattletransittu",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "12dfbee9a4fc5b1997b1fb901408c4ca483fd42c": {
+    "title": "judaismandsexuality",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8bd3a714ae565f31230986302ba4414c6a57f93e": {
+    "title": "violadavis",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "087796f4beb92c9d9e8a111d077d365c4eee41ca": {
+    "title": "frankflood",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "62fdba630aec34706b45596158cb0237b20ee262": {
+    "title": "fyrefestival",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bd9036f79e98c965d62cb662bc61eb2cad0e7c5f": {
+    "title": "scarlettjohansson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f12f7c4c0fb939a54077df1939f316ce37e9ff58": {
+    "title": "weirdtales",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "11fbfe07c83e599c834854c98f0bb10e14d50cc3": {
+    "title": "thermonectusmarmoratus",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "36eae8a4161a3622be897ef8e6567ca27360a703": {
+    "title": "borisbecker",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4ae4e50b982e084c4a2b723beadbb8b38244b798": {
+    "title": "washingtonstateroute520",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "408523dbfcb2ac0461fbbb9c76e89f329b213d05": {
+    "title": "yemenicivilwar2015presen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "cdbe29ad1576aedae20db89504c43028810b7071": {
+    "title": "autumnpeltier",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb": {
+    "title": "garrettbasch",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "735e7299e408be383b4926091d507474af3ead96": {
+    "title": "2019cricketworldcup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5034d1ed048f1925b4d5b5ad7cd6285a758ec294": {
+    "title": "minneapolis",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a52db556248fdead7458ed11682db466ae44bed4": {
+    "title": "aarondford",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "f0e5dfdb3b95786bb6cbb0d728ae514c384b06ba": {
+    "title": "electoralcollegesforthes",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "42547b57fb4649e4d9cb63d73d53daa29633ba7b": {
+    "title": "futurelearn",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9": {
+    "title": "orpheomccord",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "32e18df55a89440730ed33a903fcfb8f73cda7d5": {
+    "title": "luisladariaferrer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 11,
+   "unsupported": 15,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:34:25",
+  "marker_errors": [],
+  "processing_time_seconds": 399.3,
+  "source_hashes": {
+   "djburnone.txt": "80bd0bceca833955acb984c7306611cabde8a1b9",
+   "borisbecker.txt": "3e7b293e6b90a088793ea62497ecd08f774a3f17",
+   "weirdtales.txt": "8f1f5a91640ed99c400c47e81fd5ba7a43f4ff00",
+   "washingtonstateroute520.txt": "9af7f88489b9c347c6670c75478fab06fe134155",
+   "scarlettjohansson.txt": "fd221dac736cfc61549f7eaca82147497785464a",
+   "judaismandsexuality.txt": "752c3faee5a9ba070c315e4cba128398d600fda2",
+   "orpheomccord.txt": "2250f70601f2650a52693ab1901b2c8c2b1e1c15",
+   "thermonectusmarmoratus.txt": "c2319e239bd56ca475acc33a8898cae066e8cf43",
+   "garrettbasch.txt": "4fe7a6db1590101db8f9964403ef278e243b5e90",
+   "downtownseattletransittu.txt": "5acfdd53016c5249545344dab8c4195936d15261",
+   "2019cricketworldcup.txt": "efde34676fcffbce442d830cc709365bbcd4e719",
+   "mosquitolagoon.txt": "3ca9c1e09fd1a0017fc09866f7a19c953582d836",
+   "violadavis.txt": "6a207a6fb6d6877c95e557d2315504f88ac9da03",
+   "minneapolis.txt": "a624fcce0f236de313e22d4fb323b05f052c0681",
+   "yemenicivilwar2015presen.txt": "1f1857b95bb26c2a663a679b0365276547a4e207",
+   "futurelearn.txt": "86392aebf6a680cfcab2b704e260e9fdbf328e52",
+   "luisladariaferrer.txt": "a39db60e81ba55cbb372aada44c5fdd1d4ac69ba",
+   "ashlynharris.txt": "f3323b1eb3c1c77c05253c6929c10547dc8c87da",
+   "electoralcollegesforthes.txt": "943d730cfe7c7432a0c620eec1553171e64891d6",
+   "autumnpeltier.txt": "e98716c9bddc78eb5f946bf548be9919addb762a",
+   "aarondford.txt": "0864c4ad656b43c6f68e1d423f4169764102d503",
+   "frankflood.txt": "195efb5f7612b21c52f023198faf70e5001eee65",
+   "veratsuweiling.txt": "77b641833cea681155373eb8b7fd312c601c76f4",
+   "fyrefestival.txt": "97d8f91fdadf6592bd0b357acbafe6c4dd67d5ae",
+   "iknowwhatyoudidlastsumme.txt": "21ce37627f5d8776b28ce7082eb13812e3234cda",
+   "2018concacafchampionslea.txt": "60f96b164feeb7e439dc748701debc47fd1a09d1"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 395,
+    "prompt_tokens": 401862,
+    "completion_tokens": 18993,
+    "cost_usd": 0.047916
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 21,
+    "prompt_tokens": 66951,
+    "completion_tokens": 50238,
+    "cost_usd": 0.019207
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 15,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 18,
+   "actions": {
+    "add_citation_or_rewrite": 15,
+    "wrong_or_insufficient_evidence": 2,
+    "supported": 1
+   },
+   "proof_may_exist": [
+    "t4",
+    "t19"
+   ],
+   "conflicts": [
+    "t11",
+    "t17"
+   ],
+   "rescued": [],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "928b80b61066644732ef1b6b3a6012b572f09ba0",
+   "key": "djburnone",
+   "filename": "djburnone.txt",
+   "title": "djburnone",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+   "key": "borisbecker",
+   "filename": "borisbecker.txt",
+   "title": "borisbecker",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f12f7c4c0fb939a54077df1939f316ce37e9ff58",
+   "key": "weirdtales",
+   "filename": "weirdtales.txt",
+   "title": "weirdtales",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4ae4e50b982e084c4a2b723beadbb8b38244b798",
+   "key": "washingtonstateroute520",
+   "filename": "washingtonstateroute520.txt",
+   "title": "washingtonstateroute520",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bd9036f79e98c965d62cb662bc61eb2cad0e7c5f",
+   "key": "scarlettjohansson",
+   "filename": "scarlettjohansson.txt",
+   "title": "scarlettjohansson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "12dfbee9a4fc5b1997b1fb901408c4ca483fd42c",
+   "key": "judaismandsexuality",
+   "filename": "judaismandsexuality.txt",
+   "title": "judaismandsexuality",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "05e45781be5bcf4af1f9cfda7a85dcda5c3e6bc9",
+   "key": "orpheomccord",
+   "filename": "orpheomccord.txt",
+   "title": "orpheomccord",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "11fbfe07c83e599c834854c98f0bb10e14d50cc3",
+   "key": "thermonectusmarmoratus",
+   "filename": "thermonectusmarmoratus.txt",
+   "title": "thermonectusmarmoratus",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e939b41e06f8ddb3d35582a3ac8ea8f258ce87bb",
+   "key": "garrettbasch",
+   "filename": "garrettbasch.txt",
+   "title": "garrettbasch",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "47b1c7ec4906a1e0021ad7c83b6f6512412d4aac",
+   "key": "downtownseattletransittu",
+   "filename": "downtownseattletransittu.txt",
+   "title": "downtownseattletransittu",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+   "key": "2019cricketworldcup",
+   "filename": "2019cricketworldcup.txt",
+   "title": "2019cricketworldcup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "aba5ad3b7d772a18d281a98b4e8c5d03a087ebcd",
+   "key": "mosquitolagoon",
+   "filename": "mosquitolagoon.txt",
+   "title": "mosquitolagoon",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8bd3a714ae565f31230986302ba4414c6a57f93e",
+   "key": "violadavis",
+   "filename": "violadavis.txt",
+   "title": "violadavis",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5034d1ed048f1925b4d5b5ad7cd6285a758ec294",
+   "key": "minneapolis",
+   "filename": "minneapolis.txt",
+   "title": "minneapolis",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+   "key": "yemenicivilwar2015presen",
+   "filename": "yemenicivilwar2015presen.txt",
+   "title": "yemenicivilwar2015presen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "42547b57fb4649e4d9cb63d73d53daa29633ba7b",
+   "key": "futurelearn",
+   "filename": "futurelearn.txt",
+   "title": "futurelearn",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "32e18df55a89440730ed33a903fcfb8f73cda7d5",
+   "key": "luisladariaferrer",
+   "filename": "luisladariaferrer.txt",
+   "title": "luisladariaferrer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+   "key": "ashlynharris",
+   "filename": "ashlynharris.txt",
+   "title": "ashlynharris",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f0e5dfdb3b95786bb6cbb0d728ae514c384b06ba",
+   "key": "electoralcollegesforthes",
+   "filename": "electoralcollegesforthes.txt",
+   "title": "electoralcollegesforthes",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cdbe29ad1576aedae20db89504c43028810b7071",
+   "key": "autumnpeltier",
+   "filename": "autumnpeltier.txt",
+   "title": "autumnpeltier",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+   "key": "aarondford",
+   "filename": "aarondford.txt",
+   "title": "aarondford",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "087796f4beb92c9d9e8a111d077d365c4eee41ca",
+   "key": "frankflood",
+   "filename": "frankflood.txt",
+   "title": "frankflood",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "41ace9f4f78e9cfa10c7543c1d9476f22e3d38e0",
+   "key": "veratsuweiling",
+   "filename": "veratsuweiling.txt",
+   "title": "veratsuweiling",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "62fdba630aec34706b45596158cb0237b20ee262",
+   "key": "fyrefestival",
+   "filename": "fyrefestival.txt",
+   "title": "fyrefestival",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "25ba71903b98de46372175cd20bb5679a3eb715c",
+   "key": "iknowwhatyoudidlastsumme",
+   "filename": "iknowwhatyoudidlastsumme.txt",
+   "title": "iknowwhatyoudidlastsumme",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+   "key": "2018concacafchampionslea",
+   "filename": "2018concacafchampionslea.txt",
+   "title": "2018concacafchampionslea",
+   "num_claims": 0
+  }
+ ]
+}

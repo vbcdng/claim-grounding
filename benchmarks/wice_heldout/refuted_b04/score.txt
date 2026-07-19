@@ -1,0 +1,51 @@
+verdict-level agreement: 26/26 (100%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported           26
+
+arbiter-adjudicated agreement: 16/26 (61%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported           16
+  not_supported          -> partially_supported      9   <-- disagreement
+  not_supported          -> supported                1   <-- disagreement
+adjudication flips: 10
+  - bloodontheleaves           not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - nanticokepennsylvania      not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - didarganjassemblyconstit   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - softwarepatent             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - hailegiyorgiswoldemikael   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - imeltwithyou               not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - 201112stjohnstonefcseaso   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - greenrainbowparty          not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - cityofdavid                not_supported -> supported              wice=not_supported          (arbiter: proof exists in source (verified quotes))
+  - longlivelove               not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 26 refuted rows: base=0, adjudicated=1
+*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — stop and report ***
+
+per-claim:
+  OK  thenegotiationbrooklynni   wice=not_supported          tool=not_supported          
+  OK  lianlunson                 wice=not_supported          tool=not_supported          
+  OK  yahooanswers               wice=not_supported          tool=not_supported          
+  OK  secondamendmenttotheunit   wice=not_supported          tool=not_supported          
+  OK  bloodontheleaves           wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  nanticokepennsylvania      wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  glennhaughton              wice=not_supported          tool=not_supported          
+  OK  jankowski                  wice=not_supported          tool=not_supported          
+  OK  fairfaxvirginia            wice=not_supported          tool=not_supported          
+  OK  didarganjassemblyconstit   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  arabiangulfuniversity      wice=not_supported          tool=not_supported          
+  OK  elizalewis                 wice=not_supported          tool=not_supported          
+  OK  daniellesteel              wice=not_supported          tool=not_supported          
+  OK  softwarepatent             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  joelberryii                wice=not_supported          tool=not_supported          
+  OK  solarpowerintheunitedkin   wice=not_supported          tool=not_supported          
+  OK  chawa                      wice=not_supported          tool=not_supported          
+  OK  hailegiyorgiswoldemikael   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  imeltwithyou               wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  justicedemocrats           wice=not_supported          tool=not_supported          
+  OK  rogerwheelerbusinessman    wice=not_supported          tool=not_supported          
+  OK  201112stjohnstonefcseaso   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  greenrainbowparty          wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  cityofdavid                wice=not_supported          tool=not_supported          adj=supported              
+  OK  longlivelove               wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  timoneytechnologylimited   wice=not_supported          tool=not_supported          

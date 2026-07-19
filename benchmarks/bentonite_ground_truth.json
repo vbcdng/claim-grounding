@@ -1,0 +1,47 @@
+{
+  "paper": "bentonite",
+  "text_file": "examples/bentonite/my_text.md",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "created": "2026-07-04",
+  "basis": "Full 6-claim hand audit 2026-07-04 (flash-lite full re-judge). Verdicts identical to the 2026-07-02 flash run (4 supported / 2 unsupported), zero flips across the model change. No false positives. t5 is a correct citation-gap red; t2 is an over-literal compound-claim call -> watch.",
+  "claims": [
+    {
+      "id": "t0",
+      "expect": "supported",
+      "note": "weathered biotite superior Cs sorption — source states it sorbed far more than other clay minerals (magnitude 'two orders' qualitative-clear)",
+      "text": "Weathered biotite demonstrates superior cesium sorption, often by two orders of magnitude, compared to other clay minerals like illite, smectite, kaolinite, and halloysite ."
+    },
+    {
+      "id": "t1",
+      "expect": "supported",
+      "note": "montmorillonite > illite/kaolinite — source states it directly ('under all tested conditions')",
+      "text": "Montmorillonite also shows high adsorption capacity, outperforming illite and kaolinite ."
+    },
+    {
+      "id": "t2",
+      "expect": "watch",
+      "at_creation": "unsupported",
+      "improves_if": "supported",
+      "note": "compound claim: main clause (Kunipia-F > SiO2) IS supported; judge rejects on the incidental 'which contain montmorillonite' clause not being in a CITED source (the fact is in the corpus — see the card's re-citation alternatives). Both flash-lite and the flash second opinion agree unsupported. Over-literal but defensible; open call.",
+      "text": "Specific bentonite types, which contain montmorillonite, are effective: Kunipia-F bentonite is superior to SiO2 , natural Ca-bentonite has a higher capacity than Na-bentonite , and inorganic modified Na-bentonite shows high adsorption under alkaline conditions ."
+    },
+    {
+      "id": "t3",
+      "expect": "supported",
+      "note": "Mo-vanadate loaded bentonite enhances Cs removal — source states it directly",
+      "text": "Molybdenum vanadate loaded bentonite also enhances cesium removal ."
+    },
+    {
+      "id": "t4",
+      "expect": "supported",
+      "note": "glauconite > bentonite + acid-activated kaolinite improvement — both clauses have matching cited sources",
+      "text": "Glauconite exhibits higher sorption than bentonite , and acid-activated kaolinite significantly improves natural kaolinite's efficiency ."
+    },
+    {
+      "id": "t5",
+      "expect": "unsupported",
+      "note": "CORRECT red: sentence cites only 32d6151f27 (glauconite/bentonite/zeolite/diatomite), which supports 'zeolite highest' but says nothing about 'weathered biotite' (that is in t0's source, not cited here). Real citation gap.",
+      "text": "While zeolite shows the highest overall sorption among minerals , weathered biotite appears to be the best clay sorption material."
+    }
+  ]
+}

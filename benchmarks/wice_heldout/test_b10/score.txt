@@ -1,0 +1,62 @@
+verdict-level agreement: 9/26 (34%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported            6
+  partially_supported    -> not_supported           12   <-- disagreement
+  partially_supported    -> partially_supported      1
+  partially_supported    -> supported                3   <-- disagreement
+  supported              -> not_supported            1   <-- disagreement
+  supported              -> partially_supported      1   <-- disagreement
+  supported              -> supported                2
+
+arbiter-adjudicated agreement: 19/26 (73%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported            5
+  not_supported          -> partially_supported      1   <-- disagreement
+  partially_supported    -> not_supported            2   <-- disagreement
+  partially_supported    -> partially_supported     10
+  partially_supported    -> supported                4   <-- disagreement
+  supported              -> supported                4
+adjudication flips: 13
+  - chrisharrisjournalist      not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  + marshallcountyhighschool   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + lrssen                     not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + jamaicanationalfootballt   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + michaelcollinsastronaut    not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  ~ dustbinbabyfilm            not_supported -> supported              wice=partially_supported    (arbiter: proof exists in source (verified quotes))
+  + colombocentralbankbombin   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + charlescamilleri           not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + 2014fifaworldcuppreparat   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + ellicottcityhistoricdist   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + kevinjanderson             not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + bluey2018tvseries          partially_supported -> supported              wice=supported              (arbiter: gaps look minor — fully proven)
+  + steveclemgrogan            not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 6 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  OK  jacksparrow                wice=not_supported          tool=not_supported          
+  OK  chrisharrisjournalist      wice=not_supported          tool=not_supported          adj=partially_supported    
+  DIFF marshallcountyhighschool   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF joshuadziabiak             wice=partially_supported    tool=not_supported          
+  DIFF 2019cricketworldcup        wice=partially_supported    tool=supported              picks_in_gold=3/4
+  DIFF lrssen                     wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF jamaicanationalfootballt   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF michaelcollinsastronaut    wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF dustbinbabyfilm            wice=partially_supported    tool=not_supported          adj=supported              
+  DIFF colombocentralbankbombin   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  mitchaustin                wice=not_supported          tool=not_supported          
+  DIFF charlescamilleri           wice=supported              tool=not_supported          adj=supported              
+  DIFF dhanvanthiramarau          wice=partially_supported    tool=not_supported          
+  OK  wfmt                       wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF opec                       wice=partially_supported    tool=supported              picks_in_gold=1/1
+  DIFF 2014fifaworldcuppreparat   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF ellicottcityhistoricdist   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF kevinjanderson             wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF 2018concacafchampionslea   wice=partially_supported    tool=supported              picks_in_gold=1/2
+  DIFF bluey2018tvseries          wice=supported              tool=partially_supported    adj=supported              picks_in_gold=1/2
+  OK  clareandgilbertvalleysco   wice=supported              tool=supported              picks_in_gold=0/1
+  OK  welfare                    wice=not_supported          tool=not_supported          
+  OK  michaelannett              wice=supported              tool=supported              picks_in_gold=2/2
+  DIFF steveclemgrogan            wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  brendawingfield            wice=not_supported          tool=not_supported          
+  OK  georgetownuniversity       wice=not_supported          tool=not_supported          

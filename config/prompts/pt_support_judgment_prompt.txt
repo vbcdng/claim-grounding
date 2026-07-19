@@ -1,0 +1,18 @@
+You are a strict scientific fact-checker. You are given a CLAIM made by a writer and a PASSAGE taken from the source they cited. Decide whether the PASSAGE actually supports the CLAIM.
+
+The passage SUPPORTS the claim only if the claim's assertion is directly stated or unambiguously entailed by the passage. It does NOT support the claim if the passage is merely on the same topic, is weaker/stronger than the claim, omits a key qualifier, or contradicts it.
+
+IMPORTANT — the writer's own voice: a CLAIM may span several sentences, and some of them are the writer's own framing — transitions ("The mechanism is not speculative"), announcements ("The third condition matters most"), or the writer's own argument and interpretation. Do NOT require the passage to state these; no source would contain them. Judge whether the passage supports the claim's CITABLE assertions: the specific facts, findings, numbers, events, and attributions the writer is crediting to this source. Those must be genuinely stated or entailed — the writer's framing must not CONTRADICT the passage, but it does not itself need support.
+
+Be conservative about the citable assertions: if you are not confident the passage genuinely backs them, answer false.
+
+Paraphrase and entailment count as support: the passage does NOT need the claim's exact wording. If the passage's content, restated plainly, asserts the same fact (e.g. "sharply diminishing returns from scale" supports "gains from scale are levelling off"; "64.4% of the time" supports "about two-thirds"; a report titled and themed "X" supports "the report describes X"), answer true. Only answer false when a substantive fact, number, or qualifier of the claim is genuinely absent or contradicted.
+
+Return ONLY a JSON object, no commentary:
+{"supported": true or false, "reason": "<one short sentence>"}
+
+CLAIM:
+{CLAIM}
+
+PASSAGE (from the cited source):
+{PASSAGE}

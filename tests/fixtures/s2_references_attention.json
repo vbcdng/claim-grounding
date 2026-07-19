@@ -1,0 +1,673 @@
+{
+ "offset": 0,
+ "citingPaperInfo": {
+  "openAccessPdf": {
+   "url": "",
+   "status": null,
+   "license": null,
+   "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1706.03762, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "title": "Attention is All you Need",
+  "authors": [
+   {
+    "authorId": "40348417",
+    "name": "Ashish Vaswani"
+   },
+   {
+    "authorId": "1846258",
+    "name": "Noam Shazeer"
+   },
+   {
+    "authorId": "3877127",
+    "name": "Niki Parmar"
+   },
+   {
+    "authorId": "39328010",
+    "name": "Jakob Uszkoreit"
+   },
+   {
+    "authorId": "145024664",
+    "name": "Llion Jones"
+   },
+   {
+    "authorId": "19177000",
+    "name": "Aidan N. Gomez"
+   },
+   {
+    "authorId": "40527594",
+    "name": "Lukasz Kaiser"
+   },
+   {
+    "authorId": "3443442",
+    "name": "I. Polosukhin"
+   }
+  ]
+ },
+ "next": 12,
+ "data": [
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "032274e57f7d8b456bd255fe76b909b2c1d7458e",
+    "externalIds": {
+     "ArXiv": "1705.04304",
+     "DBLP": "journals/corr/PaulusXS17",
+     "MAG": "2612675303",
+     "CorpusId": 21850704
+    },
+    "title": "A Deep Reinforced Model for Abstractive Summarization",
+    "year": 2017,
+    "citationCount": 1661,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1705.04304, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2896063",
+      "name": "Romain Paulus"
+     },
+     {
+      "authorId": "2228109",
+      "name": "Caiming Xiong"
+     },
+     {
+      "authorId": "2166511",
+      "name": "R. Socher"
+     }
+    ],
+    "abstract": "Attentional, RNN-based encoder-decoder models for abstractive summarization have achieved good performance on short input and output sequences. For longer documents and summaries however these models often include repetitive and incoherent phrases. We introduce a neural network model with a novel intra-attention that attends over the input and continuously generated output separately, and a new training method that combines standard supervised word prediction and reinforcement learning (RL). Models trained only with supervised learning often exhibit \"exposure bias\" - they assume ground truth is provided at each step during training. However, when standard word prediction is combined with the global sequence prediction training of RL the resulting summaries become more readable. We evaluate this model on the CNN/Daily Mail and New York Times datasets. Our model obtains a 41.16 ROUGE-1 score on the CNN/Daily Mail dataset, an improvement over previous state-of-the-art models. Human evaluation also shows that our model produces higher quality summaries."
+   }
+  },
+  {
+   "isInfluential": true,
+   "intents": [
+    "methodology",
+    "background",
+    "result"
+   ],
+   "citedPaper": {
+    "paperId": "43428880d75b3a14257c3ee9bda054e61eb869c0",
+    "externalIds": {
+     "ArXiv": "1705.03122",
+     "MAG": "2950686565",
+     "DBLP": "journals/corr/GehringAGYD17",
+     "CorpusId": 3648736
+    },
+    "title": "Convolutional Sequence to Sequence Learning",
+    "year": 2017,
+    "citationCount": 3537,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1705.03122, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2401865",
+      "name": "Jonas Gehring"
+     },
+     {
+      "authorId": "2325985",
+      "name": "Michael Auli"
+     },
+     {
+      "authorId": "2529182",
+      "name": "David Grangier"
+     },
+     {
+      "authorId": "13759615",
+      "name": "Denis Yarats"
+     },
+     {
+      "authorId": "2921469",
+      "name": "Yann Dauphin"
+     }
+    ],
+    "abstract": "The prevalent approach to sequence to sequence learning maps an input sequence to a variable length output sequence via recurrent neural networks. We introduce an architecture based entirely on convolutional neural networks. Compared to recurrent models, computations over all elements can be fully parallelized during training and optimization is easier since the number of non-linearities is fixed and independent of the input length. Our use of gated linear units eases gradient propagation and we equip each decoder layer with a separate attention module. We outperform the accuracy of the deep LSTM setup of Wu et al. (2016) on both WMT'14 English-German and WMT'14 English-French translation at an order of magnitude faster speed, both on GPU and CPU."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citedPaper": {
+    "paperId": "4550a4c714920ef57d19878e31c9ebae37b049b2",
+    "externalIds": {
+     "MAG": "2952564229",
+     "DBLP": "journals/corr/BritzGLL17",
+     "ACL": "D17-1151",
+     "ArXiv": "1703.03906",
+     "DOI": "10.18653/v1/D17-1151",
+     "CorpusId": 2201909
+    },
+    "title": "Massive Exploration of Neural Machine Translation Architectures",
+    "year": 2017,
+    "citationCount": 546,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/D17-1151.pdf",
+     "status": "HYBRID",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1703.03906, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "3908643",
+      "name": "D. Britz"
+     },
+     {
+      "authorId": "46684455",
+      "name": "Anna Goldie"
+     },
+     {
+      "authorId": "1707242",
+      "name": "Minh-Thang Luong"
+     },
+     {
+      "authorId": "2827616",
+      "name": "Quoc V. Le"
+     }
+    ],
+    "abstract": "Neural Machine Translation (NMT) has shown remarkable progress over the past few years, with production systems now being deployed to end-users. As the field is moving rapidly, it has become unclear which elements of NMT architectures have a significant impact on translation quality. In this work, we present a large-scale analysis of the sensitivity of NMT architectures to common hyperparameters. We report empirical results and variance numbers for several hundred experimental runs, corresponding to over 250,000 GPU hours on a WMT English to German translation task. Our experiments provide practical insights into the relative importance of factors such as embedding size, network depth, RNN cell type, residual connections, attention mechanism, and decoding heuristics. As part of this contribution, we also release an open-source NMT framework in TensorFlow to make it easy for others to reproduce our results and perform their own experiments."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "204a4a70428f3938d2c538a4d74c7ae0416306d8",
+    "externalIds": {
+     "DBLP": "conf/iclr/LinFSYXZB17",
+     "ArXiv": "1703.03130",
+     "MAG": "2963386218",
+     "CorpusId": 15280949
+    },
+    "title": "A Structured Self-attentive Sentence Embedding",
+    "year": 2017,
+    "citationCount": 2303,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1703.03130, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "3146592",
+      "name": "Zhouhan Lin"
+     },
+     {
+      "authorId": "2521552",
+      "name": "Minwei Feng"
+     },
+     {
+      "authorId": "1790831",
+      "name": "C. D. Santos"
+     },
+     {
+      "authorId": "2482533",
+      "name": "Mo Yu"
+     },
+     {
+      "authorId": "144028698",
+      "name": "Bing Xiang"
+     },
+     {
+      "authorId": "145218984",
+      "name": "Bowen Zhou"
+     },
+     {
+      "authorId": "1751762",
+      "name": "Yoshua Bengio"
+     }
+    ],
+    "abstract": "This paper proposes a new model for extracting an interpretable sentence embedding by introducing self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding, with each row of the matrix attending on a different part of the sentence. We also propose a self-attention mechanism and a special regularization term for the model. As a side effect, the embedding comes with an easy way of visualizing what specific parts of the sentence are encoded into the embedding. We evaluate our model on 3 different tasks: author profiling, sentiment classification, and textual entailment. Results show that our model yields a significant performance gain compared to other sentence embedding methods in all of the 3 tasks."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "79baf48bd560060549998d7b61751286de062e2a",
+    "externalIds": {
+     "MAG": "2963385194",
+     "ArXiv": "1703.10722",
+     "DBLP": "conf/iclr/KuchaievG17",
+     "CorpusId": 3570621
+    },
+    "title": "Factorization tricks for LSTM networks",
+    "year": 2017,
+    "citationCount": 122,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1703.10722, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2787022",
+      "name": "Oleksii Kuchaiev"
+     },
+     {
+      "authorId": "31963005",
+      "name": "Boris Ginsburg"
+     }
+    ],
+    "abstract": "We present two simple ways of reducing the number of parameters and accelerating the training of large Long Short-Term Memory (LSTM) networks: the first one is \"matrix factorization by design\" of LSTM matrix into the product of two smaller matrices, and the second one is partitioning of LSTM matrix, its inputs and states into the independent groups. Both approaches allow us to train large LSTM networks significantly faster to the near state-of the art perplexity while using significantly less RNN parameters."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "13d9323a8716131911bfda048a40e2cde1a76a46",
+    "externalIds": {
+     "MAG": "2949847915",
+     "DBLP": "conf/iclr/KimDHR17",
+     "ArXiv": "1702.00887",
+     "CorpusId": 6961760
+    },
+    "title": "Structured Attention Networks",
+    "year": 2017,
+    "citationCount": 494,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1702.00887, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "38367242",
+      "name": "Yoon Kim"
+     },
+     {
+      "authorId": "47472547",
+      "name": "Carl Denton"
+     },
+     {
+      "authorId": "144294755",
+      "name": "Luong Hoang"
+     },
+     {
+      "authorId": "2531268",
+      "name": "Alexander M. Rush"
+     }
+    ],
+    "abstract": "Attention networks have proven to be an effective approach for embedding categorical inference within a deep neural network. However, for many tasks we may want to model richer structural dependencies without abandoning end-to-end training. In this work, we experiment with incorporating richer structural distributions, encoded using graphical models, within deep networks. We show that these structured attention networks are simple extensions of the basic attention procedure, and that they allow for extending attention beyond the standard soft-selection approach, such as attending to partial segmentations or to subtrees. We experiment with two different classes of structured attention networks: a linear-chain conditional random field and a graph-based parsing model, and describe how these models can be practically implemented as neural network layers. Experiments show that this approach is effective for incorporating structural biases, and structured attention networks outperform baseline attention models on a variety of synthetic and real tasks: tree transduction, neural machine translation, question answering, and natural language inference. We further find that models trained in this way learn interesting unsupervised hidden representations that generalize simple attention."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "510e26733aaff585d65701b9f1be7ca9d5afc586",
+    "externalIds": {
+     "DBLP": "journals/corr/ShazeerMMDLHD17",
+     "MAG": "2952339051",
+     "ArXiv": "1701.06538",
+     "CorpusId": 12462234
+    },
+    "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+    "year": 2017,
+    "citationCount": 4957,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1701.06538, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "1846258",
+      "name": "Noam Shazeer"
+     },
+     {
+      "authorId": "1861312",
+      "name": "Azalia Mirhoseini"
+     },
+     {
+      "authorId": "2275364713",
+      "name": "Krzysztof Maziarz"
+     },
+     {
+      "authorId": "36347083",
+      "name": "Andy Davis"
+     },
+     {
+      "authorId": "2827616",
+      "name": "Quoc V. Le"
+     },
+     {
+      "authorId": "1695689",
+      "name": "Geoffrey E. Hinton"
+     },
+     {
+      "authorId": "48448318",
+      "name": "J. Dean"
+     }
+    ],
+    "abstract": "The capacity of a neural network to absorb information is limited by its number of parameters. Conditional computation, where parts of the network are active on a per-example basis, has been proposed in theory as a way of dramatically increasing model capacity without a proportional increase in computation. In practice, however, there are significant algorithmic and performance challenges. In this work, we address these challenges and finally realize the promise of conditional computation, achieving greater than 1000x improvements in model capacity with only minor losses in computational efficiency on modern GPU clusters. We introduce a Sparsely-Gated Mixture-of-Experts layer (MoE), consisting of up to thousands of feed-forward sub-networks. A trainable gating network determines a sparse combination of these experts to use for each example. We apply the MoE to the tasks of language modeling and machine translation, where model capacity is critical for absorbing the vast quantities of knowledge available in the training corpora. We present model architectures in which a MoE with up to 137 billion parameters is applied convolutionally between stacked LSTM layers. On large language modeling and machine translation benchmarks, these models achieve significantly better results than state-of-the-art at lower computational cost."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citedPaper": {
+    "paperId": "98445f4172659ec5e891e031d8202c102135c644",
+    "externalIds": {
+     "DBLP": "journals/corr/KalchbrennerESO16",
+     "MAG": "2540404261",
+     "ArXiv": "1610.10099",
+     "CorpusId": 13895969
+    },
+    "title": "Neural Machine Translation in Linear Time",
+    "year": 2016,
+    "citationCount": 586,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1610.10099, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2583391",
+      "name": "Nal Kalchbrenner"
+     },
+     {
+      "authorId": "2311318",
+      "name": "L. Espeholt"
+     },
+     {
+      "authorId": "34838386",
+      "name": "K. Simonyan"
+     },
+     {
+      "authorId": "3422336",
+      "name": "Aäron van den Oord"
+     },
+     {
+      "authorId": "1753223",
+      "name": "Alex Graves"
+     },
+     {
+      "authorId": "2645384",
+      "name": "K. Kavukcuoglu"
+     }
+    ],
+    "abstract": "We present a novel neural network for processing sequences. The ByteNet is a one-dimensional convolutional neural network that is composed of two parts, one to encode the source sequence and the other to decode the target sequence. The two network parts are connected by stacking the decoder on top of the encoder and preserving the temporal resolution of the sequences. To address the differing lengths of the source and the target, we introduce an efficient mechanism by which the decoder is dynamically unfolded over the representation of the encoder. The ByteNet uses dilation in the convolutional layers to increase its receptive field. The resulting network has two core properties: it runs in time that is linear in the length of the sequences and it sidesteps the need for excessive memorization. The ByteNet decoder attains state-of-the-art performance on character-level language modelling and outperforms the previous best results obtained with recurrent networks. The ByteNet also achieves state-of-the-art performance on character-to-character machine translation on the English-to-German WMT translation task, surpassing comparable neural translation models that are based on recurrent networks with attentional pooling and run in quadratic time. We find that the latent alignment structure contained in the representations reflects the expected alignment between the tokens."
+   }
+  },
+  {
+   "isInfluential": true,
+   "intents": [
+    "methodology"
+   ],
+   "citedPaper": {
+    "paperId": "735d547fc75e0772d2a78c46a1cc5fad7da1474c",
+    "externalIds": {
+     "DBLP": "journals/corr/KaiserB16",
+     "ArXiv": "1610.08613",
+     "MAG": "2545625743",
+     "CorpusId": 11250862
+    },
+    "title": "Can Active Memory Replace Attention?",
+    "year": 2016,
+    "citationCount": 61,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1610.08613, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "40527594",
+      "name": "Lukasz Kaiser"
+     },
+     {
+      "authorId": "1751569",
+      "name": "Samy Bengio"
+     }
+    ],
+    "abstract": "Several mechanisms to focus attention of a neural network on selected parts of its input or memory have been used successfully in deep learning models in recent years. Attention has improved image classification, image captioning, speech recognition, generative models, and learning algorithmic tasks, but it had probably the largest impact on neural machine translation. Recently, similar improvements have been obtained using alternative mechanisms that do not focus on a single part of a memory but operate on all of it in parallel, in a uniform way. Such mechanism, which we call active memory, improved over attention in algorithmic tasks, image processing, and in generative modelling. So far, however, active memory has not improved over attention for most natural language processing tasks, in particular for machine translation. We analyze this shortcoming in this paper and propose an extended model of active memory that matches existing attention models on neural machine translation and generalizes better to longer sentences. We investigate this model and explain why previous active memory models did not succeed. Finally, we discuss when active memory brings most benefits and where attention can be a better choice."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "5b6ec746d309b165f9f9def873a2375b6fb40f3d",
+    "externalIds": {
+     "MAG": "2531409750",
+     "DBLP": "conf/cvpr/Chollet17",
+     "ArXiv": "1610.02357",
+     "DOI": "10.1109/CVPR.2017.195",
+     "CorpusId": 2375110
+    },
+    "title": "Xception: Deep Learning with Depthwise Separable Convolutions",
+    "year": 2016,
+    "citationCount": 17999,
+    "openAccessPdf": {
+     "url": "https://arxiv.org/pdf/1610.02357",
+     "status": "GREEN",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1610.02357, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "1565641737",
+      "name": "François Chollet"
+     }
+    ],
+    "abstract": "We present an interpretation of Inception modules in convolutional neural networks as being an intermediate step in-between regular convolution and the depthwise separable convolution operation (a depthwise convolution followed by a pointwise convolution). In this light, a depthwise separable convolution can be understood as an Inception module with a maximally large number of towers. This observation leads us to propose a novel deep convolutional neural network architecture inspired by Inception, where Inception modules have been replaced with depthwise separable convolutions. We show that this architecture, dubbed Xception, slightly outperforms Inception V3 on the ImageNet dataset (which Inception V3 was designed for), and significantly outperforms Inception V3 on a larger image classification dataset comprising 350 million images and 17,000 classes. Since the Xception architecture has the same number of parameters as Inception V3, the performance gains are not due to increased capacity but rather to a more efficient use of model parameters."
+   }
+  },
+  {
+   "isInfluential": true,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "c6850869aa5e78a107c378d2e8bfa39633158c0c",
+    "externalIds": {
+     "ArXiv": "1609.08144",
+     "MAG": "2525778437",
+     "DBLP": "journals/corr/WuSCLNMKCGMKSJL16",
+     "CorpusId": 3603249
+    },
+    "title": "Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation",
+    "year": 2016,
+    "citationCount": 7300,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1609.08144, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "48607963",
+      "name": "Yonghui Wu"
+     },
+     {
+      "authorId": "144927151",
+      "name": "M. Schuster"
+     },
+     {
+      "authorId": "2545358",
+      "name": "Z. Chen"
+     },
+     {
+      "authorId": "2827616",
+      "name": "Quoc V. Le"
+     },
+     {
+      "authorId": "144739074",
+      "name": "Mohammad Norouzi"
+     },
+     {
+      "authorId": "3153147",
+      "name": "Wolfgang Macherey"
+     },
+     {
+      "authorId": "2048712",
+      "name": "M. Krikun"
+     },
+     {
+      "authorId": "145144022",
+      "name": "Yuan Cao"
+     },
+     {
+      "authorId": "145312180",
+      "name": "Qin Gao"
+     },
+     {
+      "authorId": "113439369",
+      "name": "Klaus Macherey"
+     },
+     {
+      "authorId": "2367620",
+      "name": "J. Klingner"
+     },
+     {
+      "authorId": "145825976",
+      "name": "Apurva Shah"
+     },
+     {
+      "authorId": "145657834",
+      "name": "Melvin Johnson"
+     },
+     {
+      "authorId": "2109059862",
+      "name": "Xiaobing Liu"
+     },
+     {
+      "authorId": "40527594",
+      "name": "Lukasz Kaiser"
+     },
+     {
+      "authorId": "2776283",
+      "name": "Stephan Gouws"
+     },
+     {
+      "authorId": "2739610",
+      "name": "Yoshikiyo Kato"
+     },
+     {
+      "authorId": "1765329",
+      "name": "Taku Kudo"
+     },
+     {
+      "authorId": "1754386",
+      "name": "H. Kazawa"
+     },
+     {
+      "authorId": "144077726",
+      "name": "K. Stevens"
+     },
+     {
+      "authorId": "1753079661",
+      "name": "George Kurian"
+     },
+     {
+      "authorId": "2056800684",
+      "name": "Nishant Patil"
+     },
+     {
+      "authorId": "49337181",
+      "name": "Wei Wang"
+     },
+     {
+      "authorId": "39660914",
+      "name": "C. Young"
+     },
+     {
+      "authorId": "2119125158",
+      "name": "Jason R. Smith"
+     },
+     {
+      "authorId": "2909504",
+      "name": "Jason Riesa"
+     },
+     {
+      "authorId": "29951847",
+      "name": "Alex Rudnick"
+     },
+     {
+      "authorId": "1689108",
+      "name": "O. Vinyals"
+     },
+     {
+      "authorId": "32131713",
+      "name": "G. Corrado"
+     },
+     {
+      "authorId": "48342565",
+      "name": "Macduff Hughes"
+     },
+     {
+      "authorId": "49959210",
+      "name": "J. Dean"
+     }
+    ],
+    "abstract": "Neural Machine Translation (NMT) is an end-to-end learning approach for automated translation, with the potential to overcome many of the weaknesses of conventional phrase-based translation systems. Unfortunately, NMT systems are known to be computationally expensive both in training and in translation inference. Also, most NMT systems have difficulty with rare words. These issues have hindered NMT's use in practical deployments and services, where both accuracy and speed are essential. In this work, we present GNMT, Google's Neural Machine Translation system, which attempts to address many of these issues. Our model consists of a deep LSTM network with 8 encoder and 8 decoder layers using attention and residual connections. To improve parallelism and therefore decrease training time, our attention mechanism connects the bottom layer of the decoder to the top layer of the encoder. To accelerate the final translation speed, we employ low-precision arithmetic during inference computations. To improve handling of rare words, we divide words into a limited set of common sub-word units (\"wordpieces\") for both input and output. This method provides a good balance between the flexibility of \"character\"-delimited models and the efficiency of \"word\"-delimited models, naturally handles translation of rare words, and ultimately improves the overall accuracy of the system. Our beam search technique employs a length-normalization procedure and uses a coverage penalty, which encourages generation of an output sentence that is most likely to cover all the words in the source sentence. On the WMT'14 English-to-French and English-to-German benchmarks, GNMT achieves competitive results to state-of-the-art. Using a human side-by-side evaluation on a set of isolated simple sentences, it reduces translation errors by an average of 60% compared to Google's phrase-based production system."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "citedPaper": {
+    "paperId": "63e39cdf1ad884da6bc69096bb3413b5b1100559",
+    "externalIds": {
+     "DBLP": "journals/corr/PressW16",
+     "MAG": "2963347649",
+     "ArXiv": "1608.05859",
+     "ACL": "E17-2025",
+     "DOI": "10.18653/V1/E17-2025",
+     "CorpusId": 836219
+    },
+    "title": "Using the Output Embedding to Improve Language Models",
+    "year": 2016,
+    "citationCount": 831,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/E17-2025.pdf",
+     "status": "HYBRID",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1608.05859, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "40170001",
+      "name": "Ofir Press"
+     },
+     {
+      "authorId": "145128145",
+      "name": "Lior Wolf"
+     }
+    ],
+    "abstract": "We study the topmost weight matrix of neural network language models. We show that this matrix constitutes a valid word embedding. When training language models, we recommend tying the input embedding and this output embedding. We analyze the resulting update rules and show that the tied embedding evolves in a more similar way to the output embedding than to the input embedding in the untied model. We also offer a new method of regularizing the output embedding. Our methods lead to a significant reduction in perplexity, as we are able to show on a variety of neural network language models. Finally, we show that weight tying can reduce the size of neural translation models to less than half of their original size without harming their performance."
+   }
+  }
+ ]
+}

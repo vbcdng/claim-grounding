@@ -1,0 +1,7 @@
+The glymphatic system and sleep: a short primer.
+
+The glymphatic system is a macroscopic waste-clearance pathway in the central nervous system that uses cerebrospinal fluid to flush metabolic by-products from the brain. Its activity is strongly gated by the sleep-wake cycle.
+
+During deep, slow-wave sleep the interstitial space in the brain expands, and glymphatic clearance of metabolic waste rises sharply. Measurements show that this clearance is markedly reduced during the waking state, when the interstitial space is smaller and fluid exchange is slower.
+
+Accumulated waste products cleared in this way include amyloid-beta and other metabolites associated with neuronal activity. The finding that clearance is far more active during sleep than during wakefulness has been proposed as one reason sleep is restorative for cognitive function.

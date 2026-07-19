@@ -1,0 +1,2652 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 2 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section of the text and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "After being held without a sack in the first two weeks, he collected three sacks and eight combined tackles in the Week 3 27-22 defeat against the New York Giants, his first sacks since Week 2 of 2016.",
+   "markers": [
+    "jjwatt"
+   ],
+   "paper_ids": [
+    "fc886923259fe0e386faf44c175ef22d3f22d216"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+    "source_title": "jjwatt",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Watt, who had not recorded a sack since Week 2 of 2016 against Kansas City, also recorded five tackles (two solo), two quarterback hits and one forced fumble before halftime.",
+    "page": 1,
+    "snippet": "Watt, who had not recorded a sack",
+    "reason": "the passage does not mention his combined tackles in the Week 3 game.",
+    "votes": "2-0",
+    "window": "Watt, who had not recorded a sack since Week 2 of 2016 against Kansas City, also recorded five tackles (two solo), two quarterback hits and one forced fumble before halftime. (meta data) TITLE: J.J. Watt has historic 3-sack day Skip to main content ## Advertising ## Primary nav GAME PASS TEAM SHOP 2020 WAIT LIST Pro Shop ## Action related nav GAME PASS TEAM SHOP 2020 WAIT LIST Drew Downfield John Harris Football 101 Vandermeer's View Texans App En Espa\u00f1ol Texans Top 100 ## Advertising Sunday, Sep 23, 2018 06:00 PM # J.J. Watt has historic 3-sack day Deepi Sidhu Texans Insider and Lead Writer On Sunday, J.J. Watt ended his sack drought with three sacks in the Texans 27-22 loss to the New York Giants. The star defensive end, coming off back-to-back seasons cut short by injury, picked up his first sack of 2018 when he brought down Eli Manning in the second quarter of Sunday's game against the Giants. Watt sacked Manning for a loss of 10 yards in the third quarter and again for a loss of nine yards in the fourth quarter for his third sack of the game."
+   },
+   "evidences": [
+    {
+     "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+     "source_title": "jjwatt",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Watt, who had not recorded a sack since Week 2 of 2016 against Kansas City, also recorded five tackles (two solo), two quarterback hits and one forced fumble before halftime.",
+     "page": 1,
+     "snippet": "Watt, who had not recorded a sack",
+     "reason": "the passage does not mention his combined tackles in the Week 3 game.",
+     "votes": "2-0",
+     "window": "Watt, who had not recorded a sack since Week 2 of 2016 against Kansas City, also recorded five tackles (two solo), two quarterback hits and one forced fumble before halftime. (meta data) TITLE: J.J. Watt has historic 3-sack day Skip to main content ## Advertising ## Primary nav GAME PASS TEAM SHOP 2020 WAIT LIST Pro Shop ## Action related nav GAME PASS TEAM SHOP 2020 WAIT LIST Drew Downfield John Harris Football 101 Vandermeer's View Texans App En Espa\u00f1ol Texans Top 100 ## Advertising Sunday, Sep 23, 2018 06:00 PM # J.J. Watt has historic 3-sack day Deepi Sidhu Texans Insider and Lead Writer On Sunday, J.J. Watt ended his sack drought with three sacks in the Texans 27-22 loss to the New York Giants. The star defensive end, coming off back-to-back seasons cut short by injury, picked up his first sack of 2018 when he brought down Eli Manning in the second quarter of Sunday's game against the Giants. Watt sacked Manning for a loss of 10 yards in the third quarter and again for a loss of nine yards in the fourth quarter for his third sack of the game."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention his combined tackles in the Week 3 game.",
+   "component_check": {
+    "found": [
+     "He collected three sacks in the Week 3 defeat against the New York Giants.",
+     "The Week 3 game was a 27-22 defeat against the New York Giants."
+    ],
+    "missing": [
+     "He was held without a sack in the first two weeks.",
+     "He collected eight combined tackles in the Week 3 defeat against the New York Giants."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He collected three sacks in the Week 3 defeat against the New York Giants.",
+      "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+      "source_title": "jjwatt",
+      "sentence": "(meta data) TITLE: J.J. Watt has historic 3-sack day Skip to main content ## Advertising ## Primary nav GAME PASS TEAM SHOP 2020 WAIT LIST Pro Shop ## Action related nav GAME PASS TEAM SHOP 2020 WAIT LIST Drew Downfield John Harris Football 101 Vandermeer's View Texans App En Espa\u00f1ol Texans Top 100 ## Advertising Sunday, Sep 23, 2018 06:00 PM # J.J. Watt has historic 3-sack day Deepi Sidhu Texans Insider and Lead Writer On Sunday, J.J. Watt ended his sack drought with three sacks in the Texans 27-22 loss to the New York Giants.",
+      "page": 1
+     },
+     {
+      "component": "The Week 3 game was a 27-22 defeat against the New York Giants.",
+      "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+      "source_title": "jjwatt",
+      "sentence": "(meta data) TITLE: J.J. Watt has historic 3-sack day Skip to main content ## Advertising ## Primary nav GAME PASS TEAM SHOP 2020 WAIT LIST Pro Shop ## Action related nav GAME PASS TEAM SHOP 2020 WAIT LIST Drew Downfield John Harris Football 101 Vandermeer's View Texans App En Espa\u00f1ol Texans Top 100 ## Advertising Sunday, Sep 23, 2018 06:00 PM # J.J. Watt has historic 3-sack day Deepi Sidhu Texans Insider and Lead Writer On Sunday, J.J. Watt ended his sack drought with three sacks in the Texans 27-22 loss to the New York Giants.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts and statistics (three sacks, eight combined tackles, score of 27-22, Week 3, Week 2 of 2016) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here, as these are presented as findings from the game described.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "eight combined tackles (the source states five tackles, not eight)",
+    "rewrite_suggestion": "After being held without a sack in the first two weeks, he collected three sacks and five tackles in the Week 3 27-22 defeat against the New York Giants, his first sacks since Week 2 of 2016.",
+    "proofs": [
+     "On Sunday, J.J. Watt ended his sack drought with three sacks in the Texans 27-22 loss to the New York Giants.",
+     "Watt, who had not recorded a sack since Week 2 of 2016 against Kansas City, also recorded five tackles (two solo), two quarterback hits and one forced fumble before halftime.",
+     "The star defensive end, coming off back-to-back seasons cut short by injury, picked up his first sack of 2018 when he brought down Eli Manning in the second quarter of Sunday's game against the Giants."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes 'eight combined tackles,' but the source only reports five tackles (two solo) and does not mention eight combined tackles. Other components (three sacks, defeat, and first sacks since 2016) are provable from the source but are not fully shown in the tool's displayed sentence. The author must either add a citation for the tackle count or rewrite the claim to match the source's five tackles."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "\"The Simpsons and Philosophy: The D'oh! of Homer\", which is not an official publication, includes a chapter analyzing Bart's character and comparing him to the \"Nietzschean ideal\".",
+   "markers": [
+    "bartsimpson"
+   ],
+   "paper_ids": [
+    "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+    "source_title": "bartsimpson",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Could Bart Simpson be, in the end, the Nietzschean ideal?",
+    "page": 1,
+    "snippet": "Could Bart Simpson be, in the end,",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Could Bart Simpson be, in the end, the Nietzschean ideal? Finally, there's Bart, who depending on one's point of view is either a superbrat or a Nietzschean superman. From ''Thus Spake Bart: On Nietzsche and the Virtues of Being Bad,'' by Mark T. Conard: Jessica Lovejoy: You're bad, Bart Simpson. of Homer'' (Open Court), edited by William Irwin, Mark T. Conard and Aeon J. Skoble, dissects the show's many cultural and political messages -- both liminal and subliminal. Bart: No I'm not!"
+   },
+   "evidences": [
+    {
+     "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+     "source_title": "bartsimpson",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Could Bart Simpson be, in the end, the Nietzschean ideal?",
+     "page": 1,
+     "snippet": "Could Bart Simpson be, in the end,",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Could Bart Simpson be, in the end, the Nietzschean ideal? Finally, there's Bart, who depending on one's point of view is either a superbrat or a Nietzschean superman. From ''Thus Spake Bart: On Nietzsche and the Virtues of Being Bad,'' by Mark T. Conard: Jessica Lovejoy: You're bad, Bart Simpson. of Homer'' (Open Court), edited by William Irwin, Mark T. Conard and Aeon J. Skoble, dissects the show's many cultural and political messages -- both liminal and subliminal. Bart: No I'm not!"
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "includes a chapter analyzing Bart's character",
+      "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+      "source_title": "bartsimpson",
+      "sentence": "Could Bart Simpson be, in the end, the Nietzschean ideal?",
+      "page": 1,
+      "snippet": "Could Bart Simpson be, in the end,"
+     },
+     {
+      "component": "includes a chapter analyzing Bart's character",
+      "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+      "source_title": "bartsimpson",
+      "sentence": "Could it be that from a Nietzschean perspective we've been admiring the wrong character?",
+      "page": 1,
+      "snippet": "Could it be that from a Nietzschean"
+     },
+     {
+      "component": "comparing him to the \"Nietzschean ideal\"",
+      "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+      "source_title": "bartsimpson",
+      "sentence": "Could Bart Simpson be, in the end, the Nietzschean ideal?",
+      "page": 1,
+      "snippet": "Could Bart Simpson be, in the end,"
+     },
+     {
+      "component": "comparing him to the \"Nietzschean ideal\"",
+      "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+      "source_title": "bartsimpson",
+      "sentence": "Could it be that from a Nietzschean perspective we've been admiring the wrong character?",
+      "page": 1,
+      "snippet": "Could it be that from a Nietzschean"
+     },
+     {
+      "component": "The Simpsons and Philosophy: The D'oh! of Homer is not an official publication",
+      "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+      "source_title": "bartsimpson",
+      "sentence": "of Homer'' (Open Court), edited by William Irwin, Mark T. Conard and Aeon J. Skoble, dissects the show's many cultural and political messages -- both liminal and subliminal.",
+      "page": 1,
+      "snippet": "of Homer'' (Open Court), edited by William",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+      "source_title": "bartsimpson",
+      "text": "of Homer'' (Open Court), edited by William Irwin, Mark T. Conard and Aeon J. Skoble, dissects the show's many cultural and political messages -- both liminal and subliminal. [\u2026] Could it be that from a Nietzschean perspective we've been admiring the wrong character? Might Lisa Simpson be part of what Nietzsche calls world-slandering weariness, decadence, slave morality, resentment? Sure, it's fun to be bad, but might there be something healthy and life-affirming, something philosophically important about it? Could Bart Simpson be, in the end, the Nietzschean ideal?",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t3",
+   "text": "Originally from Manchester, Kemp teaches creative writing, literature and queer theory at Birkbeck, University of London.",
+   "markers": [
+    "jonathankempwriter"
+   ],
+   "paper_ids": [
+    "f61cfe09e9225865bea88ca61a0036bb782add37"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f61cfe09e9225865bea88ca61a0036bb782add37",
+    "source_title": "jonathankempwriter",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel.",
+    "page": 1,
+    "snippet": "Jonathan teaches Creative Writing and Comparative Literature",
+    "reason": "The passage does not state that Kemp is originally from Manchester or that he teaches queer theory.",
+    "votes": "2-0",
+    "window": "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel."
+   },
+   "evidences": [
+    {
+     "paper_id": "f61cfe09e9225865bea88ca61a0036bb782add37",
+     "source_title": "jonathankempwriter",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel.",
+     "page": 1,
+     "snippet": "Jonathan teaches Creative Writing and Comparative Literature",
+     "reason": "The passage does not state that Kemp is originally from Manchester or that he teaches queer theory.",
+     "votes": "2-0",
+     "window": "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Kemp is originally from Manchester or that he teaches queer theory.",
+   "component_check": {
+    "found": [
+     "Kemp teaches creative writing at Birkbeck, University of London.",
+     "Kemp teaches literature at Birkbeck, University of London."
+    ],
+    "missing": [
+     "Kemp is originally from Manchester.",
+     "Kemp teaches queer theory at Birkbeck, University of London."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Kemp teaches creative writing at Birkbeck, University of London.",
+      "paper_id": "f61cfe09e9225865bea88ca61a0036bb782add37",
+      "source_title": "jonathankempwriter",
+      "sentence": "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel.",
+      "page": 1
+     },
+     {
+      "component": "Kemp teaches literature at Birkbeck, University of London.",
+      "paper_id": "f61cfe09e9225865bea88ca61a0036bb782add37",
+      "source_title": "jonathankempwriter",
+      "sentence": "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Kemp teaches creative writing, literature and queer theory at Birkbeck, University of London.",
+    "reason": "The passage directly states facts about the author's professional affiliation and teaching responsibilities, which are expected to be supported by the cited source. There is no indication that the citation is only for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Kemp is originally from Manchester and that he teaches queer theory are not supported by the cited source.",
+    "rewrite_suggestion": "Kemp teaches creative writing and comparative literature at Birkbeck, University of London.",
+    "proofs": [
+     "Jonathan teaches Creative Writing and Comparative Literature at Birkbeck, and London Triptych is his first novel."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports that Kemp teaches creative writing and comparative literature at Birkbeck, but the claim adds two unsourced components: that he is originally from Manchester and that he teaches queer theory. Neither of these appears anywhere in the source text. The author must either add a citation for these facts or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "In early April, Oklahoma became the second state to strike, making it the first time a teacher's strike was held in the state since 1990.",
+   "markers": [
+    "201819educationworkersst"
+   ],
+   "paper_ids": [
+    "5ed662a5acdbee0cf80af22d41e2f92bdd19733c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5ed662a5acdbee0cf80af22d41e2f92bdd19733c",
+    "source_title": "201819educationworkersst",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Teachers point to a four-day strike from nearly three decades ago, when more than half of Oklahoma educators stayed home from school.",
+    "page": 1,
+    "snippet": "Teachers point to a four-day strike from",
+    "reason": "The passage does not state that Oklahoma was the second state to strike or that the strike occurred in early April.",
+    "votes": "2-0",
+    "window": "Teachers point to a four-day strike from nearly three decades ago, when more than half of Oklahoma educators stayed home from school. This successful 1990 protest prompted the legislature to raise teacher pay, institute class-size limits, and expand kindergarten offerings."
+   },
+   "evidences": [
+    {
+     "paper_id": "5ed662a5acdbee0cf80af22d41e2f92bdd19733c",
+     "source_title": "201819educationworkersst",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Teachers point to a four-day strike from nearly three decades ago, when more than half of Oklahoma educators stayed home from school.",
+     "page": 1,
+     "snippet": "Teachers point to a four-day strike from",
+     "reason": "The passage does not state that Oklahoma was the second state to strike or that the strike occurred in early April.",
+     "votes": "2-0",
+     "window": "Teachers point to a four-day strike from nearly three decades ago, when more than half of Oklahoma educators stayed home from school. This successful 1990 protest prompted the legislature to raise teacher pay, institute class-size limits, and expand kindergarten offerings."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Oklahoma was the second state to strike or that the strike occurred in early April.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Oklahoma became the second state to strike, making it the first time a teacher's strike was held in the state since 1990.",
+    "reason": "The passage asserts specific facts (Oklahoma becoming the second state to strike, the date of the last strike) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are presented as findings from the cited work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the actual occurrence of a teacher's strike in Oklahoma in early April 2018, that it was the second state to strike (after West Virginia), and that it was the first such strike in the state since 1990",
+    "rewrite_suggestion": "In early April, Oklahoma teachers threatened to strike, referencing a 1990 walkout as the last time such a protest occurred.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text, an article from March 6, 2018, discusses a potential teacher strike and references a 1990 strike, but it never states that an actual strike occurred in early April or that Oklahoma was the second state to strike. The shown sentence only mentions the historical 1990 strike, not the claimed April event. Therefore, the core factual components of the claim are absent from the source and must be supported by a new citation or the claim must be rewritten to match what the source actually says."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "For legal reasons, Eric requested that his full official title be \"Eric the Actor, formerly known as Eric the Midget\" in order to protect the \"Eric the Midget\" trade name.",
+   "markers": [
+    "erictheactor"
+   ],
+   "paper_ids": [
+    "46d367fe63ee707db734d90ca89287f6d2ef96cd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8587,
+   "evidence": {
+    "paper_id": "46d367fe63ee707db734d90ca89287f6d2ef96cd",
+    "source_title": "erictheactor",
+    "supported": false,
+    "sentence": "He said that he got Eric the Actor a threesome.",
+    "page": 1,
+    "snippet": "He said that he got Eric the",
+    "cosine": 0.8587,
+    "reason": "The passage does not mention any legal reasons for Eric's title change or the protection of a trade name.",
+    "window": "Howard said Dennis got so many guys laid. He said that he got Eric the Actor a threesome. Howard did a live commercial read and went to break after that."
+   },
+   "evidences": [
+    {
+     "paper_id": "46d367fe63ee707db734d90ca89287f6d2ef96cd",
+     "source_title": "erictheactor",
+     "supported": false,
+     "sentence": "He said that he got Eric the Actor a threesome.",
+     "page": 1,
+     "snippet": "He said that he got Eric the",
+     "cosine": 0.8587,
+     "reason": "The passage does not mention any legal reasons for Eric's title change or the protection of a trade name.",
+     "window": "Howard said Dennis got so many guys laid. He said that he got Eric the Actor a threesome. Howard did a live commercial read and went to break after that."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Eric requested that his full official title be \"Eric the Actor, formerly known as Eric the Midget\" in order to protect the \"Eric the Midget\" trade name.",
+    "reason": "The passage directly attributes a statement and a reason for that statement to 'Eric the Actor'. This is a factual claim that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: Eric requested a title change to 'Eric the Actor, formerly known as Eric the Midget' for legal reasons to protect the 'Eric the Midget' trade name",
+    "rewrite_suggestion": "The source does not support any part of this claim; consider removing it or citing a different source that provides the requested information.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no mention of Eric requesting a title change or any legal reasons regarding his name. The only reference to 'Eric the Actor' is a statement that Dennis Hof got him a threesome, which is completely unrelated to the claim. Therefore, every component of the claim is unprovable from the cited source, requiring the author to add a proper citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "Adams was born in Widnes, Lancashire, England, and he died aged 65 in Tamworth, New South Wales, Australia.",
+   "markers": [
+    "mickadams"
+   ],
+   "paper_ids": [
+    "a4d423d249d46305e8aa0332e70b90dcc39d4509"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a4d423d249d46305e8aa0332e70b90dcc39d4509",
+    "source_title": "mickadams",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Former Widnes captain Mick Adams has died at the age of 65.",
+    "page": 1,
+    "snippet": "Former Widnes captain Mick Adams has died",
+    "reason": "The passage does not state where Adams was born or that he died in Tamworth, New South Wales, Australia.",
+    "votes": "2-0",
+    "window": "Former Widnes captain Mick Adams has died at the age of 65. Mick Adams was a Great Britain international, and former captain at Widnes"
+   },
+   "evidences": [
+    {
+     "paper_id": "a4d423d249d46305e8aa0332e70b90dcc39d4509",
+     "source_title": "mickadams",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Former Widnes captain Mick Adams has died at the age of 65.",
+     "page": 1,
+     "snippet": "Former Widnes captain Mick Adams has died",
+     "reason": "The passage does not state where Adams was born or that he died in Tamworth, New South Wales, Australia.",
+     "votes": "2-0",
+     "window": "Former Widnes captain Mick Adams has died at the age of 65. Mick Adams was a Great Britain international, and former captain at Widnes"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state where Adams was born or that he died in Tamworth, New South Wales, Australia.",
+   "component_check": {
+    "found": [
+     "he died aged 65"
+    ],
+    "missing": [
+     "Adams was born in Widnes, Lancashire, England",
+     "he died in Tamworth, New South Wales, Australia"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "he died aged 65",
+      "paper_id": "a4d423d249d46305e8aa0332e70b90dcc39d4509",
+      "source_title": "mickadams",
+      "sentence": "Former Widnes captain Mick Adams has died at the age of 65.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Adams was born in Widnes, Lancashire, England, and he died aged 65 in Tamworth, New South Wales, Australia.",
+    "reason": "The passage asserts factual biographical details about Adams, which are directly attributed to the cited source. The citation is expected to prove these specific facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Adams was born in Widnes, Lancashire, England and died in Tamworth, New South Wales, Australia is not supported by the source. The source only mentions his death at age 65 and his association with Widnes as a former captain.",
+    "rewrite_suggestion": "Former Widnes captain Mick Adams died at the age of 65.",
+    "proofs": [
+     "Former Widnes captain Mick Adams has died at the age of 65."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms the death age (65) but provides no evidence for the birthplace (Widnes, Lancashire, England) or death location (Tamworth, New South Wales, Australia). The source text itself also lacks any mention of these locations, so the claim contains unsourced components that require either a citation for those details or a rewrite to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "The OSRD was abolished without a successor organization on December 31, 1947.",
+   "markers": [
+    "vannevarbush"
+   ],
+   "paper_ids": [
+    "025c42f40646aea3be536bc0806122fc8cf58742"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.902,
+   "evidence": {
+    "paper_id": "025c42f40646aea3be536bc0806122fc8cf58742",
+    "source_title": "vannevarbush",
+    "supported": true,
+    "sentence": "Terminated upon abolishment of OSRD, effective December 31, 1947, by EO 9913, December 26, 1947.",
+    "page": 1,
+    "snippet": "Terminated upon abolishment of OSRD, effective December",
+    "cosine": 0.902,
+    "reason": "The passage explicitly states that the OSRD was abolished effective December 31, 1947, by EO 9913.",
+    "window": "227.5 Records of the National Defense Research Committee (NDRC) 1940-47 History: Established by Council of National Defense order, approved by President Franklin D. Roosevelt, June 27, 1940, to coordinate and support research on new instrumentalities of warfare Made a component of newly established OSRD by EO 8807, June 28, 1941. Terminated upon abolishment of OSRD, effective December 31, 1947, by EO 9913, December 26, 1947. 227.5.1 General records Textual Records: Minutes, 1940-45."
+   },
+   "evidences": [
+    {
+     "paper_id": "025c42f40646aea3be536bc0806122fc8cf58742",
+     "source_title": "vannevarbush",
+     "supported": true,
+     "sentence": "Terminated upon abolishment of OSRD, effective December 31, 1947, by EO 9913, December 26, 1947.",
+     "page": 1,
+     "snippet": "Terminated upon abolishment of OSRD, effective December",
+     "cosine": 0.902,
+     "reason": "The passage explicitly states that the OSRD was abolished effective December 31, 1947, by EO 9913.",
+     "window": "227.5 Records of the National Defense Research Committee (NDRC) 1940-47 History: Established by Council of National Defense order, approved by President Franklin D. Roosevelt, June 27, 1940, to coordinate and support research on new instrumentalities of warfare Made a component of newly established OSRD by EO 8807, June 28, 1941. Terminated upon abolishment of OSRD, effective December 31, 1947, by EO 9913, December 26, 1947. 227.5.1 General records Textual Records: Minutes, 1940-45."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the OSRD was abolished effective December 31, 1947, by EO 9913.",
+   "covering": {
+    "covered": [
+     {
+      "component": "OSRD abolished on December 31, 1947",
+      "paper_id": "025c42f40646aea3be536bc0806122fc8cf58742",
+      "source_title": "vannevarbush",
+      "sentence": "Abolished: Effective December 31, 1947, by EO 9913, December 26, 1947 Successor Agencies: National Military Establishment as liquidator Finding Aids: Forrest R. Holdcamper, comp., \"Preliminary Inventory of the Records of the Office of Scientific Research and Development,\" NC 138 (1965).",
+      "page": 1,
+      "snippet": "Abolished: Effective December 31, 1947, by EO"
+     },
+     {
+      "component": "OSRD abolished without a successor organization",
+      "paper_id": "025c42f40646aea3be536bc0806122fc8cf58742",
+      "source_title": "vannevarbush",
+      "sentence": "Abolished: Effective December 31, 1947, by EO 9913, December 26, 1947 Successor Agencies: National Military Establishment as liquidator Finding Aids: Forrest R. Holdcamper, comp., \"Preliminary Inventory of the Records of the Office of Scientific Research and Development,\" NC 138 (1965).",
+      "page": 1,
+      "snippet": "Abolished: Effective December 31, 1947, by EO"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "025c42f40646aea3be536bc0806122fc8cf58742",
+      "source_title": "vannevarbush",
+      "text": "Abolished: Effective December 31, 1947, by EO 9913, December 26, 1947 Successor Agencies: National Military Establishment as liquidator Finding Aids: Forrest R. Holdcamper, comp., \"Preliminary Inventory of the Records of the Office of Scientific Research and Development,\" NC 138 (1965).",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the passage states that the OSRD was replaced by a smaller organization designated Section S-1 Executive Committee",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "without a successor organization",
+    "rewrite_suggestion": "The OSRD was abolished on December 31, 1947, with the National Military Establishment designated as its liquidator.",
+    "proofs": [
+     "Abolished: Effective December 31, 1947, by EO 9913, December 26, 1947 Successor Agencies: National Military Establishment as liquidator",
+     "Terminated upon abolishment of OSRD, effective December 31, 1947, by EO 9913, December 26, 1947."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Successor Agencies: National Military Establishment as liquidator",
+     "why": "The claim states OSRD was abolished 'without a successor organization,' but the source explicitly lists the National Military Establishment as a successor agency (liquidator)."
+    },
+    "why": "The shown sentences prove that OSRD was abolished on December 31, 1947, but they also include 'Successor Agencies: National Military Establishment as liquidator,' which directly contradicts the author's assertion that there was no successor. Since a substantive component of the claim is contradicted by the source, the author must rewrite the claim to remove or correct the 'without a successor organization' part."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "Nikou grew up with a passion for trading baseball cards and competing in breakdancing competitions.",
+   "markers": [
+    "andrewnikou"
+   ],
+   "paper_ids": [
+    "b1773315efced0b8c238713349ffc90b0a2951f2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+    "source_title": "andrewnikou",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"When I was younger, I started trading baseball and basketball cards and began making a lot of money,\" he says.",
+    "page": 1,
+    "snippet": "\"When I was younger, I started trading",
+    "reason": "The passage does not mention breakdancing competitions.",
+    "votes": "2-0",
+    "window": "\"When I was younger, I started trading baseball and basketball cards and began making a lot of money,\" he says."
+   },
+   "evidences": [
+    {
+     "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+     "source_title": "andrewnikou",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"When I was younger, I started trading baseball and basketball cards and began making a lot of money,\" he says.",
+     "page": 1,
+     "snippet": "\"When I was younger, I started trading",
+     "reason": "The passage does not mention breakdancing competitions.",
+     "votes": "2-0",
+     "window": "\"When I was younger, I started trading baseball and basketball cards and began making a lot of money,\" he says."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention breakdancing competitions.",
+   "component_check": {
+    "found": [
+     "Nikou grew up with a passion for trading baseball cards"
+    ],
+    "missing": [
+     "Nikou grew up with a passion for competing in breakdancing competitions"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Nikou grew up with a passion for trading baseball cards",
+      "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+      "source_title": "andrewnikou",
+      "sentence": "\"When I was younger, I started trading baseball and basketball cards and began making a lot of money,\" he says.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes biographical details of Nikou. There is no indication that the citation is used to support a method, concept, or related work. Therefore, it is assumed to be a factual assertion that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "competing in breakdancing competitions",
+    "rewrite_suggestion": "Nikou grew up trading baseball and basketball cards.",
+    "proofs": [
+     "\"When I was younger, I started trading baseball and basketball cards and began making a lot of money,\" he says."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Nikou grew up with a passion for trading baseball cards and competing in breakdancing competitions. The source text contains a sentence about trading baseball and basketball cards, which supports the first part, but there is no mention of breakdancing competitions anywhere in the source. Since breakdancing is entirely unsourced, the author must either add a citation for that claim or remove it. The shown sentence does cover the trading component, but the missing breakdancing component requires author action."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "The music video for Albertine was shot in May 2007 in Rwanda.",
+   "markers": [
+    "albertinesong"
+   ],
+   "paper_ids": [
+    "c20c39a26673bea5d8c09ab7fc1957e96dcb4c85"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c20c39a26673bea5d8c09ab7fc1957e96dcb4c85",
+    "source_title": "albertinesong",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The album's brilliant title track has just been released with a video filmed in Rwanda reflecting the African inspiration behind \"Albertine\".",
+    "page": 1,
+    "snippet": "The album's brilliant title track has just",
+    "reason": "The passage does not mention the month or year the music video was filmed.",
+    "votes": "2-0",
+    "window": "The album's brilliant title track has just been released with a video filmed in Rwanda reflecting the African inspiration behind \"Albertine\"."
+   },
+   "evidences": [
+    {
+     "paper_id": "c20c39a26673bea5d8c09ab7fc1957e96dcb4c85",
+     "source_title": "albertinesong",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The album's brilliant title track has just been released with a video filmed in Rwanda reflecting the African inspiration behind \"Albertine\".",
+     "page": 1,
+     "snippet": "The album's brilliant title track has just",
+     "reason": "The passage does not mention the month or year the music video was filmed.",
+     "votes": "2-0",
+     "window": "The album's brilliant title track has just been released with a video filmed in Rwanda reflecting the African inspiration behind \"Albertine\"."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the month or year the music video was filmed.",
+   "component_check": {
+    "found": [
+     "The music video for Albertine was shot in Rwanda"
+    ],
+    "missing": [
+     "The music video for Albertine was shot in May 2007"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The music video for Albertine was shot in Rwanda",
+      "paper_id": "c20c39a26673bea5d8c09ab7fc1957e96dcb4c85",
+      "source_title": "albertinesong",
+      "sentence": "The album's brilliant title track has just been released with a video filmed in Rwanda reflecting the African inspiration behind \"Albertine\".",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The music video for Albertine was shot in May 2007 in Rwanda.",
+    "reason": "The passage asserts a specific fact (when and where the music video was shot) that is directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the music video was shot in May 2007",
+    "rewrite_suggestion": "The music video for Albertine was shot in Rwanda.",
+    "proofs": [
+     "The album's brilliant title track has just been released with a video filmed in Rwanda reflecting the African inspiration behind 'Albertine'."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the specific date 'May 2007', but the provided source text contains no mention of any month or year for the video shoot. The source does support that the video was filmed in Rwanda and is for the title track Albertine, so those components are provable. However, the unsourced date component requires the author to either add a citation or remove it from the claim."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In the tropical Atlantic, sea surface temperatures were cooler than average, characteristic of a negative phase of the Atlantic Multidecadal Oscillation (AMO).",
+   "markers": [
+    "tropicalcyclonesin2018"
+   ],
+   "paper_ids": [
+    "7e336d91c65eb49f179ddf38699b3c27a7c93c45"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "7e336d91c65eb49f179ddf38699b3c27a7c93c45",
+    "source_title": "tropicalcyclonesin2018",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "This oscillation is the climate background that all other climate and weather patterns build on in the Atlantic, including El Ni\u00f1o.",
+    "page": 1,
+    "snippet": "This oscillation is the climate background that",
+    "reason": "the passage does not state that sea surface temperatures were cooler than average in the tropical Atlantic",
+    "votes": "2-0",
+    "window": "This oscillation is the climate background that all other climate and weather patterns build on in the Atlantic, including El Ni\u00f1o. Research has shown that negative AMO Atlantic hurricane seasons can have a slightly later than normal peak, according to a tweet by Eric Webb, a University of North Carolina at Charlotte graduate student. The AMO is trending negative this season after being predominantly in its positive phase since the mid-1990s. Each phase lasts 20 to 40 years and is a result of changes in the system of oceanic currents in the northern Atlantic Ocean."
+   },
+   "evidences": [
+    {
+     "paper_id": "7e336d91c65eb49f179ddf38699b3c27a7c93c45",
+     "source_title": "tropicalcyclonesin2018",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "This oscillation is the climate background that all other climate and weather patterns build on in the Atlantic, including El Ni\u00f1o.",
+     "page": 1,
+     "snippet": "This oscillation is the climate background that",
+     "reason": "the passage does not state that sea surface temperatures were cooler than average in the tropical Atlantic",
+     "votes": "2-0",
+     "window": "This oscillation is the climate background that all other climate and weather patterns build on in the Atlantic, including El Ni\u00f1o. Research has shown that negative AMO Atlantic hurricane seasons can have a slightly later than normal peak, according to a tweet by Eric Webb, a University of North Carolina at Charlotte graduate student. The AMO is trending negative this season after being predominantly in its positive phase since the mid-1990s. Each phase lasts 20 to 40 years and is a result of changes in the system of oceanic currents in the northern Atlantic Ocean."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that sea surface temperatures were cooler than average in the tropical Atlantic",
+   "component_check": {
+    "found": [
+     "characteristic of a negative phase of the Atlantic Multidecadal Oscillation (AMO)"
+    ],
+    "missing": [
+     "sea surface temperatures were cooler than average in the tropical Atlantic"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "characteristic of a negative phase of the Atlantic Multidecadal Oscillation (AMO)",
+      "paper_id": "7e336d91c65eb49f179ddf38699b3c27a7c93c45",
+      "source_title": "tropicalcyclonesin2018",
+      "sentence": "The AMO is trending negative this season after being predominantly in its positive phase since the mid-1990s.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual statement about sea surface temperatures and their relation to the Atlantic Multidecadal Oscillation, which the citation is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "sea surface temperatures were cooler than average",
+    "rewrite_suggestion": "The Atlantic Multidecadal Oscillation (AMO) was trending negative this season.",
+    "proofs": [
+     "The AMO is trending negative this season after being predominantly in its positive phase since the mid-1990s."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that tropical Atlantic sea surface temperatures were cooler than average, but the cited source does not mention any sea surface temperature measurements or a cooler-than-average condition. It only states that the AMO is trending negative. The shown sentence is irrelevant, and the source provides no support for the temperature component, so the author must either add a citation for that fact or rewrite the claim to reflect only what the source supports."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "The protest was organized after the murder of 14-year-old Chiara Paez, found buried underneath her boyfriend's house on May 11, beaten to death and a few weeks pregnant.",
+   "markers": [
+    "niunamenos"
+   ],
+   "paper_ids": [
+    "fe75824943b2feb0b093250b26539294df3a18d6"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+    "source_title": "niunamenos",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "On May 11, after a three-day search, her body was found buried in the garden of her boyfriend's house.",
+    "page": 1,
+    "snippet": "On May 11, after a three-day search,",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "On May 11, after a three-day search, her body was found buried in the garden of her boyfriend's house. Chiara had been beaten to death after having been forced to take medication to terminate her pregnancy. Photograph: Martin Zabala/Xinhua Press/Corbis Chiara Paez was 14 years old. She was a few weeks pregnant."
+   },
+   "evidences": [
+    {
+     "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+     "source_title": "niunamenos",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "On May 11, after a three-day search, her body was found buried in the garden of her boyfriend's house.",
+     "page": 1,
+     "snippet": "On May 11, after a three-day search,",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "On May 11, after a three-day search, her body was found buried in the garden of her boyfriend's house. Chiara had been beaten to death after having been forced to take medication to terminate her pregnancy. Photograph: Martin Zabala/Xinhua Press/Corbis Chiara Paez was 14 years old. She was a few weeks pregnant."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "The protest was organized after the murder of 14-year-old Chiara Paez",
+      "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+      "source_title": "niunamenos",
+      "sentence": "Photograph: Martin Zabala/Xinhua Press/Corbis Chiara Paez was 14 years old.",
+      "page": 1,
+      "snippet": "Photograph: Martin Zabala/Xinhua Press/Corbis Chiara Paez was"
+     },
+     {
+      "component": "Chiara Paez was found buried underneath her boyfriend's house on May 11",
+      "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+      "source_title": "niunamenos",
+      "sentence": "On May 11, after a three-day search, her body was found buried in the garden of her boyfriend's house.",
+      "page": 1,
+      "snippet": "On May 11, after a three-day search,"
+     },
+     {
+      "component": "Chiara Paez was beaten to death",
+      "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+      "source_title": "niunamenos",
+      "sentence": "Chiara had been beaten to death after having been forced to take medication to terminate her pregnancy.",
+      "page": 1,
+      "snippet": "Chiara had been beaten to death after"
+     },
+     {
+      "component": "Chiara Paez was a few weeks pregnant",
+      "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+      "source_title": "niunamenos",
+      "sentence": "Chiara had been beaten to death after having been forced to take medication to terminate her pregnancy.",
+      "page": 1,
+      "snippet": "Chiara had been beaten to death after"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+      "source_title": "niunamenos",
+      "text": "Photograph: Martin Zabala/Xinhua Press/Corbis Chiara Paez was 14 years old. She was a few weeks pregnant. On May 11, after a three-day search, her body was found buried in the garden of her boyfriend's house. He was 16. Chiara had been beaten to death after having been forced to take medication to terminate her pregnancy.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t12",
+   "text": "Mold was born on 27 May 1863 in the village of Middleton Cheney in Northamptonshire.",
+   "markers": [
+    "arthurmold"
+   ],
+   "paper_ids": [
+    "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8288,
+   "evidence": {
+    "paper_id": "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0",
+    "source_title": "arthurmold",
+    "supported": true,
+    "sentence": "Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days)",
+    "page": 1,
+    "snippet": "Died April 29, 1921, Middleton Cheney, Northamptonshire",
+    "cosine": 0.8288,
+    "reason": "The passage explicitly states that Arthur Mold was born on May 27, 1863, in Middleton Cheney, Northamptonshire.",
+    "window": "May 27, 1863, Middleton Cheney, Northamptonshire Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days) Major teams England, Lancashire Batting style Right-hand bat Bowling style Right-arm fast Batting and fielding averages 0* First-class Bowling averages First-class Career statistics Test debut"
+   },
+   "evidences": [
+    {
+     "paper_id": "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0",
+     "source_title": "arthurmold",
+     "supported": true,
+     "sentence": "Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days)",
+     "page": 1,
+     "snippet": "Died April 29, 1921, Middleton Cheney, Northamptonshire",
+     "cosine": 0.8288,
+     "reason": "The passage explicitly states that Arthur Mold was born on May 27, 1863, in Middleton Cheney, Northamptonshire.",
+     "window": "May 27, 1863, Middleton Cheney, Northamptonshire Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days) Major teams England, Lancashire Batting style Right-hand bat Bowling style Right-arm fast Batting and fielding averages 0* First-class Bowling averages First-class Career statistics Test debut"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Arthur Mold was born on May 27, 1863, in Middleton Cheney, Northamptonshire.",
+   "covering": {
+    "covered": [
+     {
+      "component": "in the village of Middleton Cheney",
+      "paper_id": "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0",
+      "source_title": "arthurmold",
+      "sentence": "Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days)",
+      "page": 1,
+      "snippet": "Died April 29, 1921, Middleton Cheney, Northamptonshire"
+     },
+     {
+      "component": "in Northamptonshire",
+      "paper_id": "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0",
+      "source_title": "arthurmold",
+      "sentence": "Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days)",
+      "page": 1,
+      "snippet": "Died April 29, 1921, Middleton Cheney, Northamptonshire"
+     }
+    ],
+    "uncovered": [
+     "Mold was born on 27 May 1863",
+     "Mold's birth date of 27 May 1863"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0",
+      "source_title": "arthurmold",
+      "text": "Died April 29, 1921, Middleton Cheney, Northamptonshire (aged 57 years 337 days)",
+      "n_used": 1
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "May 27, 1863, Middleton Cheney, Northamptonshire"
+     ],
+     "why": "The shown sentence only states Mold's death details, not his birth. However, the source text does contain the required birth information ('May 27, 1863, Middleton Cheney, Northamptonshire'). Since the proof exists in the source but was not displayed by the tool, the outcome is that the tool must fix its evidence."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "May 27, 1863, Middleton Cheney, Northamptonshire"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only states Mold's death details, not his birth. However, the source text does contain the required birth information ('May 27, 1863, Middleton Cheney, Northamptonshire'). Since the proof exists in the source but was not displayed by the tool, the outcome is that the tool must fix its evidence."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "Warren ran the Disney Channel Storytellers program, which was launched in 2014 as an initiative to find new talent in creating and writing for Disney programming content.",
+   "markers": [
+    "marcwarrentvproducer"
+   ],
+   "paper_ids": [
+    "2b93c163c69fabe4b9e7fea8593a97bd975204f5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2b93c163c69fabe4b9e7fea8593a97bd975204f5",
+    "source_title": "marcwarrentvproducer",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "## ### The program is overseen by Marc Warren, whose imprint on television can be seen in some of the most recognizable family comedies of the past twenty five years.",
+    "page": 1,
+    "snippet": "## ### The program is overseen by",
+    "reason": "The passage does not state that Warren ran the Disney Channel Storytellers program or that it was launched in 2014.",
+    "votes": "2-0",
+    "window": "## ### The program is overseen by Marc Warren, whose imprint on television can be seen in some of the most recognizable family comedies of the past twenty five years."
+   },
+   "evidences": [
+    {
+     "paper_id": "2b93c163c69fabe4b9e7fea8593a97bd975204f5",
+     "source_title": "marcwarrentvproducer",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "## ### The program is overseen by Marc Warren, whose imprint on television can be seen in some of the most recognizable family comedies of the past twenty five years.",
+     "page": 1,
+     "snippet": "## ### The program is overseen by",
+     "reason": "The passage does not state that Warren ran the Disney Channel Storytellers program or that it was launched in 2014.",
+     "votes": "2-0",
+     "window": "## ### The program is overseen by Marc Warren, whose imprint on television can be seen in some of the most recognizable family comedies of the past twenty five years."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Warren ran the Disney Channel Storytellers program or that it was launched in 2014.",
+   "component_check": {
+    "found": [
+     "The program was an initiative to find new talent in creating and writing for Disney programming content."
+    ],
+    "missing": [
+     "Warren ran the Disney Channel Storytellers program.",
+     "The program was launched in 2014."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The program was an initiative to find new talent in creating and writing for Disney programming content.",
+      "paper_id": "2b93c163c69fabe4b9e7fea8593a97bd975204f5",
+      "source_title": "marcwarrentvproducer",
+      "sentence": "(meta data) TITLE: Storytellers | Disney Partners Parks & Travel Oh My Disney Live Shows My Account Account Settings My Creations Parks & Travel ## ### Disney Channel Storytellers is a 20-week writer incubator program focused on developing up-and-coming talent who already have professional representation.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Warren ran the Disney Channel Storytellers program, which was launched in 2014 as an initiative to find new talent in creating and writing for Disney programming content.",
+    "reason": "The passage directly states facts about the Disney Channel Storytellers program, including its launch date and purpose, which are attributed to the cited source. The ATTRIBUTION TEST applies here as the passage presents information as factual and tied to the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "launched in 2014",
+    "rewrite_suggestion": "Warren oversaw the Disney Channel Storytellers program, a writer incubator focused on developing new talent for Disney programming.",
+    "proofs": [
+     "The program is overseen by Marc Warren",
+     "Disney Channel Storytellers is a 20-week writer incubator program focused on developing up-and-coming talent who already have professional representation.",
+     "The primary focus of the program is not staffing, but rather identifying the unique voices who represent the next wave of half hour comedy developers."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific launch year (2014) that is not mentioned anywhere in the provided source text. This component is unsourced and must be removed or cited from another source. The remaining components (Warren's oversight and the program's purpose) are present in the source, but the tool's shown sentence only covered the oversight part."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "The \"bedroom tax\" is an austerity measure that has attracted particular criticism, with activists arguing that two thirds of council houses affected by the policy are occupied with a person with a disability.",
+   "markers": [
+    "welfare"
+   ],
+   "paper_ids": [
+    "72616913b0fd763a5654558d210c13a5ec5da0c2"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+    "source_title": "welfare",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Richard Hawkes, chief executive of the disability charity Scope, says the majority of people affected by the bedroom tax are disabled.",
+    "page": 1,
+    "snippet": "Richard Hawkes, chief executive of the disability",
+    "reason": "The passage explicitly states that almost two-thirds of people affected by the bedroom tax are disabled, which directly supports the claim that two thirds of council houses affected by the policy are occupied with a person with a disability.",
+    "votes": "2-0",
+    "window": "Richard Hawkes, chief executive of the disability charity Scope, says the majority of people affected by the bedroom tax are disabled. Almost two-thirds of people affected by the loss of housing benefit on rooms deemed to be \"spare\" are disabled."
+   },
+   "evidences": [
+    {
+     "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+     "source_title": "welfare",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Richard Hawkes, chief executive of the disability charity Scope, says the majority of people affected by the bedroom tax are disabled.",
+     "page": 1,
+     "snippet": "Richard Hawkes, chief executive of the disability",
+     "reason": "The passage explicitly states that almost two-thirds of people affected by the bedroom tax are disabled, which directly supports the claim that two thirds of council houses affected by the policy are occupied with a person with a disability.",
+     "votes": "2-0",
+     "window": "Richard Hawkes, chief executive of the disability charity Scope, says the majority of people affected by the bedroom tax are disabled. Almost two-thirds of people affected by the loss of housing benefit on rooms deemed to be \"spare\" are disabled."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that almost two-thirds of people affected by the bedroom tax are disabled, which directly supports the claim that two thirds of council houses affected by the policy are occupied with a person with a disability.",
+   "covering": {
+    "covered": [
+     {
+      "component": "activists arguing that two thirds of council houses affected by the policy are occupied with a person with a disability",
+      "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+      "source_title": "welfare",
+      "sentence": "Almost two-thirds of people affected by the loss of housing benefit on rooms deemed to be \"spare\" are disabled.",
+      "page": 1,
+      "snippet": "Almost two-thirds of people affected by the"
+     }
+    ],
+    "uncovered": [
+     "the \"bedroom tax\" is an austerity measure"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+      "source_title": "welfare",
+      "text": "Almost two-thirds of people affected by the loss of housing benefit on rooms deemed to be \"spare\" are disabled.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim calls the bedroom tax an 'austerity measure' (not in source) and attributes the 'two-thirds' statistic to 'activists arguing' (source presents it as research findings, not an activist argument). It also uses 'council houses' instead of 'people affected' and states 'two thirds' rather than 'almost two-thirds'.",
+    "rewrite_suggestion": "The 'bedroom tax' has attracted criticism, with research showing that almost two-thirds of people affected by the loss of housing benefit on spare rooms are disabled.",
+    "proofs": [
+     "Almost two-thirds of people affected by the loss of housing benefit on rooms deemed to be 'spare' are disabled.",
+     "David Orr, chief executive of the National Housing Federation, describes the bedroom tax as 'an unfair, unworkable policy that should be repealed'."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim contains unsourced components: the 'austerity measure' label is absent from the source, and the statistic is attributed to 'activists arguing' whereas the source presents it as a research finding, not an activist claim. Additionally, the wording differs ('almost two-thirds' vs 'two thirds', 'people' vs 'council houses'). The component about 'particular criticism' is provable from the source (e.g., David Orr's quote) but was not shown in the tool's displayed sentences. Since some substantive components are not provable from the source at all, the author must rewrite or add citations to match what the source actually says."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "He also performed solo acoustic sets around the UK, including regular engagements at the Lewes Con Club, before his death from cancer on 31st October 2018.",
+   "markers": [
+    "juicylucyband"
+   ],
+   "paper_ids": [
+    "81dc39c6f1188f72d427885afd92ff3b19412e75"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.809,
+   "evidence": {
+    "paper_id": "81dc39c6f1188f72d427885afd92ff3b19412e75",
+    "source_title": "juicylucyband",
+    "supported": false,
+    "sentence": "It launched Rod Stewart on the road to superstardom, with the gravel-voiced singer stepping in as a short-notice replacement for Long John Baldry.",
+    "page": 1,
+    "snippet": "It launched Rod Stewart on the road",
+    "cosine": 0.809,
+    "reason": "The passage does not mention the artist performing solo acoustic sets, engagements at the Lewes Con Club, or his death from cancer on October 31st, 2018.",
+    "window": "Many, many legends made their names at Mothers. It launched Rod Stewart on the road to superstardom, with the gravel-voiced singer stepping in as a short-notice replacement for Long John Baldry. Radio guru John Peel was resident DJ and it was twice voted the world's best venue by America's Billboard magazine."
+   },
+   "evidences": [
+    {
+     "paper_id": "81dc39c6f1188f72d427885afd92ff3b19412e75",
+     "source_title": "juicylucyband",
+     "supported": false,
+     "sentence": "It launched Rod Stewart on the road to superstardom, with the gravel-voiced singer stepping in as a short-notice replacement for Long John Baldry.",
+     "page": 1,
+     "snippet": "It launched Rod Stewart on the road",
+     "cosine": 0.809,
+     "reason": "The passage does not mention the artist performing solo acoustic sets, engagements at the Lewes Con Club, or his death from cancer on October 31st, 2018.",
+     "window": "Many, many legends made their names at Mothers. It launched Rod Stewart on the road to superstardom, with the gravel-voiced singer stepping in as a short-notice replacement for Long John Baldry. Radio guru John Peel was resident DJ and it was twice voted the world's best venue by America's Billboard magazine."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He performed solo acoustic sets around the UK, including regular engagements at the Lewes Con Club, before his death from cancer on 31st October 2018.",
+    "reason": "The passage asserts specific facts (performances, location, date of death) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is presenting information as if it comes from the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim is unsupported by the cited source: no mention of solo acoustic sets, the Lewes Con Club, or a death date of 31st October 2018.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only states that Ray Owens died from cancer 'a couple of weeks ago' (relative to the 19 Nov 2018 publication), but does not mention any solo acoustic performances, the Lewes Con Club, or a specific death date. All substantive components of the claim are absent from the source, so the author must either provide a supporting citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "The shows were at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20, with the 10:30 pm show on Saturday delayed slightly so the portion of the show where Neil Armstrong first set foot on the moon would happen exactly 50 years to the second after the actual event (10:56:15 EDT).",
+   "markers": [
+    "apollo11"
+   ],
+   "paper_ids": [
+    "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+    "source_title": "apollo11",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The free show will run at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20.",
+    "page": 1,
+    "snippet": "The free show will run at 9:30",
+    "reason": "the passage does not mention the specific times of the shows on Friday and Saturday, nor does it mention the delay of the 10:30 pm show on Saturday or the reason for the delay.",
+    "votes": "2-0",
+    "window": "The free show will run at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20."
+   },
+   "evidences": [
+    {
+     "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+     "source_title": "apollo11",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The free show will run at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20.",
+     "page": 1,
+     "snippet": "The free show will run at 9:30",
+     "reason": "the passage does not mention the specific times of the shows on Friday and Saturday, nor does it mention the delay of the 10:30 pm show on Saturday or the reason for the delay.",
+     "votes": "2-0",
+     "window": "The free show will run at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention the specific times of the shows on Friday and Saturday, nor does it mention the delay of the 10:30 pm show on Saturday or the reason for the delay.",
+   "subject_guard": {
+    "subject": "Neil Armstrong",
+    "missing_from": [
+     "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The shows were at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20, with the 10:30 pm show on Saturday delayed slightly so the portion of the show where Neil Armstrong first set foot on the moon would happen exactly 50 years to the second after the actual event (10:56:15 EDT).",
+    "reason": "The passage asserts specific facts and dates (show times, dates, and the exact time of the moon landing) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are factual claims the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The 10:30 pm show on Saturday was delayed slightly so that the portion of the show where Neil Armstrong first set foot on the moon would happen exactly 50 years to the second after the actual event (10:56:15 EDT).",
+    "rewrite_suggestion": "The shows were at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20.",
+    "proofs": [
+     "The free show will run at 9:30 pm, 10:30 pm, and 11:30 pm on Friday, July 19, and Saturday, July 20."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves the times and dates of the shows. However, the claim adds an unsourced detail about a delay syncing with the exact moon landing anniversary time, which does not appear anywhere in the provided source text. Therefore, the author must either provide a citation for that subclaim or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Since then there have been at least eight additional confirmed sightings in the state; all were immediately east of the Tennessee River in Middle Tennessee: initially in Humphreys county and on September 4, 2016, further south in Wayne county.",
+   "markers": [
+    "cougar"
+   ],
+   "paper_ids": [
+    "d2314ce0ccc2beec6056e0f7dd2af9569c00acee"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d2314ce0ccc2beec6056e0f7dd2af9569c00acee",
+    "source_title": "cougar",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Also considering there have been no confirmed sightings of a cougar between the years 1900 and 2015 in Tennessee, the chances of a cougar encounter are even smaller.",
+    "page": 1,
+    "snippet": "Also considering there have been no confirmed",
+    "reason": "The passage does not mention any confirmed sightings after 2015, nor does it specify locations east of the Tennessee River or counties like Humphreys and Wayne.",
+    "votes": "2-0",
+    "window": "Also considering there have been no confirmed sightings of a cougar between the years 1900 and 2015 in Tennessee, the chances of a cougar encounter are even smaller."
+   },
+   "evidences": [
+    {
+     "paper_id": "d2314ce0ccc2beec6056e0f7dd2af9569c00acee",
+     "source_title": "cougar",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Also considering there have been no confirmed sightings of a cougar between the years 1900 and 2015 in Tennessee, the chances of a cougar encounter are even smaller.",
+     "page": 1,
+     "snippet": "Also considering there have been no confirmed",
+     "reason": "The passage does not mention any confirmed sightings after 2015, nor does it specify locations east of the Tennessee River or counties like Humphreys and Wayne.",
+     "votes": "2-0",
+     "window": "Also considering there have been no confirmed sightings of a cougar between the years 1900 and 2015 in Tennessee, the chances of a cougar encounter are even smaller."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention any confirmed sightings after 2015, nor does it specify locations east of the Tennessee River or counties like Humphreys and Wayne.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Since then there have been at least eight additional confirmed sightings in the state; all were immediately east of the Tennessee River in Middle Tennessee: initially in Humphreys county and on September 4, 2016, further south in Wayne county.",
+    "reason": "The passage asserts specific facts and dates about confirmed sightings, which the cited source is expected to prove. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific number 'at least eight', the geographic details 'immediately east of the Tennessee River in Middle Tennessee', the counties 'Humphreys' and 'Wayne', and the date 'September 4, 2016' are not found in the cited source.",
+    "rewrite_suggestion": "Since September 2015, there have been a few confirmed cougar sightings in Tennessee.",
+    "proofs": [
+     "Since September of 2015, there have been a few confirmed sightings of cougars in Tennessee."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only states that no confirmed sightings occurred between 1900 and 2015, which does not support any component of the claim about sightings after that period. The source text confirms that there have been 'a few' sightings since September 2015, but it does not provide the number 'eight', the specific locations (Humphreys county, Wayne county, east of Tennessee River), or the date September 4, 2016. Therefore, these details are unsourced and require the author to either add a citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Tech Crunch gave an overall positive view of the website but commented that the website had the potential to become \"a magnet for videos taken down for copyright violations elsewhere or porn\".",
+   "markers": [
+    "fliggo"
+   ],
+   "paper_ids": [
+    "3bc366410104f4c5a557ccd5b38a4c81aeb30505"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8602,
+   "evidence": {
+    "paper_id": "3bc366410104f4c5a557ccd5b38a4c81aeb30505",
+    "source_title": "fliggo",
+    "supported": true,
+    "sentence": "Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service).",
+    "page": 1,
+    "snippet": "Another danger for Fliggo is that it",
+    "cosine": 0.8602,
+    "reason": "The passage directly states that Fliggo could become a magnet for videos taken down for copyright violations or porn, which aligns with the claim.",
+    "window": "And Fliggo doesn't yet offer HD uploads (athough that is coming). Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service). The basic service is free, but Fliggo charges for premium features such as teh ability to serve ads or host Fliggo on your own domain."
+   },
+   "evidences": [
+    {
+     "paper_id": "3bc366410104f4c5a557ccd5b38a4c81aeb30505",
+     "source_title": "fliggo",
+     "supported": true,
+     "sentence": "Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service).",
+     "page": 1,
+     "snippet": "Another danger for Fliggo is that it",
+     "cosine": 0.8602,
+     "reason": "The passage directly states that Fliggo could become a magnet for videos taken down for copyright violations or porn, which aligns with the claim.",
+     "window": "And Fliggo doesn't yet offer HD uploads (athough that is coming). Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service). The basic service is free, but Fliggo charges for premium features such as teh ability to serve ads or host Fliggo on your own domain."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Fliggo could become a magnet for videos taken down for copyright violations or porn, which aligns with the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "website had the potential to become a magnet for videos taken down for copyright violations elsewhere or porn",
+      "paper_id": "3bc366410104f4c5a557ccd5b38a4c81aeb30505",
+      "source_title": "fliggo",
+      "sentence": "Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service).",
+      "page": 1,
+      "snippet": "Another danger for Fliggo is that it"
+     }
+    ],
+    "uncovered": [
+     "Tech Crunch gave an overall positive view of the website"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "3bc366410104f4c5a557ccd5b38a4c81aeb30505",
+      "source_title": "fliggo",
+      "text": "Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service).",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that Tech Crunch gave an overall positive view of the website.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Tech Crunch gave an overall positive view of the website",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that TechCrunch gave an overall positive view of the website",
+    "rewrite_suggestion": "TechCrunch commented that Fliggo had the potential to become 'a magnet for videos taken down for copyright violations elsewhere or porn'.",
+    "proofs": [
+     "Another danger for Fliggo is that it becomes a magnet for videos taken down for copyright violations elsewhere or porn (both of which are prohibited by Fliggo's terms of service)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only supports the quoted danger component. The claim that TechCrunch gave an 'overall positive view' is not something the source text states explicitly; it is an author-added interpretation that cannot be proven from the provided source. Since one component is not provable from the source at all, the author must either rewrite the claim to exclude that interpretation or add a citation that supports it."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "In October 2018, he was named in India's Twenty20 International (T20I) squad for their series against the West indies, but he did not play.",
+   "markers": [
+    "shahbaznadeem"
+   ],
+   "paper_ids": [
+    "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd",
+    "source_title": "shahbaznadeem",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out ### India news ShareURL Copied MS Dhoni has been dropped from India's T20I squads for their three-match series against Windies and Australia.",
+    "page": 1,
+    "snippet": "About ICC Hall of Fame ICC on",
+    "reason": "the passage does not state that he did not play in the series.",
+    "votes": "2-0",
+    "window": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out ### India news ShareURL Copied MS Dhoni has been dropped from India's T20I squads for their three-match series against Windies and Australia. SQUAD FOR WINDIES T20Is: Rohit Sharma (c), Shikhar Dhawan, KL Rahul, Dinesh Karthik, Manish Pandey, Shreyas Iyer, Rishabh Pant (wk), Krunal Pandya, Washington Sundar, Yuzvendra Chahal, Kuldeep Yadav, Bhuvneshwar Kumar, Jasprit Bumrah, Khaleel Ahmed, Umesh Yadav, Shahbaz Nadeem (meta data) TITLE: Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out Name Lastname Profile % Complete First name * Last name * Email address * Email address not available. The only difference between the two squads is the absence of Virat Kohli from the squad to take on the Windies at home."
+   },
+   "evidences": [
+    {
+     "paper_id": "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd",
+     "source_title": "shahbaznadeem",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out ### India news ShareURL Copied MS Dhoni has been dropped from India's T20I squads for their three-match series against Windies and Australia.",
+     "page": 1,
+     "snippet": "About ICC Hall of Fame ICC on",
+     "reason": "the passage does not state that he did not play in the series.",
+     "votes": "2-0",
+     "window": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out ### India news ShareURL Copied MS Dhoni has been dropped from India's T20I squads for their three-match series against Windies and Australia. SQUAD FOR WINDIES T20Is: Rohit Sharma (c), Shikhar Dhawan, KL Rahul, Dinesh Karthik, Manish Pandey, Shreyas Iyer, Rishabh Pant (wk), Krunal Pandya, Washington Sundar, Yuzvendra Chahal, Kuldeep Yadav, Bhuvneshwar Kumar, Jasprit Bumrah, Khaleel Ahmed, Umesh Yadav, Shahbaz Nadeem (meta data) TITLE: Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out Name Lastname Profile % Complete First name * Last name * Email address * Email address not available. The only difference between the two squads is the absence of Virat Kohli from the squad to take on the Windies at home."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that he did not play in the series.",
+   "component_check": {
+    "found": [
+     "In October 2018, he was named in India's Twenty20 International (T20I) squad for their series against the West Indies.",
+     "He did not play in that series."
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In October 2018, he was named in India's Twenty20 International (T20I) squad for their series against the West Indies.",
+      "paper_id": "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd",
+      "source_title": "shahbaznadeem",
+      "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out ### India news ShareURL Copied MS Dhoni has been dropped from India's T20I squads for their three-match series against Windies and Australia.",
+      "page": 1
+     },
+     {
+      "component": "He did not play in that series.",
+      "paper_id": "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd",
+      "source_title": "shahbaznadeem",
+      "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out ### India news ShareURL Copied MS Dhoni has been dropped from India's T20I squads for their three-match series against Windies and Australia.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In October 2018, he was named in India's Twenty20 International (T20I) squad for their series against the West indies, but he did not play.",
+    "reason": "The passage asserts a specific fact (a player's selection for a squad and his non-participation) that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "but he did not play",
+    "rewrite_suggestion": "In October 2018, he was named in India's Twenty20 International (T20I) squad for their series against the West Indies.",
+    "proofs": [
+     "26 Oct 18 # Uncapped Krunal Pandya, Nadeem named in India squads for Australia, Windies T20Is, Dhoni left out",
+     "The slow left-arm pair of Krunal Pandya and Shahbaz Nadeem have received their maiden call-ups.",
+     "SQUAD FOR WINDIES T20Is: Rohit Sharma (c), Shikhar Dhawan, KL Rahul, Dinesh Karthik, Manish Pandey, Shreyas Iyer, Rishabh Pant (wk), Krunal Pandya, Washington Sundar, Yuzvendra Chahal, Kuldeep Yadav, Bhuvneshwar Kumar, Jasprit Bumrah, Khaleel Ahmed, Umesh Yadav, Shahbaz Nadeem"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the component 'but he did not play,' which is not mentioned in the cited source. The source only confirms his selection for the squad in October 2018, but does not address whether he actually played in the series. Therefore, the author must either add a citation for that fact or remove it from the claim."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The pro-Hadi Yemen Army was able to remove 300,000 Houthi mines in recently captured areas, including 40,000 mines on the outskirts of Marib province, according to official sources.",
+   "markers": [
+    "yemenicivilwar2015presen"
+   ],
+   "paper_ids": [
+    "408523dbfcb2ac0461fbbb9c76e89f329b213d05"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+    "source_title": "yemenicivilwar2015presen",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "# Yemen army removes 300,000 Houthi landmines in liberated areas",
+    "page": 1,
+    "snippet": "# Yemen army removes 300,000 Houthi landmines",
+    "reason": "",
+    "votes": "2-0",
+    "window": "# Yemen army removes 300,000 Houthi landmines in liberated areas"
+   },
+   "evidences": [
+    {
+     "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+     "source_title": "yemenicivilwar2015presen",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "# Yemen army removes 300,000 Houthi landmines in liberated areas",
+     "page": 1,
+     "snippet": "# Yemen army removes 300,000 Houthi landmines",
+     "reason": "",
+     "votes": "2-0",
+     "window": "# Yemen army removes 300,000 Houthi landmines in liberated areas"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "The pro-Hadi Yemen Army removed 300,000 Houthi mines in recently captured areas.",
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "sentence": "# Yemen army removes 300,000 Houthi landmines in liberated areas",
+      "page": 1,
+      "snippet": "# Yemen army removes 300,000 Houthi landmines"
+     }
+    ],
+    "uncovered": [
+     "40,000 of these mines were on the outskirts of Marib province.",
+     "This information is according to official sources.",
+     "official sources"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+      "source_title": "yemenicivilwar2015presen",
+      "text": "# Yemen army removes 300,000 Houthi landmines in liberated areas",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific figure of 40,000 mines on the outskirts of Marib province",
+    "rewrite_suggestion": "The pro-Hadi Yemen Army removed 300,000 Houthi mines in recently captured areas, according to official sources.",
+    "proofs": [
+     "# Yemen army removes 300,000 Houthi landmines in liberated areas"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only supports the removal of 300,000 mines in liberated areas, but the claim adds an unsourced detail about 40,000 mines on the outskirts of Marib province. This figure does not appear anywhere in the provided source text, so it requires a separate citation or must be removed from the claim."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "It offers a Bachelor of Science in Business Administration (BSBA), Master of Business Administration (MBA), and Master of Science in Management (MSM) in various concentrations.",
+   "markers": [
+    "southernwesleyanuniversi"
+   ],
+   "paper_ids": [
+    "bd195b988210f7a6192375cbd27fe6254cdc7b9b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bd195b988210f7a6192375cbd27fe6254cdc7b9b",
+    "source_title": "southernwesleyanuniversi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Management and Leadership (MS) MSML in Healthcare Administration MSML in Human Resources MSML in Management",
+    "page": 1,
+    "snippet": "Management and Leadership (MS) MSML in Healthcare",
+    "reason": "The passage does not mention a Bachelor of Science in Business Administration (BSBA) or a Master of Science in Management (MSM).",
+    "votes": "2-0",
+    "window": "Management and Leadership (MS) MSML in Healthcare Administration MSML in Human Resources MSML in Management MBA in Healthcare Administration MBA in Human Resources MBA in Leadership"
+   },
+   "evidences": [
+    {
+     "paper_id": "bd195b988210f7a6192375cbd27fe6254cdc7b9b",
+     "source_title": "southernwesleyanuniversi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Management and Leadership (MS) MSML in Healthcare Administration MSML in Human Resources MSML in Management",
+     "page": 1,
+     "snippet": "Management and Leadership (MS) MSML in Healthcare",
+     "reason": "The passage does not mention a Bachelor of Science in Business Administration (BSBA) or a Master of Science in Management (MSM).",
+     "votes": "2-0",
+     "window": "Management and Leadership (MS) MSML in Healthcare Administration MSML in Human Resources MSML in Management MBA in Healthcare Administration MBA in Human Resources MBA in Leadership"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention a Bachelor of Science in Business Administration (BSBA) or a Master of Science in Management (MSM).",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage lists academic programs offered by the institution. The citation is expected to prove the existence and names of these programs.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes a Bachelor of Science in Business Administration (BSBA) and a Master of Science in Management (MSM). The source does not mention a BSBA degree at all, and its graduate business degree is a Master of Science in Management and Leadership (MSML), not an MSM.",
+    "rewrite_suggestion": "It offers a Master of Business Administration (MBA) and a Master of Science in Management and Leadership (MSML) in various concentrations.",
+    "proofs": [
+     "Master of Business Administration (MBA)",
+     "MBA in Healthcare Administration MBA in Human Resources MBA in Leadership MBA in Project and Quality Management",
+     "Management and Leadership (MS)",
+     "MSML in Healthcare Administration MSML in Human Resources MSML in Management MSML in Project and Quality Management"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions MSML concentrations, not the BSBA or MBA, and the source text contains no BSBA degree and no MSM degree (only an MSML). Thus two substantive components of the claim are unprovable from the cited source, requiring the author to either add a citation for those degrees or rewrite the claim to match what the source actually offers."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Mark Yudof, then president of the university, was hoping that Monson would be able to help the program move past the scandals of previous head coach Clem Haskins.",
+   "markers": [
+    "danmonson"
+   ],
+   "paper_ids": [
+    "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd",
+    "source_title": "danmonson",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "It would be the last game Clem Haskins would coach for Minnesota, coming one day after allegations of academic fraud first rocked the university and sidelined four Minnesota players.",
+    "page": 1,
+    "snippet": "It would be the last game Clem",
+    "reason": "the passage does not state that Mark Yudof was hoping Monson would help the program move past scandals.",
+    "votes": "2-0",
+    "window": "It would be the last game Clem Haskins would coach for Minnesota, coming one day after allegations of academic fraud first rocked the university and sidelined four Minnesota players. University President Mark Yudof says he's pleased with the 37-year-old Monson's youth and exuberance. Now, Monson is back; this time to lead the program in the wake of Haskins' buyout last month Monson says he's not concerned about the ongoing investigation into the men's basketball program. University officials say Monson's committment to good grades was a key factor in their decision to hire him."
+   },
+   "evidences": [
+    {
+     "paper_id": "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd",
+     "source_title": "danmonson",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "It would be the last game Clem Haskins would coach for Minnesota, coming one day after allegations of academic fraud first rocked the university and sidelined four Minnesota players.",
+     "page": 1,
+     "snippet": "It would be the last game Clem",
+     "reason": "the passage does not state that Mark Yudof was hoping Monson would help the program move past scandals.",
+     "votes": "2-0",
+     "window": "It would be the last game Clem Haskins would coach for Minnesota, coming one day after allegations of academic fraud first rocked the university and sidelined four Minnesota players. University President Mark Yudof says he's pleased with the 37-year-old Monson's youth and exuberance. Now, Monson is back; this time to lead the program in the wake of Haskins' buyout last month Monson says he's not concerned about the ongoing investigation into the men's basketball program. University officials say Monson's committment to good grades was a key factor in their decision to hire him."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that Mark Yudof was hoping Monson would help the program move past scandals.",
+   "component_check": {
+    "found": [
+     "Mark Yudof was then president of the university.",
+     "Previous head coach Clem Haskins was associated with scandals."
+    ],
+    "missing": [
+     "Yudof was hoping Monson would help the program move past scandals."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Mark Yudof was then president of the university.",
+      "paper_id": "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd",
+      "source_title": "danmonson",
+      "sentence": "University President Mark Yudof says he's pleased with the 37-year-old Monson's youth and exuberance.",
+      "page": 1
+     },
+     {
+      "component": "Previous head coach Clem Haskins was associated with scandals.",
+      "paper_id": "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd",
+      "source_title": "danmonson",
+      "sentence": "Now, Monson is back; this time to lead the program in the wake of Haskins' buyout last month Monson says he's not concerned about the ongoing investigation into the men's basketball program.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Mark Yudof, then president of the university, was hoping that Monson would be able to help the program move past the scandals of previous head coach Clem Haskins.",
+    "reason": "The passage directly states a hope or expectation attributed to Mark Yudof regarding Monson's ability to address past scandals. This is a factual assertion that the cited source would be expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that Yudof was hoping Monson would help the program move past the scandals",
+    "rewrite_suggestion": "Mark Yudof, then president of the university, said Monson was the right person to grow the basketball program and take it in the right way, in the wake of the scandal that led to Clem Haskins' departure.",
+    "proofs": [
+     "University President Mark Yudof says he's pleased with the 37-year-old Monson's youth and exuberance.",
+     "Yudof: Coach Monson is outstanding, and he's the right person to grow the basketball program and take us where we want to go and take us there in - what I'll call - the right way."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not mention Yudof or his hopes. The source text confirms Yudof was president and that he praised Monson as the right person to grow the program in the right way, but it never states that Yudof specifically hoped Monson would help move past the scandals\u2014an interpretive component the author added. Therefore the author must either provide a citation for that hope or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "In 2002, Suzanne Deal Booth and David G. Booth established the \"Booth Family Rome Prize Fellowship for Historic Preservation and Conservation\" at the American Academy in Rome, which is awarded on an annual basis and has supported over 15 fellowships.",
+   "markers": [
+    "suzannedealbooth"
+   ],
+   "paper_ids": [
+    "e2ea5285bdb5b53a6b8efd6f057081f76f8069be"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e2ea5285bdb5b53a6b8efd6f057081f76f8069be",
+    "source_title": "suzannedealbooth",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome.",
+    "page": 1,
+    "snippet": "In 2001, she and her family established",
+    "reason": "The passage does not state that the fellowship has supported over 15 fellowships or that it is awarded on an annual basis.",
+    "votes": "2-0",
+    "window": "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome."
+   },
+   "evidences": [
+    {
+     "paper_id": "e2ea5285bdb5b53a6b8efd6f057081f76f8069be",
+     "source_title": "suzannedealbooth",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome.",
+     "page": 1,
+     "snippet": "In 2001, she and her family established",
+     "reason": "The passage does not state that the fellowship has supported over 15 fellowships or that it is awarded on an annual basis.",
+     "votes": "2-0",
+     "window": "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the fellowship has supported over 15 fellowships or that it is awarded on an annual basis.",
+   "component_check": {
+    "found": [
+     "The fellowship is at the American Academy in Rome"
+    ],
+    "missing": [
+     "In 2002, Suzanne Deal Booth and David G. Booth established the \"Booth Family Rome Prize Fellowship for Historic Preservation and Conservation\"",
+     "The fellowship is awarded on an annual basis",
+     "The fellowship has supported over 15 fellowships"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The fellowship is at the American Academy in Rome",
+      "paper_id": "e2ea5285bdb5b53a6b8efd6f057081f76f8069be",
+      "source_title": "suzannedealbooth",
+      "sentence": "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific fact (establishment of a fellowship, its date, and its impact) that is directly attributed to the cited source. The citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The year 2002, the specific involvement of David G. Booth, the annual award frequency, and the figure 'over 15 fellowships' are all absent or contradicted in the source.",
+    "rewrite_suggestion": "In 2001, Suzanne Deal Booth and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome.",
+    "proofs": [
+     "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "In 2001, she and her family established the Booth Family Rome Prize Fellowship for Historic Preservation and Conservation at the American Academy in Rome.",
+     "why": "The source states the fellowship was established in 2001, contradicting the claim's year of 2002."
+    },
+    "why": "The claim asserts a 2002 establishment, a specific co-founder (David G. Booth), an annual award, and a count of over 15 fellowships, none of which are supported by the provided source. The source says 2001 and mentions only 'she and her family', with no mention of frequency or number of fellowships. The shown sentence covers the fellowship name and location but fails to prove the other components. The author must either add citations for those elements or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "According to the official website of the Mus\u00e9oscope, the \"museum of the largest dam in Europe made of compacted soil\", Lac de Serre-Pon\u00e7on includes a hydroelectric power plant with a 380 MW generator.",
+   "markers": [
+    "lacdeserreponon"
+   ],
+   "paper_ids": [
+    "5c07bd6689c1e103f59759aba0c3e5e4266f1f94"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7783,
+   "evidence": {
+    "paper_id": "5c07bd6689c1e103f59759aba0c3e5e4266f1f94",
+    "source_title": "lacdeserreponon",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake Mus\u00e9oscope du Lac de Serre-Pon\u00e7on # Welcome to the Mus\u00e9oscope of Serre-Pon\u00e7on lake ## The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France The hydroelectric plant of Serre-Pon\u00e7on produces about 700 million kWh per year, which corresponds approximately to the consumption of the departement of the Hautes-Alpes.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake",
+    "cosine": 0.7783,
+    "reason": "The passage states that the hydroelectric plant of Serre-Pon\u00e7on has an output of 380 MW, which directly supports the claim.",
+    "window": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake Mus\u00e9oscope du Lac de Serre-Pon\u00e7on # Welcome to the Mus\u00e9oscope of Serre-Pon\u00e7on lake ## The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France The hydroelectric plant of Serre-Pon\u00e7on produces about 700 million kWh per year, which corresponds approximately to the consumption of the departement of the Hautes-Alpes. With an output of 380 MW (1/3 of a nuclear reactor), it is the most powerful hydroelectric plant in the Provence-Alpes-C\u00f4te d'Azur Region, and one of the most powerful in France."
+   },
+   "evidences": [
+    {
+     "paper_id": "5c07bd6689c1e103f59759aba0c3e5e4266f1f94",
+     "source_title": "lacdeserreponon",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake Mus\u00e9oscope du Lac de Serre-Pon\u00e7on # Welcome to the Mus\u00e9oscope of Serre-Pon\u00e7on lake ## The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France The hydroelectric plant of Serre-Pon\u00e7on produces about 700 million kWh per year, which corresponds approximately to the consumption of the departement of the Hautes-Alpes.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake",
+     "cosine": 0.7783,
+     "reason": "The passage states that the hydroelectric plant of Serre-Pon\u00e7on has an output of 380 MW, which directly supports the claim.",
+     "window": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake Mus\u00e9oscope du Lac de Serre-Pon\u00e7on # Welcome to the Mus\u00e9oscope of Serre-Pon\u00e7on lake ## The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France The hydroelectric plant of Serre-Pon\u00e7on produces about 700 million kWh per year, which corresponds approximately to the consumption of the departement of the Hautes-Alpes. With an output of 380 MW (1/3 of a nuclear reactor), it is the most powerful hydroelectric plant in the Provence-Alpes-C\u00f4te d'Azur Region, and one of the most powerful in France."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the hydroelectric plant of Serre-Pon\u00e7on has an output of 380 MW, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Lac de Serre-Pon\u00e7on includes a hydroelectric power plant",
+      "paper_id": "5c07bd6689c1e103f59759aba0c3e5e4266f1f94",
+      "source_title": "lacdeserreponon",
+      "sentence": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake Mus\u00e9oscope du Lac de Serre-Pon\u00e7on # Welcome to the Mus\u00e9oscope of Serre-Pon\u00e7on lake ## The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France The hydroelectric plant of Serre-Pon\u00e7on produces about 700 million kWh per year, which corresponds approximately to the consumption of the departement of the Hautes-Alpes.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake"
+     },
+     {
+      "component": "hydroelectric power plant has a 380 MW generator",
+      "paper_id": "5c07bd6689c1e103f59759aba0c3e5e4266f1f94",
+      "source_title": "lacdeserreponon",
+      "sentence": "With an output of 380 MW (1/3 of a nuclear reactor), it is the most powerful hydroelectric plant in the Provence-Alpes-C\u00f4te d'Azur Region, and one of the most powerful in France.",
+      "page": 1,
+      "snippet": "With an output of 380 MW (1/3"
+     }
+    ],
+    "uncovered": [
+     "Mus\u00e9oscope website is the source",
+     "Mus\u00e9oscope is of the \"museum of the largest dam in Europe made of compacted soil\""
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5c07bd6689c1e103f59759aba0c3e5e4266f1f94",
+      "source_title": "lacdeserreponon",
+      "text": "(meta data) TITLE: Mus\u00e9oscope of Serre-Pon\u00e7on lake Mus\u00e9oscope du Lac de Serre-Pon\u00e7on # Welcome to the Mus\u00e9oscope of Serre-Pon\u00e7on lake ## The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France The hydroelectric plant of Serre-Pon\u00e7on produces about 700 million kWh per year, which corresponds approximately to the consumption of the departement of the Hautes-Alpes. With an output of 380 MW (1/3 of a nuclear reactor), it is the most powerful hydroelectric plant in the Provence-Alpes-C\u00f4te d'Azur Region, and one of the most powerful in France.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the description 'museum of the largest dam in Europe made of compacted soil' is not found in the cited source and needs a citation or removal",
+    "rewrite_suggestion": "According to the official website of the Mus\u00e9oscope, Lac de Serre-Pon\u00e7on includes a hydroelectric power plant with a 380 MW generator.",
+    "proofs": [
+     "The hydroelectric plant of Serre-Pon\u00e7onis one of the most powerful of France",
+     "With an output of 380 MW (1/3 of a nuclear reactor), it is the most powerful hydroelectric plant in the Provence-Alpes-C\u00f4te d'Azur Region, and one of the most powerful in France."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes an unsourced descriptor about the Mus\u00e9oscope being the 'museum of the largest dam in Europe made of compacted soil'. This phrase does not appear anywhere in the provided source text and is not common knowledge, so it requires either a new citation or removal from the claim. The remaining components (existence of a hydroelectric power plant and its 380 MW generator) are fully supported by the shown sentences from the source."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "He was also named in the PFA Team of the Year alongside Liverpool teammates, Trent Alexander-Arnold, Andrew Robertson and van Dijk.",
+   "markers": [
+    "sadioman"
+   ],
+   "paper_ids": [
+    "4ab3db4f7c8713968cb5e2870f0024c3ccea3cd4"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4ab3db4f7c8713968cb5e2870f0024c3ccea3cd4",
+    "source_title": "sadioman",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "### Trent Alexander-Arnold (RB - Liverpool) Alexander-Arnold exploded on to the domestic scene last season and has built on those displays this term, performing admirably in Liverpool's Premier League title charge, as well as opening his goalscoring account for England in November.",
+    "page": 1,
+    "snippet": "### Trent Alexander-Arnold (RB - Liverpool) Alexander-Arnold",
+    "reason": "The passage does not state that Sadio Man\u00e9 was named in the PFA Team of the Year.",
+    "votes": "2-0",
+    "window": "### Trent Alexander-Arnold (RB - Liverpool) Alexander-Arnold exploded on to the domestic scene last season and has built on those displays this term, performing admirably in Liverpool's Premier League title charge, as well as opening his goalscoring account for England in November. ### Sadio ManE (FW - Liverpool) A vital member of Liverpool's outstanding attacking trio, Man\u00e9 has earned a second PFA Premier League Team of the Year nomination in three seasons after a campaign marked by decisive goals for the Anfi eld club. ### Andrew Robertson (LB - Liverpool) The former Dundee United and Hull City full-back has become a cult hero amongst the Anfield faithful, and he has been a linchpin in the Liverpool side as they search for a maiden Premier League title, his rapid bursts up and down the left fl ank highlighting his energetic style. ### Virgil van Dijk (CB - Liverpool) The all-action Dutch defender has been outstanding for Liverpool throughout this campaign as the defensive rock in a back four who are well on their way to 20 clean sheets for the Premier League season."
+   },
+   "evidences": [
+    {
+     "paper_id": "4ab3db4f7c8713968cb5e2870f0024c3ccea3cd4",
+     "source_title": "sadioman",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "### Trent Alexander-Arnold (RB - Liverpool) Alexander-Arnold exploded on to the domestic scene last season and has built on those displays this term, performing admirably in Liverpool's Premier League title charge, as well as opening his goalscoring account for England in November.",
+     "page": 1,
+     "snippet": "### Trent Alexander-Arnold (RB - Liverpool) Alexander-Arnold",
+     "reason": "The passage does not state that Sadio Man\u00e9 was named in the PFA Team of the Year.",
+     "votes": "2-0",
+     "window": "### Trent Alexander-Arnold (RB - Liverpool) Alexander-Arnold exploded on to the domestic scene last season and has built on those displays this term, performing admirably in Liverpool's Premier League title charge, as well as opening his goalscoring account for England in November. ### Sadio ManE (FW - Liverpool) A vital member of Liverpool's outstanding attacking trio, Man\u00e9 has earned a second PFA Premier League Team of the Year nomination in three seasons after a campaign marked by decisive goals for the Anfi eld club. ### Andrew Robertson (LB - Liverpool) The former Dundee United and Hull City full-back has become a cult hero amongst the Anfield faithful, and he has been a linchpin in the Liverpool side as they search for a maiden Premier League title, his rapid bursts up and down the left fl ank highlighting his energetic style. ### Virgil van Dijk (CB - Liverpool) The all-action Dutch defender has been outstanding for Liverpool throughout this campaign as the defensive rock in a back four who are well on their way to 20 clean sheets for the Premier League season."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Sadio Man\u00e9 was named in the PFA Team of the Year.",
+   "component_check": {
+    "found": [
+     "He was named in the PFA Team of the Year."
+    ],
+    "missing": [
+     "He was named alongside Liverpool teammates, Trent Alexander-Arnold, Andrew Robertson and van Dijk."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He was named in the PFA Team of the Year.",
+      "paper_id": "4ab3db4f7c8713968cb5e2870f0024c3ccea3cd4",
+      "source_title": "sadioman",
+      "sentence": "### Sergio AgUero (FW - Manchester City) The prolific Argentina striker has secured a place in the PFA Premier League Team of the Year after another tremendous campaign as Manchester City's leading marksman.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was named in the PFA Team of the Year alongside Liverpool teammates, Trent Alexander-Arnold, Andrew Robertson and van Dijk.",
+    "reason": "The passage directly states a fact about the subject being named in the PFA Team of the Year, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "### Sadio ManE (FW - Liverpool)",
+     "### Trent Alexander-Arnold (RB - Liverpool)",
+     "### Andrew Robertson (LB - Liverpool)",
+     "### Virgil van Dijk (CB - Liverpool)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only describes Trent Alexander-Arnold and does not mention the subject ('he') being named in the PFA Team of the Year nor the other teammates. The source text, however, includes Sadio Man\u00e9 in the same PFA Team of the Year list alongside Alexander-Arnold, Robertson, and van Dijk, as shown by the quoted entries. Since the proof exists in the source but was not displayed, the tool must fix its shown sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t26",
+   "text": "The team plays in the East of Scotland Football League (Conference B), having moved from the junior leagues in 2018.",
+   "markers": [
+    "dunipacefc"
+   ],
+   "paper_ids": [
+    "04be230d28c28ff0d0956bd06c9491ebfceca4eb"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "04be230d28c28ff0d0956bd06c9491ebfceca4eb",
+    "source_title": "dunipacefc",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The East of Scotland Football League has voted unanimously to introduce 26 new clubs next season - including an exodus of 25 from the junior ranks.",
+    "page": 1,
+    "snippet": "The East of Scotland Football League has",
+    "reason": "The passage does not state that the team plays in Conference B of the East of Scotland Football League.",
+    "votes": "2-0",
+    "window": "The East of Scotland Football League has voted unanimously to introduce 26 new clubs next season - including an exodus of 25 from the junior ranks. Junior FA defiant over east exodus Moving into what is effectively the sixth tier of senior football gives the new members a potential pathway into the Scottish Professional Football League via the pyramid system. Kelty Hearts won this season's East of Scotland League and a play-off to reach the fifth-tier Lowland League a year after making the switch from the juniors. Among the clubs deciding to leave junior football are East Superleague champions Bonnyrigg Rose Athletic, Linlithgow Rose and and Bo'ness United."
+   },
+   "evidences": [
+    {
+     "paper_id": "04be230d28c28ff0d0956bd06c9491ebfceca4eb",
+     "source_title": "dunipacefc",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The East of Scotland Football League has voted unanimously to introduce 26 new clubs next season - including an exodus of 25 from the junior ranks.",
+     "page": 1,
+     "snippet": "The East of Scotland Football League has",
+     "reason": "The passage does not state that the team plays in Conference B of the East of Scotland Football League.",
+     "votes": "2-0",
+     "window": "The East of Scotland Football League has voted unanimously to introduce 26 new clubs next season - including an exodus of 25 from the junior ranks. Junior FA defiant over east exodus Moving into what is effectively the sixth tier of senior football gives the new members a potential pathway into the Scottish Professional Football League via the pyramid system. Kelty Hearts won this season's East of Scotland League and a play-off to reach the fifth-tier Lowland League a year after making the switch from the juniors. Among the clubs deciding to leave junior football are East Superleague champions Bonnyrigg Rose Athletic, Linlithgow Rose and and Bo'ness United."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the team plays in Conference B of the East of Scotland Football League.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The team plays in the East of Scotland Football League (Conference B), having moved from the junior leagues in 2018.",
+    "reason": "The passage asserts facts about the team's league and history, which the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes specific details about 'the team' (its league and move date) to this source, but the source does not mention any specific team by name, nor does it refer to a 'Conference B' division. The author must either add a citation that directly supports these details about the team or rewrite the claim to describe the general exodus of junior clubs in 2018 as reported.",
+    "rewrite_suggestion": "The East of Scotland Football League voted in 2018 to admit 26 new clubs from the junior ranks, including an exodus of 25 clubs.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only discusses a general vote to introduce new clubs, not the specific team or its league placement. The source text never names the author's team or mentions 'Conference B', and while it does report that 25 junior clubs moved in 2018, it does not tie that move to the particular team in the claim. Therefore, no component of the claim is provable from the provided source, making this an author-side problem that requires a new citation or a rewrite to match what the source actually says."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "a4d423d249d46305e8aa0332e70b90dcc39d4509": {
+    "title": "mickadams",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0": {
+    "title": "arthurmold",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd": {
+    "title": "shahbaznadeem",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd": {
+    "title": "danmonson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fc886923259fe0e386faf44c175ef22d3f22d216": {
+    "title": "jjwatt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf": {
+    "title": "bartsimpson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "025c42f40646aea3be536bc0806122fc8cf58742": {
+    "title": "vannevarbush",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "bd195b988210f7a6192375cbd27fe6254cdc7b9b": {
+    "title": "southernwesleyanuniversi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "46d367fe63ee707db734d90ca89287f6d2ef96cd": {
+    "title": "erictheactor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5ed662a5acdbee0cf80af22d41e2f92bdd19733c": {
+    "title": "201819educationworkersst",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "81dc39c6f1188f72d427885afd92ff3b19412e75": {
+    "title": "juicylucyband",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fe75824943b2feb0b093250b26539294df3a18d6": {
+    "title": "niunamenos",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "04be230d28c28ff0d0956bd06c9491ebfceca4eb": {
+    "title": "dunipacefc",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3bc366410104f4c5a557ccd5b38a4c81aeb30505": {
+    "title": "fliggo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b1773315efced0b8c238713349ffc90b0a2951f2": {
+    "title": "andrewnikou",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f61cfe09e9225865bea88ca61a0036bb782add37": {
+    "title": "jonathankempwriter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "408523dbfcb2ac0461fbbb9c76e89f329b213d05": {
+    "title": "yemenicivilwar2015presen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "7e336d91c65eb49f179ddf38699b3c27a7c93c45": {
+    "title": "tropicalcyclonesin2018",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5c07bd6689c1e103f59759aba0c3e5e4266f1f94": {
+    "title": "lacdeserreponon",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "72616913b0fd763a5654558d210c13a5ec5da0c2": {
+    "title": "welfare",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "2b93c163c69fabe4b9e7fea8593a97bd975204f5": {
+    "title": "marcwarrentvproducer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c20c39a26673bea5d8c09ab7fc1957e96dcb4c85": {
+    "title": "albertinesong",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4ab3db4f7c8713968cb5e2870f0024c3ccea3cd4": {
+    "title": "sadioman",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d2314ce0ccc2beec6056e0f7dd2af9569c00acee": {
+    "title": "cougar",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e2ea5285bdb5b53a6b8efd6f057081f76f8069be": {
+    "title": "suzannedealbooth",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824": {
+    "title": "apollo11",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 8,
+   "unsupported": 18,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:34:53",
+  "marker_errors": [],
+  "processing_time_seconds": 444.4,
+  "source_hashes": {
+   "jjwatt.txt": "04c4a6ea8e21b1cc6d24cb3fa3bd6d710735c5aa",
+   "bartsimpson.txt": "04eb522baa159757b465c94efc2dfcb0bfa808af",
+   "jonathankempwriter.txt": "c6bd953b01681d8f5b1811b3b760c01bc789610c",
+   "201819educationworkersst.txt": "ed32c2900126e9383da69676a381317e90dcb53f",
+   "erictheactor.txt": "086c8a3d4dc94af14dcbeef0c9980621b6a2c35a",
+   "mickadams.txt": "5d338d59c573b60acf638a7d2c041b85fadd1d05",
+   "vannevarbush.txt": "fb69d71e79c8b7b0902d4145947236b84aaf8497",
+   "andrewnikou.txt": "2cb8174040a4201bf636bd980f9173246f1e9e56",
+   "albertinesong.txt": "3076bbf32a7d237ac9da9ee375390fed1b7013ea",
+   "tropicalcyclonesin2018.txt": "349896561a2b57c61d7c48309b0bd245e30c74b6",
+   "niunamenos.txt": "770bd3587b2016a6bc021d24572adf2765dbb6d8",
+   "arthurmold.txt": "25286e19a68747f639c787cb63049a6be28c62fd",
+   "marcwarrentvproducer.txt": "c1a0ddce3eadff6629a55121ded65cc34cc5f228",
+   "welfare.txt": "d95e6dad7e02d75d9d1ba86073be5c7e3b9dcde0",
+   "juicylucyband.txt": "6bbbe5e7799267e377f01d3cd641d50561d4aaa2",
+   "apollo11.txt": "66a61db14802328e9ac145979086d81a44277632",
+   "cougar.txt": "59b8426d468831baef8b2e1e9df03acfa46f8794",
+   "fliggo.txt": "c9f9bf4acbd6f9fb1c8c87d72f760af201f38af7",
+   "shahbaznadeem.txt": "3ad4703313636c4c53f1b3af1e22fd4c1e89f2cb",
+   "yemenicivilwar2015presen.txt": "ea04cc4660b3084230c8b475e2c9fc3c84916cad",
+   "southernwesleyanuniversi.txt": "63a4cf25ab26c78899aa882ba0a60d375cdfdae5",
+   "danmonson.txt": "baa970198a3a38cb0970d3a66985347373942888",
+   "suzannedealbooth.txt": "3816220d1e6e2597ef73d4f5d91a60fdafc70627",
+   "lacdeserreponon.txt": "ddddd638fc877c667e11f22c00eff2f1a5e0529d",
+   "sadioman.txt": "bd25b93e44de5c90267bafff55a8d127b54d5bc9",
+   "dunipacefc.txt": "fd8a0e63b5b31ea4d3f2af5aeb7ce111e09310f1"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 464,
+    "prompt_tokens": 490458,
+    "completion_tokens": 18524,
+    "cost_usd": 0.056547
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 28,
+    "prompt_tokens": 100156,
+    "completion_tokens": 60419,
+    "cost_usd": 0.02553
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 18,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 24,
+   "actions": {
+    "add_citation_or_rewrite": 22,
+    "wrong_or_insufficient_evidence": 2
+   },
+   "proof_may_exist": [
+    "t25"
+   ],
+   "conflicts": [
+    "t7",
+    "t23"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t12"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+   "key": "jjwatt",
+   "filename": "jjwatt.txt",
+   "title": "jjwatt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d1d87e0cf8e3e1f3e4271aabf89ddbbd31c8ecaf",
+   "key": "bartsimpson",
+   "filename": "bartsimpson.txt",
+   "title": "bartsimpson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f61cfe09e9225865bea88ca61a0036bb782add37",
+   "key": "jonathankempwriter",
+   "filename": "jonathankempwriter.txt",
+   "title": "jonathankempwriter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5ed662a5acdbee0cf80af22d41e2f92bdd19733c",
+   "key": "201819educationworkersst",
+   "filename": "201819educationworkersst.txt",
+   "title": "201819educationworkersst",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46d367fe63ee707db734d90ca89287f6d2ef96cd",
+   "key": "erictheactor",
+   "filename": "erictheactor.txt",
+   "title": "erictheactor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a4d423d249d46305e8aa0332e70b90dcc39d4509",
+   "key": "mickadams",
+   "filename": "mickadams.txt",
+   "title": "mickadams",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "025c42f40646aea3be536bc0806122fc8cf58742",
+   "key": "vannevarbush",
+   "filename": "vannevarbush.txt",
+   "title": "vannevarbush",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+   "key": "andrewnikou",
+   "filename": "andrewnikou.txt",
+   "title": "andrewnikou",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c20c39a26673bea5d8c09ab7fc1957e96dcb4c85",
+   "key": "albertinesong",
+   "filename": "albertinesong.txt",
+   "title": "albertinesong",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7e336d91c65eb49f179ddf38699b3c27a7c93c45",
+   "key": "tropicalcyclonesin2018",
+   "filename": "tropicalcyclonesin2018.txt",
+   "title": "tropicalcyclonesin2018",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fe75824943b2feb0b093250b26539294df3a18d6",
+   "key": "niunamenos",
+   "filename": "niunamenos.txt",
+   "title": "niunamenos",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "374953fc8b3d11c2d5fe8e1e6be1aca512da7df0",
+   "key": "arthurmold",
+   "filename": "arthurmold.txt",
+   "title": "arthurmold",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2b93c163c69fabe4b9e7fea8593a97bd975204f5",
+   "key": "marcwarrentvproducer",
+   "filename": "marcwarrentvproducer.txt",
+   "title": "marcwarrentvproducer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+   "key": "welfare",
+   "filename": "welfare.txt",
+   "title": "welfare",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "81dc39c6f1188f72d427885afd92ff3b19412e75",
+   "key": "juicylucyband",
+   "filename": "juicylucyband.txt",
+   "title": "juicylucyband",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+   "key": "apollo11",
+   "filename": "apollo11.txt",
+   "title": "apollo11",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d2314ce0ccc2beec6056e0f7dd2af9569c00acee",
+   "key": "cougar",
+   "filename": "cougar.txt",
+   "title": "cougar",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3bc366410104f4c5a557ccd5b38a4c81aeb30505",
+   "key": "fliggo",
+   "filename": "fliggo.txt",
+   "title": "fliggo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "222a59733731b3e6bf0aea7033f36ba4ee1ac9fd",
+   "key": "shahbaznadeem",
+   "filename": "shahbaznadeem.txt",
+   "title": "shahbaznadeem",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+   "key": "yemenicivilwar2015presen",
+   "filename": "yemenicivilwar2015presen.txt",
+   "title": "yemenicivilwar2015presen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bd195b988210f7a6192375cbd27fe6254cdc7b9b",
+   "key": "southernwesleyanuniversi",
+   "filename": "southernwesleyanuniversi.txt",
+   "title": "southernwesleyanuniversi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "08f031c8f3fd19e15f0ec8e5ecd9aeed703fdbfd",
+   "key": "danmonson",
+   "filename": "danmonson.txt",
+   "title": "danmonson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e2ea5285bdb5b53a6b8efd6f057081f76f8069be",
+   "key": "suzannedealbooth",
+   "filename": "suzannedealbooth.txt",
+   "title": "suzannedealbooth",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5c07bd6689c1e103f59759aba0c3e5e4266f1f94",
+   "key": "lacdeserreponon",
+   "filename": "lacdeserreponon.txt",
+   "title": "lacdeserreponon",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4ab3db4f7c8713968cb5e2870f0024c3ccea3cd4",
+   "key": "sadioman",
+   "filename": "sadioman.txt",
+   "title": "sadioman",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "04be230d28c28ff0d0956bd06c9491ebfceca4eb",
+   "key": "dunipacefc",
+   "filename": "dunipacefc.txt",
+   "title": "dunipacefc",
+   "num_claims": 0
+  }
+ ]
+}

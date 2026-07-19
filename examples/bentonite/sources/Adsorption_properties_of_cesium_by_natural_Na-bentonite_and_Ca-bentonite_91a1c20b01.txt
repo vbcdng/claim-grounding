@@ -1,0 +1,147 @@
+Source URL: https://link.springer.com/article/10.1007/s10967-024-09627-y
+Downloaded: 2025-07-16 15:36:47
+
+---
+
+This study conducted several adsorption tests to cesium on natural Na-bentonite and Ca-bentonite. The results indicate that adsorption could be completed within 12 h, the optimal solid–liquid ratio was 20 g/L, a weakly alkaline environment was more suitable for adsorption, and the maximum adsorption capacity of Ca-bentonite measured at 114.5 mg/g, while Na-bentonite was 92.3 mg/g. The adsorption process was predominantly influenced by chemical factors and cesium underwent monolayer adsorption. Interlayer ion exchange and surface hydroxyl complexation were the primary mechanisms by which cesium was adsorbed onto bentonites.
+This is a preview of subscription content,
+log in via an institution
+to check access.
+Access this article
+Log in via an institution
+Subscribe and save
+Get 10 units per month
+Download Article/Chapter or eBook
+1 Unit = 1 Article or 1 Chapter
+Price includes VAT (Czech Republic)
+Instant access to the full article PDF.
+Similar content being viewed by others
+Study on adsorptive property of bentonite for cesium
+06 January 2016
+Characterization of Natural Clays from Italian Deposits with Focus on Elemental Composition and Exchange Estimated by EDX Analysis: Potential Pharmaceutical and Cosmetic Uses
+01 December 2016
+Sorption of Sr and Cs onto Czech natural bentonite: experiments and modelling
+05 October 2018
+Explore related subjects
+Discover the latest articles and news from researchers in related subjects, suggested using machine learning.
+Geotechnical Engineering and Applied Earth Sciences
+Li ZL, He YF, Sonne C, Lam SS, Kirkham MB, Bolan N, Rinklebe J, Chen XM, Peng WX (2023) A strategy for bioremediation of nuclear contaminants in the environment. Environ Pollut 319:120964.
+Telfeyan K, Reimus PW, Boukhalfa H, Ware SD (2020) Aging effects on cesium-137 (
+Cs) sorption and transport in association with clay colloids. J Colloid Interface Sci 566:316–326.
+Sekudewicz I, Gąsiorowski M (2022) Spatial and vertical distribution of
+Cs activity concentrations in lake sediments of Turawa Lake (Poland). Environ Sci Pollut Res 29:80882–80896.
+Ding DH, Zhang ZY, Lei ZF, Yang YN, Cai TM (2016) Remediation of radiocesium-contaminated liquid waste, soil, and ash: a mini review since the Fukushima Daiichi nuclear power plant accident. Environ Sci Pollut Res Int 23:2249–2263.
+Sakai M, Ishii Y, Tsuji H, Tanaka A, Jo J, Negishi JN, Hayashi S (2022) Contrasting seasonality of
+Cs concentrations in two stream animals that share a trophic niche. Environ Pollut 315:120474.
+Samaddar P, Sen K (2014) Cloud point extraction: a sustainable method of elemental preconcentration and speciation. J Ind Eng Chem 20:1209–1219.
+Dobre T, Zicman LR, Pârvulescu OC, Neacşu E, Ciobanu C, Drăgolici FN (2018) Species removal from aqueous radioactive waste by deep-bed filtration. Environ Pollut 241:303–310.
+Miura T, Takizawa N, Togashi K, Sasaki A, Endo M (2018) Adsorption/desorption characteristics of cesium ions on natural and synthetic minerals. J Ion Exch 29:9–15.
+Mekawy ZA, Shazly EAAE, Mahmoud MR (2022) Utilization of bentonite as a low-cost adsorbent for removal of
+Nb(V) radionuclides from aqueous solutions. J Radioanal Nucl Chem 331:3935–3948.
+Santoso SP, Kurniawan A, Angkawijaya AE, Shuwanto H, Warmadewanthi IDAA, Hsieh CW, Hsu HY, Soetaredjo FE, Ismadji S, Cheng KC (2023) Removal of heavy metals from water by macro-mesoporous calcium alginate-exfoliated clay composite sponges. Chem Eng J 452:139261.
+Frolova L, Blyuss B (2023) Investigation of Cr(III) adsorption in aqueous solution using bentonite. Appl Nanosci 13:5323–5333.
+Teğin İ, Batur MŞ, Yavuz Ö, Saka C (2023) Removal of Cu(II), Pb(II) and Cd(II) metal ions with modified clay composite: kinetics, isotherms and thermodynamics studies. Int J Environ Sci Technol 20:1341–1356.
+Christidis GE, Huff WD (2009) Geologic aspects and genesis of bentonites. Elements 5(2):93–98.
+Karakaya MÇ, Karakaya N, Bakır S (2011) Some properties and potential applications of the Na- and Ca-bentonites of ordu (N.E. Turkey). Appl Clay Sci 54:159–165.
+Goo JY, Kim BJ, Kwon JS, Jo HY (2023) Bentonite alteration and retention of cesium and iodide ions by Ca-bentonite in alkaline and saline solutions. Appl Clay Sci 245:107141.
+Yusof MYM, Idris MI, Mohamed F, Nor MM (2020) Adsorption of radioactive element by clay: a review. IOP Conf Ser: Mater Sci Eng 785:012020.
+Eisenhour DD, Brown RK (2009) Bentonite and its impact on modern life. Elements 5(2):83–88.
+Hurel C, Marmier N, Bourg ACM, Fromage F (2009) Sorption of Cs and Rb on purified and crude MX-80 bentonite in various electrolytes. J Radioanal Nucl Ch 279(1):113–119.
+Chen SQ, Hu JY, Han SJ, Guo YF, Belzile N, Deng TL (2020) A review on emerging composite materials for cesium adsorption and environmental remediation on the latest decade. Sep Purif Technol 251:117340.
+Liu HY, Tong LZ, Su MH, Chen DY, Song G, Zhou Y (2023) The latest research trends in the removal of cesium from radioactive wastewater: a review based on data-driven and visual analysis. Sci Total Environ 869:161664.
+Siroux B, Beaucaire C, Tabarant M, Benedetti MF, Reiller PE (2017) Adsorption of strontium and caesium onto an Na-MX80 bentonite: experiments and building of a coherent thermodynamic modelling. Appl Geochem 87:167–175.
+Brix K, Hein C, Haben A, Kautenburger R (2019) Adsorption of caesium on raw Ca-bentonite in high saline solutions: influence of concentration, mineral composition, other radionuclides and modelling. Appl Clay Sci 182:105275.
+Kwon S, Lim J, Seoung D, Cho Y, Park B (2023) Comparative study of the cesium adsorption behavior of montmorillonite and illite based on their mineralogical properties and interlayer cations. J Hazard Mater 10:100258.
+Long H, Wu PX, Zhu NW (2013) Evaluation of Cs
+removal from aqueous solution by adsorption on ethylamine-modified montmorillonite. Chem Eng J 225:237–244.
+Yang SB, Han C, Wang XK et al (2014) Characteristics of cesium ion sorption from aqueous solution on bentonite- and carbon nanotube-based composites. J Hazard Mater 274:46–52.
+Chen J, Chen YR, Zhou Y, Luo XY, Tang Q (2023) Insight into adsorption of cesium ion in aqueous solution based on inorganic modified bentonite. Pol J Environ Stud 32(2):1565–1580.
+ASTM D7503 (2018) Standard test method for measuring the exchange complex and cation exchange capacity of inorganic fine-grained soils. ASTM International, West Conshohocken, PA
+ASTM D2216 (2010) Standard test method for laboratory determination of water (moisture) content of soil and rock by mass. ASTM International, West Conshohocken, PA.
+MWR (Ministry of Water Resources the People’s Republic of China) (2019) Standard for geotechnical testing method. GB/T 50123-2019. Beijing, MWR
+Khandaker S, Toyohara Y, Kamida S, Kuba T (2018) Adsorptive removal of cesium from aqueous solution using oxidized bamboo charcoal. Water Resour Ind 19:35–46.
+Lee CP, Tsai SC, Wu MC, Tsai TL (2018) A study on removal of Cs and Sr from aqueous solution by bentonite-alginate microcapsules. J Radioanal Nucl Chem 318:2381–2387.
+Kogure T, Morimoto K, Tamura K, Sato H, Yamagishi A (2012) XRD and HRTEM evidence for fixation of cesium ions in vermiculite clay. Chem Lett 41:380–382.
+Boever WD, Diaz A, Derluyn H, Kock TD, Stappen JV, Dewanckele J, Bultreys T, Boone M, Schryver TD, Skjønsfjell ETB, Holler M, Breiby DW, Cnudde V (2015) Characterization of composition and structure of clay minerals in sandstone with ptychographic X-ray nanotomography. Appl Clay Sci 118:258–264.
+Ndzana GM, Li H, Wang JB, Zhang ZY (2018) Characteristics of clay minerals in soil particles from an argillic horizon of alfisol in central China. Appl Clay Sci 151:148–156.
+Morodome S, Kawamura K (2009) Swelling behavior of Na- and Ca-montmorillonite up to 150 °C by in situ X-Ray diffraction experiments. Clay Clay Miner 57(2):150–160.
+Segad M, Hanski S, Olsson U, Ruokolainen J, Åkesson T, Jönsson B (2012) Microstructural and swelling properties of Ca and Na montmorillonite: (in situ) observations with Cryo-TEM and SAXS. J Phys Chem C 116:7596–7601.
+Saiyouri N, Tessier D, Hicher PY (2004) Experimental study of swelling in unsaturated compacted clays. Clay Miner 39:469–479.
+Baborová L, Vopálka D, Červinka R (2018) Sorption of Sr and Cs onto Czech natural bentonite: experiments and modelling. J Radioanal Nucl Chem 318:2257–2262.
+Li G, Zhang JL, Liu J, Sun CW, Yan Z (2020) Adsorption characteristics of white pottery clay towards Pb(II), Cu(II), and Cd(II). Arab J Geosci 13:519.
+Fang XH, Fang F, Lu CH, Zheng L (2017) Removal of Cs
+, and Co
+ions from the mixture of organics and suspended solids aqueous solutions by zeolites. Nucl Eng Technol 49:556–561.
+Volkov AG, Paula S, Deamer DW (1997) Two mechanisms of permeation of small neutral molecules and hydrated ions across phospholipid bilayers. Bioelectrochem Bioenerg 42:153–160.
+Attar LA, Safia B, Ghani BA (2018) Uptake of
+Sr onto thermally treated forms of bentonite. J Environ Radioactiv 193:36–43.
+Kim Y, Kim YK, Kim JH, Yim MS, Harbottle D, Lee JW (2018) Synthesis of functionalized porous montmorillonite via solid-state NaOH treatment for efficient removal of cesium and strontium ions. Appl Surf Sci 450:404–412.
+Ma B, Oh S, Shin WS, Choi SJ (2011) Removal of Co
+from aqueous solution by phosphate-modified montmorillonite (PMM). Desalination 276:336–346.
+Zheng XM, Dou JF, Xia M, Ding AZ (2017) Ammonium-pillared montmorillonite-CoFe
+composite caged in calcium alginate beads for the removal of Cs
+from wastewater. Carbohydr Polymers 167:306–316.
+Lihareva N, Petrov O, Dimowa L, Tzvetanova Y, Piroeva I, Ublekov F, Nikolov A (2020) Ion exchange of Cs
+by natural clinoptilolite from bi-cationic solutions and XRD control of their structural positioning. J Radioanal Nucl Chem 323:1093–1102.
+Wang R, Ye JY, Wang JS, Peng XY (2023) Adsorption and diffusion mechanism of cesium and chloride ions in channel of geopolymer with different Si/Al ratios: molecular dynamics simulation. J Radioanal Nucl Chem 332:2905–2915.
+Mitchell JK, Soga K (2005) Fundamentals of soil behavior, 3rd edn. Wiley, New Jersey
+Kajjumba GW, Emik S, Öngen A, Özcan HK, Aydın S (2018) Modelling of adsorption kinetic processes-errors, theory and application. In: Edebali S (ed) Advanced sorption process applications. BoD-Books on Demand, Germany, pp 1–19.
+Ho YS, Mckay G (1998) Sorption of dye from aqueous solution by peat. Chem Eng J 70:115–124.
+Yan LG, Yang K, Shan RR, Yan T, Wei J, Yu SJ, Yu HQ, Du B (2015) Kinetic, isotherm and thermodynamic investigations of phosphate adsorption onto core-shell Fe
+@LDHs composites with easy magnetic separation assistance. J Colloid Interface Sci 448:508–516.
+Ahmed MJ, Islam MA, Asif M, Hameed BH (2017) Human hair-derived high surface area porous carbon material for the adsorption isotherm and kinetics of tetracycline antibiotics. Bioresour Technol 243:778–784.
+Al-Ghouti MA, Da’ana DA (2020) Guidelines for the use and interpretation of adsorption isotherm models: a review. J Hazard Mater 393:122383.
+Hatami H, Fotovat A, Halajnia A (2018) Comparison of adsorption and desorption of phosphate on synthesized Zn-Al LDH by two methods in a simulated soil solution. Appl Clay Sci 152:333–341.
+Tello CCOd, Santos DMMd, Teixeira TB (2020) Study of the sorption and modelling of cesium by a Brazilian bentonite using PHREEQC. MRS Adv 5:245–252.
+Swenson H, Stadie NP (2019) Langmuir’s theory of adsorption: a centennial review. Langmuir 35:5409–5426.
+Murali MS, Mathur JN (2002) Sorption characteristics of Am(III), Sr(II) and Cs(I) on bentonite and granite. J Radioanal Nucl Ch 254:129–136.
+Sterba JH, Sperrer H, Wallenko F, Welch JM (2018) Adsorption characteristics of a clinoptilolite-rich zeolite compound for Sr and Cs. J Radioanal Nucl Chem 318:267–270.
+Zhu LD, Zhu DQ, Sheng Y, Xu JJ, Harbottle D, Zhang HG (2022) Polydopamine-coated magnetic montmorillonite immobilized with potassium copper hexacyanoferrate for selective removal of Cs
+and its facile recovery. Appl Clay Sci 216:106367.
+Liu HJ, Fu TY, Sarwar MT et al (2023) Recent progress in radionuclides adsorption by bentonite-based materials as ideal adsorbents and buffer/backfill materials. Appl Clay Sci 232:106796.
+Attar LA, Safia B, Ghani BA (2021) Adsorption behaviour of
+Pb onto thermally treated forms of bentonite. J Radioanal Nucl Chem 327:1167–1178.
+Sugiura Y, Ishidera T, Tachi Y (2021) Surface complexation of Ca and competitive sorption of divalent cations on montmorillonite under alkaline conditions. Appl Clay Sci 200:105910.
+Zheng XM, Dou JF, Yuan J, Qin W, Hong XX, Ding AZ (2017) Removal of Cs
+from water and soil by ammonium-pillared montmorillonite/Fe
+composite. J Environ Sci 56:12–24.
+Wang KX, Ma H, Pu SY, Yan C, Wang MT, Yu J, Wang XK, Chu W, Zinchenko A (2019) Hybrid porous magnetic bentonite-chitosan beads for selective removal of radioactive cesium in water. J Hazard Mater 362:160–169.
+The authors would like to acknowledge the financial support provided by the Science and Technology Department of Guangxi (No. AD20325010), the National Natural Science Foundation of China (No. 42307239), the National Natural Science Foundation of Henan Province (No. 232300420445), the Guangxi Key Laboratory of Green Building Materials and Construction Industrialization (No. 22-J-21-31), and the Middle-aged and Young Teachers’ Basic Ability Promotion Project of Guangxi (No. 2022KY0248, 2022KY0797). Special thanks are extended to Associate Professor Xuechun Liu from Guilin University of Aerospace Technology for his invaluable advice and expertise in enhancing the content of this research.
+Authors and Affiliations
+Guangxi Key Laboratory of Geomechanics and Geotechnical Engineering, Guilin University of Technology, Guilin, 541004, China
+Qin Zhang, Yanping Zhao, Liuyang Qin, Weiyun Liang, Konglei Chen, Ke Li & Rongtao Yan
+Guilin University of Aerospace Technology, Guilin, 541004, China
+College of Architecture and Civil Engineering, Xinyang Normal University, Xinyang, 464000, Henan, China
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+Conflict of interest
+The authors declare no conflict of interest.
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Rights and permissions
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.
+Reprints and permissions
+About this article
+Cite this article
+Zhang, Q., Zhao, Y., Qin, L.
+Adsorption properties of cesium by natural Na-bentonite and Ca-bentonite.
+J Radioanal Nucl Chem
+, 5347–5361 (2024). https://doi.org/10.1007/s10967-024-09627-y
+11 December 2023
+17 June 2024
+11 July 2024
+Share this article
+Anyone you share the following link with will be able to read this content:
+Sorry, a shareable link is not currently available for this article.
+Provided by the Springer Nature SharedIt content-sharing initiative

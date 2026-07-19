@@ -1,0 +1,2723 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 11 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "His mother moved the family back to the United States, and in 1954 when Janklow was 15, they settled in her home town of Flandreau, South Dakota.",
+   "markers": [
+    "billjanklow"
+   ],
+   "paper_ids": [
+    "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9475,
+   "evidence": {
+    "paper_id": "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3",
+    "source_title": "billjanklow",
+    "supported": true,
+    "sentence": "Soon after, his mother moved the family to her hometown of Flandreau, South Dakota.",
+    "page": 1,
+    "snippet": "Soon after, his mother moved the family",
+    "cosine": 0.9475,
+    "reason": "The passage states that Janklow's mother moved the family to Flandreau, South Dakota, and that it was 1954 when Janklow was 15, which directly supports the claim.",
+    "window": "Janklow was 11 when his father died. Soon after, his mother moved the family to her hometown of Flandreau, South Dakota. It was 1954, and Janklow was 15."
+   },
+   "evidences": [
+    {
+     "paper_id": "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3",
+     "source_title": "billjanklow",
+     "supported": true,
+     "sentence": "Soon after, his mother moved the family to her hometown of Flandreau, South Dakota.",
+     "page": 1,
+     "snippet": "Soon after, his mother moved the family",
+     "cosine": 0.9475,
+     "reason": "The passage states that Janklow's mother moved the family to Flandreau, South Dakota, and that it was 1954 when Janklow was 15, which directly supports the claim.",
+     "window": "Janklow was 11 when his father died. Soon after, his mother moved the family to her hometown of Flandreau, South Dakota. It was 1954, and Janklow was 15."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Janklow's mother moved the family to Flandreau, South Dakota, and that it was 1954 when Janklow was 15, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Janklow was 15 in 1954",
+      "paper_id": "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3",
+      "source_title": "billjanklow",
+      "sentence": "It was 1954, and Janklow was 15.",
+      "page": 1,
+      "snippet": "It was 1954, and Janklow was 15."
+     },
+     {
+      "component": "settled in Flandreau, South Dakota",
+      "paper_id": "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3",
+      "source_title": "billjanklow",
+      "sentence": "Soon after, his mother moved the family to her hometown of Flandreau, South Dakota.",
+      "page": 1,
+      "snippet": "Soon after, his mother moved the family"
+     }
+    ],
+    "uncovered": [
+     "mother moved family back to US",
+     "United States"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3",
+      "source_title": "billjanklow",
+      "text": "Soon after, his mother moved the family to her hometown of Flandreau, South Dakota. It was 1954, and Janklow was 15.",
+      "n_used": 2
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "The family spent time in Germany, where his father prosecuted Nazi war criminals at the Nuremberg trials.",
+      "Soon after, his mother moved the family to her hometown of Flandreau, South Dakota.",
+      "It was 1954, and Janklow was 15."
+     ],
+     "why": "The claim includes that the family moved 'back to the United States,' implying a prior residence abroad. The shown sentences do not mention Germany or any foreign location, so they fail to prove that component. However, the source text contains the necessary proof ('The family spent time in Germany...'), which the tool did not display. Therefore the evidence shown is insufficient, and the tool should include the missing sentence to fully support the claim."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The family spent time in Germany, where his father prosecuted Nazi war criminals at the Nuremberg trials.",
+     "Soon after, his mother moved the family to her hometown of Flandreau, South Dakota.",
+     "It was 1954, and Janklow was 15."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes that the family moved 'back to the United States,' implying a prior residence abroad. The shown sentences do not mention Germany or any foreign location, so they fail to prove that component. However, the source text contains the necessary proof ('The family spent time in Germany...'), which the tool did not display. Therefore the evidence shown is insufficient, and the tool should include the missing sentence to fully support the claim."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "St. Mary\u2019s University is accredited to offer a Bachelor of Science degree, a Bachelor of Education after degree, eight Bachelor of Arts degrees including: 3 Year General Studies Degree, 4 Year Liberal Studies Degree, 3 and 4 Year English Degrees, 3 and 4 year History Degrees, 3 and 4 year Psychology Degrees as well as transferable university courses in 35 academic disciplines.",
+   "markers": [
+    "stmarysuniversitycalgary"
+   ],
+   "paper_ids": [
+    "d0202995a381753e2628b1d31361d521bd960f20"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+    "source_title": "stmarysuniversitycalgary",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+    "page": 1,
+    "snippet": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines."
+   },
+   "evidences": [
+    {
+     "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+     "source_title": "stmarysuniversitycalgary",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+     "page": 1,
+     "snippet": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "St. Mary\u2019s University is accredited to offer a Bachelor of Science degree",
+      "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+      "source_title": "stmarysuniversitycalgary",
+      "sentence": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+      "page": 1,
+      "snippet": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and"
+     },
+     {
+      "component": "a Bachelor of Education after degree",
+      "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+      "source_title": "stmarysuniversitycalgary",
+      "sentence": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+      "page": 1,
+      "snippet": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and"
+     },
+     {
+      "component": "eight Bachelor of Arts degrees",
+      "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+      "source_title": "stmarysuniversitycalgary",
+      "sentence": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+      "page": 1,
+      "snippet": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and"
+     },
+     {
+      "component": "transferable university courses in 35 academic disciplines",
+      "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+      "source_title": "stmarysuniversitycalgary",
+      "sentence": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+      "page": 1,
+      "snippet": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and"
+     }
+    ],
+    "uncovered": [
+     "3 Year General Studies Degree",
+     "4 Year Liberal Studies Degree",
+     "3 and 4 Year English Degrees",
+     "3 and 4 year History Degrees",
+     "3 and 4 year Psychology Degrees"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+      "source_title": "stmarysuniversitycalgary",
+      "text": "Academicsstmarysadmin2019-03-20T11:37:35-06:00 ## St. Mary's University Programs and Courses St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not specify the exact breakdown of the eight Bachelor of Arts degrees, including the 3 Year General Studies Degree, 4 Year Liberal Studies Degree, 3 and 4 Year English Degrees, 3 and 4 year History Degrees, and 3 and 4 year Psychology Degrees.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the exact breakdown of the eight Bachelor of Arts degrees, including the 3 Year General Studies Degree, 4 Year Liberal Studies Degree, 3 and 4 Year English Degrees, 3 and 4 year History Degrees, and 3 and 4 year Psychology Degrees",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific enumeration of Bachelor of Arts degrees including 3 Year General Studies Degree, 4 Year Liberal Studies Degree, 3 and 4 Year English Degrees, 3 and 4 year History Degrees, 3 and 4 year Psychology Degrees",
+    "rewrite_suggestion": "St. Mary\u2019s University is accredited to offer a Bachelor of Science degree, a Bachelor of Education after degree, eight Bachelor of Arts degrees, as well as transferable university courses in 35 academic disciplines.",
+    "proofs": [
+     "St. Mary's University is accredited to offer eight Bachelor of Arts degrees, a Bachelor of Science and a Bachelor of Education after degree as well as transferrable university courses in 35 academic disciplines."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the general claims about BSc, BEd, eight BA degrees, and transferable courses, but does not include the specific list of BA degree names with year durations (e.g., '3 Year General Studies Degree'). The source text also does not contain those exact degree titles or the 3/4-year distinctions. Therefore, the author must either add a citation for that list or rewrite the claim to remove the unsourced details."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "He was also concerned in the event of their deaths on the Moon, he would be forced to return to Earth alone and, as the mission's sole survivor, be regarded as \"a marked man for life\".",
+   "markers": [
+    "michaelcollinsastronaut"
+   ],
+   "paper_ids": [
+    "ec4277a456742c9cf03bcf453910d82419cd1b7d"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.84,
+   "evidence": {
+    "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+    "source_title": "michaelcollinsastronaut",
+    "supported": true,
+    "sentence": "\"If they fail to rise from the surface, or crash back into it, I am not going to commit suicide; I am coming home, forthwith, but I will be a marked man for life and I know it.\"",
+    "page": 1,
+    "snippet": "\"If they fail to rise from the",
+    "cosine": 0.84,
+    "reason": "The passage directly states the author's concern about returning to Earth alone and being regarded as 'a marked man for life'.",
+    "window": "\"My secret terror for the last six months has been leaving them on the Moon and returning to Earth alone; now I am within minutes of finding out the truth of the matter,\" he wrote. \"If they fail to rise from the surface, or crash back into it, I am not going to commit suicide; I am coming home, forthwith, but I will be a marked man for life and I know it.\" Then Armstrong and Aldrin prepared their lander for its launch."
+   },
+   "evidences": [
+    {
+     "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+     "source_title": "michaelcollinsastronaut",
+     "supported": true,
+     "sentence": "\"If they fail to rise from the surface, or crash back into it, I am not going to commit suicide; I am coming home, forthwith, but I will be a marked man for life and I know it.\"",
+     "page": 1,
+     "snippet": "\"If they fail to rise from the",
+     "cosine": 0.84,
+     "reason": "The passage directly states the author's concern about returning to Earth alone and being regarded as 'a marked man for life'.",
+     "window": "\"My secret terror for the last six months has been leaving them on the Moon and returning to Earth alone; now I am within minutes of finding out the truth of the matter,\" he wrote. \"If they fail to rise from the surface, or crash back into it, I am not going to commit suicide; I am coming home, forthwith, but I will be a marked man for life and I know it.\" Then Armstrong and Aldrin prepared their lander for its launch."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states the author's concern about returning to Earth alone and being regarded as 'a marked man for life'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "concern about deaths on the Moon",
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "sentence": "\"My secret terror for the last six months has been leaving them on the Moon and returning to Earth alone; now I am within minutes of finding out the truth of the matter,\" he wrote.",
+      "page": 1,
+      "snippet": "\"My secret terror for the last six"
+     },
+     {
+      "component": "concern about returning to Earth alone",
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "sentence": "\"My secret terror for the last six months has been leaving them on the Moon and returning to Earth alone; now I am within minutes of finding out the truth of the matter,\" he wrote.",
+      "page": 1,
+      "snippet": "\"My secret terror for the last six"
+     },
+     {
+      "component": "concern about returning to Earth alone",
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "sentence": "As Armstrong and Aldrin took their famous walk on the moon, a third member of the team sat alone in the mothership plagued by terrors of returning to Earth alone.",
+      "page": 1,
+      "snippet": "As Armstrong and Aldrin took their famous"
+     },
+     {
+      "component": "concern about being regarded as 'a marked man for life'",
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "sentence": "\"If they fail to rise from the surface, or crash back into it, I am not going to commit suicide; I am coming home, forthwith, but I will be a marked man for life and I know it.\"",
+      "page": 1,
+      "snippet": "\"If they fail to rise from the"
+     },
+     {
+      "component": "concern about being regarded as 'a marked man for life'",
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "sentence": "The message would banish Collins's deepest fear: that he would be the only survivor of an Apollo 11 disaster and that he was destined to return on his own to the United States as \"a marked man\".",
+      "page": 1,
+      "snippet": "The message would banish Collins's deepest fear:"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "text": "As Armstrong and Aldrin took their famous walk on the moon, a third member of the team sat alone in the mothership plagued by terrors of returning to Earth alone. Robin McKie reports Robin McKie The Observer, Saturday 18 July 2009 Michael Collins, command module pilot of the Apollo 11 lunar landing mission. Photograph: Corbis It was the secret terror that gripped astronaut Michael Collins throughout the Apollo 11 project 40 years ago. As his spacecraft, Columbia, swept over the lunar surface, Collins - the mission's third and largely forgotten crewman - waited for a call from fellow astronauts Neil Armstrong and Buzz Aldrin to say their lander craft had successfully blasted off from the Moon. The message would banish Collins's deepest fear: that he would be the only survivor of an Apollo 11 disaster and that he was destined to return on his own to the United States as \"a marked man\". [\u2026] \"My secret terror for the last six months has been leaving them on the Moon and returning to Earth alone; now I am within minutes of finding out the truth of the matter,\" he wrote. \"If they fail to rise from the surface, or crash back into it, I am not going to commit suicide; I am coming home, forthwith, but I will be a marked man for life and I know it.\"",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "Her parents were Russian Jewish immigrants and founded the \"New York Daily Call\", a Socialist newspaper",
+   "markers": [
+    "henriettapoynter"
+   ],
+   "paper_ids": [
+    "4a052e346dd0034c3c8975f436828cbda3393419"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8501,
+   "evidence": {
+    "paper_id": "4a052e346dd0034c3c8975f436828cbda3393419",
+    "source_title": "henriettapoynter",
+    "supported": false,
+    "sentence": "Women and American Socialism: 1870\u20131920 (1983); Malkiel, Theresa Serber.",
+    "page": 1,
+    "snippet": "Women and American Socialism: 1870\u20131920 (1983); Malkiel,",
+    "cosine": 0.8501,
+    "reason": "The passage does not mention the nationality or religion of the parents, nor does it state that they founded the \"New York Daily Call\".",
+    "window": "AJHQ 68:189\u2013205; Buhle, Mari Jo. Women and American Socialism: 1870\u20131920 (1983); Malkiel, Theresa Serber. Diary of a Shirtwaist Maker (1910); Miller, Sally M. \"From Sweatshop Worker to Labor Leader: Theresa Malkiel, a Case Study.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "4a052e346dd0034c3c8975f436828cbda3393419",
+     "source_title": "henriettapoynter",
+     "supported": false,
+     "sentence": "Women and American Socialism: 1870\u20131920 (1983); Malkiel, Theresa Serber.",
+     "page": 1,
+     "snippet": "Women and American Socialism: 1870\u20131920 (1983); Malkiel,",
+     "cosine": 0.8501,
+     "reason": "The passage does not mention the nationality or religion of the parents, nor does it state that they founded the \"New York Daily Call\".",
+     "window": "AJHQ 68:189\u2013205; Buhle, Mari Jo. Women and American Socialism: 1870\u20131920 (1983); Malkiel, Theresa Serber. Diary of a Shirtwaist Maker (1910); Miller, Sally M. \"From Sweatshop Worker to Labor Leader: Theresa Malkiel, a Case Study.\""
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Her parents founded the \"New York Daily Call\", a Socialist newspaper.",
+    "reason": "The passage directly states a fact about the parents of the subject, which is expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that her parents were Russian Jewish immigrants and founded the 'New York Daily Call' is entirely absent from the provided source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text provided is metadata and bibliographic references for Theresa Serber Malkiel; it contains no information about her parents or any newspaper called 'New York Daily Call'. The shown sentence is a reference list entry and does not support any component of the claim. Therefore, the author has attributed claims to a source that does not contain them, requiring either a new citation or a rewrite to remove the unsupported parts."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "It was established in 1238, dissolved in 1538 and re-established in 1938.",
+   "markers": [
+    "cambridgeblackfriars"
+   ],
+   "paper_ids": [
+    "10fc94aabf431235b9b2887fc738263121d80fed"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "10fc94aabf431235b9b2887fc738263121d80fed",
+    "source_title": "cambridgeblackfriars",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "It long continued in this role until the house was dissolved by King Henry VIII in 1538.",
+    "page": 1,
+    "snippet": "It long continued in this role until",
+    "reason": "the passage does not state when the priory was re-established",
+    "votes": "2-0",
+    "window": "It long continued in this role until the house was dissolved by King Henry VIII in 1538. The priory in Cambridge, dedicated to the Holy Trinity, was founded either in or shortly before 1238."
+   },
+   "evidences": [
+    {
+     "paper_id": "10fc94aabf431235b9b2887fc738263121d80fed",
+     "source_title": "cambridgeblackfriars",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "It long continued in this role until the house was dissolved by King Henry VIII in 1538.",
+     "page": 1,
+     "snippet": "It long continued in this role until",
+     "reason": "the passage does not state when the priory was re-established",
+     "votes": "2-0",
+     "window": "It long continued in this role until the house was dissolved by King Henry VIII in 1538. The priory in Cambridge, dedicated to the Holy Trinity, was founded either in or shortly before 1238."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state when the priory was re-established",
+   "component_check": {
+    "found": [
+     "It was established in 1238.",
+     "It was dissolved in 1538."
+    ],
+    "missing": [
+     "It was re-established in 1938."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "It was established in 1238.",
+      "paper_id": "10fc94aabf431235b9b2887fc738263121d80fed",
+      "source_title": "cambridgeblackfriars",
+      "sentence": "The priory in Cambridge, dedicated to the Holy Trinity, was founded either in or shortly before 1238.",
+      "page": 1
+     },
+     {
+      "component": "It was dissolved in 1538.",
+      "paper_id": "10fc94aabf431235b9b2887fc738263121d80fed",
+      "source_title": "cambridgeblackfriars",
+      "sentence": "It long continued in this role until the house was dissolved by King Henry VIII in 1538.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific historical facts (establishment, dissolution, and re-establishment dates) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "re-established in 1938",
+    "rewrite_suggestion": "It was established in 1238 and dissolved in 1538.",
+    "proofs": [
+     "The priory in Cambridge, dedicated to the Holy Trinity, was founded either in or shortly before 1238.",
+     "It long continued in this role until the house was dissolved by King Henry VIII in 1538."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the dissolution in 1538. The source does contain evidence for the establishment in 1238 ('founded either in or shortly before 1238'), but it was not included in the shown sentences. Additionally, the claim of re-establishment in 1938 is entirely absent from the source text, so the author must either add a citation for that claim or remove it. Hence the overall action is 'add_citation_or_rewrite'."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "The album's first promotional single \"Common\" features Brandi Carlile and was released on February 8.",
+   "markers": [
+    "girlmarenmorrisalbum"
+   ],
+   "paper_ids": [
+    "04622b089f41f16ce7d16a859a726560cbb36094"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.875,
+   "evidence": {
+    "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+    "source_title": "girlmarenmorrisalbum",
+    "supported": true,
+    "sentence": "# Hear Maren Morris, Brandi Carlile's New Duet 'Common'",
+    "page": 1,
+    "snippet": "# Hear Maren Morris, Brandi Carlile's New",
+    "cosine": 0.875,
+    "reason": "The passage explicitly states that Maren Morris and Brandi Carlile's duet 'Common' was released on February 8, 2019.",
+    "window": "February 8, 2019 10:27AM ET # Hear Maren Morris, Brandi Carlile's New Duet 'Common' ## Grammy-nominated performers look for understanding in latest from Morris' upcoming album 'Girl'"
+   },
+   "evidences": [
+    {
+     "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+     "source_title": "girlmarenmorrisalbum",
+     "supported": true,
+     "sentence": "# Hear Maren Morris, Brandi Carlile's New Duet 'Common'",
+     "page": 1,
+     "snippet": "# Hear Maren Morris, Brandi Carlile's New",
+     "cosine": 0.875,
+     "reason": "The passage explicitly states that Maren Morris and Brandi Carlile's duet 'Common' was released on February 8, 2019.",
+     "window": "February 8, 2019 10:27AM ET # Hear Maren Morris, Brandi Carlile's New Duet 'Common' ## Grammy-nominated performers look for understanding in latest from Morris' upcoming album 'Girl'"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Maren Morris and Brandi Carlile's duet 'Common' was released on February 8, 2019.",
+   "covering": {
+    "covered": [
+     {
+      "component": "album's first promotional single \"Common\"",
+      "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+      "source_title": "girlmarenmorrisalbum",
+      "sentence": "# Hear Maren Morris, Brandi Carlile's New Duet 'Common'",
+      "page": 1,
+      "snippet": "# Hear Maren Morris, Brandi Carlile's New"
+     },
+     {
+      "component": "album's first promotional single \"Common\"",
+      "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+      "source_title": "girlmarenmorrisalbum",
+      "sentence": "Maren Morris and Brandi Carlile offer a powerful meditation on the struggle for understanding in their new duet \"Common.\"",
+      "page": 1,
+      "snippet": "Maren Morris and Brandi Carlile offer a"
+     },
+     {
+      "component": "features Brandi Carlile",
+      "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+      "source_title": "girlmarenmorrisalbum",
+      "sentence": "# Hear Maren Morris, Brandi Carlile's New Duet 'Common'",
+      "page": 1,
+      "snippet": "# Hear Maren Morris, Brandi Carlile's New"
+     },
+     {
+      "component": "features Brandi Carlile",
+      "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+      "source_title": "girlmarenmorrisalbum",
+      "sentence": "Maren Morris and Brandi Carlile offer a powerful meditation on the struggle for understanding in their new duet \"Common.\"",
+      "page": 1,
+      "snippet": "Maren Morris and Brandi Carlile offer a"
+     },
+     {
+      "component": "released on February 8",
+      "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+      "source_title": "girlmarenmorrisalbum",
+      "sentence": "(meta data) TITLE: Hear Maren Morris, Brandi Carlile's New Duet 'Common' \u2013 Rolling Stone (meta data) AUTHOR: Jon Freeman (meta data) PUBLISHED DATETIME: 2019-02-08T15:27:34+00:00 Rolling Stone Send Us a Tip Read Next Trump Ranks With Mother Teresa on Women's Issues, Surrogate Claims Send Us a Tip Get The Magazine Subscribe to the all-new Rolling Stone!",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Hear Maren Morris, Brandi"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+      "source_title": "girlmarenmorrisalbum",
+      "text": "(meta data) TITLE: Hear Maren Morris, Brandi Carlile's New Duet 'Common' \u2013 Rolling Stone (meta data) AUTHOR: Jon Freeman (meta data) PUBLISHED DATETIME: 2019-02-08T15:27:34+00:00 Rolling Stone Send Us a Tip Read Next Trump Ranks With Mother Teresa on Women's Issues, Surrogate Claims Send Us a Tip Get The Magazine Subscribe to the all-new Rolling Stone! Everything you need to know from the authority on music, entertainment, politics and pop culture. Order today and save over 66%! Subscribe Now Newsletter Signup Sign up for our newsletter and go inside the world of music, culture and entertainment. February 8, 2019 10:27AM ET # Hear Maren Morris, Brandi Carlile's New Duet 'Common' ## Grammy-nominated performers look for understanding in latest from Morris' upcoming album 'Girl' Jon Freeman #### Jon Freeman Editor, Rolling Stone Country #### Jon Freeman's Most Recent Stories Midland's 'Let it Roll' is an Immaculately Disheveled Success Hear the Cadillac Three's Celebratory New Song 'All the Makin's of a Saturday Night' Dwight Yoakam Lines Up Bakersfield-Themed Residency at Wynn Las Vegas View All Maren Morris and Brandi Carlile offer a powerful meditation on the struggle for understanding in their new duet \"Common.\"",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "In 2017, Popular Mechanics said that \"Starship Mine\" was one of the top ten most fun episodes of \"Star Trek: The Next Generation,\" noting that Captain Picard must save his ship as races against the clock.",
+   "markers": [
+    "starshipmine"
+   ],
+   "paper_ids": [
+    "75a1c7e496e6e4a330202a848b0f74a79ed9b473"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "75a1c7e496e6e4a330202a848b0f74a79ed9b473",
+    "source_title": "starshipmine",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"Starship Mine\" Season 6, Episode 8 What's true about the Trek movies is true about the show itself.",
+    "page": 1,
+    "snippet": "\"Starship Mine\" Season 6, Episode 8 What's",
+    "reason": "The passage does not mention Popular Mechanics or a ranking of top ten episodes.",
+    "votes": "2-0",
+    "window": "\"Starship Mine\" Season 6, Episode 8 What's true about the Trek movies is true about the show itself. In \"Starship Mine,\" Jean-Luc acts out a kind of Air Force One in space, the lone commander crawling around his ship to save it from bad guys. Picard, galactic diplomat and intellectual heavyweight, put down the tea and throw a few punches."
+   },
+   "evidences": [
+    {
+     "paper_id": "75a1c7e496e6e4a330202a848b0f74a79ed9b473",
+     "source_title": "starshipmine",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"Starship Mine\" Season 6, Episode 8 What's true about the Trek movies is true about the show itself.",
+     "page": 1,
+     "snippet": "\"Starship Mine\" Season 6, Episode 8 What's",
+     "reason": "The passage does not mention Popular Mechanics or a ranking of top ten episodes.",
+     "votes": "2-0",
+     "window": "\"Starship Mine\" Season 6, Episode 8 What's true about the Trek movies is true about the show itself. In \"Starship Mine,\" Jean-Luc acts out a kind of Air Force One in space, the lone commander crawling around his ship to save it from bad guys. Picard, galactic diplomat and intellectual heavyweight, put down the tea and throw a few punches."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Popular Mechanics or a ranking of top ten episodes.",
+   "component_check": {
+    "found": [
+     "Popular Mechanics noted that races against the clock"
+    ],
+    "missing": [
+     "In 2017, Popular Mechanics said that \"Starship Mine\" was one of the top ten most fun episodes of \"Star Trek: The Next Generation\"",
+     "Popular Mechanics noted that Captain Picard must save his ship"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Popular Mechanics noted that races against the clock",
+      "paper_id": "75a1c7e496e6e4a330202a848b0f74a79ed9b473",
+      "source_title": "starshipmine",
+      "sentence": "It's a race against intergalactic terrorists and against the clock.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2017, Popular Mechanics said that \"Starship Mine\" was one of the top ten most fun episodes of \"Star Trek: The Next Generation,\" noting that Captain Picard must save his ship as races against the clock.",
+    "reason": "The passage directly attributes a statement and a description of the episode's plot to Popular Mechanics. This falls under the 'full' scope as the citation is expected to prove the stated facts and findings.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The 10 Most Fun 'Star Trek: The Next Generation' Episodes",
+     "Andrew Moseman and John Wenz Sep 8, 2017",
+     "In \"Starship Mine,\" Jean-Luc acts out a kind of Air Force One in space, the lone commander crawling around his ship to save it from bad guys.",
+     "It's a race against intergalactic terrorists and against the clock."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim is fully supported by the source text: the article is from Popular Mechanics in 2017, lists 'Starship Mine' among the 10 most fun episodes, and describes Picard racing against the clock to save his ship. However, the only shown sentence (''Starship Mine' Season 6, Episode 8 What's true about the Trek movies is true about the show itself.') does not prove any of these components. The proof exists in the source but was not shown, so the tool must fix by displaying the correct sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t8",
+   "text": "He was also a former spokesman and one of the founding general secretaries of Praja Rajyam Party.",
+   "markers": [
+    "parakalaprabhakar"
+   ],
+   "paper_ids": [
+    "47c8c64739a8b57cfc9e66f064656e8ef5fdf5cc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "47c8c64739a8b57cfc9e66f064656e8ef5fdf5cc",
+    "source_title": "parakalaprabhakar",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Parakala Prabhakar used to be the spokesperson of the former Praja Rajyam Party, which was started by actor-politician Chiranjeevi, before it merged with the Congress.",
+    "page": 1,
+    "snippet": "Parakala Prabhakar used to be the spokesperson",
+    "reason": "The passage does not mention that he was one of the founding general secretaries of Praja Rajyam Party.",
+    "votes": "2-0",
+    "window": "Parakala Prabhakar used to be the spokesperson of the former Praja Rajyam Party, which was started by actor-politician Chiranjeevi, before it merged with the Congress."
+   },
+   "evidences": [
+    {
+     "paper_id": "47c8c64739a8b57cfc9e66f064656e8ef5fdf5cc",
+     "source_title": "parakalaprabhakar",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Parakala Prabhakar used to be the spokesperson of the former Praja Rajyam Party, which was started by actor-politician Chiranjeevi, before it merged with the Congress.",
+     "page": 1,
+     "snippet": "Parakala Prabhakar used to be the spokesperson",
+     "reason": "The passage does not mention that he was one of the founding general secretaries of Praja Rajyam Party.",
+     "votes": "2-0",
+     "window": "Parakala Prabhakar used to be the spokesperson of the former Praja Rajyam Party, which was started by actor-politician Chiranjeevi, before it merged with the Congress."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention that he was one of the founding general secretaries of Praja Rajyam Party.",
+   "component_check": {
+    "found": [
+     "He was a former spokesman of Praja Rajyam Party"
+    ],
+    "missing": [
+     "He was one of the founding general secretaries of Praja Rajyam Party"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He was a former spokesman of Praja Rajyam Party",
+      "paper_id": "47c8c64739a8b57cfc9e66f064656e8ef5fdf5cc",
+      "source_title": "parakalaprabhakar",
+      "sentence": "Parakala Prabhakar used to be the spokesperson of the former Praja Rajyam Party, which was started by actor-politician Chiranjeevi, before it merged with the Congress.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the individual's political affiliations, which are directly attributable to the cited source and would need to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "one of the founding general secretaries of Praja Rajyam Party",
+    "rewrite_suggestion": "He was a former spokesman of the Praja Rajyam Party.",
+    "proofs": [
+     "Parakala Prabhakar used to be the spokesperson of the former Praja Rajyam Party, which was started by actor-politician Chiranjeevi, before it merged with the Congress."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that Parakala Prabhakar was a former spokesperson of the Praja Rajyam Party, but the claim also states he was 'one of the founding general secretaries' of that party. The provided source text contains no mention of him being a founding general secretary, so that component is unsupported and cannot be verified from this source. The author must either add a citation for that subclaim or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "Blake Morrison published a volume of poetry, \"A Discoverie of Witches\".",
+   "markers": [
+    "pendlewitches"
+   ],
+   "paper_ids": [
+    "1b282db29fbd1cd21b24fd64f817fe4449e99884"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9346,
+   "evidence": {
+    "paper_id": "1b282db29fbd1cd21b24fd64f817fe4449e99884",
+    "source_title": "pendlewitches",
+    "supported": false,
+    "sentence": "William Harrison Ainsworth's novel The Lancashire Witches was a huge success in its day (1848) and prompted comparisons with Dickens and Walter Scott.",
+    "page": 1,
+    "snippet": "William Harrison Ainsworth's novel The Lancashire Witches",
+    "cosine": 0.9346,
+    "reason": "The passage discusses various literary works related to witches but does not mention Blake Morrison or the volume of poetry \"A Discoverie of Witches.\"",
+    "window": "The Late Lancashire Witches, by Thomas Heywood and Richard Brome, was performed in 1634 (at the time of the second Pendle witch-craze), and later adapted by Thomas Shadwell. William Harrison Ainsworth's novel The Lancashire Witches was a huge success in its day (1848) and prompted comparisons with Dickens and Walter Scott. Robert Neill's Mist Over Pendle (1951) is the best known of the author's many historical novels."
+   },
+   "evidences": [
+    {
+     "paper_id": "1b282db29fbd1cd21b24fd64f817fe4449e99884",
+     "source_title": "pendlewitches",
+     "supported": false,
+     "sentence": "William Harrison Ainsworth's novel The Lancashire Witches was a huge success in its day (1848) and prompted comparisons with Dickens and Walter Scott.",
+     "page": 1,
+     "snippet": "William Harrison Ainsworth's novel The Lancashire Witches",
+     "cosine": 0.9346,
+     "reason": "The passage discusses various literary works related to witches but does not mention Blake Morrison or the volume of poetry \"A Discoverie of Witches.\"",
+     "window": "The Late Lancashire Witches, by Thomas Heywood and Richard Brome, was performed in 1634 (at the time of the second Pendle witch-craze), and later adapted by Thomas Shadwell. William Harrison Ainsworth's novel The Lancashire Witches was a huge success in its day (1848) and prompted comparisons with Dickens and Walter Scott. Robert Neill's Mist Over Pendle (1951) is the best known of the author's many historical novels."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Blake Morrison published a volume of poetry, \"A Discoverie of Witches\".",
+    "reason": "The passage directly states a fact about a publication by Blake Morrison, and the citation is expected to support this factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Blake Morrison published a volume of poetry titled 'A Discoverie of Witches'",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source, a Guardian article by Blake Morrison, does not contain any mention of a poetry volume by Morrison titled 'A Discoverie of Witches'. The only use of 'Discoverie' in the text refers to Thomas Potts's historical account 'The Wonderfull Discoverie of Witches'. Since the entire claim is absent from the source, the author must either supply a citation for that specific publication or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In June 2018, RetailMeNot sued competitor Honey Science Corporation over patent infringement in computer-related technologies.",
+   "markers": [
+    "retailmenot"
+   ],
+   "paper_ids": [
+    "33df14a0ed329be9eb5af7381bf76ef66aec671d"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8734,
+   "evidence": {
+    "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+    "source_title": "retailmenot",
+    "supported": true,
+    "sentence": "\"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news.",
+    "page": 1,
+    "snippet": "\"These valuable patents protect RetailMeNot's pioneering developments",
+    "cosine": 0.8734,
+    "reason": "The passage states that RetailMeNot sued Honey Science Corporation over patent infringement related to computer-related technologies, and the lawsuit was filed around June 2018, as indicated by the article's publication date and the context of the lawsuit's timing.",
+    "window": "Patents 9,626,688; 9,639,853; 9,953,335; and 9,965,769, which detail technologies related to things like facilitating access to promotional offers, merchant offers and coupon codes. \"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news. The suit comes at a time when Honey is growing in popularity among online shoppers, while RetailMeNot is getting a bit long in the tooth."
+   },
+   "evidences": [
+    {
+     "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+     "source_title": "retailmenot",
+     "supported": true,
+     "sentence": "\"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news.",
+     "page": 1,
+     "snippet": "\"These valuable patents protect RetailMeNot's pioneering developments",
+     "cosine": 0.8734,
+     "reason": "The passage states that RetailMeNot sued Honey Science Corporation over patent infringement related to computer-related technologies, and the lawsuit was filed around June 2018, as indicated by the article's publication date and the context of the lawsuit's timing.",
+     "window": "Patents 9,626,688; 9,639,853; 9,953,335; and 9,965,769, which detail technologies related to things like facilitating access to promotional offers, merchant offers and coupon codes. \"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news. The suit comes at a time when Honey is growing in popularity among online shoppers, while RetailMeNot is getting a bit long in the tooth."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that RetailMeNot sued Honey Science Corporation over patent infringement related to computer-related technologies, and the lawsuit was filed around June 2018, as indicated by the article's publication date and the context of the lawsuit's timing.",
+   "covering": {
+    "covered": [
+     {
+      "component": "RetailMeNot sued competitor Honey Science Corporation",
+      "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+      "source_title": "retailmenot",
+      "sentence": "(meta data) TITLE: RetailMeNot sues rival Honey over patent infringement \u2013 TechCrunch (meta data) AUTHOR: Sarah Perez (meta data) PUBLISHER: https://www.facebook.com/techcrunch # RetailMeNot sues rival Honey over patent infringement Sarah Perez 1 year RetailMeNot is suing rival Honey over patent infringement, the company announced this week.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: RetailMeNot sues rival Honey"
+     },
+     {
+      "component": "over patent infringement",
+      "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+      "source_title": "retailmenot",
+      "sentence": "(meta data) TITLE: RetailMeNot sues rival Honey over patent infringement \u2013 TechCrunch (meta data) AUTHOR: Sarah Perez (meta data) PUBLISHER: https://www.facebook.com/techcrunch # RetailMeNot sues rival Honey over patent infringement Sarah Perez 1 year RetailMeNot is suing rival Honey over patent infringement, the company announced this week.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: RetailMeNot sues rival Honey"
+     },
+     {
+      "component": "in computer-related technologies",
+      "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+      "source_title": "retailmenot",
+      "sentence": "\"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news.",
+      "page": 1,
+      "snippet": "\"These valuable patents protect RetailMeNot's pioneering developments"
+     }
+    ],
+    "uncovered": [
+     "in June 2018"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+      "source_title": "retailmenot",
+      "text": "(meta data) TITLE: RetailMeNot sues rival Honey over patent infringement \u2013 TechCrunch (meta data) AUTHOR: Sarah Perez (meta data) PUBLISHER: https://www.facebook.com/techcrunch # RetailMeNot sues rival Honey over patent infringement Sarah Perez 1 year RetailMeNot is suing rival Honey over patent infringement, the company announced this week. Honey is the maker of a deal-finding browser extension that helps consumers shopping online get the best price by automatically applying coupon codes at checkout. It also helps with finding the best price on Amazon purchases, doles out digital coupons, offers cash back, helps you track price drops and more. According to RetailMeNot's suit, Honey infringes on U.S. Patents 9,626,688; 9,639,853; 9,953,335; and 9,965,769, which detail technologies related to things like facilitating access to promotional offers, merchant offers and coupon codes. \"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not specify the month the lawsuit was filed, only that it was announced 'this week' and the article was published '1 year' prior to the meta data date.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the month the lawsuit was filed, only that it was announced 'this week' and the article was published '1 year' prior to the meta data date",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The date 'June 2018' is absent from the source; the source identifies the defendant only as 'Honey', not 'Honey Science Corporation'.",
+    "rewrite_suggestion": "RetailMeNot sued rival Honey over patent infringement in computer-related technologies.",
+    "proofs": [
+     "RetailMeNot is suing rival Honey over patent infringement, the company announced this week.",
+     "\"These valuable patents protect RetailMeNot's pioneering developments in computer-related technologies, and Honey's unauthorized use of them enables key features of Honey's website and browser extensions,\" RetailMeNot stated in a press release about the lawsuit, which is how Honey first heard the news."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific date ('June 2018') and the full corporate name ('Honey Science Corporation') that are not found anywhere in the cited source text. The source supports the lawsuit action, patent infringement subject, and the computer-related technologies description, but those missing components are unsourced and cannot be proven from this source. Therefore the author must either add a citation for the date and full name or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Leonard-Morgan then went to Los Angeles, California to dub the music for the film.",
+   "markers": [
+    "walkingwithdinosaursfilm"
+   ],
+   "paper_ids": [
+    "8ddacb5ff3261c7f631658b2938cd609f7f93428"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9025,
+   "evidence": {
+    "paper_id": "8ddacb5ff3261c7f631658b2938cd609f7f93428",
+    "source_title": "walkingwithdinosaursfilm",
+    "supported": false,
+    "sentence": "It shows next at Venice Film Festival, before its release mid-December.",
+    "page": 1,
+    "snippet": "It shows next at Venice Film Festival,",
+    "cosine": 0.9025,
+    "reason": "The passage does not mention Leonard-Morgan or the dubbing of music for any film in Los Angeles.",
+    "window": "Running in its entirety, the write-ups have been phenomenal, with Variety commenting on Paul's \"beautiful score\" and the Hollywood Reporter calling it Errol's best work ever. It shows next at Venice Film Festival, before its release mid-December. ## Gunheart Recordings Recordings for the score of Drifter's Gunheart are taking place, with electric cello in New York, and harmonica and guitar in Glasgow."
+   },
+   "evidences": [
+    {
+     "paper_id": "8ddacb5ff3261c7f631658b2938cd609f7f93428",
+     "source_title": "walkingwithdinosaursfilm",
+     "supported": false,
+     "sentence": "It shows next at Venice Film Festival, before its release mid-December.",
+     "page": 1,
+     "snippet": "It shows next at Venice Film Festival,",
+     "cosine": 0.9025,
+     "reason": "The passage does not mention Leonard-Morgan or the dubbing of music for any film in Los Angeles.",
+     "window": "Running in its entirety, the write-ups have been phenomenal, with Variety commenting on Paul's \"beautiful score\" and the Hollywood Reporter calling it Errol's best work ever. It shows next at Venice Film Festival, before its release mid-December. ## Gunheart Recordings Recordings for the score of Drifter's Gunheart are taking place, with electric cello in New York, and harmonica and guitar in Glasgow."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Los Angeles",
+    "missing_from": [
+     "8ddacb5ff3261c7f631658b2938cd609f7f93428"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The film walkingwithdinosaursfilm is about dubbing music for a film in Los Angeles, California.",
+    "reason": "The passage directly states a fact about the film that the citation is expected to support. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Leonard-Morgan went to Los Angeles to dub music for a film",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence refers to a film screening at the Venice Film Festival and does not mention Leonard-Morgan, Los Angeles, or dubbing music. The source text contains no information about Leonard-Morgan traveling to Los Angeles or dubbing any film's music. Therefore, every component of the claim is absent from the provided source, so the author must either add a citation that supports this claim or rewrite the claim to match the source's content."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "He did not receive any formal secular education as a child, dropping out before he even completed first grade.",
+   "markers": [
+    "kochavishemesh"
+   ],
+   "paper_ids": [
+    "b3c22284baa22a9e45c4143c9fa6629b412dc701"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8808,
+   "evidence": {
+    "paper_id": "b3c22284baa22a9e45c4143c9fa6629b412dc701",
+    "source_title": "kochavishemesh",
+    "supported": true,
+    "sentence": "He didn't even finish first grade.",
+    "page": 1,
+    "snippet": "He didn't even finish first grade.",
+    "cosine": 0.8808,
+    "reason": "The passage explicitly states that Kochavi Shemesh 'never received formal schooling' and 'didn't even finish first grade'.",
+    "window": "(Yigal Bin-Nun/CC BY-SA 4.0) Kochavi Shemesh, who was born in Iraq during World War II and grew up in the dilapidated and war-ravished slums of Jewish Jerusalem in the 1950s, never received formal schooling. He didn't even finish first grade. ##### Related stories More than 100 files from the 1800s are still classified in Israel's archives By Asaf Shalev | February 15, 2019 At Tel Aviv rally, a Mizrahi-asylum seeker alliance is born By Joshua Leifer | March 26, 2018 Echoes of a Black Panther's murder in killing of Palestinian activist By Bram Wispelwey | March 21, 2017 Israel's Black Panthers remind us what their struggle was about By Haokets | October 11, 2016 The lack of education didn't stop him from founding and editing a community newspaper as an adult in the late 1960s."
+   },
+   "evidences": [
+    {
+     "paper_id": "b3c22284baa22a9e45c4143c9fa6629b412dc701",
+     "source_title": "kochavishemesh",
+     "supported": true,
+     "sentence": "He didn't even finish first grade.",
+     "page": 1,
+     "snippet": "He didn't even finish first grade.",
+     "cosine": 0.8808,
+     "reason": "The passage explicitly states that Kochavi Shemesh 'never received formal schooling' and 'didn't even finish first grade'.",
+     "window": "(Yigal Bin-Nun/CC BY-SA 4.0) Kochavi Shemesh, who was born in Iraq during World War II and grew up in the dilapidated and war-ravished slums of Jewish Jerusalem in the 1950s, never received formal schooling. He didn't even finish first grade. ##### Related stories More than 100 files from the 1800s are still classified in Israel's archives By Asaf Shalev | February 15, 2019 At Tel Aviv rally, a Mizrahi-asylum seeker alliance is born By Joshua Leifer | March 26, 2018 Echoes of a Black Panther's murder in killing of Palestinian activist By Bram Wispelwey | March 21, 2017 Israel's Black Panthers remind us what their struggle was about By Haokets | October 11, 2016 The lack of education didn't stop him from founding and editing a community newspaper as an adult in the late 1960s."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Kochavi Shemesh 'never received formal schooling' and 'didn't even finish first grade'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "no formal secular education as a child",
+      "paper_id": "b3c22284baa22a9e45c4143c9fa6629b412dc701",
+      "source_title": "kochavishemesh",
+      "sentence": "(Yigal Bin-Nun/CC BY-SA 4.0) Kochavi Shemesh, who was born in Iraq during World War II and grew up in the dilapidated and war-ravished slums of Jewish Jerusalem in the 1950s, never received formal schooling.",
+      "page": 1,
+      "snippet": "(Yigal Bin-Nun/CC BY-SA 4.0) Kochavi Shemesh, who"
+     },
+     {
+      "component": "dropping out before completing first grade",
+      "paper_id": "b3c22284baa22a9e45c4143c9fa6629b412dc701",
+      "source_title": "kochavishemesh",
+      "sentence": "He didn't even finish first grade.",
+      "page": 1,
+      "snippet": "He didn't even finish first grade."
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b3c22284baa22a9e45c4143c9fa6629b412dc701",
+      "source_title": "kochavishemesh",
+      "text": "(Yigal Bin-Nun/CC BY-SA 4.0) Kochavi Shemesh, who was born in Iraq during World War II and grew up in the dilapidated and war-ravished slums of Jewish Jerusalem in the 1950s, never received formal schooling. He didn't even finish first grade.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "Nothomb's first novel, \"Hygi\u00e8ne de l'assassin\", was published in 1992.",
+   "markers": [
+    "amlienothomb"
+   ],
+   "paper_ids": [
+    "3da38738f14b252e51ba837a98991c6ce50f907f"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8684,
+   "evidence": {
+    "paper_id": "3da38738f14b252e51ba837a98991c6ce50f907f",
+    "source_title": "amlienothomb",
+    "supported": true,
+    "sentence": "Hygiene And The Assassin is about an old, obese, dying Nobel Prize-winning writer, who is solicited by countless journalists when they hear that he only has two months left to live and are, therefore, expecting to get one last, big interview.",
+    "page": 1,
+    "snippet": "Hygiene And The Assassin is about an",
+    "cosine": 0.8684,
+    "reason": "The passage explicitly states that Am\u00e9lie Nothomb published her first novel in 1992 and names it \"Hygiene And The Assassin\", which is a direct match to the claim's assertion.",
+    "window": "Japan, where the author lived an important part of her life I \u00a9 Pixbay.com In 1992, 25-year-old Belgian writer Am\u00e9lie Nothomb published her first novel, which would become an instant success. Hygiene And The Assassin is about an old, obese, dying Nobel Prize-winning writer, who is solicited by countless journalists when they hear that he only has two months left to live and are, therefore, expecting to get one last, big interview. But, by the power of his mordacious speech, the mean old man tortures the journalists \u2014 all inexperienced, na\u00efve and poorly prepared \u2014 one after the other."
+   },
+   "evidences": [
+    {
+     "paper_id": "3da38738f14b252e51ba837a98991c6ce50f907f",
+     "source_title": "amlienothomb",
+     "supported": true,
+     "sentence": "Hygiene And The Assassin is about an old, obese, dying Nobel Prize-winning writer, who is solicited by countless journalists when they hear that he only has two months left to live and are, therefore, expecting to get one last, big interview.",
+     "page": 1,
+     "snippet": "Hygiene And The Assassin is about an",
+     "cosine": 0.8684,
+     "reason": "The passage explicitly states that Am\u00e9lie Nothomb published her first novel in 1992 and names it \"Hygiene And The Assassin\", which is a direct match to the claim's assertion.",
+     "window": "Japan, where the author lived an important part of her life I \u00a9 Pixbay.com In 1992, 25-year-old Belgian writer Am\u00e9lie Nothomb published her first novel, which would become an instant success. Hygiene And The Assassin is about an old, obese, dying Nobel Prize-winning writer, who is solicited by countless journalists when they hear that he only has two months left to live and are, therefore, expecting to get one last, big interview. But, by the power of his mordacious speech, the mean old man tortures the journalists \u2014 all inexperienced, na\u00efve and poorly prepared \u2014 one after the other."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Am\u00e9lie Nothomb published her first novel in 1992 and names it \"Hygiene And The Assassin\", which is a direct match to the claim's assertion.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Nothomb's first novel was published in 1992",
+      "paper_id": "3da38738f14b252e51ba837a98991c6ce50f907f",
+      "source_title": "amlienothomb",
+      "sentence": "Japan, where the author lived an important part of her life I \u00a9 Pixbay.com In 1992, 25-year-old Belgian writer Am\u00e9lie Nothomb published her first novel, which would become an instant success.",
+      "page": 1,
+      "snippet": "Japan, where the author lived an important"
+     },
+     {
+      "component": "Nothomb's first novel was titled \"Hygi\u00e8ne de l'assassin\"",
+      "paper_id": "3da38738f14b252e51ba837a98991c6ce50f907f",
+      "source_title": "amlienothomb",
+      "sentence": "Am\u00e9lie Nothomb with her distinguishable big hat and black clothes I \u00a9 G. Garitan/WikiCommons Hygiene and the Assassin is a good example of the hypothesis that Nothomb has the qualities and defects of a commercial author writing for a big audience: good plot, complete characters but also dangerously approaching the clich\u00e9 with regularity, as some critics would say.",
+      "page": 1,
+      "snippet": "Am\u00e9lie Nothomb with her distinguishable big hat",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "3da38738f14b252e51ba837a98991c6ce50f907f",
+      "source_title": "amlienothomb",
+      "text": "Japan, where the author lived an important part of her life I \u00a9 Pixbay.com In 1992, 25-year-old Belgian writer Am\u00e9lie Nothomb published her first novel, which would become an instant success. [\u2026] Am\u00e9lie Nothomb with her distinguishable big hat and black clothes I \u00a9 G. Garitan/WikiCommons Hygiene and the Assassin is a good example of the hypothesis that Nothomb has the qualities and defects of a commercial author writing for a big audience: good plot, complete characters but also dangerously approaching the clich\u00e9 with regularity, as some critics would say.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the name of the first novel, \"Hygi\u00e8ne de l'assassin\", is not explicitly stated in conjunction with the publication year.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim specifies the French title \"Hygi\u00e8ne de l'assassin\", but the source only mentions the English title \"Hygiene and the Assassin\" (or \"Hygiene And The Assassin\"). The exact French title is not present in the provided source text.",
+    "rewrite_suggestion": "Nothomb's first novel, \"Hygiene and the Assassin\", was published in 1992.",
+    "proofs": [
+     "In 1992, 25-year-old Belgian writer Am\u00e9lie Nothomb published her first novel, which would become an instant success.",
+     "Hygiene And The Assassin is about an old, obese, dying Nobel Prize-winning writer, who is solicited by countless journalists when they hear that he only has two months left to live and are, therefore, expecting to get one last, big interview."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences prove that Nothomb's first novel was published in 1992 and identify it as 'Hygiene And The Assassin' (English). However, the claim uses the French title 'Hygi\u00e8ne de l'assassin', which does not appear anywhere in the source text. This title component is unsupported, so the author needs to either add a citation for the French title or rewrite the claim to match the source's English title."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "Arthur's post-presidency was the second shortest of all presidents who lived past their presidency, after James K. Polk's brief three-month retirement before he died.",
+   "markers": [
+    "chesteraarthur"
+   ],
+   "paper_ids": [
+    "f5f92d102a86990476d12975da046c7905f4e770"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f5f92d102a86990476d12975da046c7905f4e770",
+    "source_title": "chesteraarthur",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Unfortunately, he was able to enjoy less than three months of retirement, the least of any former President.",
+    "page": 1,
+    "snippet": "Unfortunately, he was able to enjoy less",
+    "reason": "The passage states Arthur's retirement was the least of any former president, not the second shortest.",
+    "votes": "2-0",
+    "window": "Unfortunately, he was able to enjoy less than three months of retirement, the least of any former President."
+   },
+   "evidences": [
+    {
+     "paper_id": "f5f92d102a86990476d12975da046c7905f4e770",
+     "source_title": "chesteraarthur",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Unfortunately, he was able to enjoy less than three months of retirement, the least of any former President.",
+     "page": 1,
+     "snippet": "Unfortunately, he was able to enjoy less",
+     "reason": "The passage states Arthur's retirement was the least of any former president, not the second shortest.",
+     "votes": "2-0",
+     "window": "Unfortunately, he was able to enjoy less than three months of retirement, the least of any former President."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Arthur's retirement was the least of any former president, not the second shortest.",
+   "subject_guard": {
+    "subject": "arthur's",
+    "missing_from": [
+     "f5f92d102a86990476d12975da046c7905f4e770"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Arthur's post-presidency was the second shortest of all presidents who lived past their presidency, after James K. Polk's brief three-month retirement before he died.",
+    "reason": "The passage asserts a specific factual claim about the length of Arthur's post-presidency and compares it to another president's. This is a direct statement of fact that the citation is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Arthur's post-presidency being the second shortest of all presidents who lived past their presidency",
+    "rewrite_suggestion": "James K. Polk's retirement was the shortest of any former president, lasting less than three months.",
+    "proofs": [
+     "Unfortunately, he was able to enjoy less than three months of retirement, the least of any former President."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source only discusses James K. Polk's retirement, stating it was the shortest (less than three months). It contains no information about Arthur's post-presidency length or ranking. Therefore, the claim's central component about Arthur being second shortest is entirely unsupported by the provided source, requiring the author to either add a citation for that ranking or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "It is currently one of the most important features of the Internet to develop.",
+   "markers": [
+    "businesstoemployee"
+   ],
+   "paper_ids": [
+    "88ff1ab411155a775ac8a44e9b822f9b82011595"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9516,
+   "evidence": {
+    "paper_id": "88ff1ab411155a775ac8a44e9b822f9b82011595",
+    "source_title": "businesstoemployee",
+    "supported": true,
+    "sentence": "It is currently one of the most important aspects of the Internet to emerge.",
+    "page": 1,
+    "snippet": "It is currently one of the most",
+    "cosine": 0.9516,
+    "reason": "The passage states that 'It is currently one of the most important aspects of the Internet to emerge,' which directly supports the claim that it is one of the most important features of the Internet to develop.",
+    "window": "It covers a range of different types of businesses, from consumer based retail sites, through auction or music sites, to business exchanges trading goods and services between corporations. It is currently one of the most important aspects of the Internet to emerge. Ecommerce allows consumers to electronically exchange goods and services with no barriers of time or distance."
+   },
+   "evidences": [
+    {
+     "paper_id": "88ff1ab411155a775ac8a44e9b822f9b82011595",
+     "source_title": "businesstoemployee",
+     "supported": true,
+     "sentence": "It is currently one of the most important aspects of the Internet to emerge.",
+     "page": 1,
+     "snippet": "It is currently one of the most",
+     "cosine": 0.9516,
+     "reason": "The passage states that 'It is currently one of the most important aspects of the Internet to emerge,' which directly supports the claim that it is one of the most important features of the Internet to develop.",
+     "window": "It covers a range of different types of businesses, from consumer based retail sites, through auction or music sites, to business exchanges trading goods and services between corporations. It is currently one of the most important aspects of the Internet to emerge. Ecommerce allows consumers to electronically exchange goods and services with no barriers of time or distance."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that 'It is currently one of the most important aspects of the Internet to emerge,' which directly supports the claim that it is one of the most important features of the Internet to develop.",
+   "covering": {
+    "covered": [
+     {
+      "component": "It is currently one of the most important features of the Internet to develop.",
+      "paper_id": "88ff1ab411155a775ac8a44e9b822f9b82011595",
+      "source_title": "businesstoemployee",
+      "sentence": "It is currently one of the most important aspects of the Internet to emerge.",
+      "page": 1,
+      "snippet": "It is currently one of the most"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "88ff1ab411155a775ac8a44e9b822f9b82011595",
+      "source_title": "businesstoemployee",
+      "text": "It is currently one of the most important aspects of the Internet to emerge.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t16",
+   "text": "The architect William Whitfield designed the building as a flexible performance space which also included three bars.",
+   "markers": [
+    "northernstagenewcastleup"
+   ],
+   "paper_ids": [
+    "86857703a07c4c262692e675e2022ed9f75cba1d"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+    "source_title": "northernstagenewcastleup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "His final building there (recently transformed beyond recognition) was the University Theatre (1970), a flexible performance space for teaching and experimental productions.",
+    "page": 1,
+    "snippet": "His final building there (recently transformed beyond",
+    "reason": "",
+    "votes": "2-0",
+    "window": "His final building there (recently transformed beyond recognition) was the University Theatre (1970), a flexible performance space for teaching and experimental productions. It included two bars within the auditorium itself and a third cafe-bar, open during the day in an attempt to bridge the town-gown gap."
+   },
+   "evidences": [
+    {
+     "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+     "source_title": "northernstagenewcastleup",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "His final building there (recently transformed beyond recognition) was the University Theatre (1970), a flexible performance space for teaching and experimental productions.",
+     "page": 1,
+     "snippet": "His final building there (recently transformed beyond",
+     "reason": "",
+     "votes": "2-0",
+     "window": "His final building there (recently transformed beyond recognition) was the University Theatre (1970), a flexible performance space for teaching and experimental productions. It included two bars within the auditorium itself and a third cafe-bar, open during the day in an attempt to bridge the town-gown gap."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "architect William Whitfield designed the building",
+      "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+      "source_title": "northernstagenewcastleup",
+      "sentence": "Facing the Cenotaph, Whitfield designed a recessed entrance in stone and yellow brick with a composition of bay windows and turrets that evokes, but at no point directly copies, Tudor precedent.",
+      "page": 1,
+      "snippet": "Facing the Cenotaph, Whitfield designed a recessed"
+     },
+     {
+      "component": "building as a flexible performance space",
+      "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+      "source_title": "northernstagenewcastleup",
+      "sentence": "His final building there (recently transformed beyond recognition) was the University Theatre (1970), a flexible performance space for teaching and experimental productions.",
+      "page": 1,
+      "snippet": "His final building there (recently transformed beyond"
+     },
+     {
+      "component": "included three bars",
+      "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+      "source_title": "northernstagenewcastleup",
+      "sentence": "It included two bars within the auditorium itself and a third cafe-bar, open during the day in an attempt to bridge the town-gown gap.",
+      "page": 1,
+      "snippet": "It included two bars within the auditorium"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+      "source_title": "northernstagenewcastleup",
+      "text": "Facing the Cenotaph, Whitfield designed a recessed entrance in stone and yellow brick with a composition of bay windows and turrets that evokes, but at no point directly copies, Tudor precedent. [\u2026] His final building there (recently transformed beyond recognition) was the University Theatre (1970), a flexible performance space for teaching and experimental productions. It included two bars within the auditorium itself and a third cafe-bar, open during the day in an attempt to bridge the town-gown gap.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t17",
+   "text": "On 9 July, a few weeks before the Games began, a sculpture outside the new national headquarters of the English Institute of Sport at SportCity was unveiled by the middle-distance runner Steve Cram.",
+   "markers": [
+    "cityofmanchesterstadium"
+   ],
+   "paper_ids": [
+    "f289f1531564083402cc2fa59deea37b662afd85"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f289f1531564083402cc2fa59deea37b662afd85",
+    "source_title": "cityofmanchesterstadium",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "an athlete on a globe, was unveiled outside the new national headquarters",
+    "page": 1,
+    "snippet": "an athlete on a globe, was unveiled",
+    "reason": "the date of the unveiling is not mentioned",
+    "votes": "2-0",
+    "window": "an athlete on a globe, was unveiled outside the new national headquarters"
+   },
+   "evidences": [
+    {
+     "paper_id": "f289f1531564083402cc2fa59deea37b662afd85",
+     "source_title": "cityofmanchesterstadium",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "an athlete on a globe, was unveiled outside the new national headquarters",
+     "page": 1,
+     "snippet": "an athlete on a globe, was unveiled",
+     "reason": "the date of the unveiling is not mentioned",
+     "votes": "2-0",
+     "window": "an athlete on a globe, was unveiled outside the new national headquarters"
+    }
+   ],
+   "votes": null,
+   "reason": "the date of the unveiling is not mentioned",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On 9 July, a sculpture outside the new national headquarters of the English Institute of Sport at SportCity was unveiled by the middle-distance runner Steve Cram.",
+    "reason": "The passage asserts a specific fact (the unveiling of a sculpture on a particular date by a specific person) that the cited source is expected to prove. There is no indication that the citation is for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The date '9 July' is contradicted by the source (10 July); the claim that Steve Cram performed the unveiling is not explicit (source says he was present); and the timing 'a few weeks before the Games began' is unsupported.",
+    "rewrite_suggestion": "On 10 July, a sculpture outside the new national headquarters of the English Institute of Sport at SportCity was unveiled at a ceremony that included middle-distance runner Steve Cram.",
+    "proofs": [
+     "10th July 2002 'The Runner' Unveiled Steve Cram MBE was joined by local schoolchildren as a new sculpture, depicting an athlete on a globe, was unveiled outside the new national headquarters of the English Institute of Sport at Sportcity."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "10th July 2002 'The Runner' Unveiled Steve Cram MBE was joined by local schoolchildren as a new sculpture, depicting an athlete on a globe, was unveiled outside the new national headquarters of the English Institute of Sport at Sportcity.",
+     "why": "The source states the event occurred on 10 July, but the claim gives the date as 9 July."
+    },
+    "why": "The claim includes a specific date (9 July) that directly contradicts the source's date of 10 July. Additionally, the claim asserts that Steve Cram unveiled the sculpture, but the source only says he was present at the ceremony. The relative timing 'a few weeks before the Games began' is also not stated in the source. These unsupported or contradicted components require the author to either correct the date and clarify Steve Cram's role, or provide a new citation."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Phillip Noyce, an executive producer for the series, directed the first two episodes of the season after signing a multi-year deal with 20th Century Fox Television.",
+   "markers": [
+    "theresidenttvseries"
+   ],
+   "paper_ids": [
+    "06f1dddd2f3507820e4a9b02db3de3f7f9df7791"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+    "source_title": "theresidenttvseries",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "\"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV.",
+    "page": 1,
+    "snippet": "\"Phillip has been one of our most",
+    "reason": "The passage explicitly states that Phillip Noyce directed the first two episodes of 'The Resident' and signed a first-look deal with 20th Century Fox Television, and that he is an executive producer on the show.",
+    "votes": "2-0",
+    "window": "\"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV. Variety Intelligence Platform October 26, 2017 9:30AM PT # Phillip Noyce Sets First-Look Deal With 20th Century Fox Television, Hires New VP of Production CREDIT: Marion Curtis/StarPix/REX/Shutterstock Director Phillip Noyce has signed a first look deal with 20th Century Fox Television, the studio announced Thursday. He is also an EP on the show and directed the second episode of the season order as well. Noyce recently directed the pilot for the Fox medical drama \"The Resident,\" which is set to air at midseason."
+   },
+   "evidences": [
+    {
+     "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+     "source_title": "theresidenttvseries",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "\"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV.",
+     "page": 1,
+     "snippet": "\"Phillip has been one of our most",
+     "reason": "The passage explicitly states that Phillip Noyce directed the first two episodes of 'The Resident' and signed a first-look deal with 20th Century Fox Television, and that he is an executive producer on the show.",
+     "votes": "2-0",
+     "window": "\"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV. Variety Intelligence Platform October 26, 2017 9:30AM PT # Phillip Noyce Sets First-Look Deal With 20th Century Fox Television, Hires New VP of Production CREDIT: Marion Curtis/StarPix/REX/Shutterstock Director Phillip Noyce has signed a first look deal with 20th Century Fox Television, the studio announced Thursday. He is also an EP on the show and directed the second episode of the season order as well. Noyce recently directed the pilot for the Fox medical drama \"The Resident,\" which is set to air at midseason."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Phillip Noyce directed the first two episodes of 'The Resident' and signed a first-look deal with 20th Century Fox Television, and that he is an executive producer on the show.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Phillip Noyce directed the first two episodes of the season",
+      "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+      "source_title": "theresidenttvseries",
+      "sentence": "\"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV.",
+      "page": 1,
+      "snippet": "\"Phillip has been one of our most"
+     },
+     {
+      "component": "Phillip Noyce is an executive producer for the series",
+      "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+      "source_title": "theresidenttvseries",
+      "sentence": "We're happy to have the first look at any project he and Kimberly put together, as well as continue to utilize his services on 'The Resident' as an executive producer.\"",
+      "page": 1,
+      "snippet": "We're happy to have the first look"
+     },
+     {
+      "component": "Phillip Noyce is an executive producer for the series",
+      "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+      "source_title": "theresidenttvseries",
+      "sentence": "He is also an EP on the show and directed the second episode of the season order as well.",
+      "page": 1,
+      "snippet": "He is also an EP on the"
+     },
+     {
+      "component": "Phillip Noyce signed a multi-year deal with 20th Century Fox Television",
+      "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+      "source_title": "theresidenttvseries",
+      "sentence": "Variety Intelligence Platform October 26, 2017 9:30AM PT # Phillip Noyce Sets First-Look Deal With 20th Century Fox Television, Hires New VP of Production CREDIT: Marion Curtis/StarPix/REX/Shutterstock Director Phillip Noyce has signed a first look deal with 20th Century Fox Television, the studio announced Thursday.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform October 26, 2017 9:30AM"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+      "source_title": "theresidenttvseries",
+      "text": "Variety Intelligence Platform October 26, 2017 9:30AM PT # Phillip Noyce Sets First-Look Deal With 20th Century Fox Television, Hires New VP of Production CREDIT: Marion Curtis/StarPix/REX/Shutterstock Director Phillip Noyce has signed a first look deal with 20th Century Fox Television, the studio announced Thursday. Noyce recently directed the pilot for the Fox medical drama \"The Resident,\" which is set to air at midseason. He is also an EP on the show and directed the second episode of the season order as well. Noyce's other projects with the studio include the literary soap \"800 Grapes\", sold as a put pilot to ABC in partnership with writer and executive producer Julia Brownell and Temple Hill, as well as thriller \"Green-Lit\" from writer and executive producer Kevin O'Hare and Milo Ventimiglia's Divide Pictures. Noyce has previously directed pilots for NBC, Fox, Showtime, and ABC. Initiated before his deal with Fox, Noyce is also developing the classic Erich Von Daniken non-fiction book \"Chariots of The Gods\" from writer Joe Ahearne in partnership with Sonar and Unique Features for BBC America. He is currently finishing post-production on the film \"Above Suspicion\", starring Emelia Clarke and Jack Huston, and is developing \"Killer 10,\" an action-adventure Australia/China co-production written by Paul Staheli, David Schickler, and Justin Monjo. \"Killer 10\" will be produced in partnership with Arclight Films and Thunder Road. In addition, Kimberly Hunt has been hired as vice president of production for Noyce's Rumbalara Films Inc. A graduate of Purdue University Film and Video Studies, Hunt is shepherding development on cinema features \"Alive Day,\" written by Kathleen McLaughlin and produced in partnership with Phoenix Pictures, as well as \"Rats Of Tobruk,\" a World War II saga being written by Michael Petroni. Both films are to be directed by Noyce. \"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV. \"He brings out the best in his actors and his crew and he always elevates strong material into undeniable television. We're happy to have the first look at any project he and Kimberly put together, as well as continue to utilize his services on 'The Resident' as an executive producer.\"",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage does not state that Phillip Noyce signed a multi-year deal.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Phillip Noyce signed a multi-year deal",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim describes the deal as 'multi-year' and asserts that the directing occurred after signing it, but the source only states a 'first look deal' and does not specify the timing of the events relative to each other. The author must either add a citation for the multi-year duration and temporal order, or rewrite the claim to omit those unsupported details.",
+    "rewrite_suggestion": "Phillip Noyce, an executive producer for the series, directed the first two episodes of the season and has signed a first-look deal with 20th Century Fox Television.",
+    "proofs": [
+     "He is also an EP on the show and directed the second episode of the season order as well.",
+     "\"Phillip has been one of our most trusted pilot directors for more than a decade, and this year he directed both the brilliant pilot of our midseason series 'The Resident' as well as its second episode,\" said Jonnie Davis, president of creative affairs for 20th TV.",
+     "\"We're happy to have the first look at any project he and Kimberly put together, as well as continue to utilize his services on 'The Resident' as an executive producer.\"",
+     "Director Phillip Noyce has signed a first look deal with 20th Century Fox Television, the studio announced Thursday."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the detail 'multi-year' and a temporal ordering ('after signing') that are not present in the source. The source describes the deal as a 'first look deal' and does not explicitly state that the directing happened after the signing. Therefore, those components are unsupported. The shown sentences do prove that Noyce is an EP, directed the first two episodes, and signed a first-look deal, but the extra elements require the author to either supply a citation or rewrite."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "However, Elon Musk has explained that although BFR was the official name, he drew inspiration from the BFG weapon in the \"Doom\" video games.",
+   "markers": [
+    "bfgweapon"
+   ],
+   "paper_ids": [
+    "46b21d94c6a98789f2e0559c57199e421a25fe0e"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8725,
+   "evidence": {
+    "paper_id": "46b21d94c6a98789f2e0559c57199e421a25fe0e",
+    "source_title": "bfgweapon",
+    "supported": true,
+    "sentence": "\"This is a very obtuse video-game reference,\" he tells me.",
+    "page": 1,
+    "snippet": "\"This is a very obtuse video-game reference,\"",
+    "cosine": 0.8725,
+    "reason": "The passage directly states that Elon Musk made an obtuse video-game reference to the BFG weapon in the original Doom game when coining the name.",
+    "window": "Musk coined these names himself. \"This is a very obtuse video-game reference,\" he tells me. \"In the original Doom, the gun that was like the crazy gun was the BFG 9000 or something like that."
+   },
+   "evidences": [
+    {
+     "paper_id": "46b21d94c6a98789f2e0559c57199e421a25fe0e",
+     "source_title": "bfgweapon",
+     "supported": true,
+     "sentence": "\"This is a very obtuse video-game reference,\" he tells me.",
+     "page": 1,
+     "snippet": "\"This is a very obtuse video-game reference,\"",
+     "cosine": 0.8725,
+     "reason": "The passage directly states that Elon Musk made an obtuse video-game reference to the BFG weapon in the original Doom game when coining the name.",
+     "window": "Musk coined these names himself. \"This is a very obtuse video-game reference,\" he tells me. \"In the original Doom, the gun that was like the crazy gun was the BFG 9000 or something like that."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Elon Musk made an obtuse video-game reference to the BFG weapon in the original Doom game when coining the name.",
+   "covering": {
+    "covered": [
+     {
+      "component": "he drew inspiration from the BFG weapon in the \"Doom\" video games",
+      "paper_id": "46b21d94c6a98789f2e0559c57199e421a25fe0e",
+      "source_title": "bfgweapon",
+      "sentence": "So it was sort of named after the gun in Doom.",
+      "page": 1,
+      "snippet": "So it was sort of named after"
+     }
+    ],
+    "uncovered": [
+     "Elon Musk explained BFR was the official name"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "46b21d94c6a98789f2e0559c57199e421a25fe0e",
+      "source_title": "bfgweapon",
+      "text": "So it was sort of named after the gun in Doom.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that BFR was the official name, because the source states it is not the official name",
+    "rewrite_suggestion": "Elon Musk has explained that although BFR was the internal code name, he drew inspiration from the BFG weapon in the 'Doom' video games.",
+    "proofs": [
+     "So it was sort of named after the gun in Doom."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "But that's not its official name, of course.",
+     "why": "The source explicitly says BFR is not the official name, contradicting the claim that it was the official name."
+    },
+    "why": "The claim has two substantive components: that BFR was the official name, and that Musk drew inspiration from the BFG weapon in Doom. The inspiration component is proven by the shown sentence 'So it was sort of named after the gun in Doom.' However, the component stating that BFR was the official name is contradicted by the source, which says 'But that's not its official name, of course.' Since a component of the claim is unsupported and actually contradicted by the source, the author must rewrite the claim or add a correct citation for that subclaim."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The organization will be working with public defense offices and community partners across the country to establish 40 sites across the country with the goal of paying bail for 160,000 people.",
+   "markers": [
+    "robinsteinberg"
+   ],
+   "paper_ids": [
+    "83107ffa556c1cd2632bfdbe7152011656faa225"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8664,
+   "evidence": {
+    "paper_id": "83107ffa556c1cd2632bfdbe7152011656faa225",
+    "source_title": "robinsteinberg",
+    "supported": true,
+    "sentence": "Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants.",
+    "page": 1,
+    "snippet": "Over the next five years the nonprofit's",
+    "cosine": 0.8664,
+    "reason": "The passage states that The Bail Project plans to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants over the next five years, which directly supports the claim's goal of paying bail for 160,000 people.",
+    "window": "## The Great Bail-Out: Reform project looks to free thousands Nov. 22, 201704:16 Last week, criminal justice reformers backed by $30 million in donations from the wealthy and influential announced the launch of The Bail Project \u2014 a bold effort to disrupt the bail system by using charitable dollars to bail people like Marshall out of jail. Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants. Robin Steinberg, The Bail Project's founder and a veteran public defender, said that the way bail is commonly applied in courts both large and small has created a two-tiered, cash-register system of justice."
+   },
+   "evidences": [
+    {
+     "paper_id": "83107ffa556c1cd2632bfdbe7152011656faa225",
+     "source_title": "robinsteinberg",
+     "supported": true,
+     "sentence": "Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants.",
+     "page": 1,
+     "snippet": "Over the next five years the nonprofit's",
+     "cosine": 0.8664,
+     "reason": "The passage states that The Bail Project plans to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants over the next five years, which directly supports the claim's goal of paying bail for 160,000 people.",
+     "window": "## The Great Bail-Out: Reform project looks to free thousands Nov. 22, 201704:16 Last week, criminal justice reformers backed by $30 million in donations from the wealthy and influential announced the launch of The Bail Project \u2014 a bold effort to disrupt the bail system by using charitable dollars to bail people like Marshall out of jail. Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants. Robin Steinberg, The Bail Project's founder and a veteran public defender, said that the way bail is commonly applied in courts both large and small has created a two-tiered, cash-register system of justice."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that The Bail Project plans to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants over the next five years, which directly supports the claim's goal of paying bail for 160,000 people.",
+   "covering": {
+    "covered": [
+     {
+      "component": "establish 40 sites across the country",
+      "paper_id": "83107ffa556c1cd2632bfdbe7152011656faa225",
+      "source_title": "robinsteinberg",
+      "sentence": "Starting in January, The Bail Project will open offices in Tulsa and St. Louis, Missouri, and eventually expand to 40 other sites.",
+      "page": 1,
+      "snippet": "Starting in January, The Bail Project will"
+     },
+     {
+      "component": "goal of paying bail for 160,000 people",
+      "paper_id": "83107ffa556c1cd2632bfdbe7152011656faa225",
+      "source_title": "robinsteinberg",
+      "sentence": "Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants.",
+      "page": 1,
+      "snippet": "Over the next five years the nonprofit's"
+     }
+    ],
+    "uncovered": [
+     "organization will work with public defense offices and community partners"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "83107ffa556c1cd2632bfdbe7152011656faa225",
+      "source_title": "robinsteinberg",
+      "text": "Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants. Robin Steinberg, The Bail Project's founder and a veteran public defender, said that the way bail is commonly applied in courts both large and small has created a two-tiered, cash-register system of justice. Those who can afford to pay get out of jail, while the poor languish behind bars. \"You haven't been convicted of a crime, you are supposed to be presumed innocent,\" Steinberg said. \"And the only way to get out of a jail cell when bail is set is to buy your way out. That disadvantages poor people and it disadvantages people of color.\" \"If you're rich, you buy your freedom and you buy the presumption of innocence,\" she added. \"If you are not rich you can't buy your freedom and you don't get the presumption of innocence.\" Starting in January, The Bail Project will open offices in Tulsa and St. Louis, Missouri, and eventually expand to 40 other sites.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that the organization will be working with public defense offices and community partners.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the organization will be working with public defense offices and community partners",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the organization will work with public defense offices and community partners across the country is not supported by the cited source. Additionally, the source states \"expand to 40 other sites\" (implying 42 total), not exactly \"40 sites\".",
+    "rewrite_suggestion": "The organization will establish 40 sites across the country with the goal of paying bail for 160,000 people.",
+    "proofs": [
+     "Over the next five years the nonprofit's bail 'disrupters' plan to use a revolving fund to post bail for over 160,000 low-income, pretrial defendants.",
+     "Starting in January, The Bail Project will open offices in Tulsa and St. Louis, Missouri, and eventually expand to 40 other sites."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes an unsourced component: 'working with public defense offices and community partners'\u2014neither the shown sentences nor the source text mention any such collaboration. The remaining components (establishing sites and the bail goal) are supported, but the missing part requires the author to either add a citation or rewrite the claim to remove that element."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "At the 2019 Women's World Cup, she scored a goal in Germany's 1-0, and 4-0 wins over Spain and South Africa, earning the player of the match award on both occasions.",
+   "markers": [
+    "saradbritz"
+   ],
+   "paper_ids": [
+    "b161302d1a289da98b585c071d45db4624d3c256"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b161302d1a289da98b585c071d45db4624d3c256",
+    "source_title": "saradbritz",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Article continues below ... After Germany grinded out 1-0 wins over China and Spain, its offense broke out with three goals in the first half at Montpellier's Stade de la Mosson, matching its total in its previous five World Cup games combined.",
+    "page": 1,
+    "snippet": "Article continues below ... After Germany grinded",
+    "reason": "The passage does not state that Sara D\u00e4britz scored a goal in Germany's 1-0 win over Spain, nor does it mention her earning the player of the match award on either occasion.",
+    "votes": "2-0",
+    "window": "Article continues below ... After Germany grinded out 1-0 wins over China and Spain, its offense broke out with three goals in the first half at Montpellier's Stade de la Mosson, matching its total in its previous five World Cup games combined. Germany played to its status as the world's second-ranked side and one of the top challengers hoping to dethrone the United States, routing South Africa 4-0 on Monday to top Group B with a 3-0 record. Melanie Leupolz opened the scoring in the 14th minute with her first goal for Germany since the 2016 Olympics. Sara D\u00e4britz doubled the lead in the 29th minute from a goal-keeping blunder, Alexandra Popp made it 3-0 in the 40th and Lina Magull added the final goal in the 58th."
+   },
+   "evidences": [
+    {
+     "paper_id": "b161302d1a289da98b585c071d45db4624d3c256",
+     "source_title": "saradbritz",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Article continues below ... After Germany grinded out 1-0 wins over China and Spain, its offense broke out with three goals in the first half at Montpellier's Stade de la Mosson, matching its total in its previous five World Cup games combined.",
+     "page": 1,
+     "snippet": "Article continues below ... After Germany grinded",
+     "reason": "The passage does not state that Sara D\u00e4britz scored a goal in Germany's 1-0 win over Spain, nor does it mention her earning the player of the match award on either occasion.",
+     "votes": "2-0",
+     "window": "Article continues below ... After Germany grinded out 1-0 wins over China and Spain, its offense broke out with three goals in the first half at Montpellier's Stade de la Mosson, matching its total in its previous five World Cup games combined. Germany played to its status as the world's second-ranked side and one of the top challengers hoping to dethrone the United States, routing South Africa 4-0 on Monday to top Group B with a 3-0 record. Melanie Leupolz opened the scoring in the 14th minute with her first goal for Germany since the 2016 Olympics. Sara D\u00e4britz doubled the lead in the 29th minute from a goal-keeping blunder, Alexandra Popp made it 3-0 in the 40th and Lina Magull added the final goal in the 58th."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Sara D\u00e4britz scored a goal in Germany's 1-0 win over Spain, nor does it mention her earning the player of the match award on either occasion.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "she scored a goal in Germany's 1-0, and 4-0 wins over Spain and South Africa, earning the player of the match award on both occasions.",
+    "reason": "The passage asserts specific facts and findings (goals scored, match outcomes, player of the match awards) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Scoring in Germany's 1-0 win over Spain and earning player of the match awards for both matches",
+    "rewrite_suggestion": "At the 2019 Women's World Cup, she scored a goal in Germany's 4-0 win over South Africa.",
+    "proofs": [
+     "Sara D\u00e4britz doubled the lead in the 29th minute from a goal-keeping blunder"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states she scored in both the 1-0 win over Spain and the 4-0 win over South Africa, and earned player of the match both times. The shown sentence only mentions Germany's 1-0 wins over China and Spain, not any goal scorer or awards. The source text confirms she scored in the South Africa match (D\u00e4britz doubled the lead) but provides no evidence she scored in the Spain match or received player of the match honors. Therefore, these components are unsourced from the provided text, requiring the author to either add citations or rewrite the claim."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "She is inspired by New York neighborhoods and advertising, bringing imagery from Chinatown and Times Square in the form of old signs, billboards, and neon signs.",
+   "markers": [
+    "ladyaiko"
+   ],
+   "paper_ids": [
+    "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9545,
+   "evidence": {
+    "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+    "source_title": "ladyaiko",
+    "supported": true,
+    "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+    "page": 1,
+    "snippet": "Inspired by the gritty yet beautiful New",
+    "cosine": 0.9545,
+    "reason": "The passage explicitly states that the artist is inspired by New York streets and brings imagery from Chinatown and Times Square, recreating characters seen on old signs, billboards, and neon signs.",
+    "window": "As an ode to the city, Aiko is bringing her art indoors to a mural inside the all new curated clothing and object store Style Lab at W New York \u2013 Times Square. Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs. Lady Aiko's mural spans the entire store, transforming the space with art that is both a nod to graffiti's past and a representation of it's future, living as a permenant background to Style Lab's line up of emerging designers and artists."
+   },
+   "evidences": [
+    {
+     "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+     "source_title": "ladyaiko",
+     "supported": true,
+     "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+     "page": 1,
+     "snippet": "Inspired by the gritty yet beautiful New",
+     "cosine": 0.9545,
+     "reason": "The passage explicitly states that the artist is inspired by New York streets and brings imagery from Chinatown and Times Square, recreating characters seen on old signs, billboards, and neon signs.",
+     "window": "As an ode to the city, Aiko is bringing her art indoors to a mural inside the all new curated clothing and object store Style Lab at W New York \u2013 Times Square. Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs. Lady Aiko's mural spans the entire store, transforming the space with art that is both a nod to graffiti's past and a representation of it's future, living as a permenant background to Style Lab's line up of emerging designers and artists."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the artist is inspired by New York streets and brings imagery from Chinatown and Times Square, recreating characters seen on old signs, billboards, and neon signs.",
+   "covering": {
+    "covered": [
+     {
+      "component": "inspired by New York neighborhoods",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+      "page": 1,
+      "snippet": "Inspired by the gritty yet beautiful New"
+     },
+     {
+      "component": "imagery from Chinatown",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+      "page": 1,
+      "snippet": "Inspired by the gritty yet beautiful New"
+     },
+     {
+      "component": "imagery from Chinatown",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "I took pictures from old Chinatown and old Times Square.",
+      "page": 1,
+      "snippet": "I took pictures from old Chinatown and"
+     },
+     {
+      "component": "imagery from Times Square",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+      "page": 1,
+      "snippet": "Inspired by the gritty yet beautiful New"
+     },
+     {
+      "component": "imagery from Times Square",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "I took pictures from old Chinatown and old Times Square.",
+      "page": 1,
+      "snippet": "I took pictures from old Chinatown and"
+     },
+     {
+      "component": "imagery in the form of old signs",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+      "page": 1,
+      "snippet": "Inspired by the gritty yet beautiful New"
+     },
+     {
+      "component": "imagery in the form of billboards",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+      "page": 1,
+      "snippet": "Inspired by the gritty yet beautiful New"
+     },
+     {
+      "component": "imagery in the form of neon signs",
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "sentence": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs.",
+      "page": 1,
+      "snippet": "Inspired by the gritty yet beautiful New"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+      "source_title": "ladyaiko",
+      "text": "Inspired by the gritty yet beautiful New York streets, the artist brings imagery from neighborhoods like Chinatown and Times Square, recreating characters seen on old signs, billboards and neon signs. [\u2026] I took pictures from old Chinatown and old Times Square.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t23",
+   "text": "Joel, being a history enthusiast, took advantage of this opportunity, knowing that this would impact the history of the Cold War.",
+   "markers": [
+    "kontsert"
+   ],
+   "paper_ids": [
+    "15787adeedab6d3b1eca5cfd575fe8f6093aaa81"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "15787adeedab6d3b1eca5cfd575fe8f6093aaa81",
+    "source_title": "kontsert",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Billy Joel's historic visit to Russia became a worldwide news event, with journalists and writers covering the tour, its progress, and the effect Billy, his band and his family were having on the Russian people.",
+    "page": 1,
+    "snippet": "Billy Joel's historic visit to Russia became",
+    "reason": "The passage does not state that Joel is a history enthusiast or that he knew the visit would impact the history of the Cold War.",
+    "votes": "2-0",
+    "window": "Billy Joel's historic visit to Russia became a worldwide news event, with journalists and writers covering the tour, its progress, and the effect Billy, his band and his family were having on the Russian people. As America's pop rock musical ambassador, Billy Joel brought the Soviets their first fully staged high energy rock show. When the Kremlin invited Billy Joel to perform in the Soviet Union, he jumped at the chance to realize a long-time dream of performing for the Russian people. The tour been seen as a major cultural turning point in the course of US and Soviet relations."
+   },
+   "evidences": [
+    {
+     "paper_id": "15787adeedab6d3b1eca5cfd575fe8f6093aaa81",
+     "source_title": "kontsert",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Billy Joel's historic visit to Russia became a worldwide news event, with journalists and writers covering the tour, its progress, and the effect Billy, his band and his family were having on the Russian people.",
+     "page": 1,
+     "snippet": "Billy Joel's historic visit to Russia became",
+     "reason": "The passage does not state that Joel is a history enthusiast or that he knew the visit would impact the history of the Cold War.",
+     "votes": "2-0",
+     "window": "Billy Joel's historic visit to Russia became a worldwide news event, with journalists and writers covering the tour, its progress, and the effect Billy, his band and his family were having on the Russian people. As America's pop rock musical ambassador, Billy Joel brought the Soviets their first fully staged high energy rock show. When the Kremlin invited Billy Joel to perform in the Soviet Union, he jumped at the chance to realize a long-time dream of performing for the Russian people. The tour been seen as a major cultural turning point in the course of US and Soviet relations."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Joel is a history enthusiast or that he knew the visit would impact the history of the Cold War.",
+   "component_check": {
+    "found": [
+     "this would impact the history of the Cold War"
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "this would impact the history of the Cold War",
+      "paper_id": "15787adeedab6d3b1eca5cfd575fe8f6093aaa81",
+      "source_title": "kontsert",
+      "sentence": "By the late 80s, The Cold War between the USSR and the West had begun to thaw in the light of Russian head-of-state Mikhail Gorbachev's policies of Glasnost and Perestroika, designed to bring openness and transparency to the Soviet Union while promoting political reform and cross-cultural exchanges.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Joel took advantage of this opportunity, knowing that this would impact the history of the Cold War.",
+    "reason": "The passage asserts a specific knowledge and understanding attributed to Joel, implying the cited source should support this claim about the impact on Cold War history.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Joel being a history enthusiast and his knowledge that the tour would impact the history of the Cold War",
+    "rewrite_suggestion": "Joel took advantage of the opportunity to perform in the Soviet Union, and his tour became a historic event that impacted the Cold War.",
+    "proofs": [
+     "When the Kremlin invited Billy Joel to perform in the Soviet Union, he jumped at the chance to realize a long-time dream of performing for the Russian people."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes to Joel a personal characteristic ('history enthusiast') and a specific intention ('knowing this would impact Cold War history') that are not stated anywhere in the source text. The only component that could be proven from the source\u2014'took advantage of this opportunity'\u2014is supported by the sentence about Joel jumping at the chance, but that sentence was not among the shown ones. Since at least one substantive component is entirely unprovable from the source, the author must either add a citation or rewrite the claim to remove those unsupported elements."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "As Governor of New Zealand, serving from 1843 to 1845, he tried to protect the M\u0101ori from illegal land sales claimed by British settlers.",
+   "markers": [
+    "robertfitzroy"
+   ],
+   "paper_ids": [
+    "7c01605ce14ed487eaed6e7b52d6e8dd81c4c416"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7547,
+   "evidence": {
+    "paper_id": "7c01605ce14ed487eaed6e7b52d6e8dd81c4c416",
+    "source_title": "robertfitzroy",
+    "supported": false,
+    "sentence": "Governor FitzRoy arrives in Wellington to investigate Wairau incident",
+    "page": 1,
+    "snippet": "Governor FitzRoy arrives in Wellington to investigate",
+    "cosine": 0.7547,
+    "reason": "The passage does not mention Governor FitzRoy's tenure dates or his actions regarding land sales to British settlers.",
+    "window": "##### 26 January 1844 Governor FitzRoy arrives in Wellington to investigate Wairau incident ##### 30 April 1865 Ex-Governor FitzRoy commits suicide #### Biographies ##### William Wakefield ##### Edward Jerningham Wakefield ##### Isaac Featherston ##### Charles Heaphy ##### Edward Gibbon Wakefield ##### William Spain ##### Francis Dillon Bell ##### William Hobson ##### George Grey ##### Thomas Gore Browne ##### Whina Cooper"
+   },
+   "evidences": [
+    {
+     "paper_id": "7c01605ce14ed487eaed6e7b52d6e8dd81c4c416",
+     "source_title": "robertfitzroy",
+     "supported": false,
+     "sentence": "Governor FitzRoy arrives in Wellington to investigate Wairau incident",
+     "page": 1,
+     "snippet": "Governor FitzRoy arrives in Wellington to investigate",
+     "cosine": 0.7547,
+     "reason": "The passage does not mention Governor FitzRoy's tenure dates or his actions regarding land sales to British settlers.",
+     "window": "##### 26 January 1844 Governor FitzRoy arrives in Wellington to investigate Wairau incident ##### 30 April 1865 Ex-Governor FitzRoy commits suicide #### Biographies ##### William Wakefield ##### Edward Jerningham Wakefield ##### Isaac Featherston ##### Charles Heaphy ##### Edward Gibbon Wakefield ##### William Spain ##### Francis Dillon Bell ##### William Hobson ##### George Grey ##### Thomas Gore Browne ##### Whina Cooper"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "As Governor of New Zealand, serving from 1843 to 1845, he tried to protect the M\u0101ori from illegal land sales claimed by British settlers.",
+    "reason": "The passage directly states facts about Robert FitzRoy's tenure and actions as Governor of New Zealand, which are expected to be supported by the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific dates of FitzRoy's governorship (1843\u20131845) and his efforts to protect M\u0101ori from illegal land sales are not present in the provided source text.",
+    "rewrite_suggestion": "Governor Robert FitzRoy arrived in Wellington in January 1844 to investigate the Wairau incident.",
+    "proofs": [
+     "26 January 1844 Governor FitzRoy arrives in Wellington to investigate Wairau incident"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only establishes that FitzRoy was a Governor and was in Wellington in 1844, but does not cover the claimed dates of his governorship (1843\u20131845) or any action to protect M\u0101ori from illegal land sales. The source text contains no information about those components, so the author must add a citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "And in May 2017, he won his 13th Emmy for an investigation of the International Olympic Committee.",
+   "markers": [
+    "bernardgoldberg"
+   ],
+   "paper_ids": [
+    "d208eee3baf12ae028d868220985f09a6dce7fec"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d208eee3baf12ae028d868220985f09a6dce7fec",
+    "source_title": "bernardgoldberg",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "HBO's Real Sports with Bryant Gumbel was recognized with Sports Emmy for Outstanding Sports Journalism\u2014for the 18th time\u2014for its acclaimed 2016 expos\u00e9 on the International Olympic Committee, which aired just days before the start of the Summer Games in Rio last July.",
+    "page": 1,
+    "snippet": "HBO's Real Sports with Bryant Gumbel was",
+    "reason": "The passage states the Emmy was won for an investigation of the International Olympic Committee, but it does not mention the number of Emmys won or the year 2017.",
+    "votes": "2-0",
+    "window": "HBO's Real Sports with Bryant Gumbel was recognized with Sports Emmy for Outstanding Sports Journalism\u2014for the 18th time\u2014for its acclaimed 2016 expos\u00e9 on the International Olympic Committee, which aired just days before the start of the Summer Games in Rio last July."
+   },
+   "evidences": [
+    {
+     "paper_id": "d208eee3baf12ae028d868220985f09a6dce7fec",
+     "source_title": "bernardgoldberg",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "HBO's Real Sports with Bryant Gumbel was recognized with Sports Emmy for Outstanding Sports Journalism\u2014for the 18th time\u2014for its acclaimed 2016 expos\u00e9 on the International Olympic Committee, which aired just days before the start of the Summer Games in Rio last July.",
+     "page": 1,
+     "snippet": "HBO's Real Sports with Bryant Gumbel was",
+     "reason": "The passage states the Emmy was won for an investigation of the International Olympic Committee, but it does not mention the number of Emmys won or the year 2017.",
+     "votes": "2-0",
+     "window": "HBO's Real Sports with Bryant Gumbel was recognized with Sports Emmy for Outstanding Sports Journalism\u2014for the 18th time\u2014for its acclaimed 2016 expos\u00e9 on the International Olympic Committee, which aired just days before the start of the Summer Games in Rio last July."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the Emmy was won for an investigation of the International Olympic Committee, but it does not mention the number of Emmys won or the year 2017.",
+   "component_check": {
+    "found": [
+     "for an investigation of the International Olympic Committee"
+    ],
+    "missing": [
+     "In May 2017, he won his 13th Emmy"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "for an investigation of the International Olympic Committee",
+      "paper_id": "d208eee3baf12ae028d868220985f09a6dce7fec",
+      "source_title": "bernardgoldberg",
+      "sentence": "Titled \"The Lords of the Rings,\" the 80-minute piece featured an expansive global investigation of the International Olympic Committee, highlighted by an examination of the controversy surrounding the Rio Games as well as the enormous impact the Games have had on host cities in the past decade.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In May 2017, he won his 13th Emmy for an investigation of the International Olympic Committee.",
+    "reason": "The passage directly states a fact (winning an Emmy) and attributes it to the cited source implicitly by its placement. This is a factual claim that the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that a specific individual ('he') won his 13th Emmy for this investigation, but the source only reports that the show 'Real Sports with Bryant Gumbel' won its 18th Emmy. No individual or 13th win is mentioned.",
+    "rewrite_suggestion": "And in May 2017, HBO's Real Sports with Bryant Gumbel won an Emmy for an investigation of the International Olympic Committee.",
+    "proofs": [
+     "HBO's Real Sports with Bryant Gumbel was recognized with Sports Emmy for Outstanding Sports Journalism\u2014for the 18th time\u2014for its acclaimed 2016 expos\u00e9 on the International Olympic Committee, which aired just days before the start of the Summer Games in Rio last July."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim attributes the Emmy win to an individual ('he') as his 13th Emmy, but the cited source only states that the show 'Real Sports with Bryant Gumbel' won its 18th Emmy for an IOC investigation. The components 'he' and '13th Emmy' are not present in the source text, so the author must either add a citation for those details or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "Mysore's inter-city public transportation includes rail, Bus and flights.",
+   "markers": [
+    "mysore"
+   ],
+   "paper_ids": [
+    "5b46d991bdcdc48e6145c048a2d1297512ec0181"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5b46d991bdcdc48e6145c048a2d1297512ec0181",
+    "source_title": "mysore",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Also, there is a demand for helitaxi service between Kempegowda International Airport and Electronic City in Bengaluru and it will be introduced shortly, he said and added for the country's progress under 'Sab Ka Saath Sab Ka Vikas' mantra, several schemes are being implemented with the cooperation of the people.",
+    "page": 1,
+    "snippet": "Also, there is a demand for helitaxi",
+    "reason": "The passage mentions flights but not rail or bus as inter-city public transportation for Mysore.",
+    "votes": "2-0",
+    "window": "Also, there is a demand for helitaxi service between Kempegowda International Airport and Electronic City in Bengaluru and it will be introduced shortly, he said and added for the country's progress under 'Sab Ka Saath Sab Ka Vikas' mantra, several schemes are being implemented with the cooperation of the people. The Wayback Machine - https://web.archive.org/web/20180914094303/https://starofmysore.com/flight-operations-resume-mysore-airport/amp/ # Flight operations resume from Mysore Airport Mysuru: The much-awaited flights from Mysuru under the Central Government's UDAN scheme resumed operations from the Mysore Airport last evening with Union Minister of State for Civil Aviation Jayant Sinha flagging of the Mysuru-Chennai TruJet flight. Later, speaking Sinha said that the flights, which were grounded for some reasons, have once again started the flight operations. In the second stage of UDAN scheme, along with Mysuru-Chennai sector it would connect Kochi in Kerala too."
+   },
+   "evidences": [
+    {
+     "paper_id": "5b46d991bdcdc48e6145c048a2d1297512ec0181",
+     "source_title": "mysore",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Also, there is a demand for helitaxi service between Kempegowda International Airport and Electronic City in Bengaluru and it will be introduced shortly, he said and added for the country's progress under 'Sab Ka Saath Sab Ka Vikas' mantra, several schemes are being implemented with the cooperation of the people.",
+     "page": 1,
+     "snippet": "Also, there is a demand for helitaxi",
+     "reason": "The passage mentions flights but not rail or bus as inter-city public transportation for Mysore.",
+     "votes": "2-0",
+     "window": "Also, there is a demand for helitaxi service between Kempegowda International Airport and Electronic City in Bengaluru and it will be introduced shortly, he said and added for the country's progress under 'Sab Ka Saath Sab Ka Vikas' mantra, several schemes are being implemented with the cooperation of the people. The Wayback Machine - https://web.archive.org/web/20180914094303/https://starofmysore.com/flight-operations-resume-mysore-airport/amp/ # Flight operations resume from Mysore Airport Mysuru: The much-awaited flights from Mysuru under the Central Government's UDAN scheme resumed operations from the Mysore Airport last evening with Union Minister of State for Civil Aviation Jayant Sinha flagging of the Mysuru-Chennai TruJet flight. Later, speaking Sinha said that the flights, which were grounded for some reasons, have once again started the flight operations. In the second stage of UDAN scheme, along with Mysuru-Chennai sector it would connect Kochi in Kerala too."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage mentions flights but not rail or bus as inter-city public transportation for Mysore.",
+   "subject_guard": {
+    "subject": "mysore's",
+    "missing_from": [
+     "5b46d991bdcdc48e6145c048a2d1297512ec0181"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Mysore's inter-city public transportation includes rail, Bus and flights.",
+    "reason": "The passage directly states facts about Mysore's public transportation, which the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that Mysore's inter-city public transportation includes rail and bus, but the cited source only discusses flights and does not mention rail or bus.",
+    "rewrite_suggestion": "Mysore's inter-city public transportation includes flights (via Mysore Airport).",
+    "proofs": [
+     "The much-awaited flights from Mysuru under the Central Government's UDAN scheme resumed operations from the Mysore Airport last evening with Union Minister of State for Civil Aviation Jayant Sinha flagging of the Mysuru-Chennai TruJet flight."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes rail and bus as components of Mysore's inter-city public transportation, but the provided source text only discusses flights from Mysore Airport and contains no mention of rail or bus services. The shown sentences are irrelevant to the claim and do not support any component. Therefore, the author needs to either provide citations for rail and bus or rewrite the claim to only include what the source supports (flights)."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "5b46d991bdcdc48e6145c048a2d1297512ec0181": {
+    "title": "mysore",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3": {
+    "title": "billjanklow",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "33df14a0ed329be9eb5af7381bf76ef66aec671d": {
+    "title": "retailmenot",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "75a1c7e496e6e4a330202a848b0f74a79ed9b473": {
+    "title": "starshipmine",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "46b21d94c6a98789f2e0559c57199e421a25fe0e": {
+    "title": "bfgweapon",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2": {
+    "title": "ladyaiko",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "88ff1ab411155a775ac8a44e9b822f9b82011595": {
+    "title": "businesstoemployee",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b3c22284baa22a9e45c4143c9fa6629b412dc701": {
+    "title": "kochavishemesh",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "7c01605ce14ed487eaed6e7b52d6e8dd81c4c416": {
+    "title": "robertfitzroy",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "10fc94aabf431235b9b2887fc738263121d80fed": {
+    "title": "cambridgeblackfriars",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4a052e346dd0034c3c8975f436828cbda3393419": {
+    "title": "henriettapoynter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "83107ffa556c1cd2632bfdbe7152011656faa225": {
+    "title": "robinsteinberg",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ec4277a456742c9cf03bcf453910d82419cd1b7d": {
+    "title": "michaelcollinsastronaut",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "1b282db29fbd1cd21b24fd64f817fe4449e99884": {
+    "title": "pendlewitches",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "47c8c64739a8b57cfc9e66f064656e8ef5fdf5cc": {
+    "title": "parakalaprabhakar",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "86857703a07c4c262692e675e2022ed9f75cba1d": {
+    "title": "northernstagenewcastleup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "f289f1531564083402cc2fa59deea37b662afd85": {
+    "title": "cityofmanchesterstadium",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f5f92d102a86990476d12975da046c7905f4e770": {
+    "title": "chesteraarthur",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8ddacb5ff3261c7f631658b2938cd609f7f93428": {
+    "title": "walkingwithdinosaursfilm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "15787adeedab6d3b1eca5cfd575fe8f6093aaa81": {
+    "title": "kontsert",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d0202995a381753e2628b1d31361d521bd960f20": {
+    "title": "stmarysuniversitycalgary",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "06f1dddd2f3507820e4a9b02db3de3f7f9df7791": {
+    "title": "theresidenttvseries",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b161302d1a289da98b585c071d45db4624d3c256": {
+    "title": "saradbritz",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d208eee3baf12ae028d868220985f09a6dce7fec": {
+    "title": "bernardgoldberg",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3da38738f14b252e51ba837a98991c6ce50f907f": {
+    "title": "amlienothomb",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "04622b089f41f16ce7d16a859a726560cbb36094": {
+    "title": "girlmarenmorrisalbum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 13,
+   "unsupported": 13,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:49:33",
+  "marker_errors": [],
+  "processing_time_seconds": 490.8,
+  "source_hashes": {
+   "billjanklow.txt": "cbba0eee51c82cfcf5d436a602b13edeb0d5c9b5",
+   "stmarysuniversitycalgary.txt": "1f539781a956c1fd86f7cb4ab477ada35b48f566",
+   "michaelcollinsastronaut.txt": "3f931e4cb8561e412fe27de196d4fa95565735ba",
+   "henriettapoynter.txt": "15e176f051304d77b62687ff38c01276acd48601",
+   "cambridgeblackfriars.txt": "af3be38b40b4e3a9dd8508c20289cc3f23664fc4",
+   "girlmarenmorrisalbum.txt": "8611e169f8e35dd56434e7aebfb6cf48aeaab54b",
+   "starshipmine.txt": "5647a0f5a25121d280a6cb2e95b414a958789a6d",
+   "parakalaprabhakar.txt": "2193f70eaa054732e6fa1bb5dfb3b64ecf6022be",
+   "pendlewitches.txt": "7a30776dfbb6fd0e561d45f2ec6cf7034bee4b1a",
+   "retailmenot.txt": "ae04cb4215d28f9272c3402a8d263d92885c7f8c",
+   "walkingwithdinosaursfilm.txt": "ec38b6a08d8b805b06407ca7e0d7b296ee8cd01f",
+   "kochavishemesh.txt": "69ca88eaadf17bfe760c5b1d101f1972dca43a66",
+   "amlienothomb.txt": "f9381935b04750585008f18a5a58c3a742383439",
+   "chesteraarthur.txt": "bfdd1dc6d7a9924ab2100781a25d05dbd248956a",
+   "businesstoemployee.txt": "f5c633da08709800a33b6e222da17b080a7dee41",
+   "northernstagenewcastleup.txt": "f8317fc33ba9c98ad820faeff66045258b7311a1",
+   "cityofmanchesterstadium.txt": "52c3d42f564e0ca59cdce925c095a4e4453a061e",
+   "theresidenttvseries.txt": "4d6d60f7c479309f729de987233401abf2e06341",
+   "bfgweapon.txt": "736f1592505b53ae46734fd1936f5920de2590df",
+   "robinsteinberg.txt": "ca6296abecdc609b32b34b2abfe92750fcb5f4f1",
+   "saradbritz.txt": "68d70460c9b90db8a10d9717b2a4b234f7561633",
+   "ladyaiko.txt": "8cb04681027f385e13ceaee079d129cd0af1f004",
+   "kontsert.txt": "9f8854bcc13cd2ddda5c882551f8f299a6dca852",
+   "robertfitzroy.txt": "b56bf527d99c3c6af0e8e842fe8b3073c48d3983",
+   "bernardgoldberg.txt": "c300894b7dcc71489d11bbb383eb320364019110",
+   "mysore.txt": "19e69e5a741e313b462831276d044a7944988667"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 353,
+    "prompt_tokens": 338243,
+    "completion_tokens": 18151,
+    "cost_usd": 0.041095
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 26,
+    "prompt_tokens": 78663,
+    "completion_tokens": 59631,
+    "cost_usd": 0.022546
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 13,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 20,
+   "actions": {
+    "wrong_or_insufficient_evidence": 2,
+    "add_citation_or_rewrite": 18
+   },
+   "proof_may_exist": [
+    "t7"
+   ],
+   "conflicts": [
+    "t17",
+    "t19"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t1"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "a24f4698c2b2162066d35c7e12578d0ab8fbe7b3",
+   "key": "billjanklow",
+   "filename": "billjanklow.txt",
+   "title": "billjanklow",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d0202995a381753e2628b1d31361d521bd960f20",
+   "key": "stmarysuniversitycalgary",
+   "filename": "stmarysuniversitycalgary.txt",
+   "title": "stmarysuniversitycalgary",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+   "key": "michaelcollinsastronaut",
+   "filename": "michaelcollinsastronaut.txt",
+   "title": "michaelcollinsastronaut",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4a052e346dd0034c3c8975f436828cbda3393419",
+   "key": "henriettapoynter",
+   "filename": "henriettapoynter.txt",
+   "title": "henriettapoynter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "10fc94aabf431235b9b2887fc738263121d80fed",
+   "key": "cambridgeblackfriars",
+   "filename": "cambridgeblackfriars.txt",
+   "title": "cambridgeblackfriars",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "04622b089f41f16ce7d16a859a726560cbb36094",
+   "key": "girlmarenmorrisalbum",
+   "filename": "girlmarenmorrisalbum.txt",
+   "title": "girlmarenmorrisalbum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "75a1c7e496e6e4a330202a848b0f74a79ed9b473",
+   "key": "starshipmine",
+   "filename": "starshipmine.txt",
+   "title": "starshipmine",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "47c8c64739a8b57cfc9e66f064656e8ef5fdf5cc",
+   "key": "parakalaprabhakar",
+   "filename": "parakalaprabhakar.txt",
+   "title": "parakalaprabhakar",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1b282db29fbd1cd21b24fd64f817fe4449e99884",
+   "key": "pendlewitches",
+   "filename": "pendlewitches.txt",
+   "title": "pendlewitches",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "33df14a0ed329be9eb5af7381bf76ef66aec671d",
+   "key": "retailmenot",
+   "filename": "retailmenot.txt",
+   "title": "retailmenot",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8ddacb5ff3261c7f631658b2938cd609f7f93428",
+   "key": "walkingwithdinosaursfilm",
+   "filename": "walkingwithdinosaursfilm.txt",
+   "title": "walkingwithdinosaursfilm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b3c22284baa22a9e45c4143c9fa6629b412dc701",
+   "key": "kochavishemesh",
+   "filename": "kochavishemesh.txt",
+   "title": "kochavishemesh",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3da38738f14b252e51ba837a98991c6ce50f907f",
+   "key": "amlienothomb",
+   "filename": "amlienothomb.txt",
+   "title": "amlienothomb",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f5f92d102a86990476d12975da046c7905f4e770",
+   "key": "chesteraarthur",
+   "filename": "chesteraarthur.txt",
+   "title": "chesteraarthur",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "88ff1ab411155a775ac8a44e9b822f9b82011595",
+   "key": "businesstoemployee",
+   "filename": "businesstoemployee.txt",
+   "title": "businesstoemployee",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "86857703a07c4c262692e675e2022ed9f75cba1d",
+   "key": "northernstagenewcastleup",
+   "filename": "northernstagenewcastleup.txt",
+   "title": "northernstagenewcastleup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f289f1531564083402cc2fa59deea37b662afd85",
+   "key": "cityofmanchesterstadium",
+   "filename": "cityofmanchesterstadium.txt",
+   "title": "cityofmanchesterstadium",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "06f1dddd2f3507820e4a9b02db3de3f7f9df7791",
+   "key": "theresidenttvseries",
+   "filename": "theresidenttvseries.txt",
+   "title": "theresidenttvseries",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46b21d94c6a98789f2e0559c57199e421a25fe0e",
+   "key": "bfgweapon",
+   "filename": "bfgweapon.txt",
+   "title": "bfgweapon",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "83107ffa556c1cd2632bfdbe7152011656faa225",
+   "key": "robinsteinberg",
+   "filename": "robinsteinberg.txt",
+   "title": "robinsteinberg",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b161302d1a289da98b585c071d45db4624d3c256",
+   "key": "saradbritz",
+   "filename": "saradbritz.txt",
+   "title": "saradbritz",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8d86128d6b0972d31ba5e2fc3abd4bdc8afe72e2",
+   "key": "ladyaiko",
+   "filename": "ladyaiko.txt",
+   "title": "ladyaiko",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "15787adeedab6d3b1eca5cfd575fe8f6093aaa81",
+   "key": "kontsert",
+   "filename": "kontsert.txt",
+   "title": "kontsert",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7c01605ce14ed487eaed6e7b52d6e8dd81c4c416",
+   "key": "robertfitzroy",
+   "filename": "robertfitzroy.txt",
+   "title": "robertfitzroy",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d208eee3baf12ae028d868220985f09a6dce7fec",
+   "key": "bernardgoldberg",
+   "filename": "bernardgoldberg.txt",
+   "title": "bernardgoldberg",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5b46d991bdcdc48e6145c048a2d1297512ec0181",
+   "key": "mysore",
+   "filename": "mysore.txt",
+   "title": "mysore",
+   "num_claims": 0
+  }
+ ]
+}

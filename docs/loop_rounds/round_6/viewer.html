@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Verification — my_text.md</title>
+<style>
+  :root { --teal:#0f766e; --teal-bg:#ccfbf1; --red:#b91c1c; --red-bg:#fee2e2; --amber:#b45309; --gray:#6b7280; }
+  * { box-sizing:border-box; }
+  html,body { height:100%; }
+  body { font-family:-apple-system,Segoe UI,Roboto,sans-serif; margin:0; color:#1f2937; background:#f9fafb;
+         display:flex; flex-direction:column; }
+  header { background:#111827; color:#fff; padding:12px 24px; }
+  header h1 { margin:0 0 4px; font-size:17px; }
+  .head-row { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .totals { font-size:13px; opacity:.85; }
+  .totals b.s { color:#5eead4; } .totals b.u { color:#fca5a5; } .totals b.o { color:#fdba74; }
+  .scopenote { font-size:11px; opacity:.55; margin-top:3px; }
+  .modebar { font-size:12px; padding:6px 24px; background:#0b1220; color:#cbd5e1; border-top:1px solid #1f2937; }
+  .modebar .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  .coverage { padding:10px 24px; background:#fff; border-bottom:1px solid #e5e7eb; }
+  .cov-head { display:flex; justify-content:space-between; align-items:center; }
+  .cov-title { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin-bottom:6px; }
+  .cov-bars { max-height:30vh; overflow:auto; }
+  .cov-bars.collapsed { display:none; }
+  .cov-row { display:flex; align-items:center; gap:12px; margin:5px 0; font-size:13px; }
+  .cov-label { width:220px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cov-track { flex:1; height:10px; background:var(--red-bg); border-radius:5px; overflow:hidden; }
+  .cov-fill { height:100%; background:var(--teal); }
+  .cov-num { width:340px; color:var(--gray); }
+  .cov-status { display:inline-block; margin-right:8px; padding:0 6px; border-radius:8px;
+                 background:var(--chip-bg, #eef1f4); font-size:11px; }
+
+  /* Two side-by-side columns: Your text | Your claims */
+  .layout { display:flex; flex:1; min-height:0; }
+  .doc-wrap { flex:1; display:flex; flex-direction:column; min-width:0; background:#fff; border-right:1px solid #e5e7eb; }
+  .cards { flex:1; display:flex; flex-direction:column; min-width:0; }
+  .doc-head { display:flex; justify-content:space-between; align-items:center; padding:6px 16px; background:#f3f4f6; }
+  .doc-head h2 { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin:0; }
+  .toggle { font-size:11px; padding:2px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }
+  .doc { flex:1; padding:14px 18px; line-height:1.9; overflow:auto; }
+  .doc.collapsed { display:none; }
+  .cards-body { flex:1; overflow:auto; padding:12px 18px; }
+
+  h2.sec { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin:14px 0 6px; }
+  .claim { cursor:pointer; padding:1px 2px; border-radius:3px; border-bottom:2px solid transparent; }
+  .claim.supported { background:var(--teal-bg); border-bottom-color:var(--teal); }
+  .claim.unsupported { background:var(--red-bg); border-bottom-color:var(--red); }
+  .claim.own { background:#eef2ff; border-bottom-color:#818cf8; }
+  .claim.active { outline:2px solid #facc15; }
+  sup.mark { color:#2563eb; font-weight:700; }
+  .card { border:1px solid #e5e7eb; border-left-width:5px; border-radius:6px; padding:10px 12px; margin:8px 0; background:#fff; cursor:pointer; }
+  .card.supported { border-left-color:var(--teal); }
+  .card.unsupported { border-left-color:var(--red); }
+  .card.omitted { border-left-color:var(--amber); }
+  .card.active { box-shadow:0 0 0 2px #facc15; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .head-left { display:flex; align-items:center; gap:6px; }
+  .claimno { font-size:11px; color:#6b7280; font-family:monospace; }
+  .badge { font-size:11px; font-weight:700; padding:2px 7px; border-radius:10px; color:#fff; }
+  .badge.supported { background:var(--teal); } .badge.unsupported { background:var(--red); } .badge.omitted { background:var(--amber); }
+  .badge.own { background:#6366f1; }
+  .card.own { border-left:3px solid #818cf8; }
+  .own-note { font-size:12px; color:#4338ca; background:#eef2ff; padding:6px 8px; border-radius:4px; }
+  .card-claim .leadin { background:#eef2ff; color:#4b5563; border-bottom:2px solid #818cf8; }
+  .leadin-chip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                  border-radius:8px; background:#eef2ff; color:#6366f1; border:1px solid #c7d2fe; }
+  .leadin-note { font-size:12px; color:#4338ca; background:#eef2ff; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .confchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; border:1px solid; white-space:nowrap; }
+  .confchip.high { background:#f0fdf4; color:#166534; border-color:#bbf7d0; }
+  .confchip.medium { background:#fefce8; color:#854d0e; border-color:#fde047; }
+  .confchip.low { background:#fef2f2; color:#b91c1c; border-color:#fecaca; }
+  .sochip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle;
+             background:#fffbeb; color:#92400e; border:1px solid #fcd34d; cursor:help; }
+  .ownerchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                border-radius:8px; margin-left:6px; vertical-align:middle;
+                background:#ede9fe; color:#5b21b6; border:1px solid #c4b5fd; cursor:help; }
+  .so-note { font-size:12px; background:#fffbeb; border:1px solid #fcd34d; color:#92400e;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .dcchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help; }
+  .dcchip.agree { background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; }
+  .dcchip.flag { background:#fff7ed; color:#9a3412; border:1px solid #fdba74; }
+  .dc-note { font-size:12px; background:#eff6ff; border:1px solid #bfdbfe; color:#1e3a8a;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .dc-note.flag { background:#fff7ed; border-color:#fdba74; color:#7c2d12; }
+  .dc-better { margin-top:4px; font-style:italic; }
+  .citechip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#fef3c7; color:#b45309; border:1px solid #fbbf24; cursor:help; }
+  .citechip.loud { font-size:11px; padding:2px 8px; background:#d97706; color:#fff;
+                    border-color:#b45309; }
+  .kindchip { font-size:9px; font-weight:600; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#f3f4f6; color:#6b7280; border:1px solid #e5e7eb; cursor:help; }
+  .cite-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.cite { border-color:#fbbf24; color:#b45309; }
+  .partialchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                  border-radius:8px; margin-left:6px; vertical-align:middle;
+                  background:#fef3c7; color:#b45309; border:1px solid #fbbf24; cursor:help; }
+  .partial-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                   border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.partial { border-color:#fbbf24; color:#b45309; }
+  .badge.partly { background:#d97706; }
+  .fbtn.partlyf { border-color:#fbbf24; color:#b45309; }
+  .overchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:help; }
+  .overcite-note { font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+                    border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.overcitef { border-color:#cbd5e1; color:#475569; }
+  .multisource-note { font-size:12px; background:#f0f9ff; border:1px solid #bae6fd; color:#0c4a6e;
+                       border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .covset-miss { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                  border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  details.covering { font-size:12px; margin:8px 0 0; border:1px solid #e5e7eb;
+                      border-radius:6px; padding:4px 8px; background:#fafafa; }
+  details.covering summary { cursor:pointer; color:#374151; font-weight:600; }
+  .covset-common { font-size:12px; background:#f9fafb; border:1px solid #e5e7eb; color:#6b7280;
+                    border-radius:6px; padding:6px 9px; margin:8px 0 0; }
+  .covset-row { border-top:1px solid #f3f4f6; padding:6px 0; }
+  .covset-row blockquote { margin:4px 0; }
+  .covset-part { font-weight:600; color:#166534; }
+  .covset-src { font-weight:400; color:#6b7280; font-size:11px; }
+  .covset-foot { color:#6b7280; font-size:11px; border-top:1px solid #f3f4f6; padding-top:5px; }
+  details.covspan { font-size:12px; margin:6px 0; border:1px solid #e5e7eb; border-radius:4px;
+                     padding:3px 8px; background:#fff; }
+  details.covspan summary { cursor:pointer; color:#0c4a6e; }
+  .hunt-note { font-size:12px; background:#f0fdf4; border:1px solid #bbf7d0; color:#166534;
+                border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .compcheck-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                     border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .shchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle;
+             background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:help; }
+  .sh-note { font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .disagreechip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                   border-radius:8px; margin-left:6px; vertical-align:middle;
+                   background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; cursor:help; }
+  .disagree-note { font-size:12px; background:#fef2f2; border:1px solid #fca5a5; color:#991b1b;
+                    border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .changed-chip { font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px;
+                   background:#fef9c3; color:#854d0e; border:1px solid #fde047; white-space:nowrap; }
+  sup.changedmark { color:#b45309; font-weight:700; cursor:default; }
+  details.changed-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047;
+                          padding:4px 8px; border-radius:4px; margin-top:6px; }
+  details.changed-note summary { cursor:pointer; }
+  .changed-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047;
+                   padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .prev-text { margin-top:4px; padding:6px 8px; background:#fff; border-left:3px solid #fde047;
+                color:#4b5563; font-style:italic; }
+  .triage { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:10px;
+             padding-top:8px; border-top:1px dashed #e5e7eb; cursor:default; }
+  .tlabel { font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:#9ca3af; }
+  .tbtn { font-size:11px; padding:2px 9px; border:1px solid #d1d5db; border-radius:11px;
+           background:#fff; color:#6b7280; cursor:pointer; }
+  .tbtn.on { background:#7c3aed; border-color:#7c3aed; color:#fff; }
+  .cbtn { font-size:11px; padding:2px 10px; border:1px solid #a7f3d0; border-radius:11px;
+           background:#fff; color:#059669; cursor:pointer; font-weight:600; margin-right:4px; }
+  .cbtn.on { background:#059669; border-color:#059669; color:#fff; }
+  .fbtn.hchk { border-color:#a7f3d0; color:#059669; }
+  .fbtn.hchk.active { background:#059669; border-color:#059669; color:#fff; }
+  .tnote { flex-basis:100%; font-family:inherit; font-size:12px; padding:5px 8px;
+            border:1px solid #d1d5db; border-radius:5px; resize:vertical; color:#374151; }
+  .reviewbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;
+                padding:8px 12px; background:#f5f3ff; border:1px solid #ddd6fe; border-radius:6px; }
+  .rev-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:#6d28d9; }
+  .rev-count { font-size:12px; font-weight:600; color:#4c1d95; }
+  .rbtn { font-size:12px; padding:4px 10px; border:1px solid #7c3aed; background:#7c3aed;
+           color:#fff; border-radius:5px; cursor:pointer; font-family:inherit; }
+  .rbtn:hover { background:#6d28d9; }
+  .rbtn.sci { background:#fff; color:#7c3aed; }
+  .rbtn.sci:hover { background:#f5f3ff; }
+  .rev-hint { font-size:11px; color:#7c7a8c; }
+  .filterbar { display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
+  .fbtn { font-size:12px; padding:3px 10px; border:1px solid #d1d5db; border-radius:12px; background:#fff; cursor:pointer; color:#374151; }
+  .fbtn.active { background:#1f2937; color:#fff; border-color:#1f2937; }
+  .meta { font-size:11px; color:#9ca3af; }
+  .card-claim { font-size:14px; }
+  .evidence { margin-top:10px; padding-top:10px; border-top:1px dashed #e5e7eb; }
+  .ev-label { font-size:11px; color:var(--gray); margin-bottom:4px; }
+  .paperlink { font-size:11px; color:#2563eb; text-decoration:none; white-space:nowrap; }
+  .paperlink:hover { text-decoration:underline; }
+  .srcchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px; border-radius:8px; margin-right:5px; }
+  .srcchip.ok { background:var(--teal-bg); color:var(--teal); }
+  .srcchip.no { background:#e5e7eb; color:#374151; }
+  .combined-note { font-size:12px; color:var(--teal); background:var(--teal-bg); padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .unsupp-note { font-size:12px; color:#b91c1c; background:#fef2f2; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .fixbox { margin-top:8px; padding:8px 10px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; }
+  .fixbox blockquote { margin:6px 0; }
+  .fix-head { font-size:12px; font-weight:600; color:#166534; }
+  .fixchip { font-size:11px; font-weight:400; padding:1px 6px; border-radius:8px; margin-left:6px; }
+  .fixchip.ok { background:#dcfce7; color:#166534; }
+  .fixchip.warn { background:#fef9c3; color:#854d0e; }
+  .fix-changes { font-size:12px; color:#4b5563; font-style:italic; margin-top:4px; }
+  .fixcmd { margin-top:8px; font-size:12px; color:#6b7280; }
+  .fixcmd code { background:#f3f4f6; padding:2px 6px; border-radius:4px; font-size:11px; word-break:break-all; }
+  .borderline-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  details.judged { margin-top:6px; font-size:12px; }
+  details.judged summary { cursor:pointer; color:#6b7280; }
+  .judged-text { margin-top:4px; padding:6px 8px; background:#f9fafb; border-left:3px solid #d1d5db; color:#374151; line-height:1.5; }
+  blockquote { margin:0; padding:8px 10px; background:#f3f4f6; border-left:3px solid var(--teal); font-size:13px; font-style:italic; }
+  .evidence.reason { font-size:12px; color:var(--red); }
+  .copy { margin-top:6px; font-size:11px; padding:3px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }
+
+  /* Open-the-source affordance: one link/button per card, opens a new tab */
+  .src-actions { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+  .deeplink, .opentext-btn { font-size:12px; padding:4px 10px; border:1px solid var(--teal); background:var(--teal); color:#fff; border-radius:5px; text-decoration:none; cursor:pointer; font-family:inherit; }
+  .deeplink:hover, .opentext-btn:hover { background:#0d6358; }
+  .side-btn { font-size:12px; padding:4px 10px; border:1px solid var(--teal); background:#fff; color:var(--teal); border-radius:5px; cursor:pointer; font-family:inherit; }
+  .side-btn:hover { background:var(--teal-bg); }
+  #omittedTail.collapsed { display:none; }
+  #omitToggle { margin:8px 0; }
+  .warnbanner { background:#fef3c7; color:#92400e; font-size:12px; padding:8px 24px; border-bottom:1px solid #fcd34d; }
+  .warnbanner ul { margin:4px 0 0; padding-left:20px; }
+  .assess { background:#faf5ff; border-bottom:1px solid #e9d5ff; padding:10px 24px; }
+  .assess-head { display:flex; justify-content:space-between; align-items:center; }
+  .assess-title { font-weight:600; color:#6b21a8; }
+  .am-note { font-weight:400; color:#9ca3af; font-size:11px; }
+  .assess-body { display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:18px; margin-top:8px; }
+  .assess-body.collapsed { display:none; }
+  .assess-col h3 { font-size:13px; margin:0 0 6px; color:#4c1d95; }
+  .assess-col h4 { font-size:12px; margin:8px 0 3px; color:#6b21a8; }
+  .am-list { margin:0; padding-left:18px; font-size:12px; color:#374151; }
+  .am-list li { margin:3px 0; }
+  .am-edges { max-height:260px; overflow-y:auto; }
+  .am-score { display:inline-block; min-width:20px; font-weight:700; color:#7c3aed; }
+  .am-why { color:#6b7280; font-size:11px; margin-left:2px; }
+  .am-frag { color:#b45309; font-size:10px; border:1px solid #fcd34d; border-radius:3px; padding:0 4px; margin-left:4px; }
+  .am-strength { display:inline-block; font-size:10px; border-radius:3px; padding:0 5px; margin-right:4px; text-transform:uppercase; }
+  .am-strong { background:#fee2e2; color:#b91c1c; }
+  .am-weak { background:#fef9c3; color:#92400e; }
+  .am-rels { color:#9ca3af; font-size:11px; }
+  .am-node { color:#374151; }
+  .am-edge { font-size:11px; padding:0 4px; }
+  .am-supports { color:#15803d; }
+  .am-attacks { color:#b91c1c; }
+  @media (max-width:900px) { .assess-body { grid-template-columns:1fr; } }
+  .covratio { margin:6px 0 10px; }
+  .ccbar { display:flex; height:10px; border-radius:5px; overflow:hidden; background:#f3f4f6; }
+  .ccseg { height:100%; }
+  .cclegend { display:flex; flex-wrap:wrap; gap:10px; margin-top:5px; font-size:11px; color:#6b7280; }
+  .ccleg i { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:3px; vertical-align:middle; }
+  .legend { margin:10px 24px 0; border:1px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:12px; }
+  .legend > summary { cursor:pointer; padding:8px 12px; font-weight:700; color:#374151; list-style:none; }
+  .legend > summary::-webkit-details-marker { display:none; }
+  .legend > summary::before { content:"▸ "; color:#9ca3af; }
+  .legend[open] > summary::before { content:"▾ "; }
+  .legend-body { padding:4px 14px 12px; display:flex; flex-wrap:wrap; gap:16px; }
+  .legend-grp { flex:1; min-width:260px; }
+  .legend-h { font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:.04em; font-size:10px; margin:4px 0; }
+  .legrow { margin:5px 0; line-height:1.5; color:#4b5563; }
+  .legrow .badge { margin-right:5px; vertical-align:middle; }
+</style></head>
+<body>
+<header>
+  <div class="head-row">
+    <h1>Verification — my_text.md</h1>
+    <button class="toggle" id="topToggle" onclick="toggleTop()"
+            title="collapse everything above the two columns, so they get the full page">hide header</button>
+  </div>
+  <div class="totals">5 claims &nbsp;·&nbsp;
+    <b class="s">4 supported</b> <b style="color:#d97706">(of which 1 partly proven)</b> &nbsp;·&nbsp;
+    <b class="u">0 unsupported</b> &nbsp;·&nbsp;
+    <b style="color:#6366f1">1 your own</b> &nbsp;·&nbsp;
+    <b class="o">0 unused source points</b>&nbsp;·&nbsp; <b style="color:#d97706">📎 1 citation suggestion</b></div>
+  <div class="scopenote">&ldquo;supported&rdquo; means the cited document contains the statement —
+    not that the source is strong or the claim is true; &ldquo;your own&rdquo; (uncited) claims were not checked.
+    &ldquo;unused source points&rdquo; are things your sources say that your text did not cite — a menu, not errors.</div>
+</header>
+<div id="topPanel">
+
+      <details class="legend">
+        <summary>How to read this</summary>
+        <div class="legend-body">
+          <div class="legend-grp">
+            <div class="legend-h">Verdicts</div>
+            <div class="legrow"><span class="badge supported">SUPPORTED</span> the cited source contains the statement — not that the source is strong or the claim is true</div>
+            <div class="legrow"><span class="badge supported partly">SUPPORTED — PARTLY PROVEN</span> judged supported, but the shown sentences don't prove every component — the amber line on the card names the unproven part; the verdict is unchanged</div>
+            <div class="legrow"><span style="color:#6b7280">◦ commonly known</span> a component with no shown proof that the tool judged an everyday fact needing no citation — grey and quiet, never counted against the claim</div>
+            <div class="legrow"><span class="badge unsupported">UNSUPPORTED</span> no cited source backs it (or the source file is missing)</div>
+            <div class="legrow"><span class="badge own">YOUR OWN CLAIM</span> your uncited claim — thesis, argument, transition; nothing was checked</div>
+            <div class="legrow"><span class="badge omitted">UNUSED</span> a point one of your sources makes that your text didn't cite — a menu, not an error</div>
+          </div>
+          <div class="legend-grp">
+            <div class="legend-h">Chips — nudges, never a verdict</div>
+            <div class="legrow"><span class="confchip high">conf</span><span class="confchip medium">conf</span><span class="confchip low">conf</span> how sure the judge is (derived from votes / method / cosine — no extra LLM call)</div>
+            <div class="legrow"><span class="citechip">citation needed?</span> an uncited passage that asserts a checkable fact — a nudge to cite, not a verdict</div>
+            <div class="legrow"><span class="partialchip">partial support?</span> the cited source(s) back only part of the claim; the verdict stays supported</div>
+            <div class="legrow"><span class="overchip">over-cited?</span> one cited source adds nothing the others already cover</div>
+            <div class="legrow"><span class="shchip">secondhand evidence?</span> the supporting sentence itself cites another work — consider citing the original</div>
+            <div class="legrow"><span class="disagreechip">sources may disagree?</span> a co-cited source's evidence was judged to argue the opposite</div>
+            <div class="legrow"><span class="sochip">2nd opinion</span> a second model disagreed — lowers confidence, read the evidence yourself; never a veto</div>
+            <div class="legrow"><span class="dcchip flag">deep check</span> a stronger model re-read the claim with source context and commented (testing aid) — its commentary is on the card; never a veto</div>
+            <div class="legrow"><span class="changed-chip">✎ changed</span> edited since the last run (incremental re-runs only)</div>
+          </div>
+          <div class="legend-grp">
+            <div class="legend-h">Review</div>
+            <div class="legrow">Mark any card <b>wrong source</b> / <b>rewrite text</b> / <b>verdict wrong</b>, then <b>Copy repair brief</b> or <b>Download review.json</b> to hand to an LLM or the <code>/apply-review</code> command. Marks live in this browser only.</div>
+          </div>
+        </div>
+      </details>
+
+<div class="modebar" id="modebar"></div>
+<div class="coverage">
+  <div class="cov-head">
+    <div class="cov-title">Source coverage — which sources ended up backing your claims (4 sources).
+      An empty bar is usually structural: the citing claims were judged unsupported, or a co-cited source supplied the evidence — the label on each row says which.</div>
+    <button class="toggle" onclick="toggleCoverage()">hide</button>
+  </div>
+  <div class="cov-bars" id="covBars">
+        <div class="cov-row">
+          <div class="cov-label">Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">The Original Affluent Society — Sahlins, Marshall</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div></div>
+</div>
+
+</div>
+<div class="layout">
+  <div class="doc-wrap">
+    <div class="doc-head"><h2>Your text</h2><button class="toggle" onclick="toggleDoc()">collapse</button></div>
+    <div class="doc" id="doc"><span class="claim supported" id="text-t0" data-card="card-t0" title="t0" onclick="brush('t0', 'text')">Whether foragers worked less than farmers is one of anthropology&#x27;s most durable debates, launched by Marshall Sahlins&#x27;s argument that hunter-gatherers were an &quot;original affluent society&quot; who, despite owning little, needed only two to four hours of work a day.<sup class="mark">[sahlins1972]</sup></span> <span class="claim supported" id="text-t1" data-card="card-t1" title="t1" onclick="brush('t1', 'text')">That claim rested heavily on Richard Lee&#x27;s fieldwork among the Ju/&#x27;hoansi (!Kung); Lee&#x27;s own later accounting, once food processing, tool-making, and housework were included, raised total work closer to a standard industrial week, a revision anthropologists still cite as a caution against the low original estimate. Fieldwork with the Ache of eastern Paraguay directly tested the foraging-versus-farming comparison within a single population: once families that had been full-time foragers settled at an agricultural mission, both men and women worked fewer hours each day than they had in the forest, ate less, and shifted their childcare and labor patterns.<sup class="mark">[hawkes1987]</sup></span> <span class="claim supported" id="text-t2" data-card="card-t2" title="t2" onclick="brush('t2', 'text')">Larger, more recent comparisons suggest the leisure gap tracks market exposure rather than subsistence mode alone. Analyzing 45,019 time-use observations from 863 adults across eight small-scale societies plus industrialized-country data, one study found shifting to fully commercial labor was linked to men&#x27;s average work rising from about 45 to 55 hours weekly, while women&#x27;s held near 55 hours regardless of market integration.<sup class="mark">[bhui2019]</sup></span> <span class="claim supported" id="text-t3" data-card="card-t3" title="t3" onclick="brush('t3', 'text')">Consistent with this, a study of the Agta of the Philippines found individuals in camps more engaged in agricultural and other non-foraging work had substantially less leisure, a difference driven mainly by women&#x27;s changing time use.<sup class="mark">[dyble2019]</sup></span> <span class="claim own" id="text-t4" data-card="card-t4" title="t4" onclick="brush('t4', 'text')">No single, universal hunter-gatherer work-hour figure exists to set against agricultural societies; totals depend on which activities are counted and how exposed a group is to markets. What looks fairly robust is that commercialization, more than farming itself, tends to lengthen the working day.</span> </div>
+  </div>
+  <div class="cards">
+    <div class="doc-head"><h2>Your claims — in text order</h2></div>
+    <div class="cards-body">
+      
+      <div class="reviewbar">
+        <span class="rev-title">Review</span>
+        <span id="revCount" class="rev-count">0 claims marked</span>
+        <button id="briefBtn" class="rbtn" onclick="copyBrief()">Copy repair brief</button>
+        <button class="rbtn" onclick="downloadReview()" title="saves as review_&lt;run&gt;_&lt;date&gt;.json — to your chosen folder if set, else the browser's Downloads">Download review file</button>
+        <button id="saveLocBtn" class="rbtn" onclick="chooseSaveDir()"
+                title="pick a folder once (e.g. the run folder) — every future review file saves there without asking. Chromium only; elsewhere the file goes to Downloads.">Save location…</button>
+        <button id="sciBtn" class="rbtn sci" onclick="copyScience()"
+                title="Bundle every claim marked 'wrong source' into ONE research request to paste into any deep-research tool (Claude Science, Elicit, Perplexity, a plain LLM…). A Claude Science export merges back automatically via import_claude_research.py --merge-into; any other tool's results you add manually.">Copy research request</button>
+        <span class="rev-hint">mark cards below (wrong source / rewrite / verdict wrong / other), then export — see docs/REPAIR_PLAYBOOK.md</span>
+      </div>
+      <div class="covratio"><div class="ccbar"><div class="ccseg" style="width:80.0%;background:#16a34a" title="supported: 4 (80%)"></div><div class="ccseg" style="width:20.0%;background:#6366f1" title="your own: 1 (20%)"></div></div><div class="cclegend"><span class="ccleg"><i style="background:#16a34a"></i>supported 4</span><span class="ccleg"><i style="background:#6366f1"></i>your own 1</span></div></div>
+      
+      <div class="filterbar">
+        <button class="fbtn active" data-f="all">All (5)</button>
+        <button class="fbtn" data-f="supported">Supported (4)</button>
+        <button class="fbtn partlyf" data-f="partlyproven" title="claims judged supported whose shown sentences do not prove every component — the amber line on the card names the unproven part">Partly proven (1)</button>
+        <button class="fbtn" data-f="unsupported">Unsupported (0)</button>
+        <button class="fbtn" data-f="own">Your own (1)</button>
+        <button class="fbtn conff" data-f="conf-low" title="claims whose judge confidence is low — the ones worth a human read">Low confidence (1)</button>
+        <button class="fbtn partial" data-f="partial" title="multi-citation claims judged supported, but a specific component was in none of the cited sources — verify that part">Partial support (1)</button>
+        
+        <button class="fbtn cite" data-f="citeneeded" title="uncited passages that assert a checkable fact — consider citing a source">Citation needed (1)</button>
+        
+        <button class="fbtn hchk" data-f="hchecked" title="cards you marked ✓ checked">✓ Checked (<span id="chkN">0</span>)</button>
+        <button class="fbtn hunchk" data-f="hunchecked" title="cards you have not marked ✓ checked yet">Unchecked (<span id="unchkN">0</span>)</button>
+      </div>
+      <div id="claimList">
+      <div class="card supported conf-high" id="card-t0" data-text="text-t0" onclick="brush('t0', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t0</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.8684 · llm</span></div>
+        <div class="card-claim">Whether foragers worked less than farmers is one of anthropology&#x27;s most durable debates, launched by Marshall Sahlins&#x27;s argument that hunter-gatherers were an &quot;original affluent society&quot; who, despite owning little, needed only two to four hours of work a day.</div>
+        <details class="covering"><summary>Evidence coverage — which sentence proves which part (4 parts with shown proof)</summary><div class="covset-row"><div class="covset-part">✓ debate launched by Marshall Sahlins <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>The Original Affluent Society 5 Marshall Sahlins If economics is the dismal science, the study of hunting and gathering economies must be its most advanced branch.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The Original Affluent Society 5 Marshall Sahlins If economics is the dismal science, the study of hunting and gathering economies must be its most advanced branch.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=1&amp;search=The%20Original%20Affluent%20Society%205%20Marshall%20Sahlins%20If%20economics%20is%20the%20dismal%20science%2C%20the%20study%20of%20hunting%20and%20gathering%20economies%20must%20be%20its%20most%20advanced%20branch." target="_blank" rel="noopener">Open PDF · p.1 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=1&amp;search=The%20Original%20Affluent%20Society%205%20Marshall%20Sahlins%20If%20economics%20is%20the%20dismal%20science%2C%20the%20study%20of%20hunting%20and%20gathering%20economies%20must%20be%20its%20most%20advanced%20branch."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ hunter-gatherers were an &quot;original affluent society&quot; <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>Subsistence When Herskovits was writing his Economic Anthropology (1952), it was common anthropological practice to take the Bushmen or the native Australians as “a classic illustration of a people whose economic resources are 16 ORIGINAL AFFLUENT SOCIETIES of the scantiest,” so precariously situated that “only the most intense applica- tion makes survival possible.” Today the “classic” understanding can be fairly reversed —on evidence largely from these two groups.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Subsistence When Herskovits was writing his Economic Anthropology (1952), it was common anthropological practice to take the Bushmen or the native Australians as “a classic illustration of a people whose economic resources are 16 ORIGINAL AFFLUENT SOCIETIES of the scantiest,” so precariously situated that “only the most intense applica- tion makes survival possible.” Today the “classic” understanding can be fairly reversed —on evidence largely from these two groups.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=6&amp;search=Subsistence%20When%20Herskovits%20was%20writing%20his%20Economic%20Anthropology%20%281952%29%2C%20it%20was%20common%20anthropological%20practice%20to%20take%20the%20Bushmen%20or%20the%20native%20Australians%20as%20%E2%80%9Ca%20classic%20illustration%20of%20a%20people%20whose%20economic%20resources%20are%2016%20ORIGINAL%20AFFLUENT%20SOCIETIES%20of%20the%20scantiest%2C%E2%80%9D%20so%20precariously%20situated%20that%20%E2%80%9Conly%20the%20most%20intense%20applica-%20tion%20makes%20survival%20possible.%E2%80%9D%20Today%20the%20%E2%80%9Cclassic%E2%80%9D%20understanding%20can%20be%20fairly%20reversed%20%E2%80%94on%20evidence%20largely%20from%20these%20two%20groups." target="_blank" rel="noopener">Open PDF · p.6 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=6&amp;search=Subsistence%20When%20Herskovits%20was%20writing%20his%20Economic%20Anthropology%20%281952%29%2C%20it%20was%20common%20anthropological%20practice%20to%20take%20the%20Bushmen%20or%20the%20native%20Australians%20as%20%E2%80%9Ca%20classic%20illustration%20of%20a%20people%20whose%20economic%20resources%20are%2016%20ORIGINAL%20AFFLUENT%20SOCIETIES%20of%20the%20scantiest%2C%E2%80%9D%20so%20precariously%20situated%20that%20%E2%80%9Conly%20the%20most%20intense%20applica-%20tion%20makes%20survival%20possible.%E2%80%9D%20Today%20the%20%E2%80%9Cclassic%E2%80%9D%20understanding%20can%20be%20fairly%20reversed%20%E2%80%94on%20evidence%20largely%20from%20these%20two%20groups."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ hunter-gatherers needed only two to four hours of work a day <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>F Reports on hunters and gatherers of the ethnological present spect cally on those in marginal environments—suggest a mean of three to five hours per adult worker per day in food production.</blockquote><button class="copy" onclick="copyText(this)" data-quote="F Reports on hunters and gatherers of the ethnological present spect cally on those in marginal environments—suggest a mean of three to five hours per adult worker per day in food production.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=15&amp;search=F%20Reports%20on%20hunters%20and%20gatherers%20of%20the%20ethnological%20present%20spect%20cally%20on%20those%20in%20marginal%20environments%E2%80%94suggest%20a%20mean%20of%20three%20to%20five%20hours%20per%20adult%20worker%20per%20day%20in%20food%20production." target="_blank" rel="noopener">Open PDF · p.15 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=15&amp;search=F%20Reports%20on%20hunters%20and%20gatherers%20of%20the%20ethnological%20present%20spect%20cally%20on%20those%20in%20marginal%20environments%E2%80%94suggest%20a%20mean%20of%20three%20to%20five%20hours%20per%20adult%20worker%20per%20day%20in%20food%20production."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ hunter-gatherers needed only two to four hours of work a day <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>Despite this nonchalance, and an only limited economic cooperation, Hadza “nonetheless obtain sufficient food without undue effort.” Woodburn offers this “very rough approximation” of subsistence-labor requirements: “Over the year as a whole probably an average of less than two hours a day is spent obtaining food” (Woodburn 1968:54).</blockquote><button class="copy" onclick="copyText(this)" data-quote="Despite this nonchalance, and an only limited economic cooperation, Hadza “nonetheless obtain sufficient food without undue effort.” Woodburn offers this “very rough approximation” of subsistence-labor requirements: “Over the year as a whole probably an average of less than two hours a day is spent obtaining food” (Woodburn 1968:54).">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=12&amp;search=Despite%20this%20nonchalance%2C%20and%20an%20only%20limited%20economic%20cooperation%2C%20Hadza%20%E2%80%9Cnonetheless%20obtain%20sufficient%20food%20without%20undue%20effort.%E2%80%9D%20Woodburn%20offers%20this%20%E2%80%9Cvery%20rough%20approximation%E2%80%9D%20of%20subsistence-labor%20requirements%3A%20%E2%80%9COver%20the%20year%20as%20a%20whole%20probably%20an%20average%20of%20less%20than%20two%20hours%20a%20day%20is%20spent%20obtaining%20food%E2%80%9D%20%28Woodburn%201968%3A54%29." target="_blank" rel="noopener">Open PDF · p.12 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=12&amp;search=Despite%20this%20nonchalance%2C%20and%20an%20only%20limited%20economic%20cooperation%2C%20Hadza%20%E2%80%9Cnonetheless%20obtain%20sufficient%20food%20without%20undue%20effort.%E2%80%9D%20Woodburn%20offers%20this%20%E2%80%9Cvery%20rough%20approximation%E2%80%9D%20of%20subsistence-labor%20requirements%3A%20%E2%80%9COver%20the%20year%20as%20a%20whole%20probably%20an%20average%20of%20less%20than%20two%20hours%20a%20day%20is%20spent%20obtaining%20food%E2%80%9D%20%28Woodburn%201968%3A54%29."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ foragers worked less than farmers <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>The conclusion is put conservatively when put negatively: hunters and gatherers need not work longer getting food than do primitive cultivators.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The conclusion is put conservatively when put negatively: hunters and gatherers need not work longer getting food than do primitive cultivators.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=15&amp;search=The%20conclusion%20is%20put%20conservatively%20when%20put%20negatively%3A%20hunters%20and%20gatherers%20need%20not%20work%20longer%20getting%20food%20than%20do%20primitive%20cultivators." target="_blank" rel="noopener">Open PDF · p.15 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=15&amp;search=The%20conclusion%20is%20put%20conservatively%20when%20put%20negatively%3A%20hunters%20and%20gatherers%20need%20not%20work%20longer%20getting%20food%20than%20do%20primitive%20cultivators."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ foragers worked less than farmers <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>Woodburn moreover did form the im scion, al- though as yet unsubstantiated, that Hadza actually expend less toner d probably less time, in obtaining subsistence than do neighborin cultivero 7 f East Africa (1968:54)° To change continents but not contents: the fitful eco- nomic commitment of the South American hunter, too, could seem to the European outsider an incurable “natural disposition”: ... the Yamana are not capable of continuous, daily hard labor, much to the chagrin of European farmers and employers for whom the often work.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Woodburn moreover did form the im scion, al- though as yet unsubstantiated, that Hadza actually expend less toner d probably less time, in obtaining subsistence than do neighborin cultivero 7 f East Africa (1968:54)° To change continents but not contents: the fitful eco- nomic commitment of the South American hunter, too, could seem to the European outsider an incurable “natural disposition”: ... the Yamana are not capable of continuous, daily hard labor, much to the chagrin of European farmers and employers for whom the often work.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=12&amp;search=Woodburn%20moreover%20did%20form%20the%20im%20scion%2C%20al-%20though%20as%20yet%20unsubstantiated%2C%20that%20Hadza%20actually%20expend%20less%20toner%20d%20probably%20less%20time%2C%20in%20obtaining%20subsistence%20than%20do%20neighborin%20cultivero%207%20f%20East%20Africa%20%281968%3A54%29%C2%B0%20To%20change%20continents%20but%20not%20contents%3A%20the%20fitful%20eco-%20nomic%20commitment%20of%20the%20South%20American%20hunter%2C%20too%2C%20could%20seem%20to%20the%20European%20outsider%20an%20incurable%20%E2%80%9Cnatural%20disposition%E2%80%9D%3A%20...%20the%20Yamana%20are%20not%20capable%20of%20continuous%2C%20daily%20hard%20labor%2C%20much%20to%20the%20chagrin%20of%20European%20farmers%20and%20employers%20for%20whom%20the%20often%20work." target="_blank" rel="noopener">Open PDF · p.12 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=12&amp;search=Woodburn%20moreover%20did%20form%20the%20im%20scion%2C%20al-%20though%20as%20yet%20unsubstantiated%2C%20that%20Hadza%20actually%20expend%20less%20toner%20d%20probably%20less%20time%2C%20in%20obtaining%20subsistence%20than%20do%20neighborin%20cultivero%207%20f%20East%20Africa%20%281968%3A54%29%C2%B0%20To%20change%20continents%20but%20not%20contents%3A%20the%20fitful%20eco-%20nomic%20commitment%20of%20the%20South%20American%20hunter%2C%20too%2C%20could%20seem%20to%20the%20European%20outsider%20an%20incurable%20%E2%80%9Cnatural%20disposition%E2%80%9D%3A%20...%20the%20Yamana%20are%20not%20capable%20of%20continuous%2C%20daily%20hard%20labor%2C%20much%20to%20the%20chagrin%20of%20European%20farmers%20and%20employers%20for%20whom%20the%20often%20work."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ foragers worked less than farmers <span class="covset-src">The Original Affluent Society — Sahlins, Marshall</span></div><blockquote>A good case can be made that hunters and gatherers work less than we do; and, rather than a continuous travail, the food quest is intermittent, leisure abundant, and there is a greater amount of sleep in the daytime per capita per year than in any other condition of society.</blockquote><button class="copy" onclick="copyText(this)" data-quote="A good case can be made that hunters and gatherers work less than we do; and, rather than a continuous travail, the food quest is intermittent, leisure abundant, and there is a greater amount of sleep in the daytime per capita per year than in any other condition of society.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=7&amp;search=A%20good%20case%20can%20be%20made%20that%20hunters%20and%20gatherers%20work%20less%20than%20we%20do%3B%20and%2C%20rather%20than%20a%20continuous%20travail%2C%20the%20food%20quest%20is%20intermittent%2C%20leisure%20abundant%2C%20and%20there%20is%20a%20greater%20amount%20of%20sleep%20in%20the%20daytime%20per%20capita%20per%20year%20than%20in%20any%20other%20condition%20of%20society." target="_blank" rel="noopener">Open PDF · p.7 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=7&amp;search=A%20good%20case%20can%20be%20made%20that%20hunters%20and%20gatherers%20work%20less%20than%20we%20do%3B%20and%2C%20rather%20than%20a%20continuous%20travail%2C%20the%20food%20quest%20is%20intermittent%2C%20leisure%20abundant%2C%20and%20there%20is%20a%20greater%20amount%20of%20sleep%20in%20the%20daytime%20per%20capita%20per%20year%20than%20in%20any%20other%20condition%20of%20society."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><details class="covspan"><summary>Read it in context — the 7 used sentences with the original text between them (The Original Affluent Society — Sahlins, Marshall)</summary><div class="judged-text">The Original Affluent Society 5 Marshall Sahlins If economics is the dismal science, the study of hunting and gathering economies must be its most advanced branch. […] Subsistence When Herskovits was writing his Economic Anthropology (1952), it was common anthropological practice to take the Bushmen or the native Australians as “a classic illustration of a people whose economic resources are 16 ORIGINAL AFFLUENT SOCIETIES of the scantiest,” so precariously situated that “only the most intense applica- tion makes survival possible.” Today the “classic” understanding can be fairly reversed —on evidence largely from these two groups. A good case can be made that hunters and gatherers work less than we do; and, rather than a continuous travail, the food quest is intermittent, leisure abundant, and there is a greater amount of sleep in the daytime per capita per year than in any other condition of society. […] Despite this nonchalance, and an only limited economic cooperation, Hadza “nonetheless obtain sufficient food without undue effort.” Woodburn offers this “very rough approximation” of subsistence-labor requirements: “Over the year as a whole probably an average of less than two hours a day is spent obtaining food” (Woodburn 1968:54). Interesting that the Hadza, tutored by life and not by anthropology, reject the neolithic revolution in order to keep their leisure. Although surrounded by cultivators, they have until recently refused to take up agriculture themselves, “mainly on the grounds that this would involve too much hard work.”!9 In this THE ORIGINAL AFPFLUENT SOCIETY 27 / they are like the Bushmen, who respond to the neolithic question with an other: “Why should we plant, when there are so many mongomongo nuts i : the world?” (Lee 1968:33). Woodburn moreover did form the im scion, al- though as yet unsubstantiated, that Hadza actually expend less toner d probably less time, in obtaining subsistence than do neighborin cultivero 7 f East Africa (1968:54)° To change continents but not contents: the fitful eco- nomic commitment of the South American hunter, too, could seem to the European outsider an incurable “natural disposition”: ... the Yamana are not capable of continuous, daily hard labor, much to the chagrin of European farmers and employers for whom the often work. […] F Reports on hunters and gatherers of the ethnological present spect cally on those in marginal environments—suggest a mean of three to five hours per adult worker per day in food production. Hunters keep banker&#x27;s hours, nota y less than modern industrial workers (unionized), who would surely settle for a 21—-35-hour week. An interesting comparison ts also posed by recent studies of labor costs among agriculturists of neolithic type. For example, the average adult Hanunoo, man or woman, spends 1,200 hours per year in swidden culti- vation (Conklin 1957:151); which is to say, a mean of three hours twenty min- utes per day. Yet this figure does not include food gathering, animal raising cooking, and other direct subsistence efforts of these Philippine tribesmen. THE ORIGINAL AFFLUENT SOCIETY 33 Comparable data are beginning to appear in reports on other primitive agri- culturalists from many parts of the world. The conclusion is put conservatively when put negatively: hunters and gatherers need not work longer getting food than do primitive cultivators.</div></details><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> The Original Affluent Society — Sahlins, Marshall <a class="paperlink" href="https://scholar.google.com/scholar?q=The%20Original%20Affluent%20Society%20%E2%80%94%20Sahlins%2C%20Marshall" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>THE ORIGINAL AFFLUENT SOCIETY 33 Comparable data are beginning to appear in reports on other primitive agri- culturalists from many parts of the world.</blockquote><button class="copy" onclick="copyText(this)" data-quote="THE ORIGINAL AFFLUENT SOCIETY 33 Comparable data are beginning to appear in reports on other primitive agri- culturalists from many parts of the world.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/sahlins1972.pdf#page=15&amp;search=THE%20ORIGINAL%20AFFLUENT%20SOCIETY%2033%20Comparable%20data%20are%20beginning%20to%20appear%20in%20reports%20on%20other%20primitive%20agri-%20culturalists%20from%20many%20parts%20of%20the%20world." target="_blank" rel="noopener">Open PDF · p.15 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/sahlins1972.pdf#page=15&amp;search=THE%20ORIGINAL%20AFFLUENT%20SOCIETY%2033%20Comparable%20data%20are%20beginning%20to%20appear%20in%20reports%20on%20other%20primitive%20agri-%20culturalists%20from%20many%20parts%20of%20the%20world."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (65 words)</summary><div class="judged-text">Yet this figure does not include food gathering, animal raising cooking, and other direct subsistence efforts of these Philippine tribesmen. THE ORIGINAL AFFLUENT SOCIETY 33 Comparable data are beginning to appear in reports on other primitive agri- culturalists from many parts of the world. The conclusion is put conservatively when put negatively: hunters and gatherers need not work longer getting food than do primitive cultivators.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t0" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="needs_citation" title="this passage should cite a source — find one and add a [[key]] citation">needs citation</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported partial partlyproven conf-low" id="card-t1" data-text="text-t1" onclick="brush('t1', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported partly">SUPPORTED — PARTLY PROVEN</span><span class="claimno">t1</span><span class="confchip low" title="the cited sources back only part of this claim — a specific component was found in none of them; read the evidence and confirm that part">low confidence</span><span class="partialchip" title="the cited sources back only part of this claim — a component was not found">partial support?</span></span><span class="meta">cosine 0.8964 · llm</span></div>
+        <div class="card-claim">That claim rested heavily on Richard Lee&#x27;s fieldwork among the Ju/&#x27;hoansi (!Kung); Lee&#x27;s own later accounting, once food processing, tool-making, and housework were included, raised total work closer to a standard industrial week, a revision anthropologists still cite as a caution against the low original estimate. Fieldwork with the Ache of eastern Paraguay directly tested the foraging-versus-farming comparison within a single population: once families that had been full-time foragers settled at an agricultural mission, both men and women worked fewer hours each day than they had in the forest, ate less, and shifted their childcare and labor patterns.</div>
+        <div class="covset-miss">⚠ No evidence shown for: <b>Fieldwork with the Ache of eastern Paraguay tested the foraging-versus-farming comparison within a single population</b> · <b>Richard Lee&#x27;s fieldwork among the Ju/&#x27;hoansi (!Kung)</b> · <b>Lee&#x27;s later accounting raised total work closer to a standard industrial week once food processing, tool-making, and housework were included</b> · <b>anthropologists still cite Lee&#x27;s revision as a caution against the low original estimate</b> · <b>Richard Lee</b>. The judge accepted the claim, but the displayed sentences don't prove these parts — open the source and check it yourself.</div><details class="covering"><summary>Evidence coverage — which sentence proves which part (3 parts with shown proof, 5 without)</summary><div class="covset-row"><div class="covset-part">✓ once Ache families settled at an agricultural mission, both men and women worked fewer hours each day than they had in the forest <span class="covset-src">Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena</span></div><blockquote>We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.</blockquote><button class="copy" onclick="copyText(this)" data-quote="We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/hawkes1987.pdf#page=1&amp;search=We%20report%20that%20at%20the%20settlement%20men%20and%20women%20work%20fewer%20hours%20each%20day%20than%20they%20do%20in%20the%20forest%2C%20people%20eat%20less%2C%20women%20do%20more%20work%20apart%20from%20their%20child-%20ren%2C%20and%20men%20invest%20more%20in%20direct%20parental%20care." target="_blank" rel="noopener">Open PDF · p.1 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/hawkes1987.pdf#page=1&amp;search=We%20report%20that%20at%20the%20settlement%20men%20and%20women%20work%20fewer%20hours%20each%20day%20than%20they%20do%20in%20the%20forest%2C%20people%20eat%20less%2C%20women%20do%20more%20work%20apart%20from%20their%20child-%20ren%2C%20and%20men%20invest%20more%20in%20direct%20parental%20care."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ once Ache families settled at an agricultural mission, both men and women worked fewer hours each day than they had in the forest <span class="covset-src">Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena</span></div><blockquote>Yet, men (and women, if carrying in the forest is counted as subsis- tence effort) work less at the settlement than they do in the forest, and much less during our observation period (which did not include the full agricultur- al cycle).</blockquote><button class="copy" onclick="copyText(this)" data-quote="Yet, men (and women, if carrying in the forest is counted as subsis- tence effort) work less at the settlement than they do in the forest, and much less during our observation period (which did not include the full agricultur- al cycle).">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/hawkes1987.pdf#page=25&amp;search=Yet%2C%20men%20%28and%20women%2C%20if%20carrying%20in%20the%20forest%20is%20counted%20as%20subsis-%20tence%20effort%29%20work%20less%20at%20the%20settlement%20than%20they%20do%20in%20the%20forest%2C%20and%20much%20less%20during%20our%20observation%20period%20%28which%20did%20not%20include%20the%20full%20agricultur-%20al%20cycle%29." target="_blank" rel="noopener">Open PDF · p.25 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/hawkes1987.pdf#page=25&amp;search=Yet%2C%20men%20%28and%20women%2C%20if%20carrying%20in%20the%20forest%20is%20counted%20as%20subsis-%20tence%20effort%29%20work%20less%20at%20the%20settlement%20than%20they%20do%20in%20the%20forest%2C%20and%20much%20less%20during%20our%20observation%20period%20%28which%20did%20not%20include%20the%20full%20agricultur-%20al%20cycle%29."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ once Ache families settled at an agricultural mission, they ate less · ✓ once Ache families settled at an agricultural mission, they shifted their childcare and labor patterns <span class="covset-src">Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena</span></div><blockquote>We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.</blockquote><button class="copy" onclick="copyText(this)" data-quote="We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/hawkes1987.pdf#page=1&amp;search=We%20report%20that%20at%20the%20settlement%20men%20and%20women%20work%20fewer%20hours%20each%20day%20than%20they%20do%20in%20the%20forest%2C%20people%20eat%20less%2C%20women%20do%20more%20work%20apart%20from%20their%20child-%20ren%2C%20and%20men%20invest%20more%20in%20direct%20parental%20care." target="_blank" rel="noopener">Open PDF · p.1 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/hawkes1987.pdf#page=1&amp;search=We%20report%20that%20at%20the%20settlement%20men%20and%20women%20work%20fewer%20hours%20each%20day%20than%20they%20do%20in%20the%20forest%2C%20people%20eat%20less%2C%20women%20do%20more%20work%20apart%20from%20their%20child-%20ren%2C%20and%20men%20invest%20more%20in%20direct%20parental%20care."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><details class="covspan"><summary>Read it in context — the 2 used sentences with the original text between them (Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena)</summary><div class="judged-text">We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care. […] Yet, men (and women, if carrying in the forest is counted as subsis- tence effort) work less at the settlement than they do in the forest, and much less during our observation period (which did not include the full agricultur- al cycle).</div></details><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details><div class="partial-note">◑ Partial support: the sources back the claim in general, but a specific component appears in none of them — &ldquo;The passage does not mention Richard Lee&#x27;s fieldwork among the Ju/&#x27;hoansi (!Kung) or his later accounting of work hours.&rdquo; (Checked against the sources' full decomposed claims, not just the matched passages.) The verdict above is unchanged — read the evidence and confirm that part.</div><div class="hunt-note">🔎 A full-text search of your other downloaded sources did not find &ldquo;Richard Lee&#x27;s fieldwork among the Ju/&#x27;hoansi (!Kung) or his later accounting of work hours&rdquo; either — source that part elsewhere, or it may simply be wrong.</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena <a class="paperlink" href="https://scholar.google.com/scholar?q=Ache%20at%20the%20Settlement%3A%20Contrasts%20Between%20Farming%20and%20Foraging%20%E2%80%94%20Hawkes%2C%20Kristen%20and%20Kaplan%2C%20Hillard%20and%20Hill%2C%20Kim%20and%20Hurtado%2C%20Ana%20Magdalena" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.</blockquote><button class="copy" onclick="copyText(this)" data-quote="We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/hawkes1987.pdf#page=1&amp;search=We%20report%20that%20at%20the%20settlement%20men%20and%20women%20work%20fewer%20hours%20each%20day%20than%20they%20do%20in%20the%20forest%2C%20people%20eat%20less%2C%20women%20do%20more%20work%20apart%20from%20their%20child-%20ren%2C%20and%20men%20invest%20more%20in%20direct%20parental%20care." target="_blank" rel="noopener">Open PDF · p.1 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/hawkes1987.pdf#page=1&amp;search=We%20report%20that%20at%20the%20settlement%20men%20and%20women%20work%20fewer%20hours%20each%20day%20than%20they%20do%20in%20the%20forest%2C%20people%20eat%20less%2C%20women%20do%20more%20work%20apart%20from%20their%20child-%20ren%2C%20and%20men%20invest%20more%20in%20direct%20parental%20care."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (93 words)</summary><div class="judged-text">Here we describe adult time allocation at the settlement and contrast it with our previous descriptions of time allocation during foraging periods. We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care. Explanations for differ- ences in time allocation between foragers and farmers should apply to the variation in work effort, production goals, division of labor, and parenting strategies reported here, and conversely.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t1" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="needs_citation" title="this passage should cite a source — find one and add a [[key]] citation">needs citation</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t2" data-text="text-t2" onclick="brush('t2', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t2</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.8968 · llm</span></div>
+        <div class="card-claim">Larger, more recent comparisons suggest the leisure gap tracks market exposure rather than subsistence mode alone. Analyzing 45,019 time-use observations from 863 adults across eight small-scale societies plus industrialized-country data, one study found shifting to fully commercial labor was linked to men&#x27;s average work rising from about 45 to 55 hours weekly, while women&#x27;s held near 55 hours regardless of market integration.</div>
+        <details class="covering"><summary>Evidence coverage — which sentence proves which part (4 parts with shown proof)</summary><div class="covset-row"><div class="covset-part">✓ larger, more recent comparisons suggest the leisure gap tracks market exposure rather than subsistence mode alone <span class="covset-src">Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph</span></div><blockquote>Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women." data-snippet="Both within and across societies, we find"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women." data-snippet="Both within and across societies, we find"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ analyzing 45,019 time-use observations from 863 adults across eight small-scale societies plus industrialized-country data <span class="covset-src">Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph</span></div><blockquote>Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries." data-snippet="Here, we tackle the issue by combining"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries." data-snippet="Here, we tackle the issue by combining"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ one study found shifting to fully commercial labor was linked to men&#x27;s average work rising from about 45 to 55 hours weekly · ✓ women&#x27;s held near 55 hours regardless of market integration <span class="covset-src">Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph</span></div><blockquote>Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum." data-snippet="Shifting to fully commercial labor is associated"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum." data-snippet="Shifting to fully commercial labor is associated"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><details class="covspan"><summary>Read it in context — the 3 used sentences with the original text between them (Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph)</summary><div class="judged-text">Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries. Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women. Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum.</div></details><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph <a class="paperlink" href="https://scholar.google.com/scholar?q=Work%20Time%20and%20Market%20Integration%20in%20the%20Original%20Affluent%20Society%20%E2%80%94%20Bhui%2C%20Rahul%20and%20Chudek%2C%20Maciej%20and%20Henrich%2C%20Joseph" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women." data-snippet="Both within and across societies, we find"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="57d1375b0a4007348273a91f86b39e30f47cd86c"
+                data-sentence="Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women." data-snippet="Both within and across societies, we find"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (97 words)</summary><div class="judged-text">Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries. Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women. Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t2" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="needs_citation" title="this passage should cite a source — find one and add a [[key]] citation">needs citation</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t3" data-text="text-t3" onclick="brush('t3', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t3</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9364 · llm</span></div>
+        <div class="card-claim">Consistent with this, a study of the Agta of the Philippines found individuals in camps more engaged in agricultural and other non-foraging work had substantially less leisure, a difference driven mainly by women&#x27;s changing time use.</div>
+        <details class="covering"><summary>Evidence coverage — which sentence proves which part (2 parts with shown proof)</summary><div class="covset-row"><div class="covset-part">✓ study of Agta of the Philippines found individuals in camps more engaged in agricultural and other non-foraging work had substantially less leisure <span class="covset-src">Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg</span></div><blockquote>Our results provide evidence from within a single population of hunter-gatherers that greater engagement in farming and other non-foraging work is associated with increased out-of-camp work time and decreased leisure time.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Our results provide evidence from within a single population of hunter-gatherers that greater engagement in farming and other non-foraging work is associated with increased out-of-camp work time and decreased leisure time.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/dyble2019.pdf#page=5&amp;search=Our%20results%20provide%20evidence%20from%20within%20a%20single%20population%20of%20hunter-gatherers%20that%20greater%20engagement%20in%20farming%20and%20other%20non-foraging%20work%20is%20associated%20with%20increased%20out-of-camp%20work%20time%20and%20decreased%20leisure%20time." target="_blank" rel="noopener">Open PDF · p.5 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/dyble2019.pdf#page=5&amp;search=Our%20results%20provide%20evidence%20from%20within%20a%20single%20population%20of%20hunter-gatherers%20that%20greater%20engagement%20in%20farming%20and%20other%20non-foraging%20work%20is%20associated%20with%20increased%20out-of-camp%20work%20time%20and%20decreased%20leisure%20time."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ difference driven mainly by women&#x27;s changing time use <span class="covset-src">Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg</span></div><blockquote>The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/dyble2019.pdf#page=5&amp;search=The%20negative%20relationship%20between%20leisure%20time%20and%20engagement%20in%20non-foraging%20out-of-camp%20work%20is%20driven%20largely%20by%20women%2C%20who%20spent%20much%20more%20time%20engaged%20in%20out-of-camp%20work%20and%20less%20time%20at%20leisure%20in%20those%20camps%20more%20heavily%20engaged%20in%20agriculture%20and%20other%20non-foraging%20work." target="_blank" rel="noopener">Open PDF · p.5 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/dyble2019.pdf#page=5&amp;search=The%20negative%20relationship%20between%20leisure%20time%20and%20engagement%20in%20non-foraging%20out-of-camp%20work%20is%20driven%20largely%20by%20women%2C%20who%20spent%20much%20more%20time%20engaged%20in%20out-of-camp%20work%20and%20less%20time%20at%20leisure%20in%20those%20camps%20more%20heavily%20engaged%20in%20agriculture%20and%20other%20non-foraging%20work."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ difference driven mainly by women&#x27;s changing time use <span class="covset-src">Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg</span></div><blockquote>This difference is largely driven by changes in the time allocation of women, who spend substantially more time engaged in out-of-camp work in more agricultural camps.</blockquote><button class="copy" onclick="copyText(this)" data-quote="This difference is largely driven by changes in the time allocation of women, who spend substantially more time engaged in out-of-camp work in more agricultural camps.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/dyble2019.pdf#page=1&amp;search=This%20difference%20is%20largely%20driven%20by%20changes%20in%20the%20time%20allocation%20of%20women%2C%20who%20spend%20substantially%20more%20time%20engaged%20in%20out-of-camp%20work%20in%20more%20agricultural%20camps." target="_blank" rel="noopener">Open PDF · p.1 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/dyble2019.pdf#page=1&amp;search=This%20difference%20is%20largely%20driven%20by%20changes%20in%20the%20time%20allocation%20of%20women%2C%20who%20spend%20substantially%20more%20time%20engaged%20in%20out-of-camp%20work%20in%20more%20agricultural%20camps."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ difference driven mainly by women&#x27;s changing time use <span class="covset-src">Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg</span></div><blockquote>These associations appear to be driven largely by the increased involvement of women in non-foraging out-of-camp work, with a significant negative correlation between the relative engagement of camps in non-foraging out-of-camp work and the leisure time of women (β(8) = -0.278, P = 0.003, t = -4.14, 95% CI =( -0.43, 0.122), Fig 2c) but not men (β(8) = -0.090, P = 0.357, t = -0.98, 95% CI = (-0.302, 0.122), Fig 2c).</blockquote><button class="copy" onclick="copyText(this)" data-quote="These associations appear to be driven largely by the increased involvement of women in non-foraging out-of-camp work, with a significant negative correlation between the relative engagement of camps in non-foraging out-of-camp work and the leisure time of women (β(8) = -0.278, P = 0.003, t = -4.14, 95% CI =( -0.43, 0.122), Fig 2c) but not men (β(8) = -0.090, P = 0.357, t = -0.98, 95% CI = (-0.302, 0.122), Fig 2c).">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/dyble2019.pdf#page=4&amp;search=These%20associations%20appear%20to%20be%20driven%20largely%20by%20the%20increased%20involvement%20of%20women%20in%20non-foraging%20out-of-camp%20work%2C%20with%20a%20significant%20negative%20correlation%20between%20the%20relative%20engagement%20of%20camps%20in%20non-foraging%20out-of-camp%20work%20and%20the%20leisure%20time%20of%20women%20%28%CE%B2%288%29%20%3D%20-0.278%2C%20P%20%3D%200.003%2C%20t%20%3D%20-4.14%2C%2095%25%20CI%20%3D%28%20-0.43%2C%200.122%29%2C%20Fig%202c%29%20but%20not%20men%20%28%CE%B2%288%29%20%3D%20-0.090%2C%20P%20%3D%200.357%2C%20t%20%3D%20-0.98%2C%2095%25%20CI%20%3D%20%28-0.302%2C%200.122%29%2C%20Fig%202c%29." target="_blank" rel="noopener">Open PDF · p.4 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/dyble2019.pdf#page=4&amp;search=These%20associations%20appear%20to%20be%20driven%20largely%20by%20the%20increased%20involvement%20of%20women%20in%20non-foraging%20out-of-camp%20work%2C%20with%20a%20significant%20negative%20correlation%20between%20the%20relative%20engagement%20of%20camps%20in%20non-foraging%20out-of-camp%20work%20and%20the%20leisure%20time%20of%20women%20%28%CE%B2%288%29%20%3D%20-0.278%2C%20P%20%3D%200.003%2C%20t%20%3D%20-4.14%2C%2095%25%20CI%20%3D%28%20-0.43%2C%200.122%29%2C%20Fig%202c%29%20but%20not%20men%20%28%CE%B2%288%29%20%3D%20-0.090%2C%20P%20%3D%200.357%2C%20t%20%3D%20-0.98%2C%2095%25%20CI%20%3D%20%28-0.302%2C%200.122%29%2C%20Fig%202c%29."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><details class="covspan"><summary>Read it in context — the 4 used sentences with the original text between them (Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg)</summary><div class="judged-text">This difference is largely driven by changes in the time allocation of women, who spend substantially more time engaged in out-of-camp work in more agricultural camps. […] These associations appear to be driven largely by the increased involvement of women in non-foraging out-of-camp work, with a significant negative correlation between the relative engagement of camps in non-foraging out-of-camp work and the leisure time of women (β(8) = -0.278, P = 0.003, t = -4.14, 95% CI =( -0.43, 0.122), Fig 2c) but not men (β(8) = -0.090, P = 0.357, t = -0.98, 95% CI = (-0.302, 0.122), Fig 2c). There was no significant association between engagement in non-foraging out-of-camp work and time spent in domestic chores (β(8) = -0.062, P = 0.293, t = -1.13, 95% CI = -0.187, 0.064). In order to establish whether these results hold when controlling for differences in the age and sex composition of camps (Supplementary Table 2), we used Bayesian multilevel multinomial modelling22 to predict adult leisure and work time across camps while controlling for the individual-level fixed effects of age, sex, and whether an individual had a child under the age of 2 years. This method also allowed us to take into account the multinomial nature of time-allocation data23. Confirming the previous linear regression results, the models suggested that for women but not for men, there was a negative association across camps between engagement 4 in non-foraging and predicted rest time (Supplementary Tables 3-4, Supplementary Figure 3). The results of this model provide a good fit to the data, confirm the age and sex related changes described above, and suggest little relationship between time of day and engagement in out-of-camp work (Supplementary Figures 4-6). Our results provide evidence from within a single population of hunter-gatherers that greater engagement in farming and other non-foraging work is associated with increased out-of-camp work time and decreased leisure time. Although we cannot necessarily equate leisure time with affluence6,24, given that previous studies have shown that more sedentary and agricultural Agta camps have worse health and increased child mortality (despite increased fertility rates)9,25, the claim that the transition away from foraging among the Agta is associated with a deteriorated standard of living is broadly supported. Although no activity was exclusively the domain of one sex, we found a general sexual division of labour among the Agta, with men doing more out-of-camp work than women and with women doing more childcare and domestic chores. In line with previous findings6,20,26, this appears to be driven by the time constraints imposed on mothers by caring for young children. We also found pronounced age differences in time allocation, with adult leisure time increasing with age, and with out-of-camp work and childcare both peaking at ~30 years. The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.</div></details><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg <a class="paperlink" href="https://scholar.google.com/scholar?q=Engagement%20in%20Agricultural%20Work%20is%20Associated%20with%20Reduced%20Leisure%20Time%20Among%20Agta%20Hunter-Gatherers%20%E2%80%94%20Dyble%2C%20Mark%20and%20Thorley%2C%20Jack%20and%20Page%2C%20Abigail%20E.%20and%20Smith%2C%20Daniel%20and%20Migliano%2C%20Andrea%20Bamberg" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/dyble2019.pdf#page=5&amp;search=The%20negative%20relationship%20between%20leisure%20time%20and%20engagement%20in%20non-foraging%20out-of-camp%20work%20is%20driven%20largely%20by%20women%2C%20who%20spent%20much%20more%20time%20engaged%20in%20out-of-camp%20work%20and%20less%20time%20at%20leisure%20in%20those%20camps%20more%20heavily%20engaged%20in%20agriculture%20and%20other%20non-foraging%20work." target="_blank" rel="noopener">Open PDF · p.5 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/dyble2019.pdf#page=5&amp;search=The%20negative%20relationship%20between%20leisure%20time%20and%20engagement%20in%20non-foraging%20out-of-camp%20work%20is%20driven%20largely%20by%20women%2C%20who%20spent%20much%20more%20time%20engaged%20in%20out-of-camp%20work%20and%20less%20time%20at%20leisure%20in%20those%20camps%20more%20heavily%20engaged%20in%20agriculture%20and%20other%20non-foraging%20work."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (75 words)</summary><div class="judged-text">We also found pronounced age differences in time allocation, with adult leisure time increasing with age, and with out-of-camp work and childcare both peaking at ~30 years. The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work. Why is this the case?</div></details>
+          </div>
+        
+        <div class="triage" data-id="t3" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="needs_citation" title="this passage should cite a source — find one and add a [[key]] citation">needs citation</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card own citeneeded" id="card-t4" data-text="text-t4" onclick="brush('t4', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge own">YOUR OWN CLAIM</span><span class="claimno">t4</span><span class="citechip loud" title="this uncited passage asserts a checkable fact">📎 citation needed?</span></span><span class="meta">none</span></div>
+        <div class="card-claim">No single, universal hunter-gatherer work-hour figure exists to set against agricultural societies; totals depend on which activities are counted and how exposed a group is to markets. What looks fairly robust is that commercialization, more than farming itself, tends to lengthen the working day.</div>
+        <div class="cite-note">📎 This uncited passage asserts a checkable fact — consider adding a [[key]] citation. &ldquo;The passage makes specific, checkable assertions about the relationship between commercialization, farming, and working hours in the real world.&rdquo; Nothing was checked against any source; this is a prompt, not a verdict.</div>
+        <div class="evidence own-note">No citation — the tool treats this as your own idea, argument, or transition. Nothing was checked; add a [[key]] marker if it should be grounded in a source.</div>
+        
+        <div class="triage" data-id="t4" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="needs_citation" title="this passage should cite a source — find one and add a [[key]] citation">needs citation</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div></div>
+      <h2 class="sec">Unused source points — not analyzed (run with --decompose to enable)</h2><p class="meta">none</p>
+    </div>
+  </div>
+</div>
+<script>
+const HAS_PDF = true;
+const HAS_TEXT = true;
+const SOURCE_TEXTS = {"57d1375b0a4007348273a91f86b39e30f47cd86c": "Source URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6825281/\n\n---\n\nWork Time and Market Integration in the Original Affluent Society (Bhui, Chudek & Henrich 2019, PNAS)\n\nAbstract\nDoes integration into commercial markets lead people to work longer hours? Does this mean that people in more subsistence-oriented societies work less compared to those in more market-integrated societies? Despite their venerable status in both anthropology and economic history, these questions have been difficult to address due to a dearth of appropriate data. Here, we tackle the issue by combining high-quality time allocation datasets from 8 small-scale populations around the world (45,019 observations of 863 adults) with similar aggregate data from 14 industrialized (Organisation for Economic Co-operation and Development) countries. Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women. Shifting to fully commercial labor is associated with an increase in men’s work from around 45 h per week to 55 h, on average; women’s work remains at nearly 55 h per week across the spectrum. These results inform us about the socioeconomic determinants of time allocation across a wider range of human societies.\nIn 1966, the anthropologist Marshall Sahlins proclaimed hunter-gatherers to be the “original affluent society.” He argued that hunter-gatherers enjoyed abundant leisure because they were unburdened by the presence of commercial markets, which induce people to spend more time working in the pursuit of material goods (\n1\n,\n2\n). This striking narrative contradicted older canonical views that people in less socioeconomically complex societies toiled endlessly just to survive (\n3\n,\n4\n). However, Sahlins’ argument was grounded in only a small amount of empirical data, and quickly came under fire for various methodological reasons, including the difficulty of measuring work and play across societies (\n5\n–\n7\n). The question of how much time people spend working has thus remained the topic of great interest and ongoing debate (\n8\n).\nMeanwhile, economic historians have also been considering the links between commercial markets and work time. Voth (\n9\n–\n11\n), for example, has suggested that a market transition stimulated a rise in work hours across 18th century England. The theory of the “Industrious Revolution” posits that this rise in work energized the expansion of commercial markets and the availability of goods, inducing people to work even more, creating a feedback cycle that culminated in the Industrial Revolution (\n12\n,\n13\n). However, the historical data supporting such claims also face challenging methodological limitations, such as nonrepresentative sampling of the populace. As Hatcher (\n14\n) laments, “it may never prove possible to measure with any pretence of accuracy the total amount of labor supplied in seventeenth- and eighteenth-century England.”\nWe provide evidence on whether the commercial nature of work is associated with total time spent working, using a unique cross-cultural dataset on time allocation in small-scale societies, constructed by representative random sampling of each population (collected as part of the University of California, Los Angeles [UCLA] Time Allocation Project). This dataset spans several small non-Western societies around the world, each of which was studied over the course of 1 y to 2 y between 1972 and 1987. Each observation links an individual to an activity, enabling us to create statistical composites of people’s time use. We include the 8 populations in which people were sampled randomly (using spot checks) and representatively (inclusive of all people aged 15+ y or a representative sample thereof across the year). These 8 groups, listed in\nTable 1\n(with data gathering details in\nSI Appendix\n, Table S1\n), collectively encompass numerous modes of production and exchange; they are in the early to intermediate stages of integration into commercial markets, and their members participate in varying levels of trade and commercial activity.\nTable 1.\nList of small-scale societies\nSociety\nNation\nMode of subsistence\nDistance from nearest town (km)\nSample group size\nNumber of observations\nKipsigis of Abosi\nKenya\nPastoralism\n45\n362\n17,452\nMekranoti in Southern Pará\nBrazil\nForaging–horticulture\n650\n142\n3,059\nMadurese of Gedang-Gedang\nIndonesia\nAgriculture\n19\n99\n4,878\nMachiguenga of Camaná\nPeru\nForaging–horticulture\n120\n109\n1,778\nMachiguenga of Shimaa\nPeru\nForaging–horticulture\n80\n53\n1,739\nEfe of Ituri Forest\nZaire\nForaging\n70\n43\n5,334\nYe’kwana of Toki\nVenezuela\nHorticulture\n110\n32\n10,211\nYukpa of Yurmutu\nVenezuela\nHorticulture\n80\n23\n568\nOpen in a new tab\nTime allocation observations were made by the method of instantaneous sampling (aka “spot checks”; ref.\n15\n): At random times over the collection period, the researcher visited a random individual or group and recorded the activity the subject was engaging in at the moment they were seen. Because this technique mitigates sampling bias, it has been considered a gold standard for measuring time allocation (\n16\n). This process yielded 45,019 observations of 863 adults across the 8 populations. Definitions of activities were standardized by the researchers to ensure comparability of data across societies. The standardized taxonomy of activities consists of 10 broad categories: commercial, eating, food production, housework, individual, manufacture, food preparation, social, away from community unobserved, and other. These are broken down further into 62 specific subcategories (\nSI Appendix\n, Table S2\n).\nDo people who participate in markets spend more time working? We conducted 2 analyses to address this central question. First, within the small-scale societies, we assessed whether the proportion of work time that is spent on commercial activity is associated with greater total work time on an individual level. This is intended to determine whether market participants tend to work more, holding societal factors constant. Second, by incorporating time allocation data from large modern countries compiled by the Organisation for Economic Co-operation and Development (OECD), we assessed whether the commercial proportion of work time is associated with greater aggregate work time across a wide spectrum of societies. This serves as a coarse way of contrasting the small-scale societies with modern highly market-integrated countries. Time spent on commercial activity is a classic measure of market participation that correlates strongly with several other metrics (\n17\n,\n18\n). It should therefore provide a useful representation of the market-oriented nature of work. Although our data are not well suited for disentangling various causal mechanisms, they can nonetheless provide valuable associative evidence that constrains the set of reasonable possibilities.\nThe amount of time spent by an individual on a given activity can be computed by multiplying the observation period by the fraction of observations in which they were engaged in that activity. From this calculation, we obtain data points each representing one individual. We enter these into a regression predicting the amount of time people spent working (in hours per week) from the proportion of this work time corresponding to commercial activities. The regression coefficient indicates the magnitude of association between total work time and its commercial nature. Our definition of work includes all activities under the broad categories of commercial, food production, housework, manufacture, and food preparation (as well as their corresponding subcategories when people were away from community unobserved), and the subcategories of childcare and individual and social information acquisition.\nSI Appendix\n, Table S2\nprovides an exact breakdown of activities.\nTo assess the robustness of our results, we consider 2 definitions of commercial work. Both definitions include all activities under the broad commercial category (as well as its corresponding subcategory under away from community unobserved). Specifically, this covers the following: 1) cash cropping, raising livestock for sale; 2) collecting wild/natural products for ultimate sale, including mining; 3) manufacturing articles for sale; 4) shopping, buying, selling, bartering; 5) wage labor, selling labor to others, service for money; and 6) other undifferentiated commercial activities.\nOn top of this, one of the definitions we analyzed includes the acquisition of information and education (individually or socially) under commercial activity, while the other definition excludes it. This ambiguity arises because the information people acquire is often commercially relevant. For instance, people typically learn about crop prices from others, and even formal schooling, where it exists in these societies, includes economic matters, alongside the transmission of other skills and information implicitly necessary for market participation. Since the exact nature of learning was not recorded (and may have ambiguous classification regardless), we compute and report the results under both assumptions.\nTo allow the data to speak clearly without overstating or understating the information they contain, we fit a Bayesian multilevel model. This analysis allows each society to have its own regression coefficients, assuming that these coefficients are all drawn from the same distribution (the parameters of which are estimated). Multilevel models strike a balance between complete pooling of the data, in which intergroup differences are neglected, and no pooling, in which each group is analyzed independently. Both of these alternatives inappropriately represent variation across groups, whereas the partial pooling that results from multilevel analysis summarizes the data accounting properly for group-level variation (\n19\n). This yields a single model reflecting all available information, which is especially beneficial when the number of groups or individuals is small. Bayesian inference permits us to describe the statistical implications of the model in rich detail, precisely quantifying the degree of uncertainty we should hold about its parameters, rather than imposing arbitrary significance thresholds.\nThus, we fit a model of the form\nw\ni\ns\n=\nα\ns\n+\nβ\ns\nc\ni\ns\n+\nγ\ns\nX\ni\ns\n+\nε\ni\ns\n;\nε\ni\ns\n∼\nN\n(\n0\n,\nσ\n2\n)\n,\n[\nα\ns\n,\nβ\ns\n,\nγ\ns\n]\n∼\nN\n(\n[\nα\n,\nβ\n,\nγ\n]\n,\nΣ\n)\n,\nwhere\nw\ni\ns\nis the total weekly work time of individual\ni\nin society\ns\n,\nc\ni\ns\nis the fraction of this work time that was spent on commercial activities,\nX\ni\ns\nis individual (mean-centered) age as a control variable,\nα\ns\n,\nβ\ns\n, and\nγ\ns\nare the corresponding regression coefficients for society\ns\nassumed to be drawn from a multivariate normal distribution with mean\n[\nα\n,\nβ\n,\nγ\n]\n,\nσ\n2\nreflects individual-level variation, and\nΣ\nreflects systematic unexplained variation between societies. Note that\nc\ni\ns\nis the commercial fraction of work time rather than total time, and so will not mechanically exhibit a relationship merely due to adding-up constraints. To reduce noise, the regressions include only the 801 individuals who were observed at least 10 times, comprising 99.2% of the total observations (with slightly more volatile results if all are included;\nSI Appendix\n, Table S4\n). We split analyses of men and women for clarity, due to their distinct patterns of time allocation (\n20\n), but similar results are obtained when combining them into a single model (\nSI Appendix\n, Table S5\n).\nThe scatter plots in\nFig. 1\ndepict the relationship in each society between total work time and the commercial proportion of work (using the definition that includes information acquisition). As can be seen from the plots, which include fitted society-level regression lines from the multilevel model, some societies have enough data to allow stronger conclusions on their own, while others do not. Thus the credible intervals are, for example, narrower for the Madurese and wider for the Ye’kwana. Moreover, data are sparse nearer the commercial end of the spectrum in many societies, limiting the strength of the overall conclusions that can be drawn. However, even the sparse data points contribute their own piece of evidence to the model estimation which jointly incorporates all data accounting for individual- and society-level variation.\nFig. 1.\nOpen in a new tab\nAssociation between commerce and total work for men and women in small-scale societies. Society-level regression lines from a Bayesian multilevel model are shown with 95% credible intervals. Dot transparency reflects number of observations used to construct each data point. Information acquisition counted as commercial work.\nThe numerical results are reported in\nTable 2\n. According to the estimated coefficients for men, those whose labor is entirely noncommercial spend around 45 to 47 total hours per week on work. Shifting entirely to commercial labor is associated with an increase in work time of 10 h to 15 h per week (the latter when information acquisition is considered commercial, and the former when it is not). The posterior probability of a positive association between total work time and the commercial proportion of work,\nP\n(\nβ\n>\n0\n)\n, is 99.5% when commercial activity includes information acquisition or 90.8% when it does not. We note that the former assumption provides a better fit according to the leave-one-out information criterion and one-standard-error rule (LOOIC\nEC\n− LOOIC\nENC\n= −12.28 with SE 6.98). Given that age is controlled for, the results do not seem to be driven by variation over the life cycle. (Model comparison favors this linear age specification over excluding age or adding a quadratic term;\nSI Appendix\n, Tables S6 and S7\n.) The results are similar if unknown activities are counted under each definition of work or commercial activity (\nSI Appendix\n, Table S8\n).\nTable 2.\nBayesian multilevel regression models predicting total work time (in hours per week) from the proportion of work that is commercial for men and women in 8 small-scale populations\nVariable\nMen\nWomen\nWork [EC]\nWork [ENC]\nWork [EC]\nWork [ENC]\nIntercept (\nα\n)\n45.36 (3.20)\n46.85 (3.05)\n53.25 (2.66)\n53.38 (2.55)\nCommercial proportion of work (\nβ\n)\n14.45 (5.69)\n9.70 (8.31)\n−2.98 (7.42)\n−0.12 (8.65)\nAge (in decades;\nγ\n)\n0.91 (1.17)\n0.05 (1.46)\n0.25 (0.91)\n0.30 (0.99)\nCommercial proportion of work × age\n−3.76 (1.93)\n0.51 (2.13)\n−0.93 (3.56)\n0.66 (4.56)\nIndividual-level variability (\nσ\n)\n12.67 (0.49)\n12.83 (0.50)\n11.30 (0.40)\n11.31 (0.38)\nSociety-level variability (\nΣ\nα\n1\n/\n2\n)\n7.91 (2.82)\n7.75 (2.80)\n6.83 (2.32)\n6.79 (2.35)\nSociety-level variability (\nΣ\nβ\n1\n/\n2\n)\n8.08 (5.80)\n13.57 (8.06)\n9.21 (6.90)\n7.84 (6.57)\nSociety-level variability (\nΣ\nγ\n1\n/\n2\n)\n2.27 (1.30)\n3.02 (1.47)\n1.87 (0.98)\n2.09 (0.97)\nBayesian\nR\n2\n0.257\n0.236\n0.157\n0.157\nLOOIC\n2828.18\n2840.46\n3447.69\n3449.16\nP\n(\nβ\n>\n0\n)\n0.995\n0.908\n0.338\n0.470\nNo. of individuals\n355\n355\n446\n446\nOpen in a new tab\nEC (ENC), information acquisition/education included in commercial (noncommercial) work; LOOIC, leave-one-out information criterion. Standard errors are in parentheses.\nWhen the data for women are analyzed separately, these same relationships do not emerge. Instead, shifting to completely commercial work is associated with a modest 0 h to 3 h decrease in weekly work, although these figures must be circumscribed due to the paucity of sampling along the commercial axis. The posterior probability of a negative association for women,\nP\n(\nβ\n<\n0\n)\n, is 66.2% when information acquisition is considered commercial or 53.0% when it is not. This pattern of neutral or weakly negative associations continues to appear when considering alternative specifications based on age or characterizations of work (\nSI Appendix\n, Tables S6, S7, and S9\n).\nNotably, women work more than men. Women whose labor is completely noncommercial work about 53 h per week, which is markedly higher than men (with\nP\n(\nδ\nE\nC\n>\n0\n)\n=\n98.7\n%\nand\nP\n(\nδ\nE\nN\nC\n>\n0\n)\n=\n99.6\n%\naccording to analyses including both genders in\nSI Appendix\n, Table S5\n). This disparity is often found when all types of work are taken into account (e.g., ref.\n7\n). In our data, market engagement closes this gender gap.\nA caveat is that time use was unobserved at night. If commercial activities took place primarily during the middle of the day while other kinds of work might have occurred in the night or early morning, the latter could be underreported, biasing upward our estimate of the association between commercial and total work. We cannot decisively rule out this possibility; however, any impact is likely small. Almost every anthropologist explicitly reported that people engaged in very little productive activity outside the sampled daytime hours, and one researcher informally estimated that at least 95% of nondaytime hours were spent sleeping. This figure implies that up to 3.5 to 4 nonrecorded hours per week could be attributed to work. Our regression results in\nTable 2\nfor men indicate a difference in work hours of about 3 to 4 times that amount from one end of the commercial spectrum to the other. Thus, conservatively allowing for nonreporting may weaken some of the results but does not seem to eliminate them.\nOur second analysis draws on nationally representative time use surveys for 14 OECD countries (\n21\n,\n22\n). These were constructed by the diary method, in which each subject precisely recorded (in their own words) the activities they were engaged in during each 5- to 10-min interval of a previous 24-h period. These descriptions were then categorized by researchers according to standard activity codes for each country.\nSI Appendix\n, Figs. S4 and S5\ndepict aggregate time use decomposed into commercial/noncommercial work and nonwork. While there are several possible differences in the properties of the small-scale and OECD datasets, we have sought to maximize their comparability on key dimensions. First, we use only the OECD countries with full-year data. Second, we include populations with a common age range; the OECD data are mostly restricted to people aged 15 y to 64 y, so we exclude any remaining exceptions, and exclude the relatively few members of small-scale societies who fell outside this range (corresponding to 3.0% of observations;\nSI Appendix\n, Fig. S1\n). Third, we define work and commercial activity using the most similar subcategories to the small-scale data (\nMaterials and Methods\n). Finally, we note that, although the OECD compilation was derived from time diaries, this method is considered to provide reliable data on routine behaviors (\n15\n). Studies simultaneously using multiple methods indicate that instantaneous sampling and time diaries yield convergent numbers (\n23\n–\n26\n).\nTo parallel the analytical approach used in the small-scale societies, we ran standard Bayesian linear regressions predicting work time from the commercial proportion of work aggregated by group. We understand that there are many other features of societies which may be correlated with the independent variable, and simply intend this analysis as one way of describing the broad connection between economic complexity and work time spanning small- and large-scale societies, recognizing that this constrains the conclusions that can be drawn. There is also substantial heterogeneity in the data, as some small-scale societies work about as long as large-scale societies, while others work less. It is notable that the Efe people—the closest group in our sample to a full-time foraging society—work the second least overall. The high degree of cross-society variation, seen elsewhere too (\n7\n), may have contributed to the mixed empirical findings in the literature, and is itself an interesting pattern deserving of future study.\nAs in the small-scale societies, despite idiosyncratic variation, the results in\nFig. 2\nand\nTable 3\nindicate a strong positive association for men and a weak association for women. In societies where work is entirely noncommercial, men work for about 46 h per week while women work for 54 h (the latter is higher with\nP\n(\nδ\nE\nC\n>\n0\n)\n= 99.5% and\nP\n(\nδ\nE\nN\nC\n>\n0\n)\n= 99.7% in pooled regressions;\nSI Appendix\n, Table S10\n). The shift to fully commercial work is associated with roughly 10 to 11 more work hours per week for men (\nP\n(\nβ\nE\nC\n>\n0\n)\n= 98.4% and\nP\n(\nβ\nE\nN\nC\n>\n0\n)\n= 98.8%); robust positive associations remain when using alternative specifications of work, although the point estimates drop to about 6 h to 8 h (\nSI Appendix\n, Table S11\n). The same shift is associated with only a modest 3 h per week increase for women (\nP\n(\nβ\nE\nC\n>\n0\n)\n= 73.0% and\nP\n(\nβ\nE\nN\nC\n>\n0\n)\n= 69.6%), and this does not survive in any alternative specifications (\nSI Appendix\n, Table S12\n).\nFig. 2.\nOpen in a new tab\nAssociation between commerce and total work for men and women across OECD and small-scale societies. Bayesian regression lines are shown with 95% credible intervals. Information acquisition counted as commercial work.\nTable 3.\nBayesian regressions predicting total work time (in hours per week) from the proportion of work that is commercial for men and women across 22 populations from small-scale and OECD societies\nVariable\nMen\nWomen\nWork [EC]\nWork [ENC]\nWork [EC]\nWork [ENC]\nIntercept\n46.26 (2.45)\n46.36 (2.35)\n53.88 (1.80)\n53.97 (1.76)\nCommercial\nproportion of work\n9.52 (4.12)\n10.91 (4.62)\n2.53 (4.43)\n2.72 (5.44)\nVariability\n5.16 (0.87)\n5.10 (0.87)\n4.44 (0.75)\n4.47 (0.77)\nBayesian\nR\n2\n0.234\n0.245\n0.058\n0.056\nLOOIC\n137.87\n137.48\n131.18\n130.98\nP\n(\nβ\n>\n0\n)\n0.984\n0.988\n0.730\n0.696\nOpen in a new tab\nEC (ENC), information acquisition/education included in commercial (noncommercial) work. Standard errors are in parentheses.\nFinally, extra insight may be gleaned by considering more physical definitions of work based on energy expended. To study this, we incorporated data from the Compendium of Physical Activities (\n27\n) under the supposition that these numbers can be applied across disparate groups. The resulting analyses suggest that, although highly commercial people spend more time working, they do not necessarily spend more energy (\nSI Appendix\n, Figs. S6 and S7 and Tables S15–S19\n). Men in subsistence-oriented societies may even spend the most energy of all, consistent with past research (\n28\n). Commercial labor might thus offer some relief from the physical demands of subsistence work.\nIn sum, market participation does not seem to be accompanied by less work time in our data. To the contrary, men who engage in primarily commercial labor tend to work more both within and across societies—about 500 h more per year (roughly 2,900 h compared to 2,400 h). No such patterns are discernible for women, who work as much as highly commercial men across the board. This gender gap in subsistence-oriented societies accords with previous findings (\n7\n). However, even the least commercial people generally work harder than Sahlins claimed, notwithstanding significant variation across societies. Furthermore, these results may not necessarily translate into physical activity, as subsistence-oriented men seem to expend at least as much energy as anyone else, if not more.\nFor comparison, historical data suggest that, over the course of the Industrial Revolution, annual work time among men in London grew by about 1,000 h, from roughly 2,300 h to 3,300 h (\n9\n–\n11\n). Although there are obvious differences between 18th century English farmers and 20th century Amazonian horticulturalists, the latter can nonetheless help us glimpse a world in the midst of market integration. Our data provide evidence of a positive relationship between work and its commercial nature at low levels of economic complexity, which has been hypothesized to play an important role in major societal transitions. To the extent that push or pull factors are shared by people in these groups (\n29\n), we contribute prima facie evidence supporting such theories.\nWe remain agnostic about the causal processes involved, since our data do not allow us to clearly distinguish between various mechanisms. Social scientists have proposed several possible reasons for a positive relationship between work time and commercial activity. For example, standard economic analyses predict a rational increase in work when its prospective benefits are greater (the “substitution effect”), as when markets make available more or better products (\n30\n). Sahlins himself postulated that underlying preferences might change, arguing that markets kindle the intrinsic desire to consume (\n1\n). Consistent with this idea, economic experiments with hunter-gatherers reveal a link between market integration and the endowment effect (an excess reluctance to part with one’s goods; ref.\n31\n) as well as patience (required to defer gratification in favor of work; ref.\n32\n). Extra commercial work might also stem from suboptimal decision-making, due to inexperience with markets (\n33\n). These mechanisms and others are not mutually exclusive, and could reinforce or interfere with each other (and this picture is further complicated by intrahousehold dynamics which we only begin to explore—\nSI Appendix\n, Tables S13 and S14 and Fig. S4\n; ref.\n34\n). To fully grasp the motives behind time use requires richer documentation of what is gained and lost by following different pursuits, including the rewards, skills, and knowledge that can be acquired through various activities (e.g., ref.\n35\n). Note that we do not deny markets could enhance economic efficiency and reduce the need to work; this force acts against the observed association, pointing to the presence of opposing mechanisms such as those described above.\nWe also cannot directly assess how different activities affect well-being (cf. ref.\n29\n) or the quality of subjective experience (cf. ref.\n36\n), although the distinctive patterns of energy expenditure suggest a multidimensional story. Ecological conditions may induce temporal and spatial variation in work (\n37\n,\n38\n), with limited seasonality occurring in our data (\nSI Appendix\n, Fig. S5\n). Labor may be harsh and dangerous, and even some “leisure” might be better described as “enforced idleness,” as when a torrential downpour prevents hunting for subsistence (\n8\n). Indeed, although people may work less, life expectancy in these societies appears to be markedly shorter than in large modern countries, seen both in the present data (\nSI Appendix\n, Fig. S1\n) and elsewhere (\n39\n).\nBroadly, our results can be situated in a wider perspective on how labor changes over the course of societal transition. While findings such as ours link work to greater complexity among simpler societies (\n40\n,\n41\n), work hours in modern industrialized nations have persistently declined over the last century (\n42\n), and people in richer countries appear to work less (\n10\n). It is thus thought that work time follows an inverted U shape with respect to socioeconomic development (\n43\n). Our analyses indicate that a gap remains in work hours between subsistence-oriented and industrialized societies, although only time will tell whether the future holds a reunion with the work–life balance of our foraging forbearers.\nMaterials and Methods\nSmall-Scale Society Data.\nThe small-scale society data comprise part of the monograph series\nCross-Cultural Studies in Time Allocation\n(\n44\n), a product of the UCLA Time Allocation Project. These data were collected by a group of anthropologists between 1972 and 1987 in 14 small-scale societies around the world. Out of the 14 societies, we omit 5 due to either nonspot-check collection method or nonrepresentative sampling; for instance, data were gathered in several of these omitted societies for the purposes of childcare studies, and hence observations were only of children and adults while they were interacting with children. One more society is omitted due to an excessively high proportion of activities (35%) coded as unknown. As recommended in the monograph, we exclude the small fraction of incidentally collected data (in the Mekranoti, and the Machiguenga of Camaná) from people who did not live in the focal community or were not part of the designated random sample. Moreover, age data for the Mekranoti was in 5-y bins, so we imputed the age of each individual as the midpoint of their bin.\nIn the included societies, random individuals or groups of age 15 y and above were selected for observation at random times in the day using tables of random numbers. The anthropologist located the relevant individual and recorded the activity in which they were engaging at the moment they were spotted by the anthropologist, to avoid changes in behavior caused by the researcher’s presence. If contact could not be made with an individual at the time of observation, the observer attempted to ascertain their activities by asking third parties and later verifying this with the focal individual. Activities in each society were originally recorded using a brief coding scheme determined by the anthropologist attached to that society, in addition to a more detailed free-form text description. These activities were later standardized into a single scheme collectively agreed upon by all of the anthropologists. The standard taxonomy of activities consists of 10 broad categories broken down further into 62 specific subcategories which can be found in\nSI Appendix\n, Table S2\n.\nCertain activity imputations were made in some societies. First, sometimes Mekranoti went out on extended treks away from the village, accompanied by the anthropologist attached to their society. To refine the observations corresponding to randomly selected people who remained in the village while the anthropologist was away, we resampled the more detailed data from when the anthropologist was present and assigned the resulting observations to the missing data. For a given such data point, the resampling distribution was determined by an iteratively expanding window which first consisted of the observations gathered within 3 h of the event time on any day within 2 mo of the event date. If no such observations were found, the window iteratively expanded by 3 h and 1 mo. Neither resampling variation nor different window sizes substantively alter the results. Second, Ye’kwana (both in the observed village and other nonobserved ones) sometimes visited other Ye’kwana villages. Thus, at the time of observation, some Ye’kwana from the observed village were in other villages and some Ye’kwana from other villages were in the observed village. Presuming the visiting Ye’kwana were engaged in similar activities, we resampled those visiting the observed village and assigned the resulting observations to the Ye’kwana from the observed village visiting elsewhere, using the same expanding window procedure. Finally, observations made of Efe moving camps or traveling between camps and villages were originally classified as “other.” To avoid understating the amount of work, we recoded these as noncommercial labor.\nOECD Data.\nThe OECD data come from the\nOECD Time Use Database\n(\n22\n). See ref.\n21\nfor details of each country’s survey. Out of the 26 OECD countries with available data, we excluded 3 countries because they spanned ages other than 15 y to 64 y, and 9 countries because their data collection did not span the year. This left 14 countries in the sample: Belgium (2005), Estonia (2009–2010), Finland (2009–2010), Germany (2001–2002), Italy (2008–2009), The Netherlands (2005–2006), New Zealand (2009–2010), Norway (2010), Poland (2003–2004), Slovenia (2000–2001), Spain (2009–2010), Turkey (2006), the United Kingdom (2005), and the United States (2014). Activities in the OECD data were standardized (by the OECD) into 5 broad categories broken down into 25 total subcategories. These can be found in\nSI Appendix\n, Table S3\n, along with the definition of work in terms of the subcategories.\nStatistical Analysis.\nThe analysis was implemented using the brms package in R 3.5.1 with default weakly informative priors (\n45\n).\n\n"};
+(function(){
+  const bar = document.getElementById('modebar');
+  const dotG = '<span class="dot" style="background:#34d399"></span>';
+  const dotGray = '<span class="dot" style="background:#9ca3af"></span>';
+  if (HAS_PDF || HAS_TEXT) bar.innerHTML = dotG + 'On each claim: <b>↗</b> opens the cited source in a new tab; <b>⊞ side window</b> opens it in one reused window you can dock on the right (next click swaps its content). PDFs jump to the page, text is highlighted. No server needed.';
+  else bar.innerHTML = dotGray + 'No viewable sources — the supporting sentence for each claim is quoted on the left (with a Copy button).';
+})();
+
+let activeId = null;
+function clearActive() { document.querySelectorAll('.active').forEach(e => e.classList.remove('active')); }
+function brush(id, from) {
+  // Two-way sync (owner walkthrough item 7): scroll the OPPOSITE panel from the
+  // one that was clicked — never the panel under the user's cursor.
+  clearActive();
+  const t = document.getElementById('text-' + id);
+  const c = document.getElementById('card-' + id);
+  if (t) t.classList.add('active');
+  if (c) {
+    if (c.style.display === 'none') {        // hidden by a verdict filter -> show All
+      const all = document.querySelector('.fbtn[data-f="all"]');
+      if (all) all.click();
+    }
+    c.classList.add('active');
+    if (from !== 'card') c.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  if (t && from === 'card') t.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function copyText(btn) {
+  navigator.clipboard.writeText(btn.getAttribute('data-quote'));
+  const o = btn.textContent; btn.textContent = 'Copied'; setTimeout(()=>btn.textContent=o, 1200);
+}
+function toggleDoc() {
+  const d = document.getElementById('doc');
+  d.classList.toggle('collapsed');
+  event.target.textContent = d.classList.contains('collapsed') ? 'expand' : 'collapse';
+}
+function toggleCoverage() {
+  const b = document.getElementById('covBars');
+  b.classList.toggle('collapsed');
+  event.target.textContent = b.classList.contains('collapsed') ? 'show' : 'hide';
+}
+// Master top-panel toggle (owner walkthrough item 5): collapse everything above
+// the two columns; the choice persists across runs (a UI preference, not run state).
+function setTop(hidden) {
+  const p = document.getElementById('topPanel');
+  const note = document.querySelector('.scopenote');
+  const btn = document.getElementById('topToggle');
+  if (p) p.style.display = hidden ? 'none' : '';
+  if (note) note.style.display = hidden ? 'none' : '';
+  if (btn) btn.textContent = hidden ? 'show header' : 'hide header';
+  try { localStorage.setItem('ptui:tophidden', hidden ? '1' : ''); } catch (e) {}
+}
+function toggleTop() {
+  const p = document.getElementById('topPanel');
+  setTop(p && p.style.display !== 'none');
+}
+try { if (localStorage.getItem('ptui:tophidden') === '1') setTop(true); } catch (e) {}
+function toggleAssess() {
+  const b = document.getElementById('assessBody');
+  b.classList.toggle('collapsed');
+  event.target.textContent = b.classList.contains('collapsed') ? 'expand' : 'collapse';
+}
+function toggleOmitted() {
+  const t = document.getElementById('omittedTail');
+  const open = t.classList.toggle('collapsed') === false;
+  const n = t.querySelectorAll('.card').length;
+  event.target.textContent = open ? 'Hide less-relevant' : ('Show ' + n + ' more (less relevant)');
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Sources can open either in a fresh new tab (target '_blank') or in ONE reused
+// "side window" you dock on the right. The side window has a fixed name, so every
+// side-window click navigates that same window instead of stacking tabs. Per the
+// HTML spec, window features are ignored when a named window already exists, so it
+// keeps the size/position you give it manually (no re-snapping on each click).
+const SIDE_WIN = 'pt_source_side';
+const SIDE_FEATURES = 'width=900,height=1024';   // forces a window (not a tab) on first open; ignored on reuse
+
+// Build a self-contained, highlighted HTML document for a text source.
+// Exact match first; then whitespace-tolerant (sentences may span the source's
+// original newlines — table rows merged in segmentation, wrapped lines, etc.).
+function findInText(text, needle) {
+  if (!needle) return null;
+  const i = text.indexOf(needle);
+  if (i !== -1) return {start: i, len: needle.length};
+  try {
+    const pat = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ +/g, '\\s+');
+    const m = text.match(new RegExp(pat));
+    if (m) return {start: m.index, len: m[0].length};
+  } catch (e) {}
+  return null;
+}
+
+function buildTextDoc(pid, sentence, snippet) {
+  const text = SOURCE_TEXTS[pid] || '';
+  const hit = findInText(text, sentence) || findInText(text, snippet);
+
+  let body, note = '';
+  if (hit) {
+    body = escapeHtml(text.slice(0, hit.start)) + '<mark id="hl">'
+         + escapeHtml(text.slice(hit.start, hit.start + hit.len))
+         + '</mark>' + escapeHtml(text.slice(hit.start + hit.len));
+  } else {
+    body = escapeHtml(text);
+    note = "<p style=\"color:#b45309;font-style:italic\">Couldn't locate the exact sentence — showing the full source.</p>";
+  }
+  return '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Source text</title>'
+    + '<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;'
+    + 'background:#fff;margin:0;padding:24px 28px;line-height:1.7;font-size:14px;'
+    + 'white-space:pre-wrap;word-wrap:break-word;}mark{background:#fde047;padding:1px 0;border-radius:2px;}</style>'
+    + '</head><body onload="var h=document.getElementById(\'hl\');if(h)h.scrollIntoView({block:\'center\'});">'
+    + note + body + '</body></html>';
+}
+
+// Open a text source. target='_blank' -> new tab each time; target=SIDE_WIN -> reused window.
+function openTextSource(pid, sentence, snippet, target, features) {
+  const doc = buildTextDoc(pid, sentence, snippet);
+  let w = window.open('', target, features || '');
+  if (!w) { alert('Please allow pop-ups to open the source.'); return; }
+  try {
+    w.document.open(); w.document.write(doc); w.document.close();
+  } catch (e) {
+    // The reused window currently holds a PDF (not script-writable) — navigate it via a blob instead.
+    const url = URL.createObjectURL(new Blob([doc], {type:'text/html'}));
+    w = window.open(url, target, features || '');
+  }
+  if (w) w.focus();
+}
+
+// Open a PDF deep-link in the reused side window (native PDF viewer, jumps to #page).
+function openPdfSide(href) {
+  const w = window.open(href, SIDE_WIN, SIDE_FEATURES);
+  if (!w) { alert('Please allow pop-ups to open the PDF in the side window.'); return; }
+  w.focus();
+}
+
+document.querySelectorAll('.opentext-btn').forEach(function(b) {
+  b.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    openTextSource(b.dataset.pid, b.dataset.sentence || '', b.dataset.snippet || '', '_blank', '');
+  });
+});
+document.querySelectorAll('.side-btn').forEach(function(b) {
+  b.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    if (b.dataset.kind === 'pdf') openPdfSide(b.dataset.href);
+    else openTextSource(b.dataset.pid, b.dataset.sentence || '', b.dataset.snippet || '', SIDE_WIN, SIDE_FEATURES);
+  });
+});
+document.querySelectorAll('.fbtn').forEach(function(b) {
+  b.addEventListener('click', function() {
+    document.querySelectorAll('.fbtn').forEach(function(x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    const f = b.dataset.f;
+    document.querySelectorAll('#claimList > .card').forEach(function(c) {
+      const show = (f === 'all') ? true
+                 : (f === 'hunchecked') ? !c.classList.contains('hchecked')
+                 : c.classList.contains(f);
+      c.style.display = show ? '' : 'none';
+    });
+  });
+});
+document.querySelectorAll('.deeplink, .paperlink').forEach(function(a) {
+  a.addEventListener('click', function(ev) { ev.stopPropagation(); });
+});
+
+// ---- Review loop (triage marks, repair-brief / review.json export) ----
+const RUN_ID = '92e6fd6b618a';
+const REVIEW_DATA = {"run": {"text_file": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/project/my_text.md", "run_name": "forager_work_hours", "sources_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/project/sources", "output_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/app", "project_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/project", "model": "gemini/gemini-2.5-flash-lite", "timestamp": "2026-07-11 19:13:28"}, "claims": [{"id": "t0", "text": "Whether foragers worked less than farmers is one of anthropology's most durable debates, launched by Marshall Sahlins's argument that hunter-gatherers were an \"original affluent society\" who, despite owning little, needed only two to four hours of work a day.", "markers": ["sahlins1972"], "own_kind": null, "verdict": "supported", "method": "llm", "proof_state": "full", "reason": "The passage directly supports the claim by stating that hunters and gatherers \"need not work longer getting food than do primitive cultivators,\" which aligns with Sahlins's argument about their work hours.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "covering": null, "over_citation": null, "evidences": [{"source_title": "The Original Affluent Society — Sahlins, Marshall", "sentence": "THE ORIGINAL AFFLUENT SOCIETY 33 Comparable data are beginning to appear in reports on other primitive agri- culturalists from many parts of the world.", "supported": true}], "alternatives": []}, {"id": "t1", "text": "That claim rested heavily on Richard Lee's fieldwork among the Ju/'hoansi (!Kung); Lee's own later accounting, once food processing, tool-making, and housework were included, raised total work closer to a standard industrial week, a revision anthropologists still cite as a caution against the low original estimate. Fieldwork with the Ache of eastern Paraguay directly tested the foraging-versus-farming comparison within a single population: once families that had been full-time foragers settled at an agricultural mission, both men and women worked fewer hours each day than they had in the forest, ate less, and shifted their childcare and labor patterns.", "markers": ["hawkes1987"], "own_kind": null, "verdict": "supported", "method": "llm", "proof_state": "partial", "reason": "The passage directly supports the claim that Ache men and women worked fewer hours each day after settling at an agricultural mission compared to when they were foragers.", "confidence": "low", "second_opinion": null, "partial_support": {"reason": "The passage does not mention Richard Lee's fieldwork among the Ju/'hoansi (!Kung) or his later accounting of work hours.", "component_hunt": [{"component": "Richard Lee's fieldwork among the Ju/'hoansi (!Kung) or his later accounting of work hours", "found_in": [], "searched": 0}]}, "component_check": null, "covering": {"uncovered": ["Fieldwork with the Ache of eastern Paraguay tested the foraging-versus-farming comparison within a single population", "Richard Lee's fieldwork among the Ju/'hoansi (!Kung)", "Lee's later accounting raised total work closer to a standard industrial week once food processing, tool-making, and housework were included", "anthropologists still cite Lee's revision as a caution against the low original estimate", "Richard Lee"], "common_knowledge": []}, "over_citation": null, "evidences": [{"source_title": "Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena", "sentence": "We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.", "supported": true}], "alternatives": []}, {"id": "t2", "text": "Larger, more recent comparisons suggest the leisure gap tracks market exposure rather than subsistence mode alone. Analyzing 45,019 time-use observations from 863 adults across eight small-scale societies plus industrialized-country data, one study found shifting to fully commercial labor was linked to men's average work rising from about 45 to 55 hours weekly, while women's held near 55 hours regardless of market integration.", "markers": ["bhui2019"], "own_kind": null, "verdict": "supported", "method": "llm", "proof_state": "full", "reason": "The passage directly supports the claim's assertion about the number of time-use observations, adults, and societies studied, as well as the findings regarding men's and women's work hours in relation to market integration.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "covering": null, "over_citation": null, "evidences": [{"source_title": "Work Time and Market Integration in the Original Affluent Society — Bhui, Rahul and Chudek, Maciej and Henrich, Joseph", "sentence": "Both within and across societies, we find evidence of a positive correlation between work time and market engagement for men, although not for women.", "supported": true}], "alternatives": []}, {"id": "t3", "text": "Consistent with this, a study of the Agta of the Philippines found individuals in camps more engaged in agricultural and other non-foraging work had substantially less leisure, a difference driven mainly by women's changing time use.", "markers": ["dyble2019"], "own_kind": null, "verdict": "supported", "method": "llm", "proof_state": "full", "reason": "The passage directly states that the negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent less time at leisure in camps more heavily engaged in agriculture and other non-foraging work.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "covering": null, "over_citation": null, "evidences": [{"source_title": "Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg", "sentence": "The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.", "supported": true}], "alternatives": []}, {"id": "t4", "text": "No single, universal hunter-gatherer work-hour figure exists to set against agricultural societies; totals depend on which activities are counted and how exposed a group is to markets. What looks fairly robust is that commercialization, more than farming itself, tends to lengthen the working day.", "markers": [], "own_kind": {"kind": "fact", "reason": "The passage makes specific, checkable assertions about the relationship between commercialization, farming, and working hours in the real world."}, "verdict": "own", "method": "none", "proof_state": null, "reason": "no_citation_marker", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "covering": null, "over_citation": null, "evidences": [], "alternatives": []}]};
+
+const REVIEW_KEY = 'ptreview:' + RUN_ID;
+const MARK_NAMES = {wrong_source: 'needs a different source',
+                    rewrite: 'text needs rewriting',
+                    verdict_wrong: 'verdict is wrong',
+                    needs_citation: 'needs a citation',
+                    other: 'other (see note)'};
+let review = {};
+try { review = JSON.parse(localStorage.getItem(REVIEW_KEY) || '{}'); } catch (e) { review = {}; }
+
+function isMarked(r) { return r && ((r.marks && r.marks.length) || (r.note && r.note.trim())); }
+function markCount() { return Object.values(review).filter(isMarked).length; }
+function saveReview() {
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(review));
+  updateReviewBar();
+}
+function checkedCount() { return Object.values(review).filter(function(r) { return r && r.checked; }).length; }
+function updateReviewBar() {
+  const n = markCount();
+  const el = document.getElementById('revCount');
+  const total = document.querySelectorAll('.triage').length;
+  const nc = checkedCount();
+  if (el) el.textContent = n + ' claim' + (n === 1 ? '' : 's') + ' marked · ' + nc + '/' + total + ' checked';
+  const cN = document.getElementById('chkN'), uN = document.getElementById('unchkN');
+  if (cN) cN.textContent = nc;
+  if (uN) uN.textContent = total - nc;
+}
+function syncNote(t, r) {
+  const ta = t.querySelector('.tnote');
+  if (ta) ta.style.display = isMarked(r) ? '' : 'none';
+}
+function initTriage() {
+  document.querySelectorAll('.triage').forEach(function(t) {
+    const id = t.dataset.id;
+    const st = review[id] || {marks: [], note: ''};
+    review[id] = st;
+    t.querySelectorAll('.tbtn').forEach(function(b) {
+      if ((st.marks || []).indexOf(b.dataset.mark) !== -1) b.classList.add('on');
+      b.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        const r = review[id];
+        r.marks = r.marks || [];
+        const i = r.marks.indexOf(b.dataset.mark);
+        if (i === -1) r.marks.push(b.dataset.mark); else r.marks.splice(i, 1);
+        b.classList.toggle('on');
+        syncNote(t, r);
+        saveReview();
+      });
+    });
+    const ta = t.querySelector('.tnote');
+    if (ta) {
+      ta.value = st.note || '';
+      ta.addEventListener('click', function(ev) { ev.stopPropagation(); });
+      ta.addEventListener('input', function() { st.note = ta.value; saveReview(); });
+    }
+    // "✓ checked" = the human LOOKED at this card (coverage tracking, blind-
+    // review loop). Checked with no repair marks = human-confirmed good row.
+    const cb = t.querySelector('.cbtn');
+    if (cb) {
+      const card = document.getElementById('card-' + id);
+      if (st.checked) { cb.classList.add('on'); if (card) card.classList.add('hchecked'); }
+      cb.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        st.checked = !st.checked;
+        cb.classList.toggle('on', st.checked);
+        if (card) card.classList.toggle('hchecked', st.checked);
+        saveReview();
+      });
+    }
+    syncNote(t, st);
+  });
+  updateReviewBar();
+}
+function reviewedClaims() {
+  return REVIEW_DATA.claims.filter(function(c) { return isMarked(review[c.id]); })
+    .map(function(c) {
+      const r = review[c.id];
+      return Object.assign({}, c, {marks: (r.marks || []).slice(), note: (r.note || '').trim()});
+    });
+}
+function reviewFileName() {
+  // Distinguishable name (owner walkthrough item 3): consumers accept any
+  // review*.json, so run name + date never break the /apply-review flow.
+  const d = new Date().toISOString().slice(0, 10);
+  return 'review_' + (REVIEW_DATA.run.run_name || 'run') + '_' + d + '.json';
+}
+
+// Remembered save location (owner walkthrough item 4). Chromium's File System
+// Access API works on file:// — the picked directory handle persists in
+// IndexedDB, so "set once, saves there forever". Firefox has no such API; the
+// plain <a download> (browser Downloads dir) stays as the universal fallback.
+const UI_DB = 'ptui';
+function idbOpen() {
+  return new Promise(function(res, rej) {
+    const r = indexedDB.open(UI_DB, 1);
+    r.onupgradeneeded = function() { r.result.createObjectStore('handles'); };
+    r.onsuccess = function() { res(r.result); };
+    r.onerror = function() { rej(r.error); };
+  });
+}
+function idbGet(key) {
+  return idbOpen().then(function(db) {
+    return new Promise(function(res, rej) {
+      const r = db.transaction('handles').objectStore('handles').get(key);
+      r.onsuccess = function() { res(r.result); };
+      r.onerror = function() { rej(r.error); };
+    });
+  });
+}
+function idbSet(key, val) {
+  return idbOpen().then(function(db) {
+    return new Promise(function(res, rej) {
+      const r = db.transaction('handles', 'readwrite').objectStore('handles').put(val, key);
+      r.onsuccess = function() { res(); };
+      r.onerror = function() { rej(r.error); };
+    });
+  });
+}
+async function chooseSaveDir() {
+  try {
+    const dir = await window.showDirectoryPicker({mode: 'readwrite'});
+    await idbSet('reviewDir', dir);
+    flashSaveLoc('Reviews will save to “' + dir.name + '”');
+  } catch (e) { /* user cancelled */ }
+}
+async function savedDir() {
+  try {
+    const dir = await idbGet('reviewDir');
+    if (!dir) return null;
+    let p = await dir.queryPermission({mode: 'readwrite'});
+    if (p !== 'granted') p = await dir.requestPermission({mode: 'readwrite'});
+    return p === 'granted' ? dir : null;
+  } catch (e) { return null; }
+}
+function flashSaveLoc(msg) {
+  const el = document.getElementById('revCount');
+  if (!el) return;
+  const o = el.textContent; el.textContent = msg;
+  setTimeout(function() { updateReviewBar(); }, 2500);
+}
+async function downloadReview() {
+  if (!markCount() && !checkedCount()) { alert('Mark or ✓-check at least one claim first (buttons at the bottom of each card).'); return; }
+  const checkedIds = Object.keys(review).filter(function(k) { return review[k] && review[k].checked; });
+  const payload = {run: REVIEW_DATA.run, exported: new Date().toISOString(),
+                   marks: reviewedClaims(), checked: checkedIds};
+  const json = JSON.stringify(payload, null, 2);
+  const name = reviewFileName();
+  if (window.showSaveFilePicker) {                 // Chromium: remembered folder
+    const dir = await savedDir();
+    if (dir) {
+      try {
+        const fh = await dir.getFileHandle(name, {create: true});
+        const w = await fh.createWritable();
+        await w.write(json); await w.close();
+        flashSaveLoc('Saved ' + name + ' to “' + dir.name + '”');
+        return;
+      } catch (e) { /* fall through to plain download */ }
+    }
+  }
+  const blob = new Blob([json], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+}
+(function() {   // the picker button only makes sense where the API exists
+  const b = document.getElementById('saveLocBtn');
+  if (b && !window.showDirectoryPicker) b.style.display = 'none';
+})();
+function buildBrief() {
+  const run = REVIEW_DATA.run;
+  const items = reviewedClaims();
+  const L = [];
+  L.push('# Repair brief — grounding review');
+  L.push('');
+  L.push('Article file: ' + run.text_file);
+  L.push('Sources folder: ' + run.sources_dir);
+  L.push('Run folder: ' + run.output_dir + '  (analysis.json and review.json live here)');
+  L.push('Verified with ' + run.model + ' on ' + run.timestamp + '.');
+  L.push('');
+  L.push('## Ground rules for the fixing assistant');
+  L.push('- Edit the article file; keep every [[key]] citation marker intact (keys map to source files via the references list).');
+  L.push('- Minor wording fixes (hedging, precision, dropping an unsupported qualifier): apply directly.');
+  L.push('- Conceptual changes (the argument itself shifts): show old -> new and ask the author first.');
+  L.push('- Never invent citations, sources, or evidence.');
+  L.push('- Items marked "verdict is wrong" are feedback about the verification tool: do NOT change their text; append them to <run folder>/verdict_feedback.json instead.');
+  L.push('- New sources found via Claude Science come back by merging the export: python3 import_claude_research.py --input <export.md or .bib> --merge-into ' + (run.project_dir || '<project folder>') + '  — then python3 download_sources.py --manifest <project folder>/sources_manifest.json and cite the new [[key]]s.');
+  L.push('- When done, re-verify: python3 verify_my_text.py --text <article> --sources <sources folder> --output-dir <run folder>  (unchanged claims are not re-judged).');
+  L.push('');
+  L.push('## Claims (' + items.length + ' marked)');
+  items.forEach(function(c) {
+    const names = (c.marks || []).map(function(m) { return MARK_NAMES[m] || m; });
+    L.push('');
+    L.push('### ' + c.id + ' — ' + (c.verdict || '').toUpperCase()
+           + (c.confidence ? ' (judge confidence: ' + c.confidence + ')' : '')
+           + ' — marked: ' + (names.join(', ') || 'note only'));
+    L.push('');
+    L.push('Text: "' + c.text + '"');
+    if (c.markers && c.markers.length)
+      L.push('Cites: ' + c.markers.map(function(m) { return '[[' + m + ']]'; }).join(' '));
+    if (c.reason) L.push('Judge: ' + c.reason);
+    if (c.second_opinion)
+      L.push('Second opinion (' + (c.second_opinion.model || 'other model') + ') DISAGREES — would say '
+             + c.second_opinion.verdict + ': ' + (c.second_opinion.reason || ''));
+    if (c.partial_support)
+      L.push('Partial support: the cited sources back the claim in general, but a specific '
+             + 'component is in none of them: ' + (c.partial_support.reason || '')
+             + ' — verify that part or trim it. The verdict stays supported.');
+    if (c.over_citation && c.over_citation.sources && c.over_citation.sources.length)
+      L.push('Possible over-citation: ' + c.over_citation.sources.join(', ')
+             + ' — the other cited sources already cover the claim and this one does not back '
+             + 'it alone. Consider moving or trimming the citation. Not a correctness problem.');
+    if (c.own_kind && c.own_kind.kind === 'fact')
+      L.push('Citation needed? This uncited passage asserts a checkable fact: '
+             + (c.own_kind.reason || '') + ' — find and cite a source for it (or the author confirms it as their own).');
+    if (c.covering && c.covering.uncovered && c.covering.uncovered.length) {
+      const commonSet = c.covering.common_knowledge || [];
+      const gaps = c.covering.uncovered.filter(function(u) { return commonSet.indexOf(u) === -1; });
+      if (gaps.length)
+        L.push('Coverage gap: no displayed sentence proves: ' + gaps.join('; ')
+               + ' — find the proving sentence in the cited source(s), or add a citation / rewrite for that part.');
+      if (commonSet.length)
+        L.push('Common knowledge (no action needed unless the author disagrees): ' + commonSet.join('; '));
+    }
+    (c.evidences || []).forEach(function(e) {
+      if (e.sentence)
+        L.push('- Evidence (' + (e.supported ? 'supports' : 'does not support') + ') from '
+               + (e.source_title || 'unknown source') + ': "' + e.sentence + '"');
+    });
+    if (c.note) L.push('Author note: ' + c.note);
+    if ((c.marks || []).indexOf('wrong_source') !== -1) {
+      if (c.alternatives && c.alternatives.length) {
+        L.push('Closest passages in the OTHER sources of this run (re-citation candidates):');
+        c.alternatives.forEach(function(a) {
+          L.push('- ' + (a.source_title || a.paper_id) + ' (relevance ' + a.relevance + '): "'
+                 + (a.evidence || a.text) + '"');
+        });
+      }
+      L.push('If none of the run\'s sources fits, research request (paste into Claude Science / any deep-research tool):');
+      L.push('> Find published sources that support this claim: "' + c.text + '". Return a short report with full citations (title, authors, year, DOI or URL) and the exact supporting passage from each.');
+    }
+    if ((c.marks || []).indexOf('rewrite') !== -1)
+      L.push('Task: rewrite this claim minimally so the quoted evidence from its cited source(s) fully supports it.');
+    if ((c.marks || []).indexOf('needs_citation') !== -1) {
+      L.push('Task: this passage should cite a source — find one and add a [[key]] citation (register the source in the project first if it is new).');
+      L.push('Research request (paste into Claude Science / any deep-research tool):');
+      L.push('> Find published sources that support this claim: "' + c.text + '". Return a short report with full citations (title, authors, year, DOI or URL) and the exact supporting passage from each.');
+    }
+    if ((c.marks || []).indexOf('verdict_wrong') !== -1)
+      L.push('Task: tool feedback only — record {claim id, text, tool verdict, author disagreement, note} in verdict_feedback.json. Do not edit the article text for this item.');
+    if ((c.marks || []).indexOf('other') !== -1)
+      L.push('Task: free-form — read the author note above and decide the right action; if the intent is unclear, ASK the author (surface it) instead of guessing an edit.');
+  });
+  return L.join('\n');
+}
+function copyBrief() {
+  if (!markCount()) { alert('Mark at least one claim first (buttons at the bottom of each card).'); return; }
+  navigator.clipboard.writeText(buildBrief());
+  const b = document.getElementById('briefBtn');
+  if (b) { const o = b.textContent; b.textContent = 'Copied'; setTimeout(function() { b.textContent = o; }, 1200); }
+}
+function buildScienceRequest() {
+  const run = REVIEW_DATA.run;
+  const items = reviewedClaims().filter(function(c) {
+    return (c.marks || []).indexOf('wrong_source') !== -1;
+  });
+  const L = [];
+  L.push('Research request: I wrote an article and a verification tool checked every cited claim against its source. The claims below are the ones whose CURRENT source does not support them — I need better published sources for each.');
+  L.push('');
+  L.push('For EACH claim:');
+  L.push('- find 1-3 published sources (papers, reports, reputable data) that DIRECTLY support it, each with full citation (title, authors, year, DOI or URL) and the exact supporting passage quoted;');
+  L.push('- if no credible source supports it, say so plainly — do not stretch a near-miss;');
+  L.push('- write the final report as a cited document with a bibliography, so I can export it with citations and merge the sources back into my project programmatically.');
+  L.push('');
+  L.push('The claims:');
+  items.forEach(function(c, i) {
+    L.push('');
+    L.push((i + 1) + '. "' + c.text + '"');
+    if (c.note) L.push('   My note: ' + c.note);
+    if (c.reason) L.push('   Why the current source failed: ' + c.reason);
+  });
+  return L.join('\n');
+}
+function copyScience() {
+  const n = reviewedClaims().filter(function(c) {
+    return (c.marks || []).indexOf('wrong_source') !== -1;
+  }).length;
+  if (!n) { alert('Mark at least one claim as "wrong source" first.'); return; }
+  navigator.clipboard.writeText(buildScienceRequest());
+  const b = document.getElementById('sciBtn');
+  if (b) { const o = b.textContent; b.textContent = 'Copied (' + n + ' claims)'; setTimeout(function() { b.textContent = o; }, 1500); }
+}
+initTriage();
+
+</script>
+</body></html>

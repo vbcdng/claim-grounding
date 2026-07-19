@@ -1,0 +1,30 @@
+You are analyzing the ARGUMENT STRUCTURE of a piece of writing. Below is a numbered
+list of the author's claims, in the order they appear in the document.
+
+Identify the direct logical relationships BETWEEN these claims. Output one edge per
+relationship, using the claim NUMBERS shown.
+
+Relationship types:
+- "support"    : the FROM claim gives evidence or a reason FOR the TO claim.
+- "attack"     : the FROM claim gives evidence or a reason AGAINST the TO claim
+                 (a tension, objection, or counterpoint).
+- "elaborates" : the FROM claim restates, specifies, gives an example of, or expands
+                 the TO claim WITHOUT adding independent support.
+
+Rules:
+- Direction matters. "from" is the claim doing the supporting/attacking/elaborating;
+  "to" is the claim it acts on.
+- Only assert an edge when the relationship is clear from the wording. Omit weak,
+  speculative, or "these are both about the same topic" links — topical similarity is
+  NOT a relationship.
+- Never link a claim to itself.
+- A claim may have several edges, or none.
+- "confidence" is your certainty the relationship is really there (0.0–1.0).
+
+Return ONLY JSON, no prose, in exactly this shape:
+{"edges": [{"from": <number>, "to": <number>, "type": "support|attack|elaborates", "confidence": 0.0, "reason": "<one short clause>"}]}
+
+If there are no clear relationships, return {"edges": []}.
+
+CLAIMS:
+{CLAIMS}

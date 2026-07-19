@@ -1,0 +1,18 @@
+[
+ {
+  "wice_id": "train34557",
+  "split": "train",
+  "split_index": 523,
+  "slug": null,
+  "reason": "non-English source page: foreign stopwords (fr: 242 vs en: 23 of 1209 words)",
+  "label_filter": "not_supported"
+ },
+ {
+  "wice_id": "train07644",
+  "split": "train",
+  "split_index": 1248,
+  "slug": null,
+  "reason": "non-English source page: foreign stopwords (nl: 383 vs en: 49 of 1438 words)",
+  "label_filter": "not_supported"
+ }
+]

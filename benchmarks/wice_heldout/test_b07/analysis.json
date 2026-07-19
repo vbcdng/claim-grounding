@@ -1,0 +1,2882 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 7 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section or a specific batch of data.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Following the United States' win at the 2015 FIFA Women's World Cup, Harris and her teammates became the first women's sports team to be honored with a Ticker Tape Parade in New York City.",
+   "markers": [
+    "ashlynharris"
+   ],
+   "paper_ids": [
+    "be35d05f5b15dc531c2434c2e296cc680fcbe2dc"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9098,
+   "evidence": {
+    "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+    "source_title": "ashlynharris",
+    "supported": true,
+    "sentence": "It was the first-ever ticker-tape parade in New York for a women's sports team \u2014 a fact not lost on the crowd.",
+    "page": 1,
+    "snippet": "It was the first-ever ticker-tape parade in",
+    "cosine": 0.9098,
+    "reason": "The passage explicitly states that the ticker-tape parade was the first-ever for a women's sports team, directly supporting the claim.",
+    "window": "were distinctly high-pitched. It was the first-ever ticker-tape parade in New York for a women's sports team \u2014 a fact not lost on the crowd. A 4th floor window on a building near the route was decorated with a homemade sign that reads \"Girl Power\" with four American flags."
+   },
+   "evidences": [
+    {
+     "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+     "source_title": "ashlynharris",
+     "supported": true,
+     "sentence": "It was the first-ever ticker-tape parade in New York for a women's sports team \u2014 a fact not lost on the crowd.",
+     "page": 1,
+     "snippet": "It was the first-ever ticker-tape parade in",
+     "cosine": 0.9098,
+     "reason": "The passage explicitly states that the ticker-tape parade was the first-ever for a women's sports team, directly supporting the claim.",
+     "window": "were distinctly high-pitched. It was the first-ever ticker-tape parade in New York for a women's sports team \u2014 a fact not lost on the crowd. A 4th floor window on a building near the route was decorated with a homemade sign that reads \"Girl Power\" with four American flags."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the ticker-tape parade was the first-ever for a women's sports team, directly supporting the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "United States won the 2015 FIFA Women's World Cup",
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "sentence": "(Photo: Michael Loccisano, Getty Images) NEW YORK (AP) \u2014 Throngs of young girls and other flag-waving fans of the U.S. women's soccer team filled lower Manhattan Friday morning for a ticker-tape parade celebrating its Women's World Cup victory.",
+      "page": 1,
+      "snippet": "(Photo: Michael Loccisano, Getty Images) NEW YORK"
+     },
+     {
+      "component": "Harris and her teammates were honored with a Ticker Tape Parade in New York City",
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "sentence": "(Photo: Michael Loccisano, Getty Images) NEW YORK (AP) \u2014 Throngs of young girls and other flag-waving fans of the U.S. women's soccer team filled lower Manhattan Friday morning for a ticker-tape parade celebrating its Women's World Cup victory.",
+      "page": 1,
+      "snippet": "(Photo: Michael Loccisano, Getty Images) NEW YORK"
+     },
+     {
+      "component": "This was the first time a women's sports team received a Ticker Tape Parade in New York City",
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "sentence": "It was the first-ever ticker-tape parade in New York for a women's sports team \u2014 a fact not lost on the crowd.",
+      "page": 1,
+      "snippet": "It was the first-ever ticker-tape parade in"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "text": "(Photo: Michael Loccisano, Getty Images) NEW YORK (AP) \u2014 Throngs of young girls and other flag-waving fans of the U.S. women's soccer team filled lower Manhattan Friday morning for a ticker-tape parade celebrating its Women's World Cup victory. The parade-goers \u2014 many wearing red, white and blue \u2014 started gathering at 3:30 a.m. along the Canyon of Heroes, a stretch of Broadway where the nation's largest city has honored its legends. When the parade got underway at 11 a.m., the crowd was as much as 10 deep along the route. Chants of \"USA! USA!\" were distinctly high-pitched. It was the first-ever ticker-tape parade in New York for a women's sports team \u2014 a fact not lost on the crowd.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t2",
+   "text": "The hyper-velocity rounds weigh 10 kg (23 lb), are 18 in (460 mm), and are fired at Mach 7.",
+   "markers": [
+    "railgun"
+   ],
+   "paper_ids": [
+    "c9d3ec5c6875c45b78a93c8dd80da911e58dd527"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c9d3ec5c6875c45b78a93c8dd80da911e58dd527",
+    "source_title": "railgun",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "According to the Navy, each 18-inch projectile costs about $25,000, compared to $500,000 to $1.5 million for conventional missiles.",
+    "page": 1,
+    "snippet": "According to the Navy, each 18-inch projectile",
+    "reason": "the weight of the hyper-velocity rounds is not stated as 10 kg (23 lb), but rather as 23 pounds.",
+    "votes": "2-0",
+    "window": "According to the Navy, each 18-inch projectile costs about $25,000, compared to $500,000 to $1.5 million for conventional missiles. It uses a form of electromagnetic energy known as the Lorentz force to hurl a 23-pound projectile at speeds exceeding Mach 7. Allen McDuffee 6:30 am # Navy's New Railgun Can Hurl a Shell Over 5,000 MPH The Navy is developing electromagnetic railgun launchers, long-range weapons that launch projectiles using electricity instead of chemical propellants."
+   },
+   "evidences": [
+    {
+     "paper_id": "c9d3ec5c6875c45b78a93c8dd80da911e58dd527",
+     "source_title": "railgun",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "According to the Navy, each 18-inch projectile costs about $25,000, compared to $500,000 to $1.5 million for conventional missiles.",
+     "page": 1,
+     "snippet": "According to the Navy, each 18-inch projectile",
+     "reason": "the weight of the hyper-velocity rounds is not stated as 10 kg (23 lb), but rather as 23 pounds.",
+     "votes": "2-0",
+     "window": "According to the Navy, each 18-inch projectile costs about $25,000, compared to $500,000 to $1.5 million for conventional missiles. It uses a form of electromagnetic energy known as the Lorentz force to hurl a 23-pound projectile at speeds exceeding Mach 7. Allen McDuffee 6:30 am # Navy's New Railgun Can Hurl a Shell Over 5,000 MPH The Navy is developing electromagnetic railgun launchers, long-range weapons that launch projectiles using electricity instead of chemical propellants."
+    }
+   ],
+   "votes": null,
+   "reason": "the weight of the hyper-velocity rounds is not stated as 10 kg (23 lb), but rather as 23 pounds.",
+   "component_check": {
+    "found": [
+     "The hyper-velocity rounds are 18 in (460 mm)",
+     "The hyper-velocity rounds are fired at Mach 7"
+    ],
+    "missing": [
+     "The hyper-velocity rounds weigh 10 kg (23 lb)"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The hyper-velocity rounds are 18 in (460 mm)",
+      "paper_id": "c9d3ec5c6875c45b78a93c8dd80da911e58dd527",
+      "source_title": "railgun",
+      "sentence": "According to the Navy, each 18-inch projectile costs about $25,000, compared to $500,000 to $1.5 million for conventional missiles.",
+      "page": 1
+     },
+     {
+      "component": "The hyper-velocity rounds are fired at Mach 7",
+      "paper_id": "c9d3ec5c6875c45b78a93c8dd80da911e58dd527",
+      "source_title": "railgun",
+      "sentence": "It uses a form of electromagnetic energy known as the Lorentz force to hurl a 23-pound projectile at speeds exceeding Mach 7.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The hyper-velocity rounds weigh 10 kg (23 lb), are 18 in (460 mm), and are fired at Mach 7.",
+    "reason": "The passage asserts specific facts and figures about the hyper-velocity rounds, which are directly attributed to the cited source. The attribution test is met as these are presented as findings from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states the projectile is 18 inches in length (460 mm) and weighs 10 kg, but the source only mentions a '23-pound projectile' and an '18-inch projectile' without specifying the dimension as length or providing a kilogram conversion.",
+    "rewrite_suggestion": "The hyper-velocity rounds weigh 23 lb, are 18-inch projectiles, and are fired at speeds exceeding Mach 7.",
+    "proofs": [
+     "It uses a form of electromagnetic energy known as the Lorentz force to hurl a 23-pound projectile at speeds exceeding Mach 7."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence about cost does not support any component of the claim. The source text does provide evidence for the weight (23 lb) and speed (exceeding Mach 7), but it does not state a kilogram equivalent for the weight, nor does it specify that the projectile is 18 inches in length (the phrase '18-inch projectile' is ambiguous and could refer to diameter). Thus, the author must either add a citation for these unsupported subclaims or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "It shows an elephant and a barrel, and is a play on words on the village's name, the elephant representing the syllable \"E\" and the barrel a \"tun\".",
+   "markers": [
+    "eatonnorfolk"
+   ],
+   "paper_ids": [
+    "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9193,
+   "evidence": {
+    "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+    "source_title": "eatonnorfolk",
+    "supported": true,
+    "sentence": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+    "page": 1,
+    "snippet": "The village sign, with its elephant and",
+    "cosine": 0.9193,
+    "reason": "The passage explicitly states the village sign features an elephant and a barrel and is a play on words, with 'E' for elephant and 'tun' for barrel, directly supporting the claim.",
+    "window": "Brewing was another local industry with such companies as Cooper Brown and Co. The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel. Eaton's population has grown substantially from a mere 153 in 1693 to 1,200 in 1871 and in the region of 12,000 in 1953."
+   },
+   "evidences": [
+    {
+     "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+     "source_title": "eatonnorfolk",
+     "supported": true,
+     "sentence": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+     "page": 1,
+     "snippet": "The village sign, with its elephant and",
+     "cosine": 0.9193,
+     "reason": "The passage explicitly states the village sign features an elephant and a barrel and is a play on words, with 'E' for elephant and 'tun' for barrel, directly supporting the claim.",
+     "window": "Brewing was another local industry with such companies as Cooper Brown and Co. The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel. Eaton's population has grown substantially from a mere 153 in 1693 to 1,200 in 1871 and in the region of 12,000 in 1953."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states the village sign features an elephant and a barrel and is a play on words, with 'E' for elephant and 'tun' for barrel, directly supporting the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "village sign shows an elephant and a barrel",
+      "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+      "source_title": "eatonnorfolk",
+      "sentence": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+      "page": 1,
+      "snippet": "The village sign, with its elephant and"
+     },
+     {
+      "component": "play on words on the village's name",
+      "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+      "source_title": "eatonnorfolk",
+      "sentence": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+      "page": 1,
+      "snippet": "The village sign, with its elephant and"
+     },
+     {
+      "component": "elephant represents the syllable \"E\"",
+      "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+      "source_title": "eatonnorfolk",
+      "sentence": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+      "page": 1,
+      "snippet": "The village sign, with its elephant and"
+     },
+     {
+      "component": "barrel represents \"tun\"",
+      "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+      "source_title": "eatonnorfolk",
+      "sentence": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+      "page": 1,
+      "snippet": "The village sign, with its elephant and"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+      "source_title": "eatonnorfolk",
+      "text": "The village sign, with its elephant and barrel, has been a topic of conversation over the years; it has occupied its position since 1956 and is a play on words; the 'E' for elephant and 'tun', another word for a barrel.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "After playing in some of Wycombe's pre-season friendlies, it was announced on 25 July 2017 that Tyson had signed a one-year deal to return to Wycombe.",
+   "markers": [
+    "nathantyson"
+   ],
+   "paper_ids": [
+    "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+    "source_title": "nathantyson",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract.",
+    "page": 1,
+    "snippet": "25 July 2017 Gareth Ainsworth has made",
+    "reason": "",
+    "votes": "2-0",
+    "window": "25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract. (meta data) TITLE: Tyson signs for the Chairboys - News - Wycombe Wanderers Skip to main content Wycombe Wanderers badge - Link to home # Wycombe Wanderers Search text Sign in/Register Club News ## Tyson signs for the Chairboys Forward signs a one-year deal. Tyson re-joins the club following a successful trial during pre-season, having left Adams Park for Nottingham Forest 11 years ago."
+   },
+   "evidences": [
+    {
+     "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+     "source_title": "nathantyson",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract.",
+     "page": 1,
+     "snippet": "25 July 2017 Gareth Ainsworth has made",
+     "reason": "",
+     "votes": "2-0",
+     "window": "25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract. (meta data) TITLE: Tyson signs for the Chairboys - News - Wycombe Wanderers Skip to main content Wycombe Wanderers badge - Link to home # Wycombe Wanderers Search text Sign in/Register Club News ## Tyson signs for the Chairboys Forward signs a one-year deal. Tyson re-joins the club following a successful trial during pre-season, having left Adams Park for Nottingham Forest 11 years ago."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Tyson signed a one-year deal to return to Wycombe",
+      "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+      "source_title": "nathantyson",
+      "sentence": "25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract.",
+      "page": 1,
+      "snippet": "25 July 2017 Gareth Ainsworth has made"
+     },
+     {
+      "component": "Tyson signed a one-year deal to return to Wycombe",
+      "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+      "source_title": "nathantyson",
+      "sentence": "(meta data) TITLE: Tyson signs for the Chairboys - News - Wycombe Wanderers Skip to main content Wycombe Wanderers badge - Link to home # Wycombe Wanderers Search text Sign in/Register Club News ## Tyson signs for the Chairboys Forward signs a one-year deal.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Tyson signs for the"
+     },
+     {
+      "component": "Announcement date was 25 July 2017",
+      "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+      "source_title": "nathantyson",
+      "sentence": "25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract.",
+      "page": 1,
+      "snippet": "25 July 2017 Gareth Ainsworth has made"
+     },
+     {
+      "component": "Tyson played in pre-season friendlies",
+      "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+      "source_title": "nathantyson",
+      "sentence": "Tyson re-joins the club following a successful trial during pre-season, having left Adams Park for Nottingham Forest 11 years ago.",
+      "page": 1,
+      "snippet": "Tyson re-joins the club following a successful"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+      "source_title": "nathantyson",
+      "text": "(meta data) TITLE: Tyson signs for the Chairboys - News - Wycombe Wanderers Skip to main content Wycombe Wanderers badge - Link to home # Wycombe Wanderers Search text Sign in/Register Club News ## Tyson signs for the Chairboys Forward signs a one-year deal. 25 July 2017 Gareth Ainsworth has made his second signing of the summer, securing forward Nathan Tyson on a one-year contract. Tyson re-joins the club following a successful trial during pre-season, having left Adams Park for Nottingham Forest 11 years ago.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t5",
+   "text": "\"The Simpsons\" is a joint production by Gracie Films and 20th Century Fox Television and syndicated by 20th Television.",
+   "markers": [
+    "thesimpsons"
+   ],
+   "paper_ids": [
+    "2665d87db86b5b051e421505e8de49e979ee7fab"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9758,
+   "evidence": {
+    "paper_id": "2665d87db86b5b051e421505e8de49e979ee7fab",
+    "source_title": "thesimpsons",
+    "supported": true,
+    "sentence": "THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television.",
+    "page": 1,
+    "snippet": "THE SIMPSONS is a Gracie Films Production",
+    "cosine": 0.9758,
+    "reason": "near-verbatim match (cosine 0.9758 \u2265 0.97)",
+    "window": "The series recently was nominated for a 2016 Emmy Award in the category of Outstanding Animated Program. THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television. The series was created by Matt Groening and developed by James L. Brooks, Matt Groening and Sam Simon."
+   },
+   "evidences": [
+    {
+     "paper_id": "2665d87db86b5b051e421505e8de49e979ee7fab",
+     "source_title": "thesimpsons",
+     "supported": true,
+     "sentence": "THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television.",
+     "page": 1,
+     "snippet": "THE SIMPSONS is a Gracie Films Production",
+     "cosine": 0.9758,
+     "reason": "near-verbatim match (cosine 0.9758 \u2265 0.97)",
+     "window": "The series recently was nominated for a 2016 Emmy Award in the category of Outstanding Animated Program. THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television. The series was created by Matt Groening and developed by James L. Brooks, Matt Groening and Sam Simon."
+    }
+   ],
+   "votes": null,
+   "reason": "near-verbatim match (cosine 0.9758 \u2265 0.97)",
+   "covering": {
+    "covered": [
+     {
+      "component": "\"The Simpsons\" is a joint production by Gracie Films",
+      "paper_id": "2665d87db86b5b051e421505e8de49e979ee7fab",
+      "source_title": "thesimpsons",
+      "sentence": "THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television.",
+      "page": 1,
+      "snippet": "THE SIMPSONS is a Gracie Films Production"
+     },
+     {
+      "component": "and 20th Century Fox Television",
+      "paper_id": "2665d87db86b5b051e421505e8de49e979ee7fab",
+      "source_title": "thesimpsons",
+      "sentence": "THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television.",
+      "page": 1,
+      "snippet": "THE SIMPSONS is a Gracie Films Production"
+     }
+    ],
+    "uncovered": [
+     "and syndicated by 20th Television"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "2665d87db86b5b051e421505e8de49e979ee7fab",
+      "source_title": "thesimpsons",
+      "text": "THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not mention syndication by 20th Television.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "syndication by 20th Television",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "syndicated by 20th Television",
+    "rewrite_suggestion": "The Simpsons is a joint production by Gracie Films and 20th Century Fox Television.",
+    "proofs": [
+     "THE SIMPSONS is a Gracie Films Production in association with 20th Century Fox Television."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the claim that 'The Simpsons' is a joint production by Gracie Films and 20th Century Fox Television. However, the claim also states that the show is 'syndicated by 20th Television,' a component that is not mentioned anywhere in the provided source text. Since this component is not provable from the source, the author must either add a citation for syndication or rewrite the claim to remove that part."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "In areas of water scarcity, such as the Thar Desert in Pakistan, coal mining and coal power plants would use significant quantities of water.",
+   "markers": [
+    "coal"
+   ],
+   "paper_ids": [
+    "647f92f2de615b17bd583d889fcee4a2e08df33a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8577,
+   "evidence": {
+    "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+    "source_title": "coal",
+    "supported": true,
+    "sentence": "Mining operations require around 250 litres of freshwater per tonne of coal.",
+    "page": 1,
+    "snippet": "Mining operations require around 250 litres of",
+    "cosine": 0.8577,
+    "reason": "The passage directly states that coal mining and thermal power plants require significant quantities of water, mentioning specific amounts for mining and power plant consumption.",
+    "window": "WATER NOT COAL The absurdity of coal mining and thermal power plants in areas with acute water stress should be self-evident. Mining operations require around 250 litres of freshwater per tonne of coal. The daily diet of coal for a thermal power plant is about 12 tonnes per MW."
+   },
+   "evidences": [
+    {
+     "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+     "source_title": "coal",
+     "supported": true,
+     "sentence": "Mining operations require around 250 litres of freshwater per tonne of coal.",
+     "page": 1,
+     "snippet": "Mining operations require around 250 litres of",
+     "cosine": 0.8577,
+     "reason": "The passage directly states that coal mining and thermal power plants require significant quantities of water, mentioning specific amounts for mining and power plant consumption.",
+     "window": "WATER NOT COAL The absurdity of coal mining and thermal power plants in areas with acute water stress should be self-evident. Mining operations require around 250 litres of freshwater per tonne of coal. The daily diet of coal for a thermal power plant is about 12 tonnes per MW."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that coal mining and thermal power plants require significant quantities of water, mentioning specific amounts for mining and power plant consumption.",
+   "covering": {
+    "covered": [
+     {
+      "component": "coal mining and coal power plants would use significant quantities of water",
+      "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+      "source_title": "coal",
+      "sentence": "Mining operations require around 250 litres of freshwater per tonne of coal.",
+      "page": 1,
+      "snippet": "Mining operations require around 250 litres of"
+     },
+     {
+      "component": "coal mining and coal power plants would use significant quantities of water",
+      "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+      "source_title": "coal",
+      "sentence": "A typical 500 MW coal power plant then needs another 1,300 million litres of freshwater a day for the electricity generation process, varies by the exact heating and condensing technology.",
+      "page": 1,
+      "snippet": "A typical 500 MW coal power plant"
+     },
+     {
+      "component": "water scarcity, such as the Thar Desert in Pakistan",
+      "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+      "source_title": "coal",
+      "sentence": "WATER NOT COAL The absurdity of coal mining and thermal power plants in areas with acute water stress should be self-evident.",
+      "page": 1,
+      "snippet": "WATER NOT COAL The absurdity of coal"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+      "source_title": "coal",
+      "text": "WATER NOT COAL The absurdity of coal mining and thermal power plants in areas with acute water stress should be self-evident. Mining operations require around 250 litres of freshwater per tonne of coal. The daily diet of coal for a thermal power plant is about 12 tonnes per MW. A typical 500 MW coal power plant then needs another 1,300 million litres of freshwater a day for the electricity generation process, varies by the exact heating and condensing technology.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "The charity is run by a board of trustees, who delegate the day-to-day management to a chief executive and his senior management team.",
+   "markers": [
+    "listofchurchespreservedb"
+   ],
+   "paper_ids": [
+    "00a431c4a58f6ef37ea791d82cb1003acf03f3c2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "00a431c4a58f6ef37ea791d82cb1003acf03f3c2",
+    "source_title": "listofchurchespreservedb",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Our board of trustees is chaired by Peter Ainsworth and its dedicated members all give their time and contribute their varied expertise, knowledge and experience without payment.",
+    "page": 1,
+    "snippet": "Our board of trustees is chaired by",
+    "reason": "The passage does not mention the delegation of day-to-day management to a chief executive and senior management team.",
+    "votes": "2-0",
+    "window": "Our board of trustees is chaired by Peter Ainsworth and its dedicated members all give their time and contribute their varied expertise, knowledge and experience without payment. As well as the part they play in board meetings some trustees are involved in sub committees and working groups which focus on specific areas of our work. The board meets quarterly. #### Our Board of Trustees #### Peter Ainsworth ##### Chairman of Trustees Peter Ainsworth was appointed Chairman of The Churches Conservation Trust for a three year term in July 2016."
+   },
+   "evidences": [
+    {
+     "paper_id": "00a431c4a58f6ef37ea791d82cb1003acf03f3c2",
+     "source_title": "listofchurchespreservedb",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Our board of trustees is chaired by Peter Ainsworth and its dedicated members all give their time and contribute their varied expertise, knowledge and experience without payment.",
+     "page": 1,
+     "snippet": "Our board of trustees is chaired by",
+     "reason": "The passage does not mention the delegation of day-to-day management to a chief executive and senior management team.",
+     "votes": "2-0",
+     "window": "Our board of trustees is chaired by Peter Ainsworth and its dedicated members all give their time and contribute their varied expertise, knowledge and experience without payment. As well as the part they play in board meetings some trustees are involved in sub committees and working groups which focus on specific areas of our work. The board meets quarterly. #### Our Board of Trustees #### Peter Ainsworth ##### Chairman of Trustees Peter Ainsworth was appointed Chairman of The Churches Conservation Trust for a three year term in July 2016."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the delegation of day-to-day management to a chief executive and senior management team.",
+   "component_check": {
+    "found": [
+     "The charity is run by a board of trustees."
+    ],
+    "missing": [
+     "The board of trustees delegates day-to-day management to a chief executive.",
+     "The chief executive has a senior management team."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The charity is run by a board of trustees.",
+      "paper_id": "00a431c4a58f6ef37ea791d82cb1003acf03f3c2",
+      "source_title": "listofchurchespreservedb",
+      "sentence": "Our board of trustees is chaired by Peter Ainsworth and its dedicated members all give their time and contribute their varied expertise, knowledge and experience without payment.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes the organizational structure of a charity, which is a factual statement that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the delegation of day-to-day management to a chief executive and his senior management team",
+    "rewrite_suggestion": "The charity is run by a board of trustees.",
+    "proofs": [
+     "Our board of trustees is chaired by Peter Ainsworth and its dedicated members all give their time and contribute their varied expertise, knowledge and experience without payment."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence and the source text describe the board of trustees but contain no mention of any delegation to a chief executive or senior management team. The claim's second component is entirely absent from the source, so the author must either add a citation for that subclaim or rewrite the claim to only assert what the source supports."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "In January 1991 Ford was arrested and charged with public intoxication on his college campus.",
+   "markers": [
+    "aarondford"
+   ],
+   "paper_ids": [
+    "a52db556248fdead7458ed11682db466ae44bed4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.92,
+   "evidence": {
+    "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+    "source_title": "aarondford",
+    "supported": true,
+    "sentence": "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication.",
+    "page": 1,
+    "snippet": "Ford also was arrested by Texas A&M",
+    "cosine": 0.92,
+    "reason": "The passage explicitly states that Ford was arrested in 1991 and charged with public intoxication on the Texas A&M University campus.",
+    "window": "Officials said they withheld the records because the police investigation did not result in a conviction. Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication. He was arrested again the following year when police responded to a \"disturbance\" at his apartment in Bryan, Texas."
+   },
+   "evidences": [
+    {
+     "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+     "source_title": "aarondford",
+     "supported": true,
+     "sentence": "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication.",
+     "page": 1,
+     "snippet": "Ford also was arrested by Texas A&M",
+     "cosine": 0.92,
+     "reason": "The passage explicitly states that Ford was arrested in 1991 and charged with public intoxication on the Texas A&M University campus.",
+     "window": "Officials said they withheld the records because the police investigation did not result in a conviction. Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication. He was arrested again the following year when police responded to a \"disturbance\" at his apartment in Bryan, Texas."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Ford was arrested in 1991 and charged with public intoxication on the Texas A&M University campus.",
+   "covering": {
+    "covered": [
+     {
+      "component": "charged with public intoxication",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication.",
+      "page": 1,
+      "snippet": "Ford also was arrested by Texas A&M"
+     },
+     {
+      "component": "on his college campus",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication.",
+      "page": 1,
+      "snippet": "Ford also was arrested by Texas A&M"
+     },
+     {
+      "component": "In January 1991 Ford was arrested",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication.",
+      "page": 1,
+      "snippet": "Ford also was arrested by Texas A&M",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "text": "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the passage states that Ford was not arrested and no criminal charges were filed for the public intoxication charge in 1991.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific month 'January' and the location 'on his college campus'",
+    "rewrite_suggestion": "In 1991 Ford was arrested by Texas A&M University police and charged with public intoxication.",
+    "proofs": [
+     "Ford also was arrested by Texas A&M University police in 1991 and charged with public intoxication."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source states Ford was arrested in 1991 by Texas A&M University police for public intoxication, but it does not specify the month (January) nor that the arrest occurred 'on his college campus'. The month is entirely absent from the source, and the location is not explicitly stated; 'by Texas A&M University police' does not necessarily mean on campus. Therefore the claim adds unsupported details that the author must either cite or remove."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "In a July 2018 interview with the \"Toronto Sun\", Baker confirmed that at least three albums' worth of unreleased material was recorded with Downie before his death, but stated that the band had yet to decide how it would be released.",
+   "markers": [
+    "thetragicallyhip"
+   ],
+   "paper_ids": [
+    "e302001d4ef1672aa40348cd1033a08255a76792"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+    "source_title": "thetragicallyhip",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "There's probably like three albums worth.",
+    "page": 1,
+    "snippet": "There's probably like three albums worth.",
+    "reason": "The passage directly supports all components of the claim, including the approximate quantity of unreleased material, the fact that it was recorded before Downie's death, and the uncertainty about its release.",
+    "votes": "2-0",
+    "window": "There's probably like three albums worth. Maybe unreleased Hip music: \"We'll have to talk about what we do with that at some point. But I'm not sure what any of it means yet.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+     "source_title": "thetragicallyhip",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "There's probably like three albums worth.",
+     "page": 1,
+     "snippet": "There's probably like three albums worth.",
+     "reason": "The passage directly supports all components of the claim, including the approximate quantity of unreleased material, the fact that it was recorded before Downie's death, and the uncertainty about its release.",
+     "votes": "2-0",
+     "window": "There's probably like three albums worth. Maybe unreleased Hip music: \"We'll have to talk about what we do with that at some point. But I'm not sure what any of it means yet.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly supports all components of the claim, including the approximate quantity of unreleased material, the fact that it was recorded before Downie's death, and the uncertainty about its release.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Baker confirmed at least three albums' worth of unreleased material was recorded with Downie before his death",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "There's probably like three albums worth.",
+      "page": 1,
+      "snippet": "There's probably like three albums worth."
+     },
+     {
+      "component": "Baker stated the band had yet to decide how it would be released",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "Maybe unreleased Hip music: \"We'll have to talk about what we do with that at some point.",
+      "page": 1,
+      "snippet": "Maybe unreleased Hip music: \"We'll have to"
+     },
+     {
+      "component": "interview with the \"Toronto Sun\"",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "\u2014 Read part two of Jane Stevenson's interview on The Hip's Up Cannabis deal in this weekend's Toronto Sun.",
+      "page": 1,
+      "snippet": "\u2014 Read part two of Jane Stevenson's"
+     }
+    ],
+    "uncovered": [
+     "July 2018"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "text": "Maybe unreleased Hip music: \"We'll have to talk about what we do with that at some point. There's probably like three albums worth. But I'm not sure what any of it means yet.\" Other side projects: \"We're still musicians. We're still songwriters. It's what we all love \u2013 being musically creative. We're creative in other ways too so I don't see that changing.\" \u2014 Read part two of Jane Stevenson's interview on The Hip's Up Cannabis deal in this weekend's Toronto Sun.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that the interview was with the 'Toronto Sun' or that it occurred in July 2018, nor does it mention a decision about how the material would be released.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "it occurred in July 2018",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Baker confirmed that at least three albums' worth",
+    "rewrite_suggestion": "In a July 2018 interview with the Toronto Sun, Baker stated that there is probably three albums' worth of unreleased material recorded with Downie before his death, but the band has yet to decide how it will be released.",
+    "proofs": [
+     "Published: July 5, 2018 Updated: July 5, 2018 8:08 AM EDT",
+     "\u2014 Read part two of Jane Stevenson's interview on The Hip's Up Cannabis deal in this weekend's Toronto Sun.",
+     "There's probably like three albums worth.",
+     "We'll have to talk about what we do with that at some point."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "There's probably like three albums worth.",
+     "why": "The source uses 'probably', expressing uncertainty, which contradicts the claim's assertion that Baker 'confirmed' the amount."
+    },
+    "why": "The claim attributes a confirmation and a minimum quantity ('at least three') to Baker, but the source shows him saying 'probably like three albums worth' \u2014 a non-committal estimate. While the interview date, publication, and the band's indecision about release are supported by the source (or provable elsewhere), the wording 'confirmed' and 'at least' are not present and are contradicted by the speculative tone. The author must rewrite these parts to match the source or provide a different citation."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "It is the sport's highest honor and is awarded within five years of the athlete's retirement, acknowledging an exceptional rowing career and exemplary sportsmanship.",
+   "markers": [
+    "ericmurrayrower"
+   ],
+   "paper_ids": [
+    "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7",
+    "source_title": "ericmurrayrower",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "It recognises an exceptional international rowing career as well as exemplary sportsmanship and a legendary aspect.",
+    "page": 1,
+    "snippet": "It recognises an exceptional international rowing career",
+    "reason": "the passage does not state that the award is given within five years of an athlete's retirement",
+    "votes": "2-0",
+    "window": "It recognises an exceptional international rowing career as well as exemplary sportsmanship and a legendary aspect. About the Thomas Keller Medal The Thomas Keller Medal is the highest distinction in the sport of rowing. The award recognises an Outstanding Career in Rowing with Murray and Bond of New Zealand winning over a list of highly accomplished nominees. (meta data) TITLE: Murray and Bond win 2018 Thomas Keller Medal - worldrowing.com (meta data) PUBLISHED DATETIME: 2019-08-11 08:45:00Z Skip over navigation Toggle Menu Search: ROWING COMMUNITIES PRESS RELEASE # Murray and Bond win 2018 Thomas Keller Medal Eric Murray (b), Hamish Bond (s), New Zealand, Men's Pair, Heat 1, 2016 World Rowing Cup II, Lucerne, Switzerland \u00a9 FISA Igor Meijer For immediate release Lausanne, 29 June 2018 The 2018 Thomas Keller Medal, rowing's most prestigious award, has been awarded to two recipients, Eric Murray and Hamish Bond of the 'Kiwi Pair'."
+   },
+   "evidences": [
+    {
+     "paper_id": "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7",
+     "source_title": "ericmurrayrower",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "It recognises an exceptional international rowing career as well as exemplary sportsmanship and a legendary aspect.",
+     "page": 1,
+     "snippet": "It recognises an exceptional international rowing career",
+     "reason": "the passage does not state that the award is given within five years of an athlete's retirement",
+     "votes": "2-0",
+     "window": "It recognises an exceptional international rowing career as well as exemplary sportsmanship and a legendary aspect. About the Thomas Keller Medal The Thomas Keller Medal is the highest distinction in the sport of rowing. The award recognises an Outstanding Career in Rowing with Murray and Bond of New Zealand winning over a list of highly accomplished nominees. (meta data) TITLE: Murray and Bond win 2018 Thomas Keller Medal - worldrowing.com (meta data) PUBLISHED DATETIME: 2019-08-11 08:45:00Z Skip over navigation Toggle Menu Search: ROWING COMMUNITIES PRESS RELEASE # Murray and Bond win 2018 Thomas Keller Medal Eric Murray (b), Hamish Bond (s), New Zealand, Men's Pair, Heat 1, 2016 World Rowing Cup II, Lucerne, Switzerland \u00a9 FISA Igor Meijer For immediate release Lausanne, 29 June 2018 The 2018 Thomas Keller Medal, rowing's most prestigious award, has been awarded to two recipients, Eric Murray and Hamish Bond of the 'Kiwi Pair'."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the award is given within five years of an athlete's retirement",
+   "component_check": {
+    "found": [
+     "It is the sport's highest honor.",
+     "It acknowledges an exceptional rowing career.",
+     "It acknowledges exemplary sportsmanship."
+    ],
+    "missing": [
+     "It is awarded within five years of the athlete's retirement."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "It is the sport's highest honor.",
+      "paper_id": "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7",
+      "source_title": "ericmurrayrower",
+      "sentence": "About the Thomas Keller Medal The Thomas Keller Medal is the highest distinction in the sport of rowing.",
+      "page": 1
+     },
+     {
+      "component": "It acknowledges an exceptional rowing career.",
+      "paper_id": "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7",
+      "source_title": "ericmurrayrower",
+      "sentence": "The award recognises an Outstanding Career in Rowing with Murray and Bond of New Zealand winning over a list of highly accomplished nominees.",
+      "page": 1
+     },
+     {
+      "component": "It acknowledges exemplary sportsmanship.",
+      "paper_id": "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7",
+      "source_title": "ericmurrayrower",
+      "sentence": "It recognises an exceptional international rowing career as well as exemplary sportsmanship and a legendary aspect.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the timing and criteria for an award, which the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "awarded within five years of the athlete's retirement",
+    "rewrite_suggestion": "It is the sport's highest honor, acknowledging an exceptional rowing career and exemplary sportsmanship.",
+    "proofs": [
+     "The Thomas Keller Medal is the highest distinction in the sport of rowing.",
+     "It recognises an exceptional international rowing career as well as exemplary sportsmanship and a legendary aspect."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a timing component ('awarded within five years of the athlete's retirement') that is not stated anywhere in the source text. While other components (highest honor, exceptional career, exemplary sportsmanship) are provable from the source, the shown sentence does not cover the highest honor part. Because the timing component is entirely unsourced, the author must either add a citation for that subclaim or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Rebecca Blumenstein is a journalist and newspaper editor.",
+   "markers": [
+    "rebeccablumenstein"
+   ],
+   "paper_ids": [
+    "d2568e9b705603a256f25c58c1903eb76b4d7a98"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9231,
+   "evidence": {
+    "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+    "source_title": "rebeccablumenstein",
+    "supported": true,
+    "sentence": "She began her journalism career at the Tampa Tribune, and then later moved to Gannett Newspapers and Newsday, where she covered breaking news and the New York State legislature.",
+    "page": 1,
+    "snippet": "She began her journalism career at the",
+    "cosine": 0.9231,
+    "reason": "The passage states that Rebecca Blumenstein worked as a reporter for multiple newspapers and was a deputy chief, which are roles within journalism and newspaper editing.",
+    "window": "Before that, she was the group's deputy chief and a reporter covering AT&T Corp. and WorldCom Inc. Ms. Blumenstein joined the Journal in 1995 as a reporter in the Detroit bureau, where she covered General Motors. She began her journalism career at the Tampa Tribune, and then later moved to Gannett Newspapers and Newsday, where she covered breaking news and the New York State legislature. She received a 1993 New York Newswomen's Award for best deadline writing for her coverage of the aftermath of the Long Island Railroad shootings."
+   },
+   "evidences": [
+    {
+     "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+     "source_title": "rebeccablumenstein",
+     "supported": true,
+     "sentence": "She began her journalism career at the Tampa Tribune, and then later moved to Gannett Newspapers and Newsday, where she covered breaking news and the New York State legislature.",
+     "page": 1,
+     "snippet": "She began her journalism career at the",
+     "cosine": 0.9231,
+     "reason": "The passage states that Rebecca Blumenstein worked as a reporter for multiple newspapers and was a deputy chief, which are roles within journalism and newspaper editing.",
+     "window": "Before that, she was the group's deputy chief and a reporter covering AT&T Corp. and WorldCom Inc. Ms. Blumenstein joined the Journal in 1995 as a reporter in the Detroit bureau, where she covered General Motors. She began her journalism career at the Tampa Tribune, and then later moved to Gannett Newspapers and Newsday, where she covered breaking news and the New York State legislature. She received a 1993 New York Newswomen's Award for best deadline writing for her coverage of the aftermath of the Long Island Railroad shootings."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Rebecca Blumenstein worked as a reporter for multiple newspapers and was a deputy chief, which are roles within journalism and newspaper editing.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Rebecca Blumenstein is a journalist",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "She began her journalism career at the Tampa Tribune, and then later moved to Gannett Newspapers and Newsday, where she covered breaking news and the New York State legislature.",
+      "page": 1,
+      "snippet": "She began her journalism career at the"
+     },
+     {
+      "component": "Rebecca Blumenstein is a journalist",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "Ms. Blumenstein holds a bachelor's degree in economics and social science from the University of Michigan, where she was editor in chief of the Michigan Daily.",
+      "page": 1,
+      "snippet": "Ms. Blumenstein holds a bachelor's degree in"
+     },
+     {
+      "component": "Rebecca Blumenstein is a journalist",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "She received a 1993 New York Newswomen's Award for best deadline writing for her coverage of the aftermath of the Long Island Railroad shootings.",
+      "page": 1,
+      "snippet": "She received a 1993 New York Newswomen's"
+     },
+     {
+      "component": "Rebecca Blumenstein is a journalist",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "Before that, she was the group's deputy chief and a reporter covering AT&T Corp. and WorldCom Inc. Ms. Blumenstein joined the Journal in 1995 as a reporter in the Detroit bureau, where she covered General Motors.",
+      "page": 1,
+      "snippet": "Before that, she was the group's deputy"
+     },
+     {
+      "component": "Rebecca Blumenstein is a newspaper editor",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "Ms. Blumenstein has also served as managing editor of The Wall Street Journal Online and as the China bureau chief, overseeing China coverage for the Journal.",
+      "page": 1,
+      "snippet": "Ms. Blumenstein has also served as managing"
+     },
+     {
+      "component": "Rebecca Blumenstein is a newspaper editor",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "(meta data) TITLE: Rebecca Blumenstein - NYU Journalism Skip to content NYU Arts & Science Arthur L. Carter Journalism Institute # Rebecca Blumenstein Visiting Scholar Deputy Managing Editor, The New York Times Rebecca Blumenstein is Deputy Managing Editor of The New York Times, a position she assumed in February 2017.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Rebecca Blumenstein - NYU"
+     },
+     {
+      "component": "Rebecca Blumenstein is a newspaper editor",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "Previously, she was the Page One Editor, appointed in September 2011, and a deputy managing editor and international editor since December 2009.",
+      "page": 1,
+      "snippet": "Previously, she was the Page One Editor,"
+     },
+     {
+      "component": "Rebecca Blumenstein is a newspaper editor",
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "sentence": "Previously, she had been Deputy Editor in Chief of The Wall Street Journal since January 2013, and the highest-ranking woman to lead the paper's news organization to date.",
+      "page": 1,
+      "snippet": "Previously, she had been Deputy Editor in"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+      "source_title": "rebeccablumenstein",
+      "text": "(meta data) TITLE: Rebecca Blumenstein - NYU Journalism Skip to content NYU Arts & Science Arthur L. Carter Journalism Institute # Rebecca Blumenstein Visiting Scholar Deputy Managing Editor, The New York Times Rebecca Blumenstein is Deputy Managing Editor of The New York Times, a position she assumed in February 2017. Previously, she had been Deputy Editor in Chief of The Wall Street Journal since January 2013, and the highest-ranking woman to lead the paper's news organization to date. Previously, she was the Page One Editor, appointed in September 2011, and a deputy managing editor and international editor since December 2009. Ms. Blumenstein has also served as managing editor of The Wall Street Journal Online and as the China bureau chief, overseeing China coverage for the Journal. Prior to moving to China in the summer of 2005, Ms. Blumenstein served as chief of the Journal's New York Technology Group, which covered the historic mergers and changes in technology that recast the telecommunications industry. Before that, she was the group's deputy chief and a reporter covering AT&T Corp. and WorldCom Inc. Ms. Blumenstein joined the Journal in 1995 as a reporter in the Detroit bureau, where she covered General Motors. She began her journalism career at the Tampa Tribune, and then later moved to Gannett Newspapers and Newsday, where she covered breaking news and the New York State legislature. She received a 1993 New York Newswomen's Award for best deadline writing for her coverage of the aftermath of the Long Island Railroad shootings. In 2003, she was part of a team that won the Gerald Loeb Award for deadline writing for coverage of WorldCom. She oversaw the China team that won the Pulitzer Prize for International Reporting in 2007. She was named to the Aspen Institute's Henry Crown Fellowship for 2009. Ms. Blumenstein holds a bachelor's degree in economics and social science from the University of Michigan, where she was editor in chief of the Michigan Daily.",
+      "n_used": 8
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t12",
+   "text": "Zach Handlen of \" The A.V. Club\" gave the episode a \"B+\", praising it for giving McCoy a stronger presence and better lines.",
+   "markers": [
+    "fridayschildstartrektheo"
+   ],
+   "paper_ids": [
+    "4ad289a089a8515d9a642da906648ccae43e769c"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+    "source_title": "fridayschildstartrektheo",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines.",
+    "page": 1,
+    "snippet": "The series often ends up as The",
+    "reason": "",
+    "votes": "2-0",
+    "window": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines. (\"Look, I'm a doctor, not an escalator!\")"
+   },
+   "evidences": [
+    {
+     "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+     "source_title": "fridayschildstartrektheo",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines.",
+     "page": 1,
+     "snippet": "The series often ends up as The",
+     "reason": "",
+     "votes": "2-0",
+     "window": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines. (\"Look, I'm a doctor, not an escalator!\")"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "byline_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Praised for giving McCoy a stronger presence",
+      "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+      "source_title": "fridayschildstartrektheo",
+      "sentence": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines.",
+      "page": 1,
+      "snippet": "The series often ends up as The"
+     },
+     {
+      "component": "Praised for giving McCoy better lines",
+      "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+      "source_title": "fridayschildstartrektheo",
+      "sentence": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines.",
+      "page": 1,
+      "snippet": "The series often ends up as The"
+     },
+     {
+      "component": "Episode received a \"B+\"",
+      "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+      "source_title": "fridayschildstartrektheo",
+      "sentence": "Grades: \"Friday's Child\": B+ \"The Deadly Years\": B- Stray Observations: McCoy's baby-talk leaves something to be desired, but Spock's reaction is worth the silliness.",
+      "page": 1,
+      "snippet": "Grades: \"Friday's Child\": B+ \"The Deadly Years\":",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Reviewer is Zach Handlen of \"The A.V. Club\""
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+      "source_title": "fridayschildstartrektheo",
+      "text": "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines. [\u2026] Grades: \"Friday's Child\": B+ \"The Deadly Years\": B- Stray Observations: McCoy's baby-talk leaves something to be desired, but Spock's reaction is worth the silliness.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes the review to 'Zach Handlen of The A.V. Club', but the source text spells the author's name as 'Zack Handlen' and does not contain the phrase 'The A.V. Club'. These details are not provable from the provided source.",
+    "rewrite_suggestion": "Zack Handlen gave the episode a 'B+', praising it for giving McCoy a stronger presence and better lines.",
+    "proofs": [
+     "Grades: \"Friday's Child\": B+ \"The Deadly Years\": B- Stray Observations: McCoy's baby-talk leaves something to be desired, but Spock's reaction is worth the silliness.",
+     "The series often ends up as The Kirk And Spock Power Hour, so seeing McCoy play a major role is neat, and he gets in some great lines."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences prove the grade and the praise for McCoy's role and lines, but the claim's attribution of the review to 'Zach Handlen of The A.V. Club' is not fully supported: the source text spells the author's name as 'Zack' and does not explicitly mention 'The A.V. Club'. Therefore the author must correct the spelling or remove the unsupported details."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "She played a leading role in season one of the FOX horror comedy series \"Scream Queens\".",
+   "markers": [
+    "skylersamuels"
+   ],
+   "paper_ids": [
+    "90133702114fca0eb5f1439d724d1ad6796c3073"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "90133702114fca0eb5f1439d724d1ad6796c3073",
+    "source_title": "skylersamuels",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Variety Intelligence Platform February 11, 2015 2:00PM PT # 'Scream Queens': Skyler Samuels Cast as Series Regular CREDIT: Imeh Akpanudosen/Getty \"Scream Queens\" has added actress Skyler Samuels to its ensemble cast as a series regular, Variety has learned.",
+    "page": 1,
+    "snippet": "Variety Intelligence Platform February 11, 2015 2:00PM",
+    "reason": "The passage states that Skyler Samuels was cast as a series regular in 'Scream Queens', which supports the claim that she played a leading role.",
+    "votes": "2-0",
+    "window": "Variety Intelligence Platform February 11, 2015 2:00PM PT # 'Scream Queens': Skyler Samuels Cast as Series Regular CREDIT: Imeh Akpanudosen/Getty \"Scream Queens\" has added actress Skyler Samuels to its ensemble cast as a series regular, Variety has learned. Samuels joins previously announced stars Lea Michele, Joe Manganiello, Abigail Breslin and Keke Palmer."
+   },
+   "evidences": [
+    {
+     "paper_id": "90133702114fca0eb5f1439d724d1ad6796c3073",
+     "source_title": "skylersamuels",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Variety Intelligence Platform February 11, 2015 2:00PM PT # 'Scream Queens': Skyler Samuels Cast as Series Regular CREDIT: Imeh Akpanudosen/Getty \"Scream Queens\" has added actress Skyler Samuels to its ensemble cast as a series regular, Variety has learned.",
+     "page": 1,
+     "snippet": "Variety Intelligence Platform February 11, 2015 2:00PM",
+     "reason": "The passage states that Skyler Samuels was cast as a series regular in 'Scream Queens', which supports the claim that she played a leading role.",
+     "votes": "2-0",
+     "window": "Variety Intelligence Platform February 11, 2015 2:00PM PT # 'Scream Queens': Skyler Samuels Cast as Series Regular CREDIT: Imeh Akpanudosen/Getty \"Scream Queens\" has added actress Skyler Samuels to its ensemble cast as a series regular, Variety has learned. Samuels joins previously announced stars Lea Michele, Joe Manganiello, Abigail Breslin and Keke Palmer."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Skyler Samuels was cast as a series regular in 'Scream Queens', which supports the claim that she played a leading role.",
+   "covering": {
+    "covered": [
+     {
+      "component": "of the FOX horror comedy series \"Scream Queens\"",
+      "paper_id": "90133702114fca0eb5f1439d724d1ad6796c3073",
+      "source_title": "skylersamuels",
+      "sentence": "The Fox comedy-horror anthology series hails from 20th Century Fox TV and Ryan Murphy Television.",
+      "page": 1,
+      "snippet": "The Fox comedy-horror anthology series hails from"
+     }
+    ],
+    "uncovered": [
+     "She played a leading role",
+     "in season one"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "90133702114fca0eb5f1439d724d1ad6796c3073",
+      "source_title": "skylersamuels",
+      "text": "The Fox comedy-horror anthology series hails from 20th Century Fox TV and Ryan Murphy Television.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage states Skyler Samuels was cast as a series regular in 'Scream Queens', but does not specify her role in season one.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "played a leading role in season one",
+    "rewrite_suggestion": "She was cast as a series regular in the FOX horror comedy series 'Scream Queens'.",
+    "proofs": [
+     "\"Scream Queens\" has added actress Skyler Samuels to its ensemble cast as a series regular, Variety has learned.",
+     "The Fox comedy-horror anthology series hails from 20th Century Fox TV and Ryan Murphy Television."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences confirm that Skyler Samuels was cast as a series regular in the FOX horror comedy series 'Scream Queens', but they do not mention that her role was a 'leading role' nor do they specify that this was for 'season one'. The source text also lacks any explicit statement about a leading role or season one, so these components are unsupported and require a citation or a rewrite of the claim."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "The Daily Wire editor-in-chief Ben Shapiro said on Laura Ingraham\u2019s The Ingraham Angle on June 3 that \"My impression was that if you are posting anonymously on Facebook, then it\u2019s not really within Facebook\u2019s purvey to start handing that information to media outlets, but I guess that isn\u2019t true\".",
+   "markers": [
+    "thedailybeast"
+   ],
+   "paper_ids": [
+    "cd283149846b0d0e4e5b292d552f4860f4a0c04f"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.946,
+   "evidence": {
+    "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+    "source_title": "thedailybeast",
+    "supported": true,
+    "sentence": "FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID GROWING BACKLASH OVER DOCTORED VIDEO \"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued.",
+    "page": 1,
+    "snippet": "FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID",
+    "cosine": 0.946,
+    "reason": "The passage directly quotes Ben Shapiro stating the exact sentiment attributed to him in the claim.",
+    "window": "The man reportedly shared the three-minute doctored clip titled \"Drunken Pelosi\" anonymously on a right-leaning page called \"Politics WatchDog.\" FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID GROWING BACKLASH OVER DOCTORED VIDEO \"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued. Other journalists have also slammed The Daily Beast for allegedly punishing a man for posting a \"trivial\" video showing Pelosi in a negative light."
+   },
+   "evidences": [
+    {
+     "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+     "source_title": "thedailybeast",
+     "supported": true,
+     "sentence": "FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID GROWING BACKLASH OVER DOCTORED VIDEO \"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued.",
+     "page": 1,
+     "snippet": "FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID",
+     "cosine": 0.946,
+     "reason": "The passage directly quotes Ben Shapiro stating the exact sentiment attributed to him in the claim.",
+     "window": "The man reportedly shared the three-minute doctored clip titled \"Drunken Pelosi\" anonymously on a right-leaning page called \"Politics WatchDog.\" FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID GROWING BACKLASH OVER DOCTORED VIDEO \"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued. Other journalists have also slammed The Daily Beast for allegedly punishing a man for posting a \"trivial\" video showing Pelosi in a negative light."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes Ben Shapiro stating the exact sentiment attributed to him in the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Ben Shapiro is the editor-in-chief of The Daily Wire",
+      "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+      "source_title": "thedailybeast",
+      "sentence": "The Daily Wire editor-in-chief Ben Shapiro slammed the \"vile and angry left\" media for exposing the identity of a private citizen for posting a video on Facebook that falsely depicted House Speaker Nancy Pelosi as being intoxicated.",
+      "page": 1,
+      "snippet": "The Daily Wire editor-in-chief Ben Shapiro slammed"
+     },
+     {
+      "component": "Ben Shapiro made a statement on Laura Ingraham's The Ingraham Angle",
+      "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+      "source_title": "thedailybeast",
+      "sentence": "DAILY BEAST ACCUSED OF 'DOXXING' ALLEGED CREATOR OF 'DRUNK PELOSI' VIDEO During a Monday night appearance on Laura Ingraham's \"The Ingraham Angle,\" Shapiro said left-leaning media outlets \"are motivated to take down anybody who happens to be right and center no matter who they are, no matter whether they wish to remain anonymous, no matter that all they did was post a Youtube video.\"",
+      "page": 1,
+      "snippet": "DAILY BEAST ACCUSED OF 'DOXXING' ALLEGED CREATOR"
+     },
+     {
+      "component": "Ben Shapiro made a statement on Laura Ingraham's The Ingraham Angle",
+      "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+      "source_title": "thedailybeast",
+      "sentence": "ADVERTISEMENTThe Ingraham AnglePublished June 4 # Ben Shapiro slams 'vile and angry left' media in doxxing case involving 'Drunken Pelosi' creator Danielle Wallace | Fox NewscloseVideo #### Ben Shapiro on doxing of man allegedly behind 'drunk Pelosi' video Daily Beast admits Facebook helped expose identity of man allegedly behind viral video; reaction from The Daily Wire editor-in-chief Ben Shapiro.",
+      "page": 1,
+      "snippet": "ADVERTISEMENTThe Ingraham AnglePublished June 4 # Ben"
+     },
+     {
+      "component": "Ben Shapiro's statement: \"My impression was that if you are posting anonymously on Facebook, then it\u2019s not really within Facebook\u2019s purvey to start handing that information to media outlets, but I guess that isn\u2019t true\"",
+      "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+      "source_title": "thedailybeast",
+      "sentence": "FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID GROWING BACKLASH OVER DOCTORED VIDEO \"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued.",
+      "page": 1,
+      "snippet": "FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID"
+     }
+    ],
+    "uncovered": [
+     "The statement was made on June 3"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+      "source_title": "thedailybeast",
+      "text": "ADVERTISEMENTThe Ingraham AnglePublished June 4 # Ben Shapiro slams 'vile and angry left' media in doxxing case involving 'Drunken Pelosi' creator Danielle Wallace | Fox NewscloseVideo #### Ben Shapiro on doxing of man allegedly behind 'drunk Pelosi' video Daily Beast admits Facebook helped expose identity of man allegedly behind viral video; reaction from The Daily Wire editor-in-chief Ben Shapiro. The Daily Wire editor-in-chief Ben Shapiro slammed the \"vile and angry left\" media for exposing the identity of a private citizen for posting a video on Facebook that falsely depicted House Speaker Nancy Pelosi as being intoxicated. DAILY BEAST ACCUSED OF 'DOXXING' ALLEGED CREATOR OF 'DRUNK PELOSI' VIDEO During a Monday night appearance on Laura Ingraham's \"The Ingraham Angle,\" Shapiro said left-leaning media outlets \"are motivated to take down anybody who happens to be right and center no matter who they are, no matter whether they wish to remain anonymous, no matter that all they did was post a Youtube video.\" Shapiro was referring to an article by The Daily Beast that exposed the identity, employment history, past relationships and social media footprint of a forklift operator from the Bronx. The man reportedly shared the three-minute doctored clip titled \"Drunken Pelosi\" anonymously on a right-leaning page called \"Politics WatchDog.\" FACEBOOK IGNORES HILLARY CLINTON, NANCY PELOSI AMID GROWING BACKLASH OVER DOCTORED VIDEO \"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific date 'June 3' for the appearance on The Ingraham Angle",
+    "rewrite_suggestion": "The Daily Wire editor-in-chief Ben Shapiro said on Laura Ingraham\u2019s The Ingraham Angle that 'My impression was that if you are posting anonymously on Facebook, then it\u2019s not really within Facebook\u2019s purvey to start handing that information to media outlets, but I guess that isn't true'.",
+    "proofs": [
+     "The Daily Wire editor-in-chief Ben Shapiro slammed the 'vile and angry left' media for exposing the identity of a private citizen for posting a video on Facebook that falsely depicted House Speaker Nancy Pelosi as being intoxicated.",
+     "During a Monday night appearance on Laura Ingraham's \"The Ingraham Angle,\" Shapiro said left-leaning media outlets 'are motivated to take down anybody who happens to be right and center no matter who they are, no matter whether they wish to remain anonymous, no matter that all they did was post a Youtube video.'",
+     "\"My impression was that if you are posting anonymously on Facebook, then it's not really within Facebook's purvey to start handing that information to media outlets, but I guess that isn't true,\" Shapiro continued."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the specific date 'June 3', but the source text only refers to a 'Monday night appearance' and was published on June 4. It does not explicitly state that the appearance occurred on June 3. Therefore, the date component is unsourced and requires either a citation or a rewrite that omits the date. All other components are supported by the shown sentences."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "\"The New York Times\" published an article on Adams on September 23, 2015.",
+   "markers": [
+    "docadams"
+   ],
+   "paper_ids": [
+    "b145c7a86b57e3f7e5740edaf810b452b0d04f8c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8962,
+   "evidence": {
+    "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+    "source_title": "docadams",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Late Rally for Doc",
+    "cosine": 0.8962,
+    "reason": "The passage explicitly states that the article is from 'The New York Times' and is dated September 23, 2015.",
+    "window": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period."
+   },
+   "evidences": [
+    {
+     "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+     "source_title": "docadams",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Late Rally for Doc",
+     "cosine": 0.8962,
+     "reason": "The passage explicitly states that the article is from 'The New York Times' and is dated September 23, 2015.",
+     "window": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the article is from 'The New York Times' and is dated September 23, 2015.",
+   "covering": {
+    "covered": [
+     {
+      "component": "The New York Times published an article on Adams",
+      "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+      "source_title": "docadams",
+      "sentence": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Late Rally for Doc"
+     },
+     {
+      "component": "The New York Times published an article on Adams",
+      "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+      "source_title": "docadams",
+      "sentence": "Go to Home Page \u00bb ## Site IndexThe New York Times",
+      "page": 1,
+      "snippet": "Go to Home Page \u00bb ## Site"
+     },
+     {
+      "component": "article date September 23, 2015",
+      "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+      "source_title": "docadams",
+      "sentence": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Late Rally for Doc"
+     },
+     {
+      "component": "article date September 23, 2015",
+      "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+      "source_title": "docadams",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20150926054546/http://www.nytimes.com:80/2015/09/23/nyregion/late-rally-for-doc-adams-a-jeter-before-there-were-mitts.html NYTimes.com no longer supports Internet Explorer 9 or earlier.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20150926054546/http://www.nytimes.com:80/2015/09/23/nyregion/late-rally-for-doc-adams-a-jeter-before-there-were-mitts.html NYTimes.com no"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+      "source_title": "docadams",
+      "text": "(meta data) TITLE: Late Rally for Doc Adams, a Jeter Before There Were Mitts - The New York Times (meta data) AUTHOR: http://topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html 11 captures 23 Sep 2015 - 21 Jun 2022 About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period. Collection: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period. The Wayback Machine - https://web.archive.org/web/20150926054546/http://www.nytimes.com:80/2015/09/23/nyregion/late-rally-for-doc-adams-a-jeter-before-there-were-mitts.html NYTimes.com no longer supports Internet Explorer 9 or earlier. [\u2026] Go to Home Page \u00bb ## Site IndexThe New York Times",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t16",
+   "text": "The book features previously published material as well as interviews, including an interview with legendary folk singer Dave Van Ronk.",
+   "markers": [
+    "loveforsalebook"
+   ],
+   "paper_ids": [
+    "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9045,
+   "evidence": {
+    "paper_id": "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09",
+    "source_title": "loveforsalebook",
+    "supported": true,
+    "sentence": "This is a very personal and utterly wonderful book about the subject by the music critic of The Nation and the man who wrote the magisterial \"Lush Life: A Biography of Billy Strayhorn,\" and the indispensable \"The Ten Cent Plague: The Great Comic Book Scare and How It Changed America\" and \"Positively Fourth Street: The Lives and Times of Joan Baez, Bob Dylan, Mimi Baez Farina and Richard Farina.\"",
+    "page": 1,
+    "snippet": "This is a very personal and utterly",
+    "cosine": 0.9045,
+    "reason": "The passage explicitly states that the book features an interview with folk legend Dave Van Ronk.",
+    "window": "No, this is not just a standard history of \"Pop Music in America.\" This is a very personal and utterly wonderful book about the subject by the music critic of The Nation and the man who wrote the magisterial \"Lush Life: A Biography of Billy Strayhorn,\" and the indispensable \"The Ten Cent Plague: The Great Comic Book Scare and How It Changed America\" and \"Positively Fourth Street: The Lives and Times of Joan Baez, Bob Dylan, Mimi Baez Farina and Richard Farina.\" Here, for instance, is Hajdu interviewing one of his first subjects, folk legend Dave Van Ronk, upon whose couch Bob Dylan slept when he was first starting out."
+   },
+   "evidences": [
+    {
+     "paper_id": "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09",
+     "source_title": "loveforsalebook",
+     "supported": true,
+     "sentence": "This is a very personal and utterly wonderful book about the subject by the music critic of The Nation and the man who wrote the magisterial \"Lush Life: A Biography of Billy Strayhorn,\" and the indispensable \"The Ten Cent Plague: The Great Comic Book Scare and How It Changed America\" and \"Positively Fourth Street: The Lives and Times of Joan Baez, Bob Dylan, Mimi Baez Farina and Richard Farina.\"",
+     "page": 1,
+     "snippet": "This is a very personal and utterly",
+     "cosine": 0.9045,
+     "reason": "The passage explicitly states that the book features an interview with folk legend Dave Van Ronk.",
+     "window": "No, this is not just a standard history of \"Pop Music in America.\" This is a very personal and utterly wonderful book about the subject by the music critic of The Nation and the man who wrote the magisterial \"Lush Life: A Biography of Billy Strayhorn,\" and the indispensable \"The Ten Cent Plague: The Great Comic Book Scare and How It Changed America\" and \"Positively Fourth Street: The Lives and Times of Joan Baez, Bob Dylan, Mimi Baez Farina and Richard Farina.\" Here, for instance, is Hajdu interviewing one of his first subjects, folk legend Dave Van Ronk, upon whose couch Bob Dylan slept when he was first starting out."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the book features an interview with folk legend Dave Van Ronk.",
+   "covering": {
+    "covered": [
+     {
+      "component": "book features interviews",
+      "paper_id": "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09",
+      "source_title": "loveforsalebook",
+      "sentence": "Here, for instance, is Hajdu interviewing one of his first subjects, folk legend Dave Van Ronk, upon whose couch Bob Dylan slept when he was first starting out.",
+      "page": 1,
+      "snippet": "Here, for instance, is Hajdu interviewing one"
+     },
+     {
+      "component": "includes interview with Dave Van Ronk",
+      "paper_id": "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09",
+      "source_title": "loveforsalebook",
+      "sentence": "Here, for instance, is Hajdu interviewing one of his first subjects, folk legend Dave Van Ronk, upon whose couch Bob Dylan slept when he was first starting out.",
+      "page": 1,
+      "snippet": "Here, for instance, is Hajdu interviewing one"
+     }
+    ],
+    "uncovered": [
+     "book features previously published material"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09",
+      "source_title": "loveforsalebook",
+      "text": "Here, for instance, is Hajdu interviewing one of his first subjects, folk legend Dave Van Ronk, upon whose couch Bob Dylan slept when he was first starting out.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that the book features previously published material.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the book features previously published material",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the book features previously published material is not supported by the source text; the source only discusses the book's interviews and anecdotes.",
+    "rewrite_suggestion": "The book features interviews, including an interview with legendary folk singer Dave Van Ronk.",
+    "proofs": [
+     "Here, for instance, is Hajdu interviewing one of his first subjects, folk legend Dave Van Ronk, upon whose couch Bob Dylan slept when he was first starting out."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim has two main components: that the book contains previously published material and that it contains interviews (including one with Dave Van Ronk). The shown sentence proves the interview component, but the source text never states that the book includes previously published material. Since that unsourced component is not provable from the source, the author must either add a citation for it or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Prior to the game, Hershiser trailed teammate Tim Leary in shutouts, six to three, and Leary also combined with other pitchers to record a shutout that was not counted in his individual total.",
+   "markers": [
+    "orelhershisersscorelessi"
+   ],
+   "paper_ids": [
+    "97a08a2de84dd2aa671cb50eea0d97e261121258"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "97a08a2de84dd2aa671cb50eea0d97e261121258",
+    "source_title": "orelhershisersscorelessi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "But even before Hershiser began the streak that raised his season total to eight, Tim Leary had six shutouts himself and a share of another one.",
+    "page": 1,
+    "snippet": "But even before Hershiser began the streak",
+    "reason": "The passage states Tim Leary had six shutouts, but does not mention Hershiser's shutout total or Leary's share of another shutout.",
+    "votes": "2-0",
+    "window": "But even before Hershiser began the streak that raised his season total to eight, Tim Leary had six shutouts himself and a share of another one."
+   },
+   "evidences": [
+    {
+     "paper_id": "97a08a2de84dd2aa671cb50eea0d97e261121258",
+     "source_title": "orelhershisersscorelessi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "But even before Hershiser began the streak that raised his season total to eight, Tim Leary had six shutouts himself and a share of another one.",
+     "page": 1,
+     "snippet": "But even before Hershiser began the streak",
+     "reason": "The passage states Tim Leary had six shutouts, but does not mention Hershiser's shutout total or Leary's share of another shutout.",
+     "votes": "2-0",
+     "window": "But even before Hershiser began the streak that raised his season total to eight, Tim Leary had six shutouts himself and a share of another one."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Tim Leary had six shutouts, but does not mention Hershiser's shutout total or Leary's share of another shutout.",
+   "subject_guard": {
+    "subject": "prior",
+    "missing_from": [
+     "97a08a2de84dd2aa671cb50eea0d97e261121258"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage presents specific factual claims about player statistics (shutouts) and comparisons between players. These are direct assertions of findings that the cited source would be expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Orel Hershiser has been the most spectacular member of the Dodgers' starting rotation, reeling off five successive shutouts, the most recent against San Francisco Friday night.",
+     "But even before Hershiser began the streak that raised his season total to eight, Tim Leary had six shutouts himself and a share of another one."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves Leary's six shutouts and shared shutout, but does not prove that Hershiser had three shutouts prior to the game. The source text provides that information in the sentence about five successive shutouts raising his total to eight, which implies his prior total was three. Since the proof for that component exists in the source but is not among the shown sentences, the tool's display is insufficient.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Lodging is available in the monument at the Chateau, which has 23 rooms to rent.",
+   "markers": [
+    "oregoncavesnationalmonum"
+   ],
+   "paper_ids": [
+    "89bd9828a1d32d1c65750e1714d3a24d42d215e1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "89bd9828a1d32d1c65750e1714d3a24d42d215e1",
+    "source_title": "oregoncavesnationalmonum",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Locally Produced Items and Services Since its opening in 1934, the Chateau has offered rustic charm in a serene wooded setting with special events offered during the off-season.",
+    "page": 1,
+    "snippet": "Locally Produced Items and Services Since its",
+    "reason": "the passage does not state that the Chateau has 23 rooms to rent",
+    "votes": "2-0",
+    "window": "Locally Produced Items and Services Since its opening in 1934, the Chateau has offered rustic charm in a serene wooded setting with special events offered during the off-season. The Oregon Caves Chateau is managed by a local nonprofit group, the Illinois Valley Community Development Organization. For more information visit the Oregon Caves Chateau website or phone (541) 592-4440. For reservations phone (541) 592-3400 or click here or email."
+   },
+   "evidences": [
+    {
+     "paper_id": "89bd9828a1d32d1c65750e1714d3a24d42d215e1",
+     "source_title": "oregoncavesnationalmonum",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Locally Produced Items and Services Since its opening in 1934, the Chateau has offered rustic charm in a serene wooded setting with special events offered during the off-season.",
+     "page": 1,
+     "snippet": "Locally Produced Items and Services Since its",
+     "reason": "the passage does not state that the Chateau has 23 rooms to rent",
+     "votes": "2-0",
+     "window": "Locally Produced Items and Services Since its opening in 1934, the Chateau has offered rustic charm in a serene wooded setting with special events offered during the off-season. The Oregon Caves Chateau is managed by a local nonprofit group, the Illinois Valley Community Development Organization. For more information visit the Oregon Caves Chateau website or phone (541) 592-4440. For reservations phone (541) 592-3400 or click here or email."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the Chateau has 23 rooms to rent",
+   "component_check": {
+    "found": [
+     "Lodging is available in the monument at the Chateau"
+    ],
+    "missing": [
+     "the Chateau has 23 rooms to rent"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Lodging is available in the monument at the Chateau",
+      "paper_id": "89bd9828a1d32d1c65750e1714d3a24d42d215e1",
+      "source_title": "oregoncavesnationalmonum",
+      "sentence": "Locally Produced Items and Services Since its opening in 1934, the Chateau has offered rustic charm in a serene wooded setting with special events offered during the off-season.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a fact about lodging availability and room count within the monument, which is directly attributable to the cited source. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the Chateau has 23 rooms to rent",
+    "rewrite_suggestion": "Lodging is available in the monument at the Chateau, which has rooms to rent.",
+    "proofs": [
+     "You will find local fare in the dining room and locally crafted gifts and works of art in the gift gallery, as well as locally produced furniture, soaps and shampoos in your hotel room; even the uniforms worn by the Chateau employees are made locally.",
+     "For reservations phone (541) 592-3400 or click here or email."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not prove either component of the claim. The source text supports that lodging is available at the Chateau (by mentioning hotel rooms and reservation information), but it nowhere states that the Chateau has 23 rooms. That specific number is an unsourced addition by the author, so the author must either provide a citation for the 23 rooms or rewrite the claim to remove that detail."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "If infected during pregnancy, a condition known as congenital toxoplasmosis may affect the child.",
+   "markers": [
+    "toxoplasmosis"
+   ],
+   "paper_ids": [
+    "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9515,
+   "evidence": {
+    "paper_id": "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c",
+    "source_title": "toxoplasmosis",
+    "supported": true,
+    "sentence": "If a woman is pregnant and becomes newly infected with Toxoplasma during or just before pregnancy, she can pass the infection to her unborn baby (congenital transmission).",
+    "page": 1,
+    "snippet": "If a woman is pregnant and becomes",
+    "cosine": 0.9515,
+    "reason": "The passage explicitly states that if a pregnant woman becomes newly infected with Toxoplasma, she can pass the infection to her unborn baby, which is known as congenital transmission, and that this condition may affect the child.",
+    "window": "#### Mother-to-child (congenital) Generally if a woman has been infected before becoming pregnant, the unborn child will be protected because the mother has developed immunity. If a woman is pregnant and becomes newly infected with Toxoplasma during or just before pregnancy, she can pass the infection to her unborn baby (congenital transmission). The damage to the unborn child is often more severe the earlier in pregnancy the transmission occurs."
+   },
+   "evidences": [
+    {
+     "paper_id": "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c",
+     "source_title": "toxoplasmosis",
+     "supported": true,
+     "sentence": "If a woman is pregnant and becomes newly infected with Toxoplasma during or just before pregnancy, she can pass the infection to her unborn baby (congenital transmission).",
+     "page": 1,
+     "snippet": "If a woman is pregnant and becomes",
+     "cosine": 0.9515,
+     "reason": "The passage explicitly states that if a pregnant woman becomes newly infected with Toxoplasma, she can pass the infection to her unborn baby, which is known as congenital transmission, and that this condition may affect the child.",
+     "window": "#### Mother-to-child (congenital) Generally if a woman has been infected before becoming pregnant, the unborn child will be protected because the mother has developed immunity. If a woman is pregnant and becomes newly infected with Toxoplasma during or just before pregnancy, she can pass the infection to her unborn baby (congenital transmission). The damage to the unborn child is often more severe the earlier in pregnancy the transmission occurs."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that if a pregnant woman becomes newly infected with Toxoplasma, she can pass the infection to her unborn baby, which is known as congenital transmission, and that this condition may affect the child.",
+   "covering": {
+    "covered": [
+     {
+      "component": "congenital toxoplasmosis may affect the child if infected during pregnancy",
+      "paper_id": "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c",
+      "source_title": "toxoplasmosis",
+      "sentence": "If a woman is pregnant and becomes newly infected with Toxoplasma during or just before pregnancy, she can pass the infection to her unborn baby (congenital transmission).",
+      "page": 1,
+      "snippet": "If a woman is pregnant and becomes"
+     },
+     {
+      "component": "congenital toxoplasmosis may affect the child if infected during pregnancy",
+      "paper_id": "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c",
+      "source_title": "toxoplasmosis",
+      "sentence": "Potential results can be a miscarriagea stillborn childa child born with signs of toxoplasmosis (e.g., abnormal enlargement or smallness of the head) Infants infected before birth often show no symptoms at birth but may develop them later in life with potential vision loss, mental disability, and seizures.",
+      "page": 1,
+      "snippet": "Potential results can be a miscarriagea stillborn"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c",
+      "source_title": "toxoplasmosis",
+      "text": "If a woman is pregnant and becomes newly infected with Toxoplasma during or just before pregnancy, she can pass the infection to her unborn baby (congenital transmission). The damage to the unborn child is often more severe the earlier in pregnancy the transmission occurs. Potential results can be a miscarriagea stillborn childa child born with signs of toxoplasmosis (e.g., abnormal enlargement or smallness of the head) Infants infected before birth often show no symptoms at birth but may develop them later in life with potential vision loss, mental disability, and seizures.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t20",
+   "text": "Her daughter, Dorothy Helen was also known for her fashion-sense and authored several \"Smart Set\" columns.",
+   "markers": [
+    "ashleyssack"
+   ],
+   "paper_ids": [
+    "5381e97b21f7451e02add80b7a060f2ccf353911"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8123,
+   "evidence": {
+    "paper_id": "5381e97b21f7451e02add80b7a060f2ccf353911",
+    "source_title": "ashleyssack",
+    "supported": false,
+    "sentence": "Photograph courtesy of Flickr user John Sonderman.",
+    "page": 1,
+    "snippet": "Photograph courtesy of Flickr user John Sonderman.",
+    "cosine": 0.8123,
+    "reason": "The passage does not contain any information about the author's daughter, Dorothy Helen, or her fashion sense or writings.",
+    "window": "Cover Image Attribution: National Museum of African American History and Culture, Washington, D.C., June 29, 2015. Photograph courtesy of Flickr user John Sonderman. Creative Commons license CC BY-NC 2.0."
+   },
+   "evidences": [
+    {
+     "paper_id": "5381e97b21f7451e02add80b7a060f2ccf353911",
+     "source_title": "ashleyssack",
+     "supported": false,
+     "sentence": "Photograph courtesy of Flickr user John Sonderman.",
+     "page": 1,
+     "snippet": "Photograph courtesy of Flickr user John Sonderman.",
+     "cosine": 0.8123,
+     "reason": "The passage does not contain any information about the author's daughter, Dorothy Helen, or her fashion sense or writings.",
+     "window": "Cover Image Attribution: National Museum of African American History and Culture, Washington, D.C., June 29, 2015. Photograph courtesy of Flickr user John Sonderman. Creative Commons license CC BY-NC 2.0."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Dorothy Helen; Smart Set",
+    "missing_from": [
+     "5381e97b21f7451e02add80b7a060f2ccf353911"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Her daughter, Dorothy Helen was also known for her fashion-sense and authored several \"Smart Set\" columns.",
+    "reason": "The passage directly attributes the statement about Dorothy Helen's fashion sense and authorship of columns to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Dorothy Helen's fashion-sense and her authorship of 'Smart Set' columns",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is about 'Ashley's Sack' and slavery, containing no mention of Dorothy Helen, her fashion-sense, or any 'Smart Set' columns. Every component of the claim is absent from the source, so the author must either add a citation for these claims or rewrite them to match the cited source."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "Ceremonies such as weddings, Namkaran naming ceremonies and Shnathi Puja are held in Vedic style by traditional Brahmins.",
+   "markers": [
+    "sriradhashyamasundarmand"
+   ],
+   "paper_ids": [
+    "40032a1d0df3ef8fb9b8105032c65e19885f1e42"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8573,
+   "evidence": {
+    "paper_id": "40032a1d0df3ef8fb9b8105032c65e19885f1e42",
+    "source_title": "sriradhashyamasundarmand",
+    "supported": false,
+    "sentence": "Members of the Hare Krishna movement prepare delicious vegetarian meals which they devote to God.",
+    "page": 1,
+    "snippet": "Members of the Hare Krishna movement prepare",
+    "cosine": 0.8573,
+    "reason": "The passage discusses vegetarian meals offered to God by the Hare Krishna movement and does not mention Vedic ceremonies or Brahmins.",
+    "window": "As such we are not obliged to eat meat which involves suffering when animals are killed. Members of the Hare Krishna movement prepare delicious vegetarian meals which they devote to God. Only after the food is offered to God in a devotional ritual is it then eaten by devotees.''"
+   },
+   "evidences": [
+    {
+     "paper_id": "40032a1d0df3ef8fb9b8105032c65e19885f1e42",
+     "source_title": "sriradhashyamasundarmand",
+     "supported": false,
+     "sentence": "Members of the Hare Krishna movement prepare delicious vegetarian meals which they devote to God.",
+     "page": 1,
+     "snippet": "Members of the Hare Krishna movement prepare",
+     "cosine": 0.8573,
+     "reason": "The passage discusses vegetarian meals offered to God by the Hare Krishna movement and does not mention Vedic ceremonies or Brahmins.",
+     "window": "As such we are not obliged to eat meat which involves suffering when animals are killed. Members of the Hare Krishna movement prepare delicious vegetarian meals which they devote to God. Only after the food is offered to God in a devotional ritual is it then eaten by devotees.''"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Shnathi Puja; ceremonies",
+    "missing_from": [
+     "40032a1d0df3ef8fb9b8105032c65e19885f1e42"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states that ceremonies are held in Vedic style by traditional Brahmins, which is a factual assertion expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: 'Ceremonies such as weddings, Namkaran naming ceremonies and Shnathi Puja are held in Vedic style by traditional Brahmins.' None of these components are mentioned in the cited source.",
+    "rewrite_suggestion": "Ceremonies such as births or funerals are celebrated at the Indian temple in Seoul, which follows Vedic philosophy and is run by ISKON devotees.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is about vegetarian meals and is irrelevant to the claim. The source text does not mention weddings, Namkaran naming ceremonies, Shnathi Puja, Vedic style, or traditional Brahmins. It only mentions celebrating births or funerals at an ISKON temple in Seoul, so the claim is entirely unsupported by the cited source."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "He dedicated the record to his mother, Barbara Warner, who died on May 13, 2014, eight years after being diagnosed with Alzheimer's disease.",
+   "markers": [
+    "thepaleemperor"
+   ],
+   "paper_ids": [
+    "6b2f97028527047fd3c7b7479ed1c3b0947a6acb"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8621,
+   "evidence": {
+    "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+    "source_title": "thepaleemperor",
+    "supported": true,
+    "sentence": "Brian Warner), died on May 13 after a long battle with dementia.",
+    "page": 1,
+    "snippet": "Brian Warner), died on May 13 after",
+    "cosine": 0.8621,
+    "reason": "The passage states that Barbara J. Warner, mother of Marilyn Manson (Brian Warner), died on May 13 after a long battle with dementia, which supports the claim's assertion about her death date and cause.",
+    "window": "The Wayback Machine - https://web.archive.org/web/20160303233721/http://www.blabbermouth.net/news/marilyn-mansons-mother-dies-after-battle-with-dementia/ # Blabbermouth.net - # MARILYN MANSON's Mother Dies After Battle With Dementia May 18, 2014 Barbara J. Warner, the 68-year-old mother of shock rocker Marilyn Manson (a.k.a. Brian Warner), died on May 13 after a long battle with dementia. The singer wrote on his Facebook page earlier today: \"Mother, to the first and greatest believer in me \u2026 I hope I see you again someday."
+   },
+   "evidences": [
+    {
+     "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+     "source_title": "thepaleemperor",
+     "supported": true,
+     "sentence": "Brian Warner), died on May 13 after a long battle with dementia.",
+     "page": 1,
+     "snippet": "Brian Warner), died on May 13 after",
+     "cosine": 0.8621,
+     "reason": "The passage states that Barbara J. Warner, mother of Marilyn Manson (Brian Warner), died on May 13 after a long battle with dementia, which supports the claim's assertion about her death date and cause.",
+     "window": "The Wayback Machine - https://web.archive.org/web/20160303233721/http://www.blabbermouth.net/news/marilyn-mansons-mother-dies-after-battle-with-dementia/ # Blabbermouth.net - # MARILYN MANSON's Mother Dies After Battle With Dementia May 18, 2014 Barbara J. Warner, the 68-year-old mother of shock rocker Marilyn Manson (a.k.a. Brian Warner), died on May 13 after a long battle with dementia. The singer wrote on his Facebook page earlier today: \"Mother, to the first and greatest believer in me \u2026 I hope I see you again someday."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Barbara J. Warner, mother of Marilyn Manson (Brian Warner), died on May 13 after a long battle with dementia, which supports the claim's assertion about her death date and cause.",
+   "covering": {
+    "covered": [
+     {
+      "component": "record dedicated to mother Barbara Warner",
+      "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+      "source_title": "thepaleemperor",
+      "sentence": "The record is dedicated to his mother, Barbara, who died in May after a long battle with dementia, which affected him deeply.",
+      "page": 1,
+      "snippet": "The record is dedicated to his mother,"
+     },
+     {
+      "component": "mother died on May 13, 2014",
+      "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+      "source_title": "thepaleemperor",
+      "sentence": "Brian Warner), died on May 13 after a long battle with dementia.",
+      "page": 1,
+      "snippet": "Brian Warner), died on May 13 after"
+     },
+     {
+      "component": "mother died on May 13, 2014",
+      "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+      "source_title": "thepaleemperor",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20160303233721/http://www.blabbermouth.net/news/marilyn-mansons-mother-dies-after-battle-with-dementia/ # Blabbermouth.net - # MARILYN MANSON's Mother Dies After Battle With Dementia May 18, 2014 Barbara J. Warner, the 68-year-old mother of shock rocker Marilyn Manson (a.k.a.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20160303233721/http://www.blabbermouth.net/news/marilyn-mansons-mother-dies-after-battle-with-dementia/ # Blabbermouth.net"
+     },
+     {
+      "component": "mother diagnosed with Alzheimer's disease",
+      "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+      "source_title": "thepaleemperor",
+      "sentence": "Speaking to The Guardian in July 2012, Manson stated about his mother, \"My mom has dementia so she doesn't know who I am now, but when she did, she'd say, 'Gentlemen prefer blondes.'",
+      "page": 1,
+      "snippet": "Speaking to The Guardian in July 2012,"
+     }
+    ],
+    "uncovered": [
+     "Alzheimer's diagnosis eight years prior to death"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+      "source_title": "thepaleemperor",
+      "text": "The record is dedicated to his mother, Barbara, who died in May after a long battle with dementia, which affected him deeply. [\u2026] The Wayback Machine - https://web.archive.org/web/20160303233721/http://www.blabbermouth.net/news/marilyn-mansons-mother-dies-after-battle-with-dementia/ # Blabbermouth.net - # MARILYN MANSON's Mother Dies After Battle With Dementia May 18, 2014 Barbara J. Warner, the 68-year-old mother of shock rocker Marilyn Manson (a.k.a. Brian Warner), died on May 13 after a long battle with dementia. [\u2026] Speaking to The Guardian in July 2012, Manson stated about his mother, \"My mom has dementia so she doesn't know who I am now, but when she did, she'd say, 'Gentlemen prefer blondes.'",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date 'May 13, 2014' and the claim that she died eight years after being diagnosed with Alzheimer's disease (the source only mentions dementia and no timeline)",
+    "rewrite_suggestion": "He dedicated the record to his mother, Barbara Warner, who died in May after a long battle with dementia.",
+    "proofs": [
+     "The record is dedicated to his mother, Barbara, who died in May after a long battle with dementia, which affected him deeply.",
+     "Barbara J. Warner, the 68-year-old mother of shock rocker Marilyn Manson (a.k.a. Brian Warner), died on May 13 after a long battle with dementia."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two components not supported by the provided source text: the specific death date with year (2014) is not stated in any sentence of the source, and the diagnosis of Alzheimer's disease and the eight-year timeline are absent; the source only references dementia. Therefore, the author must either add a citation for these subclaims or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "She is a public advocate of increasing the number of female founders and investors in the Silicon Valley.",
+   "markers": [
+    "aileenlee"
+   ],
+   "paper_ids": [
+    "6f9b25b02e60ad3dd22e4ed0043a67b9362f398f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "6f9b25b02e60ad3dd22e4ed0043a67b9362f398f",
+    "source_title": "aileenlee",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "8) Get networked, especially with other female founders and female investors.",
+    "page": 1,
+    "snippet": "8) Get networked, especially with other female",
+    "reason": "The passage does not state that she is a public advocate of increasing the number of female founders and investors in Silicon Valley.",
+    "votes": "2-0",
+    "window": "8) Get networked, especially with other female founders and female investors. She also shared very specific advice to female founders who are looking to raise capital (along with one observation for male-heavy venture firms). At Y Combinator's fourth Female Founders Conference in San Francisco last week, Lee talked about that HBR study and the bias she sees every day. Lee was addressing a largely female audience at the conference, and she centered her talk on ways for women founders to get ahead in tech, despite the micro-aggressions that many face every day."
+   },
+   "evidences": [
+    {
+     "paper_id": "6f9b25b02e60ad3dd22e4ed0043a67b9362f398f",
+     "source_title": "aileenlee",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "8) Get networked, especially with other female founders and female investors.",
+     "page": 1,
+     "snippet": "8) Get networked, especially with other female",
+     "reason": "The passage does not state that she is a public advocate of increasing the number of female founders and investors in Silicon Valley.",
+     "votes": "2-0",
+     "window": "8) Get networked, especially with other female founders and female investors. She also shared very specific advice to female founders who are looking to raise capital (along with one observation for male-heavy venture firms). At Y Combinator's fourth Female Founders Conference in San Francisco last week, Lee talked about that HBR study and the bias she sees every day. Lee was addressing a largely female audience at the conference, and she centered her talk on ways for women founders to get ahead in tech, despite the micro-aggressions that many face every day."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that she is a public advocate of increasing the number of female founders and investors in Silicon Valley.",
+   "subject_guard": {
+    "subject": "Silicon Valley",
+    "missing_from": [
+     "6f9b25b02e60ad3dd22e4ed0043a67b9362f398f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "She is a public advocate of increasing the number of female founders and investors in the Silicon Valley.",
+    "reason": "The passage directly attributes a statement of fact about the subject's advocacy to the cited source. This falls under the 'full' scope as the citation is expected to prove this assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "At Y Combinator's fourth Female Founders Conference in San Francisco last week, Lee talked about that HBR study and the bias she sees every day.",
+     "She also shared very specific advice to female founders who are looking to raise capital (along with one observation for male-heavy venture firms).",
+     "Sharing that she'd had breakfast last week with women partners at other firms, Lee said that the group had discussed how to help bring more women into the general partner ranks.",
+     "She also said that these VCs, along with her own firm, have more actively begun steering their most promising companies to 'modern venture firms that have women and people of color in investing positions.'"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only advises networking, not covering the claim's components of public advocacy for increasing female founders and investors. The source text contains multiple sentences that together prove all components, but they were not shown. Therefore, the tool must fix the display.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t24",
+   "text": "He set up the Araniko White Dagoba Gallery in Kirtipur, Kathmandu, using historical artifacts related to Arniko.",
+   "markers": [
+    "satyamohanjoshi"
+   ],
+   "paper_ids": [
+    "45221ac3d27314b51e16f3caa77747d542544941"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8907,
+   "evidence": {
+    "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+    "source_title": "satyamohanjoshi",
+    "supported": true,
+    "sentence": "Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works.",
+    "page": 1,
+    "snippet": "Located half a kilometer off the ring",
+    "cosine": 0.8907,
+    "reason": "The passage explicitly states that the Araniko White Dagoba Gallery was set up to showcase Araniko's life and works, including artifacts related to him.",
+    "window": "\"Then, I decided to make it public by setting up an exclusive gallery of Araniko.\" Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works. It particularly focuses on the white dagoba, the magnum opus of Araniko's architectural works."
+   },
+   "evidences": [
+    {
+     "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+     "source_title": "satyamohanjoshi",
+     "supported": true,
+     "sentence": "Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works.",
+     "page": 1,
+     "snippet": "Located half a kilometer off the ring",
+     "cosine": 0.8907,
+     "reason": "The passage explicitly states that the Araniko White Dagoba Gallery was set up to showcase Araniko's life and works, including artifacts related to him.",
+     "window": "\"Then, I decided to make it public by setting up an exclusive gallery of Araniko.\" Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works. It particularly focuses on the white dagoba, the magnum opus of Araniko's architectural works."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the Araniko White Dagoba Gallery was set up to showcase Araniko's life and works, including artifacts related to him.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He set up the Araniko White Dagoba Gallery in Kirtipur, Kathmandu",
+      "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+      "source_title": "satyamohanjoshi",
+      "sentence": "Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works.",
+      "page": 1,
+      "snippet": "Located half a kilometer off the ring"
+     },
+     {
+      "component": "using historical artifacts related to Arniko",
+      "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+      "source_title": "satyamohanjoshi",
+      "sentence": "Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works.",
+      "page": 1,
+      "snippet": "Located half a kilometer off the ring"
+     },
+     {
+      "component": "using historical artifacts related to Arniko",
+      "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+      "source_title": "satyamohanjoshi",
+      "sentence": "Besides, the gallery contains a range of items including books, newspaper articles and dissertations about Araniko.",
+      "page": 1,
+      "snippet": "Besides, the gallery contains a range of"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+      "source_title": "satyamohanjoshi",
+      "text": "Besides, the gallery contains a range of items including books, newspaper articles and dissertations about Araniko. [\u2026] Located half a kilometer off the ring road of Kirtipur, Araniko White Dagoba Gallery is in fact a museum as it not only consists of paintings and sculptures of him but every thing that sheds light on his life and works.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t25",
+   "text": "Grayson's replacement was Alex Neil, appointed on 4 July 2017.",
+   "markers": [
+    "historyofprestonnorthend"
+   ],
+   "paper_ids": [
+    "fd2bddc0ccf03f4070af420030efe1ee7288b1bc"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8242,
+   "evidence": {
+    "paper_id": "fd2bddc0ccf03f4070af420030efe1ee7288b1bc",
+    "source_title": "historyofprestonnorthend",
+    "supported": true,
+    "sentence": "Alex Neil won promotion to the Premier League as manager of Norwich in 2015",
+    "page": 1,
+    "snippet": "Alex Neil won promotion to the Premier",
+    "cosine": 0.8242,
+    "reason": "The passage states that Alex Neil was appointed as the new manager on July 4, 2017, which directly supports the claim.",
+    "window": "4 Jul 2017 From the section Football Alex Neil won promotion to the Premier League as manager of Norwich in 2015 Championship club Preston have appointed former Norwich and Hamilton boss Alex Neil as their new manager."
+   },
+   "evidences": [
+    {
+     "paper_id": "fd2bddc0ccf03f4070af420030efe1ee7288b1bc",
+     "source_title": "historyofprestonnorthend",
+     "supported": true,
+     "sentence": "Alex Neil won promotion to the Premier League as manager of Norwich in 2015",
+     "page": 1,
+     "snippet": "Alex Neil won promotion to the Premier",
+     "cosine": 0.8242,
+     "reason": "The passage states that Alex Neil was appointed as the new manager on July 4, 2017, which directly supports the claim.",
+     "window": "4 Jul 2017 From the section Football Alex Neil won promotion to the Premier League as manager of Norwich in 2015 Championship club Preston have appointed former Norwich and Hamilton boss Alex Neil as their new manager."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Alex Neil was appointed as the new manager on July 4, 2017, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Grayson's replacement was Alex Neil",
+      "paper_id": "fd2bddc0ccf03f4070af420030efe1ee7288b1bc",
+      "source_title": "historyofprestonnorthend",
+      "sentence": "Preston flirted with a play-off push last season before finishing comfortably in mid-table ### Analysis BBC Radio Lancashire's Andy Bayes Alex Neil joins a club that has enjoyed great stability over the past four years under Simon Grayson.",
+      "page": 1,
+      "snippet": "Preston flirted with a play-off push last"
+     },
+     {
+      "component": "Alex Neil was appointed on 4 July 2017",
+      "paper_id": "fd2bddc0ccf03f4070af420030efe1ee7288b1bc",
+      "source_title": "historyofprestonnorthend",
+      "sentence": "# Alex Neil: Preston North End appoint ex-Norwich boss as manager",
+      "page": 1,
+      "snippet": "# Alex Neil: Preston North End appoint",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "date of Alex Neil's appointment"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fd2bddc0ccf03f4070af420030efe1ee7288b1bc",
+      "source_title": "historyofprestonnorthend",
+      "text": "# Alex Neil: Preston North End appoint ex-Norwich boss as manager [\u2026] Preston flirted with a play-off push last season before finishing comfortably in mid-table ### Analysis BBC Radio Lancashire's Andy Bayes Alex Neil joins a club that has enjoyed great stability over the past four years under Simon Grayson.",
+      "n_used": 2
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "# Alex Neil: Preston North End appoint ex-Norwich boss as manager 4 Jul 2017",
+      "The 36-year-old has replaced Simon Grayson, who left North End to join Sunderland on 29 June."
+     ],
+     "why": "The claim that Grayson's replacement was Alex Neil, appointed on 4 July 2017, is fully supported by the source text. The headline includes the date, and the body explicitly states that Neil replaced Grayson. However, the tool's shown sentences omitted these key proofs, instead showing irrelevant or incomplete excerpts. Therefore, the tool's evidence is insufficient and needs correction."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "# Alex Neil: Preston North End appoint ex-Norwich boss as manager 4 Jul 2017",
+     "The 36-year-old has replaced Simon Grayson, who left North End to join Sunderland on 29 June."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim that Grayson's replacement was Alex Neil, appointed on 4 July 2017, is fully supported by the source text. The headline includes the date, and the body explicitly states that Neil replaced Grayson. However, the tool's shown sentences omitted these key proofs, instead showing irrelevant or incomplete excerpts. Therefore, the tool's evidence is insufficient and needs correction."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "On 5 June 2019, Atl\u00e9tico Madrid of La Liga, who hold an ownership stake in Atl\u00e9tico San Luis, announced the signing of Ib\u00e1\u00f1ez; effective from July.",
+   "markers": [
+    "nicolsibezfootballerborn"
+   ],
+   "paper_ids": [
+    "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8287,
+   "evidence": {
+    "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+    "source_title": "nicolsibezfootballerborn",
+    "supported": true,
+    "sentence": "Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis have reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez.",
+    "page": 1,
+    "snippet": "Atl\u00e9tico de Madrid and Atl\u00e9tico de San",
+    "cosine": 0.8287,
+    "reason": "The passage states that Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez, with the player to be registered when the summer transfer window opens on July 1, which aligns with the claim's assertion of a signing effective from July.",
+    "window": "Ok | More information 24-YEAR-OLD ARGENTINE STRIKER # Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez ## The Argentine is to be registered once the summer transfer window opens on July 1. Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis have reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez. The striker is to be registered once the summer transfer window opens on July 1."
+   },
+   "evidences": [
+    {
+     "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+     "source_title": "nicolsibezfootballerborn",
+     "supported": true,
+     "sentence": "Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis have reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez.",
+     "page": 1,
+     "snippet": "Atl\u00e9tico de Madrid and Atl\u00e9tico de San",
+     "cosine": 0.8287,
+     "reason": "The passage states that Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez, with the player to be registered when the summer transfer window opens on July 1, which aligns with the claim's assertion of a signing effective from July.",
+     "window": "Ok | More information 24-YEAR-OLD ARGENTINE STRIKER # Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez ## The Argentine is to be registered once the summer transfer window opens on July 1. Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis have reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez. The striker is to be registered once the summer transfer window opens on July 1."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez, with the player to be registered when the summer transfer window opens on July 1, which aligns with the claim's assertion of a signing effective from July.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "announced the signing of Ib\u00e1\u00f1ez",
+      "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+      "source_title": "nicolsibezfootballerborn",
+      "sentence": "Ok | More information 24-YEAR-OLD ARGENTINE STRIKER # Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez ## The Argentine is to be registered once the summer transfer window opens on July 1.",
+      "page": 1,
+      "snippet": "Ok | More information 24-YEAR-OLD ARGENTINE STRIKER"
+     },
+     {
+      "component": "effective from July",
+      "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+      "source_title": "nicolsibezfootballerborn",
+      "sentence": "Ok | More information 24-YEAR-OLD ARGENTINE STRIKER # Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez ## The Argentine is to be registered once the summer transfer window opens on July 1.",
+      "page": 1,
+      "snippet": "Ok | More information 24-YEAR-OLD ARGENTINE STRIKER"
+     },
+     {
+      "component": "On 5 June 2019",
+      "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+      "source_title": "nicolsibezfootballerborn",
+      "sentence": "(meta data) TITLE: Club Atl\u00e9tico de Madrid \u00b7 Web oficial - Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez (meta data) PUBLISHED DATETIME: 2019-06-05 We use own and third-party cookies for improve our services.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Club Atl\u00e9tico de Madrid"
+     }
+    ],
+    "uncovered": [
+     "Atl\u00e9tico Madrid of La Liga, who hold an ownership stake in Atl\u00e9tico San Luis"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+      "source_title": "nicolsibezfootballerborn",
+      "text": "(meta data) TITLE: Club Atl\u00e9tico de Madrid \u00b7 Web oficial - Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez (meta data) PUBLISHED DATETIME: 2019-06-05 We use own and third-party cookies for improve our services. If you continue browsing, we consider you accept its use. Ok | More information 24-YEAR-OLD ARGENTINE STRIKER # Atl\u00e9tico de Madrid agree deal with Atl\u00e9tico de San Luis over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez ## The Argentine is to be registered once the summer transfer window opens on July 1.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that Atl\u00e9tico Madrid holds an ownership stake in Atl\u00e9tico San Luis",
+    "rewrite_suggestion": "On 5 June 2019, Atl\u00e9tico Madrid announced the signing of Nicol\u00e1s Ib\u00e1\u00f1ez, effective from July.",
+    "proofs": [
+     "(meta data) PUBLISHED DATETIME: 2019-06-05",
+     "Atl\u00e9tico de Madrid and Atl\u00e9tico de San Luis have reached an agreement over the transfer of Nicol\u00e1s Ib\u00e1\u00f1ez.",
+     "The Argentine is to be registered once the summer transfer window opens on July 1."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes an ownership stake component that is not mentioned anywhere in the provided source text. The date, announcement, and effective date are all supported by the shown sentences, but the author must either add a citation for the ownership claim or remove it to match what the source actually states."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "c9d3ec5c6875c45b78a93c8dd80da911e58dd527": {
+    "title": "railgun",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "89bd9828a1d32d1c65750e1714d3a24d42d215e1": {
+    "title": "oregoncavesnationalmonum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "40032a1d0df3ef8fb9b8105032c65e19885f1e42": {
+    "title": "sriradhashyamasundarmand",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09": {
+    "title": "loveforsalebook",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d2568e9b705603a256f25c58c1903eb76b4d7a98": {
+    "title": "rebeccablumenstein",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c": {
+    "title": "toxoplasmosis",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "647f92f2de615b17bd583d889fcee4a2e08df33a": {
+    "title": "coal",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4": {
+    "title": "nathantyson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7": {
+    "title": "ericmurrayrower",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b145c7a86b57e3f7e5740edaf810b452b0d04f8c": {
+    "title": "docadams",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "6f9b25b02e60ad3dd22e4ed0043a67b9362f398f": {
+    "title": "aileenlee",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b": {
+    "title": "nicolsibezfootballerborn",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "97a08a2de84dd2aa671cb50eea0d97e261121258": {
+    "title": "orelhershisersscorelessi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "90133702114fca0eb5f1439d724d1ad6796c3073": {
+    "title": "skylersamuels",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74": {
+    "title": "eatonnorfolk",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "2665d87db86b5b051e421505e8de49e979ee7fab": {
+    "title": "thesimpsons",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "45221ac3d27314b51e16f3caa77747d542544941": {
+    "title": "satyamohanjoshi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a52db556248fdead7458ed11682db466ae44bed4": {
+    "title": "aarondford",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "cd283149846b0d0e4e5b292d552f4860f4a0c04f": {
+    "title": "thedailybeast",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "6b2f97028527047fd3c7b7479ed1c3b0947a6acb": {
+    "title": "thepaleemperor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "e302001d4ef1672aa40348cd1033a08255a76792": {
+    "title": "thetragicallyhip",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fd2bddc0ccf03f4070af420030efe1ee7288b1bc": {
+    "title": "historyofprestonnorthend",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "00a431c4a58f6ef37ea791d82cb1003acf03f3c2": {
+    "title": "listofchurchespreservedb",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "be35d05f5b15dc531c2434c2e296cc680fcbe2dc": {
+    "title": "ashlynharris",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5381e97b21f7451e02add80b7a060f2ccf353911": {
+    "title": "ashleyssack",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4ad289a089a8515d9a642da906648ccae43e769c": {
+    "title": "fridayschildstartrektheo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 18,
+   "unsupported": 8,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 15:11:17",
+  "marker_errors": [],
+  "processing_time_seconds": 367.7,
+  "source_hashes": {
+   "ashlynharris.txt": "5f98c518170726d718397eb5798c47c30936864a",
+   "railgun.txt": "2dc6ffad15abf869d90956e7542d65c4fa63ae12",
+   "eatonnorfolk.txt": "e4f102f6fa011b9ec559a10f6d6456a8be79f52f",
+   "nathantyson.txt": "26e23ccb9d9a8a5270586cc5005fe1ec293da6da",
+   "thesimpsons.txt": "17e84a0556331ce31bbcbc8e0d287f35a4449aaa",
+   "coal.txt": "b0a91e3056d1046d2b54ebe4ca48e258ccbafce2",
+   "listofchurchespreservedb.txt": "29e6d7ee4b2e9a32d1452e4a0db3cbd3c1e8a0ba",
+   "aarondford.txt": "09341d85df2378a4b4bafd0b7749f7bea178db8d",
+   "thetragicallyhip.txt": "5900ba6761d946ad892c37103adb858749d1dbed",
+   "ericmurrayrower.txt": "121f69a579fff77fa1a8526d0dd09f188f3ea373",
+   "rebeccablumenstein.txt": "2762c2c45bee6b89579551220ce5cdb9e3349f5d",
+   "fridayschildstartrektheo.txt": "44c325b6fd78cd78c0e898a46250937482e5ce5a",
+   "skylersamuels.txt": "1746fd7a43bbad12060f364dea24fef2b5cb4543",
+   "thedailybeast.txt": "43d56e4503cd4c9ea1f0e9ab465cb75caa36209d",
+   "docadams.txt": "f3c25b82a1cabd3ce2d8297fcdfedda2e92f18b4",
+   "loveforsalebook.txt": "5c6f1589349bccb9aa74e1209bf90dc2b743aa39",
+   "orelhershisersscorelessi.txt": "4c1ee893111e8ce9fe6c44ec56167396ab457420",
+   "oregoncavesnationalmonum.txt": "abd0a2a59d43e955671e6c3cf21a079e948c084d",
+   "toxoplasmosis.txt": "69ed59186812d31b3be392ae1ab95b9013ab9067",
+   "ashleyssack.txt": "bed5316ceb593249e5d912580f166cf3c42cccad",
+   "sriradhashyamasundarmand.txt": "81c222ce4af8702c6bf54bcf1a6f498836102340",
+   "thepaleemperor.txt": "f46faf56716fd8aa461e6f99797ab7aaad98a3ee",
+   "aileenlee.txt": "f906de091f7784a6ba79a910e21af6135e81672e",
+   "satyamohanjoshi.txt": "4c7301894aeb41b8448f7c9ea87a0359e4a8b7fc",
+   "historyofprestonnorthend.txt": "f03abbc4077038dd18e0c07fe3e606e16fd88a06",
+   "nicolsibezfootballerborn.txt": "26f7026c8704027b4b758f0b7bae61a9317ccf98"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 323,
+    "prompt_tokens": 323194,
+    "completion_tokens": 17309,
+    "cost_usd": 0.039263
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 24,
+    "prompt_tokens": 74132,
+    "completion_tokens": 59665,
+    "cost_usd": 0.021219
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 8,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 18,
+   "actions": {
+    "add_citation_or_rewrite": 15,
+    "wrong_or_insufficient_evidence": 3
+   },
+   "proof_may_exist": [
+    "t17",
+    "t23"
+   ],
+   "conflicts": [
+    "t9"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t25"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+   "key": "ashlynharris",
+   "filename": "ashlynharris.txt",
+   "title": "ashlynharris",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c9d3ec5c6875c45b78a93c8dd80da911e58dd527",
+   "key": "railgun",
+   "filename": "railgun.txt",
+   "title": "railgun",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bcf13f68e55f6cf03b4e944f4eaa321e8dd7eb74",
+   "key": "eatonnorfolk",
+   "filename": "eatonnorfolk.txt",
+   "title": "eatonnorfolk",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5e7a562a5a86c4de2f9df05fa24362b4f2a422f4",
+   "key": "nathantyson",
+   "filename": "nathantyson.txt",
+   "title": "nathantyson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2665d87db86b5b051e421505e8de49e979ee7fab",
+   "key": "thesimpsons",
+   "filename": "thesimpsons.txt",
+   "title": "thesimpsons",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "647f92f2de615b17bd583d889fcee4a2e08df33a",
+   "key": "coal",
+   "filename": "coal.txt",
+   "title": "coal",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "00a431c4a58f6ef37ea791d82cb1003acf03f3c2",
+   "key": "listofchurchespreservedb",
+   "filename": "listofchurchespreservedb.txt",
+   "title": "listofchurchespreservedb",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+   "key": "aarondford",
+   "filename": "aarondford.txt",
+   "title": "aarondford",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+   "key": "thetragicallyhip",
+   "filename": "thetragicallyhip.txt",
+   "title": "thetragicallyhip",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0ba1bea66b4d8eede4d65c1097e71a122ceaeac7",
+   "key": "ericmurrayrower",
+   "filename": "ericmurrayrower.txt",
+   "title": "ericmurrayrower",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d2568e9b705603a256f25c58c1903eb76b4d7a98",
+   "key": "rebeccablumenstein",
+   "filename": "rebeccablumenstein.txt",
+   "title": "rebeccablumenstein",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4ad289a089a8515d9a642da906648ccae43e769c",
+   "key": "fridayschildstartrektheo",
+   "filename": "fridayschildstartrektheo.txt",
+   "title": "fridayschildstartrektheo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "90133702114fca0eb5f1439d724d1ad6796c3073",
+   "key": "skylersamuels",
+   "filename": "skylersamuels.txt",
+   "title": "skylersamuels",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cd283149846b0d0e4e5b292d552f4860f4a0c04f",
+   "key": "thedailybeast",
+   "filename": "thedailybeast.txt",
+   "title": "thedailybeast",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b145c7a86b57e3f7e5740edaf810b452b0d04f8c",
+   "key": "docadams",
+   "filename": "docadams.txt",
+   "title": "docadams",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9c135cb5d9fd22a0ae42ba9f1fdf4bbafd629a09",
+   "key": "loveforsalebook",
+   "filename": "loveforsalebook.txt",
+   "title": "loveforsalebook",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "97a08a2de84dd2aa671cb50eea0d97e261121258",
+   "key": "orelhershisersscorelessi",
+   "filename": "orelhershisersscorelessi.txt",
+   "title": "orelhershisersscorelessi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "89bd9828a1d32d1c65750e1714d3a24d42d215e1",
+   "key": "oregoncavesnationalmonum",
+   "filename": "oregoncavesnationalmonum.txt",
+   "title": "oregoncavesnationalmonum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "80db1e9fc6f8a00dd36312d6b4bcc1f7a131065c",
+   "key": "toxoplasmosis",
+   "filename": "toxoplasmosis.txt",
+   "title": "toxoplasmosis",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5381e97b21f7451e02add80b7a060f2ccf353911",
+   "key": "ashleyssack",
+   "filename": "ashleyssack.txt",
+   "title": "ashleyssack",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "40032a1d0df3ef8fb9b8105032c65e19885f1e42",
+   "key": "sriradhashyamasundarmand",
+   "filename": "sriradhashyamasundarmand.txt",
+   "title": "sriradhashyamasundarmand",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6b2f97028527047fd3c7b7479ed1c3b0947a6acb",
+   "key": "thepaleemperor",
+   "filename": "thepaleemperor.txt",
+   "title": "thepaleemperor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6f9b25b02e60ad3dd22e4ed0043a67b9362f398f",
+   "key": "aileenlee",
+   "filename": "aileenlee.txt",
+   "title": "aileenlee",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "45221ac3d27314b51e16f3caa77747d542544941",
+   "key": "satyamohanjoshi",
+   "filename": "satyamohanjoshi.txt",
+   "title": "satyamohanjoshi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fd2bddc0ccf03f4070af420030efe1ee7288b1bc",
+   "key": "historyofprestonnorthend",
+   "filename": "historyofprestonnorthend.txt",
+   "title": "historyofprestonnorthend",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f7a0a17d4c8659232a088d3d63877e7b40dcfb4b",
+   "key": "nicolsibezfootballerborn",
+   "filename": "nicolsibezfootballerborn.txt",
+   "title": "nicolsibezfootballerborn",
+   "num_claims": 0
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "split": "train",
+ "mode": "heldout_all",
+ "batch": 4,
+ "label_filter": "not_supported",
+ "exclude_used": true,
+ "claims": {
+  "thenegotiationbrooklynni": {
+   "wice_id": "train15270",
+   "split_index": 595,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     10
+    ]
+   ],
+   "n_source_sentences": 81
+  },
+  "lianlunson": {
+   "wice_id": "train00773",
+   "split_index": 611,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 373
+  },
+  "yahooanswers": {
+   "wice_id": "train00839",
+   "split_index": 624,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     6
+    ]
+   ],
+   "n_source_sentences": 51
+  },
+  "secondamendmenttotheunit": {
+   "wice_id": "train45496",
+   "split_index": 632,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 346
+  },
+  "bloodontheleaves": {
+   "wice_id": "train27405",
+   "split_index": 641,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 573
+  },
+  "nanticokepennsylvania": {
+   "wice_id": "train42468",
+   "split_index": 642,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 26
+  },
+  "glennhaughton": {
+   "wice_id": "train11585",
+   "split_index": 643,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 76
+  },
+  "jankowski": {
+   "wice_id": "train20366",
+   "split_index": 657,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 100
+  },
+  "fairfaxvirginia": {
+   "wice_id": "train23561",
+   "split_index": 661,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 67
+  },
+  "didarganjassemblyconstit": {
+   "wice_id": "train18865",
+   "split_index": 678,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 121
+  },
+  "arabiangulfuniversity": {
+   "wice_id": "train39867",
+   "split_index": 694,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     161
+    ]
+   ],
+   "n_source_sentences": 171
+  },
+  "elizalewis": {
+   "wice_id": "train27773",
+   "split_index": 699,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 69
+  },
+  "daniellesteel": {
+   "wice_id": "train08200",
+   "split_index": 704,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     24
+    ]
+   ],
+   "n_source_sentences": 55
+  },
+  "softwarepatent": {
+   "wice_id": "train33094",
+   "split_index": 707,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 480
+  },
+  "joelberryii": {
+   "wice_id": "train25453",
+   "split_index": 724,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 89
+  },
+  "solarpowerintheunitedkin": {
+   "wice_id": "train25341",
+   "split_index": 726,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     8
+    ]
+   ],
+   "n_source_sentences": 84
+  },
+  "chawa": {
+   "wice_id": "train38017",
+   "split_index": 735,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     13
+    ]
+   ],
+   "n_source_sentences": 35
+  },
+  "hailegiyorgiswoldemikael": {
+   "wice_id": "train37499",
+   "split_index": 741,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 184
+  },
+  "imeltwithyou": {
+   "wice_id": "train24087",
+   "split_index": 749,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 138
+  },
+  "justicedemocrats": {
+   "wice_id": "train20798",
+   "split_index": 751,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 29
+  },
+  "rogerwheelerbusinessman": {
+   "wice_id": "train09980",
+   "split_index": 752,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 37
+  },
+  "201112stjohnstonefcseaso": {
+   "wice_id": "train10126",
+   "split_index": 756,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 73
+  },
+  "greenrainbowparty": {
+   "wice_id": "train05267",
+   "split_index": 766,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 86
+  },
+  "cityofdavid": {
+   "wice_id": "train43095",
+   "split_index": 786,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 575
+  },
+  "longlivelove": {
+   "wice_id": "train43691",
+   "split_index": 791,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 55
+  },
+  "timoneytechnologylimited": {
+   "wice_id": "train17454",
+   "split_index": 798,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 92
+  }
+ }
+}

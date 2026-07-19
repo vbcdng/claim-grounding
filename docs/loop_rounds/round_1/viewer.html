@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Round 1 snapshot — pre-covering display (as originally reviewed)</title>
+<style>
+  :root { --teal:#0f766e; --teal-bg:#ccfbf1; --red:#b91c1c; --red-bg:#fee2e2; --amber:#b45309; --gray:#6b7280; }
+  * { box-sizing:border-box; }
+  html,body { height:100%; }
+  body { font-family:-apple-system,Segoe UI,Roboto,sans-serif; margin:0; color:#1f2937; background:#f9fafb;
+         display:flex; flex-direction:column; }
+  header { background:#111827; color:#fff; padding:12px 24px; }
+  header h1 { margin:0 0 4px; font-size:17px; }
+  .head-row { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .totals { font-size:13px; opacity:.85; }
+  .totals b.s { color:#5eead4; } .totals b.u { color:#fca5a5; } .totals b.o { color:#fdba74; }
+  .scopenote { font-size:11px; opacity:.55; margin-top:3px; }
+  .modebar { font-size:12px; padding:6px 24px; background:#0b1220; color:#cbd5e1; border-top:1px solid #1f2937; }
+  .modebar .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  .coverage { padding:10px 24px; background:#fff; border-bottom:1px solid #e5e7eb; }
+  .cov-head { display:flex; justify-content:space-between; align-items:center; }
+  .cov-title { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin-bottom:6px; }
+  .cov-bars { max-height:30vh; overflow:auto; }
+  .cov-bars.collapsed { display:none; }
+  .cov-row { display:flex; align-items:center; gap:12px; margin:5px 0; font-size:13px; }
+  .cov-label { width:220px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cov-track { flex:1; height:10px; background:var(--red-bg); border-radius:5px; overflow:hidden; }
+  .cov-fill { height:100%; background:var(--teal); }
+  .cov-num { width:340px; color:var(--gray); }
+  .cov-status { display:inline-block; margin-right:8px; padding:0 6px; border-radius:8px;
+                 background:var(--chip-bg, #eef1f4); font-size:11px; }
+
+  /* Two side-by-side columns: Your text | Your claims */
+  .layout { display:flex; flex:1; min-height:0; }
+  .doc-wrap { flex:1; display:flex; flex-direction:column; min-width:0; background:#fff; border-right:1px solid #e5e7eb; }
+  .cards { flex:1; display:flex; flex-direction:column; min-width:0; }
+  .doc-head { display:flex; justify-content:space-between; align-items:center; padding:6px 16px; background:#f3f4f6; }
+  .doc-head h2 { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin:0; }
+  .toggle { font-size:11px; padding:2px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }
+  .doc { flex:1; padding:14px 18px; line-height:1.9; overflow:auto; }
+  .doc.collapsed { display:none; }
+  .cards-body { flex:1; overflow:auto; padding:12px 18px; }
+
+  h2.sec { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin:14px 0 6px; }
+  .claim { cursor:pointer; padding:1px 2px; border-radius:3px; border-bottom:2px solid transparent; }
+  .claim.supported { background:var(--teal-bg); border-bottom-color:var(--teal); }
+  .claim.unsupported { background:var(--red-bg); border-bottom-color:var(--red); }
+  .claim.own { background:#eef2ff; border-bottom-color:#818cf8; }
+  .claim.active { outline:2px solid #facc15; }
+  sup.mark { color:#2563eb; font-weight:700; }
+  .card { border:1px solid #e5e7eb; border-left-width:5px; border-radius:6px; padding:10px 12px; margin:8px 0; background:#fff; cursor:pointer; }
+  .card.supported { border-left-color:var(--teal); }
+  .card.unsupported { border-left-color:var(--red); }
+  .card.omitted { border-left-color:var(--amber); }
+  .card.active { box-shadow:0 0 0 2px #facc15; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .head-left { display:flex; align-items:center; gap:6px; }
+  .claimno { font-size:11px; color:#6b7280; font-family:monospace; }
+  .badge { font-size:11px; font-weight:700; padding:2px 7px; border-radius:10px; color:#fff; }
+  .badge.supported { background:var(--teal); } .badge.unsupported { background:var(--red); } .badge.omitted { background:var(--amber); }
+  .badge.own { background:#6366f1; }
+  .card.own { border-left:3px solid #818cf8; }
+  .own-note { font-size:12px; color:#4338ca; background:#eef2ff; padding:6px 8px; border-radius:4px; }
+  .card-claim .leadin { background:#eef2ff; color:#4b5563; border-bottom:2px solid #818cf8; }
+  .leadin-chip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                  border-radius:8px; background:#eef2ff; color:#6366f1; border:1px solid #c7d2fe; }
+  .leadin-note { font-size:12px; color:#4338ca; background:#eef2ff; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .confchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; border:1px solid; white-space:nowrap; }
+  .confchip.high { background:#f0fdf4; color:#166534; border-color:#bbf7d0; }
+  .confchip.medium { background:#fefce8; color:#854d0e; border-color:#fde047; }
+  .confchip.low { background:#fef2f2; color:#b91c1c; border-color:#fecaca; }
+  .sochip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle;
+             background:#fffbeb; color:#92400e; border:1px solid #fcd34d; cursor:help; }
+  .ownerchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                border-radius:8px; margin-left:6px; vertical-align:middle;
+                background:#ede9fe; color:#5b21b6; border:1px solid #c4b5fd; cursor:help; }
+  .so-note { font-size:12px; background:#fffbeb; border:1px solid #fcd34d; color:#92400e;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .dcchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help; }
+  .dcchip.agree { background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; }
+  .dcchip.flag { background:#fff7ed; color:#9a3412; border:1px solid #fdba74; }
+  .dc-note { font-size:12px; background:#eff6ff; border:1px solid #bfdbfe; color:#1e3a8a;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .dc-note.flag { background:#fff7ed; border-color:#fdba74; color:#7c2d12; }
+  .dc-better { margin-top:4px; font-style:italic; }
+  .citechip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#fef3c7; color:#b45309; border:1px solid #fbbf24; cursor:help; }
+  .kindchip { font-size:9px; font-weight:600; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#f3f4f6; color:#6b7280; border:1px solid #e5e7eb; cursor:help; }
+  .cite-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.cite { border-color:#fbbf24; color:#b45309; }
+  .partialchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                  border-radius:8px; margin-left:6px; vertical-align:middle;
+                  background:#fef3c7; color:#b45309; border:1px solid #fbbf24; cursor:help; }
+  .partial-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                   border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.partial { border-color:#fbbf24; color:#b45309; }
+  .overchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:help; }
+  .overcite-note { font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+                    border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.overcitef { border-color:#cbd5e1; color:#475569; }
+  .multisource-note { font-size:12px; background:#f0f9ff; border:1px solid #bae6fd; color:#0c4a6e;
+                       border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .covset-miss { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                  border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  details.covering { font-size:12px; margin:8px 0 0; border:1px solid #e5e7eb;
+                      border-radius:6px; padding:4px 8px; background:#fafafa; }
+  details.covering summary { cursor:pointer; color:#374151; font-weight:600; }
+  .covset-row { border-top:1px solid #f3f4f6; padding:6px 0; }
+  .covset-row blockquote { margin:4px 0; }
+  .covset-part { font-weight:600; color:#166534; }
+  .covset-src { font-weight:400; color:#6b7280; font-size:11px; }
+  .covset-foot { color:#6b7280; font-size:11px; border-top:1px solid #f3f4f6; padding-top:5px; }
+  .hunt-note { font-size:12px; background:#f0fdf4; border:1px solid #bbf7d0; color:#166534;
+                border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .compcheck-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                     border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .shchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle;
+             background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:help; }
+  .sh-note { font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .disagreechip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                   border-radius:8px; margin-left:6px; vertical-align:middle;
+                   background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; cursor:help; }
+  .disagree-note { font-size:12px; background:#fef2f2; border:1px solid #fca5a5; color:#991b1b;
+                    border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .changed-chip { font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px;
+                   background:#fef9c3; color:#854d0e; border:1px solid #fde047; white-space:nowrap; }
+  sup.changedmark { color:#b45309; font-weight:700; cursor:default; }
+  details.changed-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047;
+                          padding:4px 8px; border-radius:4px; margin-top:6px; }
+  details.changed-note summary { cursor:pointer; }
+  .changed-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047;
+                   padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .prev-text { margin-top:4px; padding:6px 8px; background:#fff; border-left:3px solid #fde047;
+                color:#4b5563; font-style:italic; }
+  .triage { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:10px;
+             padding-top:8px; border-top:1px dashed #e5e7eb; cursor:default; }
+  .tlabel { font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:#9ca3af; }
+  .tbtn { font-size:11px; padding:2px 9px; border:1px solid #d1d5db; border-radius:11px;
+           background:#fff; color:#6b7280; cursor:pointer; }
+  .tbtn.on { background:#7c3aed; border-color:#7c3aed; color:#fff; }
+  .cbtn { font-size:11px; padding:2px 10px; border:1px solid #a7f3d0; border-radius:11px;
+           background:#fff; color:#059669; cursor:pointer; font-weight:600; margin-right:4px; }
+  .cbtn.on { background:#059669; border-color:#059669; color:#fff; }
+  .fbtn.hchk { border-color:#a7f3d0; color:#059669; }
+  .fbtn.hchk.active { background:#059669; border-color:#059669; color:#fff; }
+  .tnote { flex-basis:100%; font-family:inherit; font-size:12px; padding:5px 8px;
+            border:1px solid #d1d5db; border-radius:5px; resize:vertical; color:#374151; }
+  .reviewbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;
+                padding:8px 12px; background:#f5f3ff; border:1px solid #ddd6fe; border-radius:6px; }
+  .rev-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:#6d28d9; }
+  .rev-count { font-size:12px; font-weight:600; color:#4c1d95; }
+  .rbtn { font-size:12px; padding:4px 10px; border:1px solid #7c3aed; background:#7c3aed;
+           color:#fff; border-radius:5px; cursor:pointer; font-family:inherit; }
+  .rbtn:hover { background:#6d28d9; }
+  .rbtn.sci { background:#fff; color:#7c3aed; }
+  .rbtn.sci:hover { background:#f5f3ff; }
+  .rev-hint { font-size:11px; color:#7c7a8c; }
+  .filterbar { display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
+  .fbtn { font-size:12px; padding:3px 10px; border:1px solid #d1d5db; border-radius:12px; background:#fff; cursor:pointer; color:#374151; }
+  .fbtn.active { background:#1f2937; color:#fff; border-color:#1f2937; }
+  .meta { font-size:11px; color:#9ca3af; }
+  .card-claim { font-size:14px; }
+  .evidence { margin-top:10px; padding-top:10px; border-top:1px dashed #e5e7eb; }
+  .ev-label { font-size:11px; color:var(--gray); margin-bottom:4px; }
+  .paperlink { font-size:11px; color:#2563eb; text-decoration:none; white-space:nowrap; }
+  .paperlink:hover { text-decoration:underline; }
+  .srcchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px; border-radius:8px; margin-right:5px; }
+  .srcchip.ok { background:var(--teal-bg); color:var(--teal); }
+  .srcchip.no { background:#e5e7eb; color:#374151; }
+  .combined-note { font-size:12px; color:var(--teal); background:var(--teal-bg); padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .unsupp-note { font-size:12px; color:#b91c1c; background:#fef2f2; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .fixbox { margin-top:8px; padding:8px 10px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; }
+  .fixbox blockquote { margin:6px 0; }
+  .fix-head { font-size:12px; font-weight:600; color:#166534; }
+  .fixchip { font-size:11px; font-weight:400; padding:1px 6px; border-radius:8px; margin-left:6px; }
+  .fixchip.ok { background:#dcfce7; color:#166534; }
+  .fixchip.warn { background:#fef9c3; color:#854d0e; }
+  .fix-changes { font-size:12px; color:#4b5563; font-style:italic; margin-top:4px; }
+  .fixcmd { margin-top:8px; font-size:12px; color:#6b7280; }
+  .fixcmd code { background:#f3f4f6; padding:2px 6px; border-radius:4px; font-size:11px; word-break:break-all; }
+  .borderline-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  details.judged { margin-top:6px; font-size:12px; }
+  details.judged summary { cursor:pointer; color:#6b7280; }
+  .judged-text { margin-top:4px; padding:6px 8px; background:#f9fafb; border-left:3px solid #d1d5db; color:#374151; line-height:1.5; }
+  blockquote { margin:0; padding:8px 10px; background:#f3f4f6; border-left:3px solid var(--teal); font-size:13px; font-style:italic; }
+  .evidence.reason { font-size:12px; color:var(--red); }
+  .copy { margin-top:6px; font-size:11px; padding:3px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }
+
+  /* Open-the-source affordance: one link/button per card, opens a new tab */
+  .src-actions { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+  .deeplink, .opentext-btn { font-size:12px; padding:4px 10px; border:1px solid var(--teal); background:var(--teal); color:#fff; border-radius:5px; text-decoration:none; cursor:pointer; font-family:inherit; }
+  .deeplink:hover, .opentext-btn:hover { background:#0d6358; }
+  .side-btn { font-size:12px; padding:4px 10px; border:1px solid var(--teal); background:#fff; color:var(--teal); border-radius:5px; cursor:pointer; font-family:inherit; }
+  .side-btn:hover { background:var(--teal-bg); }
+  #omittedTail.collapsed { display:none; }
+  #omitToggle { margin:8px 0; }
+  .warnbanner { background:#fef3c7; color:#92400e; font-size:12px; padding:8px 24px; border-bottom:1px solid #fcd34d; }
+  .warnbanner ul { margin:4px 0 0; padding-left:20px; }
+  .assess { background:#faf5ff; border-bottom:1px solid #e9d5ff; padding:10px 24px; }
+  .assess-head { display:flex; justify-content:space-between; align-items:center; }
+  .assess-title { font-weight:600; color:#6b21a8; }
+  .am-note { font-weight:400; color:#9ca3af; font-size:11px; }
+  .assess-body { display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:18px; margin-top:8px; }
+  .assess-body.collapsed { display:none; }
+  .assess-col h3 { font-size:13px; margin:0 0 6px; color:#4c1d95; }
+  .assess-col h4 { font-size:12px; margin:8px 0 3px; color:#6b21a8; }
+  .am-list { margin:0; padding-left:18px; font-size:12px; color:#374151; }
+  .am-list li { margin:3px 0; }
+  .am-edges { max-height:260px; overflow-y:auto; }
+  .am-score { display:inline-block; min-width:20px; font-weight:700; color:#7c3aed; }
+  .am-why { color:#6b7280; font-size:11px; margin-left:2px; }
+  .am-frag { color:#b45309; font-size:10px; border:1px solid #fcd34d; border-radius:3px; padding:0 4px; margin-left:4px; }
+  .am-strength { display:inline-block; font-size:10px; border-radius:3px; padding:0 5px; margin-right:4px; text-transform:uppercase; }
+  .am-strong { background:#fee2e2; color:#b91c1c; }
+  .am-weak { background:#fef9c3; color:#92400e; }
+  .am-rels { color:#9ca3af; font-size:11px; }
+  .am-node { color:#374151; }
+  .am-edge { font-size:11px; padding:0 4px; }
+  .am-supports { color:#15803d; }
+  .am-attacks { color:#b91c1c; }
+  @media (max-width:900px) { .assess-body { grid-template-columns:1fr; } }
+  .covratio { margin:6px 0 10px; }
+  .ccbar { display:flex; height:10px; border-radius:5px; overflow:hidden; background:#f3f4f6; }
+  .ccseg { height:100%; }
+  .cclegend { display:flex; flex-wrap:wrap; gap:10px; margin-top:5px; font-size:11px; color:#6b7280; }
+  .ccleg i { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:3px; vertical-align:middle; }
+  .legend { margin:10px 24px 0; border:1px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:12px; }
+  .legend > summary { cursor:pointer; padding:8px 12px; font-weight:700; color:#374151; list-style:none; }
+  .legend > summary::-webkit-details-marker { display:none; }
+  .legend > summary::before { content:"▸ "; color:#9ca3af; }
+  .legend[open] > summary::before { content:"▾ "; }
+  .legend-body { padding:4px 14px 12px; display:flex; flex-wrap:wrap; gap:16px; }
+  .legend-grp { flex:1; min-width:260px; }
+  .legend-h { font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:.04em; font-size:10px; margin:4px 0; }
+  .legrow { margin:5px 0; line-height:1.5; color:#4b5563; }
+  .legrow .badge { margin-right:5px; vertical-align:middle; }
+</style></head>
+<body>
+<header>
+  <div class="head-row">
+    <h1>Round 1 snapshot — pre-covering display (as originally reviewed)</h1>
+    <button class="toggle" id="topToggle" onclick="toggleTop()"
+            title="collapse everything above the two columns, so they get the full page">hide header</button>
+  </div>
+  <div class="totals">14 claims &nbsp;·&nbsp;
+    <b class="s">9 supported</b> &nbsp;·&nbsp;
+    <b class="u">2 unsupported</b> &nbsp;·&nbsp;
+    <b style="color:#6366f1">3 your own</b> &nbsp;·&nbsp;
+    <b class="o">0 unused source points</b></div>
+  <div class="scopenote">&ldquo;supported&rdquo; means the cited document contains the statement —
+    not that the source is strong or the claim is true; &ldquo;your own&rdquo; (uncited) claims were not checked.
+    &ldquo;unused source points&rdquo; are things your sources say that your text did not cite — a menu, not errors.</div>
+</header>
+<div id="topPanel">
+
+      <details class="legend">
+        <summary>How to read this</summary>
+        <div class="legend-body">
+          <div class="legend-grp">
+            <div class="legend-h">Verdicts</div>
+            <div class="legrow"><span class="badge supported">SUPPORTED</span> the cited source contains the statement — not that the source is strong or the claim is true</div>
+            <div class="legrow"><span class="badge unsupported">UNSUPPORTED</span> no cited source backs it (or the source file is missing)</div>
+            <div class="legrow"><span class="badge own">YOUR OWN CLAIM</span> your uncited claim — thesis, argument, transition; nothing was checked</div>
+            <div class="legrow"><span class="badge omitted">UNUSED</span> a point one of your sources makes that your text didn't cite — a menu, not an error</div>
+          </div>
+          <div class="legend-grp">
+            <div class="legend-h">Chips — nudges, never a verdict</div>
+            <div class="legrow"><span class="confchip high">conf</span><span class="confchip medium">conf</span><span class="confchip low">conf</span> how sure the judge is (derived from votes / method / cosine — no extra LLM call)</div>
+            <div class="legrow"><span class="citechip">citation needed?</span> an uncited passage that asserts a checkable fact — a nudge to cite, not a verdict</div>
+            <div class="legrow"><span class="partialchip">partial support?</span> the cited source(s) back only part of the claim; the verdict stays supported</div>
+            <div class="legrow"><span class="overchip">over-cited?</span> one cited source adds nothing the others already cover</div>
+            <div class="legrow"><span class="shchip">secondhand evidence?</span> the supporting sentence itself cites another work — consider citing the original</div>
+            <div class="legrow"><span class="disagreechip">sources may disagree?</span> a co-cited source's evidence was judged to argue the opposite</div>
+            <div class="legrow"><span class="sochip">2nd opinion</span> a second model disagreed — lowers confidence, read the evidence yourself; never a veto</div>
+            <div class="legrow"><span class="dcchip flag">deep check</span> a stronger model re-read the claim with source context and commented (testing aid) — its commentary is on the card; never a veto</div>
+            <div class="legrow"><span class="changed-chip">✎ changed</span> edited since the last run (incremental re-runs only)</div>
+          </div>
+          <div class="legend-grp">
+            <div class="legend-h">Review</div>
+            <div class="legrow">Mark any card <b>wrong source</b> / <b>rewrite text</b> / <b>verdict wrong</b>, then <b>Copy repair brief</b> or <b>Download review.json</b> to hand to an LLM or the <code>/apply-review</code> command. Marks live in this browser only.</div>
+          </div>
+        </div>
+      </details>
+
+<div class="modebar" id="modebar"></div>
+<div class="coverage">
+  <div class="cov-head">
+    <div class="cov-title">Source coverage — which sources ended up backing your claims (8 sources).
+      An empty bar is usually structural: the citing claims were judged unsupported, or a co-cited source supplied the evidence — the label on each row says which.</div>
+    <button class="toggle" onclick="toggleCoverage()">show</button>
+  </div>
+  <div class="cov-bars collapsed" id="covBars">
+        <div class="cov-row">
+          <div class="cov-label">kucinskas2025</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 4 of your claims</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">fri2026</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">gruetzemacher2021</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">lohn2026</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">rosenberg2024</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">steinhardt2023</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">karger2023</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">cited by 1 claim, none judged supported</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">mellers2023</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">cited by 1 claim, none judged supported</span>0 / 0 source claims in evidence</div>
+        </div></div>
+</div>
+
+</div>
+<div class="layout">
+  <div class="doc-wrap">
+    <div class="doc-head"><h2>Your text</h2><button class="toggle" onclick="toggleDoc()">collapse</button></div>
+    <div class="doc" id="doc"><span class="claim own" id="text-t0" data-card="card-t0" title="t0" onclick="brush('t0', 'text')">Why Superforecasters Struggle With AI — and Not With Everything Else</span> <span class="claim unsupported" id="text-t1" data-card="card-t1" title="t1" onclick="brush('t1', 'text')">Superforecasters earned their reputation in domains built on recurring structure: elections, GDP prints, conflict escalation, disease spread. Geopolitical forecasting is, on its face, an &quot;algorithm-unfriendly&quot; domain — hard-to-quantify inputs, elusive reference classes — yet trained human forecasters, especially when aggregated, hold their own against statistical models there, because research on clinical versus statistical prediction has demonstrated that algorithms make more accurate predictions than humans in many domains, but geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult<sup class="mark">[mellers2023]</sup></span> <span class="claim own" id="text-t2" data-card="card-t2" title="t2" onclick="brush('t2', 'text')">AI progress denies forecasters exactly that kind of scaffolding, and the tournament record shows it starkly.</span> <span class="claim unsupported" id="text-t3" data-card="card-t3" title="t3" onclick="brush('t3', 'text')">In the 2022 Existential Risk Persuasion Tournament, 169 superforecasters and domain experts forecast benchmarks resolving by 2024–2025<sup class="mark">[karger2023]</sup><sup class="mark">[kucinskas2025]</sup></span> <span class="claim supported" id="text-t4" data-card="card-t4" title="t4" onclick="brush('t4', 'text')">Respondents underestimated AI progress, especially superforecasters — for three standard AI benchmarks (MATH, MMLU, and QuALITY), domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to outcomes achieved by end of 2024, while superforecasters were even more pessimistic at 9.3%, 7.2%, and 20.1%<sup class="mark">[kucinskas2025]</sup></span> <span class="claim supported" id="text-t5" data-card="card-t5" title="t5" onclick="brush('t5', 'text')">AI systems achieved gold-level Olympiad performance to which domain experts assigned only 8.6% and superforecasters a mere 2.3% probability; overall superforecasters assigned an average probability of just 9.7% to observed outcomes across four AI benchmarks, versus 24.6% from domain experts<sup class="mark">[kucinskas2025]</sup></span> <span class="claim supported" id="text-t6" data-card="card-t6" title="t6" onclick="brush('t6', 'text')">The same cohort simultaneously overestimated improvements in climate technology — the opposite directional error<sup class="mark">[kucinskas2025]</sup></span> <span class="claim supported" id="text-t7" data-card="card-t7" title="t7" onclick="brush('t7', 'text')">Independent evidence points the same way. Steinhardt&#x27;s parallel exercise found that the AI experts had similar medians but were overconfident in the tails, while the superforecasters systematically underpredicted progress, and generalist crowd forecasters fared worst<sup class="mark">[steinhardt2023]</sup></span> <span class="claim supported" id="text-t8" data-card="card-t8" title="t8" onclick="brush('t8', 'text')">FRI&#x27;s ongoing expert panel shows this persisting into 2025–2026: recent benchmark performance suggests the median expert is substantially underestimating the progress of development of SOTA AI systems<sup class="mark">[fri2026]</sup></span> <span class="claim own" data-card="card-t9" title="t9 — your own lead-in" onclick="brush('t9', 'text')">The structural problem is reference-class reasoning.</span> <span class="claim supported" id="text-t9" data-card="card-t9" title="t9" onclick="brush('t9', 'text')">Superforecasting leans on outside-view base rates from many similar past events; elections and wars recur, GDP mean-reverts. AI capability growth, by contrast, is discontinuous and compute-driven, leaving no comparable historical baseline<sup class="mark">[gruetzemacher2021]</sup></span> <span class="claim supported" id="text-t10" data-card="card-t10" title="t10" onclick="brush('t10', 'text')">Tellingly, individual forecasters&#x27; near-term performance was statistically indistinguishable from simple algorithms — a &quot;no-change&quot; forecast and trend extrapolation — and there was no statistically significant correlation between near-term accuracy and long-term existential-risk forecasts<sup class="mark">[kucinskas2025]</sup></span> <span class="claim own" data-card="card-t11" title="t11 — your own lead-in" onclick="brush('t11', 'text')">The disagreement runs deeper than calibration.</span> <span class="claim supported" id="text-t11" data-card="card-t11" title="t11" onclick="brush('t11', 'text')">In an adversarial-collaboration study, &quot;concerned&quot; domain experts predicted a 20% chance of AI-caused existential catastrophe by 2100, while &quot;skeptical&quot; participants — mainly superforecasters — predicted 0.12%, and neither side substantially updated toward the other&#x27;s views<sup class="mark">[rosenberg2024]</sup></span> <span class="claim supported" id="text-t12" data-card="card-t12" title="t12" onclick="brush('t12', 'text')">One reading is that existential AI risk is dominated by epistemic uncertainty (unknown mechanism) rather than aleatoric uncertainty (a stable random process) — exactly the kind of ignorance that standard probability elicitation, the superforecaster&#x27;s core tool, was not built to represent<sup class="mark">[lohn2026]</sup></span> <span class="claim own" id="text-t13" data-card="card-t13" title="t13" onclick="brush('t13', 'text')">Geopolitics rewards forecasters skilled at averaging history. AI progress currently rewards betting that history&#x27;s pace won&#x27;t hold — which is precisely the bet superforecasters, drilled to distrust extrapolation, are least equipped to make.</span> </div>
+  </div>
+  <div class="cards">
+    <div class="doc-head"><h2>Your claims — in text order</h2></div>
+    <div class="cards-body">
+      
+      <div class="reviewbar">
+        <span class="rev-title">Review</span>
+        <span id="revCount" class="rev-count">0 claims marked</span>
+        <button id="briefBtn" class="rbtn" onclick="copyBrief()">Copy repair brief</button>
+        <button class="rbtn" onclick="downloadReview()" title="saves as review_&lt;run&gt;_&lt;date&gt;.json — to your chosen folder if set, else the browser's Downloads">Download review file</button>
+        <button id="saveLocBtn" class="rbtn" onclick="chooseSaveDir()"
+                title="pick a folder once (e.g. the run folder) — every future review file saves there without asking. Chromium only; elsewhere the file goes to Downloads.">Save location…</button>
+        <button id="sciBtn" class="rbtn sci" onclick="copyScience()"
+                title="Bundle every claim marked 'wrong source' into ONE research request to paste into any deep-research tool (Claude Science, Elicit, Perplexity, a plain LLM…). A Claude Science export merges back automatically via import_claude_research.py --merge-into; any other tool's results you add manually.">Copy research request</button>
+        <span class="rev-hint">mark cards below (wrong source / rewrite / verdict wrong / other), then export — see docs/REPAIR_PLAYBOOK.md</span>
+      </div>
+      <div class="covratio"><div class="ccbar"><div class="ccseg" style="width:64.3%;background:#16a34a" title="supported: 9 (64%)"></div><div class="ccseg" style="width:14.3%;background:#dc2626" title="unsupported: 2 (14%)"></div><div class="ccseg" style="width:21.4%;background:#6366f1" title="your own: 3 (21%)"></div></div><div class="cclegend"><span class="ccleg"><i style="background:#16a34a"></i>supported 9</span><span class="ccleg"><i style="background:#dc2626"></i>unsupported 2</span><span class="ccleg"><i style="background:#6366f1"></i>your own 3</span></div></div>
+      
+      <div class="filterbar">
+        <button class="fbtn active" data-f="all">All (14)</button>
+        <button class="fbtn" data-f="supported">Supported (9)</button>
+        <button class="fbtn" data-f="unsupported">Unsupported (2)</button>
+        <button class="fbtn" data-f="own">Your own (3)</button>
+        <button class="fbtn conff" data-f="conf-low" title="claims whose judge confidence is low — the ones worth a human read">Low confidence (2)</button><button class="fbtn conff" data-f="conf-medium" title="claims whose judge confidence is medium — the ones worth a human read">Medium confidence (3)</button>
+        <button class="fbtn partial" data-f="partial" title="multi-citation claims judged supported, but a specific component was in none of the cited sources — verify that part">Partial support (2)</button>
+        
+        
+        
+        <button class="fbtn hchk" data-f="hchecked" title="cards you marked ✓ checked">✓ Checked (<span id="chkN">0</span>)</button>
+        <button class="fbtn hunchk" data-f="hunchecked" title="cards you have not marked ✓ checked yet">Unchecked (<span id="unchkN">0</span>)</button>
+      </div>
+      <div id="claimList">
+      <div class="card own" id="card-t0" data-text="text-t0" onclick="brush('t0', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge own">YOUR OWN CLAIM</span><span class="claimno">t0</span><span class="kindchip" title="This is a heading that announces the topic of the following section.">structural</span></span><span class="meta">none</span></div>
+        <div class="card-claim">Why Superforecasters Struggle With AI — and Not With Everything Else</div>
+        
+        <div class="evidence own-note">No citation — the tool treats this as your own idea, argument, or transition. Nothing was checked; add a [[key]] marker if it should be grounded in a source.</div>
+        
+        <div class="triage" data-id="t0" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card unsupported conf-high" id="card-t1" data-text="text-t1" onclick="brush('t1', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge unsupported">UNSUPPORTED</span><span class="claimno">t1</span><span class="confchip high" title="unanimous rejection after reading the extracted evidence">high confidence</span></span><span class="meta">llm_fulltext</span></div>
+        <div class="card-claim">Superforecasters earned their reputation in domains built on recurring structure: elections, GDP prints, conflict escalation, disease spread. Geopolitical forecasting is, on its face, an &quot;algorithm-unfriendly&quot; domain — hard-to-quantify inputs, elusive reference classes — yet trained human forecasters, especially when aggregated, hold their own against statistical models there, because research on clinical versus statistical prediction has demonstrated that algorithms make more accurate predictions than humans in many domains, but geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult</div>
+        <div class="unsupp-note">✗ Not supported: the passage does not state that superforecasters earned their reputation in domains built on recurring structure: elections, GDP prints, conflict escalation, disease spread.</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the best passage a full-text read found — judged NOT to support the claim on its own; shown so you can see what was checked">relevant — not enough alone</span> mellers2023 <a class="paperlink" href="https://scholar.google.com/scholar?q=mellers2023" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>Geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/mellers2023.pdf#page=1&amp;search=Geopolitical%20forecasting%20is%20an%20algorithm-unfriendly%20domain%2C%20with%20hard-to-quantify%20data%20and%20elusive%20reference%20classes%20that%20make%20predictive%20model-building%20difficult." target="_blank" rel="noopener">Open PDF · p.1 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/mellers2023.pdf#page=1&amp;search=Geopolitical%20forecasting%20is%20an%20algorithm-unfriendly%20domain%2C%20with%20hard-to-quantify%20data%20and%20elusive%20reference%20classes%20that%20make%20predictive%20model-building%20difficult."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (141 words)</summary><div class="judged-text">Geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult. Tournaments to improve human forecasts Does that mean that forecasting in the geopolitical domain does not benefit from algorithms? We discovered the power of algorithms in geopolitical forecasting between 2011 and 2015 when the U.S. intelligence community commissioned a series of forecasting competitions. Therefore, it is hard to apply conclusions from the classic literature on clinical versus statistical predictions to this domain. Research on clinical versus statistical prediction has demonstrated that algorithms make more accurate predictions Geopolitical forecasting is profoundly important, but forecasters rarely have access to large data sets of observations and easily quantifiable predictor variables. Models are hard to build because there are few observations that are difficult to classify. That approach proved to be more accurate than human forecasters alone.</div></details>
+          </div>
+        
+          <div class="fixcmd">To get a rewrite supported by the sources, run:
+            <code>python3 verify_my_text.py --output-dir /home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/app --model gemini/gemini-2.5-flash-lite --fix-claim t1</code>
+            <button class="copy" onclick="copyText(this)" data-quote="python3 verify_my_text.py --output-dir /home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/app --model gemini/gemini-2.5-flash-lite --fix-claim t1">Copy command</button>
+          </div>
+        <div class="triage" data-id="t1" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card own" id="card-t2" data-text="text-t2" onclick="brush('t2', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge own">YOUR OWN CLAIM</span><span class="claimno">t2</span><span class="kindchip" title="This is the author&#x27;s interpretation of the implications of AI progress on forecasting, presented as their argument.">opinion</span></span><span class="meta">none</span></div>
+        <div class="card-claim">AI progress denies forecasters exactly that kind of scaffolding, and the tournament record shows it starkly.</div>
+        
+        <div class="evidence own-note">No citation — the tool treats this as your own idea, argument, or transition. Nothing was checked; add a [[key]] marker if it should be grounded in a source.</div>
+        
+        <div class="triage" data-id="t2" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card unsupported conf-medium" id="card-t3" data-text="text-t3" onclick="brush('t3', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge unsupported">UNSUPPORTED</span><span class="claimno">t3</span><span class="confchip medium" title="an indirect verdict (sources combined, only the cited tail re-judged, or components verified separately then re-judged together) — solid, but worth a glance">medium confidence</span></span><span class="meta">combined_fulltext</span></div>
+        <div class="card-claim">In the 2022 Existential Risk Persuasion Tournament, 169 superforecasters and domain experts forecast benchmarks resolving by 2024–2025</div>
+        <div class="unsupp-note">✗ Not supported: the passage does not state that the benchmarks resolved by 2024-2025</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the best passage a full-text read found — judged NOT to support the claim on its own; shown so you can see what was checked">relevant — not enough alone</span> karger2023 <a class="paperlink" href="https://scholar.google.com/scholar?q=karger2023" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>The Existential-Risk Persuasion Tournament (XPT) ran from June through October 2022 and brought together 80 specialists on long-run existential risks to humanity (“experts”) and 89 seasoned forecasters with a track record of predictive accuracy on shorter-run questions (“superforecasters”)—two groups with distinctive claims to knowledge about humanity’s future.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The Existential-Risk Persuasion Tournament (XPT) ran from June through October 2022 and brought together 80 specialists on long-run existential risks to humanity (“experts”) and 89 seasoned forecasters with a track record of predictive accuracy on shorter-run questions (“superforecasters”)—two groups with distinctive claims to knowledge about humanity’s future.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/karger2023.pdf#page=4&amp;search=The%20Existential-Risk%20Persuasion%20Tournament%20%28XPT%29%20ran%20from%20June%20through%20October%202022%20and%20brought%20together%2080%20specialists%20on%20long-run%20existential%20risks%20to%20humanity%20%28%E2%80%9Cexperts%E2%80%9D%29%20and%2089%20seasoned%20forecasters%20with%20a%20track%20record%20of%20predictive%20accuracy%20on%20shorter-run%20questions%20%28%E2%80%9Csuperforecasters%E2%80%9D%29%E2%80%94two%20groups%20with%20distinctive%20claims%20to%20knowledge%20about%20humanity%E2%80%99s%20future." target="_blank" rel="noopener">Open PDF · p.4 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/karger2023.pdf#page=4&amp;search=The%20Existential-Risk%20Persuasion%20Tournament%20%28XPT%29%20ran%20from%20June%20through%20October%202022%20and%20brought%20together%2080%20specialists%20on%20long-run%20existential%20risks%20to%20humanity%20%28%E2%80%9Cexperts%E2%80%9D%29%20and%2089%20seasoned%20forecasters%20with%20a%20track%20record%20of%20predictive%20accuracy%20on%20shorter-run%20questions%20%28%E2%80%9Csuperforecasters%E2%80%9D%29%E2%80%94two%20groups%20with%20distinctive%20claims%20to%20knowledge%20about%20humanity%E2%80%99s%20future."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (212 words)</summary><div class="judged-text">The Existential-Risk Persuasion Tournament (XPT) ran from June through October 2022 and brought together 80 specialists on long-run existential risks to humanity (“experts”) and 89 seasoned forecasters with a track record of predictive accuracy on shorter-run questions (“superforecasters”)—two groups with distinctive claims to knowledge about humanity’s future. This table is a complete list of questions asked in the Existential-Risk Persuasion Tournament (XPT). We calculate medians from N=88 superforecasters, N= 59 domain experts with expertise in AI, nuclear, and biorisk domains, and N=1 5 general x-risk experts. Individual risk areas Below, we summarize the main forecasts and rationales provided by participants across the XPT for each major risk area. We asked the two groups to work together to predict the likelihood of global risks such as nuclear weapon use, pandemics, and AI. The median nuclear expert predicted an 8% chance of nuclear weapons causing a catastrophic outcome by 2100 (de/f_ined as the death of more than 10% of humans within a 5-year period), while superforecasters predicted a 4% risk of this catastrophic outcome. For more details comparing the AI-concerned and AI skeptics on short- and medium- term indicators, see Appendix 4: Comparisons between subgroups of XPT forecasters . Nuclear weapons Summary Forecasters in the XPT believed that nuclear weapons continue to threaten humanity.</div></details>
+          </div>
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the best passage a full-text read found — judged NOT to support the claim on its own; shown so you can see what was checked">relevant — not enough alone</span> kucinskas2025 <a class="paperlink" href="https://scholar.google.com/scholar?q=kucinskas2025" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>Introduction The Existential Risk Persuasion Tournament (XPT)² convened 169 participants from June to October 2022 to forecast questions about humanity’s long-term future and the impact of global risks such as climate change, nuclear war, pandemics, and artificial intelligence (AI).</blockquote><button class="copy" onclick="copyText(this)" data-quote="Introduction The Existential Risk Persuasion Tournament (XPT)² convened 169 participants from June to October 2022 to forecast questions about humanity’s long-term future and the impact of global risks such as climate change, nuclear war, pandemics, and artificial intelligence (AI).">Copy</button><details class="judged"><summary>Context — what the judge read (149 words)</summary><div class="judged-text">Introduction The Existential Risk Persuasion Tournament (XPT)² convened 169 participants from June to October 2022 to forecast questions about humanity’s long-term future and the impact of global risks such as climate change, nuclear war, pandemics, and artificial intelligence (AI). In June–October 2022, we convened 169 people to participate in the “Existential Risk Persuasion Tournament” (XPT). Of these 169 participants, 89 were experienced forecasters with a track record of high accuracy on near-term questions (“superforecasters”), and the other 80 were specialists working in domains related to global risks and humanity’s future (“experts”). Participants in the tournament forecast on questions set to resolve at various dates ranging from as early as mid-2024 to as late as 2100. Out of these 172 subquestions, 38 have known outcomes (i.e., are “resolved”) as of mid-2025. The tournament included 59 forecasting questions set to resolve at dates ranging from mid-2024 to as late as 2100.</div></details>
+          </div>
+        
+          <div class="fixcmd">To get a rewrite supported by the sources, run:
+            <code>python3 verify_my_text.py --output-dir /home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/app --model gemini/gemini-2.5-flash-lite --fix-claim t3</code>
+            <button class="copy" onclick="copyText(this)" data-quote="python3 verify_my_text.py --output-dir /home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/app --model gemini/gemini-2.5-flash-lite --fix-claim t3">Copy command</button>
+          </div>
+        <div class="triage" data-id="t3" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t4" data-text="text-t4" onclick="brush('t4', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t4</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9366 · llm</span></div>
+        <div class="card-claim">Respondents underestimated AI progress, especially superforecasters — for three standard AI benchmarks (MATH, MMLU, and QuALITY), domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to outcomes achieved by end of 2024, while superforecasters were even more pessimistic at 9.3%, 7.2%, and 20.1%</div>
+        
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> kucinskas2025 <a class="paperlink" href="https://scholar.google.com/scholar?q=kucinskas2025" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>For three standard AI benchmarks—MATH, MMLU, and QuALITY—domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to the outcomes achieved by the end of 2024.</blockquote><button class="copy" onclick="copyText(this)" data-quote="For three standard AI benchmarks—MATH, MMLU, and QuALITY—domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to the outcomes achieved by the end of 2024.">Copy</button><details class="judged"><summary>Context — what the judge read (50 words)</summary><div class="judged-text">XPT participants significantly underestimated the pace of AI advancement across multiple benchmarks. For three standard AI benchmarks—MATH, MMLU, and QuALITY—domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to the outcomes achieved by the end of 2024. Superforecasters were even more pessimistic, assigning only 9.3%, 7.2%, and 20.1% respectively.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t4" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t5" data-text="text-t5" onclick="brush('t5', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t5</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9419 · llm</span></div>
+        <div class="card-claim">AI systems achieved gold-level Olympiad performance to which domain experts assigned only 8.6% and superforecasters a mere 2.3% probability; overall superforecasters assigned an average probability of just 9.7% to observed outcomes across four AI benchmarks, versus 24.6% from domain experts</div>
+        
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> kucinskas2025 <a class="paperlink" href="https://scholar.google.com/scholar?q=kucinskas2025" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>The International Mathematical Olympiad results proved particularly surprising: AI systems achieved gold-level performance in July 2025, an outcome to which domain experts assigned only an 8.6% probability and superforecasters a mere 2.3% probability.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The International Mathematical Olympiad results proved particularly surprising: AI systems achieved gold-level performance in July 2025, an outcome to which domain experts assigned only an 8.6% probability and superforecasters a mere 2.3% probability.">Copy</button><details class="judged"><summary>Context — what the judge read (69 words)</summary><div class="judged-text">Superforecasters were even more pessimistic, assigning only 9.3%, 7.2%, and 20.1% respectively. The International Mathematical Olympiad results proved particularly surprising: AI systems achieved gold-level performance in July 2025, an outcome to which domain experts assigned only an 8.6% probability and superforecasters a mere 2.3% probability. Overall, superforecasters assigned an average probability of just 9.7% to the observed outcomes across these four AI benchmarks, compared to 24.6% from domain experts.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t5" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t6" data-text="text-t6" onclick="brush('t6', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t6</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9336 · llm</span></div>
+        <div class="card-claim">The same cohort simultaneously overestimated improvements in climate technology — the opposite directional error</div>
+        
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> kucinskas2025 <a class="paperlink" href="https://scholar.google.com/scholar?q=kucinskas2025" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>Climate technology progress was overestimated.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Climate technology progress was overestimated.">Copy</button><details class="judged"><summary>Context — what the judge read (43 words)</summary><div class="judged-text">Overall, superforecasters assigned an average probability of just 9.7% to the observed outcomes across these four AI benchmarks, compared to 24.6% from domain experts. Climate technology progress was overestimated. In contrast to AI, forecasters were overly optimistic about the development of green technology.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t6" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported partial conf-low" id="card-t7" data-text="text-t7" onclick="brush('t7', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t7</span><span class="confchip low" title="the cited sources back only part of this claim — a specific component was found in none of them; read the evidence and confirm that part">low confidence</span><span class="partialchip" title="the cited sources back only part of this claim — a component was not found">partial support?</span></span><span class="meta">cosine 0.9101 · llm</span></div>
+        <div class="card-claim">Independent evidence points the same way. Steinhardt&#x27;s parallel exercise found that the AI experts had similar medians but were overconfident in the tails, while the superforecasters systematically underpredicted progress, and generalist crowd forecasters fared worst</div>
+        <div class="partial-note">◑ Partial support: the sources back the claim in general, but a specific component appears in none of them — &ldquo;The passage does not state that generalist crowd forecasters fared worst.&rdquo; (Checked against the sources' full decomposed claims, not just the matched passages.) The verdict above is unchanged — read the evidence and confirm that part.</div><div class="hunt-note">🔎 A full-text search of your other downloaded sources did not find &ldquo;generalist crowd forecasters fared worst&rdquo; either — source that part elsewhere, or it may simply be wrong.</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> steinhardt2023 <a class="paperlink" href="https://scholar.google.com/scholar?q=steinhardt2023" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>At least some other AI experts also did well, but may have been overconfident in the tails.</blockquote><button class="copy" onclick="copyText(this)" data-quote="At least some other AI experts also did well, but may have been overconfident in the tails.">Copy</button><details class="judged"><summary>Context — what the judge read (82 words)</summary><div class="judged-text">Traditional superforecasters still seem to lag in predicting AI benchmarks compared to other domains, and are too bearish on progress. At least some other AI experts also did well, but may have been overconfident in the tails. It will be interesting to see the next round of results a year from now, and in the meantime I would encourage both AI experts and superforecasters to publicly register their predictions on Metaculus, which can be done here for MATH and here for MMLU.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t7" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t8" data-text="text-t8" onclick="brush('t8', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t8</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9628 · llm</span></div>
+        <div class="card-claim">FRI&#x27;s ongoing expert panel shows this persisting into 2025–2026: recent benchmark performance suggests the median expert is substantially underestimating the progress of development of SOTA AI systems</div>
+        
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> fri2026 <a class="paperlink" href="https://scholar.google.com/scholar?q=fri2026" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>Recent benchmark performances suggest that the median expert is substantially underestimating the progress of development of SOTA AI systems.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Recent benchmark performances suggest that the median expert is substantially underestimating the progress of development of SOTA AI systems.">Copy</button><details class="judged"><summary>Context — what the judge read (63 words)</summary><div class="judged-text">The median expert in our sample predicted SOTA accuracy of 14% in 2026 and an increase in accuracy to 33% by the end of 2030. Recent benchmark performances suggest that the median expert is substantially underestimating the progress of development of SOTA AI systems. Since the survey closed, OpenAI’s GPT-5.2 achieved 33% accuracy on the Q3 2025 set of problems on LiveCodeBench Pro.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t8" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported partial conf-low" id="card-t9" data-text="text-t9" onclick="brush('t9', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t9</span><span class="leadin-chip">lead-in</span><span class="confchip low" title="the cited sources back only part of this claim — a specific component was found in none of them; read the evidence and confirm that part">low confidence</span><span class="partialchip" title="the cited sources back only part of this claim — a component was not found">partial support?</span></span><span class="meta">tail_rescue</span></div>
+        <div class="card-claim"><span class="leadin">The structural problem is reference-class reasoning.</span> Superforecasting leans on outside-view base rates from many similar past events; elections and wars recur, GDP mean-reverts. AI capability growth, by contrast, is discontinuous and compute-driven, leaving no comparable historical baseline</div>
+        <div class="leadin-note">✓ The <b>cited assertion</b> is supported. The sentences before it are your own lead-in — not covered by the citation, nothing was checked.</div><div class="partial-note">◑ Partial support: the sources back the claim in general, but a specific component appears in none of them — &ldquo;the passage does not mention outside-view base rates from many similar past events for elections and wars, nor does it state that GDP mean-reverts.&rdquo; (Checked against the sources' full decomposed claims, not just the matched passages.) The verdict above is unchanged — read the evidence and confirm that part.</div><div class="hunt-note">🔎 A full-text search of your other downloaded sources did not find &ldquo;outside-view base rates from many similar past events for elections and wars&rdquo; either — source that part elsewhere, or it may simply be wrong.</div><div class="hunt-note">🔎 A full-text search of your other downloaded sources did not find &ldquo;does it state that GDP mean-reverts&rdquo; either — source that part elsewhere, or it may simply be wrong.</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> gruetzemacher2021 <a class="paperlink" href="https://scholar.google.com/scholar?q=gruetzemacher2021" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for comparison to explore the utility of different methodologies and the success rates in different subdomains of AI.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for comparison to explore the utility of different methodologies and the success rates in different subdomains of AI.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/gruetzemacher2021.pdf#page=17&amp;search=The%20validation%20of%20near-%20to%20mid-term%20technological%20forecasts%2C%20and%20AI%20forecasts%20specifically%2C%20would%20be%20very%20useful%20for%20comparison%20to%20explore%20the%20utility%20of%20different%20methodologies%20and%20the%20success%20rates%20in%20different%20subdomains%20of%20AI." target="_blank" rel="noopener">Open PDF · p.17 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/gruetzemacher2021.pdf#page=17&amp;search=The%20validation%20of%20near-%20to%20mid-term%20technological%20forecasts%2C%20and%20AI%20forecasts%20specifically%2C%20would%20be%20very%20useful%20for%20comparison%20to%20explore%20the%20utility%20of%20different%20methodologies%20and%20the%20success%20rates%20in%20different%20subdomains%20of%20AI."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (184 words)</summary><div class="judged-text">The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for comparison to explore the utility of different methodologies and the success rates in different subdomains of AI. AI Impacts has conducted extensive work on historical discontinuous progress in technological development . Models that can account for discontinuous progress in narrow domains (or more broadly) could be very useful for helping policy makers and organizations prepare for unforeseen scenarios. One particular challenge in modeling AI progress is modeling discontinuous progress. Gruetzemacher (2019a) has proposed adaptations of Monte 12 Carlo simulation to address these issues in hybrid forecasting processes; this technique could also be applied for statistical models of AI progress. Alternately, work to incorporate models of discontinuous technological progress, such as that of Klavans et al. (2020), into more complex models of broader AI progress would be welcome contributions to the community. Nagy et al. (2013) showed that extrapolation is effective for technology forecasting, however, there is no evidence that this applies to AI. AI capability growth, by contrast, is discontinuous and compute-driven, leaving no comparable historical baseline.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t9" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-medium" id="card-t10" data-text="text-t10" onclick="brush('t10', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t10</span><span class="confchip medium" title="supported only via the deep full-text read, with a weak similarity match — verify the quote">medium confidence</span></span><span class="meta">llm_fulltext</span></div>
+        <div class="card-claim">Tellingly, individual forecasters&#x27; near-term performance was statistically indistinguishable from simple algorithms — a &quot;no-change&quot; forecast and trend extrapolation — and there was no statistically significant correlation between near-term accuracy and long-term existential-risk forecasts</div>
+        
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> kucinskas2025 <a class="paperlink" href="https://scholar.google.com/scholar?q=kucinskas2025" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>There was no statistically significant correlation between forecasters’ near-term accuracy and their forecasts of long-term risks.</blockquote><button class="copy" onclick="copyText(this)" data-quote="There was no statistically significant correlation between forecasters’ near-term accuracy and their forecasts of long-term risks.">Copy</button><details class="judged"><summary>Context — what the judge read (173 words)</summary><div class="judged-text">There was no statistically significant correlation between forecasters’ near-term accuracy and their forecasts of long-term risks. However, individual forecasters’ performance was not statistically distinguishable from two simple algorithms: a “no-change” forecast and trend extrapolation. Overall, our findings challenge the hope that near-term accuracy can reliably identify forecasters with more credible long-term risk predictions. Across accuracy quartiles (from least accurate in quartile 1 to most accurate in quartile 4), median risk estimates remain fairly flat for all risk categories, and there is no statistically significant correlation between accuracy and long-term risk forecasts. Figure 4.1 suggests that there is no meaningful relationship between near-term accuracy and long-term risk forecasts. educated members of the general public; (c) at the individual level, the median superforecaster and median domain expert performed statistically indistinguishably from simple extrapolation algorithms; (d) at the aggregate level, superforecasters and domain experts showed improved accuracy and some Individual forecasters outperformed public participants but not simple algorithms. The correlation coefficients all cluster around zero, ranging from -0.08 to 0.14, and they are not statistically significant.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t10" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-medium" id="card-t11" data-text="text-t11" onclick="brush('t11', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t11</span><span class="leadin-chip">lead-in</span><span class="confchip medium" title="an indirect verdict (sources combined, only the cited tail re-judged, or components verified separately then re-judged together) — solid, but worth a glance">medium confidence</span></span><span class="meta">tail_rescue</span></div>
+        <div class="card-claim"><span class="leadin">The disagreement runs deeper than calibration.</span> In an adversarial-collaboration study, &quot;concerned&quot; domain experts predicted a 20% chance of AI-caused existential catastrophe by 2100, while &quot;skeptical&quot; participants — mainly superforecasters — predicted 0.12%, and neither side substantially updated toward the other&#x27;s views</div>
+        <div class="leadin-note">✓ The <b>cited assertion</b> is supported. The sentences before it are your own lead-in — not covered by the citation, nothing was checked.</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> rosenberg2024 <a class="paperlink" href="https://scholar.google.com/scholar?q=rosenberg2024" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>The “concerned” participants (all of whom were domain experts) predicted a 20% chance of an AI-caused existential catastrophe by 2100, while the “skeptical” group (mainly “superforecasters”) predicted a 0.12% chance.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The “concerned” participants (all of whom were domain experts) predicted a 20% chance of an AI-caused existential catastrophe by 2100, while the “skeptical” group (mainly “superforecasters”) predicted a 0.12% chance.">Copy</button><details class="judged"><summary>Context — what the judge read (333 words)</summary><div class="judged-text">The “concerned” participants (all of whom were domain experts) predicted a 20% chance of an AI-caused existential catastrophe by 2100, while the “skeptical” group (mainly “superforecasters”) predicted a 0.12% chance. At the outset, the median skeptic forecasted a 0.10% chance of existential catastrophe due to AI by 2100, and the median concerned participant forecasted a 25% chance. Neither the concerned nor the skeptics substantially updated toward the other’s views during our study, though one of the top short-term cruxes we identified is expected to close the gap in beliefs about AI existential catastrophe by about 5%: approximately 1 percentage point out of the roughly 20 percentage point gap in existential catastrophe forecasts. By the end, these numbers were 0.12% and 20% respectively, though many participants did not attribute their updates to arguments made during the project.³ We organize our findings as responses to four hypotheses about what drives disagreement: Hypothesis #1 – Disagreements about AI risk persist due to lack of engagement among participants, low quality of participants, or because the skeptic and concerned groups did not understand each other’s arguments⁴ We found moderate evidence against these possibilities. Results: What drives (and doesn’t drive) disagreement over AI risk At the beginning of the project, the median “skeptic” forecasted a 0.10% chance of existential catastrophe due to AI by 2100, and the median “concerned” participant forecasted a 25% chance. - The initial disagreement about the risk of existential catastrophe by 2100 between the cross-camp pair with the median VOD is 22.7 percentage points (between Blake, a skeptic, at 0.20% and Yael, concerned, at 22.9%). Over the course of the two-month project, there was mild convergence: the skeptic group’s median moved from 0.10% to 0.12% and the concerned group’s median fell from 25% to 20%. - When we weight their disagreement after the crux resolves by the probability it resolves positively, they will disagree by 21.48 percentage points in expectation, which is 5.35% (1.22 percentage points) less than their initial disagreement of 22.7 percentage points.⁹⁰</div></details>
+          </div>
+        
+        <div class="triage" data-id="t11" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t12" data-text="text-t12" onclick="brush('t12', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t12</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9305 · llm</span></div>
+        <div class="card-claim">One reading is that existential AI risk is dominated by epistemic uncertainty (unknown mechanism) rather than aleatoric uncertainty (a stable random process) — exactly the kind of ignorance that standard probability elicitation, the superforecaster&#x27;s core tool, was not built to represent</div>
+        
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> lohn2026 <a class="paperlink" href="https://scholar.google.com/scholar?q=lohn2026" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>This section discusses why probability is ill -suited to the topic of existential risks from AI.</blockquote><button class="copy" onclick="copyText(this)" data-quote="This section discusses why probability is ill -suited to the topic of existential risks from AI.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/lohn2026.pdf#page=6&amp;search=This%20section%20discusses%20why%20probability%20is%20ill%20-suited%20to%20the%20topic%20of%20existential%20risks%20from%20AI." target="_blank" rel="noopener">Open PDF · p.6 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/lohn2026.pdf#page=6&amp;search=This%20section%20discusses%20why%20probability%20is%20ill%20-suited%20to%20the%20topic%20of%20existential%20risks%20from%20AI."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (70 words)</summary><div class="judged-text">The upside is that there are additional options, some of which are based on terms that are already familiar to both experts and laypeople even if the precise quantitative definitions are not. This section discusses why probability is ill -suited to the topic of existential risks from AI. The next sections introduce alternatives to probability —namely , Belief and Plausibility —and explain their advantages for handling various types of uncertainty.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t12" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card own" id="card-t13" data-text="text-t13" onclick="brush('t13', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge own">YOUR OWN CLAIM</span><span class="claimno">t13</span><span class="kindchip" title="This passage presents the author&#x27;s interpretation and argument about the differing demands of geopolitics and AI progress on forecasting skills.">opinion</span></span><span class="meta">none</span></div>
+        <div class="card-claim">Geopolitics rewards forecasters skilled at averaging history. AI progress currently rewards betting that history&#x27;s pace won&#x27;t hold — which is precisely the bet superforecasters, drilled to distrust extrapolation, are least equipped to make.</div>
+        
+        <div class="evidence own-note">No citation — the tool treats this as your own idea, argument, or transition. Nothing was checked; add a [[key]] marker if it should be grounded in a source.</div>
+        
+        <div class="triage" data-id="t13" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div></div>
+      <h2 class="sec">Unused source points — not analyzed (run with --decompose to enable)</h2><p class="meta">none</p>
+    </div>
+  </div>
+</div>
+<script>
+const HAS_PDF = true;
+const HAS_TEXT = false;
+const SOURCE_TEXTS = {};
+(function(){
+  const bar = document.getElementById('modebar');
+  const dotG = '<span class="dot" style="background:#34d399"></span>';
+  const dotGray = '<span class="dot" style="background:#9ca3af"></span>';
+  if (HAS_PDF || HAS_TEXT) bar.innerHTML = dotG + 'On each claim: <b>↗</b> opens the cited source in a new tab; <b>⊞ side window</b> opens it in one reused window you can dock on the right (next click swaps its content). PDFs jump to the page, text is highlighted. No server needed.';
+  else bar.innerHTML = dotGray + 'No viewable sources — the supporting sentence for each claim is quoted on the left (with a Copy button).';
+})();
+
+let activeId = null;
+function clearActive() { document.querySelectorAll('.active').forEach(e => e.classList.remove('active')); }
+function brush(id, from) {
+  // Two-way sync (owner walkthrough item 7): scroll the OPPOSITE panel from the
+  // one that was clicked — never the panel under the user's cursor.
+  clearActive();
+  const t = document.getElementById('text-' + id);
+  const c = document.getElementById('card-' + id);
+  if (t) t.classList.add('active');
+  if (c) {
+    if (c.style.display === 'none') {        // hidden by a verdict filter -> show All
+      const all = document.querySelector('.fbtn[data-f="all"]');
+      if (all) all.click();
+    }
+    c.classList.add('active');
+    if (from !== 'card') c.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  if (t && from === 'card') t.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function copyText(btn) {
+  navigator.clipboard.writeText(btn.getAttribute('data-quote'));
+  const o = btn.textContent; btn.textContent = 'Copied'; setTimeout(()=>btn.textContent=o, 1200);
+}
+function toggleDoc() {
+  const d = document.getElementById('doc');
+  d.classList.toggle('collapsed');
+  event.target.textContent = d.classList.contains('collapsed') ? 'expand' : 'collapse';
+}
+function toggleCoverage() {
+  const b = document.getElementById('covBars');
+  b.classList.toggle('collapsed');
+  event.target.textContent = b.classList.contains('collapsed') ? 'show' : 'hide';
+}
+// Master top-panel toggle (owner walkthrough item 5): collapse everything above
+// the two columns; the choice persists across runs (a UI preference, not run state).
+function setTop(hidden) {
+  const p = document.getElementById('topPanel');
+  const note = document.querySelector('.scopenote');
+  const btn = document.getElementById('topToggle');
+  if (p) p.style.display = hidden ? 'none' : '';
+  if (note) note.style.display = hidden ? 'none' : '';
+  if (btn) btn.textContent = hidden ? 'show header' : 'hide header';
+  try { localStorage.setItem('ptui:tophidden', hidden ? '1' : ''); } catch (e) {}
+}
+function toggleTop() {
+  const p = document.getElementById('topPanel');
+  setTop(p && p.style.display !== 'none');
+}
+try { if (localStorage.getItem('ptui:tophidden') === '1') setTop(true); } catch (e) {}
+function toggleAssess() {
+  const b = document.getElementById('assessBody');
+  b.classList.toggle('collapsed');
+  event.target.textContent = b.classList.contains('collapsed') ? 'expand' : 'collapse';
+}
+function toggleOmitted() {
+  const t = document.getElementById('omittedTail');
+  const open = t.classList.toggle('collapsed') === false;
+  const n = t.querySelectorAll('.card').length;
+  event.target.textContent = open ? 'Hide less-relevant' : ('Show ' + n + ' more (less relevant)');
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Sources can open either in a fresh new tab (target '_blank') or in ONE reused
+// "side window" you dock on the right. The side window has a fixed name, so every
+// side-window click navigates that same window instead of stacking tabs. Per the
+// HTML spec, window features are ignored when a named window already exists, so it
+// keeps the size/position you give it manually (no re-snapping on each click).
+const SIDE_WIN = 'pt_source_side';
+const SIDE_FEATURES = 'width=900,height=1024';   // forces a window (not a tab) on first open; ignored on reuse
+
+// Build a self-contained, highlighted HTML document for a text source.
+// Exact match first; then whitespace-tolerant (sentences may span the source's
+// original newlines — table rows merged in segmentation, wrapped lines, etc.).
+function findInText(text, needle) {
+  if (!needle) return null;
+  const i = text.indexOf(needle);
+  if (i !== -1) return {start: i, len: needle.length};
+  try {
+    const pat = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ +/g, '\\s+');
+    const m = text.match(new RegExp(pat));
+    if (m) return {start: m.index, len: m[0].length};
+  } catch (e) {}
+  return null;
+}
+
+function buildTextDoc(pid, sentence, snippet) {
+  const text = SOURCE_TEXTS[pid] || '';
+  const hit = findInText(text, sentence) || findInText(text, snippet);
+
+  let body, note = '';
+  if (hit) {
+    body = escapeHtml(text.slice(0, hit.start)) + '<mark id="hl">'
+         + escapeHtml(text.slice(hit.start, hit.start + hit.len))
+         + '</mark>' + escapeHtml(text.slice(hit.start + hit.len));
+  } else {
+    body = escapeHtml(text);
+    note = "<p style=\"color:#b45309;font-style:italic\">Couldn't locate the exact sentence — showing the full source.</p>";
+  }
+  return '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Source text</title>'
+    + '<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;'
+    + 'background:#fff;margin:0;padding:24px 28px;line-height:1.7;font-size:14px;'
+    + 'white-space:pre-wrap;word-wrap:break-word;}mark{background:#fde047;padding:1px 0;border-radius:2px;}</style>'
+    + '</head><body onload="var h=document.getElementById(\'hl\');if(h)h.scrollIntoView({block:\'center\'});">'
+    + note + body + '</body></html>';
+}
+
+// Open a text source. target='_blank' -> new tab each time; target=SIDE_WIN -> reused window.
+function openTextSource(pid, sentence, snippet, target, features) {
+  const doc = buildTextDoc(pid, sentence, snippet);
+  let w = window.open('', target, features || '');
+  if (!w) { alert('Please allow pop-ups to open the source.'); return; }
+  try {
+    w.document.open(); w.document.write(doc); w.document.close();
+  } catch (e) {
+    // The reused window currently holds a PDF (not script-writable) — navigate it via a blob instead.
+    const url = URL.createObjectURL(new Blob([doc], {type:'text/html'}));
+    w = window.open(url, target, features || '');
+  }
+  if (w) w.focus();
+}
+
+// Open a PDF deep-link in the reused side window (native PDF viewer, jumps to #page).
+function openPdfSide(href) {
+  const w = window.open(href, SIDE_WIN, SIDE_FEATURES);
+  if (!w) { alert('Please allow pop-ups to open the PDF in the side window.'); return; }
+  w.focus();
+}
+
+document.querySelectorAll('.opentext-btn').forEach(function(b) {
+  b.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    openTextSource(b.dataset.pid, b.dataset.sentence || '', b.dataset.snippet || '', '_blank', '');
+  });
+});
+document.querySelectorAll('.side-btn').forEach(function(b) {
+  b.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    if (b.dataset.kind === 'pdf') openPdfSide(b.dataset.href);
+    else openTextSource(b.dataset.pid, b.dataset.sentence || '', b.dataset.snippet || '', SIDE_WIN, SIDE_FEATURES);
+  });
+});
+document.querySelectorAll('.fbtn').forEach(function(b) {
+  b.addEventListener('click', function() {
+    document.querySelectorAll('.fbtn').forEach(function(x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    const f = b.dataset.f;
+    document.querySelectorAll('#claimList > .card').forEach(function(c) {
+      const show = (f === 'all') ? true
+                 : (f === 'hunchecked') ? !c.classList.contains('hchecked')
+                 : c.classList.contains(f);
+      c.style.display = show ? '' : 'none';
+    });
+  });
+});
+document.querySelectorAll('.deeplink, .paperlink').forEach(function(a) {
+  a.addEventListener('click', function(ev) { ev.stopPropagation(); });
+});
+
+// ---- Review loop (triage marks, repair-brief / review.json export) ----
+const RUN_ID = 'fd0fc352c889';
+const REVIEW_DATA = {"run": {"text_file": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/project/my_text.md", "run_name": "app", "sources_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/project/sources", "output_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/app", "project_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_1/project", "model": "gemini/gemini-2.5-flash-lite", "timestamp": "2026-07-10 23:22:13"}, "claims": [{"id": "t0", "text": "Why Superforecasters Struggle With AI — and Not With Everything Else", "markers": [], "own_kind": {"kind": "structural", "reason": "This is a heading that announces the topic of the following section."}, "verdict": "own", "method": "none", "reason": "no_citation_marker", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}, {"id": "t1", "text": "Superforecasters earned their reputation in domains built on recurring structure: elections, GDP prints, conflict escalation, disease spread. Geopolitical forecasting is, on its face, an \"algorithm-unfriendly\" domain — hard-to-quantify inputs, elusive reference classes — yet trained human forecasters, especially when aggregated, hold their own against statistical models there, because research on clinical versus statistical prediction has demonstrated that algorithms make more accurate predictions than humans in many domains, but geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult", "markers": ["mellers2023"], "own_kind": null, "verdict": "unsupported", "method": "llm_fulltext", "reason": "the passage does not state that superforecasters earned their reputation in domains built on recurring structure: elections, GDP prints, conflict escalation, disease spread.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "mellers2023", "sentence": "Geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult.", "supported": false}], "alternatives": []}, {"id": "t2", "text": "AI progress denies forecasters exactly that kind of scaffolding, and the tournament record shows it starkly.", "markers": [], "own_kind": {"kind": "opinion", "reason": "This is the author's interpretation of the implications of AI progress on forecasting, presented as their argument."}, "verdict": "own", "method": "none", "reason": "no_citation_marker", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}, {"id": "t3", "text": "In the 2022 Existential Risk Persuasion Tournament, 169 superforecasters and domain experts forecast benchmarks resolving by 2024–2025", "markers": ["karger2023", "kucinskas2025"], "own_kind": null, "verdict": "unsupported", "method": "combined_fulltext", "reason": "the passage does not state that the benchmarks resolved by 2024-2025", "confidence": "medium", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "karger2023", "sentence": "The Existential-Risk Persuasion Tournament (XPT) ran from June through October 2022 and brought together 80 specialists on long-run existential risks to humanity (“experts”) and 89 seasoned forecasters with a track record of predictive accuracy on shorter-run questions (“superforecasters”)—two groups with distinctive claims to knowledge about humanity’s future.", "supported": false}, {"source_title": "kucinskas2025", "sentence": "Introduction The Existential Risk Persuasion Tournament (XPT)² convened 169 participants from June to October 2022 to forecast questions about humanity’s long-term future and the impact of global risks such as climate change, nuclear war, pandemics, and artificial intelligence (AI).", "supported": false}], "alternatives": []}, {"id": "t4", "text": "Respondents underestimated AI progress, especially superforecasters — for three standard AI benchmarks (MATH, MMLU, and QuALITY), domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to outcomes achieved by end of 2024, while superforecasters were even more pessimistic at 9.3%, 7.2%, and 20.1%", "markers": ["kucinskas2025"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage directly states the probabilities assigned by domain experts and superforecasters for the three AI benchmarks, matching the claim precisely.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "kucinskas2025", "sentence": "For three standard AI benchmarks—MATH, MMLU, and QuALITY—domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to the outcomes achieved by the end of 2024.", "supported": true}], "alternatives": []}, {"id": "t5", "text": "AI systems achieved gold-level Olympiad performance to which domain experts assigned only 8.6% and superforecasters a mere 2.3% probability; overall superforecasters assigned an average probability of just 9.7% to observed outcomes across four AI benchmarks, versus 24.6% from domain experts", "markers": ["kucinskas2025"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage directly states the probabilities assigned by domain experts and superforecasters for AI achieving gold-level performance in the International Mathematical Olympiad, as well as the overall average probabilities across four AI benchmarks.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "kucinskas2025", "sentence": "The International Mathematical Olympiad results proved particularly surprising: AI systems achieved gold-level performance in July 2025, an outcome to which domain experts assigned only an 8.6% probability and superforecasters a mere 2.3% probability.", "supported": true}], "alternatives": []}, {"id": "t6", "text": "The same cohort simultaneously overestimated improvements in climate technology — the opposite directional error", "markers": ["kucinskas2025"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage explicitly states that climate technology progress was overestimated and that forecasters were overly optimistic about the development of green technology, which directly supports the claim.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "kucinskas2025", "sentence": "Climate technology progress was overestimated.", "supported": true}], "alternatives": []}, {"id": "t7", "text": "Independent evidence points the same way. Steinhardt's parallel exercise found that the AI experts had similar medians but were overconfident in the tails, while the superforecasters systematically underpredicted progress, and generalist crowd forecasters fared worst", "markers": ["steinhardt2023"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage states that superforecasters were 'too bearish on progress' and that 'at least some other AI experts... may have been overconfident in the tails,' which directly supports the claim's assertions about superforecasters and AI experts.", "confidence": "low", "second_opinion": null, "partial_support": {"reason": "The passage does not state that generalist crowd forecasters fared worst.", "component_hunt": [{"component": "generalist crowd forecasters fared worst", "found_in": [], "searched": 0}]}, "component_check": null, "over_citation": null, "evidences": [{"source_title": "steinhardt2023", "sentence": "At least some other AI experts also did well, but may have been overconfident in the tails.", "supported": true}], "alternatives": []}, {"id": "t8", "text": "FRI's ongoing expert panel shows this persisting into 2025–2026: recent benchmark performance suggests the median expert is substantially underestimating the progress of development of SOTA AI systems", "markers": ["fri2026"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage directly states that recent benchmark performances suggest the median expert is substantially underestimating the progress of development of SOTA AI systems, which is the core assertion of the claim.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "fri2026", "sentence": "Recent benchmark performances suggest that the median expert is substantially underestimating the progress of development of SOTA AI systems.", "supported": true}], "alternatives": []}, {"id": "t9", "text": "The structural problem is reference-class reasoning. Superforecasting leans on outside-view base rates from many similar past events; elections and wars recur, GDP mean-reverts. AI capability growth, by contrast, is discontinuous and compute-driven, leaving no comparable historical baseline", "markers": ["gruetzemacher2021"], "own_kind": null, "verdict": "supported", "method": "tail_rescue", "reason": "The passage explicitly states that AI capability growth is discontinuous and compute-driven, leaving no comparable historical baseline, which directly supports the claim.", "confidence": "low", "second_opinion": null, "partial_support": {"reason": "the passage does not mention outside-view base rates from many similar past events for elections and wars, nor does it state that GDP mean-reverts.", "component_hunt": [{"component": "outside-view base rates from many similar past events for elections and wars", "found_in": [], "searched": 0}, {"component": "does it state that GDP mean-reverts", "found_in": [], "searched": 0}]}, "component_check": null, "over_citation": null, "evidences": [{"source_title": "gruetzemacher2021", "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for comparison to explore the utility of different methodologies and the success rates in different subdomains of AI.", "supported": true}], "alternatives": []}, {"id": "t10", "text": "Tellingly, individual forecasters' near-term performance was statistically indistinguishable from simple algorithms — a \"no-change\" forecast and trend extrapolation — and there was no statistically significant correlation between near-term accuracy and long-term existential-risk forecasts", "markers": ["kucinskas2025"], "own_kind": null, "verdict": "supported", "method": "llm_fulltext", "reason": "", "confidence": "medium", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "kucinskas2025", "sentence": "There was no statistically significant correlation between forecasters’ near-term accuracy and their forecasts of long-term risks.", "supported": true}], "alternatives": []}, {"id": "t11", "text": "The disagreement runs deeper than calibration. In an adversarial-collaboration study, \"concerned\" domain experts predicted a 20% chance of AI-caused existential catastrophe by 2100, while \"skeptical\" participants — mainly superforecasters — predicted 0.12%, and neither side substantially updated toward the other's views", "markers": ["rosenberg2024"], "own_kind": null, "verdict": "supported", "method": "tail_rescue", "reason": "All substantive components of the claim are explicitly stated in the passage.", "confidence": "medium", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "rosenberg2024", "sentence": "The “concerned” participants (all of whom were domain experts) predicted a 20% chance of an AI-caused existential catastrophe by 2100, while the “skeptical” group (mainly “superforecasters”) predicted a 0.12% chance.", "supported": true}], "alternatives": []}, {"id": "t12", "text": "One reading is that existential AI risk is dominated by epistemic uncertainty (unknown mechanism) rather than aleatoric uncertainty (a stable random process) — exactly the kind of ignorance that standard probability elicitation, the superforecaster's core tool, was not built to represent", "markers": ["lohn2026"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage states that probability is ill-suited to the topic of existential risks from AI and introduces alternatives for handling uncertainty, which directly supports the claim that standard probability elicitation is not built to represent the type of ignorance associated with existential AI risk.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "lohn2026", "sentence": "This section discusses why probability is ill -suited to the topic of existential risks from AI.", "supported": true}], "alternatives": []}, {"id": "t13", "text": "Geopolitics rewards forecasters skilled at averaging history. AI progress currently rewards betting that history's pace won't hold — which is precisely the bet superforecasters, drilled to distrust extrapolation, are least equipped to make.", "markers": [], "own_kind": {"kind": "opinion", "reason": "This passage presents the author's interpretation and argument about the differing demands of geopolitics and AI progress on forecasting skills."}, "verdict": "own", "method": "none", "reason": "no_citation_marker", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}]};
+
+const REVIEW_KEY = 'ptreview:' + RUN_ID;
+const MARK_NAMES = {wrong_source: 'needs a different source',
+                    rewrite: 'text needs rewriting',
+                    verdict_wrong: 'verdict is wrong',
+                    other: 'other (see note)'};
+let review = {};
+try { review = JSON.parse(localStorage.getItem(REVIEW_KEY) || '{}'); } catch (e) { review = {}; }
+
+function isMarked(r) { return r && ((r.marks && r.marks.length) || (r.note && r.note.trim())); }
+function markCount() { return Object.values(review).filter(isMarked).length; }
+function saveReview() {
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(review));
+  updateReviewBar();
+}
+function checkedCount() { return Object.values(review).filter(function(r) { return r && r.checked; }).length; }
+function updateReviewBar() {
+  const n = markCount();
+  const el = document.getElementById('revCount');
+  const total = document.querySelectorAll('.triage').length;
+  const nc = checkedCount();
+  if (el) el.textContent = n + ' claim' + (n === 1 ? '' : 's') + ' marked · ' + nc + '/' + total + ' checked';
+  const cN = document.getElementById('chkN'), uN = document.getElementById('unchkN');
+  if (cN) cN.textContent = nc;
+  if (uN) uN.textContent = total - nc;
+}
+function syncNote(t, r) {
+  const ta = t.querySelector('.tnote');
+  if (ta) ta.style.display = isMarked(r) ? '' : 'none';
+}
+function initTriage() {
+  document.querySelectorAll('.triage').forEach(function(t) {
+    const id = t.dataset.id;
+    const st = review[id] || {marks: [], note: ''};
+    review[id] = st;
+    t.querySelectorAll('.tbtn').forEach(function(b) {
+      if ((st.marks || []).indexOf(b.dataset.mark) !== -1) b.classList.add('on');
+      b.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        const r = review[id];
+        r.marks = r.marks || [];
+        const i = r.marks.indexOf(b.dataset.mark);
+        if (i === -1) r.marks.push(b.dataset.mark); else r.marks.splice(i, 1);
+        b.classList.toggle('on');
+        syncNote(t, r);
+        saveReview();
+      });
+    });
+    const ta = t.querySelector('.tnote');
+    if (ta) {
+      ta.value = st.note || '';
+      ta.addEventListener('click', function(ev) { ev.stopPropagation(); });
+      ta.addEventListener('input', function() { st.note = ta.value; saveReview(); });
+    }
+    // "✓ checked" = the human LOOKED at this card (coverage tracking, blind-
+    // review loop). Checked with no repair marks = human-confirmed good row.
+    const cb = t.querySelector('.cbtn');
+    if (cb) {
+      const card = document.getElementById('card-' + id);
+      if (st.checked) { cb.classList.add('on'); if (card) card.classList.add('hchecked'); }
+      cb.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        st.checked = !st.checked;
+        cb.classList.toggle('on', st.checked);
+        if (card) card.classList.toggle('hchecked', st.checked);
+        saveReview();
+      });
+    }
+    syncNote(t, st);
+  });
+  updateReviewBar();
+}
+function reviewedClaims() {
+  return REVIEW_DATA.claims.filter(function(c) { return isMarked(review[c.id]); })
+    .map(function(c) {
+      const r = review[c.id];
+      return Object.assign({}, c, {marks: (r.marks || []).slice(), note: (r.note || '').trim()});
+    });
+}
+function reviewFileName() {
+  // Distinguishable name (owner walkthrough item 3): consumers accept any
+  // review*.json, so run name + date never break the /apply-review flow.
+  const d = new Date().toISOString().slice(0, 10);
+  return 'review_' + (REVIEW_DATA.run.run_name || 'run') + '_' + d + '.json';
+}
+
+// Remembered save location (owner walkthrough item 4). Chromium's File System
+// Access API works on file:// — the picked directory handle persists in
+// IndexedDB, so "set once, saves there forever". Firefox has no such API; the
+// plain <a download> (browser Downloads dir) stays as the universal fallback.
+const UI_DB = 'ptui';
+function idbOpen() {
+  return new Promise(function(res, rej) {
+    const r = indexedDB.open(UI_DB, 1);
+    r.onupgradeneeded = function() { r.result.createObjectStore('handles'); };
+    r.onsuccess = function() { res(r.result); };
+    r.onerror = function() { rej(r.error); };
+  });
+}
+function idbGet(key) {
+  return idbOpen().then(function(db) {
+    return new Promise(function(res, rej) {
+      const r = db.transaction('handles').objectStore('handles').get(key);
+      r.onsuccess = function() { res(r.result); };
+      r.onerror = function() { rej(r.error); };
+    });
+  });
+}
+function idbSet(key, val) {
+  return idbOpen().then(function(db) {
+    return new Promise(function(res, rej) {
+      const r = db.transaction('handles', 'readwrite').objectStore('handles').put(val, key);
+      r.onsuccess = function() { res(); };
+      r.onerror = function() { rej(r.error); };
+    });
+  });
+}
+async function chooseSaveDir() {
+  try {
+    const dir = await window.showDirectoryPicker({mode: 'readwrite'});
+    await idbSet('reviewDir', dir);
+    flashSaveLoc('Reviews will save to “' + dir.name + '”');
+  } catch (e) { /* user cancelled */ }
+}
+async function savedDir() {
+  try {
+    const dir = await idbGet('reviewDir');
+    if (!dir) return null;
+    let p = await dir.queryPermission({mode: 'readwrite'});
+    if (p !== 'granted') p = await dir.requestPermission({mode: 'readwrite'});
+    return p === 'granted' ? dir : null;
+  } catch (e) { return null; }
+}
+function flashSaveLoc(msg) {
+  const el = document.getElementById('revCount');
+  if (!el) return;
+  const o = el.textContent; el.textContent = msg;
+  setTimeout(function() { updateReviewBar(); }, 2500);
+}
+async function downloadReview() {
+  if (!markCount() && !checkedCount()) { alert('Mark or ✓-check at least one claim first (buttons at the bottom of each card).'); return; }
+  const checkedIds = Object.keys(review).filter(function(k) { return review[k] && review[k].checked; });
+  const payload = {run: REVIEW_DATA.run, exported: new Date().toISOString(),
+                   marks: reviewedClaims(), checked: checkedIds};
+  const json = JSON.stringify(payload, null, 2);
+  const name = reviewFileName();
+  if (window.showSaveFilePicker) {                 // Chromium: remembered folder
+    const dir = await savedDir();
+    if (dir) {
+      try {
+        const fh = await dir.getFileHandle(name, {create: true});
+        const w = await fh.createWritable();
+        await w.write(json); await w.close();
+        flashSaveLoc('Saved ' + name + ' to “' + dir.name + '”');
+        return;
+      } catch (e) { /* fall through to plain download */ }
+    }
+  }
+  const blob = new Blob([json], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+}
+(function() {   // the picker button only makes sense where the API exists
+  const b = document.getElementById('saveLocBtn');
+  if (b && !window.showDirectoryPicker) b.style.display = 'none';
+})();
+function buildBrief() {
+  const run = REVIEW_DATA.run;
+  const items = reviewedClaims();
+  const L = [];
+  L.push('# Repair brief — grounding review');
+  L.push('');
+  L.push('Article file: ' + run.text_file);
+  L.push('Sources folder: ' + run.sources_dir);
+  L.push('Run folder: ' + run.output_dir + '  (analysis.json and review.json live here)');
+  L.push('Verified with ' + run.model + ' on ' + run.timestamp + '.');
+  L.push('');
+  L.push('## Ground rules for the fixing assistant');
+  L.push('- Edit the article file; keep every [[key]] citation marker intact (keys map to source files via the references list).');
+  L.push('- Minor wording fixes (hedging, precision, dropping an unsupported qualifier): apply directly.');
+  L.push('- Conceptual changes (the argument itself shifts): show old -> new and ask the author first.');
+  L.push('- Never invent citations, sources, or evidence.');
+  L.push('- Items marked "verdict is wrong" are feedback about the verification tool: do NOT change their text; append them to <run folder>/verdict_feedback.json instead.');
+  L.push('- New sources found via Claude Science come back by merging the export: python3 import_claude_research.py --input <export.md or .bib> --merge-into ' + (run.project_dir || '<project folder>') + '  — then python3 download_sources.py --manifest <project folder>/sources_manifest.json and cite the new [[key]]s.');
+  L.push('- When done, re-verify: python3 verify_my_text.py --text <article> --sources <sources folder> --output-dir <run folder>  (unchanged claims are not re-judged).');
+  L.push('');
+  L.push('## Claims (' + items.length + ' marked)');
+  items.forEach(function(c) {
+    const names = (c.marks || []).map(function(m) { return MARK_NAMES[m] || m; });
+    L.push('');
+    L.push('### ' + c.id + ' — ' + (c.verdict || '').toUpperCase()
+           + (c.confidence ? ' (judge confidence: ' + c.confidence + ')' : '')
+           + ' — marked: ' + (names.join(', ') || 'note only'));
+    L.push('');
+    L.push('Text: "' + c.text + '"');
+    if (c.markers && c.markers.length)
+      L.push('Cites: ' + c.markers.map(function(m) { return '[[' + m + ']]'; }).join(' '));
+    if (c.reason) L.push('Judge: ' + c.reason);
+    if (c.second_opinion)
+      L.push('Second opinion (' + (c.second_opinion.model || 'other model') + ') DISAGREES — would say '
+             + c.second_opinion.verdict + ': ' + (c.second_opinion.reason || ''));
+    if (c.partial_support)
+      L.push('Partial support: the cited sources back the claim in general, but a specific '
+             + 'component is in none of them: ' + (c.partial_support.reason || '')
+             + ' — verify that part or trim it. The verdict stays supported.');
+    if (c.over_citation && c.over_citation.sources && c.over_citation.sources.length)
+      L.push('Possible over-citation: ' + c.over_citation.sources.join(', ')
+             + ' — the other cited sources already cover the claim and this one does not back '
+             + 'it alone. Consider moving or trimming the citation. Not a correctness problem.');
+    if (c.own_kind && c.own_kind.kind === 'fact')
+      L.push('Citation needed? This uncited passage asserts a checkable fact: '
+             + (c.own_kind.reason || '') + ' — find and cite a source for it (or the author confirms it as their own).');
+    if (c.covering && c.covering.uncovered && c.covering.uncovered.length)
+      L.push('Coverage gap: no displayed sentence proves: ' + c.covering.uncovered.join('; ')
+             + ' — find the proving sentence in the cited source(s), or add a citation / rewrite for that part.');
+    (c.evidences || []).forEach(function(e) {
+      if (e.sentence)
+        L.push('- Evidence (' + (e.supported ? 'supports' : 'does not support') + ') from '
+               + (e.source_title || 'unknown source') + ': "' + e.sentence + '"');
+    });
+    if (c.note) L.push('Author note: ' + c.note);
+    if ((c.marks || []).indexOf('wrong_source') !== -1) {
+      if (c.alternatives && c.alternatives.length) {
+        L.push('Closest passages in the OTHER sources of this run (re-citation candidates):');
+        c.alternatives.forEach(function(a) {
+          L.push('- ' + (a.source_title || a.paper_id) + ' (relevance ' + a.relevance + '): "'
+                 + (a.evidence || a.text) + '"');
+        });
+      }
+      L.push('If none of the run\'s sources fits, research request (paste into Claude Science / any deep-research tool):');
+      L.push('> Find published sources that support this claim: "' + c.text + '". Return a short report with full citations (title, authors, year, DOI or URL) and the exact supporting passage from each.');
+    }
+    if ((c.marks || []).indexOf('rewrite') !== -1)
+      L.push('Task: rewrite this claim minimally so the quoted evidence from its cited source(s) fully supports it.');
+    if ((c.marks || []).indexOf('verdict_wrong') !== -1)
+      L.push('Task: tool feedback only — record {claim id, text, tool verdict, author disagreement, note} in verdict_feedback.json. Do not edit the article text for this item.');
+    if ((c.marks || []).indexOf('other') !== -1)
+      L.push('Task: free-form — read the author note above and decide the right action; if the intent is unclear, ASK the author (surface it) instead of guessing an edit.');
+  });
+  return L.join('\n');
+}
+function copyBrief() {
+  if (!markCount()) { alert('Mark at least one claim first (buttons at the bottom of each card).'); return; }
+  navigator.clipboard.writeText(buildBrief());
+  const b = document.getElementById('briefBtn');
+  if (b) { const o = b.textContent; b.textContent = 'Copied'; setTimeout(function() { b.textContent = o; }, 1200); }
+}
+function buildScienceRequest() {
+  const run = REVIEW_DATA.run;
+  const items = reviewedClaims().filter(function(c) {
+    return (c.marks || []).indexOf('wrong_source') !== -1;
+  });
+  const L = [];
+  L.push('Research request: I wrote an article and a verification tool checked every cited claim against its source. The claims below are the ones whose CURRENT source does not support them — I need better published sources for each.');
+  L.push('');
+  L.push('For EACH claim:');
+  L.push('- find 1-3 published sources (papers, reports, reputable data) that DIRECTLY support it, each with full citation (title, authors, year, DOI or URL) and the exact supporting passage quoted;');
+  L.push('- if no credible source supports it, say so plainly — do not stretch a near-miss;');
+  L.push('- write the final report as a cited document with a bibliography, so I can export it with citations and merge the sources back into my project programmatically.');
+  L.push('');
+  L.push('The claims:');
+  items.forEach(function(c, i) {
+    L.push('');
+    L.push((i + 1) + '. "' + c.text + '"');
+    if (c.note) L.push('   My note: ' + c.note);
+    if (c.reason) L.push('   Why the current source failed: ' + c.reason);
+  });
+  return L.join('\n');
+}
+function copyScience() {
+  const n = reviewedClaims().filter(function(c) {
+    return (c.marks || []).indexOf('wrong_source') !== -1;
+  }).length;
+  if (!n) { alert('Mark at least one claim as "wrong source" first.'); return; }
+  navigator.clipboard.writeText(buildScienceRequest());
+  const b = document.getElementById('sciBtn');
+  if (b) { const o = b.textContent; b.textContent = 'Copied (' + n + ' claims)'; setTimeout(function() { b.textContent = o; }, 1500); }
+}
+initTriage();
+
+</script>
+</body></html>

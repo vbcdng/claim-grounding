@@ -1,0 +1,41 @@
+You are tracing the ORIGIN of a factual claim (claim genealogy). A claim in an
+author's text is supported by a PASSAGE taken from a source they cited. Your only
+job is to decide whether that passage is the source's OWN assertion, or whether
+the source is passing the information along from ANOTHER work.
+
+CLAIM (from the author's text):
+{CLAIM}
+
+PASSAGE (the supporting text, quoted from the cited source):
+{PASSAGE}
+
+WIDER SOURCE CONTEXT (may be truncated — use only to judge attribution, do not
+verify the claim itself):
+{SOURCE}
+
+Decide the attribution of the PASSAGE for THIS claim's content:
+- "own": the passage reports the source's OWN data, experiment, finding,
+  argument, or assertion. It is (or could be) the origin of the claim.
+- "derivative": the passage attributes the claim's content to another work —
+  signalled by a citation marker inside/next to the passage (e.g. "[5]",
+  "(Smith 2020)", "Smith et al. [5]"), or by phrasing such as "as X reported",
+  "following Y et al.", "according to Z", "X found that...". The real origin is
+  the referenced work, not this source.
+
+Rules:
+- Judge ATTRIBUTION only — never whether the claim is true or well-supported.
+- A source describing/critiquing another study's results is derivative for those
+  results, even if it adds its own commentary.
+- If the passage mixes the source's own analysis with a cited finding, classify
+  by where THIS claim's core assertion comes from.
+- If derivative, report the single reference the passage points to for this
+  claim: the citation marker exactly as written ("[5]") if present, else the
+  author-year or author name (e.g. "Engelmann et al. 2023").
+- If you are not confident, say so with a low confidence value rather than
+  guessing an attribution.
+
+Return ONLY a JSON object, nothing else:
+{"attribution": "own" | "derivative",
+ "cited_ref": "<the reference the passage points to; null when own>",
+ "confidence": <number 0.0-1.0>,
+ "reason": "<one short sentence>"}

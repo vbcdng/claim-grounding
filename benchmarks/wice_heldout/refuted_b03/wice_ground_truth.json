@@ -1,0 +1,246 @@
+{
+ "split": "train",
+ "mode": "heldout_all",
+ "batch": 3,
+ "label_filter": "not_supported",
+ "exclude_used": true,
+ "claims": {
+  "triumphmotorcyclesltd": {
+   "wice_id": "train19201",
+   "split_index": 435,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 207
+  },
+  "ritasitalianice": {
+   "wice_id": "train31405",
+   "split_index": 439,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 59
+  },
+  "ghaznavimissile": {
+   "wice_id": "train19980",
+   "split_index": 457,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 57
+  },
+  "universityofnewenglandau": {
+   "wice_id": "train46187",
+   "split_index": 458,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 57
+  },
+  "mildenhallsuffolk": {
+   "wice_id": "train35959",
+   "split_index": 460,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 69
+  },
+  "ecommerce": {
+   "wice_id": "train18579",
+   "split_index": 467,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 68
+  },
+  "dilwaledulhanialejayenge": {
+   "wice_id": "train13548",
+   "split_index": 474,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 110
+  },
+  "anyacorke": {
+   "wice_id": "train30375",
+   "split_index": 476,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 184
+  },
+  "jajuandawson": {
+   "wice_id": "train23489",
+   "split_index": 482,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 65
+  },
+  "allsoulsanglicanchurchle": {
+   "wice_id": "train48381",
+   "split_index": 496,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 114
+  },
+  "mcubed": {
+   "wice_id": "train12033",
+   "split_index": 497,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     138
+    ]
+   ],
+   "n_source_sentences": 295
+  },
+  "pakbeng": {
+   "wice_id": "train18611",
+   "split_index": 501,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 128
+  },
+  "romelulukaku": {
+   "wice_id": "train35477",
+   "split_index": 507,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 41
+  },
+  "christophercalvinharriso": {
+   "wice_id": "train37325",
+   "split_index": 526,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 134
+  },
+  "197576buffalobravesseaso": {
+   "wice_id": "train07942",
+   "split_index": 530,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 153
+  },
+  "eccleshall": {
+   "wice_id": "train33230",
+   "split_index": 536,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 77
+  },
+  "makeblock": {
+   "wice_id": "train49533",
+   "split_index": 552,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 107
+  },
+  "deeqsulaimanyusuf": {
+   "wice_id": "train32073",
+   "split_index": 554,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 61
+  },
+  "bookertwashingtonhighsch": {
+   "wice_id": "train41026",
+   "split_index": 562,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 84
+  },
+  "anuragkashyap": {
+   "wice_id": "train13577",
+   "split_index": 565,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 52
+  },
+  "tsunamidvbbsandborgeouss": {
+   "wice_id": "train29897",
+   "split_index": 566,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 102
+  },
+  "violenceagainstwomenact": {
+   "wice_id": "train03675",
+   "split_index": 576,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 944
+  },
+  "chicao": {
+   "wice_id": "train26461",
+   "split_index": 581,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 18
+  },
+  "fulladoll": {
+   "wice_id": "train48937",
+   "split_index": 583,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 51
+  },
+  "2012summerparalympicsope": {
+   "wice_id": "train22668",
+   "split_index": 587,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 55
+  },
+  "robeaton": {
+   "wice_id": "train34776",
+   "split_index": 593,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 198
+  }
+ }
+}

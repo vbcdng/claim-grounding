@@ -1,0 +1,55 @@
+verdict-level agreement: 15/26 (57%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported            2
+  partially_supported    -> not_supported            4   <-- disagreement
+  partially_supported    -> partially_supported      8
+  partially_supported    -> supported                3   <-- disagreement
+  supported              -> not_supported            2   <-- disagreement
+  supported              -> partially_supported      2   <-- disagreement
+  supported              -> supported                5
+
+arbiter-adjudicated agreement: 20/26 (76%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported            2
+  partially_supported    -> partially_supported     11
+  partially_supported    -> supported                4   <-- disagreement
+  supported              -> partially_supported      2   <-- disagreement
+  supported              -> supported                7
+adjudication flips: 7
+  ~ railgun                    not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+  + listofchurchespreservedb   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + ericmurrayrower            not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  ~ orelhershisersscorelessi   not_supported -> supported              wice=partially_supported    (arbiter: proof exists in source (verified quotes))
+  + oregoncavesnationalmonum   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + aileenlee                  not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + historyofprestonnorthend   partially_supported -> supported              wice=supported              (arbiter: all components provable (verified quotes))
+
+false-supports on 2 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  DIFF ashlynharris               wice=partially_supported    tool=supported              picks_in_gold=1/2
+  DIFF railgun                    wice=supported              tool=not_supported          adj=partially_supported    
+  OK  eatonnorfolk               wice=supported              tool=supported              picks_in_gold=1/1
+  OK  nathantyson                wice=supported              tool=supported              picks_in_gold=1/3
+  OK  thesimpsons                wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF coal                       wice=partially_supported    tool=supported              picks_in_gold=2/3
+  DIFF listofchurchespreservedb   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  aarondford                 wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF thetragicallyhip           wice=supported              tool=partially_supported    picks_in_gold=2/3
+  DIFF ericmurrayrower            wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  rebeccablumenstein         wice=supported              tool=supported              picks_in_gold=1/8
+  OK  fridayschildstartrektheo   wice=partially_supported    tool=partially_supported    picks_in_gold=1/2
+  OK  skylersamuels              wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  OK  thedailybeast              wice=partially_supported    tool=partially_supported    picks_in_gold=1/4
+  OK  docadams                   wice=supported              tool=supported              picks_in_gold=0/3
+  OK  loveforsalebook            wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF orelhershisersscorelessi   wice=partially_supported    tool=not_supported          adj=supported              
+  DIFF oregoncavesnationalmonum   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF toxoplasmosis              wice=partially_supported    tool=supported              picks_in_gold=1/2
+  OK  ashleyssack                wice=not_supported          tool=not_supported          
+  OK  sriradhashyamasundarmand   wice=not_supported          tool=not_supported          
+  OK  thepaleemperor             wice=partially_supported    tool=partially_supported    picks_in_gold=1/4
+  DIFF aileenlee                  wice=supported              tool=not_supported          adj=supported              
+  OK  satyamohanjoshi            wice=supported              tool=supported              picks_in_gold=2/2
+  DIFF historyofprestonnorthend   wice=supported              tool=partially_supported    adj=supported              picks_in_gold=1/2
+  OK  nicolsibezfootballerborn   wice=partially_supported    tool=partially_supported    picks_in_gold=0/2

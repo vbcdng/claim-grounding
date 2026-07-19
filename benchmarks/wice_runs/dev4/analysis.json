@@ -1,0 +1,2689 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE dev batch 4",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "This change was instigated by publisher Casterman and Hergé's estate managers Moulinsart, who decided to replace localised hand-lettering with a single computerised font for all Tintin titles worldwide.",
+   "markers": [
+    "theadventuresoftintin"
+   ],
+   "paper_ids": [
+    "f132badac6d18bd23ec67b7c2db38783f86778c5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f132badac6d18bd23ec67b7c2db38783f86778c5",
+    "source_title": "theadventuresoftintin",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Whoever made the decision to go with the computer font at Casterman (Tintin's publisher) cannot, in my opinion, possibly love Tintin, and whoever does not love Tintin should be in no position to make such a decision.",
+    "page": 1,
+    "snippet": "Whoever made the decision to go with",
+    "reason": "The passage does not state that Hergé's estate managers Moulinsart instigated the change or that the change involved replacing localized hand-lettering with a single computerized font for all Tintin titles worldwide.",
+    "votes": "2-0",
+    "window": "Whoever made the decision to go with the computer font at Casterman (Tintin's publisher) cannot, in my opinion, possibly love Tintin, and whoever does not love Tintin should be in no position to make such a decision."
+   },
+   "evidences": [
+    {
+     "paper_id": "f132badac6d18bd23ec67b7c2db38783f86778c5",
+     "source_title": "theadventuresoftintin",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Whoever made the decision to go with the computer font at Casterman (Tintin's publisher) cannot, in my opinion, possibly love Tintin, and whoever does not love Tintin should be in no position to make such a decision.",
+     "page": 1,
+     "snippet": "Whoever made the decision to go with",
+     "reason": "The passage does not state that Hergé's estate managers Moulinsart instigated the change or that the change involved replacing localized hand-lettering with a single computerized font for all Tintin titles worldwide.",
+     "votes": "2-0",
+     "window": "Whoever made the decision to go with the computer font at Casterman (Tintin's publisher) cannot, in my opinion, possibly love Tintin, and whoever does not love Tintin should be in no position to make such a decision."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Hergé's estate managers Moulinsart instigated the change or that the change involved replacing localized hand-lettering with a single computerized font for all Tintin titles worldwide.",
+   "component_check": {
+    "found": [
+     "publisher Casterman instigated this change"
+    ],
+    "missing": [
+     "Hergé's estate managers Moulinsart instigated this change",
+     "they decided to replace localised hand-lettering with a single computerised font",
+     "this was for all Tintin titles worldwide"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "publisher Casterman instigated this change",
+      "paper_id": "f132badac6d18bd23ec67b7c2db38783f86778c5",
+      "source_title": "theadventuresoftintin",
+      "sentence": "Whoever made the decision to go with the computer font at Casterman (Tintin's publisher) cannot, in my opinion, possibly love Tintin, and whoever does not love Tintin should be in no position to make such a decision.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a decision made by specific entities (publisher Casterman and Hergé's estate managers Moulinsart) regarding a change in Tintin titles. This is presented as a factual statement that the cited source is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim attributes specific actors (Casterman and Moulinsart) and a specific decision (replace localised hand-lettering with a single computerised font for all Tintin titles worldwide) that are not stated or implied in the provided source text.",
+    "rewrite_suggestion": "The change to computer lettering was noticed by a reader in a newly purchased Tintin book published by Casterman, though the decision-maker is not identified in the source.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only speculates about who made the decision and does not support any component of the claim. The source text—a blog post—mentions Casterman as the publisher and laments the computer font, but never states that Casterman or Moulinsart instigated the change, nor that the change involved replacing localised hand-lettering with a single font for all titles worldwide. Since these substantive components are absent from the source, the author must add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Chen was born and raised in New York and is of Chinese descent.",
+   "markers": [
+    "jameschenactor"
+   ],
+   "paper_ids": [
+    "de1f17bb4a2ced3cb3374a419c8d473f753cf7b4"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "de1f17bb4a2ced3cb3374a419c8d473f753cf7b4",
+    "source_title": "jameschenactor",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "I'm born and raised in the Empire State, studied and worked in Philadelphia for six years, (so did not study acting in college), but came to it later during grad school at Yale Drama.",
+    "page": 1,
+    "snippet": "I'm born and raised in the Empire",
+    "reason": "The passage does not state that Chen is of Chinese descent.",
+    "votes": "2-0",
+    "window": "I'm born and raised in the Empire State, studied and worked in Philadelphia for six years, (so did not study acting in college), but came to it later during grad school at Yale Drama. When I was in college I got a chance to play the lead in a Chinese Students Association play and that was really my first role as an adult. There's a satisfying increase in Asian representation this season fleshing out the Chinatown world Danny and Colleen venture in. Favorite Song: Bohemian Rhapsody Favorite Sports Team: Knicks. Favorite Food: Years of living in LA… Korean food has won me over from my Italian food upbringing."
+   },
+   "evidences": [
+    {
+     "paper_id": "de1f17bb4a2ced3cb3374a419c8d473f753cf7b4",
+     "source_title": "jameschenactor",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "I'm born and raised in the Empire State, studied and worked in Philadelphia for six years, (so did not study acting in college), but came to it later during grad school at Yale Drama.",
+     "page": 1,
+     "snippet": "I'm born and raised in the Empire",
+     "reason": "The passage does not state that Chen is of Chinese descent.",
+     "votes": "2-0",
+     "window": "I'm born and raised in the Empire State, studied and worked in Philadelphia for six years, (so did not study acting in college), but came to it later during grad school at Yale Drama. When I was in college I got a chance to play the lead in a Chinese Students Association play and that was really my first role as an adult. There's a satisfying increase in Asian representation this season fleshing out the Chinatown world Danny and Colleen venture in. Favorite Song: Bohemian Rhapsody Favorite Sports Team: Knicks. Favorite Food: Years of living in LA… Korean food has won me over from my Italian food upbringing."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Chen is of Chinese descent.",
+   "component_check": {
+    "found": [
+     "Chen was born and raised in New York"
+    ],
+    "missing": [
+     "Chen is of Chinese descent"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Chen was born and raised in New York",
+      "paper_id": "de1f17bb4a2ced3cb3374a419c8d473f753cf7b4",
+      "source_title": "jameschenactor",
+      "sentence": "I'm born and raised in the Empire State, studied and worked in Philadelphia for six years, (so did not study acting in college), but came to it later during grad school at Yale Drama.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Chen was born and raised in New York and is of Chinese descent.",
+    "reason": "The passage directly states biographical facts about Chen. The citation is expected to prove these facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "of Chinese descent",
+    "rewrite_suggestion": "Chen was born and raised in New York.",
+    "proofs": [
+     "I'm born and raised in the Empire State, studied and worked in Philadelphia for six years, (so did not study acting in college), but came to it later during grad school at Yale Drama."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that Chen was born and raised in New York (the 'Empire State'). However, the claim also includes that he is 'of Chinese descent,' which is not supported by any shown sentence and is not explicitly stated anywhere in the provided source text. Because this ethnic component is a substantive factual claim that the source does not contain, the author must either add a citation for it or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "This group of counties also elects boards for regional planning and air quality control regulation.",
+   "markers": [
+    "sanjosesanfranciscooakla"
+   ],
+   "paper_ids": [
+    "489ad031fcd852adb7bab4ac30c58a535ae1b58b"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "489ad031fcd852adb7bab4ac30c58a535ae1b58b",
+    "source_title": "sanjosesanfranciscooakla",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The Air District is tasked with regulating stationary sources of air pollution in the nine counties that surround San Francisco Bay: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, southwestern Solano, and southern Sonoma counties.",
+    "page": 1,
+    "snippet": "The Air District is tasked with regulating",
+    "reason": "The passage states that the Air District is tasked with regulating air pollution in nine counties and is governed by a Board of Directors composed of locally elected officials from each of these counties, which supports the claim that this group of counties elects boards for air quality control regulation.",
+    "votes": "2-0",
+    "window": "The Air District is tasked with regulating stationary sources of air pollution in the nine counties that surround San Francisco Bay: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, southwestern Solano, and southern Sonoma counties. The Board oversees policies and adopts regulations for the control of air pollution within the district. It is governed by a 24-member Board of Directors composed of locally elected officials from each of the nine Bay Area counties, with the number of board members from each county being proportionate to its population."
+   },
+   "evidences": [
+    {
+     "paper_id": "489ad031fcd852adb7bab4ac30c58a535ae1b58b",
+     "source_title": "sanjosesanfranciscooakla",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The Air District is tasked with regulating stationary sources of air pollution in the nine counties that surround San Francisco Bay: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, southwestern Solano, and southern Sonoma counties.",
+     "page": 1,
+     "snippet": "The Air District is tasked with regulating",
+     "reason": "The passage states that the Air District is tasked with regulating air pollution in nine counties and is governed by a Board of Directors composed of locally elected officials from each of these counties, which supports the claim that this group of counties elects boards for air quality control regulation.",
+     "votes": "2-0",
+     "window": "The Air District is tasked with regulating stationary sources of air pollution in the nine counties that surround San Francisco Bay: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, southwestern Solano, and southern Sonoma counties. The Board oversees policies and adopts regulations for the control of air pollution within the district. It is governed by a 24-member Board of Directors composed of locally elected officials from each of the nine Bay Area counties, with the number of board members from each county being proportionate to its population."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the Air District is tasked with regulating air pollution in nine counties and is governed by a Board of Directors composed of locally elected officials from each of these counties, which supports the claim that this group of counties elects boards for air quality control regulation.",
+   "covering": {
+    "covered": [
+     {
+      "component": "elects boards for regional planning",
+      "paper_id": "489ad031fcd852adb7bab4ac30c58a535ae1b58b",
+      "source_title": "sanjosesanfranciscooakla",
+      "sentence": "ABAG is part regional planning agency and part local government service provider.",
+      "page": 1,
+      "snippet": "ABAG is part regional planning agency and",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "elects boards for air quality control regulation"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "489ad031fcd852adb7bab4ac30c58a535ae1b58b",
+      "source_title": "sanjosesanfranciscooakla",
+      "text": "ABAG is part regional planning agency and part local government service provider.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage mentions the Air District regulates air quality and that its board is composed of elected officials, but it does not state that these counties elect boards specifically for regional planning and air quality control regulation.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "elects boards for regional planning",
+    "rewrite_suggestion": "This group of counties also has a regional planning agency (ABAG) and the Air District is governed by a board composed of locally elected officials from these counties.",
+    "proofs": [
+     "It is governed by a 24-member Board of Directors composed of locally elected officials from each of the nine Bay Area counties, with the number of board members from each county being proportionate to its population."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the counties elect boards for both regional planning and air quality control. The shown sentences do not mention any election for a regional planning board; the ABAG sentence only describes the agency's function. The source does contain a sentence about the Air District's board composition, but it was not shown. Since the claim includes an unsupported subclaim (election for regional planning) not provable from the source, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "The various levels of courts were founded via the Union Judiciary Act, 1948.",
+   "markers": [
+    "supremecourtofmyanmar"
+   ],
+   "paper_ids": [
+    "cc69a2f8b6fc7391c6c45c0ecd8b8fbabc372042"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.919,
+   "evidence": {
+    "paper_id": "cc69a2f8b6fc7391c6c45c0ecd8b8fbabc372042",
+    "source_title": "supremecourtofmyanmar",
+    "supported": false,
+    "sentence": "The meeting of 3rd Joint Committee between Singapore, Ministry of Law and the Joint Committee of The Union Supreme Court",
+    "page": 1,
+    "snippet": "The meeting of 3rd Joint Committee between",
+    "cosine": 0.919,
+    "reason": "The passage discusses a meeting between Singapore and the Union Supreme Court of Myanmar but does not mention the Union Judiciary Act of 1948 or the founding of courts.",
+    "window": "Read More The meeting of 3rd Joint Committee between Singapore, Ministry of Law and the Joint Committee of The Union Supreme Court Naypyitaw March 26"
+   },
+   "evidences": [
+    {
+     "paper_id": "cc69a2f8b6fc7391c6c45c0ecd8b8fbabc372042",
+     "source_title": "supremecourtofmyanmar",
+     "supported": false,
+     "sentence": "The meeting of 3rd Joint Committee between Singapore, Ministry of Law and the Joint Committee of The Union Supreme Court",
+     "page": 1,
+     "snippet": "The meeting of 3rd Joint Committee between",
+     "cosine": 0.919,
+     "reason": "The passage discusses a meeting between Singapore and the Union Supreme Court of Myanmar but does not mention the Union Judiciary Act of 1948 or the founding of courts.",
+     "window": "Read More The meeting of 3rd Joint Committee between Singapore, Ministry of Law and the Joint Committee of The Union Supreme Court Naypyitaw March 26"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The various levels of courts were founded via the Union Judiciary Act, 1948.",
+    "reason": "The passage directly states a fact about the founding of courts and attributes it to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the various levels of courts were founded via the Union Judiciary Act, 1948",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text provided from the Supreme Court of Myanmar website contains no mention of the Union Judiciary Act, 1948, nor any statement that the various levels of courts were founded by that act. The shown sentence is about a meeting between Singapore's Ministry of Law and a joint committee, which is entirely unrelated to the claim. Therefore, the substantive component of the claim is not provable from this source at all, so the author must either add a citation that supports it or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "In October 2018, it was announced Arturo Castro had been cast in the live-action role of Marco and that Janelle Monáe had been cast in the voice role of Peg.",
+   "markers": [
+    "ladyandthetramp2019film"
+   ],
+   "paper_ids": [
+    "29942b183ea12fa4230efd0a2f316e2dcf2fdbd3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "29942b183ea12fa4230efd0a2f316e2dcf2fdbd3",
+    "source_title": "ladyandthetramp2019film",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Narcos star Arturo Castro is the latest to join Disney's live-action Lady and the Tramp.",
+    "page": 1,
+    "snippet": "Narcos star Arturo Castro is the latest",
+    "reason": "The passage does not mention Janelle Monáe or the voice role of Peg.",
+    "votes": "2-0",
+    "window": "Narcos star Arturo Castro is the latest to join Disney's live-action Lady and the Tramp. Castro will play Marco, a hard working up-and-comer who has a soft spot for Tramp and likes to slip him scraps from the restaurant where he works."
+   },
+   "evidences": [
+    {
+     "paper_id": "29942b183ea12fa4230efd0a2f316e2dcf2fdbd3",
+     "source_title": "ladyandthetramp2019film",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Narcos star Arturo Castro is the latest to join Disney's live-action Lady and the Tramp.",
+     "page": 1,
+     "snippet": "Narcos star Arturo Castro is the latest",
+     "reason": "The passage does not mention Janelle Monáe or the voice role of Peg.",
+     "votes": "2-0",
+     "window": "Narcos star Arturo Castro is the latest to join Disney's live-action Lady and the Tramp. Castro will play Marco, a hard working up-and-comer who has a soft spot for Tramp and likes to slip him scraps from the restaurant where he works."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Janelle Monáe or the voice role of Peg.",
+   "component_check": {
+    "found": [
+     "In October 2018, it was announced Arturo Castro had been cast in the live-action role of Marco"
+    ],
+    "missing": [
+     "Janelle Monáe had been cast in the voice role of Peg"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In October 2018, it was announced Arturo Castro had been cast in the live-action role of Marco",
+      "paper_id": "29942b183ea12fa4230efd0a2f316e2dcf2fdbd3",
+      "source_title": "ladyandthetramp2019film",
+      "sentence": "Narcos star Arturo Castro is the latest to join Disney's live-action Lady and the Tramp.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Arturo Castro had been cast in the live-action role of Marco and that Janelle Monáe had been cast in the voice role of Peg.",
+    "reason": "The passage asserts specific facts (casting announcements and roles) that are directly attributed to the cited source. The attribution test is met as the passage states facts that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Janelle Monáe being cast in the voice role of Peg",
+    "rewrite_suggestion": "In October 2018, it was announced Arturo Castro had been cast in the live-action role of Marco.",
+    "proofs": [
+     "Narcos star Arturo Castro is the latest to join Disney's live-action Lady and the Tramp.",
+     "Castro will play Marco, a hard working up-and-comer who has a soft spot for Tramp and likes to slip him scraps from the restaurant where he works."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim has two components. The first (Arturo Castro cast as Marco in October 2018) is provable from the source but was not shown in the supporting sentences—the tool showed a sentence lacking the date and role. The second component (Janelle Monáe cast as Peg) is entirely absent from the source, so it cannot be supported by this citation. Because at least one substantive component is unprovable from the source, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "Krispy Kreme is set to open its first Taiwan store at the Xinyi Vieshow Cinemas Complex in Xinyi District, Taipei on 12 December 2013.",
+   "markers": [
+    "krispykremeoperationsbyc"
+   ],
+   "paper_ids": [
+    "78192900e37bf58673346f85c0a91088d28fc5b7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "78192900e37bf58673346f85c0a91088d28fc5b7",
+    "source_title": "krispykremeoperationsbyc",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "U.S.-based Krispy Kreme Doughnuts will open its first Taiwan store in December, filling the vacuum of American donut chains left after the departure of Dunkin' Donuts earlier this year.",
+    "page": 1,
+    "snippet": "U.S.-based Krispy Kreme Doughnuts will open its",
+    "reason": "The passage does not specify the exact date of the store opening or the name of the cinema complex.",
+    "votes": "2-0",
+    "window": "U.S.-based Krispy Kreme Doughnuts will open its first Taiwan store in December, filling the vacuum of American donut chains left after the departure of Dunkin' Donuts earlier this year. \"According to information from the company on a local job site, the new store is set for Taipei's bustling Xinyi District."
+   },
+   "evidences": [
+    {
+     "paper_id": "78192900e37bf58673346f85c0a91088d28fc5b7",
+     "source_title": "krispykremeoperationsbyc",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "U.S.-based Krispy Kreme Doughnuts will open its first Taiwan store in December, filling the vacuum of American donut chains left after the departure of Dunkin' Donuts earlier this year.",
+     "page": 1,
+     "snippet": "U.S.-based Krispy Kreme Doughnuts will open its",
+     "reason": "The passage does not specify the exact date of the store opening or the name of the cinema complex.",
+     "votes": "2-0",
+     "window": "U.S.-based Krispy Kreme Doughnuts will open its first Taiwan store in December, filling the vacuum of American donut chains left after the departure of Dunkin' Donuts earlier this year. \"According to information from the company on a local job site, the new store is set for Taipei's bustling Xinyi District."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not specify the exact date of the store opening or the name of the cinema complex.",
+   "component_check": {
+    "found": [
+     "Krispy Kreme is set to open its first Taiwan store",
+     "at the Xinyi Vieshow Cinemas Complex in Xinyi District, Taipei"
+    ],
+    "missing": [
+     "on 12 December 2013"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Krispy Kreme is set to open its first Taiwan store",
+      "paper_id": "78192900e37bf58673346f85c0a91088d28fc5b7",
+      "source_title": "krispykremeoperationsbyc",
+      "sentence": "U.S.-based Krispy Kreme Doughnuts will open its first Taiwan store in December, filling the vacuum of American donut chains left after the departure of Dunkin' Donuts earlier this year.",
+      "page": 1
+     },
+     {
+      "component": "at the Xinyi Vieshow Cinemas Complex in Xinyi District, Taipei",
+      "paper_id": "78192900e37bf58673346f85c0a91088d28fc5b7",
+      "source_title": "krispykremeoperationsbyc",
+      "sentence": "\"According to information from the company on a local job site, the new store is set for Taipei's bustling Xinyi District.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a specific fact (opening date and location) that the cited source is expected to prove. This falls under the 'full' scope as it's a direct statement of information attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The exact location (Xinyi Vieshow Cinemas Complex) and the exact date (12 December 2013) are not supported by the cited source.",
+    "rewrite_suggestion": "Krispy Kreme is set to open its first Taiwan store in Taipei's Xinyi District in December 2013.",
+    "proofs": [
+     "U.S.-based Krispy Kreme Doughnuts will open its first Taiwan store in December, filling the vacuum of American donut chains left after the departure of Dunkin' Donuts earlier this year.",
+     "the new store is set for Taipei's bustling Xinyi District."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms that Krispy Kreme will open its first Taiwan store in December. However, the claim includes a specific complex (Xinyi Vieshow Cinemas Complex) and an exact date (12 December 2013) that are not present anywhere in the source text. The source does mention Xinyi District and December, but those details are incomplete. Since the author added unsourced specifics, the claim requires revision or additional citation."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "Also in 1999, he was appointed conductor of the Royal Welsh College of Music & Drama chorus and he has been conductor of Bristol Choral Society since September 2000, whose principal concerts are with the Bournemouth Symphony Orchestra.",
+   "markers": [
+    "adrianpartington"
+   ],
+   "paper_ids": [
+    "42256be9d85fd3e523f2029457fe59a97d6c3fe3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.884,
+   "evidence": {
+    "paper_id": "42256be9d85fd3e523f2029457fe59a97d6c3fe3",
+    "source_title": "adrianpartington",
+    "supported": false,
+    "sentence": "Christoph von Dohnányi has a long-standing relationship with the Philharmonia Orchestra, starting... read more",
+    "page": 1,
+    "snippet": "Christoph von Dohnányi has a long-standing relationship",
+    "cosine": 0.884,
+    "reason": "The passage discusses Christoph von Dohnányi and his relationship with the Philharmonia Orchestra, which is unrelated to the claim about Adrian Partington's appointments.",
+    "window": "## Christoph von Dohnányi Honorary Conductor for Life Christoph von Dohnányi has a long-standing relationship with the Philharmonia Orchestra, starting... read more # Featured Conductors"
+   },
+   "evidences": [
+    {
+     "paper_id": "42256be9d85fd3e523f2029457fe59a97d6c3fe3",
+     "source_title": "adrianpartington",
+     "supported": false,
+     "sentence": "Christoph von Dohnányi has a long-standing relationship with the Philharmonia Orchestra, starting... read more",
+     "page": 1,
+     "snippet": "Christoph von Dohnányi has a long-standing relationship",
+     "cosine": 0.884,
+     "reason": "The passage discusses Christoph von Dohnányi and his relationship with the Philharmonia Orchestra, which is unrelated to the claim about Adrian Partington's appointments.",
+     "window": "## Christoph von Dohnányi Honorary Conductor for Life Christoph von Dohnányi has a long-standing relationship with the Philharmonia Orchestra, starting... read more # Featured Conductors"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts factual information about the subject's appointments and affiliations, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about Adrian Partington's appointments and the association with Bournemouth Symphony Orchestra is unsupported by the cited source",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes specific appointments and details about Adrian Partington to a source that contains no such information. The provided source text is a list of Philharmonia Orchestra conductors and does not mention Adrian Partington, the Royal Welsh College, Bristol Choral Society, or the Bournemouth Symphony Orchestra. Therefore, none of the claim's components are supported by the cited source."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "This interactive educational website tells story of African-Americans and the role they played, and still play, in the horse industry.",
+   "markers": [
+    "africancemeteryno2lexing"
+   ],
+   "paper_ids": [
+    "514f02018307e3fddbf9b7002148d7a5e8ee7cf7"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8696,
+   "evidence": {
+    "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+    "source_title": "africancemeteryno2lexing",
+    "supported": true,
+    "sentence": "The Chronicle of African Americans in the Horse Industry",
+    "page": 1,
+    "snippet": "The Chronicle of African Americans in the",
+    "cosine": 0.8696,
+    "reason": "The passage explicitly mentions 'The Chronicle of African Americans in the Horse Industry,' which directly supports the claim that the website tells the story of African-Americans and their role in the horse industry.",
+    "window": "Admission and Hours Museum Guidelines Education Resources The Chronicle of African Americans in the Horse Industry Meet the Chronicle's Team The Chronicle's Backstory"
+   },
+   "evidences": [
+    {
+     "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+     "source_title": "africancemeteryno2lexing",
+     "supported": true,
+     "sentence": "The Chronicle of African Americans in the Horse Industry",
+     "page": 1,
+     "snippet": "The Chronicle of African Americans in the",
+     "cosine": 0.8696,
+     "reason": "The passage explicitly mentions 'The Chronicle of African Americans in the Horse Industry,' which directly supports the claim that the website tells the story of African-Americans and their role in the horse industry.",
+     "window": "Admission and Hours Museum Guidelines Education Resources The Chronicle of African Americans in the Horse Industry Meet the Chronicle's Team The Chronicle's Backstory"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly mentions 'The Chronicle of African Americans in the Horse Industry,' which directly supports the claim that the website tells the story of African-Americans and their role in the horse industry.",
+   "covering": {
+    "covered": [
+     {
+      "component": "website tells story of African-Americans",
+      "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+      "source_title": "africancemeteryno2lexing",
+      "sentence": "The goal of the Chronicle of African Americans in the Horse Industry is to create an online, interactive archive to house and display photos, documents, artifacts, and oral histories of African Americans who have worked, and continue to work in equine industries.",
+      "page": 1,
+      "snippet": "The goal of the Chronicle of African"
+     },
+     {
+      "component": "website tells story of role African-Americans played in horse industry",
+      "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+      "source_title": "africancemeteryno2lexing",
+      "sentence": "The goal of the Chronicle of African Americans in the Horse Industry is to create an online, interactive archive to house and display photos, documents, artifacts, and oral histories of African Americans who have worked, and continue to work in equine industries.",
+      "page": 1,
+      "snippet": "The goal of the Chronicle of African"
+     },
+     {
+      "component": "website tells story of role African-Americans still play in horse industry",
+      "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+      "source_title": "africancemeteryno2lexing",
+      "sentence": "This will help us create a resource that is valued and useful and will include: Descendants and African Americans currently working in the horse industry will be able to explore the past and connect history to modern experiences.",
+      "page": 1,
+      "snippet": "This will help us create a resource"
+     },
+     {
+      "component": "website is interactive",
+      "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+      "source_title": "africancemeteryno2lexing",
+      "sentence": "The goal of the Chronicle of African Americans in the Horse Industry is to create an online, interactive archive to house and display photos, documents, artifacts, and oral histories of African Americans who have worked, and continue to work in equine industries.",
+      "page": 1,
+      "snippet": "The goal of the Chronicle of African"
+     },
+     {
+      "component": "website is educational",
+      "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+      "source_title": "africancemeteryno2lexing",
+      "sentence": "Students and teachers will gain a better understanding of African American history and its connections to local places and events related to the horse industry.",
+      "page": 1,
+      "snippet": "Students and teachers will gain a better"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+      "source_title": "africancemeteryno2lexing",
+      "text": "The goal of the Chronicle of African Americans in the Horse Industry is to create an online, interactive archive to house and display photos, documents, artifacts, and oral histories of African Americans who have worked, and continue to work in equine industries. Its users will be able to connect the past to the present. It is our intention to engage a diverse audience of people and communities to provide valuable input relating to the Chronicle. This will help us create a resource that is valued and useful and will include: Descendants and African Americans currently working in the horse industry will be able to explore the past and connect history to modern experiences. The perspective of descendants will steer the development of the website, with a dedication to preserving their heritage with the utmost respect. We invite them to add their own voice to the Chronicle. Historical institutions, genealogists, and libraries will integrate their collections and gain ease of access to use documents for their own interpretive purposes. We invite them to link their collections to the Chronicle. Students and teachers will gain a better understanding of African American history and its connections to local places and events related to the horse industry.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t9",
+   "text": "In 2014, Evans was involved in a debate with Michael Gove, the British education secretary, about the content and style of history teaching and the way that the curriculum is structured and how the First World War should be portrayed.",
+   "markers": [
+    "richardjevans"
+   ],
+   "paper_ids": [
+    "8c0e9437bbcc1835894b49f6760bf84ad259495e"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8857,
+   "evidence": {
+    "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+    "source_title": "richardjevans",
+    "supported": true,
+    "sentence": "What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history.",
+    "page": 1,
+    "snippet": "What I did say, in an article",
+    "cosine": 0.8857,
+    "reason": "The passage states that Evans criticized Michael Gove's redrafting of the national schools history curriculum regarding the portrayal of English history and the First World War, which aligns with the claim's assertion about a debate on history teaching content and curriculum structure.",
+    "window": "Actually, of course, I have done nothing of the kind. What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history. That redrafting was so comprehensively ridiculed by the historical profession, including such august bodies as the Royal Historical Society, the British Academy and the Historical Association, that it had to be withdrawn and replaced by a much better curriculum that encouraged pupils to think for themselves, allowed teachers wide latitude in their approach to the subject and gave due recognition to the history of other parts of the world."
+   },
+   "evidences": [
+    {
+     "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+     "source_title": "richardjevans",
+     "supported": true,
+     "sentence": "What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history.",
+     "page": 1,
+     "snippet": "What I did say, in an article",
+     "cosine": 0.8857,
+     "reason": "The passage states that Evans criticized Michael Gove's redrafting of the national schools history curriculum regarding the portrayal of English history and the First World War, which aligns with the claim's assertion about a debate on history teaching content and curriculum structure.",
+     "window": "Actually, of course, I have done nothing of the kind. What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history. That redrafting was so comprehensively ridiculed by the historical profession, including such august bodies as the Royal Historical Society, the British Academy and the Historical Association, that it had to be withdrawn and replaced by a much better curriculum that encouraged pupils to think for themselves, allowed teachers wide latitude in their approach to the subject and gave due recognition to the history of other parts of the world."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Evans criticized Michael Gove's redrafting of the national schools history curriculum regarding the portrayal of English history and the First World War, which aligns with the claim's assertion about a debate on history teaching content and curriculum structure.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Debate about history teaching content and style",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history.",
+      "page": 1,
+      "snippet": "What I did say, in an article"
+     },
+     {
+      "component": "Debate about history teaching content and style",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "The education secretary's attack on first world war historians is no way to conduct the debate he claims he wants to encourage",
+      "page": 1,
+      "snippet": "The education secretary's attack on first world"
+     },
+     {
+      "component": "Debate about history teaching content and style",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "Defaming historians and others who think and write critically about Britain's role in the first world war by accusing them of seeking to \"denigrate virtues such as patriotism, honour, and courage\" is no way to conduct the debate Gove says he wants to encourage.",
+      "page": 1,
+      "snippet": "Defaming historians and others who think and"
+     },
+     {
+      "component": "Debate about curriculum structure",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history.",
+      "page": 1,
+      "snippet": "What I did say, in an article"
+     },
+     {
+      "component": "Debate about curriculum structure",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "That redrafting was so comprehensively ridiculed by the historical profession, including such august bodies as the Royal Historical Society, the British Academy and the Historical Association, that it had to be withdrawn and replaced by a much better curriculum that encouraged pupils to think for themselves, allowed teachers wide latitude in their approach to the subject and gave due recognition to the history of other parts of the world.",
+      "page": 1,
+      "snippet": "That redrafting was so comprehensively ridiculed by"
+     },
+     {
+      "component": "Debate about how the First World War should be portrayed",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history.",
+      "page": 1,
+      "snippet": "What I did say, in an article"
+     },
+     {
+      "component": "Debate about how the First World War should be portrayed",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "Defaming historians and others who think and write critically about Britain's role in the first world war by accusing them of seeking to \"denigrate virtues such as patriotism, honour, and courage\" is no way to conduct the debate Gove says he wants to encourage.",
+      "page": 1,
+      "snippet": "Defaming historians and others who think and"
+     },
+     {
+      "component": "Michael Gove is British education secretary",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "Photograph: IWM via Getty Images For the second time in a few months, Michael Gove, the education secretary, has singled me out for personal attack, this time in an article in the Daily Mail headed \"Why does the Left insist on belittling true British heroes?\"",
+      "page": 1,
+      "snippet": "Photograph: IWM via Getty Images For the"
+     },
+     {
+      "component": "Evans involved in debate with Michael Gove in 2014",
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "sentence": "Naturally, Gove thinks he is the scholar, and describes the arguments he wrongly claims I put forward as \"more reflective of the attitude of an undergraduate cynic playing to the gallery in a Cambridge Footlights revue rather than a sober academic contributing to a proper historical debate\".",
+      "page": 1,
+      "snippet": "Naturally, Gove thinks he is the scholar,",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+      "source_title": "richardjevans",
+      "text": "The education secretary's attack on first world war historians is no way to conduct the debate he claims he wants to encourage Mon 6 Jan 2014 09.23 EST First published on Mon 6 Jan 2014 09.23 EST Battle of Passchendaele, 1917. 'Gove has again shown his preference for mythmaking over scholarship,' says Richard Evans. Photograph: IWM via Getty Images For the second time in a few months, Michael Gove, the education secretary, has singled me out for personal attack, this time in an article in the Daily Mail headed \"Why does the Left insist on belittling true British heroes?\" According to Gove, I have demeaned the memory of the British soldiers who fought in the first world war and \"attacked the very idea of honouring their sacrifice as an exercise in 'narrow tub-thumping jingoism'\". Actually, of course, I have done nothing of the kind. What I did say, in an article in the Guardian on 13 July 2013, was that the broad and inclusive plans of Maria Miller, the culture secretary, for the commemoration of the centenary of the outbreak of the first world war have been \"in strong contrast to the narrow, tub-thumping jingoism of Gove\" in his redrafting of the national schools history curriculum to force schools to teach an uncritically celebratory narrative of English history. That redrafting was so comprehensively ridiculed by the historical profession, including such august bodies as the Royal Historical Society, the British Academy and the Historical Association, that it had to be withdrawn and replaced by a much better curriculum that encouraged pupils to think for themselves, allowed teachers wide latitude in their approach to the subject and gave due recognition to the history of other parts of the world. I wasn't attacking the memory of British soldiers in the first world war at all. Perhaps Gove should attend some history lessons taught by the professionals he so belittles so that he can learn how to read and cite sources properly. Of course, nobody would wish to demean the memory of the soldiers who fought in the war. I hope that the commemorations of the conflict beginning this year will find plenty of room to honour their courage. However, just as he did in his proposals for the national curriculum, Gove has again shown his ignorance of history and his preference for mythmaking over scholarship. Naturally, Gove thinks he is the scholar, and describes the arguments he wrongly claims I put forward as \"more reflective of the attitude of an undergraduate cynic playing to the gallery in a Cambridge Footlights revue rather than a sober academic contributing to a proper historical debate\". […] Defaming historians and others who think and write critically about Britain's role in the first world war by accusing them of seeking to \"denigrate virtues such as patriotism, honour, and courage\" is no way to conduct the debate Gove says he wants to encourage.",
+      "n_used": 6
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t10",
+   "text": "Along with Mastodon and Deftones, Alice in Chains toured the United States and Canada in late 2010 on the Blackdiamondskye tour, an amalgam of the three bands' latest album titles (\"Black Gives Way to Blue\", \"Diamond Eyes\", and \"Crack the Skye\").",
+   "markers": [
+    "aliceinchains"
+   ],
+   "paper_ids": [
+    "4cbe90c6bcb52641e334c939df67ff95715cba88"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+    "source_title": "aliceinchains",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "ARTISTdirect.com: You can't really define ALICE IN CHAINS, DEFTONES or MASTODON.",
+    "page": 1,
+    "snippet": "ARTISTdirect.com: You can't really define ALICE IN",
+    "reason": "the passage does not mention a tour in late 2010, nor does it mention the Blackdiamondskye tour or the specific album titles that formed its name.",
+    "votes": "2-0",
+    "window": "ARTISTdirect.com: You can't really define ALICE IN CHAINS, DEFTONES or MASTODON. We figured MASTODON would be done because they've been touring their asses off on \"Crack the Skye\". Luckily, they came along to be a part of it. Story continues after advertisement Jerry Cantrell: There are three individual musical fingerprints, and you get a hand with three fingers so obviously we've done some things wrong [Laughs]."
+   },
+   "evidences": [
+    {
+     "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+     "source_title": "aliceinchains",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "ARTISTdirect.com: You can't really define ALICE IN CHAINS, DEFTONES or MASTODON.",
+     "page": 1,
+     "snippet": "ARTISTdirect.com: You can't really define ALICE IN",
+     "reason": "the passage does not mention a tour in late 2010, nor does it mention the Blackdiamondskye tour or the specific album titles that formed its name.",
+     "votes": "2-0",
+     "window": "ARTISTdirect.com: You can't really define ALICE IN CHAINS, DEFTONES or MASTODON. We figured MASTODON would be done because they've been touring their asses off on \"Crack the Skye\". Luckily, they came along to be a part of it. Story continues after advertisement Jerry Cantrell: There are three individual musical fingerprints, and you get a hand with three fingers so obviously we've done some things wrong [Laughs]."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention a tour in late 2010, nor does it mention the Blackdiamondskye tour or the specific album titles that formed its name.",
+   "component_check": {
+    "found": [
+     "The tour was called the Blackdiamondskye tour."
+    ],
+    "missing": [
+     "Alice in Chains toured the United States and Canada in late 2010.",
+     "Mastodon and Deftones also toured during this time.",
+     "The tour name was an amalgam of the three bands' latest album titles."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The tour was called the Blackdiamondskye tour.",
+      "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+      "source_title": "aliceinchains",
+      "sentence": "ARTISTdirect.com: Were there any package tours similar to BlackDiamondSkye that you went to when you were a kid?",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Alice in Chains toured the United States and Canada in late 2010 on the Blackdiamondskye tour, an amalgam of the three bands' latest album titles.",
+    "reason": "The passage asserts specific facts about the Blackdiamondskye tour, including the bands involved, the timing, and the origin of the tour's name, which are directly attributed to the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes unsupported details: the tour location (United States and Canada), timeframe (late 2010), and the explanation that the tour name is an amalgam of the bands' albums 'Black Gives Way to Blue', 'Diamond Eyes', and 'Crack the Skye' – none of which appear in the source.",
+    "rewrite_suggestion": "Alice in Chains, Mastodon, and Deftones were part of the BlackDiamondSkye tour, according to an interview with Alice in Chains guitarist Jerry Cantrell.",
+    "proofs": [
+     "ALICE IN CHAINS Guitarist Talks 'BlackDiamondSkye' Tour",
+     "ARTISTdirect.com: Do you feel like BlackDiamondSkye is a musical crossroads of sorts?",
+     "The cool thing is you've got three very individual bands that are hard to put a definite tag on.",
+     "We figured MASTODON would be done because they've been touring their asses off on \"Crack the Skye\". Luckily, they came along to be a part of it."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not support any component of the claim. The source text confirms that the BlackDiamondSkye tour involved the three bands (Alice in Chains, Mastodon, Deftones), but it does not mention the specific locations (United States and Canada), the timeframe (late 2010), or that the tour name is an amalgam of the album titles 'Black Gives Way to Blue' and 'Diamond Eyes'. Therefore, these unprovable components require the author to either add a citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Washington's last tooth was given as a gift and keepsake to his dentist John Greenwood.",
+   "markers": [
+    "georgewashingtonsteeth"
+   ],
+   "paper_ids": [
+    "1c2e33d6c205976b1c2cb4952e07a31288a2d704"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9321,
+   "evidence": {
+    "paper_id": "1c2e33d6c205976b1c2cb4952e07a31288a2d704",
+    "source_title": "georgewashingtonsteeth",
+    "supported": false,
+    "sentence": "According to the Mount Vernon Ladies' Association, Washington's documents show that he purchased toothbrushes and tooth powders beginning at least in his early 20s, but to no avail.",
+    "page": 1,
+    "snippet": "According to the Mount Vernon Ladies' Association,",
+    "cosine": 0.9321,
+    "reason": "The passage does not mention what happened to Washington's last tooth or if it was given to his dentist.",
+    "window": "In fact, Washington had multiple sets of dentures, and they were made of ivory, metal alloys and — most disturbingly — the teeth of other humans, quite possibly slaves. According to the Mount Vernon Ladies' Association, Washington's documents show that he purchased toothbrushes and tooth powders beginning at least in his early 20s, but to no avail. His first tooth was pulled in 1756, when he was just 24."
+   },
+   "evidences": [
+    {
+     "paper_id": "1c2e33d6c205976b1c2cb4952e07a31288a2d704",
+     "source_title": "georgewashingtonsteeth",
+     "supported": false,
+     "sentence": "According to the Mount Vernon Ladies' Association, Washington's documents show that he purchased toothbrushes and tooth powders beginning at least in his early 20s, but to no avail.",
+     "page": 1,
+     "snippet": "According to the Mount Vernon Ladies' Association,",
+     "cosine": 0.9321,
+     "reason": "The passage does not mention what happened to Washington's last tooth or if it was given to his dentist.",
+     "window": "In fact, Washington had multiple sets of dentures, and they were made of ivory, metal alloys and — most disturbingly — the teeth of other humans, quite possibly slaves. According to the Mount Vernon Ladies' Association, Washington's documents show that he purchased toothbrushes and tooth powders beginning at least in his early 20s, but to no avail. His first tooth was pulled in 1756, when he was just 24."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Washington's last tooth was given as a gift and keepsake to his dentist John Greenwood.",
+    "reason": "The passage directly states a fact about an event involving George Washington and his dentist, which the citation is expected to support. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Washington's last tooth being given as a gift and keepsake to his dentist John Greenwood",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not mention John Greenwood, a 'last tooth,' or any gift of a tooth. Every component of the claim is absent from the cited source, so the author must either add a citation for that subclaim or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "This became an impetus for galleries and museums across the UK to celebrate \"the making, debating and exhibiting art at the Royal Academy\".",
+   "markers": [
+    "joshuareynolds"
+   ],
+   "paper_ids": [
+    "bdcee8c2f629c33c1b3d9b66858cea51a62018e9"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9336,
+   "evidence": {
+    "paper_id": "bdcee8c2f629c33c1b3d9b66858cea51a62018e9",
+    "source_title": "joshuareynolds",
+    "supported": true,
+    "sentence": "Burlington Gardens Festival Photo: Benedict Johnson ## RA250 UK: 250 years of art and artists ### A celebratory programme across the UK ## RA250 UK: 250 years of art and artists Map of exhibitions and events Map of artworks by RAs ## Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.",
+    "page": 1,
+    "snippet": "Burlington Gardens Festival Photo: Benedict Johnson ##",
+    "cosine": 0.9336,
+    "reason": "The passage explicitly states that \"Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.\"",
+    "window": "By using our website, you agree to the use of cookies as described in our cookies policy. Burlington Gardens Festival Photo: Benedict Johnson ## RA250 UK: 250 years of art and artists ### A celebratory programme across the UK ## RA250 UK: 250 years of art and artists Map of exhibitions and events Map of artworks by RAs ## Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy. Discover the RA where you are."
+   },
+   "evidences": [
+    {
+     "paper_id": "bdcee8c2f629c33c1b3d9b66858cea51a62018e9",
+     "source_title": "joshuareynolds",
+     "supported": true,
+     "sentence": "Burlington Gardens Festival Photo: Benedict Johnson ## RA250 UK: 250 years of art and artists ### A celebratory programme across the UK ## RA250 UK: 250 years of art and artists Map of exhibitions and events Map of artworks by RAs ## Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.",
+     "page": 1,
+     "snippet": "Burlington Gardens Festival Photo: Benedict Johnson ##",
+     "cosine": 0.9336,
+     "reason": "The passage explicitly states that \"Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.\"",
+     "window": "By using our website, you agree to the use of cookies as described in our cookies policy. Burlington Gardens Festival Photo: Benedict Johnson ## RA250 UK: 250 years of art and artists ### A celebratory programme across the UK ## RA250 UK: 250 years of art and artists Map of exhibitions and events Map of artworks by RAs ## Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy. Discover the RA where you are."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that \"Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.\"",
+   "covering": {
+    "covered": [
+     {
+      "component": "galleries and museums across the UK to celebrate \"the making, debating and exhibiting art at the Royal Academy\"",
+      "paper_id": "bdcee8c2f629c33c1b3d9b66858cea51a62018e9",
+      "source_title": "joshuareynolds",
+      "sentence": "Burlington Gardens Festival Photo: Benedict Johnson ## RA250 UK: 250 years of art and artists ### A celebratory programme across the UK ## RA250 UK: 250 years of art and artists Map of exhibitions and events Map of artworks by RAs ## Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.",
+      "page": 1,
+      "snippet": "Burlington Gardens Festival Photo: Benedict Johnson ##"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "bdcee8c2f629c33c1b3d9b66858cea51a62018e9",
+      "source_title": "joshuareynolds",
+      "text": "Burlington Gardens Festival Photo: Benedict Johnson ## RA250 UK: 250 years of art and artists ### A celebratory programme across the UK ## RA250 UK: 250 years of art and artists Map of exhibitions and events Map of artworks by RAs ## Art galleries and museums across the country are joining us to celebrate 250 years of making, debating and exhibiting art at the Royal Academy.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "The polling through most of the race was close and no candidate was a definitive favorite.",
+   "markers": [
+    "scottwalkerpolitician"
+   ],
+   "paper_ids": [
+    "63f279fdab8498039491e02132f6e7282d3312c8"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8955,
+   "evidence": {
+    "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+    "source_title": "scottwalkerpolitician",
+    "supported": true,
+    "sentence": "Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls.",
+    "page": 1,
+    "snippet": "Jason Chan/The Badger Herald For much of",
+    "cosine": 0.8955,
+    "reason": "The passage states that for much of the race, Walker and his challenger were deadlocked and tied in several polls, which supports the claim that the polling was close and no candidate was a definitive favorite.",
+    "window": "\"Overwhelmingly, the state said we get things done,\" Walker told his cabinet at a Wednesday afternoon meeting. Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls. But the final Marquette University Law School poll found Walker up by seven percentage points among likely voters."
+   },
+   "evidences": [
+    {
+     "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+     "source_title": "scottwalkerpolitician",
+     "supported": true,
+     "sentence": "Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls.",
+     "page": 1,
+     "snippet": "Jason Chan/The Badger Herald For much of",
+     "cosine": 0.8955,
+     "reason": "The passage states that for much of the race, Walker and his challenger were deadlocked and tied in several polls, which supports the claim that the polling was close and no candidate was a definitive favorite.",
+     "window": "\"Overwhelmingly, the state said we get things done,\" Walker told his cabinet at a Wednesday afternoon meeting. Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls. But the final Marquette University Law School poll found Walker up by seven percentage points among likely voters."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that for much of the race, Walker and his challenger were deadlocked and tied in several polls, which supports the claim that the polling was close and no candidate was a definitive favorite.",
+   "covering": {
+    "covered": [
+     {
+      "component": "polling was close",
+      "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+      "source_title": "scottwalkerpolitician",
+      "sentence": "Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls.",
+      "page": 1,
+      "snippet": "Jason Chan/The Badger Herald For much of"
+     },
+     {
+      "component": "polling was close",
+      "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+      "source_title": "scottwalkerpolitician",
+      "sentence": "(meta data) TITLE: How Scott Walker won his third governor's race in four years · The Badger Herald Scroll to Dismiss State of Wisconsin # How Scott Walker won his third governor's race in four years Polo Rocha · Nov 6, 2014 Joey Reuteman/The Badger Herald It was a neck-and-neck race for several polls, but Tuesday's midterm elections left Wisconsin Democrats devastated, once again unable to defeat Gov.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: How Scott Walker won"
+     },
+     {
+      "component": "no candidate was a definitive favorite",
+      "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+      "source_title": "scottwalkerpolitician",
+      "sentence": "Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls.",
+      "page": 1,
+      "snippet": "Jason Chan/The Badger Herald For much of"
+     },
+     {
+      "component": "no candidate was a definitive favorite",
+      "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+      "source_title": "scottwalkerpolitician",
+      "sentence": "(meta data) TITLE: How Scott Walker won his third governor's race in four years · The Badger Herald Scroll to Dismiss State of Wisconsin # How Scott Walker won his third governor's race in four years Polo Rocha · Nov 6, 2014 Joey Reuteman/The Badger Herald It was a neck-and-neck race for several polls, but Tuesday's midterm elections left Wisconsin Democrats devastated, once again unable to defeat Gov.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: How Scott Walker won"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+      "source_title": "scottwalkerpolitician",
+      "text": "(meta data) TITLE: How Scott Walker won his third governor's race in four years · The Badger Herald Scroll to Dismiss State of Wisconsin # How Scott Walker won his third governor's race in four years Polo Rocha · Nov 6, 2014 Joey Reuteman/The Badger Herald It was a neck-and-neck race for several polls, but Tuesday's midterm elections left Wisconsin Democrats devastated, once again unable to defeat Gov. Scott Walker. Republicans nearly swept every statewide office on the ballot, re-electing Walker to a second term and increasing their majorities in both chambers of the state Legislature. \"Overwhelmingly, the state said we get things done,\" Walker told his cabinet at a Wednesday afternoon meeting. Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the passage does not state that no candidate was a definitive favorite",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "no candidate was a definitive favorite",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls.",
+     "It was a neck-and-neck race for several polls"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The two shown sentences directly state that for much of the race the candidates were deadlocked and tied in several polls, which covers both components: the polling was close and neither candidate was a clear favorite. No contradictory statement appears in the source; the later mention of a final poll showing a lead does not undermine the claim about 'most of the race'."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "On a local level, the band worked with groups like the Asian Pacific American Network of Oregon to build a new community center, revitalize a neighborhood through economic prosperity initiatives, and voter registration campaigns.",
+   "markers": [
+    "theslants"
+   ],
+   "paper_ids": [
+    "78c3de28036cbbf687a7969e1d6abb2be7156cbe"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8608,
+   "evidence": {
+    "paper_id": "78c3de28036cbbf687a7969e1d6abb2be7156cbe",
+    "source_title": "theslants",
+    "supported": false,
+    "sentence": "They rarely show how the law I'm fighting impacts marginalized communities who don't have resources to file an appeal, a law that often can substantially hurt nonprofits and small businesses.",
+    "page": 1,
+    "snippet": "They rarely show how the law I'm",
+    "cosine": 0.8608,
+    "reason": "The passage discusses the broader implications of a legal case on marginalized communities and nonprofits, but it does not mention specific local initiatives like community centers, economic prosperity, or voter registration campaigns that the band was involved in.",
+    "window": "Almost everyone frames my case as if it is only about providing a pathway for Washington's football team to regain their trademark registrations. They rarely show how the law I'm fighting impacts marginalized communities who don't have resources to file an appeal, a law that often can substantially hurt nonprofits and small businesses. In our society, we're often taught that the ideal of justice means punishing the evil."
+   },
+   "evidences": [
+    {
+     "paper_id": "78c3de28036cbbf687a7969e1d6abb2be7156cbe",
+     "source_title": "theslants",
+     "supported": false,
+     "sentence": "They rarely show how the law I'm fighting impacts marginalized communities who don't have resources to file an appeal, a law that often can substantially hurt nonprofits and small businesses.",
+     "page": 1,
+     "snippet": "They rarely show how the law I'm",
+     "cosine": 0.8608,
+     "reason": "The passage discusses the broader implications of a legal case on marginalized communities and nonprofits, but it does not mention specific local initiatives like community centers, economic prosperity, or voter registration campaigns that the band was involved in.",
+     "window": "Almost everyone frames my case as if it is only about providing a pathway for Washington's football team to regain their trademark registrations. They rarely show how the law I'm fighting impacts marginalized communities who don't have resources to file an appeal, a law that often can substantially hurt nonprofits and small businesses. In our society, we're often taught that the ideal of justice means punishing the evil."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "The band worked with the Asian Pacific American Network of Oregon."
+    ],
+    "missing": [
+     "They helped build a new community center.",
+     "They helped revitalize a neighborhood through economic prosperity initiatives.",
+     "They conducted voter registration campaigns."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The band worked with the Asian Pacific American Network of Oregon.",
+      "paper_id": "78c3de28036cbbf687a7969e1d6abb2be7156cbe",
+      "source_title": "theslants",
+      "sentence": "(meta data) TITLE: A Sit Down With The Slants | APANO View Larger Image ## A Sit Down With The Slants Last week, APANO Board Member Simon Tam appeared before the US Supreme Court to present the oral arguments in the historic case, Lee vs Tam.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "the band worked with groups like the Asian Pacific American Network of Oregon to build a new community center, revitalize a neighborhood through economic prosperity initiatives, and voter registration campaigns.",
+    "reason": "The passage asserts specific actions and initiatives undertaken by the band, which are directly attributed to the cited source. This falls under the default 'full' scope as the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that the band (The Slants) worked with the Asian Pacific American Network of Oregon (APANO) on specific local initiatives: building a community center, revitalizing a neighborhood through economic prosperity initiatives, and voter registration campaigns. None of these activities are mentioned anywhere in the provided source text.",
+    "rewrite_suggestion": "Simon Tam, frontman of The Slants, participated in an interview with the Asian Pacific American Network of Oregon about his Supreme Court case.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is an interview with Simon Tam conducted by APANO, focusing entirely on his Supreme Court case and legal views. It contains no description of any local projects involving the band, such as building a community center, economic revitalization, or voter registration campaigns. Therefore, every component of the claim is absent from the source, requiring the author to either add a separate citation for those activities or rewrite the claim to match what the source actually provides."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "It was released on June 16, 2017, by Atlantic Records as the lead single from her debut studio album \"Invasion of Privacy\" (2018).",
+   "markers": [
+    "bodakyellow"
+   ],
+   "paper_ids": [
+    "4aaeb109d844e8a0604c0516f89a800dee15525e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7672,
+   "evidence": {
+    "paper_id": "4aaeb109d844e8a0604c0516f89a800dee15525e",
+    "source_title": "bodakyellow",
+    "supported": false,
+    "sentence": "cardi b, Hip-Hop music / News Cardi B Officially Signed A Deal With Atlantic Records",
+    "page": 1,
+    "snippet": "cardi b, Hip-Hop music / News Cardi",
+    "cosine": 0.7672,
+    "reason": "The passage does not mention the release date of the single or the album, nor does it state that it was the lead single.",
+    "window": "I could sell ass in a can.\" cardi b, Hip-Hop music / News Cardi B Officially Signed A Deal With Atlantic Records"
+   },
+   "evidences": [
+    {
+     "paper_id": "4aaeb109d844e8a0604c0516f89a800dee15525e",
+     "source_title": "bodakyellow",
+     "supported": false,
+     "sentence": "cardi b, Hip-Hop music / News Cardi B Officially Signed A Deal With Atlantic Records",
+     "page": 1,
+     "snippet": "cardi b, Hip-Hop music / News Cardi",
+     "cosine": 0.7672,
+     "reason": "The passage does not mention the release date of the single or the album, nor does it state that it was the lead single.",
+     "window": "I could sell ass in a can.\" cardi b, Hip-Hop music / News Cardi B Officially Signed A Deal With Atlantic Records"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "by Atlantic Records"
+    ],
+    "missing": [
+     "It was released on June 16, 2017",
+     "as the lead single from her debut studio album \"Invasion of Privacy\" (2018)"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "by Atlantic Records",
+      "paper_id": "4aaeb109d844e8a0604c0516f89a800dee15525e",
+      "source_title": "bodakyellow",
+      "sentence": "\"People really don't understand like, Atlantic signed me right?",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "It was released on June 16, 2017, by Atlantic Records as the lead single from her debut studio album \"Invasion of Privacy\" (2018).",
+    "reason": "The passage asserts specific facts (release date, record label, album) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are factual claims the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim — release date (June 16, 2017), by Atlantic Records, as lead single, from debut studio album 'Invasion of Privacy' (2018) — is unsupported by the provided source.",
+    "rewrite_suggestion": "Cardi B signed a deal with Atlantic Records in June 2017, as announced in her cover story for The FADER's Summer Music Issue.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only reports that Cardi B signed a deal with Atlantic Records in June 2017, with no mention of any single release, the date June 16, 2017, or the album 'Invasion of Privacy'. The shown sentence is a headline about the signing deal, not about a single. Therefore, all components of the claim are absent from the source, requiring the author to either add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "The front of the palace measures 355 feet (108 m) across, by 390 ft (120 m) deep, by 80 ft (24 m) high and contains over 830,000 sq ft (77,000 m) of floorspace.",
+   "markers": [
+    "buckinghampalace"
+   ],
+   "paper_ids": [
+    "4c81235dffad5b0fe688fbd787bbb16176aec37d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4c81235dffad5b0fe688fbd787bbb16176aec37d",
+    "source_title": "buckinghampalace",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high.",
+    "page": 1,
+    "snippet": "In measurements, the building is 108 metres",
+    "reason": "the passage does not state the floorspace measurement",
+    "votes": "2-0",
+    "window": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high."
+   },
+   "evidences": [
+    {
+     "paper_id": "4c81235dffad5b0fe688fbd787bbb16176aec37d",
+     "source_title": "buckinghampalace",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high.",
+     "page": 1,
+     "snippet": "In measurements, the building is 108 metres",
+     "reason": "the passage does not state the floorspace measurement",
+     "votes": "2-0",
+     "window": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state the floorspace measurement",
+   "component_check": {
+    "found": [
+     "The front of the palace measures 355 feet (108 m) across.",
+     "The palace measures 390 ft (120 m) deep.",
+     "The palace measures 80 ft (24 m) high."
+    ],
+    "missing": [
+     "The palace contains over 830,000 sq ft (77,000 m) of floorspace."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The front of the palace measures 355 feet (108 m) across.",
+      "paper_id": "4c81235dffad5b0fe688fbd787bbb16176aec37d",
+      "source_title": "buckinghampalace",
+      "sentence": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high.",
+      "page": 1
+     },
+     {
+      "component": "The palace measures 390 ft (120 m) deep.",
+      "paper_id": "4c81235dffad5b0fe688fbd787bbb16176aec37d",
+      "source_title": "buckinghampalace",
+      "sentence": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high.",
+      "page": 1
+     },
+     {
+      "component": "The palace measures 80 ft (24 m) high.",
+      "paper_id": "4c81235dffad5b0fe688fbd787bbb16176aec37d",
+      "source_title": "buckinghampalace",
+      "sentence": "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The front of the palace measures 355 feet (108 m) across, by 390 ft (120 m) deep, by 80 ft (24 m) high and contains over 830,000 sq ft (77,000 m) of floorspace.",
+    "reason": "The passage directly states factual measurements and specifications about Buckingham Palace, which are expected to be proven by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "contains over 830,000 sq ft (77,000 m) of floorspace (no such figure in the source), and the imperial-unit conversions (355 ft, 390 ft, 80 ft) are not stated in the source",
+    "rewrite_suggestion": "The front of the palace measures 108 metres across, 120 metres deep (including the central quadrangle), and 24 metres high.",
+    "proofs": [
+     "In measurements, the building is 108 metres long across the front, 120 metres deep (including the central quadrangle) and 24 metres high."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves the metric dimensions (108 m, 120 m, 24 m) but the claim also includes imperial conversions and a floorspace figure. The source does not state any floorspace value, nor does it give the imperial measurements. Therefore the floorspace and the imperial conversions are unsupported. The author must either provide a citation for the floorspace and the imperial conversions or rewrite the claim to only include the metric dimensions that the source actually provides."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "It took five years to make the film and three years to write it.",
+   "markers": [
+    "pkfilm"
+   ],
+   "paper_ids": [
+    "d4c5ab7728c1a7b5a1e7ed96995e5ead1590c5a7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d4c5ab7728c1a7b5a1e7ed96995e5ead1590c5a7",
+    "source_title": "pkfilm",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "My last film (3 Idiots) released five years back.",
+    "page": 1,
+    "snippet": "My last film (3 Idiots) released five",
+    "reason": "The passage does not mention how long it took to write the film.",
+    "votes": "2-0",
+    "window": "My last film (3 Idiots) released five years back. (meta data) TITLE: Rajkumar Hirani: I am really nervous with PK - Rediff.com movies Get Ahead Money Tips Sign in | Create a Rediffmail account Rediff.com » Movies » Rajkumar Hirani: I am really nervous with PK # Rajkumar Hirani: I am really nervous with PK Last updated on: December 15, 2014 18:02 IST Rajkumar Hirani, who rules critics' hearts as much as he rules the box office, is back after five years. If I had to look at the box office success and just earn money, then I would have made five films in the past five years. Hirani, who returns to the theatres after five years and a mega hit like 3 Idiots, sidesteps questions on the subject of PK but opens up about its making, an Inception-like project that had to be scrapped and his plans of making a biopic on Sanjay Dutt."
+   },
+   "evidences": [
+    {
+     "paper_id": "d4c5ab7728c1a7b5a1e7ed96995e5ead1590c5a7",
+     "source_title": "pkfilm",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "My last film (3 Idiots) released five years back.",
+     "page": 1,
+     "snippet": "My last film (3 Idiots) released five",
+     "reason": "The passage does not mention how long it took to write the film.",
+     "votes": "2-0",
+     "window": "My last film (3 Idiots) released five years back. (meta data) TITLE: Rajkumar Hirani: I am really nervous with PK - Rediff.com movies Get Ahead Money Tips Sign in | Create a Rediffmail account Rediff.com » Movies » Rajkumar Hirani: I am really nervous with PK # Rajkumar Hirani: I am really nervous with PK Last updated on: December 15, 2014 18:02 IST Rajkumar Hirani, who rules critics' hearts as much as he rules the box office, is back after five years. If I had to look at the box office success and just earn money, then I would have made five films in the past five years. Hirani, who returns to the theatres after five years and a mega hit like 3 Idiots, sidesteps questions on the subject of PK but opens up about its making, an Inception-like project that had to be scrapped and his plans of making a biopic on Sanjay Dutt."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention how long it took to write the film.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "It took five years to make the film and three years to write it.",
+    "reason": "The passage asserts specific facts (duration of film production and writing) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are presented as statements of fact from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that it took five years to make PK and three years to write it is entirely unsupported by the provided source text.",
+    "rewrite_suggestion": "The source does not state the production or writing time for PK, but notes that director Rajkumar Hirani's last film (3 Idiots) released five years earlier.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no mention of PK taking five years to make or three years to write. The only time-related sentence is about the director's previous film (3 Idiots) being released five years back. The shown sentence does not address the claim, and no other sentence in the source supports either component. Therefore, the author must either provide a citation that contains these specific durations or rewrite the claim to reflect what the source actually says."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "In 1979 Tom Wolfe published a less sanitized version of their story in \"The Right Stuff\".",
+   "markers": [
+    "mercuryseven"
+   ],
+   "paper_ids": [
+    "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7247,
+   "evidence": {
+    "paper_id": "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad",
+    "source_title": "mercuryseven",
+    "supported": true,
+    "sentence": "Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race.",
+    "page": 1,
+    "snippet": "Sheppard Monday, Sept. 24, 1979 Follow @TIME",
+    "cosine": 0.7247,
+    "reason": "The passage explicitly states that Tom Wolfe published 'The Right Stuff' in 1979.",
+    "window": "Sign InSubscribe # Books: Skywriting with Gus and Deke R.Z. Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race. At last."
+   },
+   "evidences": [
+    {
+     "paper_id": "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad",
+     "source_title": "mercuryseven",
+     "supported": true,
+     "sentence": "Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race.",
+     "page": 1,
+     "snippet": "Sheppard Monday, Sept. 24, 1979 Follow @TIME",
+     "cosine": 0.7247,
+     "reason": "The passage explicitly states that Tom Wolfe published 'The Right Stuff' in 1979.",
+     "window": "Sign InSubscribe # Books: Skywriting with Gus and Deke R.Z. Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race. At last."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Tom Wolfe published 'The Right Stuff' in 1979.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Tom Wolfe published \"The Right Stuff\"",
+      "paper_id": "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad",
+      "source_title": "mercuryseven",
+      "sentence": "Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race.",
+      "page": 1,
+      "snippet": "Sheppard Monday, Sept. 24, 1979 Follow @TIME"
+     },
+     {
+      "component": "publication year is 1979",
+      "paper_id": "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad",
+      "source_title": "mercuryseven",
+      "sentence": "Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race.",
+      "page": 1,
+      "snippet": "Sheppard Monday, Sept. 24, 1979 Follow @TIME"
+     }
+    ],
+    "uncovered": [
+     "version was less sanitized"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad",
+      "source_title": "mercuryseven",
+      "text": "Sheppard Monday, Sept. 24, 1979 Follow @TIME THE RIGHT STUFF by Tom Wolfe; Farrar, Straus & Giroux; 436 pages; $12.95 May 5, 1961: the day Alan Shepard scratched his back on the edge of space and America entered the manned space race.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "a less sanitized version of their story",
+    "rewrite_suggestion": "A TIME magazine review dated Sept. 24, 1979, discusses Tom Wolfe's book 'The Right Stuff'.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the source describes the book as 'a less sanitized version of their story', but the provided source text—a 1979 TIME review—contains no mention of sanitization or comparison to any other version. Additionally, the source does not explicitly state that the book was published in 1979 (the date is the review's, not the book's). Since multiple components of the claim are absent from the source, the author must either add a citation for the 'less sanitized' characterization or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "In the 1980 case \"Godfrey v. Georgia\", the U.S. Supreme Court ruled that murder can be punished by death only if it involves a narrow and precise aggravating factor.",
+   "markers": [
+    "capitalpunishmentintheun"
+   ],
+   "paper_ids": [
+    "803628c2a62488c4f3dcdc24fcda700524cdaa16"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7566,
+   "evidence": {
+    "paper_id": "803628c2a62488c4f3dcdc24fcda700524cdaa16",
+    "source_title": "capitalpunishmentintheun",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Godfrey v. Georgia :: 446 U.S. 420 (1980) :: Justia US Supreme Court Center Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law Law Schools Laws & Regs Legal Marketing Law Firm Websites Law Firm SEO Lawyer Directory Local Marketing Other Marketing Solutions # Godfrey v. Georgia, 446 U.S. 420 (1980) Audio & Media Justia Opinion Summary and Annotations Read more Opinions Audio & Media Disclaimer: Official Supreme Court case law is only found in the print version of the United States Reports.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Godfrey v. Georgia ::",
+    "cosine": 0.7566,
+    "reason": "The passage only provides the case name, citation, and year, but does not contain the ruling itself or any details about aggravating factors in capital punishment.",
+    "window": "(meta data) TITLE: Godfrey v. Georgia :: 446 U.S. 420 (1980) :: Justia US Supreme Court Center Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law Law Schools Laws & Regs Legal Marketing Law Firm Websites Law Firm SEO Lawyer Directory Local Marketing Other Marketing Solutions # Godfrey v. Georgia, 446 U.S. 420 (1980) Audio & Media Justia Opinion Summary and Annotations Read more Opinions Audio & Media Disclaimer: Official Supreme Court case law is only found in the print version of the United States Reports. Justia case law is provided for general informational purposes only, and may not reflect current legal developments, verdicts or settlements."
+   },
+   "evidences": [
+    {
+     "paper_id": "803628c2a62488c4f3dcdc24fcda700524cdaa16",
+     "source_title": "capitalpunishmentintheun",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Godfrey v. Georgia :: 446 U.S. 420 (1980) :: Justia US Supreme Court Center Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law Law Schools Laws & Regs Legal Marketing Law Firm Websites Law Firm SEO Lawyer Directory Local Marketing Other Marketing Solutions # Godfrey v. Georgia, 446 U.S. 420 (1980) Audio & Media Justia Opinion Summary and Annotations Read more Opinions Audio & Media Disclaimer: Official Supreme Court case law is only found in the print version of the United States Reports.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Godfrey v. Georgia ::",
+     "cosine": 0.7566,
+     "reason": "The passage only provides the case name, citation, and year, but does not contain the ruling itself or any details about aggravating factors in capital punishment.",
+     "window": "(meta data) TITLE: Godfrey v. Georgia :: 446 U.S. 420 (1980) :: Justia US Supreme Court Center Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law Law Schools Laws & Regs Legal Marketing Law Firm Websites Law Firm SEO Lawyer Directory Local Marketing Other Marketing Solutions # Godfrey v. Georgia, 446 U.S. 420 (1980) Audio & Media Justia Opinion Summary and Annotations Read more Opinions Audio & Media Disclaimer: Official Supreme Court case law is only found in the print version of the United States Reports. Justia case law is provided for general informational purposes only, and may not reflect current legal developments, verdicts or settlements."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "In the 1980 case \"Godfrey v. Georgia\""
+    ],
+    "missing": [
+     "the U.S. Supreme Court ruled that murder can be punished by death only if it involves a narrow and precise aggravating factor"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In the 1980 case \"Godfrey v. Georgia\"",
+      "paper_id": "803628c2a62488c4f3dcdc24fcda700524cdaa16",
+      "source_title": "capitalpunishmentintheun",
+      "sentence": "(meta data) TITLE: Godfrey v. Georgia :: 446 U.S. 420 (1980) :: Justia US Supreme Court Center Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law Law Schools Laws & Regs Legal Marketing Law Firm Websites Law Firm SEO Lawyer Directory Local Marketing Other Marketing Solutions # Godfrey v. Georgia, 446 U.S. 420 (1980) Audio & Media Justia Opinion Summary and Annotations Read more Opinions Audio & Media Disclaimer: Official Supreme Court case law is only found in the print version of the United States Reports.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In the 1980 case \"Godfrey v. Georgia\", the U.S. Supreme Court ruled that murder can be punished by death only if it involves a narrow and precise aggravating factor.",
+    "reason": "The passage directly states a legal ruling and its conditions, attributing this information to the cited source. This is a factual assertion that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the U.S. Supreme Court ruled that murder can be punished by death only if it involves a narrow and precise aggravating factor is not supported by the provided source text.",
+    "rewrite_suggestion": "Godfrey v. Georgia is a 1980 U.S. Supreme Court case.",
+    "proofs": [
+     "Godfrey v. Georgia :: 446 U.S. 420 (1980)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text consists only of metadata and disclaimers for the case Godfrey v. Georgia; it contains no substantive ruling. Therefore, the claim's core assertion about what the Court ruled is not provable from this source, while the case name and year are provable. The author must either add a proper source containing the ruling or rewrite the claim to omit the unsupported component."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "Mustaine congratulated the group respectfully, and honored his commitment to the European tour with Judas Priest.",
+   "markers": [
+    "megadeth"
+   ],
+   "paper_ids": [
+    "42c3f8233faf1212322fa7f16f82cfbb8abbb667"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "42c3f8233faf1212322fa7f16f82cfbb8abbb667",
+    "source_title": "megadeth",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Unfortunately, as you all know, I will be winding down our European tour with JUDAS PRIEST, so I will be unable to attend.",
+    "page": 1,
+    "snippet": "Unfortunately, as you all know, I will",
+    "reason": "The passage does not state that Mustaine congratulated the group respectfully or honored his commitment to the European tour with Judas Priest.",
+    "votes": "2-0",
+    "window": "Unfortunately, as you all know, I will be winding down our European tour with JUDAS PRIEST, so I will be unable to attend. So, it is with much respect that I say congratulations! \"I also had the nice surprise of hearing that they called to invite me to the pre-ceremony party the night before, and then to the actual ceremony."
+   },
+   "evidences": [
+    {
+     "paper_id": "42c3f8233faf1212322fa7f16f82cfbb8abbb667",
+     "source_title": "megadeth",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Unfortunately, as you all know, I will be winding down our European tour with JUDAS PRIEST, so I will be unable to attend.",
+     "page": 1,
+     "snippet": "Unfortunately, as you all know, I will",
+     "reason": "The passage does not state that Mustaine congratulated the group respectfully or honored his commitment to the European tour with Judas Priest.",
+     "votes": "2-0",
+     "window": "Unfortunately, as you all know, I will be winding down our European tour with JUDAS PRIEST, so I will be unable to attend. So, it is with much respect that I say congratulations! \"I also had the nice surprise of hearing that they called to invite me to the pre-ceremony party the night before, and then to the actual ceremony."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Mustaine congratulated the group respectfully or honored his commitment to the European tour with Judas Priest.",
+   "component_check": {
+    "found": [
+     "Mustaine congratulated the group respectfully"
+    ],
+    "missing": [
+     "Mustaine honored his commitment to the European tour with Judas Priest"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Mustaine congratulated the group respectfully",
+      "paper_id": "42c3f8233faf1212322fa7f16f82cfbb8abbb667",
+      "source_title": "megadeth",
+      "sentence": "So, it is with much respect that I say congratulations!",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Mustaine congratulated the group respectfully, and honored his commitment to the European tour with Judas Priest.",
+    "reason": "The passage directly states an action taken by Mustaine, implying that the cited source is expected to provide evidence for this event.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "METALLICA, as you know, has been selected to be inducted into the Rock and Roll Hall of Fame. So, it is with much respect that I say congratulations!",
+     "Unfortunately, as you all know, I will be winding down our European tour with JUDAS PRIEST, so I will be unable to attend."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool showed only the sentence about winding down the European tour, which proves the commitment component. However, the congratulation component is not shown, even though the source contains a sentence where Mustaine says 'it is with much respect that I say congratulations!' That sentence must be included to fully support the claim. Since the proof exists in the source but was not displayed, the error is on the tool's side.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t21",
+   "text": "Hetherington was killed while covering the front lines in the besieged city of Misrata, Libya, during the 2011 Libyan civil war.",
+   "markers": [
+    "timhetherington"
+   ],
+   "paper_ids": [
+    "32ccd38ce879e65fb62b3014fb76abf104ad83ea"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+    "source_title": "timhetherington",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In 2011, they were both killed while on assignment in Libya.",
+    "page": 1,
+    "snippet": "In 2011, they were both killed while",
+    "reason": "The passage does not state that Hetherington was killed while covering the front lines.",
+    "votes": "2-0",
+    "window": "In 2011, they were both killed while on assignment in Libya. Tim Hetherington/Magnum Photos On April 20, 2011, Chris Hondros and Tim Hetherington were in Misrata, Libya, in the middle of yet another war. \"Tim went on his own, and was hit with a fragment from an .81 mm mortar, the same mortar that killed Chris Hondros.\" My friend, Martin Adler, is dead. These men and women went out and put their lives out there every day because it made a difference.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+     "source_title": "timhetherington",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In 2011, they were both killed while on assignment in Libya.",
+     "page": 1,
+     "snippet": "In 2011, they were both killed while",
+     "reason": "The passage does not state that Hetherington was killed while covering the front lines.",
+     "votes": "2-0",
+     "window": "In 2011, they were both killed while on assignment in Libya. Tim Hetherington/Magnum Photos On April 20, 2011, Chris Hondros and Tim Hetherington were in Misrata, Libya, in the middle of yet another war. \"Tim went on his own, and was hit with a fragment from an .81 mm mortar, the same mortar that killed Chris Hondros.\" My friend, Martin Adler, is dead. These men and women went out and put their lives out there every day because it made a difference.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Hetherington was killed while covering the front lines.",
+   "component_check": {
+    "found": [
+     "Hetherington was killed",
+     "while covering the front lines",
+     "in the besieged city of Misrata, Libya",
+     "during the 2011 Libyan civil war"
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Hetherington was killed",
+      "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+      "source_title": "timhetherington",
+      "sentence": "\"Tim went on his own, and was hit with a fragment from an .81 mm mortar, the same mortar that killed Chris Hondros.\"",
+      "page": 1
+     },
+     {
+      "component": "while covering the front lines",
+      "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+      "source_title": "timhetherington",
+      "sentence": "Kamber said of Hondros, \"Chris was looking for the action.",
+      "page": 1
+     },
+     {
+      "component": "in the besieged city of Misrata, Libya",
+      "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+      "source_title": "timhetherington",
+      "sentence": "Tim Hetherington/Magnum Photos On April 20, 2011, Chris Hondros and Tim Hetherington were in Misrata, Libya, in the middle of yet another war.",
+      "page": 1
+     },
+     {
+      "component": "during the 2011 Libyan civil war",
+      "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+      "source_title": "timhetherington",
+      "sentence": "In 2011, they were both killed while on assignment in Libya.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Hetherington was killed while covering the front lines in the besieged city of Misrata, Libya, during the 2011 Libyan civil war.",
+    "reason": "The passage directly states a fact about the cited person's death, which the citation is expected to prove. This falls under the 'full' scope as it's a direct assertion of information from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Misrata was besieged is not supported by the source. The author must either add a citation for that fact or remove 'besieged' from the claim.",
+    "rewrite_suggestion": "Hetherington was killed while covering the front lines in the city of Misrata, Libya, during the 2011 Libyan civil war.",
+    "proofs": [
+     "On April 20, 2011, Chris Hondros and Tim Hetherington were in Misrata, Libya, in the middle of yet another war.",
+     "Tim went on his own, and was hit with a fragment from an .81 mm mortar, the same mortar that killed Chris Hondros."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that Hetherington was killed in Libya in 2011, but omits the specific location (Misrata), that he was covering front lines, and the civil war context. Additionally, the claim includes the unsupported adjective 'besieged' for Misrata, which is not mentioned anywhere in the source. Because a substantive component (besieged) is not provable from the source at all, the author must fix the claim or add a citation for that part."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Their frames can be made out of wood, metal or a combination of wood and metal.",
+   "markers": [
+    "daybed"
+   ],
+   "paper_ids": [
+    "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8337,
+   "evidence": {
+    "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+    "source_title": "daybed",
+    "supported": true,
+    "sentence": "### Material Choices Daybeds come in wood, metal, or a combination of wood and metal.",
+    "page": 1,
+    "snippet": "### Material Choices Daybeds come in wood,",
+    "cosine": 0.8337,
+    "reason": "The passage explicitly states that daybeds come in wood, metal, or a combination of wood and metal, which directly supports the claim about frame materials.",
+    "window": "The trundle effectively hides an extra bed underneath, opening up space to be used for play. ### Material Choices Daybeds come in wood, metal, or a combination of wood and metal. You can also find daybeds in wicker or upholstered in leather, although these are not as common as wood or metal."
+   },
+   "evidences": [
+    {
+     "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+     "source_title": "daybed",
+     "supported": true,
+     "sentence": "### Material Choices Daybeds come in wood, metal, or a combination of wood and metal.",
+     "page": 1,
+     "snippet": "### Material Choices Daybeds come in wood,",
+     "cosine": 0.8337,
+     "reason": "The passage explicitly states that daybeds come in wood, metal, or a combination of wood and metal, which directly supports the claim about frame materials.",
+     "window": "The trundle effectively hides an extra bed underneath, opening up space to be used for play. ### Material Choices Daybeds come in wood, metal, or a combination of wood and metal. You can also find daybeds in wicker or upholstered in leather, although these are not as common as wood or metal."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that daybeds come in wood, metal, or a combination of wood and metal, which directly supports the claim about frame materials.",
+   "covering": {
+    "covered": [
+     {
+      "component": "frames can be made out of wood",
+      "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+      "source_title": "daybed",
+      "sentence": "### Material Choices Daybeds come in wood, metal, or a combination of wood and metal.",
+      "page": 1,
+      "snippet": "### Material Choices Daybeds come in wood,"
+     },
+     {
+      "component": "frames can be made out of metal",
+      "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+      "source_title": "daybed",
+      "sentence": "### Material Choices Daybeds come in wood, metal, or a combination of wood and metal.",
+      "page": 1,
+      "snippet": "### Material Choices Daybeds come in wood,"
+     },
+     {
+      "component": "frames can be made out of a combination of wood and metal",
+      "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+      "source_title": "daybed",
+      "sentence": "### Material Choices Daybeds come in wood, metal, or a combination of wood and metal.",
+      "page": 1,
+      "snippet": "### Material Choices Daybeds come in wood,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+      "source_title": "daybed",
+      "text": "### Material Choices Daybeds come in wood, metal, or a combination of wood and metal.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t23",
+   "text": "When the dynastic struggle known as the Wars of the Roses broke out in the later fifteenth century, the Beauforts were the chief supporters of Henry VI and the House of Lancaster.",
+   "markers": [
+    "houseofbeaufort"
+   ],
+   "paper_ids": [
+    "f934e4e3f3ad7201ece6d7283c5478922cc17a55"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f934e4e3f3ad7201ece6d7283c5478922cc17a55",
+    "source_title": "houseofbeaufort",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(Photo by The Print Collector/Print Collector/Getty Images) The Wars of the Roses occurred for a myriad of reasons that have been explored in many histories, from the fallout arising from the deposition of Richard II, to the recriminations after the loss of France and divisive factional feuds which a weak king in Henry VI failed to quell.",
+    "page": 1,
+    "snippet": "(Photo by The Print Collector/Print Collector/Getty Images)",
+    "reason": "The passage states there was deep enmity between the houses of York and Beaufort, and that the conflict largely stemmed from the rivalry between their heads, not that the Beauforts were chief supporters of Henry VI.",
+    "votes": "2-0",
+    "window": "(Photo by The Print Collector/Print Collector/Getty Images) The Wars of the Roses occurred for a myriad of reasons that have been explored in many histories, from the fallout arising from the deposition of Richard II, to the recriminations after the loss of France and divisive factional feuds which a weak king in Henry VI failed to quell. Throughout the 30 years of brutal warfare, however, from the first battle at St Albans in 1455 to the iconic showdown between Richard III and Henry VII in 1485, one constant remained the driving factor throughout – the deep enmity between the houses of York and Beaufort. When Gaunt's eldest legitimate heir, Henry of Bolingbroke usurped the throne in 1399 to become Henry IV – the first Lancastrian sovereign – his Beaufort half-siblings, who had been retrospectively legitimised more than two decades after their birth, rose with him. The two most prominent figures, however, were the heads of the houses of York and Beaufort – Richard, Duke of York, and Edmund Beaufort, Duke of Somerset. On closer inspection, however, it could be argued the conflict largely stemmed from the rivalry between the heads of the houses of York and Beaufort, with Henry VI, the Lancastrian king, just a witless onlooker. When John, elevated to the dukedom of Somerset that year to rival York's status, failed to take advantage of the opportunity granted him, he returned to England and died in uncertain circumstances the following year, leaving Edmund to once again pick up the pieces."
+   },
+   "evidences": [
+    {
+     "paper_id": "f934e4e3f3ad7201ece6d7283c5478922cc17a55",
+     "source_title": "houseofbeaufort",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(Photo by The Print Collector/Print Collector/Getty Images) The Wars of the Roses occurred for a myriad of reasons that have been explored in many histories, from the fallout arising from the deposition of Richard II, to the recriminations after the loss of France and divisive factional feuds which a weak king in Henry VI failed to quell.",
+     "page": 1,
+     "snippet": "(Photo by The Print Collector/Print Collector/Getty Images)",
+     "reason": "The passage states there was deep enmity between the houses of York and Beaufort, and that the conflict largely stemmed from the rivalry between their heads, not that the Beauforts were chief supporters of Henry VI.",
+     "votes": "2-0",
+     "window": "(Photo by The Print Collector/Print Collector/Getty Images) The Wars of the Roses occurred for a myriad of reasons that have been explored in many histories, from the fallout arising from the deposition of Richard II, to the recriminations after the loss of France and divisive factional feuds which a weak king in Henry VI failed to quell. Throughout the 30 years of brutal warfare, however, from the first battle at St Albans in 1455 to the iconic showdown between Richard III and Henry VII in 1485, one constant remained the driving factor throughout – the deep enmity between the houses of York and Beaufort. When Gaunt's eldest legitimate heir, Henry of Bolingbroke usurped the throne in 1399 to become Henry IV – the first Lancastrian sovereign – his Beaufort half-siblings, who had been retrospectively legitimised more than two decades after their birth, rose with him. The two most prominent figures, however, were the heads of the houses of York and Beaufort – Richard, Duke of York, and Edmund Beaufort, Duke of Somerset. On closer inspection, however, it could be argued the conflict largely stemmed from the rivalry between the heads of the houses of York and Beaufort, with Henry VI, the Lancastrian king, just a witless onlooker. When John, elevated to the dukedom of Somerset that year to rival York's status, failed to take advantage of the opportunity granted him, he returned to England and died in uncertain circumstances the following year, leaving Edmund to once again pick up the pieces."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states there was deep enmity between the houses of York and Beaufort, and that the conflict largely stemmed from the rivalry between their heads, not that the Beauforts were chief supporters of Henry VI.",
+   "component_check": {
+    "found": [
+     "The dynastic struggle known as the Wars of the Roses broke out in the later fifteenth century."
+    ],
+    "missing": [
+     "The Beauforts were the chief supporters of Henry VI.",
+     "The Beauforts were the chief supporters of the House of Lancaster."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The dynastic struggle known as the Wars of the Roses broke out in the later fifteenth century.",
+      "paper_id": "f934e4e3f3ad7201ece6d7283c5478922cc17a55",
+      "source_title": "houseofbeaufort",
+      "sentence": "Nathen Amin examines the relationships and rivalries between key figures of the two houses… November 27, 2017 at 2:13 pm The 15th-century civil war known as the Wars of the Roses is rightly regarded as one of the most complex and unquestionably captivating periods in European history.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "the Beauforts were the chief supporters of Henry VI and the House of Lancaster when the Wars of the Roses broke out in the later fifteenth century.",
+    "reason": "The passage directly attributes a historical fact to the cited source, stating that the Beauforts were chief supporters during a specific period. This falls under the 'full' scope as the citation is expected to prove this historical assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Starting with the very first skirmish, fought fiercely through the narrow streets of St Albans on 22 May 1455",
+     "the man who had replaced Suffolk as the king's second-in-command: Edmund Beaufort.",
+     "as the royal household approached St Albans fronted by the king and his Beaufort right-hand"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool showed a sentence about the general causes of the Wars of the Roses that does not address the Beauforts' role or the timing. The source text, however, contains sentences that directly prove both components: it establishes the outbreak date (St Albans, 22 May 1455) and identifies Edmund Beaufort as the king's second-in-command and 'Beaufort right-hand,' confirming the Beauforts were the chief supporters of Henry VI and the Lancastrian cause. These correct sentences exist in the source but were not shown by the tool.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t24",
+   "text": "On March 1, 2017 Powell was named as one of three potential applicants to fill the vacant Supreme Court seat, the other two applicants being Judge Lisa White Hardwick and attorney Benjamin A. Lipman.",
+   "markers": [
+    "wbrentpowell"
+   ],
+   "paper_ids": [
+    "1322fccbae33bcf27a99490b3108b27bd8bfc086"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1322fccbae33bcf27a99490b3108b27bd8bfc086",
+    "source_title": "wbrentpowell",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman.",
+    "page": 1,
+    "snippet": "Eric Greitens will choose between Judge Lisa",
+    "reason": "The passage does not mention the date March 1, 2017.",
+    "votes": "2-0",
+    "window": "Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman."
+   },
+   "evidences": [
+    {
+     "paper_id": "1322fccbae33bcf27a99490b3108b27bd8bfc086",
+     "source_title": "wbrentpowell",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman.",
+     "page": 1,
+     "snippet": "Eric Greitens will choose between Judge Lisa",
+     "reason": "The passage does not mention the date March 1, 2017.",
+     "votes": "2-0",
+     "window": "Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the date March 1, 2017.",
+   "component_check": {
+    "found": [
+     "the other two applicants being Judge Lisa White Hardwick and attorney Benjamin A. Lipman"
+    ],
+    "missing": [
+     "On March 1, 2017 Powell was named as one of three potential applicants to fill the vacant Supreme Court seat"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "the other two applicants being Judge Lisa White Hardwick and attorney Benjamin A. Lipman",
+      "paper_id": "1322fccbae33bcf27a99490b3108b27bd8bfc086",
+      "source_title": "wbrentpowell",
+      "sentence": "Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Powell was named as one of three potential applicants to fill the vacant Supreme Court seat on March 1, 2017.",
+    "reason": "The passage states a specific fact (Powell's nomination date and context) that is directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove this factual assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "By Travis Zimpfer on March 2, 2017",
+     "The seven-person Appellate Judicial Commission narrowed the list of applicants to take over the empty seat on the Missouri Supreme Court bench from 31 down to three Wednesday evening.",
+     "Gov. Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence correctly lists the three nominees and identifies Powell as one of them, but it omits the date component 'On March 1, 2017'. The source text provides the date through the article's publication date (March 2, 2017) and the detail that the commission narrowed the list 'Wednesday evening', which together establish that the event occurred on March 1, 2017. Since the proof exists in the source but is not included in the shown sentences, the tool must display these additional sentences to fully support the claim.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t25",
+   "text": "She received a Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series nomination.",
+   "markers": [
+    "katewinslet"
+   ],
+   "paper_ids": [
+    "b6ecd25f174315cedbe9fea728e18aff2a5e3a69"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+    "source_title": "katewinslet",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Outstanding Guest Actress In A Comedy Series - 2006 Kate Winslet, as HerselfExtras BBC and HBO Entertainment",
+    "page": null,
+    "snippet": "Outstanding Guest Actress In A Comedy Series",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Outstanding Guest Actress In A Comedy Series - 2006 Kate Winslet, as HerselfExtras BBC and HBO Entertainment"
+   },
+   "evidences": [
+    {
+     "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+     "source_title": "katewinslet",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Outstanding Guest Actress In A Comedy Series - 2006 Kate Winslet, as HerselfExtras BBC and HBO Entertainment",
+     "page": null,
+     "snippet": "Outstanding Guest Actress In A Comedy Series",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Outstanding Guest Actress In A Comedy Series - 2006 Kate Winslet, as HerselfExtras BBC and HBO Entertainment"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Primetime Emmy Award nomination for Outstanding Guest Actress in a Comedy Series",
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "sentence": "Outstanding Guest Actress In A Comedy Series - 2006 Kate Winslet, as HerselfExtras BBC and HBO Entertainment",
+      "page": null,
+      "snippet": "Outstanding Guest Actress In A Comedy Series"
+     },
+     {
+      "component": "Primetime Emmy Award nomination for Outstanding Guest Actress in a Comedy Series",
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "sentence": "### Outstanding Guest Actress In A Comedy Series - 2006",
+      "page": 1,
+      "snippet": "### Outstanding Guest Actress In A Comedy"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "text": "### Outstanding Guest Actress In A Comedy Series - 2006",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t26",
+   "text": "Swift announced in February 2014 that she was working again with Max Martin and Shellback, with whom she had collaborated on three songs for \"Red\".",
+   "markers": [
+    "styletaylorswiftsong"
+   ],
+   "paper_ids": [
+    "5c962ae70b522b5bede9f13929a95d611598bc60"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+    "source_title": "styletaylorswiftsong",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"On 'Red' I did three songs with Max Martin and Shellback - 'We Are Never Ever Getting Back Together,' 'I Knew You Were Trouble' and '22.'",
+    "page": 1,
+    "snippet": "\"On 'Red' I did three songs with",
+    "reason": "The passage does not mention Swift announcing in February 2014 that she was working again with Max Martin and Shellback.",
+    "votes": "2-0",
+    "window": "\"On 'Red' I did three songs with Max Martin and Shellback - 'We Are Never Ever Getting Back Together,' 'I Knew You Were Trouble' and '22.' I think we'll be doing a lot more than three songs together on the next album.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+     "source_title": "styletaylorswiftsong",
+     "sentence": "February 5th, 2014 12:58 PM ET",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+     "source_title": "styletaylorswiftsong",
+     "sentence": "On 'Red' I did three songs with Max Martin and Shellback - 'We Are Never Ever Getting Back Together,' 'I Knew You Were Trouble' and '22.' I think we'll be doing a lot more than three songs together on the next album.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Taylor Swift announced in February 2014 that she was working again with Max Martin and Shellback, with whom she had collaborated on three songs for 'Red'. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "She had collaborated with Max Martin and Shellback on three songs for \"Red\""
+    ],
+    "missing": [
+     "Swift announced in February 2014 that she was working again with Max Martin and Shellback"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "She had collaborated with Max Martin and Shellback on three songs for \"Red\"",
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "sentence": "\"On 'Red' I did three songs with Max Martin and Shellback - 'We Are Never Ever Getting Back Together,' 'I Knew You Were Trouble' and '22.'",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "February 5th, 2014 12:58 PM ET",
+     "On 'Red' I did three songs with Max Martin and Shellback - 'We Are Never Ever Getting Back Together,' 'I Knew You Were Trouble' and '22.' I think we'll be doing a lot more than three songs together on the next album."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim's component 'announced in February 2014' is provable from the source (the article is dated February 5, 2014), but the tool's shown sentence does not include that date. The other components are fully proven by the shown sentence. Since the proof exists in the source but is not among the shown sentences, the tool must fix by including the date line from the source. Hence the outcome is wrong_or_insufficient_evidence.",
+    "rescued": true
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "b6ecd25f174315cedbe9fea728e18aff2a5e3a69": {
+    "title": "katewinslet",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4aaeb109d844e8a0604c0516f89a800dee15525e": {
+    "title": "bodakyellow",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb": {
+    "title": "daybed",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4c81235dffad5b0fe688fbd787bbb16176aec37d": {
+    "title": "buckinghampalace",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f934e4e3f3ad7201ece6d7283c5478922cc17a55": {
+    "title": "houseofbeaufort",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "cc69a2f8b6fc7391c6c45c0ecd8b8fbabc372042": {
+    "title": "supremecourtofmyanmar",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "803628c2a62488c4f3dcdc24fcda700524cdaa16": {
+    "title": "capitalpunishmentintheun",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "42256be9d85fd3e523f2029457fe59a97d6c3fe3": {
+    "title": "adrianpartington",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "514f02018307e3fddbf9b7002148d7a5e8ee7cf7": {
+    "title": "africancemeteryno2lexing",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "63f279fdab8498039491e02132f6e7282d3312c8": {
+    "title": "scottwalkerpolitician",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "32ccd38ce879e65fb62b3014fb76abf104ad83ea": {
+    "title": "timhetherington",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1322fccbae33bcf27a99490b3108b27bd8bfc086": {
+    "title": "wbrentpowell",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5c962ae70b522b5bede9f13929a95d611598bc60": {
+    "title": "styletaylorswiftsong",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1c2e33d6c205976b1c2cb4952e07a31288a2d704": {
+    "title": "georgewashingtonsteeth",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d4c5ab7728c1a7b5a1e7ed96995e5ead1590c5a7": {
+    "title": "pkfilm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "78c3de28036cbbf687a7969e1d6abb2be7156cbe": {
+    "title": "theslants",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "78192900e37bf58673346f85c0a91088d28fc5b7": {
+    "title": "krispykremeoperationsbyc",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f132badac6d18bd23ec67b7c2db38783f86778c5": {
+    "title": "theadventuresoftintin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4cbe90c6bcb52641e334c939df67ff95715cba88": {
+    "title": "aliceinchains",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "42c3f8233faf1212322fa7f16f82cfbb8abbb667": {
+    "title": "megadeth",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "29942b183ea12fa4230efd0a2f316e2dcf2fdbd3": {
+    "title": "ladyandthetramp2019film",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bdcee8c2f629c33c1b3d9b66858cea51a62018e9": {
+    "title": "joshuareynolds",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad": {
+    "title": "mercuryseven",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "489ad031fcd852adb7bab4ac30c58a535ae1b58b": {
+    "title": "sanjosesanfranciscooakla",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "de1f17bb4a2ced3cb3374a419c8d473f753cf7b4": {
+    "title": "jameschenactor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8c0e9437bbcc1835894b49f6760bf84ad259495e": {
+    "title": "richardjevans",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 9,
+   "unsupported": 17,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 21:16:40",
+  "marker_errors": [],
+  "processing_time_seconds": 263.7,
+  "source_hashes": {
+   "theadventuresoftintin.txt": "b24ca6b59e3ced543ed1c6fecc6bfc39e39ca7fe",
+   "jameschenactor.txt": "c243a3a8552ffac18809af2fdb4fdfb6108cb143",
+   "sanjosesanfranciscooakla.txt": "a8944dc434cd893447ee0b71b594b1ca62e2ec0a",
+   "supremecourtofmyanmar.txt": "65e3fecd44da5e5c02b7bd1d08eb674e8dce2468",
+   "ladyandthetramp2019film.txt": "8477ff2fca9dd546db8c117388ede22db596d6a2",
+   "krispykremeoperationsbyc.txt": "7ec3fe7db94abe113569e15736b958633a04166c",
+   "adrianpartington.txt": "64de6f30dfeee17be1467aa6322fa5ae98f1d6ac",
+   "africancemeteryno2lexing.txt": "58137a25bb8de319a1b4317d0f61f4da577afa89",
+   "richardjevans.txt": "8873c2f56fc02e5b57af0ee21c47d65ddb57b878",
+   "aliceinchains.txt": "a3879d09737368d3d0ee52a398ce5a891232e6ec",
+   "georgewashingtonsteeth.txt": "a4816bc35401eba9e25ed037df8a938ff4cc1380",
+   "joshuareynolds.txt": "8f329ecbe51eae328750639ccaf055fefdfee3b0",
+   "scottwalkerpolitician.txt": "553db831390ca6d451242f0e2d634cd64bfa1e10",
+   "theslants.txt": "040ff3afa85e38c230fab9f460ddf71e03b29a93",
+   "bodakyellow.txt": "cf5bd618e366842485149ff982e2a9f402bd36a3",
+   "buckinghampalace.txt": "d4f32272fdbc8f5db1d5762ab39db9f69a738776",
+   "pkfilm.txt": "fefa4a031e60bd5696b4d476cb9d676baa8c1473",
+   "mercuryseven.txt": "914142cf9504b02eed7f24570061a0c979d3ff8a",
+   "capitalpunishmentintheun.txt": "57308f381f308c5ed7902142586a3a4dfd487ce9",
+   "megadeth.txt": "8bb0d4f7357a48132a0a159416bff16b32ddfc16",
+   "timhetherington.txt": "1d765a4f9c26b1b3696ff8946c705ca25125af24",
+   "daybed.txt": "89ac62b9309bd79a3f4564c90e5238d8e7f64e78",
+   "houseofbeaufort.txt": "7f2b3c9a5f50b6cc145960ebfc9337533be3f88f",
+   "wbrentpowell.txt": "26fea2adc3021a3ce9d16142b7e3ecb5786b29f2",
+   "katewinslet.txt": "a9f25a77c43a808c14aa55870dcee3f8562f330e",
+   "styletaylorswiftsong.txt": "db1e9a3ceaec7d3d541070c5788c9f32883748d3"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 400,
+    "prompt_tokens": 388732,
+    "completion_tokens": 18466,
+    "cost_usd": 0.04627
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 26,
+    "prompt_tokens": 70508,
+    "completion_tokens": 58139,
+    "cost_usd": 0.020934
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 18,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 21,
+   "actions": {
+    "add_citation_or_rewrite": 16,
+    "supported": 1,
+    "wrong_or_insufficient_evidence": 4
+   },
+   "proof_may_exist": [
+    "t20",
+    "t23",
+    "t24",
+    "t26"
+   ],
+   "conflicts": [],
+   "rescued": [
+    "t26"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "f132badac6d18bd23ec67b7c2db38783f86778c5",
+   "key": "theadventuresoftintin",
+   "filename": "theadventuresoftintin.txt",
+   "title": "theadventuresoftintin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "de1f17bb4a2ced3cb3374a419c8d473f753cf7b4",
+   "key": "jameschenactor",
+   "filename": "jameschenactor.txt",
+   "title": "jameschenactor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "489ad031fcd852adb7bab4ac30c58a535ae1b58b",
+   "key": "sanjosesanfranciscooakla",
+   "filename": "sanjosesanfranciscooakla.txt",
+   "title": "sanjosesanfranciscooakla",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cc69a2f8b6fc7391c6c45c0ecd8b8fbabc372042",
+   "key": "supremecourtofmyanmar",
+   "filename": "supremecourtofmyanmar.txt",
+   "title": "supremecourtofmyanmar",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "29942b183ea12fa4230efd0a2f316e2dcf2fdbd3",
+   "key": "ladyandthetramp2019film",
+   "filename": "ladyandthetramp2019film.txt",
+   "title": "ladyandthetramp2019film",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "78192900e37bf58673346f85c0a91088d28fc5b7",
+   "key": "krispykremeoperationsbyc",
+   "filename": "krispykremeoperationsbyc.txt",
+   "title": "krispykremeoperationsbyc",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "42256be9d85fd3e523f2029457fe59a97d6c3fe3",
+   "key": "adrianpartington",
+   "filename": "adrianpartington.txt",
+   "title": "adrianpartington",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "514f02018307e3fddbf9b7002148d7a5e8ee7cf7",
+   "key": "africancemeteryno2lexing",
+   "filename": "africancemeteryno2lexing.txt",
+   "title": "africancemeteryno2lexing",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8c0e9437bbcc1835894b49f6760bf84ad259495e",
+   "key": "richardjevans",
+   "filename": "richardjevans.txt",
+   "title": "richardjevans",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+   "key": "aliceinchains",
+   "filename": "aliceinchains.txt",
+   "title": "aliceinchains",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1c2e33d6c205976b1c2cb4952e07a31288a2d704",
+   "key": "georgewashingtonsteeth",
+   "filename": "georgewashingtonsteeth.txt",
+   "title": "georgewashingtonsteeth",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bdcee8c2f629c33c1b3d9b66858cea51a62018e9",
+   "key": "joshuareynolds",
+   "filename": "joshuareynolds.txt",
+   "title": "joshuareynolds",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "63f279fdab8498039491e02132f6e7282d3312c8",
+   "key": "scottwalkerpolitician",
+   "filename": "scottwalkerpolitician.txt",
+   "title": "scottwalkerpolitician",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "78c3de28036cbbf687a7969e1d6abb2be7156cbe",
+   "key": "theslants",
+   "filename": "theslants.txt",
+   "title": "theslants",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4aaeb109d844e8a0604c0516f89a800dee15525e",
+   "key": "bodakyellow",
+   "filename": "bodakyellow.txt",
+   "title": "bodakyellow",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4c81235dffad5b0fe688fbd787bbb16176aec37d",
+   "key": "buckinghampalace",
+   "filename": "buckinghampalace.txt",
+   "title": "buckinghampalace",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d4c5ab7728c1a7b5a1e7ed96995e5ead1590c5a7",
+   "key": "pkfilm",
+   "filename": "pkfilm.txt",
+   "title": "pkfilm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9bd048a3bd10f7700cd28d95c9d606eb7cdf8bad",
+   "key": "mercuryseven",
+   "filename": "mercuryseven.txt",
+   "title": "mercuryseven",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "803628c2a62488c4f3dcdc24fcda700524cdaa16",
+   "key": "capitalpunishmentintheun",
+   "filename": "capitalpunishmentintheun.txt",
+   "title": "capitalpunishmentintheun",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "42c3f8233faf1212322fa7f16f82cfbb8abbb667",
+   "key": "megadeth",
+   "filename": "megadeth.txt",
+   "title": "megadeth",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "32ccd38ce879e65fb62b3014fb76abf104ad83ea",
+   "key": "timhetherington",
+   "filename": "timhetherington.txt",
+   "title": "timhetherington",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5fe6240d9a04f7a69d11f180de7dadd67b0b24fb",
+   "key": "daybed",
+   "filename": "daybed.txt",
+   "title": "daybed",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f934e4e3f3ad7201ece6d7283c5478922cc17a55",
+   "key": "houseofbeaufort",
+   "filename": "houseofbeaufort.txt",
+   "title": "houseofbeaufort",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1322fccbae33bcf27a99490b3108b27bd8bfc086",
+   "key": "wbrentpowell",
+   "filename": "wbrentpowell.txt",
+   "title": "wbrentpowell",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+   "key": "katewinslet",
+   "filename": "katewinslet.txt",
+   "title": "katewinslet",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+   "key": "styletaylorswiftsong",
+   "filename": "styletaylorswiftsong.txt",
+   "title": "styletaylorswiftsong",
+   "num_claims": 0
+  }
+ ]
+}

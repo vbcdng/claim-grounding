@@ -1,0 +1,48 @@
+verdict-level agreement: 26/26 (100%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported           26
+
+arbiter-adjudicated agreement: 17/26 (65%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported           17
+  not_supported          -> partially_supported      9   <-- disagreement
+adjudication flips: 9
+  - malaria                    not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - californiastateuniversit   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - pentimalsystem             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - wheredoesthisdoorgo        not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - tokipona                   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - 7rings                     not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - positivism                 not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - stanleyfischer             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - nowshahr                   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 26 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  OK  malaria                    wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  californiastateuniversit   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  royallondonhospital        wice=not_supported          tool=not_supported          
+  OK  codetermination            wice=not_supported          tool=not_supported          
+  OK  unconditionalcashtransfe   wice=not_supported          tool=not_supported          
+  OK  2017selangorfaseason       wice=not_supported          tool=not_supported          
+  OK  pentimalsystem             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  wheredoesthisdoorgo        wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  hemabenacharya             wice=not_supported          tool=not_supported          
+  OK  fulham                     wice=not_supported          tool=not_supported          
+  OK  tokipona                   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  corriesanders              wice=not_supported          tool=not_supported          
+  OK  7rings                     wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  positivism                 wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  batman1989film             wice=not_supported          tool=not_supported          
+  OK  llantrisant                wice=not_supported          tool=not_supported          
+  OK  stanleyfischer             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  nowshahr                   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  worldwarii                 wice=not_supported          tool=not_supported          
+  OK  jacyntagalabadaarachchi    wice=not_supported          tool=not_supported          
+  OK  haroldjbrubaker            wice=not_supported          tool=not_supported          
+  OK  amaliearena                wice=not_supported          tool=not_supported          
+  OK  spacestation13             wice=not_supported          tool=not_supported          
+  OK  counseloreducation         wice=not_supported          tool=not_supported          
+  OK  medicalscientisttraining   wice=not_supported          tool=not_supported          
+  OK  johnsalvi                  wice=not_supported          tool=not_supported          

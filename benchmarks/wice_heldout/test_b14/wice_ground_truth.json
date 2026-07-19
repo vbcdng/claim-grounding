@@ -1,0 +1,516 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 14,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "williamsharney": {
+   "wice_id": "test04475",
+   "split_index": 338,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     31
+    ],
+    [
+     31,
+     32
+    ],
+    [
+     0,
+     1,
+     31
+    ],
+    [
+     0,
+     1,
+     31,
+     32
+    ]
+   ],
+   "n_source_sentences": 106
+  },
+  "abydoshellespont": {
+   "wice_id": "test02919",
+   "split_index": 339,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     398,
+     459
+    ],
+    [
+     201,
+     556
+    ],
+    [
+     0,
+     8,
+     398
+    ],
+    [
+     2,
+     10,
+     398
+    ]
+   ],
+   "n_source_sentences": 594
+  },
+  "hallamfc": {
+   "wice_id": "test03717",
+   "split_index": 340,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     24,
+     25
+    ]
+   ],
+   "n_source_sentences": 63
+  },
+  "2018challengetour": {
+   "wice_id": "test02178",
+   "split_index": 341,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     20,
+     24
+    ],
+    [
+     20,
+     22,
+     24
+    ]
+   ],
+   "n_source_sentences": 106
+  },
+  "albertasocialcreditparty": {
+   "wice_id": "test02462",
+   "split_index": 342,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9
+    ],
+    [
+     0,
+     9
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "n_source_sentences": 74
+  },
+  "technologicaluniversityd": {
+   "wice_id": "test02574",
+   "split_index": 343,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13
+    ],
+    [
+     3,
+     7,
+     13
+    ]
+   ],
+   "n_source_sentences": 68
+  },
+  "garfieldstationctagreenl": {
+   "wice_id": "test01084",
+   "split_index": 344,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4,
+     7
+    ],
+    [
+     2,
+     3,
+     4,
+     7
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "andymoeller": {
+   "wice_id": "test04469",
+   "split_index": 345,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     15
+    ]
+   ],
+   "n_source_sentences": 44
+  },
+  "dailyhive": {
+   "wice_id": "test03920",
+   "split_index": 346,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     27
+    ],
+    [
+     22,
+     27
+    ],
+    [
+     19,
+     21
+    ]
+   ],
+   "n_source_sentences": 105
+  },
+  "mariewilcox": {
+   "wice_id": "test04305",
+   "split_index": 347,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13
+    ]
+   ],
+   "n_source_sentences": 41
+  },
+  "jackkeane": {
+   "wice_id": "test04024",
+   "split_index": 348,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     25
+    ]
+   ],
+   "n_source_sentences": 30
+  },
+  "theinsideofthecup": {
+   "wice_id": "test04394",
+   "split_index": 349,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     596
+    ],
+    [
+     563,
+     596
+    ]
+   ],
+   "n_source_sentences": 664
+  },
+  "sunflowerstudentmovement": {
+   "wice_id": "test02845",
+   "split_index": 350,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9,
+     12,
+     13
+    ],
+    [
+     9,
+     10,
+     12
+    ],
+    [
+     10,
+     12,
+     13
+    ],
+    [
+     9,
+     10,
+     12,
+     13
+    ],
+    [
+     8,
+     9,
+     12,
+     13
+    ],
+    [
+     10,
+     11,
+     12,
+     13
+    ],
+    [
+     9,
+     10,
+     11,
+     12
+    ],
+    [
+     8,
+     9,
+     10,
+     12
+    ],
+    [
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    [
+     8,
+     9,
+     10,
+     12,
+     13
+    ]
+   ],
+   "n_source_sentences": 45
+  },
+  "jeansimmons": {
+   "wice_id": "test00737",
+   "split_index": 351,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     31
+    ],
+    [
+     31,
+     32
+    ],
+    [
+     18,
+     25,
+     31
+    ]
+   ],
+   "n_source_sentences": 48
+  },
+  "borisbecker": {
+   "wice_id": "test01578",
+   "split_index": 352,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0,
+     49
+    ],
+    [
+     39,
+     49
+    ],
+    [
+     0,
+     49,
+     67
+    ],
+    [
+     0,
+     42,
+     49
+    ],
+    [
+     2,
+     42,
+     49
+    ],
+    [
+     39,
+     42,
+     49
+    ],
+    [
+     39,
+     49,
+     67
+    ],
+    [
+     0,
+     2,
+     49
+    ],
+    [
+     0,
+     2,
+     49,
+     67
+    ],
+    [
+     2,
+     42,
+     49,
+     67
+    ],
+    [
+     2,
+     39,
+     42,
+     49
+    ],
+    [
+     0,
+     2,
+     42,
+     49
+    ],
+    [
+     2,
+     39,
+     42,
+     49,
+     67
+    ]
+   ],
+   "n_source_sentences": 136
+  },
+  "cymricsaskatchewan": {
+   "wice_id": "test00780",
+   "split_index": 353,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34
+    ],
+    [
+     23,
+     34
+    ],
+    [
+     11,
+     33,
+     34
+    ]
+   ],
+   "n_source_sentences": 48
+  },
+  "makeitrightbtssong": {
+   "wice_id": "test01032",
+   "split_index": 354,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     26
+    ],
+    [
+     23,
+     24,
+     25,
+     26
+    ],
+    [
+     8,
+     9,
+     10,
+     26
+    ],
+    [
+     8,
+     9,
+     10,
+     23,
+     24,
+     25,
+     26
+    ]
+   ],
+   "n_source_sentences": 83
+  },
+  "williamherbertplanter": {
+   "wice_id": "test03525",
+   "split_index": 355,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     50
+    ],
+    [
+     44,
+     50
+    ],
+    [
+     49,
+     50
+    ]
+   ],
+   "n_source_sentences": 85
+  },
+  "toystory4": {
+   "wice_id": "test03362",
+   "split_index": 356,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     10,
+     11
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     9,
+     10,
+     11
+    ],
+    [
+     7,
+     10,
+     11
+    ],
+    [
+     7,
+     8,
+     9,
+     11
+    ],
+    [
+     7,
+     8,
+     10,
+     11
+    ]
+   ],
+   "n_source_sentences": 47
+  },
+  "conan2007videogame": {
+   "wice_id": "test02326",
+   "split_index": 357,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13,
+     14
+    ]
+   ],
+   "n_source_sentences": 34
+  }
+ }
+}

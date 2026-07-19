@@ -1,0 +1,18 @@
+You are helping a writer fix one claim in their article. The claim cites a source, but the source does not fully support it as written.
+
+THE WRITER'S CLAIM:
+{CLAIM}
+
+WHAT THE CITED SOURCE(S) ACTUALLY SAY (verbatim passages):
+{PASSAGES}
+
+Rewrite the claim so that every assertion in it is fully supported by the passages above.
+Rules:
+- This is a minimal repair, not a new sentence: keep as much of the writer's original wording, intent, and style as possible.
+- Weaken or remove ONLY the specific numbers, qualifiers, or assertions the passages do not back. Prefer precise hedges ("about", "roughly", "the report suggests") over vague ones.
+- Do not add any fact that is not in the passages.
+- If the passages contradict the claim's core point, rewrite it to state what the source actually supports.
+- Keep any [[key]] citation markers exactly where they are.
+
+Return ONLY a JSON object:
+{"rewritten": "<the fixed claim text>", "changes": "<one sentence: what you changed and why>"}

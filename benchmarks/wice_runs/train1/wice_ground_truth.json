@@ -1,0 +1,484 @@
+{
+ "split": "train",
+ "batch": 1,
+ "seed": 7,
+ "claims": {
+  "listofhellonwheelsepisod": {
+   "wice_id": "train27931",
+   "split_index": 971,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34
+    ],
+    [
+     23
+    ]
+   ],
+   "n_source_sentences": 165
+  },
+  "panzerdragooniizwei": {
+   "wice_id": "train04933",
+   "split_index": 194,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 279
+  },
+  "sukhoisu25": {
+   "wice_id": "train32782",
+   "split_index": 1167,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     36,
+     52,
+     167
+    ],
+    [
+     35,
+     36,
+     52
+    ],
+    [
+     22,
+     24,
+     25,
+     35
+    ],
+    [
+     22,
+     24,
+     25,
+     167
+    ]
+   ],
+   "n_source_sentences": 261
+  },
+  "rocketleague": {
+   "wice_id": "train16402",
+   "split_index": 600,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     2,
+     9,
+     22
+    ],
+    [
+     11,
+     19,
+     20,
+     22
+    ],
+    [
+     2,
+     9,
+     19,
+     22
+    ],
+    [
+     0,
+     2,
+     19,
+     22
+    ],
+    [
+     2,
+     11,
+     19,
+     20,
+     22
+    ],
+    [
+     2,
+     9,
+     19,
+     20,
+     22
+    ],
+    [
+     0,
+     2,
+     19,
+     20,
+     22
+    ],
+    [
+     0,
+     2,
+     11,
+     19,
+     20,
+     22
+    ],
+    [
+     2,
+     9,
+     11,
+     19,
+     20,
+     22
+    ]
+   ],
+   "n_source_sentences": 41
+  },
+  "ckjs": {
+   "wice_id": "train16830",
+   "split_index": 988,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     19,
+     33
+    ],
+    [
+     11,
+     19,
+     33
+    ],
+    [
+     11,
+     19,
+     33
+    ]
+   ],
+   "n_source_sentences": 71
+  },
+  "christianporter": {
+   "wice_id": "train48791",
+   "split_index": 1230,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     56,
+     57
+    ]
+   ],
+   "n_source_sentences": 60
+  },
+  "harpenden": {
+   "wice_id": "train00258",
+   "split_index": 1208,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 30
+  },
+  "rachelcawthorn": {
+   "wice_id": "train20676",
+   "split_index": 969,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0,
+     40,
+     41,
+     46
+    ],
+    [
+     0,
+     40,
+     41,
+     46,
+     49
+    ],
+    [
+     0,
+     40,
+     46,
+     61,
+     63,
+     65
+    ],
+    [
+     0,
+     46,
+     49,
+     61,
+     63,
+     65
+    ]
+   ],
+   "n_source_sentences": 78
+  },
+  "thelegendofzeldaoracleof": {
+   "wice_id": "train11548",
+   "split_index": 895,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 140
+  },
+  "tianatolstoi": {
+   "wice_id": "train18872",
+   "split_index": 361,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     6
+    ]
+   ],
+   "n_source_sentences": 52
+  },
+  "andysdiner": {
+   "wice_id": "train43787",
+   "split_index": 273,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0,
+     14,
+     18
+    ],
+    [
+     0,
+     14,
+     18,
+     19,
+     23,
+     25
+    ]
+   ],
+   "n_source_sentences": 28
+  },
+  "farq": {
+   "wice_id": "train45370",
+   "split_index": 175,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     0,
+     38,
+     39
+    ],
+    [
+     37,
+     38,
+     39
+    ],
+    [
+     0,
+     37,
+     38,
+     39
+    ]
+   ],
+   "n_source_sentences": 51
+  },
+  "johncharlesnorman": {
+   "wice_id": "train36662",
+   "split_index": 1083,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0,
+     28,
+     32,
+     37
+    ],
+    [
+     28,
+     32,
+     39,
+     40
+    ]
+   ],
+   "n_source_sentences": 90
+  },
+  "gameofthronesseason7": {
+   "wice_id": "train43001",
+   "split_index": 183,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     26
+    ]
+   ],
+   "n_source_sentences": 33
+  },
+  "tromarama": {
+   "wice_id": "train27765",
+   "split_index": 900,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     8,
+     9,
+     11
+    ]
+   ],
+   "n_source_sentences": 53
+  },
+  "mattmooney": {
+   "wice_id": "train09422",
+   "split_index": 531,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     8,
+     9,
+     17
+    ],
+    [
+     4,
+     17,
+     24,
+     25
+    ]
+   ],
+   "n_source_sentences": 47
+  },
+  "campbellnewman": {
+   "wice_id": "train04771",
+   "split_index": 156,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34
+    ]
+   ],
+   "n_source_sentences": 78
+  },
+  "germanyintheeurovisionso": {
+   "wice_id": "train38048",
+   "split_index": 505,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "n_source_sentences": 40
+  },
+  "lgbtemploymentdiscrimina": {
+   "wice_id": "train11177",
+   "split_index": 254,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     16,
+     36
+    ],
+    [
+     4,
+     36
+    ],
+    [
+     5,
+     36
+    ]
+   ],
+   "n_source_sentences": 76
+  },
+  "foxc6schooldistrict": {
+   "wice_id": "train23845",
+   "split_index": 1186,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 35
+  },
+  "hammurabihumanrightsorga": {
+   "wice_id": "train44276",
+   "split_index": 338,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     6
+    ]
+   ],
+   "n_source_sentences": 14
+  },
+  "glenbowmuseum": {
+   "wice_id": "train01458",
+   "split_index": 315,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     6,
+     7
+    ]
+   ],
+   "n_source_sentences": 42
+  },
+  "alwaysrememberusthisway": {
+   "wice_id": "train01927",
+   "split_index": 915,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 109
+  },
+  "rodneyackland": {
+   "wice_id": "train38245",
+   "split_index": 1175,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     18,
+     20,
+     22,
+     43
+    ],
+    [
+     18,
+     20,
+     22,
+     24,
+     46
+    ],
+    [
+     18,
+     20,
+     22,
+     24,
+     42,
+     43
+    ],
+    [
+     18,
+     20,
+     22,
+     24,
+     42,
+     46
+    ]
+   ],
+   "n_source_sentences": 48
+  },
+  "dorianapigliapoco": {
+   "wice_id": "train07171",
+   "split_index": 244,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     48,
+     49
+    ],
+    [
+     0,
+     48,
+     49
+    ]
+   ],
+   "n_source_sentences": 190
+  }
+ }
+}

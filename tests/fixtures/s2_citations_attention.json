@@ -1,0 +1,550 @@
+{
+ "offset": 0,
+ "next": 12,
+ "data": [
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "a6aaf42c4e753a5d036627a60237ffeb22226879",
+    "externalIds": {
+     "DOI": "10.1016/j.engappai.2026.115379",
+     "CorpusId": 289255722
+    },
+    "title": "State-of-health estimation of lithium-ion batteries based on probabilistic diffusion models and self-learning dynamic channel attention assisted extended long short-term memory",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.engappai.2026.115379?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.engappai.2026.115379, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2265278976",
+      "name": "Jianguo Miao"
+     },
+     {
+      "authorId": "2341287926",
+      "name": "Jilong Xie"
+     },
+     {
+      "authorId": "2192588791",
+      "name": "Miao Huang"
+     },
+     {
+      "authorId": "2022264417",
+      "name": "Wensheng Ma"
+     },
+     {
+      "authorId": "2294908081",
+      "name": "Zhaofei Li"
+     },
+     {
+      "authorId": "2244307092",
+      "name": "Changhao Piao"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "d502acb8ea278cd8fceb71da4ec7b5c601b1c57e",
+    "externalIds": {
+     "DOI": "10.1016/j.engappai.2026.115501",
+     "CorpusId": 289538176
+    },
+    "title": "Multi-branch molecular feature fusion for molecular property prediction",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.engappai.2026.115501?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.engappai.2026.115501, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2389897078",
+      "name": "Chaobin Sun"
+     },
+     {
+      "authorId": "2297729411",
+      "name": "Na Li"
+     },
+     {
+      "authorId": "2408766140",
+      "name": "Kairui Lyu"
+     },
+     {
+      "authorId": "2329178255",
+      "name": "Zihe Liu"
+     },
+     {
+      "authorId": "2363680950",
+      "name": "Junwei Du"
+     },
+     {
+      "authorId": "2299173127",
+      "name": "Zhuo Chen"
+     },
+     {
+      "authorId": "2287773560",
+      "name": "Bin Yu"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "6b106ed1eb9973633bc844839b562ef9b4f379fb",
+    "externalIds": {
+     "DOI": "10.1016/j.engappai.2026.115521",
+     "CorpusId": 289721888
+    },
+    "title": "Flow-accelerated diffusion model for trajectory generation and optimization in offline reinforcement learning",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.engappai.2026.115521?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.engappai.2026.115521, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2191332605",
+      "name": "He Diao"
+     },
+     {
+      "authorId": "2180426141",
+      "name": "Shan Zhong"
+     },
+     {
+      "authorId": "2446306654",
+      "name": "Xianglin Chen"
+     },
+     {
+      "authorId": "2397496134",
+      "name": "Ping Zhang"
+     },
+     {
+      "authorId": "2004167875",
+      "name": "Zhenyu Feng"
+     },
+     {
+      "authorId": "2054590443",
+      "name": "Bei Peng"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "3b9617c340b80bb920db6c4c176b85421940d437",
+    "externalIds": {
+     "DOI": "10.1016/j.jgsce.2026.205970",
+     "CorpusId": 289729752
+    },
+    "title": "A unified workflow for pore structure and flow analysis using deep learning and REV constraints",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.jgsce.2026.205970?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.jgsce.2026.205970, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2274915467",
+      "name": "Zhazha Hu"
+     },
+     {
+      "authorId": "2446319370",
+      "name": "Xun Zhang"
+     },
+     {
+      "authorId": "2397175077",
+      "name": "L. Xu"
+     },
+     {
+      "authorId": "2324061081",
+      "name": "Wenbing Guo"
+     },
+     {
+      "authorId": "2274816994",
+      "name": "Linxian Gong"
+     },
+     {
+      "authorId": "2274882045",
+      "name": "Norbert Klitzsch"
+     },
+     {
+      "authorId": "2446306580",
+      "name": "Guoyan Li"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "0af4b505041f77ec1f10b0e8e538696faf11f83a",
+    "externalIds": {
+     "DOI": "10.1016/j.engappai.2026.115452",
+     "CorpusId": 289738402
+    },
+    "title": "Spatiotemporal graph-based surrogate modeling and deep reinforcement learning for multi-layer injection-production decision in waterflood reservoirs",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.engappai.2026.115452?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.engappai.2026.115452, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2363152587",
+      "name": "Shifang Zhang"
+     },
+     {
+      "authorId": "2238180758",
+      "name": "Hu Huang"
+     },
+     {
+      "authorId": "2376833164",
+      "name": "Lei Wang"
+     },
+     {
+      "authorId": "2330611145",
+      "name": "Bin Gong"
+     },
+     {
+      "authorId": "2446101838",
+      "name": "Deli Jia"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "59109220719a09ef2256cd828b2880d313e0b347",
+    "externalIds": {
+     "DOI": "10.1016/j.asoc.2026.115822",
+     "CorpusId": 289752705
+    },
+    "title": "Multivariable temporal-frequency reconstruction model with two-stage decomposition and explainable AI-driven feature selection for highly volatile time-series forecasting",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.asoc.2026.115822?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.asoc.2026.115822, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2346551744",
+      "name": "Maohuan Wang"
+     },
+     {
+      "authorId": "2292423755",
+      "name": "Jie Xu"
+     },
+     {
+      "authorId": "2284916539",
+      "name": "Lei Sun"
+     },
+     {
+      "authorId": "2257852720",
+      "name": "Tao Zhang"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "9676465293c28faad465ec92bb6fc5a84f69063e",
+    "externalIds": {
+     "DOI": "10.1016/j.neucom.2026.134391",
+     "CorpusId": 289763713
+    },
+    "title": "Continuous state evolution with token purification for visual tracking",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.neucom.2026.134391?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.neucom.2026.134391, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2380432511",
+      "name": "Xianxin Jia"
+     },
+     {
+      "authorId": "2153615463",
+      "name": "Zhiqiang Hou"
+     },
+     {
+      "authorId": "2446517040",
+      "name": "Nating Du"
+     },
+     {
+      "authorId": "2377693146",
+      "name": "Hao Yue"
+     },
+     {
+      "authorId": "2252987347",
+      "name": "Hao Cui"
+     },
+     {
+      "authorId": "38998702",
+      "name": "Sugang Ma"
+     },
+     {
+      "authorId": null,
+      "name": "Yang Liu"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "ba9532e4b62cfc41ca2e6b6df7169fcd6c4ec929",
+    "externalIds": {
+     "DOI": "10.1016/j.asoc.2026.115866",
+     "CorpusId": 289764425
+    },
+    "title": "Solving the capacitated vehicle routing problem via a collaborative adaptive fusion transformer",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.asoc.2026.115866?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.asoc.2026.115866, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2377797082",
+      "name": "Zhong-zhi Yang"
+     },
+     {
+      "authorId": "2446876085",
+      "name": "Junqing Li"
+     },
+     {
+      "authorId": "2447409546",
+      "name": "Yanan Wang"
+     },
+     {
+      "authorId": "2446717161",
+      "name": "Hui Zhang"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "0fdbb919913105e8bac2e9dd12a1a6d7300c521a",
+    "externalIds": {
+     "DOI": "10.1016/j.neucom.2026.134394",
+     "CorpusId": 289773066
+    },
+    "title": "Dynamic feature arbitration and synergistic attention for high-fidelity brain MRI super-resolution",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.neucom.2026.134394?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.neucom.2026.134394, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2259782452",
+      "name": "Yu Zhang"
+     },
+     {
+      "authorId": "2118637478",
+      "name": "Yu Fu"
+     },
+     {
+      "authorId": "13723482",
+      "name": "Weihao Zheng"
+     },
+     {
+      "authorId": null,
+      "name": "Xia Liu"
+     },
+     {
+      "authorId": "47845830",
+      "name": "Zhijun Yao"
+     },
+     {
+      "authorId": "1406241620",
+      "name": "Bin Hu"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "12f30137bd10265913fdb9cff75bc48ad9ea5120",
+    "externalIds": {
+     "DOI": "10.1016/j.engappai.2026.115567",
+     "CorpusId": 289778861
+    },
+    "title": "When transformers obey physics: A physics-guided transformer with symbolic regression for real time monitoring of flowing bottom-hole pressure",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.engappai.2026.115567?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.engappai.2026.115567, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "93210896",
+      "name": "C. Adenutsi"
+     },
+     {
+      "authorId": "2446604122",
+      "name": "Nii Sowah Laryea-Adjei"
+     },
+     {
+      "authorId": "2405688614",
+      "name": "Tahiru Abdul-Mumin"
+     },
+     {
+      "authorId": "94067013",
+      "name": "K. Sarkodie"
+     },
+     {
+      "authorId": "2273447390",
+      "name": "Samuel Erzuah"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "981d19ef5769648fd42ba865cbceeaa949c36bb3",
+    "externalIds": {
+     "DOI": "10.1016/j.neucom.2026.134382",
+     "CorpusId": 289783500
+    },
+    "title": "HFAT-HMR: Empowering ViT for human mesh recovery via high-frequency enhancement and auxiliary tokens",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.neucom.2026.134382?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.neucom.2026.134382, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": null,
+      "name": "Jinming Zhang"
+     },
+     {
+      "authorId": null,
+      "name": "Yingjie Chen"
+     },
+     {
+      "authorId": "2293610506",
+      "name": "Linlin Yang"
+     },
+     {
+      "authorId": "2279212268",
+      "name": "Boshu Jia"
+     },
+     {
+      "authorId": "2446880756",
+      "name": "Fang Liu"
+     },
+     {
+      "authorId": "2335120680",
+      "name": "Baochang Zhang"
+     },
+     {
+      "authorId": "2338476623",
+      "name": "Xiaoyu Wu"
+     },
+     {
+      "authorId": "2187952343",
+      "name": "Libiao Jin"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citingPaper": {
+    "paperId": "3a41bcf8503fbf26cdba70d3f094928929c4da5c",
+    "externalIds": {
+     "DOI": "10.1016/j.engappai.2026.115492",
+     "CorpusId": 289787477
+    },
+    "title": "Enhancing fairness in energy efficiency and peak age of information in low earth orbit-aided unmanned aerial vehicle-integrated sensing and communication networks: Attention-aided multi-agent proximal policy optimization approach",
+    "year": 2026,
+    "citationCount": 0,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.engappai.2026.115492?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.engappai.2026.115492, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2034284665",
+      "name": "Kimchheang Chhea"
+     },
+     {
+      "authorId": null,
+      "name": "Jung-Ryun Lee"
+     }
+    ],
+    "abstract": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+Source URL: https://link.springer.com/article/10.1007/s10450-020-00263-y
+Downloaded: 2025-07-05 10:54:25
+
+---
+
+The use of clay minerals for the decontamination of liquid radioactive waste generated during the work of nuclear energy enterprises remains currently relevant. The effect of the surface hydration of a montmorillonite nanocrystal on the adsorption of cesium and strontium ions from dilute solutions was studied. As opposed to the generally accepted mechanism of the adsorption of cesium and strontium ions on active sites of clay mineral crystals, we considered the adsorption of radiocesium and radiostrontium by montmorillonite taking into account its colloidal chemical properties. When montmorillonite nanocrystals interact with water, a double electric layer with a mobile diffuse ionic atmosphere forms on the surface of the solid phase. The adsorption of cesium and strontium ions from dilute aqueous solutions confines itself to ion-exchange reactions of cesium and strontium ions of a dispersion medium with exchange cations of the diffuse ionic atmosphere of montmorillonite. Enhanced adsorption of cesium ions compared with strontium ions was explained by low charge density on the outer shell of cesium ions and the ability of cesium ions to overcome the diffuse ionic atmosphere easily and to be fixed firmly on the outer surface of the montmorillonite nanocrystal.
+This is a preview of subscription content,
+log in via an institution
+to check access.
+Access this article
+Log in via an institution
+Subscribe and save
+Get 10 units per month
+Download Article/Chapter or eBook
+1 Unit = 1 Article or 1 Chapter
+Price includes VAT (Czech Republic)
+Instant access to the full article PDF.
+Similar content being viewed by others
+Local structure of strontium adsorbed on 2:1 clay minerals and its comparison with cesium by XAFS in terms of migration of their radioisotopes in the environment
+05 May 2018
+A comparative study on the Cs adsorption/desorption and structural changes in different clay minerals
+12 March 2024
+Atomistic Computer Modeling of Hydrocalumite As an Adsorbent for Radioactive Anions from Aqueous Solutions
+01 April 2022
+Explore related subjects
+Discover the latest articles and news from researchers in related subjects, suggested using machine learning.
+Low- and highly-charged ions
+Araki, Y., Satoh, H., Okumura, M., Onishi, H.: Localization of cesium on montmorillonite surface investigated by frequency modulation atomic force microscopy. Surf. Sci.
+, 32–36 (2017)
+Bergaya, F., Theng, B.K.G., Lagaly, G. (eds.): Handbook of clay science. Developments of clay science, vol. 1. Elsevier, Amsterdam (2006)
+Brix, K., Hein, C., Haben, A., Kautenburger, R.: Adsorption of caesium on raw Ca-bentonite in high saline solutions: influence of concentration, mineral composition, other radionuclides and modelling. Appl. Clay Sci.
+, 105275 (2019).
+Erten, H.N., Aksoyoglu, S., Hatipoglu, S., Göktürk, H.: Sorption of cesium and strontium on montmorillonite and kaolinite. Radiochim. Acta.
+, 147–151 (1988)
+Fuller, A.J., Shaw, S., Ward, M.B., Haigh, S.J., Mosselmans, F.W., Peacock, C.L., Stackhouse, S., Dent, A.J., Trivedig, D., Burke, I.T.: Cesium incorporation and retention in illite interlayers. Appl. Clay Sci.
+, 128–134 (2015)
+García-García, S., Wold, S., Jonsson, M.: Effects of temperature on the stability of colloidal montmorillonite particles at different pH and ionic strength. Appl. Clay Sci.
+, 21–26 (2009)
+Khan, S.A., Riaz-ur-Rehman Khan, M.A.: Sorption of cesium on bentonite. Waste Manage
+, 629–642 (1994)
+Kim, Y., Cygan, R.T., Kirkpatrick, R.J.:
+Cs NMR and XPS investigation of cesium adsorbed on clay minerals and related phases. Geochem. Cosmochim. Acta
+, 1041–1052 (1996a)
+Kim, Y., Kirkpatrick, R.J., Cygan, R.T.:
+Cs NMR study of cesium on the surfaces of kaolinite and illite. Geochem. Cosmochim. Acta
+, 4059–4074 (1996b)
+Kosakowski, G., Churakov, S., Thoenen, T.: Diffusion of Na and Cs in montmorillonite. Clay Clay Miner.
+, 190–206 (2008)
+Lee, S., Fenter, P., Nagy, K., Sturchio, N.: Monovalent ion adsorption at the muscovite (001)–solution interface: relationships among ion coverage and speciation, interfacial water structure, and substrate relaxation. Langmuir
+, 8637–8650 (2012)
+Lee, S., Fenter, P., Nagy, K., Sturchio, N.: Changes in adsorption free energy and speciation during competitive adsorption between monovalent cations at the muscovite (001)–water interface. Geochem. Cosmochim. Acta
+, 416–426 (2013)
+Lee, S., Fenter, P., Nagy, K., Sturchio, N.: Real–time observation of cation exchange kinetics and dynamics at the muscovite–water interface. Nat. Commun.
+, 15826 (2017)
+Liu, X., Tian, R., Du, W., Li, R., Li, H.: A theory to determine the surface potentials of clay particles in electrolyte solutions. Appl. Clay Sci.
+, 112–119 (2019)
+Marry, V., Turq, P., Cartailler, T., Levesque, D.: Microscopic simulation of structure and dynamics of water and counterions in a monohydrated montmorillonite. J. Chem. Phys.
+, 3454–3463 (2002)
+McKinley, J.P., Zachara, J.M., Heald, S.M., Dohnalkova, A., Newville, M.G., Sutton, S.R.: Microscale distribution of cesium sorbed to biotite and muscovite. Environ. Sci. Technol.
+, 1017–1023 (2004)
+Mirkin, L.I.: Handbook on X-ray structural analysis of polycrystals. State Publishing House of Physical and Mathematical Literature, Moscow (1961).
+Missana, T., Garcautirrez, M., Benedicto, A., Ayora, C.: Modelling of Cs sorption in natural mixed-clays and the effects of ion competition. Appl. Geochem.
+, 95–102 (2014)
+Ning, Z., Ishiguro, M., Koopal, L.K., Sato, T., Kashiwagi, J.: Strontium adsorption and penetration in kaolinite at low Sr
+concentration. Soil Sci. Plant Nutr.
+, 14–17 (2017)
+Okumura, M., Kerisit, S., Bourg, I.C., Lammers, L.N., Ikeda, T., Sassi, M., Rosso, K.M., Machida, M.: Radiocesium interaction with clay minerals: theory and simulation advances Post-Fukushima. J. Environ. Radioact.
+, 135–145 (2018)
+Oscarson, D.W., Watson, R.L., Miller, H.G.: The interaction of trace levels of cesium with montmorillonitic and illitic clays. Appl. Clay Sci.
+, 29–39 (1987)
+Pintea, S., de Poel, W., de Jong, A.E.F., Vonk, V., van der Asdonk, P., Drnec, J., Balmes, O., Isern, H., Dufrane, T., Felici, R., Vlieg, E.: Solid–liquid interface structure of muscovite mica in CsCl and RbBr solutions. Langmuir
+, 12955–12965 (2016)
+Qiu, L., Scott, K., Rousseau, S.: Kinetic and equilibrium studies of Cs(I), Sr(II) and Eu(III) adsorption on a natural sandy soil. Radiochim. Acta.
+, 55–66 (2018)
+Rajec, P., Sucha, V., Eberl, D.D., Srodon, J., Elsass, F.: Effect of illite particle shape on cesium sorption. Clay Clay Miner.
+, 755–760 (1999)
+Rotenberg, B., Morel, J.-P., Marry, V., Turq, P., Morel-Desrosiers, N.: On the driving force of cation exchange in clays: insights from combined microcalorimetry experiments and molecular simulation. Geochem. Cosmochim. Acta.
+, 4034–4044 (2009)
+Semenkova, A.S., Evsiunina, M.V., Verma, P.K., Mohapatra, P.K., Petrov, V.G., Seregina, I.F., Bolshov, M.A., Krupskaya, V.V., Romanchuk, A.Y., Kalmykov, S.N.: Cs+ sorption onto Kutch clays: influence of competing ions. Appl. Clay Sci.
+, 88–93 (2018)
+Siroux, B., Beaucaire, C., Tabarant, M., Benedetti, M.F., Reiller, P.E.: Adsorption of strontium and cesium onto an Na-MX80 bentonite: experiments and building of a coherent thermodynamic modeling. Appl. Geochem.
+, 167–175 (2009)
+Tsujimoto, Y., Chassagne, C., Adachi, Y.: Comparison between the electrokinetic properties of kaolinite and montmorillonite suspensions. J. Colloid Int. Sci.
+, 109–115 (2013)
+Wu, J., Li, B., Liao, J., Feng, Y., Zhang, D., Zhao, J., Wen, W., Yang, Y., Liu, N.: Behavior and analysis of Cesium adsorption on montmorillonite mineral. J. Environ. Radioact.
+, 914–920 (2009)
+Yu, S., Mei, H., Chen, X., Tan, X., Ahmad, B., Alsaedi, A., Hayat, T., Wang, X.: Impact of environmental conditions on the sorption behavior of radionuclide
+Sr(II) on Na-montmorillonite. J. Mol. Liq.
+, 39–46 (2015)
+Authors and Affiliations
+State Institution “The Institute of Environmental Geochemistry of National Academy of Sciences of Ukraine”, 34a, Palladin Avenue, Kyiv, 03680, Ukraine
+Yuriy Zabulonov, Vadym Kadoshnikov, Halyna Zadvernyuk, Tetyana Melnychenko & Valeriy Molochko
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+View author publications
+Search author on:
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Rights and permissions
+Reprints and permissions
+About this article
+Cite this article
+Zabulonov, Y., Kadoshnikov, V., Zadvernyuk, H.
+Effect of the surface hydration of clay minerals on the adsorption of cesium and strontium from dilute solutions.
+, 41–48 (2021). https://doi.org/10.1007/s10450-020-00263-y
+28 March 2020
+21 August 2020
+02 September 2020
+12 September 2020
+Share this article
+Anyone you share the following link with will be able to read this content:
+Sorry, a shareable link is not currently available for this article.
+Provided by the Springer Nature SharedIt content-sharing initiative

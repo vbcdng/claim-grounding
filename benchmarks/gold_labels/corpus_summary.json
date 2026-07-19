@@ -1,0 +1,48 @@
+{
+  "n": 236,
+  "by_fable_verdict": {
+    "supported": 43,
+    "partial": 86,
+    "unsupported": 71,
+    "not_rulable": 23,
+    "own_interpretation": 4,
+    "true_claim_weak_evidence": 2,
+    "partial_by_shown_evidence": 2,
+    "verdict_ok_evidence_junk": 1,
+    "verdict_ok_evidence_offset": 1,
+    "supported_minor_caveat": 1,
+    "partial_weak": 1,
+    "own_argument": 1
+  },
+  "by_effective_verdict": {
+    "supported": 34,
+    "partial": 80,
+    "unsupported": 83,
+    "not_rulable": 27,
+    "own_interpretation": 3,
+    "true_claim_weak_evidence": 2,
+    "partial_by_shown_evidence": 2,
+    "verdict_ok_evidence_junk": 1,
+    "verdict_ok_evidence_offset": 1,
+    "supported_minor_caveat": 1,
+    "partial_weak": 1,
+    "own_argument": 1
+  },
+  "by_agreement": {
+    "agree": 113,
+    "disagree": 79,
+    "agree_reclassify": 26,
+    "n/a": 5,
+    "flag": 9,
+    "partial": 1,
+    "partial_disagree": 1,
+    "agree_but_flag_retrieval": 1,
+    "agree_lean_weaker": 1
+  },
+  "owner_graded": 37,
+  "owner_flips": 24,
+  "undercredit": 58,
+  "oversupport": 6,
+  "false_support_rows": 9,
+  "disagree": 0
+}

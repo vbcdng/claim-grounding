@@ -1,0 +1,13 @@
+{
+  "description": "Gate v2 ground truth — bohemia_no_emperor (loop round 3). Distilled 2026-07-11: grader (Opus) + Fable (grader_fable_pos t4 + the 2026-07-11 pass, data/gate_v2/fable_r3.json) + owner rulings. Gate runs a FRESH verify of data/loop_rounds/round_3/project into a scratch dir.",
+  "claims": [
+    {"id": "t0", "kind": "watch",
+     "note": "interpretive thesis ('owed less to weakness than to constitutional status') — Fable+grader author-fix + owner verdict_wrong all want the amber, but the covering call names the thesis as a component only in SOME runs (the r3-t0 flake, LOOP_ROUND_5_PLAN residual). Promote to must_flag [owed less to weakness / constitutional] when component naming is reliable"},
+    {"id": "t3", "kind": "must_flag",
+     "flag_terms": ["wealthiest"],
+     "note": "'wealthiest prince in the empire' — a specific historical ranking no cited source states; Fable+grader+owner agree; current code ambers it reliably"},
+    {"id": "t4", "kind": "must_flag",
+     "flag_terms": ["weak crown", "resist a stronger successor"],
+     "note": "the weak-crown generalization is the author's — Fable + owner ruled it (round-3 Opus was looser and the owner sided with Fable; grader-v2 worked example)"}
+  ]
+}

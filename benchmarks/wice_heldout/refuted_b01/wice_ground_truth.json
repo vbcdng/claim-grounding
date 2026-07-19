@@ -1,0 +1,249 @@
+{
+ "split": "train",
+ "mode": "heldout_all",
+ "batch": 1,
+ "label_filter": "not_supported",
+ "exclude_used": true,
+ "claims": {
+  "wtmartin": {
+   "wice_id": "train17534",
+   "split_index": 5,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 129
+  },
+  "angmey": {
+   "wice_id": "train23256",
+   "split_index": 19,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 260
+  },
+  "randallpark": {
+   "wice_id": "train22222",
+   "split_index": 36,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 300
+  },
+  "listofunproducedmarvelco": {
+   "wice_id": "train09501",
+   "split_index": 39,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 111
+  },
+  "2015unitedkingdomgeneral": {
+   "wice_id": "train07357",
+   "split_index": 66,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 449
+  },
+  "splashh": {
+   "wice_id": "train14703",
+   "split_index": 77,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 138
+  },
+  "davidgardinerpolitician": {
+   "wice_id": "train01274",
+   "split_index": 89,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 96
+  },
+  "2018texaselections": {
+   "wice_id": "train39382",
+   "split_index": 93,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 289
+  },
+  "leepeltier": {
+   "wice_id": "train38428",
+   "split_index": 98,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 223
+  },
+  "aireuropa": {
+   "wice_id": "train29919",
+   "split_index": 99,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 372
+  },
+  "mitre10cup": {
+   "wice_id": "train02861",
+   "split_index": 102,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 134
+  },
+  "chriscapuano": {
+   "wice_id": "train30625",
+   "split_index": 104,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 65
+  },
+  "pimax": {
+   "wice_id": "train49566",
+   "split_index": 106,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 191
+  },
+  "tempovideogame": {
+   "wice_id": "train48860",
+   "split_index": 112,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 106
+  },
+  "andymcnab": {
+   "wice_id": "train20243",
+   "split_index": 119,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 307
+  },
+  "rosamundbartlett": {
+   "wice_id": "train06162",
+   "split_index": 123,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 65
+  },
+  "shoheioka": {
+   "wice_id": "train45992",
+   "split_index": 130,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     78
+    ]
+   ],
+   "n_source_sentences": 5631
+  },
+  "songsofournativedaughter": {
+   "wice_id": "train01934",
+   "split_index": 139,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 202
+  },
+  "johnfcookjr": {
+   "wice_id": "train34619",
+   "split_index": 148,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 49
+  },
+  "universityoftechnologysy": {
+   "wice_id": "train05574",
+   "split_index": 158,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 65
+  },
+  "pachinko": {
+   "wice_id": "train28157",
+   "split_index": 159,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 57
+  },
+  "democraticleftalliance": {
+   "wice_id": "train10375",
+   "split_index": 164,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 1231
+  },
+  "mohammedfahadalharthi": {
+   "wice_id": "train28924",
+   "split_index": 167,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 58
+  },
+  "effectsofhurricaneandrew": {
+   "wice_id": "train01993",
+   "split_index": 195,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 63
+  },
+  "stphanesparagna": {
+   "wice_id": "train31852",
+   "split_index": 204,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 290
+  },
+  "indianhospital": {
+   "wice_id": "train27584",
+   "split_index": 218,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     42
+    ]
+   ],
+   "n_source_sentences": 284
+  }
+ }
+}

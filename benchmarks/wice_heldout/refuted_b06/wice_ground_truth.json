@@ -1,0 +1,228 @@
+{
+ "split": "train",
+ "mode": "heldout_all",
+ "batch": 6,
+ "label_filter": "not_supported",
+ "exclude_used": true,
+ "claims": {
+  "byronbaynewsouthwales": {
+   "wice_id": "train06985",
+   "split_index": 1052,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 43
+  },
+  "201819uefachampionsleagu": {
+   "wice_id": "train39941",
+   "split_index": 1066,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 50
+  },
+  "uclauscrivalry": {
+   "wice_id": "train14096",
+   "split_index": 1067,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 63
+  },
+  "kisskasket": {
+   "wice_id": "train47884",
+   "split_index": 1078,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 90
+  },
+  "istanbulsofiaexpress": {
+   "wice_id": "train38279",
+   "split_index": 1099,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 60
+  },
+  "emotioncarlyraejepsenalb": {
+   "wice_id": "train15251",
+   "split_index": 1115,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 37
+  },
+  "katarzynalubnauer": {
+   "wice_id": "train20322",
+   "split_index": 1136,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 291
+  },
+  "linworthalternativeprogr": {
+   "wice_id": "train39503",
+   "split_index": 1137,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 41
+  },
+  "sandrasemchuk": {
+   "wice_id": "train25481",
+   "split_index": 1149,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 159
+  },
+  "stateprotectiongroup": {
+   "wice_id": "train34352",
+   "split_index": 1151,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 73
+  },
+  "listofintellivisiongames": {
+   "wice_id": "train24758",
+   "split_index": 1172,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 79
+  },
+  "vikingsseason5": {
+   "wice_id": "train03663",
+   "split_index": 1178,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 372
+  },
+  "jameswnicholson": {
+   "wice_id": "train31442",
+   "split_index": 1183,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 64
+  },
+  "bhagalpurjunctionrailway": {
+   "wice_id": "train05804",
+   "split_index": 1190,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 67
+  },
+  "unmannedcombatarmedrotor": {
+   "wice_id": "train34822",
+   "split_index": 1193,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 544
+  },
+  "juliapimsleur": {
+   "wice_id": "train25703",
+   "split_index": 1197,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 38
+  },
+  "thummalanageswararao": {
+   "wice_id": "train23510",
+   "split_index": 1198,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 153
+  },
+  "mrpeabodysapples": {
+   "wice_id": "train06929",
+   "split_index": 1199,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 109
+  },
+  "wjmstarkie": {
+   "wice_id": "train19148",
+   "split_index": 1203,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     118
+    ]
+   ],
+   "n_source_sentences": 146
+  },
+  "carteretministry": {
+   "wice_id": "train44017",
+   "split_index": 1217,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 371
+  },
+  "kautostar": {
+   "wice_id": "train02440",
+   "split_index": 1228,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 288
+  },
+  "winrocktowncenter": {
+   "wice_id": "train02018",
+   "split_index": 1246,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 45
+  },
+  "fashioninstituteoftechno": {
+   "wice_id": "train44955",
+   "split_index": 1254,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 56
+  },
+  "mobiledonating": {
+   "wice_id": "train33901",
+   "split_index": 1259,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 50
+  }
+ }
+}

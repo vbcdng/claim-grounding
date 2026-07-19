@@ -1,0 +1,439 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 3,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "listofanthraxmembers": {
+   "wice_id": "test03437",
+   "split_index": 52,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "n_source_sentences": 77
+  },
+  "mineolastationlirr": {
+   "wice_id": "test01425",
+   "split_index": 53,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4,
+     14
+    ],
+    [
+     6,
+     14,
+     16
+    ],
+    [
+     4,
+     12,
+     14
+    ],
+    [
+     4,
+     13,
+     14
+    ],
+    [
+     4,
+     6,
+     14
+    ]
+   ],
+   "n_source_sentences": 88
+  },
+  "ramiran": {
+   "wice_id": "test04456",
+   "split_index": 54,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     36,
+     37
+    ],
+    [
+     36,
+     37,
+     39
+    ],
+    [
+     28,
+     36,
+     37,
+     38
+    ]
+   ],
+   "n_source_sentences": 62
+  },
+  "mygenerationalbum": {
+   "wice_id": "test04455",
+   "split_index": 55,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     38,
+     62,
+     63,
+     210
+    ]
+   ],
+   "n_source_sentences": 217
+  },
+  "natashamozgovaya": {
+   "wice_id": "test01146",
+   "split_index": 56,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     68,
+     69
+    ]
+   ],
+   "n_source_sentences": 145
+  },
+  "sportscarclubofamerica": {
+   "wice_id": "test00883",
+   "split_index": 57,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9,
+     10
+    ],
+    [
+     4,
+     9,
+     10
+    ],
+    [
+     5,
+     9,
+     10
+    ]
+   ],
+   "n_source_sentences": 90
+  },
+  "fayettevillemarksmen": {
+   "wice_id": "test02428",
+   "split_index": 58,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     8,
+     11
+    ]
+   ],
+   "n_source_sentences": 23
+  },
+  "pierrehuguesherbert": {
+   "wice_id": "test00965",
+   "split_index": 59,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     49,
+     50
+    ],
+    [
+     1,
+     49,
+     50
+    ],
+    [
+     1,
+     49,
+     50
+    ],
+    [
+     38,
+     39,
+     49,
+     50
+    ],
+    [
+     1,
+     38,
+     39,
+     49,
+     50
+    ]
+   ],
+   "n_source_sentences": 117
+  },
+  "angelamissoni": {
+   "wice_id": "test01741",
+   "split_index": 60,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13
+    ],
+    [
+     12,
+     13
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     10,
+     12,
+     13
+    ]
+   ],
+   "n_source_sentences": 27
+  },
+  "trenchmagazine": {
+   "wice_id": "test03132",
+   "split_index": 61,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9
+    ]
+   ],
+   "n_source_sentences": 41
+  },
+  "trophycountermeasure": {
+   "wice_id": "test03098",
+   "split_index": 62,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     5,
+     9,
+     10,
+     35,
+     43
+    ]
+   ],
+   "n_source_sentences": 68
+  },
+  "jjwatt": {
+   "wice_id": "test02288",
+   "split_index": 63,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     19,
+     20
+    ],
+    [
+     13,
+     19,
+     20
+    ]
+   ],
+   "n_source_sentences": 53
+  },
+  "hoodieszn": {
+   "wice_id": "test01201",
+   "split_index": 64,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     10
+    ],
+    [
+     9,
+     10
+    ]
+   ],
+   "n_source_sentences": 28
+  },
+  "kylieminogue": {
+   "wice_id": "test02770",
+   "split_index": 65,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     3,
+     4,
+     8
+    ]
+   ],
+   "n_source_sentences": 35
+  },
+  "pakistanisinafghanistan": {
+   "wice_id": "test03759",
+   "split_index": 66,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     28
+    ],
+    [
+     27,
+     28
+    ],
+    [
+     33,
+     34
+    ]
+   ],
+   "n_source_sentences": 103
+  },
+  "keyentertainer": {
+   "wice_id": "test03723",
+   "split_index": 67,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     38,
+     41,
+     43
+    ]
+   ],
+   "n_source_sentences": 55
+  },
+  "parkyeeun": {
+   "wice_id": "test00345",
+   "split_index": 68,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     7,
+     9,
+     11,
+     12
+    ]
+   ],
+   "n_source_sentences": 35
+  },
+  "thacarterv": {
+   "wice_id": "test03017",
+   "split_index": 69,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     27
+    ],
+    [
+     26,
+     27
+    ]
+   ],
+   "n_source_sentences": 61
+  },
+  "2017facupfinal": {
+   "wice_id": "test00287",
+   "split_index": 70,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     55
+    ],
+    [
+     0,
+     55
+    ]
+   ],
+   "n_source_sentences": 119
+  },
+  "foreigninvolvementinthes": {
+   "wice_id": "test03084",
+   "split_index": 71,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13
+    ],
+    [
+     6,
+     12,
+     13,
+     14
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "13blacksabbathalbum": {
+   "wice_id": "test00901",
+   "split_index": 72,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4,
+     5,
+     17,
+     18,
+     19
+    ]
+   ],
+   "n_source_sentences": 77
+  },
+  "jakegyllenhaal": {
+   "wice_id": "test03137",
+   "split_index": 73,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     17,
+     19,
+     23,
+     24
+    ]
+   ],
+   "n_source_sentences": 37
+  },
+  "philsingleton": {
+   "wice_id": "test02292",
+   "split_index": 74,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     24
+    ],
+    [
+     22,
+     24
+    ]
+   ],
+   "n_source_sentences": 45
+  },
+  "cityofangelssong": {
+   "wice_id": "test01760",
+   "split_index": 75,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     16
+    ]
+   ],
+   "n_source_sentences": 41
+  },
+  "williamhenryharrison": {
+   "wice_id": "test01493",
+   "split_index": 76,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     22
+    ],
+    [
+     8,
+     22
+    ]
+   ],
+   "n_source_sentences": 43
+  },
+  "aijac": {
+   "wice_id": "test00937",
+   "split_index": 77,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 57
+  }
+ }
+}

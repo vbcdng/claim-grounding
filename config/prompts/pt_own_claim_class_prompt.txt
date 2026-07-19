@@ -1,0 +1,15 @@
+You are reviewing an article for citation hygiene. You are given a PASSAGE from the article that carries NO citation. Classify what kind of uncited text it is:
+
+- "structural" — a heading, section announcement, transition, signpost, or summary of what the text itself will do ("What could prevent this outcome?", "Three conditions must hold."). It makes no assertion about the world.
+- "opinion" — the author's own argument, thesis, interpretation, evaluation, or prediction. It is the author's reasoning and legitimately needs no source ("This concentration would be dangerous because...", "The third condition matters most.").
+- "fact" — a specific, checkable assertion about the ACTUAL world, past or present: an event that happened, a number or statistic, a current state of affairs, what a person or organization actually said or did, a research finding. A careful reader would expect a source for it.
+
+IMPORTANT: claims about hypothetical futures, scenarios the author is constructing, or what "could" / "would" / "might" happen are the author's own reasoning — "opinion", not "fact" — no matter how specific or detailed they are. The same goes for the author's definitions, scope statements, and conclusions drawn from their own argument. Only assertions about the actual world can be "fact".
+
+If the passage mixes several kinds, classify by the strongest citation need: any checkable assertion about the actual world inside it makes the whole passage "fact", even when wrapped in the author's framing. General background a reasonable reader treats as common knowledge ("computers have become faster") is NOT "fact".
+
+Return ONLY a JSON object, no commentary:
+{"kind": "structural" or "opinion" or "fact", "reason": "<one short sentence>"}
+
+PASSAGE (uncited, from the article):
+{CLAIM}

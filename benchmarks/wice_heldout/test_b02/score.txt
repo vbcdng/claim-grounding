@@ -1,0 +1,65 @@
+verdict-level agreement: 5/26 (19%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported            1
+  not_supported          -> supported                1   <-- disagreement
+  partially_supported    -> not_supported           15   <-- disagreement
+  partially_supported    -> partially_supported      3
+  supported              -> not_supported            2   <-- disagreement
+  supported              -> partially_supported      3   <-- disagreement
+  supported              -> supported                1
+
+arbiter-adjudicated agreement: 19/26 (73%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported            1
+  not_supported          -> supported                1   <-- disagreement
+  partially_supported    -> not_supported            3   <-- disagreement
+  partially_supported    -> partially_supported     15
+  supported              -> partially_supported      3   <-- disagreement
+  supported              -> supported                3
+adjudication flips: 15
+  + jjwatt                     not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + jonathankempwriter         not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + mickadams                  not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + andrewnikou                not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + albertinesong              not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + tropicalcyclonesin2018     not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + arthurmold                 partially_supported -> supported              wice=supported              (arbiter: all components provable (verified quotes))
+  + marcwarrentvproducer       not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + apollo11                   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + cougar                     not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + shahbaznadeem              not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + southernwesleyanuniversi   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  ~ danmonson                  not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+  + suzannedealbooth           not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + sadioman                   not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+
+false-supports on 2 refuted rows: base=1, adjudicated=1
+*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — stop and report ***
+
+per-claim:
+  DIFF jjwatt                     wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF bartsimpson                wice=not_supported          tool=supported              picks_in_gold=0/3
+  DIFF jonathankempwriter         wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF 201819educationworkersst   wice=partially_supported    tool=not_supported          
+  OK  erictheactor               wice=not_supported          tool=not_supported          
+  DIFF mickadams                  wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  vannevarbush               wice=partially_supported    tool=partially_supported    picks_in_gold=0/1
+  DIFF andrewnikou                wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF albertinesong              wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF tropicalcyclonesin2018     wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  niunamenos                 wice=supported              tool=supported              picks_in_gold=2/3
+  DIFF arthurmold                 wice=supported              tool=partially_supported    adj=supported              picks_in_gold=1/1
+  DIFF marcwarrentvproducer       wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF welfare                    wice=supported              tool=partially_supported    picks_in_gold=1/1
+  DIFF juicylucyband              wice=partially_supported    tool=not_supported          
+  DIFF apollo11                   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF cougar                     wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF fliggo                     wice=supported              tool=partially_supported    picks_in_gold=1/1
+  DIFF shahbaznadeem              wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  yemenicivilwar2015presen   wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF southernwesleyanuniversi   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF danmonson                  wice=supported              tool=not_supported          adj=partially_supported    
+  DIFF suzannedealbooth           wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  lacdeserreponon            wice=partially_supported    tool=partially_supported    picks_in_gold=1/2
+  DIFF sadioman                   wice=supported              tool=not_supported          adj=supported              
+  DIFF dunipacefc                 wice=partially_supported    tool=not_supported          

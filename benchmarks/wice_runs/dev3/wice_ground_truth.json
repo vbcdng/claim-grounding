@@ -1,0 +1,974 @@
+{
+ "split": "dev",
+ "batch": 3,
+ "seed": 7,
+ "claims": {
+  "identityevropa": {
+   "wice_id": "dev02618",
+   "split_index": 327,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     31
+    ],
+    [
+     31,
+     49
+    ],
+    [
+     43,
+     49,
+     65
+    ],
+    [
+     31,
+     43,
+     65
+    ],
+    [
+     31,
+     43,
+     49,
+     65
+    ]
+   ],
+   "n_source_sentences": 70
+  },
+  "bettercallsaul": {
+   "wice_id": "dev01564",
+   "split_index": 204,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     6,
+     10,
+     11
+    ],
+    [
+     6,
+     7,
+     10,
+     11
+    ],
+    [
+     6,
+     8,
+     9,
+     11
+    ],
+    [
+     6,
+     8,
+     10,
+     11
+    ],
+    [
+     6,
+     7,
+     8,
+     10,
+     11
+    ]
+   ],
+   "n_source_sentences": 70
+  },
+  "davidreedartist": {
+   "wice_id": "dev03672",
+   "split_index": 91,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     10,
+     13,
+     14
+    ],
+    [
+     10,
+     12,
+     13,
+     14
+    ],
+    [
+     9,
+     10,
+     13,
+     14
+    ],
+    [
+     9,
+     10,
+     12,
+     13,
+     14
+    ]
+   ],
+   "n_source_sentences": 284
+  },
+  "annemichaels": {
+   "wice_id": "dev02254",
+   "split_index": 115,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     9,
+     11,
+     12,
+     21
+    ],
+    [
+     0,
+     9,
+     11,
+     21
+    ],
+    [
+     8,
+     9,
+     12,
+     21
+    ],
+    [
+     0,
+     8,
+     9,
+     21
+    ],
+    [
+     8,
+     9,
+     12,
+     20,
+     21
+    ],
+    [
+     7,
+     8,
+     9,
+     12,
+     21
+    ],
+    [
+     0,
+     8,
+     9,
+     12,
+     21
+    ],
+    [
+     7,
+     9,
+     11,
+     12,
+     21
+    ],
+    [
+     8,
+     9,
+     11,
+     12,
+     21
+    ],
+    [
+     0,
+     8,
+     9,
+     11,
+     21
+    ],
+    [
+     9,
+     11,
+     12,
+     20,
+     21
+    ],
+    [
+     0,
+     8,
+     9,
+     11,
+     12,
+     21
+    ],
+    [
+     7,
+     8,
+     9,
+     11,
+     12,
+     21
+    ],
+    [
+     8,
+     9,
+     11,
+     12,
+     20,
+     21
+    ]
+   ],
+   "n_source_sentences": 24
+  },
+  "alejandroarmellini": {
+   "wice_id": "dev01108",
+   "split_index": 6,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7,
+     8
+    ],
+    [
+     2,
+     5,
+     7,
+     8
+    ]
+   ],
+   "n_source_sentences": 49
+  },
+  "runawaybaby": {
+   "wice_id": "dev00704",
+   "split_index": 181,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13,
+     14,
+     24
+    ],
+    [
+     7,
+     20,
+     24
+    ],
+    [
+     10,
+     13,
+     14,
+     24
+    ],
+    [
+     7,
+     20,
+     23,
+     24
+    ],
+    [
+     13,
+     14,
+     23,
+     24
+    ],
+    [
+     7,
+     10,
+     20,
+     24
+    ],
+    [
+     10,
+     13,
+     14,
+     23,
+     24
+    ],
+    [
+     13,
+     14,
+     20,
+     23,
+     24
+    ],
+    [
+     7,
+     10,
+     20,
+     23,
+     24
+    ],
+    [
+     10,
+     13,
+     14,
+     20,
+     23,
+     24
+    ]
+   ],
+   "n_source_sentences": 32
+  },
+  "kaitlinyoung": {
+   "wice_id": "dev03713",
+   "split_index": 98,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     8
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    [
+     3,
+     4,
+     5,
+     7,
+     23
+    ],
+    [
+     4,
+     5,
+     6,
+     7,
+     23
+    ],
+    [
+     3,
+     4,
+     5,
+     7,
+     8,
+     23
+    ],
+    [
+     4,
+     5,
+     6,
+     7,
+     8,
+     23
+    ]
+   ],
+   "n_source_sentences": 37
+  },
+  "hullabaloofestival": {
+   "wice_id": "dev01549",
+   "split_index": 214,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     7
+    ],
+    [
+     9,
+     10
+    ]
+   ],
+   "n_source_sentences": 31
+  },
+  "katewinslet": {
+   "wice_id": "dev01296",
+   "split_index": 322,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     2,
+     10
+    ],
+    [
+     5,
+     8,
+     10
+    ],
+    [
+     0,
+     5,
+     10
+    ],
+    [
+     0,
+     5,
+     8,
+     10
+    ],
+    [
+     0,
+     2,
+     5,
+     10
+    ],
+    [
+     0,
+     2,
+     10,
+     20
+    ],
+    [
+     2,
+     5,
+     8,
+     10,
+     20
+    ],
+    [
+     0,
+     2,
+     5,
+     8,
+     10
+    ]
+   ],
+   "n_source_sentences": 52
+  },
+  "paulcollingwood": {
+   "wice_id": "dev04052",
+   "split_index": 80,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0,
+     92
+    ],
+    [
+     85,
+     86
+    ],
+    [
+     85,
+     86,
+     88
+    ],
+    [
+     0,
+     88,
+     92
+    ],
+    [
+     0,
+     85,
+     86,
+     92
+    ],
+    [
+     85,
+     86,
+     88,
+     93
+    ],
+    [
+     0,
+     85,
+     86,
+     88,
+     92,
+     93
+    ]
+   ],
+   "n_source_sentences": 140
+  },
+  "vincegill": {
+   "wice_id": "dev03716",
+   "split_index": 15,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 149
+  },
+  "ericsson": {
+   "wice_id": "dev04516",
+   "split_index": 191,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     10,
+     11
+    ],
+    [
+     11,
+     42
+    ],
+    [
+     8,
+     10,
+     11
+    ],
+    [
+     9,
+     10,
+     11
+    ],
+    [
+     8,
+     9,
+     10
+    ],
+    [
+     8,
+     9,
+     10,
+     11
+    ],
+    [
+     8,
+     10,
+     11,
+     42
+    ],
+    [
+     8,
+     9,
+     10,
+     42
+    ]
+   ],
+   "n_source_sentences": 58
+  },
+  "sheldonmac": {
+   "wice_id": "dev03856",
+   "split_index": 116,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     116,
+     117
+    ],
+    [
+     0,
+     116
+    ]
+   ],
+   "n_source_sentences": 126
+  },
+  "aliceinchains": {
+   "wice_id": "dev04059",
+   "split_index": 289,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     19,
+     26
+    ],
+    [
+     20,
+     26
+    ]
+   ],
+   "n_source_sentences": 38
+  },
+  "loscampesinos": {
+   "wice_id": "dev04441",
+   "split_index": 288,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     27,
+     31,
+     237,
+     240
+    ],
+    [
+     27,
+     29,
+     31,
+     240
+    ],
+    [
+     27,
+     31,
+     237,
+     239,
+     240
+    ],
+    [
+     27,
+     31,
+     32,
+     33,
+     237
+    ],
+    [
+     27,
+     29,
+     31,
+     32,
+     33
+    ],
+    [
+     27,
+     29,
+     31,
+     239,
+     240
+    ],
+    [
+     27,
+     31,
+     32,
+     33,
+     237,
+     239
+    ],
+    [
+     27,
+     29,
+     31,
+     32,
+     33,
+     239
+    ]
+   ],
+   "n_source_sentences": 312
+  },
+  "resourcemobilization": {
+   "wice_id": "dev03621",
+   "split_index": 18,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     3
+    ]
+   ],
+   "n_source_sentences": 30
+  },
+  "historyofolemissrebelsfo": {
+   "wice_id": "dev00418",
+   "split_index": 113,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     20
+    ]
+   ],
+   "n_source_sentences": 33
+  },
+  "201819uefanationsleague": {
+   "wice_id": "dev00851",
+   "split_index": 279,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     14,
+     17,
+     18
+    ],
+    [
+     14,
+     18,
+     36
+    ],
+    [
+     14,
+     15,
+     36
+    ],
+    [
+     14,
+     18,
+     55,
+     56
+    ],
+    [
+     14,
+     17,
+     18,
+     36
+    ],
+    [
+     14,
+     15,
+     36,
+     72
+    ],
+    [
+     14,
+     15,
+     18,
+     72
+    ],
+    [
+     14,
+     15,
+     17,
+     36
+    ],
+    [
+     14,
+     18,
+     36,
+     55,
+     56
+    ],
+    [
+     14,
+     15,
+     17,
+     18,
+     72
+    ],
+    [
+     14,
+     15,
+     36,
+     55,
+     56
+    ],
+    [
+     14,
+     15,
+     18,
+     36,
+     72
+    ],
+    [
+     14,
+     17,
+     18,
+     55,
+     56
+    ]
+   ],
+   "n_source_sentences": 75
+  },
+  "styletaylorswiftsong": {
+   "wice_id": "dev01340",
+   "split_index": 176,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     0,
+     1,
+     30,
+     60
+    ],
+    [
+     1,
+     30,
+     31,
+     60
+    ],
+    [
+     0,
+     1,
+     30,
+     31,
+     60
+    ],
+    [
+     1,
+     30,
+     31,
+     59,
+     60
+    ],
+    [
+     1,
+     30,
+     31,
+     32,
+     60
+    ],
+    [
+     0,
+     1,
+     30,
+     59,
+     60
+    ],
+    [
+     1,
+     30,
+     31,
+     32,
+     59,
+     60
+    ],
+    [
+     0,
+     1,
+     30,
+     31,
+     32,
+     60
+    ],
+    [
+     0,
+     1,
+     30,
+     31,
+     59,
+     60
+    ],
+    [
+     0,
+     1,
+     30,
+     31,
+     32,
+     59,
+     60
+    ]
+   ],
+   "n_source_sentences": 83
+  },
+  "lizjpatterson": {
+   "wice_id": "dev00328",
+   "split_index": 197,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     3,
+     6
+    ],
+    [
+     0,
+     3,
+     6
+    ],
+    [
+     3,
+     5,
+     7,
+     8
+    ],
+    [
+     3,
+     6,
+     8,
+     9
+    ],
+    [
+     5,
+     7,
+     8,
+     9
+    ],
+    [
+     0,
+     5,
+     7,
+     8
+    ],
+    [
+     3,
+     5,
+     6,
+     8
+    ],
+    [
+     0,
+     5,
+     6,
+     8
+    ],
+    [
+     5,
+     6,
+     8,
+     9
+    ]
+   ],
+   "n_source_sentences": 104
+  },
+  "listofsongsrecordedbytri": {
+   "wice_id": "dev03481",
+   "split_index": 144,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     5
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     4,
+     5,
+     15
+    ],
+    [
+     0,
+     4,
+     6,
+     15
+    ],
+    [
+     0,
+     4,
+     5,
+     6,
+     15
+    ]
+   ],
+   "n_source_sentences": 51
+  },
+  "internationalframeworkof": {
+   "wice_id": "dev04156",
+   "split_index": 152,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 48
+  },
+  "2001macaugrandprix": {
+   "wice_id": "dev03904",
+   "split_index": 225,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 83
+  },
+  "illinoiscoalitionagainst": {
+   "wice_id": "dev01434",
+   "split_index": 213,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 57
+  },
+  "stefancleveland": {
+   "wice_id": "dev02203",
+   "split_index": 154,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 170
+  }
+ }
+}

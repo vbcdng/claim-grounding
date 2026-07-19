@@ -1,0 +1,8 @@
+# regenerable in seconds from the caches; the human-marked JSONL / SAMPLE
+# and metrics ARE worth keeping — add those back explicitly with `git add -f`
+runs/*.jsonl
+runs/*.jsonl.bak
+runs/review_*_ALL.txt
+runs/claims_*.txt
+runs/document_*.txt
+runs/

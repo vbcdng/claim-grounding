@@ -1,0 +1,2739 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train batch 2",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section of the text.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Cooper's preparation also included lessons with a vocal coach, and studying footage of Kyle.",
+   "markers": [
+    "bradleycooper"
+   ],
+   "paper_ids": [
+    "a753f86bf156461d06e6fb4708fe95a2f2ad0d11"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a753f86bf156461d06e6fb4708fe95a2f2ad0d11",
+    "source_title": "bradleycooper",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Hours and hours of him talking,\" Cooper told the Navy Times.",
+    "page": 1,
+    "snippet": "Hours and hours of him talking,\" Cooper",
+    "reason": "The passage does not mention Cooper taking lessons with a vocal coach.",
+    "votes": "2-0",
+    "window": "Hours and hours of him talking,\" Cooper told the Navy Times. Chris Kyle was killed at a shooting range in 2013. Cooper received rifle training on the weekends with Kevin Lacz, a Navy SEAL sniper who had served alongside Kyle, according to People magazine. (Paul Moseley/The Fort Worth Star-Telegram via AP) Getting Kyle's Texas accent just right also required four hours a day of dialect work. \"I had so much access to Chris, based on interviews he'd done and video."
+   },
+   "evidences": [
+    {
+     "paper_id": "a753f86bf156461d06e6fb4708fe95a2f2ad0d11",
+     "source_title": "bradleycooper",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Hours and hours of him talking,\" Cooper told the Navy Times.",
+     "page": 1,
+     "snippet": "Hours and hours of him talking,\" Cooper",
+     "reason": "The passage does not mention Cooper taking lessons with a vocal coach.",
+     "votes": "2-0",
+     "window": "Hours and hours of him talking,\" Cooper told the Navy Times. Chris Kyle was killed at a shooting range in 2013. Cooper received rifle training on the weekends with Kevin Lacz, a Navy SEAL sniper who had served alongside Kyle, according to People magazine. (Paul Moseley/The Fort Worth Star-Telegram via AP) Getting Kyle's Texas accent just right also required four hours a day of dialect work. \"I had so much access to Chris, based on interviews he'd done and video."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Cooper taking lessons with a vocal coach.",
+   "component_check": {
+    "found": [
+     "Cooper studied footage of Kyle."
+    ],
+    "missing": [
+     "Cooper took lessons with a vocal coach."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Cooper studied footage of Kyle.",
+      "paper_id": "a753f86bf156461d06e6fb4708fe95a2f2ad0d11",
+      "source_title": "bradleycooper",
+      "sentence": "Chris Kyle was killed at a shooting range in 2013. Cooper received rifle training on the weekends with Kevin Lacz, a Navy SEAL sniper who had served alongside Kyle, according to People magazine.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes specific details of Cooper's preparation, implying these are facts or findings that the cited source is expected to support. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "lessons with a vocal coach",
+    "rewrite_suggestion": "Cooper's preparation also included studying footage of Kyle, such as interviews and videos, to master his mannerisms and accent.",
+    "proofs": [
+     "I had so much access to Chris, based on interviews he'd done and video.",
+     "I had this huge document that I put on my iPhone and my iPad and I just had it on constantly. I had earbuds on that whole time, just listening to his voice, repeating what he would say."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two components: 'lessons with a vocal coach' and 'studying footage of Kyle.' The source text makes no mention of a vocal coach, so that component is unsupported from the source. The component about studying footage is supported by sentences in the source (e.g., 'based on interviews he'd done and video'), but the tool did not show those sentences. Because a substantive component is entirely unprovable from the source, the author must either add a citation for the vocal coach claim or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Its collection includes more than 5,000 regional and Canadian works and over 45,000 artifacts.",
+   "markers": [
+    "museumlondon"
+   ],
+   "paper_ids": [
+    "bdeddec14aa847b33fbbbee6167f5c9b138ca83e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.902,
+   "evidence": {
+    "paper_id": "bdeddec14aa847b33fbbbee6167f5c9b138ca83e",
+    "source_title": "museumlondon",
+    "supported": false,
+    "sentence": "The term would refer only to art, disregarding the important historical aspect to our organization.",
+    "page": 1,
+    "snippet": "The term would refer only to art,",
+    "cosine": 0.902,
+    "reason": "The passage does not mention the number of regional and Canadian works or artifacts in the collection.",
+    "window": "Museum of Modern Art, New York). The term would refer only to art, disregarding the important historical aspect to our organization. Museum London was established in 1940 and operated from the London Public Library until 1980 when the renowned Canadian architect Raymond Moriyama was commissioned to design its current home at the forks of the Thames River in downtown London, Ontario."
+   },
+   "evidences": [
+    {
+     "paper_id": "bdeddec14aa847b33fbbbee6167f5c9b138ca83e",
+     "source_title": "museumlondon",
+     "supported": false,
+     "sentence": "The term would refer only to art, disregarding the important historical aspect to our organization.",
+     "page": 1,
+     "snippet": "The term would refer only to art,",
+     "cosine": 0.902,
+     "reason": "The passage does not mention the number of regional and Canadian works or artifacts in the collection.",
+     "window": "Museum of Modern Art, New York). The term would refer only to art, disregarding the important historical aspect to our organization. Museum London was established in 1940 and operated from the London Public Library until 1980 when the renowned Canadian architect Raymond Moriyama was commissioned to design its current home at the forks of the Thames River in downtown London, Ontario."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The collection includes more than 5,000 regional and Canadian works and over 45,000 artifacts.",
+    "reason": "The passage asserts specific facts (number of works and artifacts) that are directly attributed to the cited source. This falls under the default 'full' scope as the source is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific figures of 'more than 5,000 regional and Canadian works' and 'over 45,000 artifacts'",
+    "rewrite_suggestion": "Its collection includes regional and Canadian works as well as historical artifacts (no numbers provided by the cited source).",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes specific numerical quantities to Museum London's collection, but the provided source text contains no mention of any numbers—neither '5,000' nor '45,000' nor any data on collection size. The shown sentence is unrelated, and the source itself offers no support for these figures. Therefore the author must either add a citation for the numbers or rewrite the claim to remove them."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "Gaffney ended the season with a tally of 8 league goals as he played a useful part in the club's promotion to Football League One.",
+   "markers": [
+    "rorygaffney"
+   ],
+   "paper_ids": [
+    "594b09106aec7ea90aab05be1f534bf100c06ce5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9169,
+   "evidence": {
+    "paper_id": "594b09106aec7ea90aab05be1f534bf100c06ce5",
+    "source_title": "rorygaffney",
+    "supported": false,
+    "sentence": "The goals shown for each player include any goals they may have scored in the following competitions in the current season: Carabao Cup, Sky Bet League One",
+    "page": 1,
+    "snippet": "The goals shown for each player include",
+    "cosine": 0.9169,
+    "reason": "The passage does not mention the number of league goals scored by Gaffney or the club's promotion to Football League One.",
+    "window": "## Tyler Smith 95 mins per goal 285 mins played 3 Goals scored 1 Assists ### Shots on target ### Total 33% 3 9 ## Jonson Clarke-Harris 116 mins per goal 232 mins played 2 Goals scored 0 Assists ### Shots on target ### Total 75% 3 4 The goals shown for each player include any goals they may have scored in the following competitions in the current season: Carabao Cup, Sky Bet League One Back to top"
+   },
+   "evidences": [
+    {
+     "paper_id": "594b09106aec7ea90aab05be1f534bf100c06ce5",
+     "source_title": "rorygaffney",
+     "supported": false,
+     "sentence": "The goals shown for each player include any goals they may have scored in the following competitions in the current season: Carabao Cup, Sky Bet League One",
+     "page": 1,
+     "snippet": "The goals shown for each player include",
+     "cosine": 0.9169,
+     "reason": "The passage does not mention the number of league goals scored by Gaffney or the club's promotion to Football League One.",
+     "window": "## Tyler Smith 95 mins per goal 285 mins played 3 Goals scored 1 Assists ### Shots on target ### Total 33% 3 9 ## Jonson Clarke-Harris 116 mins per goal 232 mins played 2 Goals scored 0 Assists ### Shots on target ### Total 75% 3 4 The goals shown for each player include any goals they may have scored in the following competitions in the current season: Carabao Cup, Sky Bet League One Back to top"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "gaffney",
+    "missing_from": [
+     "594b09106aec7ea90aab05be1f534bf100c06ce5"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Gaffney ended the season with a tally of 8 league goals as he played a useful part in the club's promotion to Football League One.",
+    "reason": "The passage directly states a factual claim about Gaffney's performance and contribution to the club's promotion. The citation is expected to prove this specific assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "All components: Gaffney's 8 league goals, his useful part, and the club's promotion to League One are not mentioned anywhere in the source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is a top scorers list for Bristol Rovers that does not mention Rory Gaffney at all. The shown sentence is a generic note about competitions and does not support any part of the claim. No component of the claim (8 league goals, useful part, promotion) is provable from this source, so the author must either add a proper citation or rewrite the claim to remove the unsourced assertions."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Computers were also in short supply, and the few that were in use were outdated and obsolete.",
+   "markers": [
+    "princegeorgescountysheri"
+   ],
+   "paper_ids": [
+    "e477fac13737ac8fca37663cc6c9af532b0381d4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8299,
+   "evidence": {
+    "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+    "source_title": "princegeorgescountysheri",
+    "supported": true,
+    "sentence": "A year ago, there were only a few old ones, according to agency statistics.",
+    "page": 1,
+    "snippet": "A year ago, there were only a",
+    "cosine": 0.8299,
+    "reason": "The passage states that only 56 computers were installed out of an estimated 200 needed, and a year prior, there were only a 'few old ones', directly supporting the claim that computers were in short supply and outdated.",
+    "window": "Out of an estimated 200 computers needed in the department, 56 were recently installed. A year ago, there were only a few old ones, according to agency statistics. The funding problem of the sheriff department can be traced to pending litigation in Charles County that started in the Prince George's County Circuit Court with four separate parties."
+   },
+   "evidences": [
+    {
+     "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+     "source_title": "princegeorgescountysheri",
+     "supported": true,
+     "sentence": "A year ago, there were only a few old ones, according to agency statistics.",
+     "page": 1,
+     "snippet": "A year ago, there were only a",
+     "cosine": 0.8299,
+     "reason": "The passage states that only 56 computers were installed out of an estimated 200 needed, and a year prior, there were only a 'few old ones', directly supporting the claim that computers were in short supply and outdated.",
+     "window": "Out of an estimated 200 computers needed in the department, 56 were recently installed. A year ago, there were only a few old ones, according to agency statistics. The funding problem of the sheriff department can be traced to pending litigation in Charles County that started in the Prince George's County Circuit Court with four separate parties."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that only 56 computers were installed out of an estimated 200 needed, and a year prior, there were only a 'few old ones', directly supporting the claim that computers were in short supply and outdated.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Computers were in short supply",
+      "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+      "source_title": "princegeorgescountysheri",
+      "sentence": "Out of an estimated 200 computers needed in the department, 56 were recently installed.",
+      "page": 1,
+      "snippet": "Out of an estimated 200 computers needed"
+     },
+     {
+      "component": "Computers were in short supply",
+      "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+      "source_title": "princegeorgescountysheri",
+      "sentence": "Lack of funds has also denied the agency of adequate computers needed for effective recording and execution of warrants and other personnel details.",
+      "page": 1,
+      "snippet": "Lack of funds has also denied the"
+     },
+     {
+      "component": "the few that were in use were outdated and obsolete",
+      "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+      "source_title": "princegeorgescountysheri",
+      "sentence": "A year ago, there were only a few old ones, according to agency statistics.",
+      "page": 1,
+      "snippet": "A year ago, there were only a"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+      "source_title": "princegeorgescountysheri",
+      "text": "Lack of funds has also denied the agency of adequate computers needed for effective recording and execution of warrants and other personnel details. Out of an estimated 200 computers needed in the department, 56 were recently installed. A year ago, there were only a few old ones, according to agency statistics.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the passage does not state that the computers in use were obsolete",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the computers in use were obsolete",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Lack of funds has also denied the agency of adequate computers needed for effective recording and execution of warrants and other personnel details.",
+     "Out of an estimated 200 computers needed in the department, 56 were recently installed.",
+     "A year ago, there were only a few old ones, according to agency statistics."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences collectively prove both components: they establish a short supply (adequate computers lacking, 56 installed out of 200 needed) and that the few computers in use a year ago were old (outdated/obsolete). All components are directly supported by the displayed evidence."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "The show featured a number of sculptures made of Kanekalon hair, knockers, barrettes, and beads that referenced both Kaa (the snake character made famous in Rudyard Kipling's \"The Jungle Book)\" and Medusa's head of snakes.",
+   "markers": [
+    "diamondstingily"
+   ],
+   "paper_ids": [
+    "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+    "source_title": "diamondstingily",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "For Stingily, the \"Kaas\" call to mind fictional characters like Medusa, whose hair was made of snakes.",
+    "page": 1,
+    "snippet": "For Stingily, the \"Kaas\" call to mind",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "For Stingily, the \"Kaas\" call to mind fictional characters like Medusa, whose hair was made of snakes. The Queer Thoughts show features a number of sculptures that Stingily calls \"Kaas,\" after the snake character in The Jungle Book. Pinned to the wall by knockers, the \"Kaas\" are long braids of Kanekalon hair that can range from one-and-a-half to 20 feet in length. So too are her \"Kaas,\" which often have butterfly barrettes attached to them."
+   },
+   "evidences": [
+    {
+     "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+     "source_title": "diamondstingily",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "For Stingily, the \"Kaas\" call to mind fictional characters like Medusa, whose hair was made of snakes.",
+     "page": 1,
+     "snippet": "For Stingily, the \"Kaas\" call to mind",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "For Stingily, the \"Kaas\" call to mind fictional characters like Medusa, whose hair was made of snakes. The Queer Thoughts show features a number of sculptures that Stingily calls \"Kaas,\" after the snake character in The Jungle Book. Pinned to the wall by knockers, the \"Kaas\" are long braids of Kanekalon hair that can range from one-and-a-half to 20 feet in length. So too are her \"Kaas,\" which often have butterfly barrettes attached to them."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "sculptures made of Kanekalon hair",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "Pinned to the wall by knockers, the \"Kaas\" are long braids of Kanekalon hair that can range from one-and-a-half to 20 feet in length.",
+      "page": 1,
+      "snippet": "Pinned to the wall by knockers, the"
+     },
+     {
+      "component": "sculptures made of Kanekalon hair",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "(meta data) TITLE: Going Natural: Diamond Stingily on Her Queer Thoughts Show -ARTnews (meta data) AUTHOR: Alex Greenberger (meta data) PUBLISHER: https://www.facebook.com/artnewsmag ## # Going Natural: Diamond Stingily on Her Queer Thoughts Show By Alex Greenberger Posted 06/17/16 1:06 pm Diamond Stingily, Kaa, 2016, Kanekalon hair, knockers, barrettes in six parts.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Going Natural: Diamond Stingily"
+     },
+     {
+      "component": "sculptures made of knockers",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "Pinned to the wall by knockers, the \"Kaas\" are long braids of Kanekalon hair that can range from one-and-a-half to 20 feet in length.",
+      "page": 1,
+      "snippet": "Pinned to the wall by knockers, the"
+     },
+     {
+      "component": "sculptures made of knockers",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "(meta data) TITLE: Going Natural: Diamond Stingily on Her Queer Thoughts Show -ARTnews (meta data) AUTHOR: Alex Greenberger (meta data) PUBLISHER: https://www.facebook.com/artnewsmag ## # Going Natural: Diamond Stingily on Her Queer Thoughts Show By Alex Greenberger Posted 06/17/16 1:06 pm Diamond Stingily, Kaa, 2016, Kanekalon hair, knockers, barrettes in six parts.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Going Natural: Diamond Stingily"
+     },
+     {
+      "component": "sculptures made of barrettes",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "(meta data) TITLE: Going Natural: Diamond Stingily on Her Queer Thoughts Show -ARTnews (meta data) AUTHOR: Alex Greenberger (meta data) PUBLISHER: https://www.facebook.com/artnewsmag ## # Going Natural: Diamond Stingily on Her Queer Thoughts Show By Alex Greenberger Posted 06/17/16 1:06 pm Diamond Stingily, Kaa, 2016, Kanekalon hair, knockers, barrettes in six parts.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Going Natural: Diamond Stingily"
+     },
+     {
+      "component": "sculptures made of barrettes",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "So too are her \"Kaas,\" which often have butterfly barrettes attached to them.",
+      "page": 1,
+      "snippet": "So too are her \"Kaas,\" which often"
+     },
+     {
+      "component": "referenced Kaa (the snake character made famous in Rudyard Kipling's \"The Jungle Book)",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "The Queer Thoughts show features a number of sculptures that Stingily calls \"Kaas,\" after the snake character in The Jungle Book.",
+      "page": 1,
+      "snippet": "The Queer Thoughts show features a number"
+     },
+     {
+      "component": "referenced Medusa's head of snakes",
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "sentence": "For Stingily, the \"Kaas\" call to mind fictional characters like Medusa, whose hair was made of snakes.",
+      "page": 1,
+      "snippet": "For Stingily, the \"Kaas\" call to mind"
+     }
+    ],
+    "uncovered": [
+     "sculptures made of beads"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+      "source_title": "diamondstingily",
+      "text": "(meta data) TITLE: Going Natural: Diamond Stingily on Her Queer Thoughts Show -ARTnews (meta data) AUTHOR: Alex Greenberger (meta data) PUBLISHER: https://www.facebook.com/artnewsmag ## # Going Natural: Diamond Stingily on Her Queer Thoughts Show By Alex Greenberger Posted 06/17/16 1:06 pm Diamond Stingily, Kaa, 2016, Kanekalon hair, knockers, barrettes in six parts. […] The Queer Thoughts show features a number of sculptures that Stingily calls \"Kaas,\" after the snake character in The Jungle Book. Pinned to the wall by knockers, the \"Kaas\" are long braids of Kanekalon hair that can range from one-and-a-half to 20 feet in length. (Together, Stingily and I tried to figure out the correct pronunciation of \"Kanekalon.\" Kan-kuh-lon? Kan-kee-lon? We decided on the former.) For Stingily, the \"Kaas\" call to mind fictional characters like Medusa, whose hair was made of snakes. […] So too are her \"Kaas,\" which often have butterfly barrettes attached to them.",
+      "n_used": 5
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "beads as a material of the sculptures",
+    "rewrite_suggestion": "The show featured a number of sculptures made of Kanekalon hair, knockers, and barrettes that referenced both Kaa (the snake character made famous in Rudyard Kipling's 'The Jungle Book') and Medusa's head of snakes.",
+    "proofs": [
+     "Pinned to the wall by knockers, the \"Kaas\" are long braids of Kanekalon hair that can range from one-and-a-half to 20 feet in length.",
+     "Diamond Stingily, Kaa, 2016, Kanekalon hair, knockers, barrettes in six parts.",
+     "So too are her \"Kaas,\" which often have butterfly barrettes attached to them.",
+     "The Queer Thoughts show features a number of sculptures that Stingily calls \"Kaas,\" after the snake character in The Jungle Book."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text confirms sculptures made of Kanekalon hair, knockers, and barrettes, and that they reference Kaa and Medusa. However, the claim includes 'beads' as a material, which is not mentioned anywhere in the source. Since this component is entirely unsupported by the cited source, the author must add a citation for beads or rewrite the claim to omit them."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "At the Ultra Music Festival, he premiered his first future bass single, \"Creatures of the Night\".",
+   "markers": [
+    "hardwell"
+   ],
+   "paper_ids": [
+    "2895fe630f8f8d39e548706b099d8699178a56f8"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7969,
+   "evidence": {
+    "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+    "source_title": "hardwell",
+    "supported": true,
+    "sentence": "März 2017 (Geschätzte Lesezeit: 1 - 2 Minuten) \"Creatures of the Night\" von Hardwell & Austin Mahone Nachdem Showtek und Blasterjaxx in ihren jüngsten Veröffentlichungen der trendigen Trap- und Pop-Mischung zugewandt haben, zog nun auch Hardwell nach und verschwand zusammen mit Pop-Sänger und Jungstar Austin Mahone im Studio.",
+    "page": 1,
+    "snippet": "März 2017 (Geschätzte Lesezeit: 1 - 2",
+    "cosine": 0.7969,
+    "reason": "The passage states that Hardwell premiered the song \"Creatures of the Night\" live on the mainstage of the Ultra Music Festival.",
+    "window": "(meta data) TITLE: Hardwell & Austin Mahone - Creatures of the Night (meta data) AUTHOR: Timo Büschleb Das Portal für Musik-News, Charts und DJ-Promotion Vorheriger ArtikelNächster Artikel ### Hardwell goes Future-Pop # Hardwell & Austin Mahone - Creatures of the Night Geschrieben von: Timo Büschleb, am 27. März 2017 (Geschätzte Lesezeit: 1 - 2 Minuten) \"Creatures of the Night\" von Hardwell & Austin Mahone Nachdem Showtek und Blasterjaxx in ihren jüngsten Veröffentlichungen der trendigen Trap- und Pop-Mischung zugewandt haben, zog nun auch Hardwell nach und verschwand zusammen mit Pop-Sänger und Jungstar Austin Mahone im Studio. Gemeinsam nahmen sie das Lied „Creatures of the Night\" auf, dass Hardwell nun vergangenes Wochenende live auf der Mainstage des Ultra Music Festivals premierte."
+   },
+   "evidences": [
+    {
+     "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+     "source_title": "hardwell",
+     "supported": true,
+     "sentence": "März 2017 (Geschätzte Lesezeit: 1 - 2 Minuten) \"Creatures of the Night\" von Hardwell & Austin Mahone Nachdem Showtek und Blasterjaxx in ihren jüngsten Veröffentlichungen der trendigen Trap- und Pop-Mischung zugewandt haben, zog nun auch Hardwell nach und verschwand zusammen mit Pop-Sänger und Jungstar Austin Mahone im Studio.",
+     "page": 1,
+     "snippet": "März 2017 (Geschätzte Lesezeit: 1 - 2",
+     "cosine": 0.7969,
+     "reason": "The passage states that Hardwell premiered the song \"Creatures of the Night\" live on the mainstage of the Ultra Music Festival.",
+     "window": "(meta data) TITLE: Hardwell & Austin Mahone - Creatures of the Night (meta data) AUTHOR: Timo Büschleb Das Portal für Musik-News, Charts und DJ-Promotion Vorheriger ArtikelNächster Artikel ### Hardwell goes Future-Pop # Hardwell & Austin Mahone - Creatures of the Night Geschrieben von: Timo Büschleb, am 27. März 2017 (Geschätzte Lesezeit: 1 - 2 Minuten) \"Creatures of the Night\" von Hardwell & Austin Mahone Nachdem Showtek und Blasterjaxx in ihren jüngsten Veröffentlichungen der trendigen Trap- und Pop-Mischung zugewandt haben, zog nun auch Hardwell nach und verschwand zusammen mit Pop-Sänger und Jungstar Austin Mahone im Studio. Gemeinsam nahmen sie das Lied „Creatures of the Night\" auf, dass Hardwell nun vergangenes Wochenende live auf der Mainstage des Ultra Music Festivals premierte."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Hardwell premiered the song \"Creatures of the Night\" live on the mainstage of the Ultra Music Festival.",
+   "covering": {
+    "covered": [
+     {
+      "component": "single was titled \"Creatures of the Night\"",
+      "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+      "source_title": "hardwell",
+      "sentence": "März 2017 (Geschätzte Lesezeit: 1 - 2 Minuten) \"Creatures of the Night\" von Hardwell & Austin Mahone Nachdem Showtek und Blasterjaxx in ihren jüngsten Veröffentlichungen der trendigen Trap- und Pop-Mischung zugewandt haben, zog nun auch Hardwell nach und verschwand zusammen mit Pop-Sänger und Jungstar Austin Mahone im Studio.",
+      "page": 1,
+      "snippet": "März 2017 (Geschätzte Lesezeit: 1 - 2"
+     },
+     {
+      "component": "single was titled \"Creatures of the Night\"",
+      "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+      "source_title": "hardwell",
+      "sentence": "(meta data) TITLE: Hardwell & Austin Mahone - Creatures of the Night (meta data) AUTHOR: Timo Büschleb Das Portal für Musik-News, Charts und DJ-Promotion Vorheriger ArtikelNächster Artikel ### Hardwell goes Future-Pop # Hardwell & Austin Mahone - Creatures of the Night Geschrieben von: Timo Büschleb, am 27.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Hardwell & Austin Mahone"
+     },
+     {
+      "component": "premiered at the Ultra Music Festival",
+      "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+      "source_title": "hardwell",
+      "sentence": "Gemeinsam nahmen sie das Lied „Creatures of the Night\" auf, dass Hardwell nun vergangenes Wochenende live auf der Mainstage des Ultra Music Festivals premierte.",
+      "page": 1,
+      "snippet": "Gemeinsam nahmen sie das Lied „Creatures of"
+     },
+     {
+      "component": "premiered his first future bass single",
+      "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+      "source_title": "hardwell",
+      "sentence": "Komplett anders erscheint nun „Creatures of the Night\", obwohl Hardwell sich bereits mit „Thinking About You\" in eine interessante Mischung aus Pop und Future-House, stellt diese Single nun einen komplett neuen Abschnitt dar.",
+      "page": 1,
+      "snippet": "Komplett anders erscheint nun „Creatures of the",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+      "source_title": "hardwell",
+      "text": "(meta data) TITLE: Hardwell & Austin Mahone - Creatures of the Night (meta data) AUTHOR: Timo Büschleb Das Portal für Musik-News, Charts und DJ-Promotion Vorheriger ArtikelNächster Artikel ### Hardwell goes Future-Pop # Hardwell & Austin Mahone - Creatures of the Night Geschrieben von: Timo Büschleb, am 27. März 2017 (Geschätzte Lesezeit: 1 - 2 Minuten) \"Creatures of the Night\" von Hardwell & Austin Mahone Nachdem Showtek und Blasterjaxx in ihren jüngsten Veröffentlichungen der trendigen Trap- und Pop-Mischung zugewandt haben, zog nun auch Hardwell nach und verschwand zusammen mit Pop-Sänger und Jungstar Austin Mahone im Studio. Gemeinsam nahmen sie das Lied „Creatures of the Night\" auf, dass Hardwell nun vergangenes Wochenende live auf der Mainstage des Ultra Music Festivals premierte. Dabei agierte es als Closing-Track, was normalerweise die Rolle verschiedener Hardstyle-Krachern war. ## Seichte Beats und Poppige Stimme Bigroom, Progressive-House, Electro-House. Mit diesen Genres lassen sich die Lieder von Hardwell am besten beschreiben. Vocals sind dabei eher Mangelware. Bei „Party Till the Daylight\" „Baldadig\" und „Get Down\", seinen letzten Releases, kamen lediglich Samples und kein wirklich ernst zu nehmender „Gesang\" zum Einsatz. Komplett anders erscheint nun „Creatures of the Night\", obwohl Hardwell sich bereits mit „Thinking About You\" in eine interessante Mischung aus Pop und Future-House, stellt diese Single nun einen komplett neuen Abschnitt dar.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "The first is Queen Joan, the wife of Alexander II of Scotland and daughter of King John of England (Richard I's brother and successor) who is buried in the grave yard (supposedly in a golden coffin).",
+   "markers": [
+    "stmarythevirgintarrantcr"
+   ],
+   "paper_ids": [
+    "ce37e92d9d8cff56e6b015af177dcbe95ad425a5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ce37e92d9d8cff56e6b015af177dcbe95ad425a5",
+    "source_title": "stmarythevirgintarrantcr",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Another grave slab may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant.",
+    "page": 1,
+    "snippet": "Another grave slab may be a memorial",
+    "reason": "The passage does not state that Joan was the wife of Alexander II of Scotland, the daughter of King John of England, or that she was buried in a graveyard in a golden coffin.",
+    "votes": "2-0",
+    "window": "Another grave slab may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant."
+   },
+   "evidences": [
+    {
+     "paper_id": "ce37e92d9d8cff56e6b015af177dcbe95ad425a5",
+     "source_title": "stmarythevirgintarrantcr",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Another grave slab may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant.",
+     "page": 1,
+     "snippet": "Another grave slab may be a memorial",
+     "reason": "The passage does not state that Joan was the wife of Alexander II of Scotland, the daughter of King John of England, or that she was buried in a graveyard in a golden coffin.",
+     "votes": "2-0",
+     "window": "Another grave slab may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Joan was the wife of Alexander II of Scotland, the daughter of King John of England, or that she was buried in a graveyard in a golden coffin.",
+   "component_check": {
+    "found": [
+     "Queen Joan is the daughter of King John of England."
+    ],
+    "missing": [
+     "Queen Joan is the wife of Alexander II of Scotland.",
+     "King John of England was Richard I's brother and successor.",
+     "Queen Joan is buried in the graveyard."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Queen Joan is the daughter of King John of England.",
+      "paper_id": "ce37e92d9d8cff56e6b015af177dcbe95ad425a5",
+      "source_title": "stmarythevirgintarrantcr",
+      "sentence": "Another grave slab may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Queen Joan was the wife of Alexander II of Scotland and daughter of King John of England (Richard I's brother and successor) who is buried in the grave yard (supposedly in a golden coffin).",
+    "reason": "The passage asserts specific facts about Queen Joan's identity and burial, which are directly attributed to the cited source. The attribution test is met as the passage presents these as statements of fact from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that she is Queen Joan, wife of Alexander II, buried in the graveyard (and in a golden coffin), and the parenthetical about Richard I are not supported by the source. Only the name Joan and her being daughter of King John appear.",
+    "rewrite_suggestion": "A grave slab at Tarrant Crawford may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant.",
+    "proofs": [
+     "Another grave slab may be a memorial to Joan of Scotland, daughter of King John and the first abbess at Tarrant."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms that Joan was the daughter of King John and that a grave slab may be her memorial. It does not mention her as Queen Joan, her marriage to Alexander II, her burial location, a golden coffin, or the detail about Richard I. Since several substantive components are entirely absent from the source text, the author must add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "Starks made his UFC debut less than two weeks removed from his last fight as a short-notice replacement for injured Brad Tavares against fellow UFC newcomer Dustin Jacoby at UFC 137.",
+   "markers": [
+    "cliffordstarks"
+   ],
+   "paper_ids": [
+    "9427f8dfd41b1a8f591ac57499ea049c442d1316"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "9427f8dfd41b1a8f591ac57499ea049c442d1316",
+    "source_title": "cliffordstarks",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "His opponent Brad Tavares will instead face UFC newcomer Dustin Jacoby, a 6-0 middleweight out of Springfield, Illinois.",
+    "page": 1,
+    "snippet": "His opponent Brad Tavares will instead face",
+    "reason": "The passage does not state that Starks made his UFC debut less than two weeks removed from his last fight or that he was a short-notice replacement.",
+    "votes": "2-0",
+    "window": "His opponent Brad Tavares will instead face UFC newcomer Dustin Jacoby, a 6-0 middleweight out of Springfield, Illinois."
+   },
+   "evidences": [
+    {
+     "paper_id": "9427f8dfd41b1a8f591ac57499ea049c442d1316",
+     "source_title": "cliffordstarks",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "His opponent Brad Tavares will instead face UFC newcomer Dustin Jacoby, a 6-0 middleweight out of Springfield, Illinois.",
+     "page": 1,
+     "snippet": "His opponent Brad Tavares will instead face",
+     "reason": "The passage does not state that Starks made his UFC debut less than two weeks removed from his last fight or that he was a short-notice replacement.",
+     "votes": "2-0",
+     "window": "His opponent Brad Tavares will instead face UFC newcomer Dustin Jacoby, a 6-0 middleweight out of Springfield, Illinois."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Starks made his UFC debut less than two weeks removed from his last fight or that he was a short-notice replacement.",
+   "subject_guard": {
+    "subject": "starks",
+    "missing_from": [
+     "9427f8dfd41b1a8f591ac57499ea049c442d1316"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Starks made his UFC debut less than two weeks removed from his last fight as a short-notice replacement for injured Brad Tavares against fellow UFC newcomer Dustin Jacoby at UFC 137.",
+    "reason": "The passage states a specific fact about Starks' UFC debut, including the timing, his role as a replacement, and the opponent. This is a factual claim that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about Clifford Starks making his UFC debut against Dustin Jacoby as a replacement for an injured Brad Tavares is unsupported. The source never mentions Starks and instead reports that Brad Tavares faced Dustin Jacoby after Tim Credeur withdrew due to injury.",
+    "rewrite_suggestion": "Brad Tavares faced UFC newcomer Dustin Jacoby at UFC 137 after Tim Credeur withdrew due to injury.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "His opponent Brad Tavares will instead face UFC newcomer Dustin Jacoby, a 6-0 middleweight out of Springfield, Illinois.",
+     "why": "This sentence directly contradicts the claim that Starks fought Jacoby (it says Tavares faces Jacoby) and also contradicts the claim that Tavares was injured (he is fighting, while the source elsewhere states Tim Credeur was the injured fighter)."
+    },
+    "why": "The provided source text contains no mention of Clifford Starks or any fighter by that name. All components of the claim—that Starks debuted at UFC 137, that he fought Dustin Jacoby, that he replaced an injured Brad Tavares, and that the fight occurred less than two weeks after his last bout—are entirely absent from the source. Moreover, the shown sentence and the source directly contradict the claim by stating that Brad Tavares fought Dustin Jacoby after Tim Credeur withdrew due to injury. Since no supporting evidence exists in the cited source, the author must either add a proper citation for the Starks claim or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "On October 21, 2007, \"Death Note\" premiered on Cartoon Network's Adult Swim.",
+   "markers": [
+    "listofdeathnoteepisodes"
+   ],
+   "paper_ids": [
+    "f6196ce7114890265aa6cf84fdd2dc75efca2229"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f6196ce7114890265aa6cf84fdd2dc75efca2229",
+    "source_title": "listofdeathnoteepisodes",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia | ann usa | protoculture addicts remember me | register # Death Note Confirmed to Air on Adult Swim October 20 posted on 2007-09-20 18:44 EDT The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m.",
+    "page": 1,
+    "snippet": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia",
+    "reason": "The passage states the premiere date was October 20, not October 21.",
+    "votes": "2-0",
+    "window": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia | ann usa | protoculture addicts remember me | register # Death Note Confirmed to Air on Adult Swim October 20 posted on 2007-09-20 18:44 EDT The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m."
+   },
+   "evidences": [
+    {
+     "paper_id": "f6196ce7114890265aa6cf84fdd2dc75efca2229",
+     "source_title": "listofdeathnoteepisodes",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia | ann usa | protoculture addicts remember me | register # Death Note Confirmed to Air on Adult Swim October 20 posted on 2007-09-20 18:44 EDT The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m.",
+     "page": 1,
+     "snippet": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia",
+     "reason": "The passage states the premiere date was October 20, not October 21.",
+     "votes": "2-0",
+     "window": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia | ann usa | protoculture addicts remember me | register # Death Note Confirmed to Air on Adult Swim October 20 posted on 2007-09-20 18:44 EDT The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the premiere date was October 20, not October 21.",
+   "component_check": {
+    "found": [
+     "The premiere was on Cartoon Network's Adult Swim"
+    ],
+    "missing": [
+     "\"Death Note\" premiered on October 21, 2007"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The premiere was on Cartoon Network's Adult Swim",
+      "paper_id": "f6196ce7114890265aa6cf84fdd2dc75efca2229",
+      "source_title": "listofdeathnoteepisodes",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20080123185730/http://www.animenewsnetwork.com:80/news/2007-09-20/death-note-confirmed-to-air-on-adult-swim-october-20 ann australia | ann usa | protoculture addicts remember me | register # Death Note Confirmed to Air on Adult Swim October 20 posted on 2007-09-20 18:44 EDT The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On October 21, 2007, \"Death Note\" premiered on Cartoon Network's Adult Swim.",
+    "reason": "The passage asserts a specific fact (a premiere date and channel) that is directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the date 'October 21, 2007'",
+    "rewrite_suggestion": "On October 20, 2007, 'Death Note' premiered on Cartoon Network's Adult Swim.",
+    "proofs": [
+     "The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The Adult Swim network in the United States has confirmed on its online message boards that it will premiere the Death Note supernatural suspense anime series on October 20 at 12:00 a.m.",
+     "why": "The source states the premiere date as October 20, directly contradicting the claim's date of October 21."
+    },
+    "why": "The shown sentence confirms that 'Death Note' premiered on Adult Swim on October 20, not October 21. The date component of the claim is therefore unsupported and contradicted by the source. The author must either correct the date or provide a different source that states October 21."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Today Ljubojevic and Melodi are popular music performers, with a musical tours in many places worldwide but mostly in Eastern and Western Europe; they have given more than 600 concerts in Europe.",
+   "markers": [
+    "divnaljubojevi"
+   ],
+   "paper_ids": [
+    "636296f9ffa348c003756c1aeb34db04707b8165"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "636296f9ffa348c003756c1aeb34db04707b8165",
+    "source_title": "divnaljubojevi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In 1991, Ljubojević founded Divna and Melodi to raise awareness and extend the art of sacred singing, injecting new vitality into ancient Byzantine culture and traditional Serbian, Russian and Byzantine chant.",
+    "page": 1,
+    "snippet": "In 1991, Ljubojević founded Divna and Melodi",
+    "reason": "The passage does not state that Ljubojevic and Melodi are popular music performers or that they have musical tours in many places worldwide.",
+    "votes": "2-0",
+    "window": "In 1991, Ljubojević founded Divna and Melodi to raise awareness and extend the art of sacred singing, injecting new vitality into ancient Byzantine culture and traditional Serbian, Russian and Byzantine chant. The choir has given more than 600 concerts in Europe."
+   },
+   "evidences": [
+    {
+     "paper_id": "636296f9ffa348c003756c1aeb34db04707b8165",
+     "source_title": "divnaljubojevi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In 1991, Ljubojević founded Divna and Melodi to raise awareness and extend the art of sacred singing, injecting new vitality into ancient Byzantine culture and traditional Serbian, Russian and Byzantine chant.",
+     "page": 1,
+     "snippet": "In 1991, Ljubojević founded Divna and Melodi",
+     "reason": "The passage does not state that Ljubojevic and Melodi are popular music performers or that they have musical tours in many places worldwide.",
+     "votes": "2-0",
+     "window": "In 1991, Ljubojević founded Divna and Melodi to raise awareness and extend the art of sacred singing, injecting new vitality into ancient Byzantine culture and traditional Serbian, Russian and Byzantine chant. The choir has given more than 600 concerts in Europe."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Ljubojevic and Melodi are popular music performers or that they have musical tours in many places worldwide.",
+   "component_check": {
+    "found": [
+     "Ljubojevic and Melodi are popular music performers",
+     "they have given more than 600 concerts in Europe"
+    ],
+    "missing": [
+     "they have musical tours in many places worldwide",
+     "their tours are mostly in Eastern and Western Europe"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Ljubojevic and Melodi are popular music performers",
+      "paper_id": "636296f9ffa348c003756c1aeb34db04707b8165",
+      "source_title": "divnaljubojevi",
+      "sentence": "# The Soul of Orthodox Chant Divna and Melodi (Serbia) With Divna and her choir, the Golden Gate of the long-lost sacred world of Byzantine Orthodox chant opens again \"[Divna is] the most remarkable representative of old Byzantine-Russian singing in today's culture\" ─ Serbia-National Review Divna is not just a name, but an entire level in Serbian culture The incomparable Divna Ljubojević and her ethereal interpretations of Orthodox chant are regarded among Serbia's most significant cultural ambassadors.",
+      "page": 1
+     },
+     {
+      "component": "they have given more than 600 concerts in Europe",
+      "paper_id": "636296f9ffa348c003756c1aeb34db04707b8165",
+      "source_title": "divnaljubojevi",
+      "sentence": "The choir has given more than 600 concerts in Europe.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the popularity and concert history of Ljubojevic and Melodi, which are directly attributed to the cited source. The citation is expected to prove these specific claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim describes Ljubojevic and Melodi as 'popular music performers' and asserts they have tours 'in many places worldwide but mostly in Eastern and Western Europe'; the source only identifies them as a sacred Orthodox chant ensemble and mentions concerts only in Europe, not a worldwide tour pattern.",
+    "rewrite_suggestion": "Divna and Melodi, a sacred Orthodox choir, have given more than 600 concerts in Europe.",
+    "proofs": [
+     "The choir has given more than 600 concerts in Europe.",
+     "Divna and Melodi (Serbia)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not prove any component of the claim. The source text contains a sentence verifying the 600-concert claim, but the tool did not show it. More critically, several substantive components—namely that the group are 'popular music performers' and that their tours are 'in many places worldwide but mostly in Eastern and Western Europe'—are entirely absent from the source, making this an author-side problem. Because the claim has both missing components (unsourced) and a provable component that was not shown, the author must rewrite or add citations for the unsupported parts."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "In December 2016, Howell and Lester voiced two gorilla princes named Majinuni and Hafifu respectively, in the episode \"The Lost Gorillas\" in Disney Junior's \"The Lion Guard\".",
+   "markers": [
+    "phillester"
+   ],
+   "paper_ids": [
+    "9446e6af6f0ed270855f48088bb6fb9c343c3d63"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8508,
+   "evidence": {
+    "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+    "source_title": "phillester",
+    "supported": true,
+    "sentence": "Dan and Phil will be portraying two gorilla princes in the episode.",
+    "page": 1,
+    "snippet": "Dan and Phil will be portraying two",
+    "cosine": 0.8508,
+    "reason": "The passage confirms that Dan Howell and Phil Lester voiced two gorilla princes named Majinuni and Hafifu respectively in an episode of Disney's The Lion Guard, and the article date aligns with the claim's December 2016 timeframe.",
+    "window": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan and Phil to Feature in Disney's The Lion Guard By Conor Riley 1 December 2016 ## Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard. Dan and Phil will be portraying two gorilla princes in the episode. Their character names were announced by Dan on Twitter as Majinuni and Hafifu respectively."
+   },
+   "evidences": [
+    {
+     "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+     "source_title": "phillester",
+     "supported": true,
+     "sentence": "Dan and Phil will be portraying two gorilla princes in the episode.",
+     "page": 1,
+     "snippet": "Dan and Phil will be portraying two",
+     "cosine": 0.8508,
+     "reason": "The passage confirms that Dan Howell and Phil Lester voiced two gorilla princes named Majinuni and Hafifu respectively in an episode of Disney's The Lion Guard, and the article date aligns with the claim's December 2016 timeframe.",
+     "window": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan and Phil to Feature in Disney's The Lion Guard By Conor Riley 1 December 2016 ## Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard. Dan and Phil will be portraying two gorilla princes in the episode. Their character names were announced by Dan on Twitter as Majinuni and Hafifu respectively."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage confirms that Dan Howell and Phil Lester voiced two gorilla princes named Majinuni and Hafifu respectively in an episode of Disney's The Lion Guard, and the article date aligns with the claim's December 2016 timeframe.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Howell and Lester voiced two gorilla princes",
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "sentence": "well.. we are two gorilla princes in the new disney cartoon 'the lion guard'!",
+      "page": 1,
+      "snippet": "well.. we are two gorilla princes in"
+     },
+     {
+      "component": "Howell and Lester voiced two gorilla princes",
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan and Phil to Feature in Disney's The Lion Guard By Conor Riley 1 December 2016 ## Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan"
+     },
+     {
+      "component": "gorilla princes named Majinuni and Hafifu respectively",
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "sentence": "Their character names were announced by Dan on Twitter as Majinuni and Hafifu respectively.",
+      "page": 1,
+      "snippet": "Their character names were announced by Dan"
+     },
+     {
+      "component": "in Disney Junior's \"The Lion Guard\"",
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "sentence": "well.. we are two gorilla princes in the new disney cartoon 'the lion guard'!",
+      "page": 1,
+      "snippet": "well.. we are two gorilla princes in"
+     },
+     {
+      "component": "in Disney Junior's \"The Lion Guard\"",
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan and Phil to Feature in Disney's The Lion Guard By Conor Riley 1 December 2016 ## Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan"
+     },
+     {
+      "component": "voiced in December 2016",
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan and Phil to Feature in Disney's The Lion Guard By Conor Riley 1 December 2016 ## Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard.",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan"
+     }
+    ],
+    "uncovered": [
+     "in the episode \"The Lost Gorillas\""
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+      "source_title": "phillester",
+      "text": "The Wayback Machine - https://web.archive.org/web/20170908155239/http://teneightymagazine.com/2016/12/01/dan-and-phil-to-feature-in-disneys-the-lion-guard/ # Dan and Phil to Feature in Disney's The Lion Guard By Conor Riley 1 December 2016 ## Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard. Dan and Phil will be portraying two gorilla princes in the episode. Their character names were announced by Dan on Twitter as Majinuni and Hafifu respectively. remember the mysterious voice acting we did? well.. we are two gorilla princes in the new disney cartoon 'the lion guard'!",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that Howell and Lester voiced the characters in December 2016, only that the episode would air in the US on December 2, 2016.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Howell and Lester voiced the characters in December 2016, only that the episode would air in the US on December 2, 2016",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific episode title 'The Lost Gorillas', the network 'Disney Junior', and the date 'December 2016' as the time of voice recording are not supported by the source.",
+    "rewrite_suggestion": "Howell and Lester voiced two gorilla princes named Majinuni and Hafifu respectively in an episode of Disney's The Lion Guard (the episode aired in the US on December 2, 2016).",
+    "proofs": [
+     "Dan Howell and Phil Lester are lending their voices to an episode of the Disney series The Lion Guard.",
+     "Dan and Phil will be portraying two gorilla princes in the episode.",
+     "Their character names were announced by Dan on Twitter as Majinuni and Hafifu respectively."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source confirms that Howell and Lester voiced two gorilla princes with the names Majinuni and Hafifu in an episode of Disney's The Lion Guard. However, it does not mention the episode title 'The Lost Gorillas', the specific network 'Disney Junior', or that the voice recording occurred in December 2016 (only the article date and US air date are given). These unsupported components require the author to add citations or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "The story of the game is told through a series of conversations and cutscenes, with each of the 35 levels serving as a flashback.",
+   "markers": [
+    "thehongkongmassacre"
+   ],
+   "paper_ids": [
+    "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9218,
+   "evidence": {
+    "paper_id": "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb",
+    "source_title": "thehongkongmassacre",
+    "supported": true,
+    "sentence": "It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events.",
+    "page": 1,
+    "snippet": "It's told through a series of disjointed",
+    "cosine": 0.9218,
+    "reason": "The passage explicitly states that the story is told through cinematics and conversations, with each of the 35 levels serving as a flashback.",
+    "window": "\"There's some semblance of hard-boiled plot backboning the experience – you play an ex-cop out for revenge after his partner was killed by triad gangsters – but it mostly serves as a vehicle for your violent shootouts. It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events. The storytelling may be sub-standard, but the shooting is so electrifying and addictive that the only plot you really need concern yourself with is the plot you'll bury each of your enemies in at the dead triad cemetery."
+   },
+   "evidences": [
+    {
+     "paper_id": "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb",
+     "source_title": "thehongkongmassacre",
+     "supported": true,
+     "sentence": "It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events.",
+     "page": 1,
+     "snippet": "It's told through a series of disjointed",
+     "cosine": 0.9218,
+     "reason": "The passage explicitly states that the story is told through cinematics and conversations, with each of the 35 levels serving as a flashback.",
+     "window": "\"There's some semblance of hard-boiled plot backboning the experience – you play an ex-cop out for revenge after his partner was killed by triad gangsters – but it mostly serves as a vehicle for your violent shootouts. It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events. The storytelling may be sub-standard, but the shooting is so electrifying and addictive that the only plot you really need concern yourself with is the plot you'll bury each of your enemies in at the dead triad cemetery."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the story is told through cinematics and conversations, with each of the 35 levels serving as a flashback.",
+   "covering": {
+    "covered": [
+     {
+      "component": "story told through conversations and cutscenes",
+      "paper_id": "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb",
+      "source_title": "thehongkongmassacre",
+      "sentence": "It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events.",
+      "page": 1,
+      "snippet": "It's told through a series of disjointed"
+     },
+     {
+      "component": "35 levels serving as flashbacks",
+      "paper_id": "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb",
+      "source_title": "thehongkongmassacre",
+      "sentence": "It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events.",
+      "page": 1,
+      "snippet": "It's told through a series of disjointed"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb",
+      "source_title": "thehongkongmassacre",
+      "text": "It's told through a series of disjointed cinematics and bar room conversations, with each of the 35 levels serving as a flashback to prior events.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "Olga Danilov (Template:Lang-he-n; born November 27, 1973) is an Israeli short track speed skater.",
+   "markers": [
+    "olgadanilov"
+   ],
+   "paper_ids": [
+    "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8228,
+   "evidence": {
+    "paper_id": "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b",
+    "source_title": "olgadanilov",
+    "supported": true,
+    "sentence": "# Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov.",
+    "page": 1,
+    "snippet": "# Olga Danilov Full name: Olga Danilov",
+    "cosine": 0.8228,
+    "reason": "The passage explicitly states Olga Danilov's birth date, country as Israel, and sport as Short Track Speed Skating.",
+    "window": "Go Ad-Free. # Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov. ## Results 2002 Winter Salt Lake City Short Track Speed Skating Women's 500 metres 2002 Winter Salt Lake City Short Track Speed Skating Women's 1,000 metres 2002 Winter Salt Lake City Short Track Speed Skating Women's 1,500 metres ## Women's 500 metres Event History 2002 Winter Salt Lake City"
+   },
+   "evidences": [
+    {
+     "paper_id": "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b",
+     "source_title": "olgadanilov",
+     "supported": true,
+     "sentence": "# Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov.",
+     "page": 1,
+     "snippet": "# Olga Danilov Full name: Olga Danilov",
+     "cosine": 0.8228,
+     "reason": "The passage explicitly states Olga Danilov's birth date, country as Israel, and sport as Short Track Speed Skating.",
+     "window": "Go Ad-Free. # Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov. ## Results 2002 Winter Salt Lake City Short Track Speed Skating Women's 500 metres 2002 Winter Salt Lake City Short Track Speed Skating Women's 1,000 metres 2002 Winter Salt Lake City Short Track Speed Skating Women's 1,500 metres ## Women's 500 metres Event History 2002 Winter Salt Lake City"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states Olga Danilov's birth date, country as Israel, and sport as Short Track Speed Skating.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Olga Danilov is an Israeli short track speed skater",
+      "paper_id": "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b",
+      "source_title": "olgadanilov",
+      "sentence": "# Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov.",
+      "page": 1,
+      "snippet": "# Olga Danilov Full name: Olga Danilov"
+     },
+     {
+      "component": "born November 27, 1973",
+      "paper_id": "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b",
+      "source_title": "olgadanilov",
+      "sentence": "# Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov.",
+      "page": 1,
+      "snippet": "# Olga Danilov Full name: Olga Danilov"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b",
+      "source_title": "olgadanilov",
+      "text": "# Olga Danilov Full name: Olga Danilov Original name: אולגה דנילוב Gender: Female Born: November 27, 1973 in Kharkiv, Kharkiv, Ukraine Country: Israel Sport: Short Track Speed Skating Related Olympians: Wife of Aleksandr Danilov.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t14",
+   "text": "On August 21, 2018, KQFO changed their format from adult hits to regional Mexican, branded as \"La Ley\".",
+   "markers": [
+    "kqfo"
+   ],
+   "paper_ids": [
+    "6db68c839c73edfd982efadc35349ef89b447f7f"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8403,
+   "evidence": {
+    "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+    "source_title": "kqfo",
+    "supported": true,
+    "sentence": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\".",
+    "page": 1,
+    "snippet": "(meta data) TITLE: La Ley Kicks Bob-FM",
+    "cosine": 0.8403,
+    "reason": "The passage states that KQFO changed its format from 'Bob-FM' (Variety Hits, which is synonymous with adult hits) to 'La Ley' (Regional Mexican) on August 21, 2018.",
+    "window": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\". The move comes with a new operator for the station as Luis Murillo, Maria Felipe, and Salvador Rodriguez's Diamante Media LLC has begun operating KQFO and Spanish CHR \"Exitos 104.9\" K285FN Kennewick/KQFO-HD2."
+   },
+   "evidences": [
+    {
+     "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+     "source_title": "kqfo",
+     "supported": true,
+     "sentence": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\".",
+     "page": 1,
+     "snippet": "(meta data) TITLE: La Ley Kicks Bob-FM",
+     "cosine": 0.8403,
+     "reason": "The passage states that KQFO changed its format from 'Bob-FM' (Variety Hits, which is synonymous with adult hits) to 'La Ley' (Regional Mexican) on August 21, 2018.",
+     "window": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\". The move comes with a new operator for the station as Luis Murillo, Maria Felipe, and Salvador Rodriguez's Diamante Media LLC has begun operating KQFO and Spanish CHR \"Exitos 104.9\" K285FN Kennewick/KQFO-HD2."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that KQFO changed its format from 'Bob-FM' (Variety Hits, which is synonymous with adult hits) to 'La Ley' (Regional Mexican) on August 21, 2018.",
+   "covering": {
+    "covered": [
+     {
+      "component": "KQFO changed format on August 21, 2018",
+      "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+      "source_title": "kqfo",
+      "sentence": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\".",
+      "page": 1,
+      "snippet": "(meta data) TITLE: La Ley Kicks Bob-FM"
+     },
+     {
+      "component": "format changed from adult hits",
+      "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+      "source_title": "kqfo",
+      "sentence": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\".",
+      "page": 1,
+      "snippet": "(meta data) TITLE: La Ley Kicks Bob-FM"
+     },
+     {
+      "component": "format changed to regional Mexican",
+      "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+      "source_title": "kqfo",
+      "sentence": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\".",
+      "page": 1,
+      "snippet": "(meta data) TITLE: La Ley Kicks Bob-FM"
+     },
+     {
+      "component": "branded as \"La Ley\"",
+      "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+      "source_title": "kqfo",
+      "sentence": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\".",
+      "page": 1,
+      "snippet": "(meta data) TITLE: La Ley Kicks Bob-FM"
+     },
+     {
+      "component": "branded as \"La Ley\"",
+      "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+      "source_title": "kqfo",
+      "sentence": "La Ley La Estación que Manda!",
+      "page": 1,
+      "snippet": "La Ley La Estación que Manda!"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+      "source_title": "kqfo",
+      "text": "(meta data) TITLE: La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco - RadioInsight (meta data) PUBLISHER: https://www.facebook.com/radioinsightcom (meta data) PUBLISHED DATETIME: 2018-08-21T18:13:54+00:00 RadioInsight - Radio Industry News Commentary Discussions # La Ley Kicks Bob-FM Out Of Kennewick/Richland/Pasco By Lance Venta On Aug 21, 2018 Regional Mexican \"99.5 La Ley\" K258CN Richland WA/KQFO-HD3 Pasco has moved its programming to Alexandra Communications' 100.1 KQFO Pasco replacing Variety Hits \"100.1 Bob-FM\". The move comes with a new operator for the station as Luis Murillo, Maria Felipe, and Salvador Rodriguez's Diamante Media LLC has begun operating KQFO and Spanish CHR \"Exitos 104.9\" K285FN Kennewick/KQFO-HD2. The \"Bob-FM\" programming can still be heard in Walla Walla on 104.5 K283BU Walla Walla/KZIU-HD4 Weston ID. Radio La Ley se a cambiado a 100.1fmDiamante Media LLC ? Nueva Frecuencia, Nueva Cobertura, Más Grande, Más Poder! La Ley La Estación que Manda!",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t15",
+   "text": "\"InSight\" traveled 483 million km (300 million mi) during its journey.",
+   "markers": [
+    "insight"
+   ],
+   "paper_ids": [
+    "bc7dbafe24b893b303fc99ba893d980ed6bafbcf"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8913,
+   "evidence": {
+    "paper_id": "bc7dbafe24b893b303fc99ba893d980ed6bafbcf",
+    "source_title": "insight",
+    "supported": true,
+    "sentence": "InSight launched at 4:05 a.m. PDT (7:05 a.m. EDT) Saturday from Vandenberg Air Force Base, California.",
+    "page": 1,
+    "snippet": "InSight launched at 4:05 a.m. PDT (7:05",
+    "cosine": 0.8913,
+    "reason": "The passage explicitly states that the InSight mission is on a 300-million-mile (483-million-kilometer) trip to Mars.",
+    "window": "## News| May 5, 2018 # NASA, ULA Launch Mission to Study How Mars Was Made NASA's Mars Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission is on a 300-million-mile (483-million-kilometer) trip to Mars to study for the first time what lies deep beneath the surface of the Red Planet. InSight launched at 4:05 a.m. PDT (7:05 a.m. EDT) Saturday from Vandenberg Air Force Base, California. \"The United States continues to lead the way to Mars with this next exciting mission to study the Red Planet's core and geological processes ,\" said NASA Administrator Jim Bridenstine."
+   },
+   "evidences": [
+    {
+     "paper_id": "bc7dbafe24b893b303fc99ba893d980ed6bafbcf",
+     "source_title": "insight",
+     "supported": true,
+     "sentence": "InSight launched at 4:05 a.m. PDT (7:05 a.m. EDT) Saturday from Vandenberg Air Force Base, California.",
+     "page": 1,
+     "snippet": "InSight launched at 4:05 a.m. PDT (7:05",
+     "cosine": 0.8913,
+     "reason": "The passage explicitly states that the InSight mission is on a 300-million-mile (483-million-kilometer) trip to Mars.",
+     "window": "## News| May 5, 2018 # NASA, ULA Launch Mission to Study How Mars Was Made NASA's Mars Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission is on a 300-million-mile (483-million-kilometer) trip to Mars to study for the first time what lies deep beneath the surface of the Red Planet. InSight launched at 4:05 a.m. PDT (7:05 a.m. EDT) Saturday from Vandenberg Air Force Base, California. \"The United States continues to lead the way to Mars with this next exciting mission to study the Red Planet's core and geological processes ,\" said NASA Administrator Jim Bridenstine."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the InSight mission is on a 300-million-mile (483-million-kilometer) trip to Mars.",
+   "covering": {
+    "covered": [
+     {
+      "component": "InSight traveled 483 million km",
+      "paper_id": "bc7dbafe24b893b303fc99ba893d980ed6bafbcf",
+      "source_title": "insight",
+      "sentence": "## News| May 5, 2018 # NASA, ULA Launch Mission to Study How Mars Was Made NASA's Mars Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission is on a 300-million-mile (483-million-kilometer) trip to Mars to study for the first time what lies deep beneath the surface of the Red Planet.",
+      "page": 1,
+      "snippet": "## News| May 5, 2018 # NASA,"
+     },
+     {
+      "component": "InSight traveled 300 million mi",
+      "paper_id": "bc7dbafe24b893b303fc99ba893d980ed6bafbcf",
+      "source_title": "insight",
+      "sentence": "## News| May 5, 2018 # NASA, ULA Launch Mission to Study How Mars Was Made NASA's Mars Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission is on a 300-million-mile (483-million-kilometer) trip to Mars to study for the first time what lies deep beneath the surface of the Red Planet.",
+      "page": 1,
+      "snippet": "## News| May 5, 2018 # NASA,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "bc7dbafe24b893b303fc99ba893d980ed6bafbcf",
+      "source_title": "insight",
+      "text": "## News| May 5, 2018 # NASA, ULA Launch Mission to Study How Mars Was Made NASA's Mars Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission is on a 300-million-mile (483-million-kilometer) trip to Mars to study for the first time what lies deep beneath the surface of the Red Planet.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t16",
+   "text": "Leden also holds the gain of height record: 3,970 m (13,025 ft), set in 1992.",
+   "markers": [
+    "hanggliding"
+   ],
+   "paper_ids": [
+    "7f1ab9113f0ea2f6756747c9c9fcc3e2ffcde387"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8187,
+   "evidence": {
+    "paper_id": "7f1ab9113f0ea2f6756747c9c9fcc3e2ffcde387",
+    "source_title": "hanggliding",
+    "supported": false,
+    "sentence": "Number of Twister rotations - winch",
+    "page": 1,
+    "snippet": "Number of Twister rotations - winch",
+    "cosine": 0.8187,
+    "reason": "The passage does not mention Leden, the gain of height record, or the year 1992.",
+    "window": "Number of Twister rotations - foot launch Number of Twister rotations - winch Out-and-return distance"
+   },
+   "evidences": [
+    {
+     "paper_id": "7f1ab9113f0ea2f6756747c9c9fcc3e2ffcde387",
+     "source_title": "hanggliding",
+     "supported": false,
+     "sentence": "Number of Twister rotations - winch",
+     "page": 1,
+     "snippet": "Number of Twister rotations - winch",
+     "cosine": 0.8187,
+     "reason": "The passage does not mention Leden, the gain of height record, or the year 1992.",
+     "window": "Number of Twister rotations - foot launch Number of Twister rotations - winch Out-and-return distance"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "leden",
+    "missing_from": [
+     "7f1ab9113f0ea2f6756747c9c9fcc3e2ffcde387"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Leden holds the gain of height record: 3,970 m (13,025 ft), set in 1992.",
+    "reason": "The passage asserts a specific fact (a record) and attributes it to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "That Leden holds the gain of height record of 3,970 m (13,025 ft) set in 1992",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is a listing of record categories and search options for hang gliding and paragliding; it contains no mention of Leden, any specific gain-of-height value, or the year 1992. The shown sentence is irrelevant. None of the claim's substantive components are provable from this source, so the author must either provide a correct citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "He returned his brother Admiral Charles Holmes for Newport in 1758.",
+   "markers": [
+    "thomasholmes1stbaronholm"
+   ],
+   "paper_ids": [
+    "a52386d90916e4f6f7e918284e61c1347aadd3b3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9408,
+   "evidence": {
+    "paper_id": "a52386d90916e4f6f7e918284e61c1347aadd3b3",
+    "source_title": "thomasholmes1stbaronholm",
+    "supported": false,
+    "sentence": "On the same condition swore fealty to Pelham, at his death on the same condition to Newcastle.",
+    "page": 1,
+    "snippet": "On the same condition swore fealty to",
+    "cosine": 0.9408,
+    "reason": "The passage mentions Lord Holmes and his political dealings but does not mention his brother Admiral Charles Holmes or a return to Newport in 1758.",
+    "window": "1763- d. ### Biography Against Thomas Holmes's name in Bute's list of December 1761 appears the note: Opponent to Sir Robert Walpole, afterwards attached to him on condition that he should have the Government interest to make the boroughs of the Isle of Wight. On the same condition swore fealty to Pelham, at his death on the same condition to Newcastle. And this is how he was 'making' two of the boroughs:1 Lord Holmes ever since he had the management of affairs in that corner of the kingdom has followed the same sure policy at Newport which secured him Yarmouth."
+   },
+   "evidences": [
+    {
+     "paper_id": "a52386d90916e4f6f7e918284e61c1347aadd3b3",
+     "source_title": "thomasholmes1stbaronholm",
+     "supported": false,
+     "sentence": "On the same condition swore fealty to Pelham, at his death on the same condition to Newcastle.",
+     "page": 1,
+     "snippet": "On the same condition swore fealty to",
+     "cosine": 0.9408,
+     "reason": "The passage mentions Lord Holmes and his political dealings but does not mention his brother Admiral Charles Holmes or a return to Newport in 1758.",
+     "window": "1763- d. ### Biography Against Thomas Holmes's name in Bute's list of December 1761 appears the note: Opponent to Sir Robert Walpole, afterwards attached to him on condition that he should have the Government interest to make the boroughs of the Isle of Wight. On the same condition swore fealty to Pelham, at his death on the same condition to Newcastle. And this is how he was 'making' two of the boroughs:1 Lord Holmes ever since he had the management of affairs in that corner of the kingdom has followed the same sure policy at Newport which secured him Yarmouth."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "for Newport",
+     "in 1758"
+    ],
+    "missing": [
+     "He returned his brother Admiral Charles Holmes"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "for Newport",
+      "paper_id": "a52386d90916e4f6f7e918284e61c1347aadd3b3",
+      "source_title": "thomasholmes1stbaronholm",
+      "sentence": "I don't choose my brothers [both M.P.s] or any other person should be acquainted with the affair'.5 In the same letter: 'I can assure your Grace that I can choose here [Newport] any two persons I please and shall take care they shall always be in your interest.'",
+      "page": 1
+     },
+     {
+      "component": "in 1758",
+      "paper_id": "a52386d90916e4f6f7e918284e61c1347aadd3b3",
+      "source_title": "thomasholmes1stbaronholm",
+      "sentence": "When Jenison died, 15 May 1758, Holmes asked the Duke to have some one pay the money into his account at Hoare's bank, 'and send me their receipt as he used to do ...",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Admiral Charles Holmes was returned for Newport in 1758.",
+    "reason": "The passage states a specific historical event and date, implying the cited source is expected to provide this factual information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "That Thomas Holmes returned his brother Admiral Charles Holmes as MP for Newport in 1758",
+    "rewrite_suggestion": "Thomas Holmes had the power to choose any two persons for Newport and his brothers were both MPs, but the specific return of Admiral Charles Holmes in 1758 is not in the source.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Thomas Holmes returned his brother Admiral Charles Holmes for Newport in 1758. The provided source text does not mention Admiral Charles Holmes by name, nor does it specify that his brother was returned for Newport in 1758. It only notes that Holmes's brothers were both MPs and that he could control Newport elections. Therefore, the specific factual claim is not supported by the cited source."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Neville Price (\"Neville Graham Price;\" 1 June 1929 in East London – 28 December 1980) was a South African long jumper who competed in the 1952 Summer Olympics and in the 1956 Summer Olympics.",
+   "markers": [
+    "nevilleprice"
+   ],
+   "paper_ids": [
+    "1d2fef789204c0ae7bca76832054edadf67fdd73"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+    "source_title": "nevilleprice",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "# Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics ## Biography Neville Price attended the University of Oklahoma and was a three-time conference champion in the long jump (1952-54).",
+    "page": 1,
+    "snippet": "# Neville Price Full name: Neville Graham",
+    "reason": "the passage does not mention his participation in the 1952 or 1956 Summer Olympics",
+    "votes": "2-0",
+    "window": "# Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics ## Biography Neville Price attended the University of Oklahoma and was a three-time conference champion in the long jump (1952-54). Price competed at the 1950 British Empire Games, winning the long jump and placing seventh in the triple jump."
+   },
+   "evidences": [
+    {
+     "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+     "source_title": "nevilleprice",
+     "sentence": "Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+     "source_title": "nevilleprice",
+     "sentence": "## Results 1952 Summer Men's Long Jump South Africa 1956 Summer Men's Long Jump South Africa",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states Neville Price's full name, birth date and location, death date and location, and his participation in the 1952 and 1956 Summer Olympics. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "Neville Price was born on June 1, 1929, in East London.",
+     "Neville Price died on December 28, 1980.",
+     "Neville Price was a South African long jumper.",
+     "Neville Price competed in the 1952 Summer Olympics."
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Neville Price was born on June 1, 1929, in East London.",
+      "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+      "source_title": "nevilleprice",
+      "sentence": "# Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics ## Biography Neville Price attended the University of Oklahoma and was a three-time conference champion in the long jump (1952-54).",
+      "page": 1
+     },
+     {
+      "component": "Neville Price died on December 28, 1980.",
+      "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+      "source_title": "nevilleprice",
+      "sentence": "# Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics ## Biography Neville Price attended the University of Oklahoma and was a three-time conference champion in the long jump (1952-54).",
+      "page": 1
+     },
+     {
+      "component": "Neville Price was a South African long jumper.",
+      "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+      "source_title": "nevilleprice",
+      "sentence": "# Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics ## Biography Neville Price attended the University of Oklahoma and was a three-time conference champion in the long jump (1952-54).",
+      "page": 1
+     },
+     {
+      "component": "Neville Price competed in the 1952 Summer Olympics.",
+      "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+      "source_title": "nevilleprice",
+      "sentence": "## Results 1952 Summer Men's Long Jump South Africa 1956 Summer Men's Long Jump South Africa ## Men's Long Jump Event History 1952 Summer South Africa Final Round 1952 Summer South Africa Final Round Round One 1952 Summer South Africa Final Round Round Two 1952 Summer South Africa Final Round",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Neville Price Full name: Neville Graham Price Gender: Male Height: 6-0.5 (185 cm) Weight: 170 lbs (77 kg) Born: June 1, 1929 in East London, Eastern Cape, South Africa Died: December 28, 1980 in Johannesburg, Gauteng, South Africa Country: South Africa Sport: Athletics",
+     "## Results 1952 Summer Men's Long Jump South Africa 1956 Summer Men's Long Jump South Africa"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences prove name, birth and death details, nationality, and sport (long jumper via 'Athletics' and biography mentions of long jump). However, they do not show evidence that Price competed in the 1952 and 1956 Summer Olympics. That evidence exists in the source text under 'Results' (listing both Olympics), so the tool's display is incomplete. Therefore the tool must fix by including those result lines.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t19",
+   "text": "However, after one season, McCarthy returned to Espanola and the head coaching position.",
+   "markers": [
+    "espanolaexpress"
+   ],
+   "paper_ids": [
+    "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+    "source_title": "espanolaexpress",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe.",
+    "page": 1,
+    "snippet": "During the 2016-17 he decided to pursue",
+    "reason": "The passage states that McCarthy returned to Espanola to lead the Express in the upcoming season, which supports the claim that he returned to Espanola and the head coaching position after one season.",
+    "votes": "2-0",
+    "window": "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe. He has returned to Espanola to his home and family to lead the Express in the upcoming season and many more to come."
+   },
+   "evidences": [
+    {
+     "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+     "source_title": "espanolaexpress",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe.",
+     "page": 1,
+     "snippet": "During the 2016-17 he decided to pursue",
+     "reason": "The passage states that McCarthy returned to Espanola to lead the Express in the upcoming season, which supports the claim that he returned to Espanola and the head coaching position after one season.",
+     "votes": "2-0",
+     "window": "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe. He has returned to Espanola to his home and family to lead the Express in the upcoming season and many more to come."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that McCarthy returned to Espanola to lead the Express in the upcoming season, which supports the claim that he returned to Espanola and the head coaching position after one season.",
+   "covering": {
+    "covered": [
+     {
+      "component": "McCarthy returned to Espanola",
+      "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+      "source_title": "espanolaexpress",
+      "sentence": "– The Espanola Express of the Northern Ontario Junior Hockey League announced is pleased to announce the return of Tom McCarthy as head coach for the upcoming 2017-18 NOJHL season.",
+      "page": 1,
+      "snippet": "– The Espanola Express of the Northern"
+     },
+     {
+      "component": "McCarthy returned to Espanola",
+      "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+      "source_title": "espanolaexpress",
+      "sentence": "He has returned to Espanola to his home and family to lead the Express in the upcoming season and many more to come.",
+      "page": 1,
+      "snippet": "He has returned to Espanola to his"
+     },
+     {
+      "component": "McCarthy returned to Espanola",
+      "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+      "source_title": "espanolaexpress",
+      "sentence": "McCarthy returns with his wealth of knowledge and experience to Espanola to start the upcoming season.",
+      "page": 1,
+      "snippet": "McCarthy returns with his wealth of knowledge"
+     },
+     {
+      "component": "McCarthy returned to the head coaching position",
+      "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+      "source_title": "espanolaexpress",
+      "sentence": "– The Espanola Express of the Northern Ontario Junior Hockey League announced is pleased to announce the return of Tom McCarthy as head coach for the upcoming 2017-18 NOJHL season.",
+      "page": 1,
+      "snippet": "– The Espanola Express of the Northern"
+     },
+     {
+      "component": "after one season",
+      "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+      "source_title": "espanolaexpress",
+      "sentence": "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe.",
+      "page": 1,
+      "snippet": "During the 2016-17 he decided to pursue"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+      "source_title": "espanolaexpress",
+      "text": "– The Espanola Express of the Northern Ontario Junior Hockey League announced is pleased to announce the return of Tom McCarthy as head coach for the upcoming 2017-18 NOJHL season. \"We couldn't be happier to welcome Tom back home, as his 20 years coaching experience is matched by no other in the league,\" claimed Express general manager Chad Clarke. McCarthy returns with his wealth of knowledge and experience to Espanola to start the upcoming season. A coach with NHL playing experience, McCarthy played 529 games in the NHL amassing 437 points with the Minnesota North Stars and the Boston Bruins with 190 goals and 247 assists. He also played in both NHL Stanley Cup playoff games and NHL All-Star games as a star left winger. His credentials also boast being drafted No. 1 ahead of Wayne Gretzky in the OHL Priority Selection, where he went on to play two seasons with the Oshawa Generals, including a 144-point campaign in 63 outings with the Generals. \"Tom will once again play a very important role in the success of our organization as we owe it to our fans, sponsors and players to build a competitive team to go deep in the playoffs this upcoming season, that our great community can be proud of,\" added Clarke. \"We have a new approach to building our team this year and we are pleased with the results we have seen already and this is only one of the significant changes you will see this year as we revamp our image and culture from the ground up,\" stated Clarke. McCarthy had served as head coach four of the past five years in Espanola, helping many young student-athletes achieve their dreams and goals. During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe. He has returned to Espanola to his home and family to lead the Express in the upcoming season and many more to come.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states McCarthy coached pro in Europe during the 2016-17 season, not that he returned after one season.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe.",
+     "– The Espanola Express of the Northern Ontario Junior Hockey League announced is pleased to announce the return of Tom McCarthy as head coach for the upcoming 2017-18 NOJHL season.",
+     "He has returned to Espanola to his home and family to lead the Express in the upcoming season and many more to come.",
+     "McCarthy returns with his wealth of knowledge and experience to Espanola to start the upcoming season."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences collectively prove every component of the claim: the first shows McCarthy left for one season (2016-17), and the subsequent sentences show his return to Espanola as head coach for the 2017-18 season. No component is missing or contradicted."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "He grew up playing soccer and boxing.",
+   "markers": [
+    "isaiahstewart"
+   ],
+   "paper_ids": [
+    "5ac70e4c0f7e085c78a869391aafae466f2595a6"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9278,
+   "evidence": {
+    "paper_id": "5ac70e4c0f7e085c78a869391aafae466f2595a6",
+    "source_title": "isaiahstewart",
+    "supported": true,
+    "sentence": "\"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award.",
+    "page": 1,
+    "snippet": "\"I played soccer, and I was into",
+    "cosine": 0.9278,
+    "reason": "The passage directly states that the subject played soccer and was into boxing before focusing on basketball.",
+    "window": "With Stewart averaging 19.5 and 12.0 rebounds as a senior, La Lumiere was 30-1 and was runner-up in the high-school nationals. \"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award. \"Ever since I picked up a basketball it intrigued me."
+   },
+   "evidences": [
+    {
+     "paper_id": "5ac70e4c0f7e085c78a869391aafae466f2595a6",
+     "source_title": "isaiahstewart",
+     "supported": true,
+     "sentence": "\"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award.",
+     "page": 1,
+     "snippet": "\"I played soccer, and I was into",
+     "cosine": 0.9278,
+     "reason": "The passage directly states that the subject played soccer and was into boxing before focusing on basketball.",
+     "window": "With Stewart averaging 19.5 and 12.0 rebounds as a senior, La Lumiere was 30-1 and was runner-up in the high-school nationals. \"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award. \"Ever since I picked up a basketball it intrigued me."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the subject played soccer and was into boxing before focusing on basketball.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He grew up playing soccer",
+      "paper_id": "5ac70e4c0f7e085c78a869391aafae466f2595a6",
+      "source_title": "isaiahstewart",
+      "sentence": "\"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award.",
+      "page": 1,
+      "snippet": "\"I played soccer, and I was into"
+     },
+     {
+      "component": "He grew up playing boxing",
+      "paper_id": "5ac70e4c0f7e085c78a869391aafae466f2595a6",
+      "source_title": "isaiahstewart",
+      "sentence": "\"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award.",
+      "page": 1,
+      "snippet": "\"I played soccer, and I was into"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5ac70e4c0f7e085c78a869391aafae466f2595a6",
+      "source_title": "isaiahstewart",
+      "text": "\"I played soccer, and I was into boxing before I started playing basketball serious in the fifth grade,\" said Stewart, who won the Naismith High School Player of the Year award.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t21",
+   "text": "He competed at the 1956 Summer Olympics and the 1960 Summer Olympics.",
+   "markers": [
+    "alexandrupopescu"
+   ],
+   "paper_ids": [
+    "b43a0d405a58910ccf8f92090bccaaea493ebbef"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8097,
+   "evidence": {
+    "paper_id": "b43a0d405a58910ccf8f92090bccaaea493ebbef",
+    "source_title": "alexandrupopescu",
+    "supported": true,
+    "sentence": "# Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970",
+    "page": 1,
+    "snippet": "# Alexandru Popescu Full name: Alexandru Popescu",
+    "cosine": 0.8097,
+    "reason": "The passage explicitly lists \"1956 Summer\" and \"1960 Summer\" under the \"Results\" section for the athlete, directly supporting the claim that he competed in those Olympics.",
+    "window": "Go Ad-Free. # Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970"
+   },
+   "evidences": [
+    {
+     "paper_id": "b43a0d405a58910ccf8f92090bccaaea493ebbef",
+     "source_title": "alexandrupopescu",
+     "supported": true,
+     "sentence": "# Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970",
+     "page": 1,
+     "snippet": "# Alexandru Popescu Full name: Alexandru Popescu",
+     "cosine": 0.8097,
+     "reason": "The passage explicitly lists \"1956 Summer\" and \"1960 Summer\" under the \"Results\" section for the athlete, directly supporting the claim that he competed in those Olympics.",
+     "window": "Go Ad-Free. # Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly lists \"1956 Summer\" and \"1960 Summer\" under the \"Results\" section for the athlete, directly supporting the claim that he competed in those Olympics.",
+   "covering": {
+    "covered": [
+     {
+      "component": "competed at the 1956 Summer Olympics",
+      "paper_id": "b43a0d405a58910ccf8f92090bccaaea493ebbef",
+      "source_title": "alexandrupopescu",
+      "sentence": "# Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970",
+      "page": 1,
+      "snippet": "# Alexandru Popescu Full name: Alexandru Popescu"
+     },
+     {
+      "component": "competed at the 1960 Summer Olympics",
+      "paper_id": "b43a0d405a58910ccf8f92090bccaaea493ebbef",
+      "source_title": "alexandrupopescu",
+      "sentence": "# Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970",
+      "page": 1,
+      "snippet": "# Alexandru Popescu Full name: Alexandru Popescu"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b43a0d405a58910ccf8f92090bccaaea493ebbef",
+      "source_title": "alexandrupopescu",
+      "text": "# Alexandru Popescu Full name: Alexandru Popescu Gender: Male Height: 5-8.5 (174 cm) Weight: 163 lbs (74 kg) Born: October 12, 1935 in Bucureşti, Bucureşti, Romania Country: Romania Sport: Swimming ## Results 1956 Summer Men's 200 metres Butterfly 1960 Summer Men's 200 metres Butterfly 7 h2 r2/3 ## Men's 200 metres Butterfly Event History 1956 Summer 1956 Summer Round One Heat One 1960 Summer Semi-Finals Heat Two 1960 Summer Round One Heat One id: 49,970",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t22",
+   "text": "The GMB's sections were rationalised in 2006, with the union since then consisting of GMB Commercial Services, GMB Manufacturing, and GMB Public Services.",
+   "markers": [
+    "gmbtradeunion"
+   ],
+   "paper_ids": [
+    "63a8692dc08f07e6aca071a4ce3da394477ea54c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.922,
+   "evidence": {
+    "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+    "source_title": "gmbtradeunion",
+    "supported": true,
+    "sentence": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+    "page": 1,
+    "snippet": "The 2006 GMB Congress established three Industrial",
+    "cosine": 0.922,
+    "reason": "The passage directly states that the 2006 GMB Congress established the three Industrial Sections listed in the claim.",
+    "window": "# Your GMB: Your GMB The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services. Within each of GMB's Sections are Sub Sections that are headed by a National Secretary and/or National Officer."
+   },
+   "evidences": [
+    {
+     "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+     "source_title": "gmbtradeunion",
+     "supported": true,
+     "sentence": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+     "page": 1,
+     "snippet": "The 2006 GMB Congress established three Industrial",
+     "cosine": 0.922,
+     "reason": "The passage directly states that the 2006 GMB Congress established the three Industrial Sections listed in the claim.",
+     "window": "# Your GMB: Your GMB The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services. Within each of GMB's Sections are Sub Sections that are headed by a National Secretary and/or National Officer."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the 2006 GMB Congress established the three Industrial Sections listed in the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "GMB's sections were rationalised in 2006",
+      "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+      "source_title": "gmbtradeunion",
+      "sentence": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+      "page": 1,
+      "snippet": "The 2006 GMB Congress established three Industrial"
+     },
+     {
+      "component": "union since then consisting of GMB Commercial Services",
+      "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+      "source_title": "gmbtradeunion",
+      "sentence": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+      "page": 1,
+      "snippet": "The 2006 GMB Congress established three Industrial"
+     },
+     {
+      "component": "GMB Manufacturing",
+      "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+      "source_title": "gmbtradeunion",
+      "sentence": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+      "page": 1,
+      "snippet": "The 2006 GMB Congress established three Industrial"
+     },
+     {
+      "component": "GMB Public Services",
+      "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+      "source_title": "gmbtradeunion",
+      "sentence": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+      "page": 1,
+      "snippet": "The 2006 GMB Congress established three Industrial"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+      "source_title": "gmbtradeunion",
+      "text": "The 2006 GMB Congress established three Industrial Sections: GMB Commercial Services, GMB Manufacturing, GMB Public Services.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t23",
+   "text": "The book examines how contemporary African American artists, writers, and intellectuals antebellum slavery within post-Civil Rights America in order to challenge the ongoing amnesia of slavery from America’s civic myths and to reimagine a democratic future.",
+   "markers": [
+    "salamishahtillet"
+   ],
+   "paper_ids": [
+    "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9535,
+   "evidence": {
+    "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+    "source_title": "salamishahtillet",
+    "supported": true,
+    "sentence": "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+    "page": 1,
+    "snippet": "Her book Sites of Slavery: Citizenship and",
+    "cosine": 0.9535,
+    "reason": "The passage directly states that the book examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America to challenge the exclusion of African Americans from America's civic myths and to model a racially democratic future, which aligns with the claim's assertions.",
+    "window": "In 2013-14, she was a Scholar-in-Residence at Schomburg Center for Research in Black Culture. Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future. In 2010, she co-edited the Callaloo: A Journal of African Diaspora Arts and Letters Special Issue on Ethiopia and her work has appeared in American Literary History, American Quarterly, Callaloo, Novel, Research in African Literatures, Savoring the Salt: The Legacy of Toni Cade Bambara, Violence in the Lives of Black Women: Battered, Black, and Blue, and Women's Review of Books."
+   },
+   "evidences": [
+    {
+     "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+     "source_title": "salamishahtillet",
+     "supported": true,
+     "sentence": "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+     "page": 1,
+     "snippet": "Her book Sites of Slavery: Citizenship and",
+     "cosine": 0.9535,
+     "reason": "The passage directly states that the book examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America to challenge the exclusion of African Americans from America's civic myths and to model a racially democratic future, which aligns with the claim's assertions.",
+     "window": "In 2013-14, she was a Scholar-in-Residence at Schomburg Center for Research in Black Culture. Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future. In 2010, she co-edited the Callaloo: A Journal of African Diaspora Arts and Letters Special Issue on Ethiopia and her work has appeared in American Literary History, American Quarterly, Callaloo, Novel, Research in African Literatures, Savoring the Salt: The Legacy of Toni Cade Bambara, Violence in the Lives of Black Women: Battered, Black, and Blue, and Women's Review of Books."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the book examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America to challenge the exclusion of African Americans from America's civic myths and to model a racially democratic future, which aligns with the claim's assertions.",
+   "covering": {
+    "covered": [
+     {
+      "component": "book examines how contemporary African American artists, writers, and intellectuals antebellum slavery within post-Civil Rights America",
+      "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+      "source_title": "salamishahtillet",
+      "sentence": "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+      "page": 1,
+      "snippet": "Her book Sites of Slavery: Citizenship and"
+     },
+     {
+      "component": "challenge the ongoing amnesia of slavery from America’s civic myths",
+      "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+      "source_title": "salamishahtillet",
+      "sentence": "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+      "page": 1,
+      "snippet": "Her book Sites of Slavery: Citizenship and"
+     },
+     {
+      "component": "reimagine a democratic future",
+      "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+      "source_title": "salamishahtillet",
+      "sentence": "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+      "page": 1,
+      "snippet": "Her book Sites of Slavery: Citizenship and"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+      "source_title": "salamishahtillet",
+      "text": "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the passage states the book challenges the 'exclusion of African Americans from America's civic myths' not the 'amnesia of slavery from America’s civic myths'.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that the book challenges 'the ongoing amnesia of slavery from America’s civic myths' and aims to 'reimagine a democratic future,' but the source says 'challenge the ongoing exclusion of African Americans from America's civic myths' and 'model a racially democratic future.' Additionally, the claim lacks the verb 'remember' before 'antebellum slavery.'",
+    "rewrite_suggestion": "The book examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future.",
+    "proofs": [
+     "Her book Sites of Slavery: Citizenship and Racial Democracy in the Post-Civil Rights Imagination (Duke University Press, 2012) examines how contemporary African American artists, writers, and intellectuals remember antebellum slavery within post-Civil Rights America in order to challenge the ongoing exclusion of African Americans from America's civic myths and to model a racially democratic future."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is from the source but does not support the claim as written. The claim replaces 'exclusion of African Americans' with 'amnesia of slavery', changes 'model a racially democratic future' to 'reimagine a democratic future', and omits the verb 'remember' before 'antebellum slavery'. These components are not present in the source text and cannot be inferred, so the author must either add a citation for these subclaims or rewrite to match the source."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "On 8 January 2015, Andrew Adamson is set to direct \"Inherit the Earth,\" with Oren Uzeil writing the script.",
+   "markers": [
+    "michaelbaysunrealizedpro"
+   ],
+   "paper_ids": [
+    "9602e5d49eda965b40a4e6814a902724968e97d6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.799,
+   "evidence": {
+    "paper_id": "9602e5d49eda965b40a4e6814a902724968e97d6",
+    "source_title": "michaelbaysunrealizedpro",
+    "supported": false,
+    "sentence": "Variety Intelligence Platform August 21, 2018 4:15PM PT # Sony Taps Kornél Mundruczó to Direct 'Inherit the Earth' (EXCLUSIVE) CREDIT: SEBASTIEN NOGIER/EPA/REX/Shutterstock Kornél Mundruczó has been tapped to direct \"Inherit the Earth,\" Variety has learned.",
+    "page": 1,
+    "snippet": "Variety Intelligence Platform August 21, 2018 4:15PM",
+    "cosine": 0.799,
+    "reason": "The passage states that Kornél Mundruczó is set to direct 'Inherit the Earth,' not Andrew Adamson, and does not mention Oren Uzeil as the writer.",
+    "window": "(meta data) TITLE: Kornél Mundruczó to Direct 'Inherit the Earth' (EXCLUSIVE) – Variety (meta data) AUTHOR: Brent Lang (meta data) PUBLISHED DATETIME: 2018-08-21T23:15:00+00:00 Read Next: Film Review: 'Fiddler: A Miracle of Miracles' Subscribe Today! Variety Intelligence Platform August 21, 2018 4:15PM PT # Sony Taps Kornél Mundruczó to Direct 'Inherit the Earth' (EXCLUSIVE) CREDIT: SEBASTIEN NOGIER/EPA/REX/Shutterstock Kornél Mundruczó has been tapped to direct \"Inherit the Earth,\" Variety has learned. The science-fiction film has been in development for several years at Sony Pictures in different iterations."
+   },
+   "evidences": [
+    {
+     "paper_id": "9602e5d49eda965b40a4e6814a902724968e97d6",
+     "source_title": "michaelbaysunrealizedpro",
+     "supported": false,
+     "sentence": "Variety Intelligence Platform August 21, 2018 4:15PM PT # Sony Taps Kornél Mundruczó to Direct 'Inherit the Earth' (EXCLUSIVE) CREDIT: SEBASTIEN NOGIER/EPA/REX/Shutterstock Kornél Mundruczó has been tapped to direct \"Inherit the Earth,\" Variety has learned.",
+     "page": 1,
+     "snippet": "Variety Intelligence Platform August 21, 2018 4:15PM",
+     "cosine": 0.799,
+     "reason": "The passage states that Kornél Mundruczó is set to direct 'Inherit the Earth,' not Andrew Adamson, and does not mention Oren Uzeil as the writer.",
+     "window": "(meta data) TITLE: Kornél Mundruczó to Direct 'Inherit the Earth' (EXCLUSIVE) – Variety (meta data) AUTHOR: Brent Lang (meta data) PUBLISHED DATETIME: 2018-08-21T23:15:00+00:00 Read Next: Film Review: 'Fiddler: A Miracle of Miracles' Subscribe Today! Variety Intelligence Platform August 21, 2018 4:15PM PT # Sony Taps Kornél Mundruczó to Direct 'Inherit the Earth' (EXCLUSIVE) CREDIT: SEBASTIEN NOGIER/EPA/REX/Shutterstock Kornél Mundruczó has been tapped to direct \"Inherit the Earth,\" Variety has learned. The science-fiction film has been in development for several years at Sony Pictures in different iterations."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On 8 January 2015, Andrew Adamson is set to direct \"Inherit the Earth,\" with Oren Uzeil writing the script.",
+    "reason": "The passage asserts specific facts (a date, names, and a project title) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The date '8 January 2015', the director 'Andrew Adamson', and the writer 'Oren Uzeil' are all absent from the cited source.",
+    "rewrite_suggestion": "The script for 'Inherit the Earth' was picked up by Sony in 2011, and at one point Mike Flanagan was attached to write and direct; later, in 2018, Kornél Mundruczó was tapped to direct with Kata Weber writing the screenplay.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the tool discusses Kornél Mundruczó being tapped to direct in 2018, not Andrew Adamson in 2015. The provided source text contains no mention of Andrew Adamson, Oren Uzeil, or the date 8 January 2015. Therefore, every substantive component of the claim is unsupported by the cited source, requiring the author to either add a citation for those elements or rewrite the claim."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "As a result, large arrays of solar photovoltaics became a much less attractive investment opportunity for developers, especially for projects greater than 250 kW, so large field arrays such as these were less likely to be built beyond the 1 August 2011 cut off date, at least not until 2012, when PV prices reduced somewhat - a utility scale solar farm is paid 8.9 p/kWhr generated.",
+   "markers": [
+    "solarpowerintheunitedkin"
+   ],
+   "paper_ids": [
+    "ca8746b96f10eabead3fe64623740a2919bf6b72"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ca8746b96f10eabead3fe64623740a2919bf6b72",
+    "source_title": "solarpowerintheunitedkin",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": ">10 – 50kW Higher rate Solar PV >10 – 50kW Medium rate Solar PV >50 – 250kW Higher rate Solar PV >50 – 250kW Medium rate Solar PV =250kW Lower rate Solar PV >250kW – 1MW Solar PV >1MW – 5MW and =50kW >50 – 100kW >100kW – 1.5MW",
+    "page": 1,
+    "snippet": ">10 – 50kW Higher rate Solar PV",
+    "reason": "the passage does not state that large arrays of solar photovoltaics became a less attractive investment opportunity for developers, nor does it mention a cut off date of 1 August 2011 or that PV prices reduced somewhat in 2012, nor does it state that a utility scale solar farm is paid 8.9 p/kWhr generated.",
+    "votes": "2-0",
+    "window": ">10 – 50kW Higher rate Solar PV >10 – 50kW Medium rate Solar PV >50 – 250kW Higher rate Solar PV >50 – 250kW Medium rate Solar PV =250kW Lower rate Solar PV >250kW – 1MW Solar PV >1MW – 5MW and =50kW >50 – 100kW >100kW – 1.5MW"
+   },
+   "evidences": [
+    {
+     "paper_id": "ca8746b96f10eabead3fe64623740a2919bf6b72",
+     "source_title": "solarpowerintheunitedkin",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": ">10 – 50kW Higher rate Solar PV >10 – 50kW Medium rate Solar PV >50 – 250kW Higher rate Solar PV >50 – 250kW Medium rate Solar PV =250kW Lower rate Solar PV >250kW – 1MW Solar PV >1MW – 5MW and =50kW >50 – 100kW >100kW – 1.5MW",
+     "page": 1,
+     "snippet": ">10 – 50kW Higher rate Solar PV",
+     "reason": "the passage does not state that large arrays of solar photovoltaics became a less attractive investment opportunity for developers, nor does it mention a cut off date of 1 August 2011 or that PV prices reduced somewhat in 2012, nor does it state that a utility scale solar farm is paid 8.9 p/kWhr generated.",
+     "votes": "2-0",
+     "window": ">10 – 50kW Higher rate Solar PV >10 – 50kW Medium rate Solar PV >50 – 250kW Higher rate Solar PV >50 – 250kW Medium rate Solar PV =250kW Lower rate Solar PV >250kW – 1MW Solar PV >1MW – 5MW and =50kW >50 – 100kW >100kW – 1.5MW"
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that large arrays of solar photovoltaics became a less attractive investment opportunity for developers, nor does it mention a cut off date of 1 August 2011 or that PV prices reduced somewhat in 2012, nor does it state that a utility scale solar farm is paid 8.9 p/kWhr generated.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "a utility scale solar farm is paid 8.9 p/kWhr generated.",
+    "reason": "The passage states a specific financial detail (8.9 p/kWhr) for utility-scale solar farms, which is directly attributed to the cited source. This is a factual claim that the source is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes multiple unsourced components: the 1 August 2011 cut-off date, the assertion that large arrays became less attractive investments, the timing of price reductions in 2012, and the specific rate of 8.9 p/kWhr for utility-scale solar farms. None of these appear in the cited source, which only lists feed-in tariff rates by size and date.",
+    "rewrite_suggestion": "The feed-in tariff rate for solar PV systems of 250 kW or larger is listed as a lower rate (see table), but the source does not provide a specific rate of 8.9 p/kWhr, a cut-off date of 1 August 2011, or any discussion of investment attractiveness or 2012 price reductions.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is a garbled fragment of a tariff table that does not address any component of the claim. The source text as a whole lacks any statement about investment attractiveness, a cut-off date of 1 August 2011, price reductions in 2012, or a specific rate of 8.9 p/kWhr. Therefore, every substantive component of the claim is unsourced, requiring the author to add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "Majid has played in several World Cup of Pool events representing Qatar, including reaching the quarter-finals at the 2015 event.",
+   "markers": [
+    "waleedmajid"
+   ],
+   "paper_ids": [
+    "7f498a9a0eed308b74445929d2022b02923dbb02"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "7f498a9a0eed308b74445929d2022b02923dbb02",
+    "source_title": "waleedmajid",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "25, 2015 Round 2 Scores Qatar 7-3 Czech Republic Finland (10) 7-4 Singapore England B (15) 7-4 Philippines (2) Friday evening was a tale of contrasting fortunes as Qatar put on a masterful performance to reach the quarter-finals for the first time in their histo... To read the entire story, you must be You are currently viewing the site as a visitor, or you have not logged in.",
+    "page": 1,
+    "snippet": "25, 2015 Round 2 Scores Qatar 7-3",
+    "reason": "",
+    "votes": "2-0",
+    "window": "25, 2015 Round 2 Scores Qatar 7-3 Czech Republic Finland (10) 7-4 Singapore England B (15) 7-4 Philippines (2) Friday evening was a tale of contrasting fortunes as Qatar put on a masterful performance to reach the quarter-finals for the first time in their histo... To read the entire story, you must be You are currently viewing the site as a visitor, or you have not logged in."
+   },
+   "evidences": [
+    {
+     "paper_id": "7f498a9a0eed308b74445929d2022b02923dbb02",
+     "source_title": "waleedmajid",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "25, 2015 Round 2 Scores Qatar 7-3 Czech Republic Finland (10) 7-4 Singapore England B (15) 7-4 Philippines (2) Friday evening was a tale of contrasting fortunes as Qatar put on a masterful performance to reach the quarter-finals for the first time in their histo... To read the entire story, you must be You are currently viewing the site as a visitor, or you have not logged in.",
+     "page": 1,
+     "snippet": "25, 2015 Round 2 Scores Qatar 7-3",
+     "reason": "",
+     "votes": "2-0",
+     "window": "25, 2015 Round 2 Scores Qatar 7-3 Czech Republic Finland (10) 7-4 Singapore England B (15) 7-4 Philippines (2) Friday evening was a tale of contrasting fortunes as Qatar put on a masterful performance to reach the quarter-finals for the first time in their histo... To read the entire story, you must be You are currently viewing the site as a visitor, or you have not logged in."
+    }
+   ],
+   "votes": null,
+   "reason": "subject 'majid' is never mentioned in the cited source's text — topically similar passages cannot prove a claim about an entity the source does not name",
+   "subject_guard": {
+    "subject": "majid",
+    "missing_from": [
+     "7f498a9a0eed308b74445929d2022b02923dbb02"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Majid has played in several World Cup of Pool events representing Qatar, including reaching the quarter-finals at the 2015 event.",
+    "reason": "The passage directly attributes facts and achievements to the cited source, indicating that the source is expected to prove these statements. This falls under the 'full' scope as it asserts specific findings and results.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes the quarter-finals achievement to 'Majid' individually, but the source only mentions 'Qatar' as a team without naming any player. Additionally, the claim asserts Majid played in 'several' World Cup of Pool events, which the source does not address at all.",
+    "rewrite_suggestion": "Qatar reached the quarter-finals at the 2015 World Cup of Pool.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text — a news article about the 2015 Dafabet World Cup of Pool — never mentions the name 'Majid' or any individual player. The only relevant snippet shown states that 'Qatar put on a masterful performance to reach the quarter-finals,' which supports only a team achievement, not that a specific player named Majid was part of that team or has participated in multiple events. Therefore, both components of the claim are entirely unsupported by the cited source, and the author must either add a separate citation that confirms Majid's role or rewrite the claim to match what the source actually says."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44": {
+    "title": "diamondstingily",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "2895fe630f8f8d39e548706b099d8699178a56f8": {
+    "title": "hardwell",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9602e5d49eda965b40a4e6814a902724968e97d6": {
+    "title": "michaelbaysunrealizedpro",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5ac70e4c0f7e085c78a869391aafae466f2595a6": {
+    "title": "isaiahstewart",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a753f86bf156461d06e6fb4708fe95a2f2ad0d11": {
+    "title": "bradleycooper",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ca8746b96f10eabead3fe64623740a2919bf6b72": {
+    "title": "solarpowerintheunitedkin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f6196ce7114890265aa6cf84fdd2dc75efca2229": {
+    "title": "listofdeathnoteepisodes",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bdeddec14aa847b33fbbbee6167f5c9b138ca83e": {
+    "title": "museumlondon",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a52386d90916e4f6f7e918284e61c1347aadd3b3": {
+    "title": "thomasholmes1stbaronholm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "63a8692dc08f07e6aca071a4ce3da394477ea54c": {
+    "title": "gmbtradeunion",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "bc7dbafe24b893b303fc99ba893d980ed6bafbcf": {
+    "title": "insight",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9446e6af6f0ed270855f48088bb6fb9c343c3d63": {
+    "title": "phillester",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9427f8dfd41b1a8f591ac57499ea049c442d1316": {
+    "title": "cliffordstarks",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7f1ab9113f0ea2f6756747c9c9fcc3e2ffcde387": {
+    "title": "hanggliding",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e477fac13737ac8fca37663cc6c9af532b0381d4": {
+    "title": "princegeorgescountysheri",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ce37e92d9d8cff56e6b015af177dcbe95ad425a5": {
+    "title": "stmarythevirgintarrantcr",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "636296f9ffa348c003756c1aeb34db04707b8165": {
+    "title": "divnaljubojevi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e": {
+    "title": "salamishahtillet",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "7f498a9a0eed308b74445929d2022b02923dbb02": {
+    "title": "waleedmajid",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1d2fef789204c0ae7bca76832054edadf67fdd73": {
+    "title": "nevilleprice",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b43a0d405a58910ccf8f92090bccaaea493ebbef": {
+    "title": "alexandrupopescu",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215": {
+    "title": "espanolaexpress",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b": {
+    "title": "olgadanilov",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "594b09106aec7ea90aab05be1f534bf100c06ce5": {
+    "title": "rorygaffney",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb": {
+    "title": "thehongkongmassacre",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "6db68c839c73edfd982efadc35349ef89b447f7f": {
+    "title": "kqfo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 14,
+   "unsupported": 12,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 21:36:46",
+  "marker_errors": [],
+  "processing_time_seconds": 169.2,
+  "source_hashes": {
+   "bradleycooper.txt": "7f80fdb433ee3929d64a98929d7b0c3c722a2f60",
+   "museumlondon.txt": "64de31491528d638f69b5a5d604164c102d11c43",
+   "rorygaffney.txt": "ef64a56c2287b76d50b35d6adc0412d4f6edff38",
+   "princegeorgescountysheri.txt": "2ee8f44aa75a7abaac409fc6df4b0217d0639ea8",
+   "diamondstingily.txt": "727df9e13e31adfcc4d3cff4ea39f640ab7081af",
+   "hardwell.txt": "ea874fdbb0f541fb2e2fd34a19488a19564a7a16",
+   "stmarythevirgintarrantcr.txt": "e27e2295259e2e84817ce8abdbb4ea2859f16d39",
+   "cliffordstarks.txt": "0b8db027f6643172efe2b30e2fb1170921b90107",
+   "listofdeathnoteepisodes.txt": "27e18ea6a85cebf121a7c6ade02c04ed91318123",
+   "divnaljubojevi.txt": "b2dcfe7cb8eee8c4dfa76f3c364f73e99c560e26",
+   "phillester.txt": "6edc9f438b90f5b2b1c3d058be6a0edac70b7f8f",
+   "thehongkongmassacre.txt": "49d299e1ebedc57392ec2c146f4afd5a7a8038e3",
+   "olgadanilov.txt": "1bd13beca9f69f226832e68eab4b8bc0984a1ba1",
+   "kqfo.txt": "86a902e86c56656d65fd5d51e52d0a3a1eec78ba",
+   "insight.txt": "d802327f82ec59c67f46869601e84ec45b5b6906",
+   "hanggliding.txt": "e7b8b1c5fae5600dd5cd778d05e7d3f6bce1c877",
+   "thomasholmes1stbaronholm.txt": "9ea6a987e29a02bc58f08ed9819ca6a8d8f23c31",
+   "nevilleprice.txt": "84202625da1a8b684f0c026805d207d0331f2ad8",
+   "espanolaexpress.txt": "1161bc36492951625e5534fe8aaa69d5574af6cf",
+   "isaiahstewart.txt": "f4b177c9c6e1f37c19c44ab1d898cd52e076acd0",
+   "alexandrupopescu.txt": "799785c75ce0ac8d71b6b18d32711e4a3c8b22fa",
+   "gmbtradeunion.txt": "42a3d46b6c5ccfc3d3b4bfcaf47923c52626ca72",
+   "salamishahtillet.txt": "8d22dd7fd042e92f8d6f74f527ad1aa1776785d9",
+   "michaelbaysunrealizedpro.txt": "bbc2cb72f01899d1ee0362074f9a8ae0616e274e",
+   "solarpowerintheunitedkin.txt": "858e052d7dada59095d3659d35d007777592cdb4",
+   "waleedmajid.txt": "b8b0049b8f81a9c59df5900f51fb503e08042920"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 329,
+    "prompt_tokens": 322421,
+    "completion_tokens": 16564,
+    "cost_usd": 0.038929
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 19,
+    "prompt_tokens": 50853,
+    "completion_tokens": 33852,
+    "cost_usd": 0.009854
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 13,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 18,
+   "actions": {
+    "add_citation_or_rewrite": 15,
+    "supported": 2,
+    "wrong_or_insufficient_evidence": 1
+   },
+   "proof_may_exist": [
+    "t18"
+   ],
+   "conflicts": [
+    "t8",
+    "t9"
+   ],
+   "rescued": [
+    "t18"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "a753f86bf156461d06e6fb4708fe95a2f2ad0d11",
+   "key": "bradleycooper",
+   "filename": "bradleycooper.txt",
+   "title": "bradleycooper",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bdeddec14aa847b33fbbbee6167f5c9b138ca83e",
+   "key": "museumlondon",
+   "filename": "museumlondon.txt",
+   "title": "museumlondon",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "594b09106aec7ea90aab05be1f534bf100c06ce5",
+   "key": "rorygaffney",
+   "filename": "rorygaffney.txt",
+   "title": "rorygaffney",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e477fac13737ac8fca37663cc6c9af532b0381d4",
+   "key": "princegeorgescountysheri",
+   "filename": "princegeorgescountysheri.txt",
+   "title": "princegeorgescountysheri",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cdaead5fcbf8e0bdfa01c9399a18b2746a14fe44",
+   "key": "diamondstingily",
+   "filename": "diamondstingily.txt",
+   "title": "diamondstingily",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2895fe630f8f8d39e548706b099d8699178a56f8",
+   "key": "hardwell",
+   "filename": "hardwell.txt",
+   "title": "hardwell",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ce37e92d9d8cff56e6b015af177dcbe95ad425a5",
+   "key": "stmarythevirgintarrantcr",
+   "filename": "stmarythevirgintarrantcr.txt",
+   "title": "stmarythevirgintarrantcr",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9427f8dfd41b1a8f591ac57499ea049c442d1316",
+   "key": "cliffordstarks",
+   "filename": "cliffordstarks.txt",
+   "title": "cliffordstarks",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f6196ce7114890265aa6cf84fdd2dc75efca2229",
+   "key": "listofdeathnoteepisodes",
+   "filename": "listofdeathnoteepisodes.txt",
+   "title": "listofdeathnoteepisodes",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "636296f9ffa348c003756c1aeb34db04707b8165",
+   "key": "divnaljubojevi",
+   "filename": "divnaljubojevi.txt",
+   "title": "divnaljubojevi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9446e6af6f0ed270855f48088bb6fb9c343c3d63",
+   "key": "phillester",
+   "filename": "phillester.txt",
+   "title": "phillester",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "aa6b1c8c5aff30155b01f1c4a569bf46971c96bb",
+   "key": "thehongkongmassacre",
+   "filename": "thehongkongmassacre.txt",
+   "title": "thehongkongmassacre",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "db6bf3f8cdd4606d5bca25cd963dfa52b40db43b",
+   "key": "olgadanilov",
+   "filename": "olgadanilov.txt",
+   "title": "olgadanilov",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6db68c839c73edfd982efadc35349ef89b447f7f",
+   "key": "kqfo",
+   "filename": "kqfo.txt",
+   "title": "kqfo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bc7dbafe24b893b303fc99ba893d980ed6bafbcf",
+   "key": "insight",
+   "filename": "insight.txt",
+   "title": "insight",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7f1ab9113f0ea2f6756747c9c9fcc3e2ffcde387",
+   "key": "hanggliding",
+   "filename": "hanggliding.txt",
+   "title": "hanggliding",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a52386d90916e4f6f7e918284e61c1347aadd3b3",
+   "key": "thomasholmes1stbaronholm",
+   "filename": "thomasholmes1stbaronholm.txt",
+   "title": "thomasholmes1stbaronholm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1d2fef789204c0ae7bca76832054edadf67fdd73",
+   "key": "nevilleprice",
+   "filename": "nevilleprice.txt",
+   "title": "nevilleprice",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1d319b2d7cf9bb1a1d694c215c1ea1ca7a225215",
+   "key": "espanolaexpress",
+   "filename": "espanolaexpress.txt",
+   "title": "espanolaexpress",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5ac70e4c0f7e085c78a869391aafae466f2595a6",
+   "key": "isaiahstewart",
+   "filename": "isaiahstewart.txt",
+   "title": "isaiahstewart",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b43a0d405a58910ccf8f92090bccaaea493ebbef",
+   "key": "alexandrupopescu",
+   "filename": "alexandrupopescu.txt",
+   "title": "alexandrupopescu",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "63a8692dc08f07e6aca071a4ce3da394477ea54c",
+   "key": "gmbtradeunion",
+   "filename": "gmbtradeunion.txt",
+   "title": "gmbtradeunion",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "524fb27b1ea4b54dbdc3e27c5623bc7aafd37e7e",
+   "key": "salamishahtillet",
+   "filename": "salamishahtillet.txt",
+   "title": "salamishahtillet",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9602e5d49eda965b40a4e6814a902724968e97d6",
+   "key": "michaelbaysunrealizedpro",
+   "filename": "michaelbaysunrealizedpro.txt",
+   "title": "michaelbaysunrealizedpro",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ca8746b96f10eabead3fe64623740a2919bf6b72",
+   "key": "solarpowerintheunitedkin",
+   "filename": "solarpowerintheunitedkin.txt",
+   "title": "solarpowerintheunitedkin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7f498a9a0eed308b74445929d2022b02923dbb02",
+   "key": "waleedmajid",
+   "filename": "waleedmajid.txt",
+   "title": "waleedmajid",
+   "num_claims": 0
+  }
+ ]
+}
