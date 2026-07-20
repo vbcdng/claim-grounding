@@ -120,7 +120,9 @@ anything: `benchmarks/*_ground_truth.json` and
 The larger bentonite gate paper is also in `examples/`, but two of its
 sources are subscription articles whose extracted text may not be
 redistributed here (DOIs 10.1007/s10450-020-00263-y and 10.1007/s10967-024-09627-y)
-— fetch those two yourself to reproduce it fully.
+— fetch those two yourself to reproduce it fully. Until you do, any bentonite
+run (even `--estimate`) prints two `source file missing` warnings; that is
+expected, not breakage — details in `examples/bentonite/README.md`.
 
 ## Test 3 — WiCE: the development benchmark and the held-out test
 
