@@ -43,9 +43,9 @@ The design bias throughout: when the tool errs, it should err toward
 "not proven" — a false "this is fine" is the dangerous direction for a
 fact-checking tool.
 
-**Names you will meet in the documents.** The "owner" is the author of this
-tool — the docs were written as working notes during development and the
-word stayed. "Fable 5" and "Opus" are Claude models, "K3" is Kimi K3, and
+**Names you will meet in the documents.** Where a working document or a
+data field says "owner", it means the author of this tool — the docs were
+written as working notes during development and the word stayed. "Fable 5" and "Opus" are Claude models, "K3" is Kimi K3, and
 "Gemini flash-lite" is the tool's default judge — where a document names one
 of them, it names which model produced or graded a verdict. A "gate" is the
 regression benchmark a change must pass before it ships.

@@ -32,7 +32,7 @@ the actual next sentence is "Long-term forecasts require substantial time to
 verify..."). The retrieved window had the claim tail appended to it, and the judge
 self-proved against it. Every other signal — covering (4/6 uncovered),
 partial_support (3-0), arbiter (`proofs: []`), a prior Fable pass, AND the human
-owner ground truth (`coverage_ground_truth_essay.json` t9 must_flag, "should be
+author ground truth (`coverage_ground_truth_essay.json` t9 must_flag, "should be
 unsupported") — says unsupported. Only tail_rescue disagreed, and only because its
 window was contaminated. **Fix:** tail_rescue must strip/deduplicate the claim
 text from the window before judging; a window that contains the claim sentence

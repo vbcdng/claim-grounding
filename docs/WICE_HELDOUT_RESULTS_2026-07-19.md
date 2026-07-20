@@ -115,7 +115,7 @@ Test split: zero exclusions. No unconvertible rows in either set.
 - Gemini (`gemini-2.5-flash-lite`): **$0.9178** (7,326 calls)
 - DeepSeek (`deepseek-v4-flash`, arbiter): **$0.4645** (519 calls)
 - Total: **$1.38** (prereg estimate $0.7–1.2, guide ~$1.30 — slightly over,
-  arbiter volume; no budget cap per owner ruling 2026-07-19)
+  arbiter volume; no budget cap per author ruling 2026-07-19)
 - Runtime: ~51 min wall clock (3 parallel lanes, 14:20–15:11), no failures,
   no missing rows in any batch; only benign truncated-output retries.
 
@@ -137,7 +137,7 @@ None from the prereg. Implementation details recorded for transparency:
 
 ## 6. Label-noise context note (publish WITH these numbers)
 
-Owner must approve this wording before anything goes external (prereg §5):
+Author must approve this wording before anything goes external (prereg §5):
 
 > One thing to know when reading numbers against WiCE. On the 159 WiCE claims
 > we analyzed deeply during development, the labels themselves are not always
