@@ -76,6 +76,20 @@ every edit is logged to `changes.md` with the evidence quote, a citation swap
 requires the quoted passage, quantitative claims are never weakened just to
 pass, and one repair→verify cycle is the limit before a human read-through.
 
+Runs also include an **arbiter** pass by default: a second model (default:
+DeepSeek V4 Flash) re-reads only the claims the run itself flagged —
+unsupported, supported with gaps, or carrying conflicting evidence — together
+with a large slice of the cited source text, and adds chips backed by
+verbatim-checked quotes ("proof may exist", "conflicting evidence?", "⛑ gap
+closed by arbiter"). It needs its own key: `DEEPSEEK_API_KEY` as an env var or
+`config/deepseek_api_key.txt` (about a cent per run). **No key = the pass is
+skipped with a one-line note and the run is complete without it** — nothing
+breaks. Under `--backend claude-code` it runs on your Claude Code login
+instead, no key and $0. Turn it off with `--no-arbiter`. The arbiter never
+decides a verdict; the one exception is additive — if its verbatim-verified
+proof convinces the primary judge on a re-read, a falsely-unsupported claim
+flips to supported and says so on the card.
+
 Add `--second-opinion` to any run to have a **second model** (default: plain
 Gemini flash, same API key, about a cent per run) re-read the same evidence for every
 verdict. A confirmed disagreement never changes the verdict — it adds a
