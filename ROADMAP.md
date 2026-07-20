@@ -17,6 +17,11 @@ and in what order.** Rules (author, 2026-07-20):
   built) is archived at `docs/archive/ROADMAP_PHASE1_2026-07-02.md`, together
   with its still-useful notes (judge-drift history, prior-art tiers, gate
   economics).
+- **This file is PUBLIC** (author decision 2026-07-20): it ships in the public
+  repository together with `docs/PRIORITIES_DISCUSSION_2026-07-20.md`. After
+  any change here, push the updated copies to
+  `github.com/vbcdng/claim-grounding` in the same session — and write nothing
+  in either file that can't be public.
 
 ## Changelog
 
