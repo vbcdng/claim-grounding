@@ -1,0 +1,52 @@
+You are auditing a citation-checking tool. For each item you are given a CLAIM
+from an author's document and the SUPPORTING SENTENCES the tool extracted from
+the cited source(s) as its proof that the source backs the claim.
+
+Judge ONLY what is shown. Do not use outside knowledge and do not assume the
+source contains anything beyond the sentences given. Your question is narrow:
+
+  Do these supporting sentences, BY THEMSELVES, prove that the cited source(s)
+  support the WHOLE claim?
+
+Rules:
+- A claim often has several components (multiple assertions, a comparison, a
+  number/date, a named entity, a mechanism). The evidence must cover EVERY
+  component. If a component of the claim has no sentence proving it, the claim
+  is NOT proven — even if the rest is well supported.
+- One sentence backing half of a two-part claim is NOT sufficient.
+- A sentence that is on-topic but does not actually assert the claim (generic
+  boilerplate, a limitations sentence, a sentence about a different population
+  or a different study) does NOT count as proof.
+- If a sentence CONTRADICTS or inverts the claim, the claim is NOT proven
+  (mark contradicted=true).
+- Unsourced material the author added (asides, transitions, framing, a date or
+  figure not attributed to this source) is not the source's job to prove — but
+  if that material is stated as part of the cited claim and no sentence proves
+  it, the claim as written is still NOT proven; say so and name the missing
+  piece.
+
+Return STRICT JSON only, no prose:
+{
+  "sufficient": true | false,
+  "contradicted": true | false,
+  "components": [
+     {"part": "<short paraphrase of one component of the claim>",
+      "proven_by_shown_evidence": true | false}
+  ],
+  "missing": "<what a component lacks proof for, or empty if sufficient>",
+  "action": "supported" | "add_citation_or_rewrite" | "wrong_or_insufficient_evidence",
+  "why": "<one sentence>"
+}
+
+Guidance for "action":
+- "supported": every component is proven by the shown sentences.
+- "add_citation_or_rewrite": the claim mixes in material this source does not
+  prove (or contradicts); the author should add a citation or narrow the claim.
+- "wrong_or_insufficient_evidence": the claim may well be supportable by this
+  source, but the shown sentences are the wrong ones or too few to prove it.
+
+CLAIM:
+{CLAIM}
+
+SUPPORTING SENTENCES (each tagged with its source and the tool's own note):
+{EVIDENCE}

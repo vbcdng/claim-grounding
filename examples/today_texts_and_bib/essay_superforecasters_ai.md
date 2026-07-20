@@ -1,0 +1,23 @@
+Why Superforecasters Struggle With AI — and Not With Everything Else
+
+Superforecasters earned their reputation in domains built on recurring structure: elections, GDP prints, conflict escalation, disease spread. Geopolitical forecasting is, on its face, an "algorithm-unfriendly" domain — hard-to-quantify inputs, elusive reference classes — yet trained human forecasters, especially when aggregated, hold their own against statistical models there, because research on clinical versus statistical prediction has demonstrated that algorithms make more accurate predictions than humans in many domains, but geopolitical forecasting is an algorithm-unfriendly domain, with hard-to-quantify data and elusive reference classes that make predictive model-building difficult [5]. AI progress denies forecasters exactly that kind of scaffolding, and the tournament record shows it starkly.
+
+In the 2022 Existential Risk Persuasion Tournament, 169 superforecasters and domain experts forecast benchmarks resolving by 2024–2025 [2,3]. Respondents underestimated AI progress, especially superforecasters — for three standard AI benchmarks (MATH, MMLU, and QuALITY), domain experts assigned probabilities of 21.4%, 25.0%, and 43.5% respectively to outcomes achieved by end of 2024, while superforecasters were even more pessimistic at 9.3%, 7.2%, and 20.1% [3]. AI systems achieved gold-level Olympiad performance to which domain experts assigned only 8.6% and superforecasters a mere 2.3% probability; overall superforecasters assigned an average probability of just 9.7% to observed outcomes across four AI benchmarks, versus 24.6% from domain experts [3]. The same cohort simultaneously overestimated improvements in climate technology — the opposite directional error [3].
+
+Independent evidence points the same way. Steinhardt's parallel exercise found that the AI experts had similar medians but were overconfident in the tails, while the superforecasters systematically underpredicted progress, and generalist crowd forecasters fared worst [9]. FRI's ongoing expert panel shows this persisting into 2025–2026: recent benchmark performance suggests the median expert is substantially underestimating the progress of development of SOTA AI systems [10].
+
+The structural problem is reference-class reasoning. Superforecasting leans on outside-view base rates from many similar past events; elections and wars recur, GDP mean-reverts. AI capability growth, by contrast, is discontinuous and compute-driven, leaving no comparable historical baseline [6]. Tellingly, individual forecasters' near-term performance was statistically indistinguishable from simple algorithms — a "no-change" forecast and trend extrapolation — and there was no statistically significant correlation between near-term accuracy and long-term existential-risk forecasts [3].
+
+The disagreement runs deeper than calibration. In an adversarial-collaboration study, "concerned" domain experts predicted a 20% chance of AI-caused existential catastrophe by 2100, while "skeptical" participants — mainly superforecasters — predicted 0.12%, and neither side substantially updated toward the other's views [4]. One reading is that existential AI risk is dominated by epistemic uncertainty (unknown mechanism) rather than aleatoric uncertainty (a stable random process) — exactly the kind of ignorance that standard probability elicitation, the superforecaster's core tool, was not built to represent [17].
+
+Geopolitics rewards forecasters skilled at averaging history. AI progress currently rewards betting that history's pace won't hold — which is precisely the bet superforecasters, drilled to distrust extrapolation, are least equipped to make.
+
+---
+[2] Karger et al. (2023), "Forecasting Existential Risks: Evidence from a Long-Run Forecasting Tournament" (XPT full report), Forecasting Research Institute.
+[3] Kučinskas et al. (2025), "Assessing Near-Term Accuracy in the Existential Risk Persuasion Tournament," Forecasting Research Institute.
+[4] Rosenberg et al. (2024), "Roots of Disagreement on AI Risk," Forecasting Research Institute.
+[5] Mellers et al. (2023), "Human and Algorithmic Predictions in Geopolitical Forecasting," Perspectives on Psychological Science.
+[6] Gruetzemacher et al. (2021), "Forecasting AI progress: A research agenda," Technological Forecasting and Social Change.
+[9] Steinhardt (2023), "AI Forecasting: Two Years In," Bounded Regret (blog).
+[10] Forecasting Research Institute (2026), "What Experts and Superforecasters Think About the Future of AI Research and Development," FRI Substack.
+[17] Lohn (2026), "Beyond P(doom) for AI Risk: Quantifying Uncertainty Without Probability," CSET Issue Brief.

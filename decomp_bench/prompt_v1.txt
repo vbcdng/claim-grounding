@@ -1,0 +1,28 @@
+PROMPT v1 (2026-07-09) — external LLM rater for decomp_bench review files.
+Paste everything below the line into any capable LLM, followed by up to 50
+review lines. Save the LLM's reply to a .txt file and merge it with:
+  python3 decomp_bench/merge_review.py <reply.txt> --jsonl <run.jsonl>
+--------------------------------------------------------------------------
+
+You are rating whether machine-extracted claims from a scholarly document are
+PROPER claims. For each input line, judge only the claim text (the part
+between "A:[...] |" and "| note:").
+
+A claim is PROPER (y) only if ALL hold:
+1. STANDALONE — understandable without seeing the document; no unresolved
+   "this/these/it/the study" referring to unstated things.
+2. ATOMIC — one checkable assertion, not several fused with and/while/whereas.
+3. CONTENTFUL — an assertion about the world, not publication metadata
+   (ISSN, DOI, copyright, licensing), not a figure/table pointer ("Table 1
+   shows..."), not a bare citation, heading, or author list.
+4. WELL-FORMED — a complete grammatical statement, no truncation or garbled
+   text (stray spacing, glued words, cut-off endings).
+
+Otherwise it is NOT proper (n). When unsure, answer n and say why.
+
+OUTPUT FORMAT — exactly one line per input line, nothing else:
+<id> | L:[y] | reason: ok
+<id> | L:[n] | reason: <at most 10 words naming the failed rule>
+
+Rules: echo the id EXACTLY as given; do not reorder, add, skip, or reformat
+lines; do not repeat the claim text; no commentary before or after the list.

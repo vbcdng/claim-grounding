@@ -1,0 +1,246 @@
+{
+ "split": "train",
+ "mode": "heldout_all",
+ "batch": 5,
+ "label_filter": "not_supported",
+ "exclude_used": true,
+ "claims": {
+  "jeffbezos": {
+   "wice_id": "train12191",
+   "split_index": 806,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 60
+  },
+  "benjaminwarf": {
+   "wice_id": "train21400",
+   "split_index": 839,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 184
+  },
+  "minnesota": {
+   "wice_id": "train47092",
+   "split_index": 847,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 37
+  },
+  "guillermodeltoro": {
+   "wice_id": "train14287",
+   "split_index": 850,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 71
+  },
+  "stevenuniverse": {
+   "wice_id": "train24417",
+   "split_index": 873,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 352
+  },
+  "vietnamenterpriseinvestm": {
+   "wice_id": "train43146",
+   "split_index": 887,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 63
+  },
+  "danmeyerwisconsinpolitic": {
+   "wice_id": "train15287",
+   "split_index": 891,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 233
+  },
+  "greenlanternfilm": {
+   "wice_id": "train04707",
+   "split_index": 912,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 110
+  },
+  "legendsclassicbasketball": {
+   "wice_id": "train42465",
+   "split_index": 936,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 61
+  },
+  "crueltytoanimals": {
+   "wice_id": "train18954",
+   "split_index": 943,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 43
+  },
+  "morningconsult": {
+   "wice_id": "train46016",
+   "split_index": 953,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 55
+  },
+  "scottbaileyactor": {
+   "wice_id": "train48259",
+   "split_index": 957,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 414
+  },
+  "executivesuite": {
+   "wice_id": "train43654",
+   "split_index": 958,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 85
+  },
+  "fwdeklerk": {
+   "wice_id": "train16146",
+   "split_index": 962,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 109
+  },
+  "glennboyer": {
+   "wice_id": "train19004",
+   "split_index": 975,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 320
+  },
+  "graudmicheldepierredon": {
+   "wice_id": "train01024",
+   "split_index": 977,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 315
+  },
+  "albionclasslandingplatfo": {
+   "wice_id": "train19906",
+   "split_index": 980,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 102
+  },
+  "michellewilliamsactress": {
+   "wice_id": "train02851",
+   "split_index": 981,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 100
+  },
+  "swanseauniversity": {
+   "wice_id": "train09590",
+   "split_index": 989,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 58
+  },
+  "mcgillarcticresearchstat": {
+   "wice_id": "train00586",
+   "split_index": 991,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 70
+  },
+  "therandomyears": {
+   "wice_id": "train04208",
+   "split_index": 999,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 104
+  },
+  "brianhart": {
+   "wice_id": "train06802",
+   "split_index": 1016,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     10
+    ]
+   ],
+   "n_source_sentences": 20
+  },
+  "yaquq": {
+   "wice_id": "train42097",
+   "split_index": 1036,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 27
+  },
+  "mamialbum": {
+   "wice_id": "train47057",
+   "split_index": 1038,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 212
+  },
+  "claytonspencer": {
+   "wice_id": "train30493",
+   "split_index": 1046,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 184
+  },
+  "b2first": {
+   "wice_id": "train32022",
+   "split_index": 1047,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 64
+  }
+ }
+}

@@ -1,0 +1,50 @@
+verdict-level agreement: 25/26 (96%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported           25
+  not_supported          -> partially_supported      1   <-- disagreement
+
+arbiter-adjudicated agreement: 18/26 (69%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported           18
+  not_supported          -> partially_supported      7   <-- disagreement
+  not_supported          -> supported                1   <-- disagreement
+adjudication flips: 8
+  - triumphmotorcyclesltd      not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - ghaznavimissile            not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - allsoulsanglicanchurchle   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - pakbeng                    not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - eccleshall                 not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  ~ deeqsulaimanyusuf          partially_supported -> supported              wice=not_supported          (arbiter: gaps look minor — fully proven)
+  - bookertwashingtonhighsch   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - violenceagainstwomenact    not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 26 refuted rows: base=0, adjudicated=1
+*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — stop and report ***
+
+per-claim:
+  OK  triumphmotorcyclesltd      wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  ritasitalianice            wice=not_supported          tool=not_supported          
+  OK  ghaznavimissile            wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  universityofnewenglandau   wice=not_supported          tool=not_supported          
+  OK  mildenhallsuffolk          wice=not_supported          tool=not_supported          
+  OK  ecommerce                  wice=not_supported          tool=not_supported          
+  OK  dilwaledulhanialejayenge   wice=not_supported          tool=not_supported          
+  OK  anyacorke                  wice=not_supported          tool=not_supported          
+  OK  jajuandawson               wice=not_supported          tool=not_supported          
+  OK  allsoulsanglicanchurchle   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  mcubed                     wice=not_supported          tool=not_supported          
+  OK  pakbeng                    wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  romelulukaku               wice=not_supported          tool=not_supported          
+  OK  christophercalvinharriso   wice=not_supported          tool=not_supported          
+  OK  197576buffalobravesseaso   wice=not_supported          tool=not_supported          
+  OK  eccleshall                 wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  makeblock                  wice=not_supported          tool=not_supported          
+  DIFF deeqsulaimanyusuf          wice=not_supported          tool=partially_supported    adj=supported              picks_in_gold=0/1
+  OK  bookertwashingtonhighsch   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  anuragkashyap              wice=not_supported          tool=not_supported          
+  OK  tsunamidvbbsandborgeouss   wice=not_supported          tool=not_supported          
+  OK  violenceagainstwomenact    wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  chicao                     wice=not_supported          tool=not_supported          
+  OK  fulladoll                  wice=not_supported          tool=not_supported          
+  OK  2012summerparalympicsope   wice=not_supported          tool=not_supported          
+  OK  robeaton                   wice=not_supported          tool=not_supported          

@@ -1,0 +1,62 @@
+verdict-level agreement: 9/26 (34%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported            2
+  partially_supported    -> not_supported            9   <-- disagreement
+  partially_supported    -> partially_supported      1
+  partially_supported    -> supported                2   <-- disagreement
+  supported              -> not_supported            4   <-- disagreement
+  supported              -> partially_supported      2   <-- disagreement
+  supported              -> supported                6
+
+arbiter-adjudicated agreement: 21/26 (80%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported            2
+  partially_supported    -> partially_supported     10
+  partially_supported    -> supported                2   <-- disagreement
+  supported              -> partially_supported      3   <-- disagreement
+  supported              -> supported                9
+adjudication flips: 14
+  + washingtonstateroute520    not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + scarlettjohansson          not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + garrettbasch               partially_supported -> supported              wice=supported              (arbiter: gaps look minor — fully proven)
+  + downtownseattletransittu   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + 2019cricketworldcup        not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + mosquitolagoon             not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + violadavis                 not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  ~ yemenicivilwar2015presen   not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+  + futurelearn                not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + luisladariaferrer          not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  ~ ashlynharris               not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+  + electoralcollegesforthes   not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + fyrefestival               not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + iknowwhatyoudidlastsumme   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 2 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  OK  djburnone                  wice=supported              tool=supported              picks_in_gold=1/1
+  OK  borisbecker                wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF weirdtales                 wice=supported              tool=partially_supported    picks_in_gold=2/2
+  DIFF washingtonstateroute520    wice=supported              tool=not_supported          adj=supported              
+  DIFF scarlettjohansson          wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  judaismandsexuality        wice=not_supported          tool=not_supported          
+  DIFF orpheomccord               wice=partially_supported    tool=supported              picks_in_gold=1/2
+  OK  thermonectusmarmoratus     wice=supported              tool=supported              picks_in_gold=1/2
+  DIFF garrettbasch               wice=supported              tool=partially_supported    adj=supported              picks_in_gold=1/4
+  DIFF downtownseattletransittu   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF 2019cricketworldcup        wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF mosquitolagoon             wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF violadavis                 wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  minneapolis                wice=not_supported          tool=not_supported          
+  DIFF yemenicivilwar2015presen   wice=supported              tool=not_supported          adj=partially_supported    
+  DIFF futurelearn                wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF luisladariaferrer          wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF ashlynharris               wice=supported              tool=not_supported          adj=partially_supported    
+  DIFF electoralcollegesforthes   wice=supported              tool=not_supported          adj=supported              
+  DIFF autumnpeltier              wice=partially_supported    tool=supported              picks_in_gold=0/2
+  OK  aarondford                 wice=supported              tool=supported              picks_in_gold=2/2
+  OK  frankflood                 wice=partially_supported    tool=partially_supported    picks_in_gold=0/1
+  OK  veratsuweiling             wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF fyrefestival               wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF iknowwhatyoudidlastsumme   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  2018concacafchampionslea   wice=supported              tool=supported              picks_in_gold=2/5

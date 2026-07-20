@@ -1,0 +1,768 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 6,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "wii": {
+   "wice_id": "test02578",
+   "split_index": 130,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4,
+     14,
+     15
+    ],
+    [
+     4,
+     6,
+     14,
+     15
+    ],
+    [
+     1,
+     13,
+     14,
+     15
+    ],
+    [
+     4,
+     11,
+     14,
+     15
+    ],
+    [
+     4,
+     13,
+     14,
+     15
+    ],
+    [
+     4,
+     11,
+     13,
+     14,
+     15
+    ],
+    [
+     4,
+     6,
+     7,
+     11,
+     15
+    ],
+    [
+     4,
+     6,
+     13,
+     14,
+     15
+    ],
+    [
+     4,
+     7,
+     11,
+     14,
+     15
+    ],
+    [
+     1,
+     6,
+     13,
+     14,
+     15
+    ],
+    [
+     1,
+     11,
+     13,
+     14,
+     15
+    ],
+    [
+     4,
+     6,
+     7,
+     11,
+     14,
+     15
+    ]
+   ],
+   "n_source_sentences": 65
+  },
+  "signalfx": {
+   "wice_id": "test02018",
+   "split_index": 131,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     17,
+     25,
+     29
+    ],
+    [
+     0,
+     17,
+     25,
+     29
+    ],
+    [
+     17,
+     20,
+     25,
+     29
+    ],
+    [
+     17,
+     18,
+     25,
+     29
+    ],
+    [
+     0,
+     17,
+     20,
+     25,
+     29
+    ],
+    [
+     0,
+     17,
+     18,
+     25,
+     29
+    ],
+    [
+     15,
+     17,
+     18,
+     25,
+     29
+    ],
+    [
+     17,
+     18,
+     25,
+     29,
+     38
+    ],
+    [
+     17,
+     18,
+     20,
+     25,
+     29
+    ],
+    [
+     0,
+     17,
+     18,
+     25,
+     29,
+     38
+    ],
+    [
+     0,
+     15,
+     17,
+     18,
+     25,
+     29
+    ],
+    [
+     17,
+     18,
+     20,
+     25,
+     29,
+     38
+    ],
+    [
+     0,
+     17,
+     18,
+     20,
+     25,
+     29
+    ],
+    [
+     15,
+     17,
+     18,
+     20,
+     25,
+     29
+    ],
+    [
+     0,
+     15,
+     17,
+     18,
+     20,
+     25,
+     29
+    ],
+    [
+     0,
+     17,
+     18,
+     20,
+     25,
+     29,
+     38
+    ]
+   ],
+   "n_source_sentences": 341
+  },
+  "2016fortmcmurraywildfire": {
+   "wice_id": "test00931",
+   "split_index": 132,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     63,
+     66,
+     265
+    ],
+    [
+     63,
+     66,
+     425
+    ],
+    [
+     62,
+     63,
+     66,
+     265
+    ],
+    [
+     62,
+     63,
+     66,
+     425
+    ],
+    [
+     63,
+     66,
+     265,
+     272
+    ],
+    [
+     62,
+     63,
+     66,
+     265,
+     272
+    ]
+   ],
+   "n_source_sentences": 604
+  },
+  "liverpool": {
+   "wice_id": "test00188",
+   "split_index": 133,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     8,
+     9
+    ],
+    [
+     8,
+     9,
+     11,
+     14
+    ]
+   ],
+   "n_source_sentences": 19
+  },
+  "premiershipofborisjohnso": {
+   "wice_id": "test00391",
+   "split_index": 134,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     18,
+     19
+    ]
+   ],
+   "n_source_sentences": 116
+  },
+  "zacefron": {
+   "wice_id": "test01734",
+   "split_index": 135,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     9,
+     18
+    ],
+    [
+     7,
+     9,
+     18
+    ]
+   ],
+   "n_source_sentences": 70
+  },
+  "2019columbuschallengersi": {
+   "wice_id": "test03636",
+   "split_index": 136,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     75,
+     76
+    ],
+    [
+     66,
+     76
+    ],
+    [
+     66,
+     75,
+     76
+    ],
+    [
+     73,
+     75,
+     76
+    ],
+    [
+     66,
+     73,
+     76
+    ]
+   ],
+   "n_source_sentences": 82
+  },
+  "listofanthraxmembers": {
+   "wice_id": "test04307",
+   "split_index": 137,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     5,
+     6
+    ],
+    [
+     5,
+     6,
+     15
+    ],
+    [
+     3,
+     5,
+     6
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     3,
+     5,
+     6,
+     15
+    ],
+    [
+     0,
+     4,
+     5,
+     15
+    ],
+    [
+     0,
+     3,
+     4,
+     5
+    ],
+    [
+     0,
+     3,
+     4,
+     5,
+     15
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "marcusharness": {
+   "wice_id": "test03529",
+   "split_index": 138,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     14
+    ],
+    [
+     12,
+     14
+    ]
+   ],
+   "n_source_sentences": 44
+  },
+  "raymason": {
+   "wice_id": "test03922",
+   "split_index": 139,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 43
+  },
+  "winnipeg": {
+   "wice_id": "test03779",
+   "split_index": 140,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34,
+     50
+    ],
+    [
+     46,
+     50
+    ],
+    [
+     34,
+     46,
+     50
+    ]
+   ],
+   "n_source_sentences": 53
+  },
+  "feikesijbesma": {
+   "wice_id": "test03756",
+   "split_index": 141,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     20,
+     33
+    ],
+    [
+     32,
+     33
+    ],
+    [
+     3,
+     32,
+     33
+    ],
+    [
+     18,
+     32,
+     33
+    ],
+    [
+     18,
+     23,
+     32,
+     33
+    ]
+   ],
+   "n_source_sentences": 54
+  },
+  "jjwatt": {
+   "wice_id": "test01801",
+   "split_index": 142,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     16
+    ],
+    [
+     16,
+     18
+    ]
+   ],
+   "n_source_sentences": 73
+  },
+  "themessenger2015canadian": {
+   "wice_id": "test01620",
+   "split_index": 143,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     6,
+     9
+    ],
+    [
+     2,
+     9
+    ]
+   ],
+   "n_source_sentences": 58
+  },
+  "flightsnovel": {
+   "wice_id": "test02134",
+   "split_index": 144,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9
+    ]
+   ],
+   "n_source_sentences": 38
+  },
+  "bobabernethy": {
+   "wice_id": "test02823",
+   "split_index": 145,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     18
+    ],
+    [
+     17,
+     18
+    ]
+   ],
+   "n_source_sentences": 23
+  },
+  "bidwells": {
+   "wice_id": "test00846",
+   "split_index": 146,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0
+    ]
+   ],
+   "n_source_sentences": 101
+  },
+  "thesoundofmusiclive": {
+   "wice_id": "test03334",
+   "split_index": 147,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     11,
+     12
+    ],
+    [
+     12,
+     18
+    ],
+    [
+     11,
+     12,
+     18
+    ]
+   ],
+   "n_source_sentences": 78
+  },
+  "rashadvaughn": {
+   "wice_id": "test04092",
+   "split_index": 148,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     14
+    ]
+   ],
+   "n_source_sentences": 121
+  },
+  "xusi": {
+   "wice_id": "test00777",
+   "split_index": 149,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     31,
+     32
+    ]
+   ],
+   "n_source_sentences": 65
+  },
+  "alangrantwriter": {
+   "wice_id": "test03722",
+   "split_index": 150,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     79,
+     81,
+     83
+    ],
+    [
+     248,
+     249,
+     250
+    ],
+    [
+     222,
+     223,
+     224,
+     248,
+     249,
+     250
+    ]
+   ],
+   "n_source_sentences": 1220
+  },
+  "iamnotarobot": {
+   "wice_id": "test01938",
+   "split_index": 151,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     3,
+     23,
+     30
+    ],
+    [
+     3,
+     18,
+     19,
+     23
+    ],
+    [
+     3,
+     20,
+     23,
+     30
+    ],
+    [
+     3,
+     18,
+     19,
+     20,
+     23
+    ],
+    [
+     3,
+     14,
+     15,
+     19,
+     20,
+     23,
+     34
+    ]
+   ],
+   "n_source_sentences": 48
+  },
+  "gabrielcowan": {
+   "wice_id": "test02879",
+   "split_index": 152,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4
+    ],
+    [
+     4,
+     15,
+     331
+    ]
+   ],
+   "n_source_sentences": 1127
+  },
+  "scottpellerin": {
+   "wice_id": "test03497",
+   "split_index": 153,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     5,
+     6
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     2,
+     3,
+     6
+    ],
+    [
+     0,
+     3,
+     6
+    ],
+    [
+     2,
+     3,
+     5,
+     6
+    ],
+    [
+     0,
+     2,
+     3,
+     6
+    ]
+   ],
+   "n_source_sentences": 32
+  },
+  "melissabarbieri": {
+   "wice_id": "test03535",
+   "split_index": 154,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     22
+    ],
+    [
+     9,
+     22
+    ],
+    [
+     21,
+     22
+    ],
+    [
+     2,
+     22
+    ],
+    [
+     9,
+     21,
+     22
+    ],
+    [
+     2,
+     21,
+     22
+    ]
+   ],
+   "n_source_sentences": 32
+  },
+  "painefield": {
+   "wice_id": "test00585",
+   "split_index": 155,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     13,
+     22,
+     24
+    ],
+    [
+     13,
+     22,
+     23,
+     24
+    ],
+    [
+     13,
+     16,
+     22,
+     24
+    ],
+    [
+     13,
+     16,
+     22,
+     23,
+     24
+    ]
+   ],
+   "n_source_sentences": 64
+  }
+ }
+}

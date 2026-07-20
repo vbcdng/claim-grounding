@@ -1,0 +1,17 @@
+{
+  "description": "Gate v2 ground truth — fence-post pots / vessel magic (loop round 4). Distilled 2026-07-11: grader (Opus v2) + Fable (grader_fable_pos t5 + the 2026-07-11 pass, data/gate_v2/fable_r4.json) + owner review (9/9 checked). Gate runs a FRESH verify of data/loop_rounds/round_4/project into a scratch dir.",
+  "claims": [
+    {"id": "t1", "kind": "watch",
+     "note": "DISPUTED — Fable+grader: the end-grain/rainwater component is an unproven author-fix; owner: 'obvious fact, needs no citation' (the common-knowledge exemption, r4 t1). Encodes nothing until the owner rules where the common-knowledge line sits; current code ambers it (conservative)"},
+    {"id": "t4", "kind": "must_flag",
+     "flag_terms": ["threshold"],
+     "note": "'concealed near hearths and thresholds' over-reads thwaite2020 (hearths yes, thresholds no) — Fable+grader author-fix, owner checked-ok with the unsupported verdict; passes via the unsupported arm today"},
+    {"id": "t5", "kind": "must_cover",
+     "anchors": ["line of defence"],
+     "note": "Fable+grader+owner all supported (Fable's r4 gold-bench row); the Hoggard 'line of defence' sentence is the agreed core proof"},
+    {"id": "t6", "kind": "watch",
+     "note": "the Finland row (owner verdict_wrong: 'no Finland mentioned'; Fable author-fix, grader tool-fetch) — the named-specific drop is single-vote flaky (LOOP_ROUND_5_PLAN residual). Promote to must_flag [finland / finnish] when the t6-class catch is reliable"},
+    {"id": "t7", "kind": "watch",
+     "note": "false-unsupported class — Fable+grader tool-fetch (the 'beneath hearths or doorways' proof exists in historicengland2016), owner accepted the unsupported verdict. Promote to must_cover when the round-6 retrieval fix lands"}
+  ]
+}

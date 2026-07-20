@@ -1,0 +1,23 @@
+You are checking whether pairs of claims from ONE document are variants of the
+SAME claim. Below is a numbered list of claim pairs (A and B per pair).
+
+For each pair, classify the relationship:
+- "restatement"     : A and B assert the same thing (rephrasing, summary,
+                      repetition — e.g. an intro thesis restated in the conclusion).
+- "hedged_variant"  : the same core claim at different strengths (e.g.
+                      "X causes Y" vs "X may contribute to Y").
+- "different_claim" : they assert genuinely different things, even if the topic
+                      overlaps. Topical similarity is NOT the same claim.
+
+Rules:
+- Be conservative in BOTH directions: do not call two claims the same because
+  they share a subject, and do not call them different because the wording differs.
+- A claim about a different subject, scope, time, or quantity than its pair is
+  "different_claim" even when the sentences look alike.
+- "why" is one short clause.
+
+Return ONLY JSON, no prose, in exactly this shape:
+{"pairs": [{"n": <pair number>, "relation": "restatement|hedged_variant|different_claim", "why": "<one short clause>"}]}
+
+PAIRS:
+{PAIRS}

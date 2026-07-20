@@ -1,0 +1,485 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 5,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "jjwatt": {
+   "wice_id": "test00231",
+   "split_index": 104,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 59
+  },
+  "andrewnliveris": {
+   "wice_id": "test01572",
+   "split_index": 105,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     42
+    ]
+   ],
+   "n_source_sentences": 50
+  },
+  "mosul": {
+   "wice_id": "test03215",
+   "split_index": 106,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     12,
+     13
+    ]
+   ],
+   "n_source_sentences": 67
+  },
+  "leightonmeester": {
+   "wice_id": "test01297",
+   "split_index": 107,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     46,
+     107,
+     108
+    ],
+    [
+     46,
+     107,
+     108,
+     115
+    ],
+    [
+     45,
+     46,
+     107,
+     108
+    ],
+    [
+     46,
+     105,
+     106,
+     107,
+     108
+    ],
+    [
+     46,
+     105,
+     106,
+     107,
+     108,
+     115
+    ],
+    [
+     45,
+     46,
+     105,
+     106,
+     107,
+     108
+    ]
+   ],
+   "n_source_sentences": 305
+  },
+  "simonireland": {
+   "wice_id": "test04524",
+   "split_index": 108,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     19,
+     21,
+     34
+    ],
+    [
+     0,
+     19,
+     28
+    ],
+    [
+     0,
+     19,
+     34
+    ],
+    [
+     19,
+     21,
+     28
+    ]
+   ],
+   "n_source_sentences": 39
+  },
+  "orange2018film": {
+   "wice_id": "test03052",
+   "split_index": 109,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     2,
+     5,
+     10
+    ],
+    [
+     5,
+     10,
+     11
+    ],
+    [
+     0,
+     5,
+     9,
+     10
+    ]
+   ],
+   "n_source_sentences": 23
+  },
+  "petererlinder": {
+   "wice_id": "test01608",
+   "split_index": 110,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     25
+    ],
+    [
+     25,
+     26
+    ]
+   ],
+   "n_source_sentences": 40
+  },
+  "martinbrodeur": {
+   "wice_id": "test02149",
+   "split_index": 111,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     11,
+     15
+    ],
+    [
+     14,
+     15
+    ],
+    [
+     11,
+     13,
+     15
+    ],
+    [
+     13,
+     14,
+     15
+    ],
+    [
+     11,
+     13,
+     14,
+     15
+    ]
+   ],
+   "n_source_sentences": 31
+  },
+  "khagendralamichhane": {
+   "wice_id": "test00228",
+   "split_index": 112,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     7,
+     11
+    ],
+    [
+     7,
+     9,
+     11
+    ]
+   ],
+   "n_source_sentences": 41
+  },
+  "lisakrasner": {
+   "wice_id": "test01606",
+   "split_index": 113,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 73
+  },
+  "kxbl": {
+   "wice_id": "test01983",
+   "split_index": 114,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     7,
+     11
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     4,
+     11
+    ],
+    [
+     0,
+     11
+    ],
+    [
+     6,
+     7,
+     11
+    ],
+    [
+     0,
+     6,
+     7,
+     11
+    ],
+    [
+     6,
+     7,
+     11,
+     14
+    ],
+    [
+     4,
+     6,
+     7,
+     11
+    ],
+    [
+     4,
+     6,
+     7,
+     11,
+     14
+    ],
+    [
+     0,
+     6,
+     7,
+     11,
+     14
+    ]
+   ],
+   "n_source_sentences": 67
+  },
+  "anandashankar": {
+   "wice_id": "test03014",
+   "split_index": 115,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 71
+  },
+  "9thqueensroyallancers": {
+   "wice_id": "test00652",
+   "split_index": 116,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     19,
+     24,
+     27,
+     81
+    ]
+   ],
+   "n_source_sentences": 124
+  },
+  "douglasmacarthursescapef": {
+   "wice_id": "test02040",
+   "split_index": 117,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     14,
+     16,
+     17,
+     18,
+     19,
+     21,
+     23,
+     30
+    ]
+   ],
+   "n_source_sentences": 32
+  },
+  "robgronkowski": {
+   "wice_id": "test03321",
+   "split_index": 118,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 86
+  },
+  "yemenicivilwar2015presen": {
+   "wice_id": "test01656",
+   "split_index": 119,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     14,
+     15,
+     28
+    ]
+   ],
+   "n_source_sentences": 161
+  },
+  "economyths": {
+   "wice_id": "test04324",
+   "split_index": 120,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 159
+  },
+  "columbiaslough": {
+   "wice_id": "test02896",
+   "split_index": 121,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     20,
+     32,
+     33,
+     35
+    ]
+   ],
+   "n_source_sentences": 47
+  },
+  "frederickfraske": {
+   "wice_id": "test01488",
+   "split_index": 122,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     62,
+     68
+    ]
+   ],
+   "n_source_sentences": 91
+  },
+  "ahmedhassandiria": {
+   "wice_id": "test00374",
+   "split_index": 123,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     5,
+     8,
+     12,
+     15,
+     16
+    ]
+   ],
+   "n_source_sentences": 348
+  },
+  "elsadsilva": {
+   "wice_id": "test02744",
+   "split_index": 124,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34
+    ],
+    [
+     13,
+     34
+    ]
+   ],
+   "n_source_sentences": 159
+  },
+  "isidorstraus": {
+   "wice_id": "test00606",
+   "split_index": 125,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     267,
+     268
+    ],
+    [
+     264,
+     267,
+     268
+    ]
+   ],
+   "n_source_sentences": 311
+  },
+  "jackthewriter": {
+   "wice_id": "test01005",
+   "split_index": 126,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 43
+  },
+  "thebeatlesrockband": {
+   "wice_id": "test01228",
+   "split_index": 127,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     53
+    ],
+    [
+     53,
+     56
+    ],
+    [
+     51,
+     53
+    ]
+   ],
+   "n_source_sentences": 555
+  },
+  "2015iihfwomensworldchamp": {
+   "wice_id": "test00238",
+   "split_index": 128,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     82,
+     83
+    ]
+   ],
+   "n_source_sentences": 93
+  },
+  "electraheart": {
+   "wice_id": "test03377",
+   "split_index": 129,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     60,
+     61,
+     63
+    ],
+    [
+     18,
+     60,
+     61,
+     63
+    ],
+    [
+     60,
+     61,
+     62,
+     63
+    ]
+   ],
+   "n_source_sentences": 164
+  }
+ }
+}

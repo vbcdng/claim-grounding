@@ -1,0 +1,45 @@
+verdict-level agreement: 25/26 (96%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported           25
+  not_supported          -> partially_supported      1   <-- disagreement
+
+arbiter-adjudicated agreement: 23/26 (88%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported           23
+  not_supported          -> partially_supported      2   <-- disagreement
+  not_supported          -> supported                1   <-- disagreement
+adjudication flips: 3
+  - executivesuite             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  ~ michellewilliamsactress    partially_supported -> supported              wice=not_supported          (arbiter: all components provable (verified quotes))
+  - mcgillarcticresearchstat   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 26 refuted rows: base=0, adjudicated=1
+*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — stop and report ***
+
+per-claim:
+  OK  jeffbezos                  wice=not_supported          tool=not_supported          
+  OK  benjaminwarf               wice=not_supported          tool=not_supported          
+  OK  minnesota                  wice=not_supported          tool=not_supported          
+  OK  guillermodeltoro           wice=not_supported          tool=not_supported          
+  OK  stevenuniverse             wice=not_supported          tool=not_supported          
+  OK  vietnamenterpriseinvestm   wice=not_supported          tool=not_supported          
+  OK  danmeyerwisconsinpolitic   wice=not_supported          tool=not_supported          
+  OK  greenlanternfilm           wice=not_supported          tool=not_supported          
+  OK  legendsclassicbasketball   wice=not_supported          tool=not_supported          
+  OK  crueltytoanimals           wice=not_supported          tool=not_supported          
+  OK  morningconsult             wice=not_supported          tool=not_supported          
+  OK  scottbaileyactor           wice=not_supported          tool=not_supported          
+  OK  executivesuite             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  fwdeklerk                  wice=not_supported          tool=not_supported          
+  OK  glennboyer                 wice=not_supported          tool=not_supported          
+  OK  graudmicheldepierredon     wice=not_supported          tool=not_supported          
+  OK  albionclasslandingplatfo   wice=not_supported          tool=not_supported          
+  DIFF michellewilliamsactress    wice=not_supported          tool=partially_supported    adj=supported              picks_in_gold=0/1
+  OK  swanseauniversity          wice=not_supported          tool=not_supported          
+  OK  mcgillarcticresearchstat   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  therandomyears             wice=not_supported          tool=not_supported          
+  OK  brianhart                  wice=not_supported          tool=not_supported          
+  OK  yaquq                      wice=not_supported          tool=not_supported          
+  OK  mamialbum                  wice=not_supported          tool=not_supported          
+  OK  claytonspencer             wice=not_supported          tool=not_supported          
+  OK  b2first                    wice=not_supported          tool=not_supported          

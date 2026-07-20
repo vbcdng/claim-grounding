@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Verification — my_text.md</title>
+<style>
+  :root { --teal:#0f766e; --teal-bg:#ccfbf1; --red:#b91c1c; --red-bg:#fee2e2; --amber:#b45309; --gray:#6b7280; }
+  * { box-sizing:border-box; }
+  html,body { height:100%; }
+  body { font-family:-apple-system,Segoe UI,Roboto,sans-serif; margin:0; color:#1f2937; background:#f9fafb;
+         display:flex; flex-direction:column; }
+  header { background:#111827; color:#fff; padding:12px 24px; }
+  header h1 { margin:0 0 4px; font-size:17px; }
+  .head-row { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .totals { font-size:13px; opacity:.85; }
+  .totals b.s { color:#5eead4; } .totals b.u { color:#fca5a5; } .totals b.o { color:#fdba74; }
+  .scopenote { font-size:11px; opacity:.55; margin-top:3px; }
+  .modebar { font-size:12px; padding:6px 24px; background:#0b1220; color:#cbd5e1; border-top:1px solid #1f2937; }
+  .modebar .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  .coverage { padding:10px 24px; background:#fff; border-bottom:1px solid #e5e7eb; }
+  .cov-head { display:flex; justify-content:space-between; align-items:center; }
+  .cov-title { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin-bottom:6px; }
+  .cov-bars { max-height:30vh; overflow:auto; }
+  .cov-bars.collapsed { display:none; }
+  .cov-row { display:flex; align-items:center; gap:12px; margin:5px 0; font-size:13px; }
+  .cov-label { width:220px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cov-track { flex:1; height:10px; background:var(--red-bg); border-radius:5px; overflow:hidden; }
+  .cov-fill { height:100%; background:var(--teal); }
+  .cov-num { width:340px; color:var(--gray); }
+  .cov-status { display:inline-block; margin-right:8px; padding:0 6px; border-radius:8px;
+                 background:var(--chip-bg, #eef1f4); font-size:11px; }
+
+  /* Two side-by-side columns: Your text | Your claims */
+  .layout { display:flex; flex:1; min-height:0; }
+  .doc-wrap { flex:1; display:flex; flex-direction:column; min-width:0; background:#fff; border-right:1px solid #e5e7eb; }
+  .cards { flex:1; display:flex; flex-direction:column; min-width:0; }
+  .doc-head { display:flex; justify-content:space-between; align-items:center; padding:6px 16px; background:#f3f4f6; }
+  .doc-head h2 { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin:0; }
+  .toggle { font-size:11px; padding:2px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }
+  .doc { flex:1; padding:14px 18px; line-height:1.9; overflow:auto; }
+  .doc.collapsed { display:none; }
+  .cards-body { flex:1; overflow:auto; padding:12px 18px; }
+
+  h2.sec { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray); margin:14px 0 6px; }
+  .claim { cursor:pointer; padding:1px 2px; border-radius:3px; border-bottom:2px solid transparent; }
+  .claim.supported { background:var(--teal-bg); border-bottom-color:var(--teal); }
+  .claim.unsupported { background:var(--red-bg); border-bottom-color:var(--red); }
+  .claim.own { background:#eef2ff; border-bottom-color:#818cf8; }
+  .claim.active { outline:2px solid #facc15; }
+  sup.mark { color:#2563eb; font-weight:700; }
+  .card { border:1px solid #e5e7eb; border-left-width:5px; border-radius:6px; padding:10px 12px; margin:8px 0; background:#fff; cursor:pointer; }
+  .card.supported { border-left-color:var(--teal); }
+  .card.unsupported { border-left-color:var(--red); }
+  .card.omitted { border-left-color:var(--amber); }
+  .card.active { box-shadow:0 0 0 2px #facc15; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .head-left { display:flex; align-items:center; gap:6px; }
+  .claimno { font-size:11px; color:#6b7280; font-family:monospace; }
+  .badge { font-size:11px; font-weight:700; padding:2px 7px; border-radius:10px; color:#fff; }
+  .badge.supported { background:var(--teal); } .badge.unsupported { background:var(--red); } .badge.omitted { background:var(--amber); }
+  .badge.own { background:#6366f1; }
+  .card.own { border-left:3px solid #818cf8; }
+  .own-note { font-size:12px; color:#4338ca; background:#eef2ff; padding:6px 8px; border-radius:4px; }
+  .card-claim .leadin { background:#eef2ff; color:#4b5563; border-bottom:2px solid #818cf8; }
+  .leadin-chip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                  border-radius:8px; background:#eef2ff; color:#6366f1; border:1px solid #c7d2fe; }
+  .leadin-note { font-size:12px; color:#4338ca; background:#eef2ff; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .confchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; border:1px solid; white-space:nowrap; }
+  .confchip.high { background:#f0fdf4; color:#166534; border-color:#bbf7d0; }
+  .confchip.medium { background:#fefce8; color:#854d0e; border-color:#fde047; }
+  .confchip.low { background:#fef2f2; color:#b91c1c; border-color:#fecaca; }
+  .sochip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle;
+             background:#fffbeb; color:#92400e; border:1px solid #fcd34d; cursor:help; }
+  .ownerchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                border-radius:8px; margin-left:6px; vertical-align:middle;
+                background:#ede9fe; color:#5b21b6; border:1px solid #c4b5fd; cursor:help; }
+  .so-note { font-size:12px; background:#fffbeb; border:1px solid #fcd34d; color:#92400e;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .dcchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help; }
+  .dcchip.agree { background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; }
+  .dcchip.flag { background:#fff7ed; color:#9a3412; border:1px solid #fdba74; }
+  .dc-note { font-size:12px; background:#eff6ff; border:1px solid #bfdbfe; color:#1e3a8a;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .dc-note.flag { background:#fff7ed; border-color:#fdba74; color:#7c2d12; }
+  .dc-better { margin-top:4px; font-style:italic; }
+  .citechip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#fef3c7; color:#b45309; border:1px solid #fbbf24; cursor:help; }
+  .kindchip { font-size:9px; font-weight:600; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#f3f4f6; color:#6b7280; border:1px solid #e5e7eb; cursor:help; }
+  .cite-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.cite { border-color:#fbbf24; color:#b45309; }
+  .partialchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                  border-radius:8px; margin-left:6px; vertical-align:middle;
+                  background:#fef3c7; color:#b45309; border:1px solid #fbbf24; cursor:help; }
+  .partial-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                   border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.partial { border-color:#fbbf24; color:#b45309; }
+  .overchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+               border-radius:8px; margin-left:6px; vertical-align:middle;
+               background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:help; }
+  .overcite-note { font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+                    border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .fbtn.overcitef { border-color:#cbd5e1; color:#475569; }
+  .multisource-note { font-size:12px; background:#f0f9ff; border:1px solid #bae6fd; color:#0c4a6e;
+                       border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .covset-miss { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                  border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  details.covering { font-size:12px; margin:8px 0 0; border:1px solid #e5e7eb;
+                      border-radius:6px; padding:4px 8px; background:#fafafa; }
+  details.covering summary { cursor:pointer; color:#374151; font-weight:600; }
+  .covset-row { border-top:1px solid #f3f4f6; padding:6px 0; }
+  .covset-row blockquote { margin:4px 0; }
+  .covset-part { font-weight:600; color:#166534; }
+  .covset-src { font-weight:400; color:#6b7280; font-size:11px; }
+  .covset-foot { color:#6b7280; font-size:11px; border-top:1px solid #f3f4f6; padding-top:5px; }
+  .hunt-note { font-size:12px; background:#f0fdf4; border:1px solid #bbf7d0; color:#166534;
+                border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .compcheck-note { font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
+                     border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .shchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle;
+             background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; cursor:help; }
+  .sh-note { font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .disagreechip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+                   border-radius:8px; margin-left:6px; vertical-align:middle;
+                   background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; cursor:help; }
+  .disagree-note { font-size:12px; background:#fef2f2; border:1px solid #fca5a5; color:#991b1b;
+                    border-radius:6px; padding:6px 10px; margin:8px 0 0; }
+  .changed-chip { font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px;
+                   background:#fef9c3; color:#854d0e; border:1px solid #fde047; white-space:nowrap; }
+  sup.changedmark { color:#b45309; font-weight:700; cursor:default; }
+  details.changed-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047;
+                          padding:4px 8px; border-radius:4px; margin-top:6px; }
+  details.changed-note summary { cursor:pointer; }
+  .changed-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047;
+                   padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .prev-text { margin-top:4px; padding:6px 8px; background:#fff; border-left:3px solid #fde047;
+                color:#4b5563; font-style:italic; }
+  .triage { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:10px;
+             padding-top:8px; border-top:1px dashed #e5e7eb; cursor:default; }
+  .tlabel { font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:#9ca3af; }
+  .tbtn { font-size:11px; padding:2px 9px; border:1px solid #d1d5db; border-radius:11px;
+           background:#fff; color:#6b7280; cursor:pointer; }
+  .tbtn.on { background:#7c3aed; border-color:#7c3aed; color:#fff; }
+  .cbtn { font-size:11px; padding:2px 10px; border:1px solid #a7f3d0; border-radius:11px;
+           background:#fff; color:#059669; cursor:pointer; font-weight:600; margin-right:4px; }
+  .cbtn.on { background:#059669; border-color:#059669; color:#fff; }
+  .fbtn.hchk { border-color:#a7f3d0; color:#059669; }
+  .fbtn.hchk.active { background:#059669; border-color:#059669; color:#fff; }
+  .tnote { flex-basis:100%; font-family:inherit; font-size:12px; padding:5px 8px;
+            border:1px solid #d1d5db; border-radius:5px; resize:vertical; color:#374151; }
+  .reviewbar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;
+                padding:8px 12px; background:#f5f3ff; border:1px solid #ddd6fe; border-radius:6px; }
+  .rev-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:#6d28d9; }
+  .rev-count { font-size:12px; font-weight:600; color:#4c1d95; }
+  .rbtn { font-size:12px; padding:4px 10px; border:1px solid #7c3aed; background:#7c3aed;
+           color:#fff; border-radius:5px; cursor:pointer; font-family:inherit; }
+  .rbtn:hover { background:#6d28d9; }
+  .rbtn.sci { background:#fff; color:#7c3aed; }
+  .rbtn.sci:hover { background:#f5f3ff; }
+  .rev-hint { font-size:11px; color:#7c7a8c; }
+  .filterbar { display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
+  .fbtn { font-size:12px; padding:3px 10px; border:1px solid #d1d5db; border-radius:12px; background:#fff; cursor:pointer; color:#374151; }
+  .fbtn.active { background:#1f2937; color:#fff; border-color:#1f2937; }
+  .meta { font-size:11px; color:#9ca3af; }
+  .card-claim { font-size:14px; }
+  .evidence { margin-top:10px; padding-top:10px; border-top:1px dashed #e5e7eb; }
+  .ev-label { font-size:11px; color:var(--gray); margin-bottom:4px; }
+  .paperlink { font-size:11px; color:#2563eb; text-decoration:none; white-space:nowrap; }
+  .paperlink:hover { text-decoration:underline; }
+  .srcchip { font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px; border-radius:8px; margin-right:5px; }
+  .srcchip.ok { background:var(--teal-bg); color:var(--teal); }
+  .srcchip.no { background:#e5e7eb; color:#374151; }
+  .combined-note { font-size:12px; color:var(--teal); background:var(--teal-bg); padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .unsupp-note { font-size:12px; color:#b91c1c; background:#fef2f2; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  .fixbox { margin-top:8px; padding:8px 10px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; }
+  .fixbox blockquote { margin:6px 0; }
+  .fix-head { font-size:12px; font-weight:600; color:#166534; }
+  .fixchip { font-size:11px; font-weight:400; padding:1px 6px; border-radius:8px; margin-left:6px; }
+  .fixchip.ok { background:#dcfce7; color:#166534; }
+  .fixchip.warn { background:#fef9c3; color:#854d0e; }
+  .fix-changes { font-size:12px; color:#4b5563; font-style:italic; margin-top:4px; }
+  .fixcmd { margin-top:8px; font-size:12px; color:#6b7280; }
+  .fixcmd code { background:#f3f4f6; padding:2px 6px; border-radius:4px; font-size:11px; word-break:break-all; }
+  .borderline-note { font-size:12px; color:#854d0e; background:#fefce8; border:1px solid #fde047; padding:4px 8px; border-radius:4px; margin-top:6px; }
+  details.judged { margin-top:6px; font-size:12px; }
+  details.judged summary { cursor:pointer; color:#6b7280; }
+  .judged-text { margin-top:4px; padding:6px 8px; background:#f9fafb; border-left:3px solid #d1d5db; color:#374151; line-height:1.5; }
+  blockquote { margin:0; padding:8px 10px; background:#f3f4f6; border-left:3px solid var(--teal); font-size:13px; font-style:italic; }
+  .evidence.reason { font-size:12px; color:var(--red); }
+  .copy { margin-top:6px; font-size:11px; padding:3px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }
+
+  /* Open-the-source affordance: one link/button per card, opens a new tab */
+  .src-actions { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+  .deeplink, .opentext-btn { font-size:12px; padding:4px 10px; border:1px solid var(--teal); background:var(--teal); color:#fff; border-radius:5px; text-decoration:none; cursor:pointer; font-family:inherit; }
+  .deeplink:hover, .opentext-btn:hover { background:#0d6358; }
+  .side-btn { font-size:12px; padding:4px 10px; border:1px solid var(--teal); background:#fff; color:var(--teal); border-radius:5px; cursor:pointer; font-family:inherit; }
+  .side-btn:hover { background:var(--teal-bg); }
+  #omittedTail.collapsed { display:none; }
+  #omitToggle { margin:8px 0; }
+  .warnbanner { background:#fef3c7; color:#92400e; font-size:12px; padding:8px 24px; border-bottom:1px solid #fcd34d; }
+  .warnbanner ul { margin:4px 0 0; padding-left:20px; }
+  .assess { background:#faf5ff; border-bottom:1px solid #e9d5ff; padding:10px 24px; }
+  .assess-head { display:flex; justify-content:space-between; align-items:center; }
+  .assess-title { font-weight:600; color:#6b21a8; }
+  .am-note { font-weight:400; color:#9ca3af; font-size:11px; }
+  .assess-body { display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:18px; margin-top:8px; }
+  .assess-body.collapsed { display:none; }
+  .assess-col h3 { font-size:13px; margin:0 0 6px; color:#4c1d95; }
+  .assess-col h4 { font-size:12px; margin:8px 0 3px; color:#6b21a8; }
+  .am-list { margin:0; padding-left:18px; font-size:12px; color:#374151; }
+  .am-list li { margin:3px 0; }
+  .am-edges { max-height:260px; overflow-y:auto; }
+  .am-score { display:inline-block; min-width:20px; font-weight:700; color:#7c3aed; }
+  .am-why { color:#6b7280; font-size:11px; margin-left:2px; }
+  .am-frag { color:#b45309; font-size:10px; border:1px solid #fcd34d; border-radius:3px; padding:0 4px; margin-left:4px; }
+  .am-strength { display:inline-block; font-size:10px; border-radius:3px; padding:0 5px; margin-right:4px; text-transform:uppercase; }
+  .am-strong { background:#fee2e2; color:#b91c1c; }
+  .am-weak { background:#fef9c3; color:#92400e; }
+  .am-rels { color:#9ca3af; font-size:11px; }
+  .am-node { color:#374151; }
+  .am-edge { font-size:11px; padding:0 4px; }
+  .am-supports { color:#15803d; }
+  .am-attacks { color:#b91c1c; }
+  @media (max-width:900px) { .assess-body { grid-template-columns:1fr; } }
+  .covratio { margin:6px 0 10px; }
+  .ccbar { display:flex; height:10px; border-radius:5px; overflow:hidden; background:#f3f4f6; }
+  .ccseg { height:100%; }
+  .cclegend { display:flex; flex-wrap:wrap; gap:10px; margin-top:5px; font-size:11px; color:#6b7280; }
+  .ccleg i { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:3px; vertical-align:middle; }
+  .legend { margin:10px 24px 0; border:1px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:12px; }
+  .legend > summary { cursor:pointer; padding:8px 12px; font-weight:700; color:#374151; list-style:none; }
+  .legend > summary::-webkit-details-marker { display:none; }
+  .legend > summary::before { content:"▸ "; color:#9ca3af; }
+  .legend[open] > summary::before { content:"▾ "; }
+  .legend-body { padding:4px 14px 12px; display:flex; flex-wrap:wrap; gap:16px; }
+  .legend-grp { flex:1; min-width:260px; }
+  .legend-h { font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:.04em; font-size:10px; margin:4px 0; }
+  .legrow { margin:5px 0; line-height:1.5; color:#4b5563; }
+  .legrow .badge { margin-right:5px; vertical-align:middle; }
+</style></head>
+<body>
+<header>
+  <div class="head-row">
+    <h1>Verification — my_text.md</h1>
+    <button class="toggle" id="topToggle" onclick="toggleTop()"
+            title="collapse everything above the two columns, so they get the full page">hide header</button>
+  </div>
+  <div class="totals">7 claims &nbsp;·&nbsp;
+    <b class="s">3 supported</b> &nbsp;·&nbsp;
+    <b class="u">0 unsupported</b> &nbsp;·&nbsp; <b style="color:#9ca3af">3 unverifiable (source file missing)</b> &nbsp;·&nbsp;
+    <b style="color:#6366f1">1 your own</b> &nbsp;·&nbsp;
+    <b class="o">0 unused source points</b>&nbsp;·&nbsp; <b style="color:#d97706">📎 1 citation suggestion</b></div>
+  <div class="scopenote">&ldquo;supported&rdquo; means the cited document contains the statement —
+    not that the source is strong or the claim is true; &ldquo;your own&rdquo; (uncited) claims were not checked.
+    &ldquo;unused source points&rdquo; are things your sources say that your text did not cite — a menu, not errors.</div>
+</header>
+<div id="topPanel">
+
+      <details class="legend">
+        <summary>How to read this</summary>
+        <div class="legend-body">
+          <div class="legend-grp">
+            <div class="legend-h">Verdicts</div>
+            <div class="legrow"><span class="badge supported">SUPPORTED</span> the cited source contains the statement — not that the source is strong or the claim is true</div>
+            <div class="legrow"><span class="badge unsupported">UNSUPPORTED</span> no cited source backs it (or the source file is missing)</div>
+            <div class="legrow"><span class="badge own">YOUR OWN CLAIM</span> your uncited claim — thesis, argument, transition; nothing was checked</div>
+            <div class="legrow"><span class="badge omitted">UNUSED</span> a point one of your sources makes that your text didn't cite — a menu, not an error</div>
+          </div>
+          <div class="legend-grp">
+            <div class="legend-h">Chips — nudges, never a verdict</div>
+            <div class="legrow"><span class="confchip high">conf</span><span class="confchip medium">conf</span><span class="confchip low">conf</span> how sure the judge is (derived from votes / method / cosine — no extra LLM call)</div>
+            <div class="legrow"><span class="citechip">citation needed?</span> an uncited passage that asserts a checkable fact — a nudge to cite, not a verdict</div>
+            <div class="legrow"><span class="partialchip">partial support?</span> the cited source(s) back only part of the claim; the verdict stays supported</div>
+            <div class="legrow"><span class="overchip">over-cited?</span> one cited source adds nothing the others already cover</div>
+            <div class="legrow"><span class="shchip">secondhand evidence?</span> the supporting sentence itself cites another work — consider citing the original</div>
+            <div class="legrow"><span class="disagreechip">sources may disagree?</span> a co-cited source's evidence was judged to argue the opposite</div>
+            <div class="legrow"><span class="sochip">2nd opinion</span> a second model disagreed — lowers confidence, read the evidence yourself; never a veto</div>
+            <div class="legrow"><span class="dcchip flag">deep check</span> a stronger model re-read the claim with source context and commented (testing aid) — its commentary is on the card; never a veto</div>
+            <div class="legrow"><span class="changed-chip">✎ changed</span> edited since the last run (incremental re-runs only)</div>
+          </div>
+          <div class="legend-grp">
+            <div class="legend-h">Review</div>
+            <div class="legrow">Mark any card <b>wrong source</b> / <b>rewrite text</b> / <b>verdict wrong</b>, then <b>Copy repair brief</b> or <b>Download review.json</b> to hand to an LLM or the <code>/apply-review</code> command. Marks live in this browser only.</div>
+          </div>
+        </div>
+      </details>
+<div class="warnbanner"><b>⚠ 4 input warning(s)</b> — cited sources that could not be used (their claims show as unsupported):<ul><li>marker [[wolf2020]] -&gt; file not found: wolf2020.pdf</li><li>marker [[scales2012]] -&gt; file not found: scales2012.pdf</li><li>marker [[antonin2017]] -&gt; file not found: antonin2017.pdf</li><li>marker [[kalhous2023]] -&gt; file not found: kalhous2023.pdf</li></ul></div>
+<div class="modebar" id="modebar"></div>
+<div class="coverage">
+  <div class="cov-head">
+    <div class="cov-title">Source coverage — which sources ended up backing your claims (4 sources).
+      An empty bar is usually structural: the citing claims were judged unsupported, or a co-cited source supplied the evidence — the label on each row says which.</div>
+    <button class="toggle" onclick="toggleCoverage()">hide</button>
+  </div>
+  <div class="cov-bars" id="covBars">
+        <div class="cov-row">
+          <div class="cov-label">Albrecht I: Rise and Fall — Die Welt der Habsburger</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">Golden Bull of Sicily — Wihoda, Martin</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">Rudolf I: His Ascent to Become the Head of the Holy Roman Empire — Die Welt der Habsburger</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">backs 1 of your claim</span>0 / 0 source claims in evidence</div>
+        </div>
+
+        <div class="cov-row">
+          <div class="cov-label">Electors — Historisches Lexikon Bayerns</div>
+          <div class="cov-track"><div class="cov-fill" style="width:0%"></div></div>
+          <div class="cov-num"><span class="cov-status">cited by 1 claim — the supporting evidence came from co-cited sources</span>0 / 0 source claims in evidence</div>
+        </div></div>
+</div>
+
+</div>
+<div class="layout">
+  <div class="doc-wrap">
+    <div class="doc-head"><h2>Your text</h2><button class="toggle" onclick="toggleDoc()">collapse</button></div>
+    <div class="doc" id="doc"><span class="claim own" data-card="card-t0" title="t0 — your own lead-in" onclick="brush('t0', 'text')">Bohemia&#x27;s failure to place a Přemyslid on the imperial throne owed less to weakness than to a constitutional status that made its rulers electors rather than plausible candidates.</span> <span class="claim supported" id="text-t0" data-card="card-t0" title="t0" onclick="brush('t0', 'text')">In 1212 Frederick II&#x27;s Golden Bull of Sicily confirmed hereditary kingship for Přemysl Otakar I and reduced Bohemia&#x27;s tribute and military duties.<sup class="mark">[wihoda2023]</sup></span> <span class="claim unsupported" id="text-t1" data-card="card-t1" title="t1" onclick="brush('t1', 'text')">Decades later, the Sachsenspiegel&#x27;s list of electoral princes omitted the Bohemian king from those voting first, on the ground that he was &quot;not German,&quot; and philological analysis dates that clause precisely to the disputed election of Rudolf of Habsburg on 1 October 1273, when Ottokar II&#x27;s proxy vote was set aside.<sup class="mark">[wolf2020]</sup></span> <span class="claim unsupported" id="text-t2" data-card="card-t2" title="t2" onclick="brush('t2', 'text')">That episode fits a wider pattern in which German identity hardened through contrast with Slavic neighbours, even though it was institutional weakness, more than settled nationhood, that made such rhetoric useful.<sup class="mark">[scales2012]</sup></span> <span class="claim supported" id="text-t3" data-card="card-t3" title="t3" onclick="brush('t3', 'text')">Political calculation reinforced this exclusion. By 1273 Ottokar ruled Austria, Styria, Carinthia and Carniola besides Bohemia and Moravia, the wealthiest prince in the empire, so electors chose the obscure Rudolf of Habsburg to check that dominance.<sup class="mark">[lexikonbayern2020]</sup><sup class="mark">[habsburgerascent2020]</sup></span> <span class="claim supported" id="text-t4" data-card="card-t4" title="t4" onclick="brush('t4', 'text')">Princes whose autonomy rested on a weak crown had reason to resist a stronger successor: after Rudolf died in 1291 the electors bypassed his son Albert for Adolf of Nassau, explicitly to forestall a hereditary Habsburg dynasty.<sup class="mark">[habsburgeralbrecht2020]</sup></span> <span class="claim unsupported" id="text-t5" data-card="card-t5" title="t5" onclick="brush('t5', 'text')">Bohemian kingship also legitimized itself through dynastic and sacral tradition centred on Saint Wenceslas&#x27;s cult, distinct from the German princes&#x27; elective idiom—though how far this shaped perceptions of Ottokar as an outsider remains interpretive.<sup class="mark">[antonin2017]</sup><sup class="mark">[kalhous2023]</sup></span> <span class="claim own" id="text-t6" data-card="card-t6" title="t6" onclick="brush('t6', 'text')">Ottokar&#x27;s death at Marchfeld in 1278 settled the rivalry by force, and no later Přemyslid seriously contested an election before the line ended with Wenceslas III&#x27;s assassination in 1306.</span> </div>
+  </div>
+  <div class="cards">
+    <div class="doc-head"><h2>Your claims — in text order</h2></div>
+    <div class="cards-body">
+      
+      <div class="reviewbar">
+        <span class="rev-title">Review</span>
+        <span id="revCount" class="rev-count">0 claims marked</span>
+        <button id="briefBtn" class="rbtn" onclick="copyBrief()">Copy repair brief</button>
+        <button class="rbtn" onclick="downloadReview()" title="saves as review_&lt;run&gt;_&lt;date&gt;.json — to your chosen folder if set, else the browser's Downloads">Download review file</button>
+        <button id="saveLocBtn" class="rbtn" onclick="chooseSaveDir()"
+                title="pick a folder once (e.g. the run folder) — every future review file saves there without asking. Chromium only; elsewhere the file goes to Downloads.">Save location…</button>
+        <button id="sciBtn" class="rbtn sci" onclick="copyScience()"
+                title="Bundle every claim marked 'wrong source' into ONE research request to paste into any deep-research tool (Claude Science, Elicit, Perplexity, a plain LLM…). A Claude Science export merges back automatically via import_claude_research.py --merge-into; any other tool's results you add manually.">Copy research request</button>
+        <span class="rev-hint">mark cards below (wrong source / rewrite / verdict wrong / other), then export — see docs/REPAIR_PLAYBOOK.md</span>
+      </div>
+      <div class="covratio"><div class="ccbar"><div class="ccseg" style="width:42.9%;background:#16a34a" title="supported: 3 (43%)"></div><div class="ccseg" style="width:42.9%;background:#9ca3af" title="unverifiable: 3 (43%)"></div><div class="ccseg" style="width:14.3%;background:#6366f1" title="your own: 1 (14%)"></div></div><div class="cclegend"><span class="ccleg"><i style="background:#16a34a"></i>supported 3</span><span class="ccleg"><i style="background:#9ca3af"></i>unverifiable 3</span><span class="ccleg"><i style="background:#6366f1"></i>your own 1</span></div></div>
+      
+      <div class="filterbar">
+        <button class="fbtn active" data-f="all">All (7)</button>
+        <button class="fbtn" data-f="supported">Supported (3)</button>
+        <button class="fbtn" data-f="unsupported">Unsupported (3)</button>
+        <button class="fbtn" data-f="own">Your own (1)</button>
+        <button class="fbtn conff" data-f="conf-medium" title="claims whose judge confidence is medium — the ones worth a human read">Medium confidence (1)</button>
+        
+        
+        <button class="fbtn cite" data-f="citeneeded" title="uncited passages that assert a checkable fact — consider citing a source">Citation needed (1)</button>
+        
+        <button class="fbtn hchk" data-f="hchecked" title="cards you marked ✓ checked">✓ Checked (<span id="chkN">0</span>)</button>
+        <button class="fbtn hunchk" data-f="hunchecked" title="cards you have not marked ✓ checked yet">Unchecked (<span id="unchkN">0</span>)</button>
+      </div>
+      <div id="claimList">
+      <div class="card supported conf-medium" id="card-t0" data-text="text-t0" onclick="brush('t0', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t0</span><span class="leadin-chip">lead-in</span><span class="confchip medium" title="an indirect verdict (sources combined, only the cited tail re-judged, or components verified separately then re-judged together) — solid, but worth a glance">medium confidence</span></span><span class="meta">cosine 0.7812 · tail_rescue</span></div>
+        <div class="card-claim"><span class="leadin">Bohemia&#x27;s failure to place a Přemyslid on the imperial throne owed less to weakness than to a constitutional status that made its rulers electors rather than plausible candidates.</span> In 1212 Frederick II&#x27;s Golden Bull of Sicily confirmed hereditary kingship for Přemysl Otakar I and reduced Bohemia&#x27;s tribute and military duties.</div>
+        <div class="leadin-note">✓ The <b>cited assertion</b> is supported. The sentences before it are your own lead-in — not covered by the citation, nothing was checked.</div><div class="covset-miss">⚠ No evidence shown for: <b>reduced Bohemia&#x27;s military duties</b>. The judge accepted the claim, but the displayed sentences don't prove this part — open the source and check it yourself.</div><details class="covering"><summary>Evidence coverage — which sentence proves which part (2 parts with shown proof, 1 without)</summary><div class="covset-row"><div class="covset-part">✓ Frederick II&#x27;s Golden Bull of Sicily confirmed hereditary kingship for Přemysl Otakar I <span class="covset-src">Golden Bull of Sicily — Wihoda, Martin</span></div><blockquote>At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.</blockquote><button class="copy" onclick="copyText(this)" data-quote="At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/wihoda2023.pdf#page=2&amp;search=At%20the%20same%20time%2C%20he%20emphasized%20that%20Ottokar%20and%20his%20successors%20would%20rule%20the%20Czech%20lands%20hereditarily%20and%20free%20of%20any%20payment." target="_blank" rel="noopener">Open PDF · p.2 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/wihoda2023.pdf#page=2&amp;search=At%20the%20same%20time%2C%20he%20emphasized%20that%20Ottokar%20and%20his%20successors%20would%20rule%20the%20Czech%20lands%20hereditarily%20and%20free%20of%20any%20payment."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ reduced Bohemia&#x27;s tribute <span class="covset-src">Golden Bull of Sicily — Wihoda, Martin</span></div><blockquote>At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.</blockquote><button class="copy" onclick="copyText(this)" data-quote="At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/wihoda2023.pdf#page=2&amp;search=At%20the%20same%20time%2C%20he%20emphasized%20that%20Ottokar%20and%20his%20successors%20would%20rule%20the%20Czech%20lands%20hereditarily%20and%20free%20of%20any%20payment." target="_blank" rel="noopener">Open PDF · p.2 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/wihoda2023.pdf#page=2&amp;search=At%20the%20same%20time%2C%20he%20emphasized%20that%20Ottokar%20and%20his%20successors%20would%20rule%20the%20Czech%20lands%20hereditarily%20and%20free%20of%20any%20payment."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> Golden Bull of Sicily — Wihoda, Martin <a class="paperlink" href="https://scholar.google.com/scholar?q=Golden%20Bull%20of%20Sicily%20%E2%80%94%20Wihoda%2C%20Martin" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.</blockquote><button class="copy" onclick="copyText(this)" data-quote="At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.">Copy</button>
+      <div class="src-actions">
+        <a class="deeplink" href="sources/wihoda2023.pdf#page=2&amp;search=At%20the%20same%20time%2C%20he%20emphasized%20that%20Ottokar%20and%20his%20successors%20would%20rule%20the%20Czech%20lands%20hereditarily%20and%20free%20of%20any%20payment." target="_blank" rel="noopener">Open PDF · p.2 ↗</a>
+        <button class="side-btn" data-kind="pdf" data-href="sources/wihoda2023.pdf#page=2&amp;search=At%20the%20same%20time%2C%20he%20emphasized%20that%20Ottokar%20and%20his%20successors%20would%20rule%20the%20Czech%20lands%20hereditarily%20and%20free%20of%20any%20payment."
+                title="Open in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (117 words)</summary><div class="judged-text">Referring to the merits of the Bohemians and especially of King o ttokar, Frederick promised to accept him as his vassal and to bestow the royal insignia on whoever was elected at home (volentes, utquicunque ab ipsis in regemelectusfuerit, ad nosvel - successores nostros accedat, regalia debito modo recepturus). At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment. Moreover, for - merly alienated dominions were to be restored to the kings of Bohe - mia, and they were also granted the right of investiture of bishops of Prague and Olomouc under the condition that the old freedoms of the church would not be affected.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t0" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card unsupported" id="card-t1" data-text="text-t1" onclick="brush('t1', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge unsupported">UNSUPPORTED</span><span class="claimno">t1</span></span><span class="meta">none</span></div>
+        <div class="card-claim">Decades later, the Sachsenspiegel&#x27;s list of electoral princes omitted the Bohemian king from those voting first, on the ground that he was &quot;not German,&quot; and philological analysis dates that clause precisely to the disputed election of Rudolf of Habsburg on 1 October 1273, when Ottokar II&#x27;s proxy vote was set aside.</div>
+        <div class="unsupp-note">✗ Not supported: source_file_missing: wolf2020.pdf</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the file for this citation is not in the sources folder, so it could not be checked">source file missing</span> [[wolf2020]]</div>
+            <div class="reason">The cited file <code>wolf2020.pdf</code> is not in the sources folder — this citation was not verified. Add the file and re-run to check it.</div>
+          </div>
+        
+        <div class="triage" data-id="t1" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card unsupported" id="card-t2" data-text="text-t2" onclick="brush('t2', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge unsupported">UNSUPPORTED</span><span class="claimno">t2</span></span><span class="meta">none</span></div>
+        <div class="card-claim">That episode fits a wider pattern in which German identity hardened through contrast with Slavic neighbours, even though it was institutional weakness, more than settled nationhood, that made such rhetoric useful.</div>
+        <div class="unsupp-note">✗ Not supported: source_file_missing: scales2012.pdf</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the file for this citation is not in the sources folder, so it could not be checked">source file missing</span> [[scales2012]]</div>
+            <div class="reason">The cited file <code>scales2012.pdf</code> is not in the sources folder — this citation was not verified. Add the file and re-run to check it.</div>
+          </div>
+        
+        <div class="triage" data-id="t2" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t3" data-text="text-t3" onclick="brush('t3', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t3</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.8888 · llm</span></div>
+        <div class="card-claim">Political calculation reinforced this exclusion. By 1273 Ottokar ruled Austria, Styria, Carinthia and Carniola besides Bohemia and Moravia, the wealthiest prince in the empire, so electors chose the obscure Rudolf of Habsburg to check that dominance.</div>
+        <div class="multisource-note">ℹ Supported via <b>Rudolf I: His Ascent to Become the Head of the Holy Roman Empire — Die Welt der Habsburger</b>. A claim counts as supported when at least ONE cited source backs it; the other cited source did not independently support it — their best-found passage is shown below for reference.</div><div class="covset-miss">⚠ No evidence shown for: <b>wealthiest prince in the empire</b>. The judge accepted the claim, but the displayed sentences don't prove this part — open the source and check it yourself.</div><details class="covering"><summary>Evidence coverage — which sentence proves which part (4 parts with shown proof, 1 without)</summary><div class="covset-row"><div class="covset-part">✓ Political calculation reinforced exclusion <span class="covset-src">Electors — Historisches Lexikon Bayerns</span></div><blockquote>However, he does not see the reason for this in the community of heirs after Rudolf of Habsburg but as &quot;the result of a selection process on the basis of a simplification (Versachlichung) of the king&#x27;s election law for liturgical-ritualistic, legal, political or economic reasons&quot; (Weg, 115).</blockquote><button class="copy" onclick="copyText(this)" data-quote="However, he does not see the reason for this in the community of heirs after Rudolf of Habsburg but as &quot;the result of a selection process on the basis of a simplification (Versachlichung) of the king&#x27;s election law for liturgical-ritualistic, legal, political or economic reasons&quot; (Weg, 115).">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19"
+                data-sentence="However, he does not see the reason for this in the community of heirs after Rudolf of Habsburg but as &quot;the result of a selection process on the basis of a simplification (Versachlichung) of the king&#x27;s election law for liturgical-ritualistic, legal, political or economic reasons&quot; (Weg, 115)." data-snippet="However, he does not see the reason"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19"
+                data-sentence="However, he does not see the reason for this in the community of heirs after Rudolf of Habsburg but as &quot;the result of a selection process on the basis of a simplification (Versachlichung) of the king&#x27;s election law for liturgical-ritualistic, legal, political or economic reasons&quot; (Weg, 115)." data-snippet="However, he does not see the reason"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ By 1273 Ottokar ruled Austria, Styria, Carinthia and Carniola besides Bohemia and Moravia <span class="covset-src">Rudolf I: His Ascent to Become the Head of the Holy Roman Empire — Die Welt der Habsburger</span></div><blockquote>His seemingly unstoppable rise was felt to be progressing at too rapid a pace by the other electors: in addition to his ancestral lands of Bohemia and Moravia, Ottokar had also brought the inherited domains of the Babenberg dynasty, which had died out in 1246, that is, the duchies of Austria and Styria, under his control.</blockquote><button class="copy" onclick="copyText(this)" data-quote="His seemingly unstoppable rise was felt to be progressing at too rapid a pace by the other electors: in addition to his ancestral lands of Bohemia and Moravia, Ottokar had also brought the inherited domains of the Babenberg dynasty, which had died out in 1246, that is, the duchies of Austria and Styria, under his control.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="3f24e04cbce0d28b5eb2b47e310a60364c75d46b"
+                data-sentence="His seemingly unstoppable rise was felt to be progressing at too rapid a pace by the other electors: in addition to his ancestral lands of Bohemia and Moravia, Ottokar had also brought the inherited domains of the Babenberg dynasty, which had died out in 1246, that is, the duchies of Austria and Styria, under his control." data-snippet="His seemingly unstoppable rise was felt to"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="3f24e04cbce0d28b5eb2b47e310a60364c75d46b"
+                data-sentence="His seemingly unstoppable rise was felt to be progressing at too rapid a pace by the other electors: in addition to his ancestral lands of Bohemia and Moravia, Ottokar had also brought the inherited domains of the Babenberg dynasty, which had died out in 1246, that is, the duchies of Austria and Styria, under his control." data-snippet="His seemingly unstoppable rise was felt to"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ electors chose the obscure Rudolf of Habsburg <span class="covset-src">Electors — Historisches Lexikon Bayerns</span></div><blockquote>Six of the seven elected Rudolf of Habsburg in 1273 (ruled as Roman-German king 1273-1291).</blockquote><button class="copy" onclick="copyText(this)" data-quote="Six of the seven elected Rudolf of Habsburg in 1273 (ruled as Roman-German king 1273-1291).">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19"
+                data-sentence="Six of the seven elected Rudolf of Habsburg in 1273 (ruled as Roman-German king 1273-1291)." data-snippet="Six of the seven elected Rudolf of"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19"
+                data-sentence="Six of the seven elected Rudolf of Habsburg in 1273 (ruled as Roman-German king 1273-1291)." data-snippet="Six of the seven elected Rudolf of"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ to check that dominance <span class="covset-src">Rudolf I: His Ascent to Become the Head of the Holy Roman Empire — Die Welt der Habsburger</span></div><blockquote>Nonetheless, the princes of the Empire expected Rudolf to take the necessary measures as proof of his authority against the powerful Ottokar.</blockquote><button class="copy" onclick="copyText(this)" data-quote="Nonetheless, the princes of the Empire expected Rudolf to take the necessary measures as proof of his authority against the powerful Ottokar.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="3f24e04cbce0d28b5eb2b47e310a60364c75d46b"
+                data-sentence="Nonetheless, the princes of the Empire expected Rudolf to take the necessary measures as proof of his authority against the powerful Ottokar." data-snippet="Nonetheless, the princes of the Empire expected"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="3f24e04cbce0d28b5eb2b47e310a60364c75d46b"
+                data-sentence="Nonetheless, the princes of the Empire expected Rudolf to take the necessary measures as proof of his authority against the powerful Ottokar." data-snippet="Nonetheless, the princes of the Empire expected"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the closest passage by similarity — judged NOT to support the claim; shown so you can see what was checked">closest — not supporting</span> Electors — Historisches Lexikon Bayerns <a class="paperlink" href="https://scholar.google.com/scholar?q=Electors%20%E2%80%94%20Historisches%20Lexikon%20Bayerns" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family.</blockquote><button class="copy" onclick="copyText(this)" data-quote="At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19"
+                data-sentence="At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family." data-snippet="At the same time, the Bohemian electorate,"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19"
+                data-sentence="At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family." data-snippet="At the same time, the Bohemian electorate,"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (122 words)</summary><div class="judged-text">The House of Welf, which had already exercised the right to elect the king in 1198/99, but had lost it in 1235 with the renunciation of the Duchy of Saxony, received a ninth electorate for the Duchy of Brunswick-Lüneburg (line of Hanover) after the acquisition of the Duchy of Saxe-Lauenburg in 1689/1708. At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family. Max Emanuel of Bavaria (ruled 1679-1726), who had opposed the Emperor during the War of Spanish Succession in 1705, lost the electorate but received it back in the peace treaty in 1714.</div></details>
+          </div>
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> Rudolf I: His Ascent to Become the Head of the Holy Roman Empire — Die Welt der Habsburger <a class="paperlink" href="https://scholar.google.com/scholar?q=Rudolf%20I%3A%20His%20Ascent%20to%20Become%20the%20Head%20of%20the%20Holy%20Roman%20Empire%20%E2%80%94%20Die%20Welt%20der%20Habsburger" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire.</blockquote><button class="copy" onclick="copyText(this)" data-quote="King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="3f24e04cbce0d28b5eb2b47e310a60364c75d46b"
+                data-sentence="King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire." data-snippet="King Ottokar II Přemysl of Bohemia (c."
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="3f24e04cbce0d28b5eb2b47e310a60364c75d46b"
+                data-sentence="King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire." data-snippet="King Ottokar II Přemysl of Bohemia (c."
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (103 words)</summary><div class="judged-text">His election came as a surprise to him, as he was not among the most powerful princes of the Empire. King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire. His seemingly unstoppable rise was felt to be progressing at too rapid a pace by the other electors: in addition to his ancestral lands of Bohemia and Moravia, Ottokar had also brought the inherited domains of the Babenberg dynasty, which had died out in 1246, that is, the duchies of Austria and Styria, under his control.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t3" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card supported conf-high" id="card-t4" data-text="text-t4" onclick="brush('t4', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge supported">SUPPORTED</span><span class="claimno">t4</span><span class="confchip high" title="the judge accepted a top-ranked sentence directly">high confidence</span></span><span class="meta">cosine 0.9038 · llm</span></div>
+        <div class="card-claim">Princes whose autonomy rested on a weak crown had reason to resist a stronger successor: after Rudolf died in 1291 the electors bypassed his son Albert for Adolf of Nassau, explicitly to forestall a hereditary Habsburg dynasty.</div>
+        <div class="covset-miss">⚠ No evidence shown for: <b>Princes whose autonomy rested on a weak crown had reason to resist a stronger successor</b>. The judge accepted the claim, but the displayed sentences don't prove this part — open the source and check it yourself.</div><details class="covering"><summary>Evidence coverage — which sentence proves which part (2 parts with shown proof, 1 without)</summary><div class="covset-row"><div class="covset-part">✓ after Rudolf died in 1291 the electors bypassed his son Albert for Adolf of Nassau <span class="covset-src">Albrecht I: Rise and Fall — Die Welt der Habsburger</span></div><blockquote>The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud." data-snippet="The electors chose not Albrecht but Adolf"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud." data-snippet="The electors chose not Albrecht but Adolf"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ after Rudolf died in 1291 the electors bypassed his son Albert for Adolf of Nassau <span class="covset-src">Albrecht I: Rise and Fall — Die Welt der Habsburger</span></div><blockquote>After the death of King Rudolf I in 1291 it was evident that the efforts made by the latter to establish the title as a hereditary office in the Habsburg dynasty had come to nought.</blockquote><button class="copy" onclick="copyText(this)" data-quote="After the death of King Rudolf I in 1291 it was evident that the efforts made by the latter to establish the title as a hereditary office in the Habsburg dynasty had come to nought.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="After the death of King Rudolf I in 1291 it was evident that the efforts made by the latter to establish the title as a hereditary office in the Habsburg dynasty had come to nought." data-snippet="After the death of King Rudolf I"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="After the death of King Rudolf I in 1291 it was evident that the efforts made by the latter to establish the title as a hereditary office in the Habsburg dynasty had come to nought." data-snippet="After the death of King Rudolf I"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-row"><div class="covset-part">✓ electors chose Adolf of Nassau explicitly to forestall a hereditary Habsburg dynasty <span class="covset-src">Albrecht I: Rise and Fall — Die Welt der Habsburger</span></div><blockquote>The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud." data-snippet="The electors chose not Albrecht but Adolf"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud." data-snippet="The electors chose not Albrecht but Adolf"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div></div><div class="covset-foot">Assembled after the verdict: the tool re-read the source's best passages and mapped each part of the claim to the sentence that proves it.</div></details>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip ok" title="this source's own passage was judged to support the claim">supports</span> Albrecht I: Rise and Fall — Die Welt der Habsburger <a class="paperlink" href="https://scholar.google.com/scholar?q=Albrecht%20I%3A%20Rise%20and%20Fall%20%E2%80%94%20Die%20Welt%20der%20Habsburger" target="_blank" rel="noopener" title="Find the original paper (Google Scholar search by title)">Find paper ↗</a></div>
+            <blockquote>The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.</blockquote><button class="copy" onclick="copyText(this)" data-quote="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.">Copy</button>
+      <div class="src-actions">
+        <button class="opentext-btn" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud." data-snippet="The electors chose not Albrecht but Adolf"
+                title="Opens the source text in a new tab with the sentence highlighted">Open source text ↗</button>
+        <button class="side-btn" data-kind="text" data-pid="8390259a782f2fdc945a3f20a892a807bf8f281a"
+                data-sentence="The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud." data-snippet="The electors chose not Albrecht but Adolf"
+                title="Open the source text in one reused side window — keep it docked on the right">⊞ side window</button>
+      </div><details class="judged"><summary>Context — what the judge read (126 words)</summary><div class="judged-text">After the death of King Rudolf I in 1291 it was evident that the efforts made by the latter to establish the title as a hereditary office in the Habsburg dynasty had come to nought. The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud. Antoni Boys (called Anton Waiss): Albrecht I, historicizing painting, between 1579 and 1587 Albrecht I, stained glass window from the Chapel of St Bartholomew in St Stephen’s Cathedral in Vienna, c. 1380 As his authority was as yet unconsolidated in the Austrian and Styrian dominions that he had so recently acquired, Albrecht was forced to recognize the choice of Nassau for the time being.</div></details>
+          </div>
+        
+        <div class="triage" data-id="t4" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card unsupported" id="card-t5" data-text="text-t5" onclick="brush('t5', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge unsupported">UNSUPPORTED</span><span class="claimno">t5</span></span><span class="meta">none</span></div>
+        <div class="card-claim">Bohemian kingship also legitimized itself through dynastic and sacral tradition centred on Saint Wenceslas&#x27;s cult, distinct from the German princes&#x27; elective idiom—though how far this shaped perceptions of Ottokar as an outsider remains interpretive.</div>
+        <div class="unsupp-note">✗ Not supported: source_file_missing: antonin2017.pdf, kalhous2023.pdf</div>
+        
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the file for this citation is not in the sources folder, so it could not be checked">source file missing</span> [[antonin2017]]</div>
+            <div class="reason">The cited file <code>antonin2017.pdf</code> is not in the sources folder — this citation was not verified. Add the file and re-run to check it.</div>
+          </div>
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the file for this citation is not in the sources folder, so it could not be checked">source file missing</span> [[kalhous2023]]</div>
+            <div class="reason">The cited file <code>kalhous2023.pdf</code> is not in the sources folder — this citation was not verified. Add the file and re-run to check it.</div>
+          </div>
+        
+        <div class="triage" data-id="t5" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div>
+      <div class="card own citeneeded" id="card-t6" data-text="text-t6" onclick="brush('t6', 'card')">
+        <div class="card-head"><span class="head-left"><span class="badge own">YOUR OWN CLAIM</span><span class="claimno">t6</span><span class="citechip" title="this uncited passage asserts a checkable fact">citation needed?</span></span><span class="meta">none</span></div>
+        <div class="card-claim">Ottokar&#x27;s death at Marchfeld in 1278 settled the rivalry by force, and no later Přemyslid seriously contested an election before the line ended with Wenceslas III&#x27;s assassination in 1306.</div>
+        <div class="cite-note">📎 This uncited passage asserts a checkable fact — consider adding a [[key]] citation. &ldquo;This passage makes specific, checkable assertions about historical events and dates.&rdquo; Nothing was checked against any source; this is a prompt, not a verdict.</div>
+        <div class="evidence own-note">No citation — the tool treats this as your own idea, argument, or transition. Nothing was checked; add a [[key]] marker if it should be grounded in a source.</div>
+        
+        <div class="triage" data-id="t6" onclick="event.stopPropagation()"><button class="cbtn" title="mark this card as reviewed by you — checked with no repair marks means 'looked, it is fine'">✓ checked</button><span class="tlabel">mark for repair:</span><button class="tbtn" data-mark="wrong_source" title="the claim is fine but the cited source does not back it — cite a different one">wrong source</button><button class="tbtn" data-mark="rewrite" title="the text overclaims — rewrite it to match the evidence">rewrite text</button><button class="tbtn" data-mark="verdict_wrong" title="I disagree with the tool's verdict — feedback, no text change">verdict wrong</button><button class="tbtn" data-mark="other" title="anything else — write it in the note; the fixer surfaces it to you instead of acting on its own">other</button><textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea></div>
+      </div></div>
+      <h2 class="sec">Unused source points — not analyzed (run with --decompose to enable)</h2><p class="meta">none</p>
+    </div>
+  </div>
+</div>
+<script>
+const HAS_PDF = true;
+const HAS_TEXT = true;
+const SOURCE_TEXTS = {"3b45667c7ddcf27ef5beaae0b94054e4dc3a1f19": "Source URL: https://www.historisches-lexikon-bayerns.de/Lexikon/EN:Electors\n\n---\n\nFrom Historisches Lexikon Bayerns\nA group of princes formed in the 13th century, which was solely entitled to elect the German king until 1806. In the original form, there were seven electors, three of them spiritual (archbishops of Mainz, Trier, Cologne) and four secular (Bohemia, Palatine, Saxony, Brandenburg). Research discusses different theories why this group of all people received the right to elect the king (determination by the pope, holders of arch offices, determination in the Sachsenspiegel (Saxon Mirror), inheritance law, imperial law). The Golden Bull of 1356, later referred to as the \"Basic Law of the Holy Roman Empire\", laid down the number of electors and their rights. More electors were not created until 1648, 1689/1708 and 1803. The Golden Bull secured the position of elector for the House of Wittelsbach's Palatine line. It remained there until 1623 and then passed to the Bavarian line. A new position of elector was granted to the Palatine House of Wittelsbach in 1648.\nThe Empire's seven electors (\"principes electores imperii\") were three\n(the archbishops of Mainz, Trier and Cologne) and four secular princes (the King of Bohemia, the\nCount Palatine of the Rhine\n, the Duke of Saxony and the Margrave of Brandenburg). They had the exclusive right to elect the Roman-German king and later Emperor.\nThe electors did not exist in the first centuries of the East Franconian, then German kingdom. Back then the kings were proclaimed by a larger group, mainly by the princes. But for a long time it has not been passed down to us in detail who belonged to this group or how they defined themselves. Only on the occasion of the dual election between the Staufer dynasty and the House of Welf in 1198/99 a total of 61 electors of the king is attested in documents (cf. \"Inheritance law theory\" below).\nFirst Appearance 1298\nA century later, on 24 July 1298, the seven electors mentioned above came together for the first time in Mainz \"for a salutary reform of the Constitution of the Holy Empire\" (\"pro salubri sacri status imperii reformacione\"). This was preceded by the deposition of King\nAdolf of Nassau\n(king 1292-1298) by numerous followers of\nAlbrecht of Austria\n(king 1298-1308) on 23 June and the latter's first election as king in Mainz. Adolf died in the battle between the two kings on 2 July 1298. Now his former followers and opponents agreed on 24 July 1298 in Mainz to elect Albrecht of Austria as king three days later in Frankfurt. Regarding his election in Frankfurt on 28 July 1298 they drew the first document in Frankfurt, which all seven electors issued together and certified with their seven\n(Q 75; Q refers to the source appendix in: Wolf, Die Entstehung des Kurfürstenkollegs). With\n, Count Palatine of the Rhine and Duke of Bavaria (ruled 1294-1317), a man from the\nHouse of Wittelsbach\nalso belonged to this electoral union. The King of Bohemia only sent a representative on this occasion. All seven electors met for the first time in person on the first court (Hoftag) convened by the newly elected king in November 1298 in\n. This had \"never happened since time immemorial\" (Johann von Victring; Q 81).\nLudwig der Bayer\n(count palatine and duke of Bavaria 1294-1347, king 1314, Emperor 1328) also called the electors of the king a \"collegium\" for the first time in a document of 1298 (Q 73). In the same year, the electors of the king were first given the German title \"kurfursten\" - in fact in three different places (Q 76, 77, 79). In the Imperial Peace of 1298, the \"fursten\" from the previous document were replaced by \"kurfursten (prince electors)\". Soon afterwards the first representative picture of the king with the seven electors was produced in Zurich (probably in 1299 on the occasion of King Albrecht's visit).\nOrigin of the Electoral College\nThe origin of the right to elect the king and the electoral college was long regarded as an \"unsolvable constitutional-historical problem\" (Lintzel, Entstehung, 47). Various theories have been proposed.\n(ruled 1198-1216) declared in 1202 in the \"Venerabilem\" bull that the Apostolic See granted the right \"to elect the king to be promoted to Emperor to those princes who are entitled by right and according to old custom\". This referred to the numerous German princes (translatio imperii in Germanos, Q 15). However, the bull did not determine who was a German prince in detail. \"Venerabilem\" was added to the decretals of Pope\n(ruled 1227-1241) in slightly revised form in 1234 (Q 31) and became part of canon law.\nRichard of Cornwall\n(died 1272) and\nAlfonso of Castile\n(died 1284), elected in two competing elections in 1257 for German kings, conducted a trial for their recognition before the papal Curia. During this lawsuit, the electors of both hostile parties were put on record. Their names were compiled by the canonist\nHenry of Segusio\n(Henricus de Segusio, as bishop of Ostia named Hostiensis, died 1271) around 1263, before 1265 in a gloss to the \"Venerabilem\" (Q 51)in a single list, which named seven princes, who later became the seven electors. Pope\n(ruled 1271-76) probably requested these seven princes to elect a new king after Richard's death (a document regarding this has not been preserved though). Six of the seven elected\nRudolf of Habsburg\nin 1273 (ruled as Roman-German king 1273-1291). The Curia did not accept the King of Bohemia's protest. All seven voted together and with the exclusion of others for the first time in 1298 in the election of Albrecht of Austria (Q 75).\nPope Boniface VIII (ruled 1294-1303) made a statement in 1300, in which he referred to the \"Venerabilem\" bull (1202 and 1234) but deviated from it in two important formulations. The right to elect the king to be elevated to Emperor was now not only generally granted to German princes (\"ad quos de iure ac antiqua consuetudine noscitur pertinere\"), but also to \"certain\" princes (\"certis principibus\"). The Curia not only recognised this right (\"recognoscimus\") but also granted it (\"concessit\"). King Albrecht, who wanted to free himself from the stigma of the murder of a king (Adolf von Nassau) and hoped to be crowned Emperor by the pope, expressly recognised this in 1303.\nHowever, the electors did not confirm this claim. According to their own self-understanding, as they claimed in the Electoral Union of Rhens in 1338, they did not obtain their rights from the church but \"from the Empire\". Even the\nof 1356 did not attribute the appointment of the electors to the Curia. As late as 1623, the Duke of Bavaria refused to have his elevation to Elector confirmed by the Pope. Conversely, the Pope protested against the creation of an eighth electorate for the Wittelsbach Count Palatine, which happenend without his consent in 1648 by the Peace of Westphalia. The curial theory was a papal claim but not generally accepted. One effect of the Curia, however, lay in the recognition of the election of the future Emperor by the Germans (i. e. their princes) in 1202 and in the non-recognition of the Staufer and their followers since 1245.\n(1901-1955), the originally high number of the king's electors decreased in the course of the 13th century due to a growing lack of interest in the election of the king, so that only the seven electors remained in the end. This disinterest may have played a role in reducing the number of spiritual electors of the king, especially since many of them remained loyal to the Staufer for a long time and after the ban on Emperor\n(ruled 1211-1250) and his followers in 1245 and had no interest in electing an anti-king. However, the non-inclusion of the secular princes of Bavaria, Austria and Saxony-Lauenburg in the later electoral college met with their protest and was by no means due to a lack of interest.\nArch Office Theory (Erzämtertheorie)\nThe Arch Office theory can be found for the first time in the only manuscript of the Annales Stadenses dating from the 14th century: \"The Count Palatine elects because (quia) he is the steward, the Duke of Saxony because he is the marshal, the Margrave of Brandenburg because he is the chamberlain. The King of Bohemia, who is the imperial cupbearer, has no vote because he is not German.\" (Q 80) The passage is indisputably dependent on the Sachsenspiegel (Landrecht, III 57,2) (Q 58), in which, however, the causal link (quia/because) is still missing. Nevertheless, for a long time research (against Mitteis) concluded from the Sachsenspiegel passage that since the 13th century the four lay princes had been entitled to elect because they had held certain court offices, which were later called Arch Offices\" (Krieger, König, 67f.).\n(born 1937), the theory of the Arch Offices was established by Archbishop\nAdolf of Cologne\n(ruled 1193-1205, 1210-1216) and his supporters in the dual election of the Staufer dynasty and the house of Welf (1198) in order to support the weak legal position of the Welf party. But why would this party grant the right of the first votes to Trier, Bohemia, Saxony and Brandenburg, who were on the Staufer dynasty’s side? The Arch Office theory only shifts the problem of the origin of the electoral college but does not solve it. Even if the election rights really were beased on the Arch Offices, the second question would logically arise as to why certain princes held Arch Offices but others did not.\nBefore 1198 the offices had lain in changing hands of various distinguished princes present at court (documents: Wolf, Verwandtschaft, 114). In the first half of the 13th century, there is no evidence of any office being exercised. All seven later electors were associated with the (Arch)offices in literature for the first time in the chronicle by papal poenitentiary\nMartin of Opava\n(1268/71) (Q 52). During Rudolf of Habsburg's reign, Brandenburg, Saxony and Bohemia (not Palatine yet) began to occasionally hold the titles of Chamberlain, Marshal and Cupbearer of the Roman Empire since 1277/91. When the seven electors came together for the election of Albrecht in 1298 and issued a document in all of their names for the first time, they did not bear these titles though. A few months later, on the first court (Hoftag) convened by King Albrecht in Nuremberg, they were officially awarded the (arch)offices and exercised them for the first time in this traditional distribution. Thus they made their position impressively visible to the general public. The Arch Offices had considerable importance in this effect on the public. They were not the legal arguments for the king's election but they were honourable attributes. Holding these offices followed the right to elect, not the other way around!\nWenceslas I of Bohemia\n(ruled 1230-53) \"invented\" the Arch Office theory when in 1239 he planned the elevation of a Danish prince to king against the Staufer dynasty in alliance with Palatine-Bavaria, Brandenburg and Saxony (in vain). The poem of praise by\nReinmar von Zweter\n(ca. 1200-ca. 1260) on \"künec\nErich von Tenemarken\n\" (ruled 1241-50) used by Thomas (1992) has hardly anything to do with this plan, because the talk was not about Erich's candidacy in 1239, but that of his brother Abel. Furthermore, the anonymous \"Kurfürstenspruch\" (Q 77) used by Thomas (1992) is rather to be dated around 1298, according to the context in the only manuscript (Wolf, Verwandtschaft, 860-866).\nNevertheless, the usurpation theory cannot be completely rejected. The unification of the seven electors and the election of Albrecht of Austria in 1298 had a usurpatory character because of the deposition and killing of King Adolf before. However, the election of the son of the preceding king was justifiable under the law of succession.\n(born 1952), the Arch Office theory, for which there is no contemporary evidence, is indeed an \"appealing presumption\", but \"not provable\" (Deuten, 331). Erkens starts from the premise that \"the electoral college in the 13th century was not created by a special legal act, but by a gradual development which various influences had an effect on\" (Kurfürsten, 93). One of the most important factors was the Sachsenspiegel.\nSachsenspiegel (Saxon Mirror)\nThis German legal book written around 1220/35 by\nEike of Repgow\n(ext. 1209-1233) states: \"The Germans should elect the king by right.\" In addition to this \"1st king's election paragraph\" (Sachsenspiegel Landrecht III 52, 1 = Q 30), the \"2nd king's election paragraph\" (III 57, 2 = Q 58) names six of the seven later electors as the \"first to vote\". Palatine, Saxony and Brandenburg have the election and an office, the three spiritual princes have the right to elect but no office, the Bohemian does in fact have an office but not the right to elect (Q 58). The Sachsenspiegel therefore does not prove the equivalence of election right and office and certainly not causality. \"For Eike, the Arch Office by no means gave the legal argument for the first election right\" (Mitteis, Königswahl, 173). The exclusivity of election rights is also missing in the Sachsenspiegel, because after the first electoral group all princes of the kingdom vote. The number seven and the word Elector (Kurfürst) do not appear.\nFor most researchers, Eike did not create the Sachsenspiegel's king's election theory but \"merely picked up on it\" (Erkens, Kurfürsten, 88). However, there is no proof pre-Eike for the list of the six princes \"to vote first\".\n(born 1935) therefore sees the \"emergence of the electoral college as a result of Eike von Repgow's legal construction\", which could be \"explained from his reading\". However, it is questionable whether Eike could change German constitutional law as a \"legal inventor\" (Landau, Eike von Repgow, 46, 29, 49) and whether Landrecht III 57, 2 did not reflect an already existing reality.\nThe dating and interpretation of the 2nd king's election paragraph is central to the emergence of the electoral college. In the past it was almost always assumed that this paragraph also originated from Eike von Repgow. Erkens 2002 and 2005, Landau 2008 and Begert 2010/2018 continue to adhere to this. However, according to Daniels 1843, Castorph 1978, Wolf 1990, 1998 and 2013, Thomas 1992, Willoweit 2005 and Assing 2010, this paragraph does not originate from Eike himself but was added to the Sachsenspiegel later. A king's election by exactly the two groups of each three princes \"to vote first\" mentioned there and under explicit exclusion of the Bohemian, who had been completely unchallenged as one of the electors in 1198/99, 1212, 1237 and 1257, is however only provable in the case of the election of Rudolf of Habsburg in 1273. In contrast to the undoubtedly genuine 1st king's election paragraph, the 2nd king's election paragraph with the exclusion of Bohemia is therefore anachronistic at the time of Eike. It was obviously only included in the \"4th version\" of the Sachsenspiegel around the time of Rudolf's election in 1273. All the later versions of the law book depend on this version (Wolf, Verwandtschaft, 105, Datierung 2020).\nOne weighty argument against Eike's authorship of the 2nd king's election paragraph is the fact that the six princes “to vote first\" contained in it were not originally listed in the Sachsenspiegel's feudal law (text synopsis in: Wolf, Verwandtschaft, 90f.). Auctor vetus, the Latin original of Eike's Sachsenspiegel (around 1220), and the Görlitz Law Book (manuscript around 1300) only say: \"Six princes who are first in the king's election\" (\"sex principes, qui primi sunt in eius electione\") are to accompany the king to Rome to testify the legitimacy of the election to the Pope. The point of the sentence is: The princes are the first to vote. (At least) six (of them) shall testify to the election. Non-princes are not sufficient for the testimony! In fact, at least six princes had always accompanied the king to Rome before, but different ones every time. It therefore corresponded to the legal reality at the time of Eike not to name the six princes in detail. There is also no reason for which Eike himself would have included a list of six princes \"to vote first\" in his German version of the Sachsenspiegel.\nAs late as 1237, that is after the composition of Eike's work, not six but eleven princes elected\n(ruled as Roman-German king 1237-1254) (Q 33). In 1247, the Pope thanked ten (partly other) princes for the election of\nWilhelm of Holland\n(Roman-German anti-king 1247-1254, Roman-German king 1254-1256) (Q 41). In 1257 the English king, who had campaigned for the election of his brother Richard of Cornwall, knew 14 secular princes as electors in addition to the three Rhenish archbishops (Q 45). Their \"long list\" probably goes back to information from the Archbishop of Cologne. Outside the Sachsenspiegel, the list of six is first documented in Germany in 1274/75 in the Deutschenspiegel (German Code of Law). \"To understand the assumption of a later addition to the Sachsenspiegel text is easier than to find an explanation for the assignment of precisely these princes to the Arch Offices\" (Dietmar Willoweit, Deutsche Verfassungsgeschichte, 2005, 95). Auctor vetus I 12 and Landrecht III 52 of the Sachsenspiegel reflect the state of law around 1220, Landrecht III 57 the one of 1273. The latter passage obviously followed the Gloss of Hostiensis of ca. 1263/65 (Castorph, Grundlagen, 2020, 89f.).\nThe hypothetical pre-election group of 1198 or 1220/35, on the other hand, seems to be a rear projection of the later electors.\nLaw of succession Theory\nThe \"law of succession theory\" was only developed in recent years by\n(born 1935). It is based on the kings' and their electors' family relationships as a contemporary \"new source\" unnoticed up to now. It assumes that in the dual election in 1198/99 a total of 61 princes, namely 38 spiritual (31 bishops and 7 abbots) and 23 secular, are documented as electors of the king (Q 7-11). While their right to elect has not yet been fully accounted for, the law of succession theory is based on the fact that the 23 secular electors of the king in 1198/99 represented precisely those 19 dynasties which descended in female lines from at least one of the former kings, within the first six degrees of kinship, ultimately from the royal couple\n(as German king 919-936) and\n(895-968), within the first six degrees of kinship. This legitimised their right to elect by law of succession (Sachsenspiegel Landrecht I 3,3). The older royal dynasties (Ottonian, Salian, Rheinfelden, Süpplingenburg) had all died out in the male line but lived on in female lines (including the\n, Welf, Andechs-Merania and Ronsberg dynasties in present-day Bavaria). Also the Staufer dynasty was just one of these 19 \"royal daughter lines\". The law of succession theory is based on the identity of the representatives of these dynasties with the secular princes testified as electors of the king in 1198/99: \"Who had the right to inherit had the right to elect.\"\nOriginally, it were the imperial princes who were entitled to elect the king (\"principes imperii, ad quos de iure spectat electio\"). Their large number in 1198/99 was reduced in the course of the 13th century to the small number of the seven electors. Several dynasties of secular electors died out between 1212 and 1268, their legacy mostly fell to other dynasties of electors or to the Empire (Wolf, Verwandtschaft, 60-68). The deposition of Emperor Friedrich II by the Pope in 1245 and the fall of the Staufer dynasty had a significant impact. In 1256, the Pope sent his threat to excommunicate anyone who elected the Staufer Konradin to the three Rhenish archbishops only, who were to inform the other electors, who were not named individually. The number of participants in the king's elections declined even more after that. Only the archbishops of the three oldest metropolitan seats (Mainz, Trier and Cologne) remained among the ecclesiastical electors.\nIn 1257, the Archbishop of Cologne and the Count Palatine elected the brother of the King of England, Count Richard of Cornwall and Poitou, and a few weeks later the Archbishop of Trier elected King Alfonso of Castile as Roman-German king. Both parties therefore turned away from the Staufer dynasty but nevertheless took elements of inheritance law into account. They did not choose exotics, but - taking elements of law of succession into account - opted for one of the three grandchildren of King\nPhilipp of Swabia\n(ruled as Roman-German King 1198-1208) in Alfons and for the closest living relative of Emperor\nOtto IV of Brunswick\n(ruled as Roman-German King 1198-1218, Emperor from 1209) in Richard. The Cologne-Palatine party claimed power of attorney for Mainz, the Trier Archbishop for Saxony, Bohemia and Brandenburg. Taken together, the two parties corresponded to the seven later electors. From this it has mostly been concluded so far that the electoral college must have been constituted before 1257. However, this assumption led to the astonishing conclusion: \"However, the sources of the time during which the electoral right must have developed, say nothing about its coming into being\" (Lintzel, Entstehung, 9). Could it be that we've been looking at the wrong time? Sources are available for 1298!\nThe law of succession theory therefore emphasises that the electors of the two opposing kings of 1257 represented just two competing parties, who had gathered in two different places and at different times, elected their own king separately, and were not yet constituted as an electoral college. The Dukes of (Lower) Lorraine-Brabant and of (Upper) Lorraine, who had not renounced their (inherited) right to elect, reached an agreement in direct negotiations with King Alfonso. Due to the canon rule of unitas actus, however, their votes could not be taken into account in the trial before the Curia. The Wettin Margrave of Meissen and Landgrave of Thuringia remained faithful to the Staufer dynasty. According to Bavarian testimonies (Annals of Salzburg, Hermann von Niederaltaich), in addition to the Count Palatine and Duke of (Upper) Bavaria,\n(ruled 1253-1294), his brother\nHeinrich XIII of Lower Bavaria\n(ruled 1253-1290) also took part in Richard's election as the second member of the Wittelsbach family. The Count Palatine testified to this in 1275 (Q 60). All this suggests that the group the king's electors was not yet constituted in 1257. Those who remained loyal to the Staufer dynasty did not elect at that time.\nIn 1266, the Pope again warned the German princes against electing the Staufer\nking; he threatened the secular electors and their descendants up to the fourth generation with the withdrawal of their right to elect (Q 50). This shows that the Pope also assumed the heredity of the secular electors’ right to elect.\nIn 1273 Rudolf of Habsburg was elected king by the three Rhenish archbishops, the Count Palatine, Saxony, Brandenburg, as well as by \"plenty of other princes\" after them, who were not named individually (Sächsische Weltchronik, Q 57, cf. Q 58). The article inserted in the Sachsenspiegel at that time (Landrecht III 57,2), which listed the six princes \"to vote first\" by name, corresponds to this. This passage continues: After that, \"the princes of the kingdom, spiritual and lay, all vote.\" The Staufer grandson in female line King [Person:118590898|Ottokar of Bohemia]] (ruled 1253-1278), who had run for election himself, had his ambassador protest in vain against Rudolf's election. The Sachsenspiegel (therefore?) denied the Bohemian the right to elect and justified this with the fact \"that he is not German\".\nAfter his election, Rudolf of Habsburg met the condition set and secured by his secular electors (\"ypoteca cavente\" as well as \"receptis caucionibus\") to receive the new king's daughters for marriage. Two weddings (with the Wittelsbach Count Palatine Ludwig II and the Ascanian Duke\nAlbrecht of Saxony\n[ruled 1260-1298]) were celebrated in 1273 on the evening of Rudolf's coronation day in Aachen (Q 57). Legally, the king's candidacy and the electors´ marriage claim, the king's election and marriage promise, the king's coronation and the electors´ marriage to the king's daughters seem like a step-by-step business transaction. Two other weddings were celebrated in 1279, with the Wittelsbach Duke\nOtto III of Lower Bavaria\n(ruled 1290-1312) and the Ascanian Margrave of Brandenburg\nOtto VI der Kleine\n(ruled 1280-1286, died 1303), who had still been minors in 1273. As a result, the Wittelsbach and Ascanian dynasties became daughter lines (Tochterstämme) of the new king, who had founded the Empire again after the \"Interregnum\". They became the next to the throne and acquired hereditary claims for their direct descendants.\nAt the Augsburg court (Hoftag) in 1275, the King of Bohemia was proscribed and the two Wittelsbach brothers’ vote (additionally and deviating from Hostiensis) was counted together as a seventh vote for the Duchy of Bavaria. This was the first time that the number seven was mentioned as that of the king's electors in Germany (Q 60). Accordingly, the Schwabenspiegel (probably written in\n) ascribed the first three ecclesiastical votes to the rhenish Archbishops and the first four secular votes to the Count Palatine, the Saxon, the Brandenburgian and the Bavarian (i.e. two Wittelsbachs) in 1275/76 (Q 61). After the Bavarian marriage had ended childlessly and King Rudolf had reconciled himself with the son of the King of Bohemia who had fallen in the war against Rudolf, the Bohemian also received one of Rudolf's daughters as his wife and the right to elect again (expressly described as hereditary) in 1289/90 (Q 65). It was determined that the office of Cupbearer was also to belong to Bohemia and \"no other\" (i.e. not Bavaria). Nevertheless, the young Duke and later Emperor Ludwig der Bayer demanded at the first election of King Albrecht in 1298 to belong to the college of electors of the king because of the order of descent (\"ordine geniture\"), but in vain (Q 73).\nIt was therefore King Rudolf's German sons-in-law and grandsons who came together for the first time with the three Rhenish archbishops in the later traditional composition of the seven electors at the election of Albrecht of Austria in 1298 (Q 75). These Habsburg daughter lines together with King Albrecht from the Habsburg male line, who was elected by them, formed a community of heirs to Rudolf of Habsburg. A manuscript of the Schwabenspiegel dating from around 1300 added the exclusivity: \"and no one else shall elect the Emperor\" (Synopsis: Wolf, Verwandtschaft, 715). The Houses of Saxe-Lauenburg, Brabant, (Upper)Lorraine and Wettin, who had also been electors of the king in former times but did not descend from king Rudolf, did not become electors at that time.\nWith the assassination of Albrecht of Austria in 1308 and the election of Heinrich VII of Luxembourg as king, the principle of the election among the next heirs was interrupted but the heritability of the secular electors' active right to elect the king remained intact.\nThe law of succession theory can explain the composition of both the large number of electors of the king in 1198/99 (representatives of the daughter lines of King Heinrich I) and the small number of electors in 1298/1356 (representatives of the daughter lines of King Rudolf of Habsburg). The law of succession theory is based on the application of the legal principles handed down in the Sachsenspiegel to the descendants of King Heinrich I (resp. Rudolf of Habsburg). These principles are its source: Nothing is lost from the descendants as long as there are legitimate descendants. First the sons inherit but if there are not any sons, the daughters (or their descendants: the daughter lines) (Landrecht I 17,1). The German (princes) shall elect the king by law (de iure) (Landrecht III 52,1). Princes shall have no other layperson other than the king as lord (Landrecht III 58:1). If there are no direct descendants, the next relatives (among the descendants of the first owner) follow, up to the sixth degree of kinship. Their right to inherit ends in the seventh degree (Landrecht I 3,3). The right to elect the king was also a right to be inherited. The Golden Bull codified it in 1356.\nThe law of succession, just as in the Golden Bull, only established the secular electors´ right to elect the king. However, it must be noted that the three rhenish archbishops had largely obtained their territories from the estates of childless members of the royal family ((\nOtto of Swabia\n[Duke of Swabia 973-982, Duke of Bavaria 976-982], Emperor\n[Roman-German King 983-1002, Emperor from 996], Emperor\n[German king 1002-1024, Emperor from 1014]) or extinct royal daughter lines (Ezzonen, Werl). The prince bishoprics kept these possessions independently of the individual archbishops and therefore also became a kind of \"heir in the Empire\" (Wolf, Verwandtschaft, 81).\nIn law of succession, by the way, it was not biological but legal ancestry that counted. Palmed off children were entitled to inherit, but the (numerous) extramarital children were not.\nHelmut Assing (born 1932) also speaks of the \"electoral college, which apparently constituted itself for the first time in the summer of 1298\". However, he does not see the reason for this in the community of heirs after Rudolf of Habsburg but as \"the result of a selection process on the basis of a simplification (Versachlichung) of the king's election law for liturgical-ritualistic, legal, political or economic reasons\" (Weg, 115).\nImperial Law Theory\nIn a print of 1613, a law was published in which King Otto IV had supposedly determined six electors of the king in 1209. However, this alleged decree dependent on Hostiensis (ca. 1263/1265) was recognised as a forgery a long time ago. Regardless of this, the Imperial law theory has been revived in recent times: Otto IV is supposed to have stipulated six electors of the king by law at the\ncourt (Hoftag) in 1209. At King Wilhelm's Brunswick court (Hoftag) in 1252, a further imperial law allegedly established the committee of seven by adding the Bohemian King (Alexander Begert, Entstehung, 2010). According to another opinion, the Frankfurt court (Hoftag), scheduled for 8 September 1256, decided the seven electors' sole right to elect (Karl Zeumer 1905, Wolfgang Giese 1984). The weaknesses of these theories lie in the fact that such laws have been passed down neither of 1209 nor of 1252 or 1256. It is not even certain whether the Frankfurt court (Hoftag) actually took place. It is true though, that Emperor\n(ruled as Roman-German King 1346-1378, Emperor from 1355) “Golden Bull” at the Nuremberg and Metz court (Hoftag) in 1356 codified the electoral law in an imperial law, which remained in force until 1806.\nThe Electors in the Golden Bull\nThe electoral college of 1298 was not yet secured by imperial law and was therefore still endangered. Two parties faced each other in the\nin 1314: Habsburg Austria, Wittelsbach Palatinate and Saxony-Wittenberg elected Friedrich of Austria (died 1330), while the Wittelsbach of Bavaria, Luxembourg-Bohemia and Saxony-Lauenburg elected Ludwig der Bayer. The grandson of Rudolf of Habsburg,\nFriedrich of Austria\n(ruled as Roman-German King 1314-1330) was defeated by Ludwig der Bayer (excluded in 1298) in the Battle of Mühldorf am Inn in 1322. Karl of Luxembourg was proclaimed king against the latter in 1346. The later Emperor did not consider either the Habsburgs or the Bavarians in the Golden Bull of 1356.\nThe seven electors' exclusive right to elect the king was officially recorded in an imperial law there. The Golden Bull specifically confirmed the rights to elect held by the King of Bohemia (contrary to the Sachsenspiegel), the Palatine but not the Bavarian line of the Wittelsbachs (contrary to the older manuscripts of the Schwabenspiegel) and the Wittenberg but not the Lauenburg line of the Dukes of Saxony (which was older, but not descended from Rudolf of Habsburg). This affirmed the victory of the Habsburg daughter lines against the Habsburg male line.\nArticles VII \"About the Succession of the Electors\" and XXV codified the heritability of the secular electors' right to elect the king. According to this, the right, vote and power to such an election (\"ius, vox et potestas electionis huiusmodi\") derived from birth and succession. It is the oldest German law of succession put in writing, but it reflected a long practised habit. The secular electors recognised in the Golden Bull already looked back on four or five generations of their ancestors as electors of the king since 1198. The Golden Bull called the electors a union (\"unio\") and a community of heirs (\"consortium\"). \"The Empire was an electoral kingdom and a heirdom of electors\" (Wolf, Entstehung, 99).\nThe Golden Bull also determined that the position of elector would only appertain to the primogenital line of a dynasty of electors of the king in future. The Wittelsbach\nhouse contract of Pavia in 1329\nhad still provided that the position of elector should alternate between the House of Wittelsbach's Palatine and Bavarian line.\nLater Changes to the Electoral College\nAfter the Ascanian Margraves died out, King Ludwig der Bayer conferred Brandenburg with the right to elect on\nLudwig V der Brandenburger\n(died 1361) in 1324. Emperor Karl IV acquired the Brandenburg right to elect from the latter´s childless brother and successor\n(ruled 1351-1373, died 1379) in 1378 and successively granted it to his sons\n(ruled 1376-1400) in 1373 and\n(ruled as Roman-German king 1410-1437) in 1378. Here, too, the electoral rights were given to the Emperor's closest relatives.\nIn 1410/11 at the competitive elections of Sigmund of Luxembourg and\nJost of Moravia\n(elected Roman-German King 1410-1411) there was a dispute about who held the Brandenburg vote, because it was undecided whether a right to vote could be transferred by pledging the adherent territory. There was therefore once again a double kingship, which only ended with the death of Jost in 1411. King Sigmund, the last representative of the Luxembourg male line, had just one minor daughter and no male blood relatives in the female line, either. In 1415 he sold the right to elect, which was connected to the Margraviate of Brandenburg and he had held himself, to the Hohenzollern Burgrave\nFriedrich VI of Nuremberg\n(reigned 1397-1429). When the Ascanian Dukes of Saxony-Wittenberg died out, he gave their right to elect to the\nof Meissen (ruled 1407-1428) in 1423. Both the Hohenzollern and the Wettin represented the daughter lines of Ludwig der Bayer, the last Emperor before the Luxembourgers. Both dynasties retained the position of elector until the end of the Old Empire in 1806.\nHowever, the Emperor withdrew the Saxon electorate from Duke\nJohann Friedrich I of Saxony\n(Saxon elector 1532-1547), who was defeated by him in the Schmalkaldic War in 1547, and transferred it to the latter's cousin Moritz (ruled as Saxon elector 1547-1553). Count Palatine\n(reigned 1610-1623), who also rebelled against the Emperor, lost his electorate to his Bavarian cousin\n(reigned 1597-1651) after his defeat at the White Mountain near Prague and his proscription in 1623. In both cases, the electoral rights remained in the Houses of Wettin and Wittelsbach. Even now, they were apparently regarded as an inherited privilege of a dynasty. In the Peace of Westphalia (Osnabrück Article IV § 5), the House of Wittelsbach received an eighth electorate for the Counts Palatine in addition to the Bavarian one in 1648.\nThe House of Welf, which had already exercised the right to elect the king in 1198/99, but had lost it in 1235 with the renunciation of the Duchy of Saxony, received a ninth electorate for the Duchy of Brunswick-Lüneburg (line of Hanover) after the acquisition of the Duchy of Saxe-Lauenburg in 1689/1708. At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family.\nMax Emanuel of Bavaria\n(ruled 1679-1726), who had opposed the Emperor during the War of Spanish Succession in 1705, lost the electorate but received it back in the peace treaty in 1714. Since the House of Wittelsbach temporarily owned the Archdiocese of Cologne, they held two electoral votes since 1583, even three from 1648 to 1761 (Bavaria, Palatinate, Cologne), and with Trier from 1716 to 1729 and Mainz from 1729 to 1732 even four electoral votes. It was only with the union of the House of Wittelsbach in 1724 that the Wittelsbach lines, which had long been enemies, found a common policy. This favoured the election of\n(ruled 1726-1745) from Bavaria as Emperor in 1742, after the Habsburg male line had died out in 1740. When Count Palatine\n(ruled 1742-1799) inherited the Duchy of Bavaria in 1777, both Wittelsbach electorates were reunited into a single one in fulfilment of a provision in the Peace of Westphalia (Osnabrück Article IV § 9), which reduced the number of electors to eight.\nEnd of the Electors\nThe electors elected an Emperor for the last time in 1792. After the Empire had lost its territories on the left bank of the Rhine to France, the Electorate of Cologne and the Electorate of Trier ceased to exist in 1803 due to the Final Recess of the Imperial Deputation (Reichsdeputationshauptschluss), while the Electorate of Mainz was transferred to\n. The House of Habsburg received a second electorate for Salzburg (from 1805 Würzburg). Baden (Zähringer), Württemberg and Hesse-Kassel (House of Brabant) received new electorates. As a result, there were ten electors at the fall of the Old Empire in 1806.\n(1769-1821, Emperor of the French 1804-1814) made the former Archbishop of Mainz\nKarl Theodor von Dalberg\n(1744-1817) the prince primate of the Rhenish Federation and its members, the former electors of Bavaria, Saxony and Württemberg into kingdoms, Baden and Würzburg into grand duchies. Bohemia had been a kingdom since ancient times (1198), Brandenburg now went to the Kingdom of Prussia, which until then had only consisted of the provinces of East and West Prussia outside the Empire. Of the expropriated electorates, Hesse-Kassel, which had regained its territory in 1813, continued to call itself an \"electoral principality\" until it was annexed by Prussia in 1866, while Hanover became a kingdom in 1814 on the grounds that electors held royal rank. Hanover retained its electoral coat of arms (the imperial crown, in the escutcheon!) until it was annexed by Prussia in 1866, even in the Hanoverian quarter of the royal arms of Great Britain and Ireland until 1837!\nHelmut Assing, Der Weg der sächsischen und brandenburgischen Askanier zur Kurwürde, in: Eckhardt Opitz (Hg.), Askanier-Studien der Lauenburgischen Akademie, Bochum 2010, 71-118.\nWinfried Becker, Der Kurfürstenrat. Grundzüge seiner Entwicklung in der Reichsverfassung und seine Stellung im Westfälischen Friedenskongreß, Münster 1973.\nAlexander Begert, Die Entstehung und Entwicklung des Kurkollegs. Von den Anfängen bis zum frühen 15. Jahrhundert (Schriften zur Verfassungsgeschichte 81), Berlin 2010. (Vgl. die Besprechungen von Franz-Reiner Erkens, in: Mitteilungen des Instituts für Österreichische Geschichtsforschung 119 [2011], 376-381, und von Armin Wolf, Wie kamen die Kurfürsten zu ihrem Wahlrecht? Eine Stellungnahme zu dem Buch von Alexander Begert, in: Zeitschrift der Savigny-Stiftung für Rechtsgeschichte, Germanistische Abteilung 129 [2012], 340-363.)\nAlexander Begert, Von Tochterstämmen, Interpolationen und Konspirationen: Anmerkungen zu den Thesen von Armin Wolf, in: Rheinische Vierteljahrsblätter 82 (2018), 186-199.\nEgon Boshof, Erstkurrecht und Erzämtertheorie im Sachsenspiegel, in: Theodor Schieder (Hg.), Beiträge zur Geschichte des mittelalterlichen deutschen Königtums (Historische Zeitschrift. Beiheft. Neue Folge 2), München 1973, 84-121.\nBernward Castorph, Die Ausbildung des römischen Königswahlrechtes. Studien zur Wirkungsgeschichte des Dekretale \"Venerabilem\", Göttingen 1978.\nBernward Castorph, Die rechtlichen Grundlagen der römisch-deutschen Königswahl seit 1198: Vom Dekretale Venerabilem zur Goldenen Bulle, Borsdorf 2018.\nFranz-Reiner Erkens, Kurfürsten und Königswahl. Zu neuen Theorien über den Königswahlparagraphen im Sachsenspiegel und die Entstehung des Kurfürstenkollegiums (Monumenta Germaniae Historica. Studien und Texte 30), Hannover 2002. [dazu Rezension von Armin Wolf, in: Zeitschrift für Rechtsgeschichte. Germanistische Abteilung 120 (2003), 535-548]\nFrank-Reiner Erkens, Vom Historischen Deuten und Verstehen. Noch einmal zu einer neuen Theorie über die Entstehung des Kurkollegiums, in: Zeitschrift der Savigny-Stiftung für Rechtsgeschichte. Germanistische Abteilung 122 (2005), 327-351.\nAxel Gotthard, Säulen des Reiches. Die Kurfürsten im frühneuzeitlichen Reichsverband (Historische Studien 457), Husum 1999.\nBernd Kannowski, The impact of lineage and family connections on succession in medieval Germany’s elective kingdom, in: Making and breaking the rules: Succession in medieval ‚Europe c. 1000-c. 1600 (Histoire de famille: La parenté au Moyen Âge 9), Turnhout 2009.\nKarl-Friedrich Krieger, König, Reich und Reichsreform im Spätmittelalter (Enzyklopädie deutscher Geschichte 14), München 1992.\nPeter Landau, Eike von Repgow und die Königswahl im Sachsenspiegel, in: Zeitschrift der Savigny-Stiftung für Rechtsgeschichte. Germanistische Abteilung 125 (2008), 18-49.\nMartin Lintzel, Die Entstehung des Kurfürstenkollegs, 1952, Sonderausgabe Darmstadt 1957.\nHeinrich Mitteis, Die deutsche Königswahl. Ihre Rechtsgrundlagen bis zur Goldenen Bulle, Brünn/München 2. Auflage 1944.\nHeinz Thomas, König Wenzel I., Reinmar von Zweter und der Ursprung des Kurfürstentums im Jahre 1239, in: Hubert Mordek (Hg.), Aus Archiven und Bibliotheken. Festschrift für Raymund Kottje zum 65. Geburtstag (Freiburger Beiträge zur mittelalterlichen Geschichte 3), Frankfurt am Main 1992, 347-372.\nArmin Wolf, Die Entstehung des Kurfürstenkollegs 1198-1298. Zur 700-jährigen Wiederkehr der ersten Vereinigung der sieben Kurfürsten (Historisches Seminar. Neue Folge 11), Idstein 2. bearbeitete Auflage 2000.\nArmin Wolf (Hg.), Königliche Tochterstämme, Königswähler und Kurfürsten (Studien zur europäischen Rechtsgeschichte 152), Frankfurt am Main 2002.\nArmin Wolf, Verwandtschaft – Erbrecht – Königswahlen. Sieben neue und 26 aktualisierte Beiträge mit 192 Tafeln, Synopsen, Landkarten und Abbildungen und einem Geleitwort von Eckart Henning. 2 Bände (Studien zur europäischen Rechtsgeschichte 283/1-2), Frankfurt am Main 2013.\nArmin Wolf, Die Erbrechtliche Theorie zur Entstehung des Kurfürstenkollegs, Zeitschrift der Savigny-Stiftung für Rechtsgeschichte, Germanistische Abteilung 134 (2017) 260-287.\nArmin Wolf, Die Datierung von Sachsenspiegel Landrecht III 57,2 und die Entstehung des Kurfürstenkollegs, Zeitschrift der Savigny-Stiftung für Rechtsgeschichte, Germanistische Abteilung 137 (2020) 421-451.\nKarl Zeumer, Die böhmische und die bayrische Kur im 13. Jahrhundert, in: Historische Zeitschrift 94 (1905), 209-250.\nMario Krammer (Hg.), Quellen zur Geschichte der deutschen Königswahl und des Kurfürstenkollegs (Quellensammlung zur deutschen Geschichte), Leipzig 1911-1912 (ND Hildesheim 1972).\nArmin Wolf, Die Entstehung des Kurfürstenkollegs 1198-1298 (Historisches Seminar. Neue Folge 11), Idstein 1998, 2. bearbeitete Auflage 2000, Sources latin-german, 102-194.\nKeyword-search in the Online Catalogue of the Bibliotheksverbund Bayern\nKeyword-search in bavarikon\nArmin Wolf, Electors, published 9 May 2011, english version published 26 February 2020 ; in: Historisches Lexikon Bayerns, URL: <\nRetrieved from \"", "3f24e04cbce0d28b5eb2b47e310a60364c75d46b": "Source URL: https://www.habsburger.net/en/chapter/rudolf-i-his-ascent-become-head-holy-roman-empire\n\n---\n\nWith his election as Roman-German king and seizure of the Austrian lands Rudolf secured his descendants a place in the first division of the princes of the Empire.\nKing Rudolf I of Habsburg, statue, early 17th century\nRudolf Weyr: König Ottokars Glück und Ende, relief on the monument to Grillparzer in the Volksgarten in Vienna, 1889\nAfter the extinction of the Hohenstaufens and in the face of the turmoil of the interregnum it was in the interests of the princes to create order and a clear state of affairs. Their choice fell on Rudolf of Habsburg. Rudolf was elected head of the Empire in Frankfurt on 1 October 1273. His coronation took place in Aix-la-Chapelle on 24 October.\nHis election came as a surprise to him, as he was not among the most powerful princes of the Empire. King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire. His seemingly unstoppable rise was felt to be progressing at too rapid a pace by the other electors: in addition to his ancestral lands of Bohemia and Moravia, Ottokar had also brought the inherited domains of the Babenberg dynasty, which had died out in 1246, that is, the duchies of Austria and Styria, under his control. He also commanded Carinthia and Carniola. Thanks to his participation in campaigns against the Old Prussians, a pagan ethnic group the Baltic, he also had influence on the nascent territory of the Teutonic Order on the Baltic Sea. The all too self-aggrandizing monarchical bearing of the Bohemian king was to be curbed.\nIt is Ottokar II who was also responsible for the widespread characterization of Rudolf as the ‘poor count’. This is a clear exaggeration, as Rudolf was extremely wealthy, even if he was a mere count and not a prince of the Empire. This image, mockingly conceived by Ottokar, of a count of allegedly modest means, was later taken over by Habsburg historiography in order to make the rise of the dynasty appear in an even more radiant light.\nRudolf saw his most important task as the creation of a dynastic power base commensurate with his newly acquired status. He could only extend his possessions in his native Swabia to a very limited degree, as he had to avoid alienating the local elites who constituted his political backing in the Empire. He was thus forced to look elsewhere for his attempts at expansion. For this the former Babenberg duchies of Austria and Styria, of which Ottokar had taken possession, presented themselves. However, this would inevitably lead to conflict with the Bohemian king. Nonetheless, the princes of the Empire expected Rudolf to take the necessary measures as proof of his authority against the powerful Ottokar. Initially Ottokar underestimated the Habsburg count.\nAt first Rudolf tried to proceed against the Bohemian king by taking steps according to imperial law, demanding the return of the lands that had been annexed during the interregnum. This was unacceptable to Ottokar; he ignored the summons to be re-enfeoffed with these possessions, something that would have been tantamount to subjecting himself to Rudolf’s authority. Rudolf duly had his rival outlawed and released his vassals from their oath of fealty, so that any of them that turned or even revolted against the ‘iron king’, as Ottokar was known on account of his autocratic style of rule, would not count as violating their oath of allegiance. Rudolf exploited the dissatisfaction with the Bohemian king’s forceful exercise of power among the local nobility and clergy. It was hoped that this would provide a pretext for Ottokar’s numerous adversaries within his lands to change sides.\nBy tenacious manoeuvring Rudolf also succeeded in forging an alliance with Ottokar’s adversaries. The Bavarian Wittelsbachs, Count Meinhard of Gorizia-Tyrol and the king of Hungary Ladislaus IV were among Rudolf’s allies.\nIn 1276 Rudolf started his first military campaign against Ottokar, taking an army into Austria while in a parallel move his allies occupied Styria. Weakened by an uprising among the Bohemian nobility, Ottokar was forced to concede and for the time being relinquished the Babenberg lands. Rudolf prepared to take power in Austria, entering Vienna, which had formerly been seen as loyal to the king of Bohemia, and confirming its privileges as a city immediate to the Empire that it had been granted decades before by Emperor Frederick II. The Hohenstaufen emperor had given the city these privileges in order to bring the Viennese populace onto his side in his conflict with the last Babenberg, Frederick the Quarrelsome. Likewise, Rudolf hoped to weaken the Viennese alliance with Ottokar by elevating the status of the city.\nPeriod & Aspect\nThe beginning of this epoch is marked by conflict between two kings: Rudolf I, crowned in 1273 as the first Roman-German king of the Habsburg dynasty, and Ottokar II Přemysl , King of Bohemia, who refuses to recognize ...\nThe Babenberg Legacy\nDie Zeit der frühen Habsburger. Dome und Klöster 1279–1379.\nKatalog der niederösterreichischen Landesaustellung in Wiener Neustadt 1979, Wien 1979.", "8390259a782f2fdc945a3f20a892a807bf8f281a": "Source URL: https://www.habsburger.net/en/chapter/albrecht-i-rise-and-fall\n\n---\n\nAfter the death of King Rudolf I in 1291 it was evident that the efforts made by the latter to establish the title as a hereditary office in the Habsburg dynasty had come to nought. The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.\nAntoni Boys (called Anton Waiss): Albrecht I, historicizing painting, between 1579 and 1587\nAlbrecht I, stained glass window from the Chapel of St Bartholomew in St Stephen’s Cathedral in Vienna, c. 1380\nAs his authority was as yet unconsolidated in the Austrian and Styrian dominions that he had so recently acquired, Albrecht was forced to recognize the choice of Nassau for the time being. In Austria he was confronted with another revolt in 1295. Simultaneously a conflict began with the Swiss Confederacy concluded as an offensive alliance to counter the expansionist aims of the Habsburgs.\nAlbrecht’s position, precarious by any measure, was rocked by a serious illness, which his contemporaries believed to have been caused by an attempted poisoning. Albrecht survived narrowly: the duke was treated with the primitive medical methods of the time which involved him being hung upside down in order to encourage the poison to flow out of his body. This therapy cost Albrecht the sight in one eye.\nBy 1297 Albrecht judged that the time had come to reach for the imperial crown. He had himself proclaimed as anti-king to King Adolf, who gradually lost support among the electors. The final decision fell on the battlefield, when Adolf was killed in the Battle of Göllheim in Rhine-Hessen in 1298. On 24 August 1298 Albrecht was crowned king at Aachen (Aix-le-Chapelle). The royal title had been won for the House of Habsburg.\nAs previously in the Austrian lands, Albrecht proved to be a determined and forceful ruler in the Empire. He pursued an independent foreign policy aimed at rapprochement with France and curtailed the power of the electors through effective economic measures, gaining him the support of the imperial cities.\nAlbrecht also sought to intervene in the developments in Hungary. He secured the support of King Andrew III, arranging a marriage to his youngest daughter Agnes. Following the Hungarian monarch’s death – Andrew was the last male member of the ruling Magyar dynasty of the Arpads – the Bohemian Přemyslids attempted to bring the kingdom of Hungary under their control. Albrecht gave his support to the opposing candidate Charles Robert of Anjou, a nephew of Albrecht who was eventually successful in his bid for the crown.\nFollowing the extinction of the Bohemian royal Přemyslid dynasty after the assassination of King Wencelas III in 1306, Albrecht seized the opportunity offered him to enfeoff his eldest son Rudolf (III) with the crown of Bohemia. To consolidate the Habsburg claim on Bohemia he married his son to Ryksa, the young stepmother of the last Přemyslid. However, Rudolf died the following year. Albrecht’s plans to establish his next-eldest son\nin Bohemia failed.\nIn the midst of this situation with all its complex implications for the future of the dynasty Albrecht fell victim to an assassination attempt: on 1 May 1308 he was murdered on the banks of the River Reuss in the Aargau by his nephew John (‘Parricida’). Together with a number of conspirators John lay in wait for his uncle. While crossing the river the duke became separated from his retinue and was cut down by John with a sword. The background to this bloody deed was the unresolved question of the claims to compensation by John’s father Rudolf II, Albrecht’s younger brother.\nAlbrecht was initially interred at Wettingen Abbey in present-day Switzerland. In 1309 on the orders of Emperor Henry of Luxembourg his remains were transferred to the cathedral at Speyer, the traditional last resting place of rulers of the Holy Roman Empire.\nWith the death of Albrecht the House of Habsburg lost one of its most dynamic representatives. His sudden death was a massive blow to the emergent dynasty and put an end to efforts to keep the imperial crown in the family.\nCount Rudolf of Habsburg was the first Habsburg on the throne of the Holy Roman Empire. With him, the Habsburgs moved...\nThe nephew of the Habsburg king Albrecht I, he received the epithet of ‘the Parricide’, meaning ‘killer of a relative...\nJohn ‘the Parricide’\nDuke of Austria\nPeriod & Aspect\nDuring the course of the fourteenth century the Habsburgs slowly establish their power base. Having inherited the Duchy of Carinthia in 1335, they assume dominion over Tyrol in 1363. Using the notorious forged document ...\nDie Zeit der frühen Habsburger. Dome und Klöster 1279–1379.\nKatalog der niederösterreichischen Landesaustellung in Wiener Neustadt 1979, Wien 1979."};
+(function(){
+  const bar = document.getElementById('modebar');
+  const dotG = '<span class="dot" style="background:#34d399"></span>';
+  const dotGray = '<span class="dot" style="background:#9ca3af"></span>';
+  if (HAS_PDF || HAS_TEXT) bar.innerHTML = dotG + 'On each claim: <b>↗</b> opens the cited source in a new tab; <b>⊞ side window</b> opens it in one reused window you can dock on the right (next click swaps its content). PDFs jump to the page, text is highlighted. No server needed.';
+  else bar.innerHTML = dotGray + 'No viewable sources — the supporting sentence for each claim is quoted on the left (with a Copy button).';
+})();
+
+let activeId = null;
+function clearActive() { document.querySelectorAll('.active').forEach(e => e.classList.remove('active')); }
+function brush(id, from) {
+  // Two-way sync (owner walkthrough item 7): scroll the OPPOSITE panel from the
+  // one that was clicked — never the panel under the user's cursor.
+  clearActive();
+  const t = document.getElementById('text-' + id);
+  const c = document.getElementById('card-' + id);
+  if (t) t.classList.add('active');
+  if (c) {
+    if (c.style.display === 'none') {        // hidden by a verdict filter -> show All
+      const all = document.querySelector('.fbtn[data-f="all"]');
+      if (all) all.click();
+    }
+    c.classList.add('active');
+    if (from !== 'card') c.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  if (t && from === 'card') t.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function copyText(btn) {
+  navigator.clipboard.writeText(btn.getAttribute('data-quote'));
+  const o = btn.textContent; btn.textContent = 'Copied'; setTimeout(()=>btn.textContent=o, 1200);
+}
+function toggleDoc() {
+  const d = document.getElementById('doc');
+  d.classList.toggle('collapsed');
+  event.target.textContent = d.classList.contains('collapsed') ? 'expand' : 'collapse';
+}
+function toggleCoverage() {
+  const b = document.getElementById('covBars');
+  b.classList.toggle('collapsed');
+  event.target.textContent = b.classList.contains('collapsed') ? 'show' : 'hide';
+}
+// Master top-panel toggle (owner walkthrough item 5): collapse everything above
+// the two columns; the choice persists across runs (a UI preference, not run state).
+function setTop(hidden) {
+  const p = document.getElementById('topPanel');
+  const note = document.querySelector('.scopenote');
+  const btn = document.getElementById('topToggle');
+  if (p) p.style.display = hidden ? 'none' : '';
+  if (note) note.style.display = hidden ? 'none' : '';
+  if (btn) btn.textContent = hidden ? 'show header' : 'hide header';
+  try { localStorage.setItem('ptui:tophidden', hidden ? '1' : ''); } catch (e) {}
+}
+function toggleTop() {
+  const p = document.getElementById('topPanel');
+  setTop(p && p.style.display !== 'none');
+}
+try { if (localStorage.getItem('ptui:tophidden') === '1') setTop(true); } catch (e) {}
+function toggleAssess() {
+  const b = document.getElementById('assessBody');
+  b.classList.toggle('collapsed');
+  event.target.textContent = b.classList.contains('collapsed') ? 'expand' : 'collapse';
+}
+function toggleOmitted() {
+  const t = document.getElementById('omittedTail');
+  const open = t.classList.toggle('collapsed') === false;
+  const n = t.querySelectorAll('.card').length;
+  event.target.textContent = open ? 'Hide less-relevant' : ('Show ' + n + ' more (less relevant)');
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Sources can open either in a fresh new tab (target '_blank') or in ONE reused
+// "side window" you dock on the right. The side window has a fixed name, so every
+// side-window click navigates that same window instead of stacking tabs. Per the
+// HTML spec, window features are ignored when a named window already exists, so it
+// keeps the size/position you give it manually (no re-snapping on each click).
+const SIDE_WIN = 'pt_source_side';
+const SIDE_FEATURES = 'width=900,height=1024';   // forces a window (not a tab) on first open; ignored on reuse
+
+// Build a self-contained, highlighted HTML document for a text source.
+// Exact match first; then whitespace-tolerant (sentences may span the source's
+// original newlines — table rows merged in segmentation, wrapped lines, etc.).
+function findInText(text, needle) {
+  if (!needle) return null;
+  const i = text.indexOf(needle);
+  if (i !== -1) return {start: i, len: needle.length};
+  try {
+    const pat = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ +/g, '\\s+');
+    const m = text.match(new RegExp(pat));
+    if (m) return {start: m.index, len: m[0].length};
+  } catch (e) {}
+  return null;
+}
+
+function buildTextDoc(pid, sentence, snippet) {
+  const text = SOURCE_TEXTS[pid] || '';
+  const hit = findInText(text, sentence) || findInText(text, snippet);
+
+  let body, note = '';
+  if (hit) {
+    body = escapeHtml(text.slice(0, hit.start)) + '<mark id="hl">'
+         + escapeHtml(text.slice(hit.start, hit.start + hit.len))
+         + '</mark>' + escapeHtml(text.slice(hit.start + hit.len));
+  } else {
+    body = escapeHtml(text);
+    note = "<p style=\"color:#b45309;font-style:italic\">Couldn't locate the exact sentence — showing the full source.</p>";
+  }
+  return '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Source text</title>'
+    + '<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;'
+    + 'background:#fff;margin:0;padding:24px 28px;line-height:1.7;font-size:14px;'
+    + 'white-space:pre-wrap;word-wrap:break-word;}mark{background:#fde047;padding:1px 0;border-radius:2px;}</style>'
+    + '</head><body onload="var h=document.getElementById(\'hl\');if(h)h.scrollIntoView({block:\'center\'});">'
+    + note + body + '</body></html>';
+}
+
+// Open a text source. target='_blank' -> new tab each time; target=SIDE_WIN -> reused window.
+function openTextSource(pid, sentence, snippet, target, features) {
+  const doc = buildTextDoc(pid, sentence, snippet);
+  let w = window.open('', target, features || '');
+  if (!w) { alert('Please allow pop-ups to open the source.'); return; }
+  try {
+    w.document.open(); w.document.write(doc); w.document.close();
+  } catch (e) {
+    // The reused window currently holds a PDF (not script-writable) — navigate it via a blob instead.
+    const url = URL.createObjectURL(new Blob([doc], {type:'text/html'}));
+    w = window.open(url, target, features || '');
+  }
+  if (w) w.focus();
+}
+
+// Open a PDF deep-link in the reused side window (native PDF viewer, jumps to #page).
+function openPdfSide(href) {
+  const w = window.open(href, SIDE_WIN, SIDE_FEATURES);
+  if (!w) { alert('Please allow pop-ups to open the PDF in the side window.'); return; }
+  w.focus();
+}
+
+document.querySelectorAll('.opentext-btn').forEach(function(b) {
+  b.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    openTextSource(b.dataset.pid, b.dataset.sentence || '', b.dataset.snippet || '', '_blank', '');
+  });
+});
+document.querySelectorAll('.side-btn').forEach(function(b) {
+  b.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    if (b.dataset.kind === 'pdf') openPdfSide(b.dataset.href);
+    else openTextSource(b.dataset.pid, b.dataset.sentence || '', b.dataset.snippet || '', SIDE_WIN, SIDE_FEATURES);
+  });
+});
+document.querySelectorAll('.fbtn').forEach(function(b) {
+  b.addEventListener('click', function() {
+    document.querySelectorAll('.fbtn').forEach(function(x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    const f = b.dataset.f;
+    document.querySelectorAll('#claimList > .card').forEach(function(c) {
+      const show = (f === 'all') ? true
+                 : (f === 'hunchecked') ? !c.classList.contains('hchecked')
+                 : c.classList.contains(f);
+      c.style.display = show ? '' : 'none';
+    });
+  });
+});
+document.querySelectorAll('.deeplink, .paperlink').forEach(function(a) {
+  a.addEventListener('click', function(ev) { ev.stopPropagation(); });
+});
+
+// ---- Review loop (triage marks, repair-brief / review.json export) ----
+const RUN_ID = '07a526e42357';
+const REVIEW_DATA = {"run": {"text_file": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_3/project/my_text.md", "run_name": "app", "sources_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_3/project/sources", "output_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_3/app", "project_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_3/project", "model": "gemini/gemini-2.5-flash-lite", "timestamp": "2026-07-10 23:22:34"}, "claims": [{"id": "t0", "text": "Bohemia's failure to place a Přemyslid on the imperial throne owed less to weakness than to a constitutional status that made its rulers electors rather than plausible candidates. In 1212 Frederick II's Golden Bull of Sicily confirmed hereditary kingship for Přemysl Otakar I and reduced Bohemia's tribute and military duties.", "markers": ["wihoda2023"], "own_kind": null, "verdict": "supported", "method": "tail_rescue", "reason": "The passage explicitly states that Frederick II promised Ottokar and his successors would rule the Czech lands hereditarily and free of any payment, which directly supports the claim about hereditary kingship and reduced tribute/duties.", "confidence": "medium", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "Golden Bull of Sicily — Wihoda, Martin", "sentence": "At the same time, he emphasized that Ottokar and his successors would rule the Czech lands hereditarily and free of any payment.", "supported": true}], "alternatives": []}, {"id": "t1", "text": "Decades later, the Sachsenspiegel's list of electoral princes omitted the Bohemian king from those voting first, on the ground that he was \"not German,\" and philological analysis dates that clause precisely to the disputed election of Rudolf of Habsburg on 1 October 1273, when Ottokar II's proxy vote was set aside.", "markers": ["wolf2020"], "own_kind": null, "verdict": "unsupported", "method": "none", "reason": "source_file_missing: wolf2020.pdf", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}, {"id": "t2", "text": "That episode fits a wider pattern in which German identity hardened through contrast with Slavic neighbours, even though it was institutional weakness, more than settled nationhood, that made such rhetoric useful.", "markers": ["scales2012"], "own_kind": null, "verdict": "unsupported", "method": "none", "reason": "source_file_missing: scales2012.pdf", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}, {"id": "t3", "text": "Political calculation reinforced this exclusion. By 1273 Ottokar ruled Austria, Styria, Carinthia and Carniola besides Bohemia and Moravia, the wealthiest prince in the empire, so electors chose the obscure Rudolf of Habsburg to check that dominance.", "markers": ["lexikonbayern2020", "habsburgerascent2020"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage states that Ottokar ruled Austria and Styria in addition to Bohemia and Moravia, and that his rapid rise was a concern to other electors, leading them to choose Rudolf of Habsburg, who was not among the most powerful princes.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "Electors — Historisches Lexikon Bayerns", "sentence": "At the same time, the Bohemian electorate, which had only been exercised to a limited extent during the time of the Bohemian kings from the House of Jagiellon was revived in the hands of the Habsburg imperial family.", "supported": false}, {"source_title": "Rudolf I: His Ascent to Become the Head of the Holy Roman Empire — Die Welt der Habsburger", "sentence": "King Ottokar II Přemysl of Bohemia (c. 1232–1278) was by far the most important of the electors and regarded himself as the natural head of the Empire.", "supported": true}], "alternatives": []}, {"id": "t4", "text": "Princes whose autonomy rested on a weak crown had reason to resist a stronger successor: after Rudolf died in 1291 the electors bypassed his son Albert for Adolf of Nassau, explicitly to forestall a hereditary Habsburg dynasty.", "markers": ["habsburgeralbrecht2020"], "own_kind": null, "verdict": "supported", "method": "llm", "reason": "The passage states that the electors bypassed Rudolf's son Albert for Adolf of Nassau after Rudolf's death in 1291, explicitly to prevent a hereditary Habsburg dynasty, which directly supports the claim.", "confidence": "high", "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [{"source_title": "Albrecht I: Rise and Fall — Die Welt der Habsburger", "sentence": "The electors chose not Albrecht but Adolf of Nassau as the new Roman-German king, hoping to nip the emergence of a royal Habsburg dynasty in the bud.", "supported": true}], "alternatives": []}, {"id": "t5", "text": "Bohemian kingship also legitimized itself through dynastic and sacral tradition centred on Saint Wenceslas's cult, distinct from the German princes' elective idiom—though how far this shaped perceptions of Ottokar as an outsider remains interpretive.", "markers": ["antonin2017", "kalhous2023"], "own_kind": null, "verdict": "unsupported", "method": "none", "reason": "source_file_missing: antonin2017.pdf, kalhous2023.pdf", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}, {"id": "t6", "text": "Ottokar's death at Marchfeld in 1278 settled the rivalry by force, and no later Přemyslid seriously contested an election before the line ended with Wenceslas III's assassination in 1306.", "markers": [], "own_kind": {"kind": "fact", "reason": "This passage makes specific, checkable assertions about historical events and dates."}, "verdict": "own", "method": "none", "reason": "no_citation_marker", "confidence": null, "second_opinion": null, "partial_support": null, "component_check": null, "over_citation": null, "evidences": [], "alternatives": []}]};
+
+const REVIEW_KEY = 'ptreview:' + RUN_ID;
+const MARK_NAMES = {wrong_source: 'needs a different source',
+                    rewrite: 'text needs rewriting',
+                    verdict_wrong: 'verdict is wrong',
+                    other: 'other (see note)'};
+let review = {};
+try { review = JSON.parse(localStorage.getItem(REVIEW_KEY) || '{}'); } catch (e) { review = {}; }
+
+function isMarked(r) { return r && ((r.marks && r.marks.length) || (r.note && r.note.trim())); }
+function markCount() { return Object.values(review).filter(isMarked).length; }
+function saveReview() {
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(review));
+  updateReviewBar();
+}
+function checkedCount() { return Object.values(review).filter(function(r) { return r && r.checked; }).length; }
+function updateReviewBar() {
+  const n = markCount();
+  const el = document.getElementById('revCount');
+  const total = document.querySelectorAll('.triage').length;
+  const nc = checkedCount();
+  if (el) el.textContent = n + ' claim' + (n === 1 ? '' : 's') + ' marked · ' + nc + '/' + total + ' checked';
+  const cN = document.getElementById('chkN'), uN = document.getElementById('unchkN');
+  if (cN) cN.textContent = nc;
+  if (uN) uN.textContent = total - nc;
+}
+function syncNote(t, r) {
+  const ta = t.querySelector('.tnote');
+  if (ta) ta.style.display = isMarked(r) ? '' : 'none';
+}
+function initTriage() {
+  document.querySelectorAll('.triage').forEach(function(t) {
+    const id = t.dataset.id;
+    const st = review[id] || {marks: [], note: ''};
+    review[id] = st;
+    t.querySelectorAll('.tbtn').forEach(function(b) {
+      if ((st.marks || []).indexOf(b.dataset.mark) !== -1) b.classList.add('on');
+      b.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        const r = review[id];
+        r.marks = r.marks || [];
+        const i = r.marks.indexOf(b.dataset.mark);
+        if (i === -1) r.marks.push(b.dataset.mark); else r.marks.splice(i, 1);
+        b.classList.toggle('on');
+        syncNote(t, r);
+        saveReview();
+      });
+    });
+    const ta = t.querySelector('.tnote');
+    if (ta) {
+      ta.value = st.note || '';
+      ta.addEventListener('click', function(ev) { ev.stopPropagation(); });
+      ta.addEventListener('input', function() { st.note = ta.value; saveReview(); });
+    }
+    // "✓ checked" = the human LOOKED at this card (coverage tracking, blind-
+    // review loop). Checked with no repair marks = human-confirmed good row.
+    const cb = t.querySelector('.cbtn');
+    if (cb) {
+      const card = document.getElementById('card-' + id);
+      if (st.checked) { cb.classList.add('on'); if (card) card.classList.add('hchecked'); }
+      cb.addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        st.checked = !st.checked;
+        cb.classList.toggle('on', st.checked);
+        if (card) card.classList.toggle('hchecked', st.checked);
+        saveReview();
+      });
+    }
+    syncNote(t, st);
+  });
+  updateReviewBar();
+}
+function reviewedClaims() {
+  return REVIEW_DATA.claims.filter(function(c) { return isMarked(review[c.id]); })
+    .map(function(c) {
+      const r = review[c.id];
+      return Object.assign({}, c, {marks: (r.marks || []).slice(), note: (r.note || '').trim()});
+    });
+}
+function reviewFileName() {
+  // Distinguishable name (owner walkthrough item 3): consumers accept any
+  // review*.json, so run name + date never break the /apply-review flow.
+  const d = new Date().toISOString().slice(0, 10);
+  return 'review_' + (REVIEW_DATA.run.run_name || 'run') + '_' + d + '.json';
+}
+
+// Remembered save location (owner walkthrough item 4). Chromium's File System
+// Access API works on file:// — the picked directory handle persists in
+// IndexedDB, so "set once, saves there forever". Firefox has no such API; the
+// plain <a download> (browser Downloads dir) stays as the universal fallback.
+const UI_DB = 'ptui';
+function idbOpen() {
+  return new Promise(function(res, rej) {
+    const r = indexedDB.open(UI_DB, 1);
+    r.onupgradeneeded = function() { r.result.createObjectStore('handles'); };
+    r.onsuccess = function() { res(r.result); };
+    r.onerror = function() { rej(r.error); };
+  });
+}
+function idbGet(key) {
+  return idbOpen().then(function(db) {
+    return new Promise(function(res, rej) {
+      const r = db.transaction('handles').objectStore('handles').get(key);
+      r.onsuccess = function() { res(r.result); };
+      r.onerror = function() { rej(r.error); };
+    });
+  });
+}
+function idbSet(key, val) {
+  return idbOpen().then(function(db) {
+    return new Promise(function(res, rej) {
+      const r = db.transaction('handles', 'readwrite').objectStore('handles').put(val, key);
+      r.onsuccess = function() { res(); };
+      r.onerror = function() { rej(r.error); };
+    });
+  });
+}
+async function chooseSaveDir() {
+  try {
+    const dir = await window.showDirectoryPicker({mode: 'readwrite'});
+    await idbSet('reviewDir', dir);
+    flashSaveLoc('Reviews will save to “' + dir.name + '”');
+  } catch (e) { /* user cancelled */ }
+}
+async function savedDir() {
+  try {
+    const dir = await idbGet('reviewDir');
+    if (!dir) return null;
+    let p = await dir.queryPermission({mode: 'readwrite'});
+    if (p !== 'granted') p = await dir.requestPermission({mode: 'readwrite'});
+    return p === 'granted' ? dir : null;
+  } catch (e) { return null; }
+}
+function flashSaveLoc(msg) {
+  const el = document.getElementById('revCount');
+  if (!el) return;
+  const o = el.textContent; el.textContent = msg;
+  setTimeout(function() { updateReviewBar(); }, 2500);
+}
+async function downloadReview() {
+  if (!markCount() && !checkedCount()) { alert('Mark or ✓-check at least one claim first (buttons at the bottom of each card).'); return; }
+  const checkedIds = Object.keys(review).filter(function(k) { return review[k] && review[k].checked; });
+  const payload = {run: REVIEW_DATA.run, exported: new Date().toISOString(),
+                   marks: reviewedClaims(), checked: checkedIds};
+  const json = JSON.stringify(payload, null, 2);
+  const name = reviewFileName();
+  if (window.showSaveFilePicker) {                 // Chromium: remembered folder
+    const dir = await savedDir();
+    if (dir) {
+      try {
+        const fh = await dir.getFileHandle(name, {create: true});
+        const w = await fh.createWritable();
+        await w.write(json); await w.close();
+        flashSaveLoc('Saved ' + name + ' to “' + dir.name + '”');
+        return;
+      } catch (e) { /* fall through to plain download */ }
+    }
+  }
+  const blob = new Blob([json], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+}
+(function() {   // the picker button only makes sense where the API exists
+  const b = document.getElementById('saveLocBtn');
+  if (b && !window.showDirectoryPicker) b.style.display = 'none';
+})();
+function buildBrief() {
+  const run = REVIEW_DATA.run;
+  const items = reviewedClaims();
+  const L = [];
+  L.push('# Repair brief — grounding review');
+  L.push('');
+  L.push('Article file: ' + run.text_file);
+  L.push('Sources folder: ' + run.sources_dir);
+  L.push('Run folder: ' + run.output_dir + '  (analysis.json and review.json live here)');
+  L.push('Verified with ' + run.model + ' on ' + run.timestamp + '.');
+  L.push('');
+  L.push('## Ground rules for the fixing assistant');
+  L.push('- Edit the article file; keep every [[key]] citation marker intact (keys map to source files via the references list).');
+  L.push('- Minor wording fixes (hedging, precision, dropping an unsupported qualifier): apply directly.');
+  L.push('- Conceptual changes (the argument itself shifts): show old -> new and ask the author first.');
+  L.push('- Never invent citations, sources, or evidence.');
+  L.push('- Items marked "verdict is wrong" are feedback about the verification tool: do NOT change their text; append them to <run folder>/verdict_feedback.json instead.');
+  L.push('- New sources found via Claude Science come back by merging the export: python3 import_claude_research.py --input <export.md or .bib> --merge-into ' + (run.project_dir || '<project folder>') + '  — then python3 download_sources.py --manifest <project folder>/sources_manifest.json and cite the new [[key]]s.');
+  L.push('- When done, re-verify: python3 verify_my_text.py --text <article> --sources <sources folder> --output-dir <run folder>  (unchanged claims are not re-judged).');
+  L.push('');
+  L.push('## Claims (' + items.length + ' marked)');
+  items.forEach(function(c) {
+    const names = (c.marks || []).map(function(m) { return MARK_NAMES[m] || m; });
+    L.push('');
+    L.push('### ' + c.id + ' — ' + (c.verdict || '').toUpperCase()
+           + (c.confidence ? ' (judge confidence: ' + c.confidence + ')' : '')
+           + ' — marked: ' + (names.join(', ') || 'note only'));
+    L.push('');
+    L.push('Text: "' + c.text + '"');
+    if (c.markers && c.markers.length)
+      L.push('Cites: ' + c.markers.map(function(m) { return '[[' + m + ']]'; }).join(' '));
+    if (c.reason) L.push('Judge: ' + c.reason);
+    if (c.second_opinion)
+      L.push('Second opinion (' + (c.second_opinion.model || 'other model') + ') DISAGREES — would say '
+             + c.second_opinion.verdict + ': ' + (c.second_opinion.reason || ''));
+    if (c.partial_support)
+      L.push('Partial support: the cited sources back the claim in general, but a specific '
+             + 'component is in none of them: ' + (c.partial_support.reason || '')
+             + ' — verify that part or trim it. The verdict stays supported.');
+    if (c.over_citation && c.over_citation.sources && c.over_citation.sources.length)
+      L.push('Possible over-citation: ' + c.over_citation.sources.join(', ')
+             + ' — the other cited sources already cover the claim and this one does not back '
+             + 'it alone. Consider moving or trimming the citation. Not a correctness problem.');
+    if (c.own_kind && c.own_kind.kind === 'fact')
+      L.push('Citation needed? This uncited passage asserts a checkable fact: '
+             + (c.own_kind.reason || '') + ' — find and cite a source for it (or the author confirms it as their own).');
+    if (c.covering && c.covering.uncovered && c.covering.uncovered.length)
+      L.push('Coverage gap: no displayed sentence proves: ' + c.covering.uncovered.join('; ')
+             + ' — find the proving sentence in the cited source(s), or add a citation / rewrite for that part.');
+    (c.evidences || []).forEach(function(e) {
+      if (e.sentence)
+        L.push('- Evidence (' + (e.supported ? 'supports' : 'does not support') + ') from '
+               + (e.source_title || 'unknown source') + ': "' + e.sentence + '"');
+    });
+    if (c.note) L.push('Author note: ' + c.note);
+    if ((c.marks || []).indexOf('wrong_source') !== -1) {
+      if (c.alternatives && c.alternatives.length) {
+        L.push('Closest passages in the OTHER sources of this run (re-citation candidates):');
+        c.alternatives.forEach(function(a) {
+          L.push('- ' + (a.source_title || a.paper_id) + ' (relevance ' + a.relevance + '): "'
+                 + (a.evidence || a.text) + '"');
+        });
+      }
+      L.push('If none of the run\'s sources fits, research request (paste into Claude Science / any deep-research tool):');
+      L.push('> Find published sources that support this claim: "' + c.text + '". Return a short report with full citations (title, authors, year, DOI or URL) and the exact supporting passage from each.');
+    }
+    if ((c.marks || []).indexOf('rewrite') !== -1)
+      L.push('Task: rewrite this claim minimally so the quoted evidence from its cited source(s) fully supports it.');
+    if ((c.marks || []).indexOf('verdict_wrong') !== -1)
+      L.push('Task: tool feedback only — record {claim id, text, tool verdict, author disagreement, note} in verdict_feedback.json. Do not edit the article text for this item.');
+    if ((c.marks || []).indexOf('other') !== -1)
+      L.push('Task: free-form — read the author note above and decide the right action; if the intent is unclear, ASK the author (surface it) instead of guessing an edit.');
+  });
+  return L.join('\n');
+}
+function copyBrief() {
+  if (!markCount()) { alert('Mark at least one claim first (buttons at the bottom of each card).'); return; }
+  navigator.clipboard.writeText(buildBrief());
+  const b = document.getElementById('briefBtn');
+  if (b) { const o = b.textContent; b.textContent = 'Copied'; setTimeout(function() { b.textContent = o; }, 1200); }
+}
+function buildScienceRequest() {
+  const run = REVIEW_DATA.run;
+  const items = reviewedClaims().filter(function(c) {
+    return (c.marks || []).indexOf('wrong_source') !== -1;
+  });
+  const L = [];
+  L.push('Research request: I wrote an article and a verification tool checked every cited claim against its source. The claims below are the ones whose CURRENT source does not support them — I need better published sources for each.');
+  L.push('');
+  L.push('For EACH claim:');
+  L.push('- find 1-3 published sources (papers, reports, reputable data) that DIRECTLY support it, each with full citation (title, authors, year, DOI or URL) and the exact supporting passage quoted;');
+  L.push('- if no credible source supports it, say so plainly — do not stretch a near-miss;');
+  L.push('- write the final report as a cited document with a bibliography, so I can export it with citations and merge the sources back into my project programmatically.');
+  L.push('');
+  L.push('The claims:');
+  items.forEach(function(c, i) {
+    L.push('');
+    L.push((i + 1) + '. "' + c.text + '"');
+    if (c.note) L.push('   My note: ' + c.note);
+    if (c.reason) L.push('   Why the current source failed: ' + c.reason);
+  });
+  return L.join('\n');
+}
+function copyScience() {
+  const n = reviewedClaims().filter(function(c) {
+    return (c.marks || []).indexOf('wrong_source') !== -1;
+  }).length;
+  if (!n) { alert('Mark at least one claim as "wrong source" first.'); return; }
+  navigator.clipboard.writeText(buildScienceRequest());
+  const b = document.getElementById('sciBtn');
+  if (b) { const o = b.textContent; b.textContent = 'Copied (' + n + ' claims)'; setTimeout(function() { b.textContent = o; }, 1500); }
+}
+initTriage();
+
+</script>
+</body></html>

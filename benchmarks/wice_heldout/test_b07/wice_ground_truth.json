@@ -1,0 +1,928 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 7,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "ashlynharris": {
+   "wice_id": "test02497",
+   "split_index": 156,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     4,
+     12,
+     30
+    ],
+    [
+     3,
+     4,
+     44
+    ],
+    [
+     3,
+     4,
+     12
+    ],
+    [
+     4,
+     30,
+     44
+    ],
+    [
+     4,
+     8,
+     30,
+     44
+    ],
+    [
+     4,
+     8,
+     12,
+     30
+    ],
+    [
+     3,
+     4,
+     12,
+     30
+    ],
+    [
+     3,
+     4,
+     8,
+     12,
+     30
+    ]
+   ],
+   "n_source_sentences": 65
+  },
+  "railgun": {
+   "wice_id": "test03300",
+   "split_index": 157,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     29,
+     36
+    ]
+   ],
+   "n_source_sentences": 79
+  },
+  "eatonnorfolk": {
+   "wice_id": "test00772",
+   "split_index": 158,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     11
+    ]
+   ],
+   "n_source_sentences": 56
+  },
+  "nathantyson": {
+   "wice_id": "test01447",
+   "split_index": 159,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     9,
+     10,
+     13
+    ],
+    [
+     9,
+     10,
+     11,
+     13
+    ],
+    [
+     7,
+     8,
+     9,
+     13
+    ],
+    [
+     0,
+     9,
+     10,
+     13
+    ],
+    [
+     0,
+     9,
+     10,
+     11,
+     13
+    ],
+    [
+     7,
+     8,
+     9,
+     11,
+     13
+    ],
+    [
+     0,
+     7,
+     8,
+     9,
+     10,
+     13
+    ]
+   ],
+   "n_source_sentences": 20
+  },
+  "thesimpsons": {
+   "wice_id": "test02682",
+   "split_index": 160,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     11
+    ]
+   ],
+   "n_source_sentences": 20
+  },
+  "coal": {
+   "wice_id": "test00056",
+   "split_index": 161,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     110,
+     111,
+     113
+    ],
+    [
+     70,
+     71,
+     74
+    ],
+    [
+     81,
+     110,
+     111,
+     112
+    ]
+   ],
+   "n_source_sentences": 225
+  },
+  "listofchurchespreservedb": {
+   "wice_id": "test03102",
+   "split_index": 162,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0
+    ],
+    [
+     24
+    ],
+    [
+     0,
+     20,
+     21,
+     23
+    ]
+   ],
+   "n_source_sentences": 86
+  },
+  "aarondford": {
+   "wice_id": "test01749",
+   "split_index": 163,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     31
+    ],
+    [
+     10,
+     31
+    ]
+   ],
+   "n_source_sentences": 138
+  },
+  "thetragicallyhip": {
+   "wice_id": "test03564",
+   "split_index": 164,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     1,
+     19,
+     62,
+     63
+    ],
+    [
+     1,
+     19,
+     62,
+     63,
+     64
+    ],
+    [
+     1,
+     19,
+     59,
+     62,
+     63
+    ],
+    [
+     1,
+     10,
+     59,
+     62,
+     63
+    ],
+    [
+     1,
+     10,
+     19,
+     62,
+     63
+    ],
+    [
+     1,
+     3,
+     59,
+     62,
+     63
+    ],
+    [
+     1,
+     10,
+     19,
+     59,
+     62,
+     63
+    ],
+    [
+     1,
+     10,
+     19,
+     62,
+     63,
+     64
+    ],
+    [
+     1,
+     3,
+     59,
+     62,
+     63,
+     64
+    ],
+    [
+     1,
+     10,
+     59,
+     62,
+     63,
+     64
+    ]
+   ],
+   "n_source_sentences": 89
+  },
+  "ericmurrayrower": {
+   "wice_id": "test02467",
+   "split_index": 165,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34,
+     35
+    ],
+    [
+     12,
+     35
+    ],
+    [
+     12,
+     34,
+     35
+    ],
+    [
+     12,
+     35,
+     38
+    ],
+    [
+     34,
+     35,
+     38
+    ],
+    [
+     12,
+     34,
+     35,
+     38
+    ],
+    [
+     12,
+     13,
+     35,
+     38
+    ],
+    [
+     13,
+     34,
+     35,
+     38
+    ]
+   ],
+   "n_source_sentences": 66
+  },
+  "rebeccablumenstein": {
+   "wice_id": "test00515",
+   "split_index": 166,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7
+    ],
+    [
+     7,
+     13
+    ],
+    [
+     7,
+     14
+    ],
+    [
+     6,
+     14
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     6,
+     13
+    ],
+    [
+     7,
+     13,
+     14
+    ],
+    [
+     6,
+     7,
+     13,
+     14
+    ]
+   ],
+   "n_source_sentences": 26
+  },
+  "fridayschildstartrektheo": {
+   "wice_id": "test04149",
+   "split_index": 167,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     48,
+     123
+    ],
+    [
+     1,
+     48,
+     123
+    ],
+    [
+     1,
+     27,
+     48,
+     123
+    ],
+    [
+     1,
+     27,
+     48,
+     123
+    ],
+    [
+     0,
+     1,
+     48,
+     123
+    ],
+    [
+     0,
+     1,
+     48,
+     123
+    ],
+    [
+     0,
+     1,
+     27,
+     48,
+     123
+    ],
+    [
+     0,
+     1,
+     27,
+     48,
+     123
+    ]
+   ],
+   "n_source_sentences": 147
+  },
+  "skylersamuels": {
+   "wice_id": "test03611",
+   "split_index": 168,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     9,
+     12
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     0,
+     9,
+     14
+    ],
+    [
+     0,
+     9,
+     12
+    ]
+   ],
+   "n_source_sentences": 64
+  },
+  "thedailybeast": {
+   "wice_id": "test03850",
+   "split_index": 169,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     33,
+     37
+    ],
+    [
+     26,
+     37
+    ],
+    [
+     26,
+     31,
+     33,
+     37
+    ]
+   ],
+   "n_source_sentences": 54
+  },
+  "docadams": {
+   "wice_id": "test02139",
+   "split_index": 170,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     12
+    ],
+    [
+     3,
+     21,
+     22
+    ],
+    [
+     12,
+     21,
+     22
+    ],
+    [
+     1,
+     12,
+     17
+    ],
+    [
+     1,
+     3,
+     17
+    ],
+    [
+     0,
+     3,
+     12
+    ],
+    [
+     3,
+     12,
+     21,
+     22
+    ],
+    [
+     1,
+     3,
+     12,
+     17
+    ],
+    [
+     0,
+     12,
+     22,
+     45,
+     57
+    ],
+    [
+     0,
+     3,
+     22,
+     45,
+     57
+    ],
+    [
+     0,
+     3,
+     12,
+     22,
+     45,
+     57
+    ]
+   ],
+   "n_source_sentences": 76
+  },
+  "loveforsalebook": {
+   "wice_id": "test02281",
+   "split_index": 171,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     8
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "n_source_sentences": 28
+  },
+  "orelhershisersscorelessi": {
+   "wice_id": "test03396",
+   "split_index": 172,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     21
+    ],
+    [
+     21,
+     41
+    ],
+    [
+     20,
+     21
+    ],
+    [
+     20,
+     21,
+     41
+    ]
+   ],
+   "n_source_sentences": 117
+  },
+  "oregoncavesnationalmonum": {
+   "wice_id": "test00350",
+   "split_index": 173,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     154,
+     157
+    ],
+    [
+     0,
+     157
+    ],
+    [
+     153,
+     154,
+     155
+    ]
+   ],
+   "n_source_sentences": 177
+  },
+  "toxoplasmosis": {
+   "wice_id": "test00580",
+   "split_index": 174,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     26
+    ],
+    [
+     26,
+     29
+    ],
+    [
+     25,
+     26
+    ]
+   ],
+   "n_source_sentences": 62
+  },
+  "ashleyssack": {
+   "wice_id": "test02815",
+   "split_index": 175,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 38
+  },
+  "sriradhashyamasundarmand": {
+   "wice_id": "test00060",
+   "split_index": 176,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 77
+  },
+  "thepaleemperor": {
+   "wice_id": "test00106",
+   "split_index": 177,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     49,
+     146
+    ],
+    [
+     49,
+     140,
+     146
+    ],
+    [
+     49,
+     139,
+     140,
+     146
+    ],
+    [
+     49,
+     140,
+     151,
+     158
+    ],
+    [
+     49,
+     139,
+     140,
+     151,
+     158
+    ]
+   ],
+   "n_source_sentences": 189
+  },
+  "aileenlee": {
+   "wice_id": "test03584",
+   "split_index": 178,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     10,
+     11,
+     12
+    ],
+    [
+     3,
+     11,
+     41
+    ],
+    [
+     3,
+     10,
+     11,
+     12
+    ],
+    [
+     3,
+     9,
+     41,
+     42
+    ],
+    [
+     3,
+     10,
+     11,
+     12,
+     41
+    ],
+    [
+     9,
+     10,
+     11,
+     12,
+     42
+    ],
+    [
+     3,
+     11,
+     39,
+     41,
+     47
+    ],
+    [
+     9,
+     39,
+     41,
+     42,
+     47
+    ],
+    [
+     10,
+     11,
+     12,
+     39,
+     41,
+     47
+    ],
+    [
+     0,
+     10,
+     11,
+     12,
+     13,
+     42
+    ],
+    [
+     0,
+     3,
+     11,
+     12,
+     13,
+     41,
+     42
+    ],
+    [
+     0,
+     11,
+     12,
+     13,
+     39,
+     41,
+     42,
+     47
+    ]
+   ],
+   "n_source_sentences": 51
+  },
+  "satyamohanjoshi": {
+   "wice_id": "test03587",
+   "split_index": 179,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     20,
+     31
+    ],
+    [
+     30,
+     31
+    ],
+    [
+     30,
+     31,
+     35
+    ],
+    [
+     20,
+     31,
+     35
+    ],
+    [
+     20,
+     21,
+     31
+    ],
+    [
+     20,
+     21,
+     30,
+     31
+    ],
+    [
+     20,
+     21,
+     31,
+     32
+    ],
+    [
+     20,
+     21,
+     30,
+     31,
+     32
+    ]
+   ],
+   "n_source_sentences": 58
+  },
+  "historyofprestonnorthend": {
+   "wice_id": "test01842",
+   "split_index": 180,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     11,
+     12,
+     15
+    ],
+    [
+     12,
+     14,
+     15
+    ],
+    [
+     0,
+     12,
+     15
+    ],
+    [
+     0,
+     12,
+     13,
+     15
+    ],
+    [
+     0,
+     12,
+     14,
+     15
+    ],
+    [
+     12,
+     13,
+     14,
+     15
+    ],
+    [
+     11,
+     12,
+     13,
+     15
+    ],
+    [
+     11,
+     12,
+     14,
+     15
+    ],
+    [
+     0,
+     11,
+     12,
+     14,
+     15
+    ]
+   ],
+   "n_source_sentences": 73
+  },
+  "nicolsibezfootballerborn": {
+   "wice_id": "test03629",
+   "split_index": 181,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     1,
+     6,
+     9
+    ],
+    [
+     1,
+     6,
+     7
+    ],
+    [
+     0,
+     1,
+     6,
+     7
+    ],
+    [
+     0,
+     1,
+     6,
+     9
+    ]
+   ],
+   "n_source_sentences": 95
+  }
+ }
+}

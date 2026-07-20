@@ -1,0 +1,573 @@
+{
+ "offset": 0,
+ "citingPaperInfo": {
+  "openAccessPdf": {
+   "url": "https://doi.org/10.18653/v1/n19-1423",
+   "status": "GOLD",
+   "license": "CCBY",
+   "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1810.04805, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+  "authors": [
+   {
+    "authorId": "39172707",
+    "name": "Jacob Devlin"
+   },
+   {
+    "authorId": "1744179",
+    "name": "Ming-Wei Chang"
+   },
+   {
+    "authorId": "2544107",
+    "name": "Kenton Lee"
+   },
+   {
+    "authorId": "3259253",
+    "name": "Kristina Toutanova"
+   }
+  ]
+ },
+ "next": 12,
+ "data": [
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citedPaper": {
+    "paperId": "26b47e35fe6e4260fdf7b7cc98f279a73c277494",
+    "externalIds": {
+     "MAG": "2952389302",
+     "ACL": "P18-1158",
+     "DBLP": "journals/corr/abs-1811-11934",
+     "ArXiv": "1811.11934",
+     "DOI": "10.18653/v1/P18-1158",
+     "CorpusId": 51867574
+    },
+    "title": "Multi-Granularity Hierarchical Attention Fusion Networks for Reading Comprehension and Question Answering",
+    "year": 2018,
+    "citationCount": 177,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/P18-1158.pdf",
+     "status": "GOLD",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1811.11934, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "38700603",
+      "name": "Wei Wang"
+     },
+     {
+      "authorId": "29701485",
+      "name": "Chen Wu"
+     },
+     {
+      "authorId": "2047087220",
+      "name": "Ming Yan"
+     }
+    ],
+    "abstract": "This paper describes a novel hierarchical attention network for reading comprehension style question answering, which aims to answer questions for a given narrative paragraph. In the proposed method, attention and fusion are conducted horizontally and vertically across layers at different levels of granularity between question and paragraph. Specifically, it first encode the question and paragraph with fine-grained language embeddings, to better capture the respective representations at semantic level. Then it proposes a multi-granularity fusion approach to fully fuse information from both global and attended representations. Finally, it introduces a hierarchical attention network to focuses on the answer span progressively with multi-level soft-alignment. Extensive experiments on the large-scale SQuAD, TriviaQA dataset validate the effectiveness of the proposed method. At the time of writing the paper, our model achieves state-of-the-art on the both SQuAD and TriviaQA Wiki leaderboard as well as two adversarial SQuAD datasets."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "result"
+   ],
+   "citedPaper": {
+    "paperId": "27e98e09cf09bc13c913d01676e5f32624011050",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-1810-06638",
+     "ArXiv": "1810.06638",
+     "MAG": "2897076808",
+     "CorpusId": 53116060
+    },
+    "title": "U-Net: Machine Reading Comprehension with Unanswerable Questions",
+    "year": 2018,
+    "citationCount": 49,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1810.06638, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2075375390",
+      "name": "Fu Sun"
+     },
+     {
+      "authorId": "2107897400",
+      "name": "Linyang Li"
+     },
+     {
+      "authorId": "1767521",
+      "name": "Xipeng Qiu"
+     },
+     {
+      "authorId": "2152797548",
+      "name": "Yang Liu"
+     }
+    ],
+    "abstract": "Machine reading comprehension with unanswerable questions is a new challenging task for natural language processing. A key subtask is to reliably predict whether the question is unanswerable. In this paper, we propose a unified model, called U-Net, with three important components: answer pointer, no-answer pointer, and answer verifier. We introduce a universal node and thus process the question and its context passage as a single contiguous sequence of tokens. The universal node encodes the fused information from both the question and passage, and plays an important role to predict whether the question is answerable and also greatly improves the conciseness of the U-Net. Different from the state-of-art pipeline models, U-Net can be learned in an end-to-end fashion. The experimental results on the SQuAD 2.0 dataset show that U-Net can effectively predict the unanswerability of questions and achieves an F1 score of 71.7 on SQuAD 2.0."
+   }
+  },
+  {
+   "isInfluential": true,
+   "intents": [
+    "methodology"
+   ],
+   "citedPaper": {
+    "paperId": "0c47cad9729c38d9db1f75491b1ee4bd883a5d4e",
+    "externalIds": {
+     "DBLP": "conf/emnlp/ClarkLML18",
+     "ACL": "D18-1217",
+     "ArXiv": "1809.08370",
+     "MAG": "2891602716",
+     "DOI": "10.18653/v1/D18-1217",
+     "CorpusId": 52811641
+    },
+    "title": "Semi-Supervised Sequence Modeling with Cross-View Training",
+    "year": 2018,
+    "citationCount": 343,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/D18-1217.pdf",
+     "status": "HYBRID",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1809.08370, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "144358401",
+      "name": "Kevin Clark"
+     },
+     {
+      "authorId": "1707242",
+      "name": "Minh-Thang Luong"
+     },
+     {
+      "authorId": "144783904",
+      "name": "Christopher D. Manning"
+     },
+     {
+      "authorId": "2827616",
+      "name": "Quoc V. Le"
+     }
+    ],
+    "abstract": "Unsupervised representation learning algorithms such as word2vec and ELMo improve the accuracy of many supervised NLP models, mainly because they can take advantage of large amounts of unlabeled text. However, the supervised models only learn from task-specific labeled data during the main training phase. We therefore propose Cross-View Training (CVT), a semi-supervised learning algorithm that improves the representations of a Bi-LSTM sentence encoder using a mix of labeled and unlabeled data. On labeled examples, standard supervised learning is used. On unlabeled examples, CVT teaches auxiliary prediction modules that see restricted views of the input (e.g., only part of a sentence) to match the predictions of the full model seeing the whole input. Since the auxiliary modules and the full model share intermediate representations, this in turn improves the full model. Moreover, we show that CVT is particularly effective when combined with multi-task learning. We evaluate CVT on five sequence tagging tasks, machine translation, and dependency parsing, achieving state-of-the-art results."
+   }
+  },
+  {
+   "isInfluential": true,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "ac11062f1f368d97f4c826c317bf50dcc13fdb59",
+    "externalIds": {
+     "DBLP": "conf/emnlp/PetersNZY18",
+     "ArXiv": "1808.08949",
+     "MAG": "2950405925",
+     "ACL": "D18-1179",
+     "DOI": "10.18653/v1/D18-1179",
+     "CorpusId": 52098907
+    },
+    "title": "Dissecting Contextual Word Embeddings: Architecture and Representation",
+    "year": 2018,
+    "citationCount": 487,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/D18-1179.pdf",
+     "status": "HYBRID",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1808.08949, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "39139825",
+      "name": "Matthew E. Peters"
+     },
+     {
+      "authorId": "50043859",
+      "name": "Mark Neumann"
+     },
+     {
+      "authorId": "1982950",
+      "name": "Luke Zettlemoyer"
+     },
+     {
+      "authorId": "144105277",
+      "name": "Wen-tau Yih"
+     }
+    ],
+    "abstract": "Contextual word representations derived from pre-trained bidirectional language models (biLMs) have recently been shown to provide significant improvements to the state of the art for a wide range of NLP tasks. However, many questions remain as to how and why these models are so effective. In this paper, we present a detailed empirical study of how the choice of neural architecture (e.g. LSTM, CNN, or self attention) influences both end task accuracy and qualitative properties of the representations that are learned. We show there is a tradeoff between speed and accuracy, but all architectures learn high quality contextual representations that outperform word embeddings for four challenging NLP tasks. Additionally, all architectures learn representations that vary with network depth, from exclusively morphological based at the word embedding layer through local syntax based in the lower contextual layers to longer range semantics such coreference at the upper layers. Together, these results suggest that unsupervised biLMs, independent of architecture, are learning much more about the structure of language than previously appreciated."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "af5c4b80fbf847f69a202ba5a780a3dd18c1a027",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-1808-05326",
+     "ArXiv": "1808.05326",
+     "ACL": "D18-1009",
+     "MAG": "2952007233",
+     "DOI": "10.18653/v1/D18-1009",
+     "CorpusId": 52019251
+    },
+    "title": "SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference",
+    "year": 2018,
+    "citationCount": 791,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/D18-1009.pdf",
+     "status": "GOLD",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1808.05326, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2545335",
+      "name": "Rowan Zellers"
+     },
+     {
+      "authorId": "3312309",
+      "name": "Yonatan Bisk"
+     },
+     {
+      "authorId": "2279023325",
+      "name": "Roy Schwartz"
+     },
+     {
+      "authorId": "1699545",
+      "name": "Yejin Choi"
+     }
+    ],
+    "abstract": "Given a partial description like “she opened the hood of the car,” humans can reason about the situation and anticipate what might come next (”then, she examined the engine”). In this paper, we introduce the task of grounded commonsense inference, unifying natural language inference and commonsense reasoning. We present SWAG, a new dataset with 113k multiple choice questions about a rich spectrum of grounded situations. To address the recurring challenges of the annotation artifacts and human biases found in many existing datasets, we propose Adversarial Filtering (AF), a novel procedure that constructs a de-biased dataset by iteratively training an ensemble of stylistic classifiers, and using them to filter the data. To account for the aggressive adversarial filtering, we use state-of-the-art language models to massively oversample a diverse set of potential counterfactuals. Empirical results demonstrate that while humans can solve the resulting inference problems with high accuracy (88%), various competitive models struggle on our task. We provide comprehensive analysis that indicates significant opportunities for future research."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "citedPaper": {
+    "paperId": "b9de9599d7241459db9213b5cdd7059696f5ef8d",
+    "externalIds": {
+     "MAG": "2886490473",
+     "DBLP": "conf/aaai/Al-RfouCCGJ19",
+     "ArXiv": "1808.04444",
+     "DOI": "10.1609/aaai.v33i01.33013159",
+     "CorpusId": 52004855
+    },
+    "title": "Character-Level Language Modeling with Deeper Self-Attention",
+    "year": 2018,
+    "citationCount": 421,
+    "openAccessPdf": {
+     "url": "https://doi.org/10.1609/aaai.v33i01.33013159",
+     "status": "GOLD",
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1808.04444, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "1388360943",
+      "name": "Rami Al-Rfou"
+     },
+     {
+      "authorId": "51221461",
+      "name": "Dokook Choe"
+     },
+     {
+      "authorId": "40832517",
+      "name": "Noah Constant"
+     },
+     {
+      "authorId": "51150315",
+      "name": "Mandy Guo"
+     },
+     {
+      "authorId": "145024664",
+      "name": "Llion Jones"
+     }
+    ],
+    "abstract": "LSTMs and other RNN variants have shown strong performance on character-level language modeling. These models are typically trained using truncated backpropagation through time, and it is common to assume that their success stems from their ability to remember long-term contexts. In this paper, we show that a deep (64-layer) transformer model (Vaswani et al. 2017) with fixed context outperforms RNN variants by a large margin, achieving state of the art on two popular benchmarks: 1.13 bits per character on text8 and 1.06 on enwik8. To get good results at this depth, we show that it is important to add auxiliary losses, both at intermediate network layers and intermediate sequence positions."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citedPaper": {
+    "paperId": "421fc2556836a6b441de806d7b393a35b6eaea58",
+    "externalIds": {
+     "MAG": "2880875857",
+     "DBLP": "conf/coling/AkbikBV18",
+     "ACL": "C18-1139",
+     "CorpusId": 52010710
+    },
+    "title": "Contextual String Embeddings for Sequence Labeling",
+    "year": 2018,
+    "citationCount": 1379,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://aclanthology.org/C18-1139, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2403712",
+      "name": "A. Akbik"
+     },
+     {
+      "authorId": "2725328",
+      "name": "Duncan A. J. Blythe"
+     },
+     {
+      "authorId": "2742129",
+      "name": "Roland Vollgraf"
+     }
+    ],
+    "abstract": null
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "cb0f3ee1e98faf92429d601cdcd76c69c1e484eb",
+    "externalIds": {
+     "DBLP": "journals/tacl/WarstadtSB19",
+     "ArXiv": "1805.12471",
+     "MAG": "2978670439",
+     "DOI": "10.1162/tacl_a_00290",
+     "CorpusId": 44072099
+    },
+    "title": "Neural Network Acceptability Judgments",
+    "year": 2018,
+    "citationCount": 1652,
+    "openAccessPdf": {
+     "url": "https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00290/1923083/tacl_a_00290.pdf",
+     "status": "GOLD",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1805.12471, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "46236380",
+      "name": "Alex Warstadt"
+     },
+     {
+      "authorId": "50286460",
+      "name": "Amanpreet Singh"
+     },
+     {
+      "authorId": "3644767",
+      "name": "Samuel R. Bowman"
+     }
+    ],
+    "abstract": "Abstract This paper investigates the ability of artificial neural networks to judge the grammatical acceptability of a sentence, with the goal of testing their linguistic competence. We introduce the Corpus of Linguistic Acceptability (CoLA), a set of 10,657 English sentences labeled as grammatical or ungrammatical from published linguistics literature. As baselines, we train several recurrent neural network models on acceptability classification, and find that our models outperform unsupervised models by Lau et al. (2016) on CoLA. Error-analysis on specific grammatical phenomena reveals that both Lau et al.’s models and ours learn systematic generalizations like subject-verb-object order. However, all models we test perform far below human level on a wide range of grammatical constructions."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citedPaper": {
+    "paperId": "451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
+    "externalIds": {
+     "MAG": "2963310665",
+     "DBLP": "conf/emnlp/WangSMHLB18",
+     "ACL": "W18-5446",
+     "ArXiv": "1804.07461",
+     "DOI": "10.18653/v1/W18-5446",
+     "CorpusId": 5034059
+    },
+    "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+    "year": 2018,
+    "citationCount": 8702,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/W18-5446.pdf",
+     "status": "HYBRID",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1804.07461, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "144906624",
+      "name": "Alex Wang"
+     },
+     {
+      "authorId": "50286460",
+      "name": "Amanpreet Singh"
+     },
+     {
+      "authorId": "38614754",
+      "name": "Julian Michael"
+     },
+     {
+      "authorId": "145783676",
+      "name": "Felix Hill"
+     },
+     {
+      "authorId": "39455775",
+      "name": "Omer Levy"
+     },
+     {
+      "authorId": "3644767",
+      "name": "Samuel R. Bowman"
+     }
+    ],
+    "abstract": "Human ability to understand language is general, flexible, and robust. In contrast, most NLU models above the word level are designed for a specific task and struggle with out-of-domain data. If we aspire to develop models with understanding beyond the detection of superficial correspondences between inputs and outputs, then it is critical to develop a unified model that can execute a range of linguistic tasks across different domains. To facilitate research in this direction, we present the General Language Understanding Evaluation (GLUE, gluebenchmark.com): a benchmark of nine diverse NLU tasks, an auxiliary dataset for probing models for understanding of specific linguistic phenomena, and an online platform for evaluating and comparing models. For some benchmark tasks, training data is plentiful, but for others it is limited or does not match the genre of the test set. GLUE thus favors models that can represent linguistic knowledge in a way that facilitates sample-efficient learning and effective knowledge-transfer across tasks. While none of the datasets in GLUE were created from scratch for the benchmark, four of them feature privately-held test data, which is used to ensure that the benchmark is used fairly. We evaluate baselines that use ELMo (Peters et al., 2018), a powerful transfer learning technique, as well as state-of-the-art sentence representation models. The best models still achieve fairly low absolute scores. Analysis with our diagnostic dataset yields similarly weak performance over all phenomena tested, with some exceptions."
+   }
+  },
+  {
+   "isInfluential": true,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "citedPaper": {
+    "paperId": "3febb2bed8865945e7fddc99efd791887bb7e14f",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-1802-05365",
+     "MAG": "2949856395",
+     "ArXiv": "1802.05365",
+     "ACL": "N18-1202",
+     "DOI": "10.18653/v1/N18-1202",
+     "CorpusId": 3626819
+    },
+    "title": "Deep Contextualized Word Representations",
+    "year": 2018,
+    "citationCount": 12187,
+    "openAccessPdf": {
+     "url": "https://www.aclweb.org/anthology/N18-1202.pdf",
+     "status": "HYBRID",
+     "license": "CCBY",
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1802.05365, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "39139825",
+      "name": "Matthew E. Peters"
+     },
+     {
+      "authorId": "50043859",
+      "name": "Mark Neumann"
+     },
+     {
+      "authorId": "2136562",
+      "name": "Mohit Iyyer"
+     },
+     {
+      "authorId": "40642935",
+      "name": "Matt Gardner"
+     },
+     {
+      "authorId": "143997772",
+      "name": "Christopher Clark"
+     },
+     {
+      "authorId": "2544107",
+      "name": "Kenton Lee"
+     },
+     {
+      "authorId": "1982950",
+      "name": "Luke Zettlemoyer"
+     }
+    ],
+    "abstract": "We introduce a new type of deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy). Our word vectors are learned functions of the internal states of a deep bidirectional language model (biLM), which is pre-trained on a large text corpus. We show that these representations can be easily added to existing models and significantly improve the state of the art across six challenging NLP problems, including question answering, textual entailment and sentiment analysis. We also present an analysis showing that exposing the deep internals of the pre-trained network is crucial, allowing downstream models to mix different types of semi-supervision signals."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [],
+   "citedPaper": {
+    "paperId": "ad31866da7f14ae21bd38df0a3b1ffd1a1438122",
+    "externalIds": {
+     "ArXiv": "1803.02893",
+     "MAG": "2963644595",
+     "DBLP": "journals/corr/abs-1803-02893",
+     "CorpusId": 3525802
+    },
+    "title": "An efficient framework for learning sentence representations",
+    "year": 2018,
+    "citationCount": 579,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1803.02893, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "2876316",
+      "name": "Lajanugen Logeswaran"
+     },
+     {
+      "authorId": "1697141",
+      "name": "Honglak Lee"
+     }
+    ],
+    "abstract": "In this work we propose a simple and efficient framework for learning sentence representations from unlabelled data. Drawing inspiration from the distributional hypothesis and recent work on learning sentence representations, we reformulate the problem of predicting the context in which a sentence appears as a classification problem. Given a sentence and its context, a classifier distinguishes context sentences from other contrastive sentences based on their vector representations. This allows us to efficiently learn different types of encoding functions, and we show that the model learns high-quality sentence representations. We demonstrate that our sentence representations outperform state-of-the-art unsupervised and supervised representation learning methods on several downstream NLP tasks that involve understanding sentence semantics while achieving an order of magnitude speedup in training time."
+   }
+  },
+  {
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "citedPaper": {
+    "paperId": "8c1b00128e74f1cd92aede3959690615695d5101",
+    "externalIds": {
+     "MAG": "2963564796",
+     "DBLP": "conf/iclr/YuDLZ00L18",
+     "ArXiv": "1804.09541",
+     "CorpusId": 4842909
+    },
+    "title": "QANet: Combining Local Convolution with Global Self-Attention for Reading Comprehension",
+    "year": 2018,
+    "citationCount": 1133,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null,
+     "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1804.09541, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "40625240",
+      "name": "Adams Wei Yu"
+     },
+     {
+      "authorId": "35363891",
+      "name": "David Dohan"
+     },
+     {
+      "authorId": "1707242",
+      "name": "Minh-Thang Luong"
+     },
+     {
+      "authorId": "2114012077",
+      "name": "Rui Zhao"
+     },
+     {
+      "authorId": "2118440152",
+      "name": "Kai Chen"
+     },
+     {
+      "authorId": "144739074",
+      "name": "Mohammad Norouzi"
+     },
+     {
+      "authorId": "2827616",
+      "name": "Quoc V. Le"
+     }
+    ],
+    "abstract": "Current end-to-end machine reading and question answering (Q\\&A) models are primarily based on recurrent neural networks (RNNs) with attention. Despite their success, these models are often slow for both training and inference due to the sequential nature of RNNs. We propose a new Q\\&A architecture called QANet, which does not require recurrent networks: Its encoder consists exclusively of convolution and self-attention, where convolution models local interactions and self-attention models global interactions. On the SQuAD dataset, our model is 3x to 13x faster in training and 4x to 9x faster in inference, while achieving equivalent accuracy to recurrent models. The speed-up gain allows us to train the model with much more data. We hence combine our model with data generated by backtranslation from a neural machine translation model. On the SQuAD dataset, our single model, trained with augmented data, achieves 84.6 F1 score on the test set, which is significantly better than the best published F1 score of 81.8."
+   }
+  }
+ ]
+}

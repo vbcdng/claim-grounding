@@ -1,0 +1,47 @@
+verdict-level agreement: 24/24 (100%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported           24
+
+arbiter-adjudicated agreement: 14/24 (58%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported           14
+  not_supported          -> partially_supported     10   <-- disagreement
+adjudication flips: 10
+  - 201819uefachampionsleagu   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - uclauscrivalry             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - katarzynalubnauer          not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - sandrasemchuk              not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - vikingsseason5             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - bhagalpurjunctionrailway   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - unmannedcombatarmedrotor   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - juliapimsleur              not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - thummalanageswararao       not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - wjmstarkie                 not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 24 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  OK  byronbaynewsouthwales      wice=not_supported          tool=not_supported          
+  OK  201819uefachampionsleagu   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  uclauscrivalry             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  kisskasket                 wice=not_supported          tool=not_supported          
+  OK  istanbulsofiaexpress       wice=not_supported          tool=not_supported          
+  OK  emotioncarlyraejepsenalb   wice=not_supported          tool=not_supported          
+  OK  katarzynalubnauer          wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  linworthalternativeprogr   wice=not_supported          tool=not_supported          
+  OK  sandrasemchuk              wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  stateprotectiongroup       wice=not_supported          tool=not_supported          
+  OK  listofintellivisiongames   wice=not_supported          tool=not_supported          
+  OK  vikingsseason5             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  jameswnicholson            wice=not_supported          tool=not_supported          
+  OK  bhagalpurjunctionrailway   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  unmannedcombatarmedrotor   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  juliapimsleur              wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  thummalanageswararao       wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  mrpeabodysapples           wice=not_supported          tool=not_supported          
+  OK  wjmstarkie                 wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  carteretministry           wice=not_supported          tool=not_supported          
+  OK  kautostar                  wice=not_supported          tool=not_supported          
+  OK  winrocktowncenter          wice=not_supported          tool=not_supported          
+  OK  fashioninstituteoftechno   wice=not_supported          tool=not_supported          
+  OK  mobiledonating             wice=not_supported          tool=not_supported          

@@ -1,0 +1,2286 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train heldout batch 4 (refuted)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "This was slight decrease in viewership from the previous episode, which was watched by 1.92 million viewers with a 0.9/4 in the 18-49 demographics.",
+   "markers": [
+    "thenegotiationbrooklynni"
+   ],
+   "paper_ids": [
+    "1e3039b205309778136168d656caafb874d87969"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8609,
+   "evidence": {
+    "paper_id": "1e3039b205309778136168d656caafb874d87969",
+    "source_title": "thenegotiationbrooklynni",
+    "supported": false,
+    "sentence": "Adults 18-49 rating/share Viewers (millions) 7 p.m. NCAA Tournament overrun (CBS) (7-7:37 p.m.) 2.9/14* 12.18* Little Big Shots (NBC) \u2013 S America's Funniest Home Videos (ABC) Bob's Burgers (FOX) \u2013 R 7:30 p.m. 60 Minutes (CBS) (7:37-8:37 p.m.) Bob's Burgers (FOX) 8 p.m. American Idol (ABC) (8-10 p.m.) Little Big Shots (NBC) \u2013 P The Simpsons (FOX) 8:30 p.m.",
+    "page": 1,
+    "snippet": "Adults 18-49 rating/share Viewers (millions) 7 p.m.",
+    "cosine": 0.8609,
+    "reason": "The passage does not mention the viewership or demographic ratings of a previous episode, only the current episode's ratings and a list of other shows and their timeslots.",
+    "window": "Upward adjustments in adults 18-49 are in blue; downward adjustments are in red. Adults 18-49 rating/share Viewers (millions) 7 p.m. NCAA Tournament overrun (CBS) (7-7:37 p.m.) 2.9/14* 12.18* Little Big Shots (NBC) \u2013 S America's Funniest Home Videos (ABC) Bob's Burgers (FOX) \u2013 R 7:30 p.m. 60 Minutes (CBS) (7:37-8:37 p.m.) Bob's Burgers (FOX) 8 p.m. American Idol (ABC) (8-10 p.m.) Little Big Shots (NBC) \u2013 P The Simpsons (FOX) 8:30 p.m. Instinct (CBS) (8:37-9:37 p.m.) \u2013 P Brooklyn Nine-Nine (FOX) 9 p.m."
+   },
+   "evidences": [
+    {
+     "paper_id": "1e3039b205309778136168d656caafb874d87969",
+     "source_title": "thenegotiationbrooklynni",
+     "supported": false,
+     "sentence": "Adults 18-49 rating/share Viewers (millions) 7 p.m. NCAA Tournament overrun (CBS) (7-7:37 p.m.) 2.9/14* 12.18* Little Big Shots (NBC) \u2013 S America's Funniest Home Videos (ABC) Bob's Burgers (FOX) \u2013 R 7:30 p.m. 60 Minutes (CBS) (7:37-8:37 p.m.) Bob's Burgers (FOX) 8 p.m. American Idol (ABC) (8-10 p.m.) Little Big Shots (NBC) \u2013 P The Simpsons (FOX) 8:30 p.m.",
+     "page": 1,
+     "snippet": "Adults 18-49 rating/share Viewers (millions) 7 p.m.",
+     "cosine": 0.8609,
+     "reason": "The passage does not mention the viewership or demographic ratings of a previous episode, only the current episode's ratings and a list of other shows and their timeslots.",
+     "window": "Upward adjustments in adults 18-49 are in blue; downward adjustments are in red. Adults 18-49 rating/share Viewers (millions) 7 p.m. NCAA Tournament overrun (CBS) (7-7:37 p.m.) 2.9/14* 12.18* Little Big Shots (NBC) \u2013 S America's Funniest Home Videos (ABC) Bob's Burgers (FOX) \u2013 R 7:30 p.m. 60 Minutes (CBS) (7:37-8:37 p.m.) Bob's Burgers (FOX) 8 p.m. American Idol (ABC) (8-10 p.m.) Little Big Shots (NBC) \u2013 P The Simpsons (FOX) 8:30 p.m. Instinct (CBS) (8:37-9:37 p.m.) \u2013 P Brooklyn Nine-Nine (FOX) 9 p.m."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "the previous episode had a 0.9/4 in the 18-49 demographics"
+    ],
+    "missing": [
+     "the previous episode was watched by 1.92 million viewers",
+     "this was a slight decrease in viewership from the previous episode"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "the previous episode had a 0.9/4 in the 18-49 demographics",
+      "paper_id": "1e3039b205309778136168d656caafb874d87969",
+      "source_title": "thenegotiationbrooklynni",
+      "sentence": "# 'Bob's Burgers,' 'NCIS: LA' and 'AFV' adjust up, 'Deception' and '60 Minutes' down: Sunday final ratings Rick PorterMarch 20, 2018 Final broadcast primetime live + same-day ratings for Sunday, March 18, 2018 Three shows \u2014 \"Bob's Burgers\" (0.8 rating in adults 18-49), \"NCIS: Los Angeles\" (0.9) and \"America's Funniest Home Videos\" (0.9) \u2014 adjusted up from Sunday's early ratings to the finals.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific viewership numbers and demographic ratings, which are factual claims directly attributable to and expected to be proven by the cited source. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The previous episode had 1.92 million viewers and a 0.9/4 in the 18-49 demographics.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text (an article about March 18, 2018 final ratings) contains no mention of any previous episode's viewership or ratings. The claim that the previous episode was watched by 1.92 million viewers with a 0.9/4 is entirely unsupported by the cited source. The shown sentences are a table of various shows' ratings and do not address the previous episode."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "It aired in 1997 on PBS.",
+   "markers": [
+    "lianlunson"
+   ],
+   "paper_ids": [
+    "ae74e6267d7d404d7eed2fc850e401ea0389a3da"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9265,
+   "evidence": {
+    "paper_id": "ae74e6267d7d404d7eed2fc850e401ea0389a3da",
+    "source_title": "lianlunson",
+    "supported": false,
+    "sentence": "LL: I think it was just a bit less than year when I heard from Rufus.",
+    "page": 1,
+    "snippet": "LL: I think it was just a",
+    "cosine": 0.9265,
+    "reason": "The passage does not mention the year 1997, PBS, or any airing of a program.",
+    "window": "SM: How long after Kate's death [in January 2010 to clear-cell sarcoma] did Rufus and Martha [Wainwright] contact you? LL: I think it was just a bit less than year when I heard from Rufus. SM: Was I'm Your Man when you and Rufus first came into contact?"
+   },
+   "evidences": [
+    {
+     "paper_id": "ae74e6267d7d404d7eed2fc850e401ea0389a3da",
+     "source_title": "lianlunson",
+     "supported": false,
+     "sentence": "LL: I think it was just a bit less than year when I heard from Rufus.",
+     "page": 1,
+     "snippet": "LL: I think it was just a",
+     "cosine": 0.9265,
+     "reason": "The passage does not mention the year 1997, PBS, or any airing of a program.",
+     "window": "SM: How long after Kate's death [in January 2010 to clear-cell sarcoma] did Rufus and Martha [Wainwright] contact you? LL: I think it was just a bit less than year when I heard from Rufus. SM: Was I'm Your Man when you and Rufus first came into contact?"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "It aired in 1997 on PBS.",
+    "reason": "The passage states a specific fact (the airing date and channel) that is directly attributed to the cited source. Therefore, the citation is expected to prove this factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that the program aired in 1997 on PBS is absent from the provided source text; no evidence of any PBS airing in 1997 exists in the interview.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is an interview with Lian Lunson about her documentary films from 2005 and 2012, and contains no mention of any program airing in 1997 on PBS. The shown supporting sentence refers to the timing of hearing from Rufus Wainwright after Kate McGarrigle's death in 2010, which is unrelated to the claim. Since the claim's substantive component (the year and network) cannot be found anywhere in the provided source, the author must either cite a different source or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "Yahoo! Answers was created to replace Ask Yahoo!, Yahoo!'s former Q&A platform which was discontinued in March 2006.",
+   "markers": [
+    "yahooanswers"
+   ],
+   "paper_ids": [
+    "eacaef9425af75535f6df14e325e6b1c737775c3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9406,
+   "evidence": {
+    "paper_id": "eacaef9425af75535f6df14e325e6b1c737775c3",
+    "source_title": "yahooanswers",
+    "supported": false,
+    "sentence": "Answers (http://answers.yahoo.com), the leading Q&A site on the web, turns one and celebrates a thriving community of users, knowledge and success, a recent survey commissioned by Yahoo!",
+    "page": 1,
+    "snippet": "Answers (http://answers.yahoo.com), the leading Q&A site on",
+    "cosine": 0.9406,
+    "reason": "The passage does not mention Ask Yahoo! or its discontinuation date, nor does it state that Yahoo! Answers was created to replace it.",
+    "window": "Answers Surpasses 60 Million Users and 160 Million Answers Worldwide Sunnyvale, CA, December 13, 2006 \u2013 As Yahoo! Answers (http://answers.yahoo.com), the leading Q&A site on the web, turns one and celebrates a thriving community of users, knowledge and success, a recent survey commissioned by Yahoo! and conducted by Harris Interactive\u00ae indicates that one in three online adults (33%) have used a Q&A site, and, of these, half (52%) say that information from a Q&A site has influenced a decision they have made."
+   },
+   "evidences": [
+    {
+     "paper_id": "eacaef9425af75535f6df14e325e6b1c737775c3",
+     "source_title": "yahooanswers",
+     "supported": false,
+     "sentence": "Answers (http://answers.yahoo.com), the leading Q&A site on the web, turns one and celebrates a thriving community of users, knowledge and success, a recent survey commissioned by Yahoo!",
+     "page": 1,
+     "snippet": "Answers (http://answers.yahoo.com), the leading Q&A site on",
+     "cosine": 0.9406,
+     "reason": "The passage does not mention Ask Yahoo! or its discontinuation date, nor does it state that Yahoo! Answers was created to replace it.",
+     "window": "Answers Surpasses 60 Million Users and 160 Million Answers Worldwide Sunnyvale, CA, December 13, 2006 \u2013 As Yahoo! Answers (http://answers.yahoo.com), the leading Q&A site on the web, turns one and celebrates a thriving community of users, knowledge and success, a recent survey commissioned by Yahoo! and conducted by Harris Interactive\u00ae indicates that one in three online adults (33%) have used a Q&A site, and, of these, half (52%) say that information from a Q&A site has influenced a decision they have made."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "tail_rescue": {
+    "supported": false,
+    "tried": [
+     1,
+     2
+    ]
+   },
+   "component_check": {
+    "found": [
+     "Ask Yahoo! was Yahoo!'s former Q&A platform"
+    ],
+    "missing": [
+     "Yahoo! Answers was created to replace Ask Yahoo!",
+     "Ask Yahoo! was discontinued in March 2006"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Ask Yahoo! was Yahoo!'s former Q&A platform",
+      "paper_id": "eacaef9425af75535f6df14e325e6b1c737775c3",
+      "source_title": "yahooanswers",
+      "sentence": "Yahoo has listed The Best of Answers 2006 showing off some of the best user generated questions and answers for the year.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Yahoo! Answers was created to replace Ask Yahoo!, Yahoo!'s former Q&A platform which was discontinued in March 2006.",
+    "reason": "The passage directly states a fact about the creation and discontinuation of Yahoo! Answers, which is directly attributable to the cited source. The attribution test applies here.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about Yahoo! Answers replacing Ask Yahoo! and Ask Yahoo! being discontinued in March 2006 is unsupported by the cited source.",
+    "rewrite_suggestion": "Yahoo! Answers launched in December 2005 and became a leading Q&A site, celebrating its first anniversary in December 2006.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text from Yahoo! Answers' first birthday article does not mention Ask Yahoo!, its discontinuation, or any replacement relationship. All three components of the claim are absent from the provided source. The shown sentence only discusses Yahoo! Answers' first anniversary and user base, which does not cover the claim."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Four of the five justices in the majority voted to do so by way of the Due Process Clause of the Fourteenth Amendment, while the fifth justice, Clarence Thomas, voted to do so through the amendment's Privileges or Immunities Clause.",
+   "markers": [
+    "secondamendmenttotheunit"
+   ],
+   "paper_ids": [
+    "b0149caf31cab141ae189295694f8914da85a20e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8872,
+   "evidence": {
+    "paper_id": "b0149caf31cab141ae189295694f8914da85a20e",
+    "source_title": "secondamendmenttotheunit",
+    "supported": false,
+    "sentence": "But we believe most courts are unlikely to strike down such laws unless compelled to do so by the Court, particularly given that four members of the Court are committed to not recognizing any such right at all.",
+    "page": 1,
+    "snippet": "But we believe most courts are unlikely",
+    "cosine": 0.8872,
+    "reason": "The passage does not mention the specific clauses of the Fourteenth Amendment used by the justices in their decision.",
+    "window": "Again, such a result is not guaranteed if courts adopt a very stringent standard for review. But we believe most courts are unlikely to strike down such laws unless compelled to do so by the Court, particularly given that four members of the Court are committed to not recognizing any such right at all. Barring certain individuals from gun ownership Under the laws of almost all states, certain persons are ineligible to purchase or possess firearms."
+   },
+   "evidences": [
+    {
+     "paper_id": "b0149caf31cab141ae189295694f8914da85a20e",
+     "source_title": "secondamendmenttotheunit",
+     "supported": false,
+     "sentence": "But we believe most courts are unlikely to strike down such laws unless compelled to do so by the Court, particularly given that four members of the Court are committed to not recognizing any such right at all.",
+     "page": 1,
+     "snippet": "But we believe most courts are unlikely",
+     "cosine": 0.8872,
+     "reason": "The passage does not mention the specific clauses of the Fourteenth Amendment used by the justices in their decision.",
+     "window": "Again, such a result is not guaranteed if courts adopt a very stringent standard for review. But we believe most courts are unlikely to strike down such laws unless compelled to do so by the Court, particularly given that four members of the Court are committed to not recognizing any such right at all. Barring certain individuals from gun ownership Under the laws of almost all states, certain persons are ineligible to purchase or possess firearms."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Clarence Thomas; Immunities Clause",
+    "missing_from": [
+     "b0149caf31cab141ae189295694f8914da85a20e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Four of the five justices in the majority voted to do so by way of the Due Process Clause of the Fourteenth Amendment, while the fifth justice, Clarence Thomas, voted to do so through the amendment's Privileges or Immunities Clause.",
+    "reason": "The passage directly states the findings and reasoning of the justices, which is a factual assertion expected to be supported by the cited source. There is no indication that the citation is for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific vote breakdown of the McDonald majority (four justices via Due Process, Clarence Thomas via Privileges or Immunities) is not stated anywhere in the provided source text.",
+    "rewrite_suggestion": "In McDonald v. Chicago, the plurality opinion held that the Second Amendment is incorporated against the states via the Due Process Clause.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the tool does not address any component of the claim\u2014it discusses four justices' stance on gun rights, not the McDonald vote breakdown. The provided source text (a SCOTUSblog analysis) never mentions Clarence Thomas, the Privileges or Immunities Clause, or the specific five-justice vote division. Therefore the claim\u2019s two substantive components cannot be proven from this source, and the author must either add a proper citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "Upon the release of the album, the track charted at number 91 on the US \"Billboard\" Hot 100 and disappeared from the chart afterwards until making a re-entry at its peak position of number 89 on September 14, 2013.",
+   "markers": [
+    "bloodontheleaves"
+   ],
+   "paper_ids": [
+    "c512a545b1fd1f88d9f587f652b2b290ebe44226"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9095,
+   "evidence": {
+    "paper_id": "c512a545b1fd1f88d9f587f652b2b290ebe44226",
+    "source_title": "bloodontheleaves",
+    "supported": false,
+    "sentence": "# Billboard Hot 100 60th Anniversary Songs of the Summer Hot 100 Billboard 200 Artist 100 Greatest of All Time Year-End 2017 R&B/Hip-Hop Dance/Electronic Breaking and Entering Christian/Gospel VMAs 2018 Hot 100 Turns 60 R&B/Hip-Hop K-Pop Pret-a-Reporter Hot 100 Billboard 200 R&B/Hip-Hop Chart Beat All Charts # HOT 100",
+    "page": 1,
+    "snippet": "# Billboard Hot 100 60th Anniversary Songs",
+    "cosine": 0.9095,
+    "reason": "The passage is a header for a Billboard Hot 100 chart from July 6, 2013, and does not contain any information about specific song chart positions or re-entries.",
+    "window": "The Wayback Machine - https://web.archive.org/web/20180831045821/https://www.billboard.com/charts/hot-100/2013-07-06 # Billboard Hot 100 60th Anniversary Songs of the Summer Hot 100 Billboard 200 Artist 100 Greatest of All Time Year-End 2017 R&B/Hip-Hop Dance/Electronic Breaking and Entering Christian/Gospel VMAs 2018 Hot 100 Turns 60 R&B/Hip-Hop K-Pop Pret-a-Reporter Hot 100 Billboard 200 R&B/Hip-Hop Chart Beat All Charts # HOT 100 How This Chart Works"
+   },
+   "evidences": [
+    {
+     "paper_id": "c512a545b1fd1f88d9f587f652b2b290ebe44226",
+     "source_title": "bloodontheleaves",
+     "supported": false,
+     "sentence": "# Billboard Hot 100 60th Anniversary Songs of the Summer Hot 100 Billboard 200 Artist 100 Greatest of All Time Year-End 2017 R&B/Hip-Hop Dance/Electronic Breaking and Entering Christian/Gospel VMAs 2018 Hot 100 Turns 60 R&B/Hip-Hop K-Pop Pret-a-Reporter Hot 100 Billboard 200 R&B/Hip-Hop Chart Beat All Charts # HOT 100",
+     "page": 1,
+     "snippet": "# Billboard Hot 100 60th Anniversary Songs",
+     "cosine": 0.9095,
+     "reason": "The passage is a header for a Billboard Hot 100 chart from July 6, 2013, and does not contain any information about specific song chart positions or re-entries.",
+     "window": "The Wayback Machine - https://web.archive.org/web/20180831045821/https://www.billboard.com/charts/hot-100/2013-07-06 # Billboard Hot 100 60th Anniversary Songs of the Summer Hot 100 Billboard 200 Artist 100 Greatest of All Time Year-End 2017 R&B/Hip-Hop Dance/Electronic Breaking and Entering Christian/Gospel VMAs 2018 Hot 100 Turns 60 R&B/Hip-Hop K-Pop Pret-a-Reporter Hot 100 Billboard 200 R&B/Hip-Hop Chart Beat All Charts # HOT 100 How This Chart Works"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "upon",
+    "missing_from": [
+     "c512a545b1fd1f88d9f587f652b2b290ebe44226"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "the track charted at number 91 on the US \"Billboard\" Hot 100 and disappeared from the chart afterwards until making a re-entry at its peak position of number 89 on September 14, 2013.",
+    "reason": "The passage asserts specific factual claims about chart performance (numbers, dates) that are directly attributable to the cited source. The ATTRIBUTION TEST applies here as these are presented as findings from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific chart positions (91, 89), the date September 14, 2013, and the narrative of disappearance and re-entry are not found in the provided source text.",
+    "rewrite_suggestion": "Upon the release of the album, the track appeared on the US Billboard Hot 100 chart (as indicated by the chart listing for July 6, 2013) and later reached a peak position (not specified in the source).",
+    "proofs": [
+     "Blood On The Leaves Kanye West Gains in performance"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes specific chart positions (91 and 89) and a specific date (September 14, 2013) that are not present anywhere in the provided source text. The source only shows the song's name on a list without indicating its rank, and provides no chart history data for re-entries or peak positions. Therefore, the author must either add a citation that contains these details or rewrite the claim to reflect only what the source supports."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "The city can be divided into several sections: Honey Pot (northwestern Nanticoke), Downtown (northern and central Nanticoke), and Hanover Section (southeastern Nanticoke).",
+   "markers": [
+    "nanticokepennsylvania"
+   ],
+   "paper_ids": [
+    "23e4db59aea03ed8320bf2afb012d758f02dcd66"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "23e4db59aea03ed8320bf2afb012d758f02dcd66",
+    "source_title": "nanticokepennsylvania",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke History Online .org HONEY POT The Honey Pot section of Nanticoke is one of the most remarkable \"hidden villages\" in the Wyoming Valley.",
+    "page": 1,
+    "snippet": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke",
+    "reason": "the passage does not mention Downtown or the Hanover Section",
+    "votes": "2-0",
+    "window": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke History Online .org HONEY POT The Honey Pot section of Nanticoke is one of the most remarkable \"hidden villages\" in the Wyoming Valley. According to lore, the residential settlement derives its name from the abundance of wild bees that grew in the northwest corner of Nanticoke in 1894."
+   },
+   "evidences": [
+    {
+     "paper_id": "23e4db59aea03ed8320bf2afb012d758f02dcd66",
+     "source_title": "nanticokepennsylvania",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke History Online .org HONEY POT The Honey Pot section of Nanticoke is one of the most remarkable \"hidden villages\" in the Wyoming Valley.",
+     "page": 1,
+     "snippet": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke",
+     "reason": "the passage does not mention Downtown or the Hanover Section",
+     "votes": "2-0",
+     "window": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke History Online .org HONEY POT The Honey Pot section of Nanticoke is one of the most remarkable \"hidden villages\" in the Wyoming Valley. According to lore, the residential settlement derives its name from the abundance of wild bees that grew in the northwest corner of Nanticoke in 1894."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention Downtown or the Hanover Section",
+   "component_check": {
+    "found": [
+     "The city can be divided into several sections",
+     "Honey Pot (northwestern Nanticoke)"
+    ],
+    "missing": [
+     "Downtown (northern and central Nanticoke)",
+     "Hanover Section (southeastern Nanticoke)"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The city can be divided into several sections",
+      "paper_id": "23e4db59aea03ed8320bf2afb012d758f02dcd66",
+      "source_title": "nanticokepennsylvania",
+      "sentence": "Someone not familiar with the area once described it as akin to \"finding a town in the hollow of a tooth,\" after observing it nestled in a mini valley between Nanticoke City and the hills hiding it from view of the Susquehanna River.",
+      "page": 1
+     },
+     {
+      "component": "Honey Pot (northwestern Nanticoke)",
+      "paper_id": "23e4db59aea03ed8320bf2afb012d758f02dcd66",
+      "source_title": "nanticokepennsylvania",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20170806091433/http://www.nanticokehistoryonline.org:80/site2/stories/2013/january/honey_pot.html # Nanticoke History Online .org HONEY POT The Honey Pot section of Nanticoke is one of the most remarkable \"hidden villages\" in the Wyoming Valley.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The city can be divided into several sections: Honey Pot (northwestern Nanticoke), Downtown (northern and central Nanticoke), and Hanover Section (southeastern Nanticoke).",
+    "reason": "The passage asserts facts about the division of the city into specific sections, which are directly attributed to the cited source. The citation is expected to prove these geographical divisions.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Downtown (northern and central Nanticoke) and Hanover Section (southeastern Nanticoke) \u2014 these sections are not mentioned anywhere in the cited source, and the claim that the city can be divided into these specific sections is unsupported.",
+    "rewrite_suggestion": "Nanticoke has a section known as Honey Pot, located in the northwestern part of the city.",
+    "proofs": [
+     "The Honey Pot section of Nanticoke is one of the most remarkable \"hidden villages\" in the Wyoming Valley.",
+     "the residential settlement derives its name from the abundance of wild bees that grew in the northwest corner of Nanticoke in 1894."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms that a 'Honey Pot section' exists, but does not include its northwestern location nor mention Downtown or Hanover Section at all. The source text does contain the location for Honey Pot (northwest corner), but fails to provide any information about the other two sections or the overall division of the city. Since two substantive components are entirely absent from the source, the author must add a citation or rewrite the claim to only what the source supports."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "During his career he has served a number of overseas posting and was involved in a number of conflicts including the Gulf War, the War in Afghanistan, and the Iraq War.",
+   "markers": [
+    "glennhaughton"
+   ],
+   "paper_ids": [
+    "3b00940230811961430eeb7370914b59b0a7a137"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8839,
+   "evidence": {
+    "paper_id": "3b00940230811961430eeb7370914b59b0a7a137",
+    "source_title": "glennhaughton",
+    "supported": false,
+    "sentence": "More than 200 Royal Navy, British Army and RAF personnel marched proudly in uniform in today, on Armed Forces Day.",
+    "page": 1,
+    "snippet": "More than 200 Royal Navy, British Army",
+    "cosine": 0.8839,
+    "reason": "The passage discusses diversity and inclusion in the armed forces and does not mention the individual's career postings or involvement in specific conflicts.",
+    "window": "Speaking at the LGBT Pride march, Minister of State for the Armed Forces, Penny Mordaunt, said: It gives me immense pride to see the great strides made to advance diversity and inclusion across the Armed Forces over the past 15 years. More than 200 Royal Navy, British Army and RAF personnel marched proudly in uniform in today, on Armed Forces Day. And with all three services named in the top 100 LGBT-friendly employers in the UK by Stonewall recently, the progress made over a relatively short amount of time is truly impressive."
+   },
+   "evidences": [
+    {
+     "paper_id": "3b00940230811961430eeb7370914b59b0a7a137",
+     "source_title": "glennhaughton",
+     "supported": false,
+     "sentence": "More than 200 Royal Navy, British Army and RAF personnel marched proudly in uniform in today, on Armed Forces Day.",
+     "page": 1,
+     "snippet": "More than 200 Royal Navy, British Army",
+     "cosine": 0.8839,
+     "reason": "The passage discusses diversity and inclusion in the armed forces and does not mention the individual's career postings or involvement in specific conflicts.",
+     "window": "Speaking at the LGBT Pride march, Minister of State for the Armed Forces, Penny Mordaunt, said: It gives me immense pride to see the great strides made to advance diversity and inclusion across the Armed Forces over the past 15 years. More than 200 Royal Navy, British Army and RAF personnel marched proudly in uniform in today, on Armed Forces Day. And with all three services named in the top 100 LGBT-friendly employers in the UK by Stonewall recently, the progress made over a relatively short amount of time is truly impressive."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "During his career he has served a number of overseas posting and was involved in a number of conflicts including the Gulf War, the War in Afghanistan, and the Iraq War.",
+    "reason": "The passage asserts facts about the individual's career and involvement in conflicts, which are directly attributable to the cited source. There is no indication that the citation is only for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes to the individual service in overseas postings and involvement in the Gulf War, War in Afghanistan, and Iraq War, none of which are mentioned or supported by the cited source.",
+    "rewrite_suggestion": "The claim should be limited to what the source states: that the individual marched in a Pride parade.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is about a Pride parade and does not address any component of the claim. The source text as a whole contains no information about the individual's career history, overseas postings, or involvement in specific conflicts such as the Gulf War, the War in Afghanistan, or the Iraq War. Therefore, every substantive component of the claim is missing from the source, requiring the author to either add a supporting citation or rewrite the claim to match what the source actually covers."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "There are now members of the Jankowski h. Jastrzebiec family distributed throughout the world, especially, in descending order of numbers, in Poland, Belarus, Lithuania, the United Kingdom, the United States, Canada, France, Germany, South America and Australia.",
+   "markers": [
+    "jankowski"
+   ],
+   "paper_ids": [
+    "dd1777ad7bfaab537442386a391ecdf71b756cf5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "dd1777ad7bfaab537442386a391ecdf71b756cf5",
+    "source_title": "jankowski",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Major communities of Poles or people of Polish origin can be found in the United States, Germany, Ukraine, Russia, Belarus, Lithuania, France, the United Kingdom, Sweden and Ireland as well as Brazil, Canada, Australia and Argentina Poles also reside in many other countries on all continents.",
+    "page": 1,
+    "snippet": "Major communities of Poles or people of",
+    "reason": "the passage does not provide a descending order of numbers for the distribution of the Jankowski h. Jastrzebiec family members in the specified countries.",
+    "votes": "2-0",
+    "window": "Major communities of Poles or people of Polish origin can be found in the United States, Germany, Ukraine, Russia, Belarus, Lithuania, France, the United Kingdom, Sweden and Ireland as well as Brazil, Canada, Australia and Argentina Poles also reside in many other countries on all continents."
+   },
+   "evidences": [
+    {
+     "paper_id": "dd1777ad7bfaab537442386a391ecdf71b756cf5",
+     "source_title": "jankowski",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Major communities of Poles or people of Polish origin can be found in the United States, Germany, Ukraine, Russia, Belarus, Lithuania, France, the United Kingdom, Sweden and Ireland as well as Brazil, Canada, Australia and Argentina Poles also reside in many other countries on all continents.",
+     "page": 1,
+     "snippet": "Major communities of Poles or people of",
+     "reason": "the passage does not provide a descending order of numbers for the distribution of the Jankowski h. Jastrzebiec family members in the specified countries.",
+     "votes": "2-0",
+     "window": "Major communities of Poles or people of Polish origin can be found in the United States, Germany, Ukraine, Russia, Belarus, Lithuania, France, the United Kingdom, Sweden and Ireland as well as Brazil, Canada, Australia and Argentina Poles also reside in many other countries on all continents."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not provide a descending order of numbers for the distribution of the Jankowski h. Jastrzebiec family members in the specified countries.",
+   "subject_guard": {
+    "subject": "South America",
+    "missing_from": [
+     "dd1777ad7bfaab537442386a391ecdf71b756cf5"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "There are now members of the Jankowski h. Jastrzebiec family distributed throughout the world, especially, in descending order of numbers, in Poland, Belarus, Lithuania, the United Kingdom, the United States, Canada, France, Germany, South America and Australia.",
+    "reason": "The passage directly states facts and findings about the distribution of the Jankowski h. Jastrzebiec family, which the citation is expected to prove. There is no indication that the citation is only supporting a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about the Jankowski h. Jastrzebiec family and their specific geographic distribution is not present in the cited source, which discusses the general Polish diaspora only.",
+    "rewrite_suggestion": "People of Polish origin are distributed worldwide, with major communities in the United States, Germany, Ukraine, Russia, Belarus, Lithuania, France, the United Kingdom, Sweden, Ireland, Brazil, Canada, Australia, and Argentina (source: Polish diaspora page).",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text discusses the Polish diaspora generally and lists countries with major Polish communities, but never mentions the Jankowski h. Jastrzebiec family or any order specific to that family. The shown sentences are about Poles overall, not this family. Since no component of the claim is provable from the source, the author must either add a citation that supports the family's distribution or rewrite the claim to match the source's actual content."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "The public schools in the City of Fairfax are owned by the city, but administered by the Fairfax County Public Schools system under contractual agreement with Fairfax County.",
+   "markers": [
+    "fairfaxvirginia"
+   ],
+   "paper_ids": [
+    "666377a43ace886ebbb8c55683fd247d5134c177"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "666377a43ace886ebbb8c55683fd247d5134c177",
+    "source_title": "fairfaxvirginia",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Wayback Machine - https://web.archive.org/web/20151114061105/http://www.fairfaxva.gov:80/government/school-superintendent Contact Us \u2022 Mobile App \u2022 Fairfax City Alert \u2022 Cityscreen-12 \u2022 News \u2022 Calendar \u2022 Jobs \u2022 Translate Partly Cloudy 47\u00b0 F Traffic \u00bb ## Jump to subpage... City SchoolsSchool BoardSchool Board Meeting PhotosThe City-County Connection # City of Fairfax Schools Font Size: The City of Fairfax Schools prepare students with 21st century skills to be global citizens.",
+    "page": 1,
+    "snippet": "The Wayback Machine - https://web.archive.org/web/20151114061105/http://www.fairfaxva.gov:80/government/school-superintendent Contact Us",
+    "reason": "The passage does not state that the public schools in the City of Fairfax are owned by the city or administered by the Fairfax County Public Schools system under contractual agreement with Fairfax County.",
+    "votes": "2-0",
+    "window": "The Wayback Machine - https://web.archive.org/web/20151114061105/http://www.fairfaxva.gov:80/government/school-superintendent Contact Us \u2022 Mobile App \u2022 Fairfax City Alert \u2022 Cityscreen-12 \u2022 News \u2022 Calendar \u2022 Jobs \u2022 Translate Partly Cloudy 47\u00b0 F Traffic \u00bb ## Jump to subpage... City SchoolsSchool BoardSchool Board Meeting PhotosThe City-County Connection # City of Fairfax Schools Font Size: The City of Fairfax Schools prepare students with 21st century skills to be global citizens. Sisson House 10455 Armstrong Street Fairfax, VA 22030"
+   },
+   "evidences": [
+    {
+     "paper_id": "666377a43ace886ebbb8c55683fd247d5134c177",
+     "source_title": "fairfaxvirginia",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Wayback Machine - https://web.archive.org/web/20151114061105/http://www.fairfaxva.gov:80/government/school-superintendent Contact Us \u2022 Mobile App \u2022 Fairfax City Alert \u2022 Cityscreen-12 \u2022 News \u2022 Calendar \u2022 Jobs \u2022 Translate Partly Cloudy 47\u00b0 F Traffic \u00bb ## Jump to subpage... City SchoolsSchool BoardSchool Board Meeting PhotosThe City-County Connection # City of Fairfax Schools Font Size: The City of Fairfax Schools prepare students with 21st century skills to be global citizens.",
+     "page": 1,
+     "snippet": "The Wayback Machine - https://web.archive.org/web/20151114061105/http://www.fairfaxva.gov:80/government/school-superintendent Contact Us",
+     "reason": "The passage does not state that the public schools in the City of Fairfax are owned by the city or administered by the Fairfax County Public Schools system under contractual agreement with Fairfax County.",
+     "votes": "2-0",
+     "window": "The Wayback Machine - https://web.archive.org/web/20151114061105/http://www.fairfaxva.gov:80/government/school-superintendent Contact Us \u2022 Mobile App \u2022 Fairfax City Alert \u2022 Cityscreen-12 \u2022 News \u2022 Calendar \u2022 Jobs \u2022 Translate Partly Cloudy 47\u00b0 F Traffic \u00bb ## Jump to subpage... City SchoolsSchool BoardSchool Board Meeting PhotosThe City-County Connection # City of Fairfax Schools Font Size: The City of Fairfax Schools prepare students with 21st century skills to be global citizens. Sisson House 10455 Armstrong Street Fairfax, VA 22030"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the public schools in the City of Fairfax are owned by the city or administered by the Fairfax County Public Schools system under contractual agreement with Fairfax County.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The public schools in the City of Fairfax are owned by the city, but administered by the Fairfax County Public Schools system under contractual agreement with Fairfax County.",
+    "reason": "The passage directly states facts about the ownership and administration of public schools, which are expected to be proven by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "ownership by the city, administration by Fairfax County Public Schools, and a contractual agreement with the county",
+    "rewrite_suggestion": "The City of Fairfax maintains its own City Schools system, as indicated by the City Schools webpage listing schools and a City Schools Superintendent.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text only lists the City of Fairfax Schools and the Superintendent; it does not contain any statement about ownership by the city, administration by Fairfax County Public Schools, or a contractual agreement. Therefore, every substantive component of the claim is entirely absent from the source, making this an author-side problem requiring a new citation or a rewrite."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Currently this seat belongs to Bahujan Samaj Party candidate Sukhdev Rajbhar who won in last Assembly election of 2017 Uttar Pradesh Legislative Elections defeating Samajwadi Party candidate Adil Sheikh by a margin of 3,645 votes.",
+   "markers": [
+    "didarganjassemblyconstit"
+   ],
+   "paper_ids": [
+    "2fbff2929941a0590d825172899bee87a169acd6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2fbff2929941a0590d825172899bee87a169acd6",
+    "source_title": "didarganjassemblyconstit",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134 Last Updated on March 11, 2017 Uttar Pradesh Polling Booths Agra South Uttar Pradesh Assembly Constituencies Uttar Pradesh Parliamentary Constituencies Uttar Pradesh Assembly Elections Results 2012 Assembly Results 2007 Assembly Results 2002 Assembly Results 1996 Assembly Results 1993 Assembly Results",
+    "page": 1,
+    "snippet": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134 Last Updated on March",
+    "reason": "The passage does not state that Bahujan Samaj Party candidate Sukhdev Rajbhar won the seat in the 2017 election, nor does it mention the margin of victory.",
+    "votes": "2-0",
+    "window": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134 Last Updated on March 11, 2017 Uttar Pradesh Polling Booths Agra South Uttar Pradesh Assembly Constituencies Uttar Pradesh Parliamentary Constituencies Uttar Pradesh Assembly Elections Results 2012 Assembly Results 2007 Assembly Results 2002 Assembly Results 1996 Assembly Results 1993 Assembly Results"
+   },
+   "evidences": [
+    {
+     "paper_id": "2fbff2929941a0590d825172899bee87a169acd6",
+     "source_title": "didarganjassemblyconstit",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134 Last Updated on March 11, 2017 Uttar Pradesh Polling Booths Agra South Uttar Pradesh Assembly Constituencies Uttar Pradesh Parliamentary Constituencies Uttar Pradesh Assembly Elections Results 2012 Assembly Results 2007 Assembly Results 2002 Assembly Results 1996 Assembly Results 1993 Assembly Results",
+     "page": 1,
+     "snippet": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134 Last Updated on March",
+     "reason": "The passage does not state that Bahujan Samaj Party candidate Sukhdev Rajbhar won the seat in the 2017 election, nor does it mention the margin of victory.",
+     "votes": "2-0",
+     "window": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134 Last Updated on March 11, 2017 Uttar Pradesh Polling Booths Agra South Uttar Pradesh Assembly Constituencies Uttar Pradesh Parliamentary Constituencies Uttar Pradesh Assembly Elections Results 2012 Assembly Results 2007 Assembly Results 2002 Assembly Results 1996 Assembly Results 1993 Assembly Results"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Bahujan Samaj Party candidate Sukhdev Rajbhar won the seat in the 2017 election, nor does it mention the margin of victory.",
+   "subject_guard": {
+    "subject": "currently",
+    "missing_from": [
+     "2fbff2929941a0590d825172899bee87a169acd6"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Bahujan Samaj Party candidate Sukhdev Rajbhar won the seat in the 2017 Uttar Pradesh Legislative Elections, defeating Samajwadi Party candidate Adil Sheikh by a margin of 3,645 votes.",
+    "reason": "The passage asserts specific facts and figures (election winner, party, opponent, margin of victory) that are directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that Sukhdev Rajbhar belongs to the Bahujan Samaj Party and that Adil Sheikh is from the Samajwadi Party, but the source shows 'MBSP' and 'MSP' respectively without expanding those abbreviations. Additionally, the claimed margin of 3,645 votes is not supported; the source numbers (64,361 for Adil Sheikh and 62,134 for Sukhdev Rajbhar) yield a difference of 2,227.",
+    "rewrite_suggestion": "Currently this seat belongs to Sukhdev Rajbhar (MBSP) who won in the 2017 Uttar Pradesh Legislative Elections, defeating Adil Sheikh (MSP) by a margin of 2,227 votes.",
+    "proofs": [
+     "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134",
+     "Sitting and previous MLAs from Didarganj Assembly Constituency",
+     "Last Updated on March 11, 2017"
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "2012350DidarganjGENAdil SheikhMSP64361Sukhdev RajbharMBSP62134",
+     "why": "The source gives vote counts of 64,361 for Adil Sheikh and 62,134 for Sukhdev Rajbhar, a difference of 2,227 votes, which contradicts the claim's margin of 3,645 votes."
+    },
+    "why": "The shown sentence from the tool is a garbled data line that does not clearly prove any component of the claim. The source does contain the winning candidate and vote numbers for the 2017 election, but it does not specify the party names as Bahujan Samaj Party or Samajwadi Party, and the vote difference (2,227) contradicts the claimed margin (3,645). Therefore, the author must either correct the party names and margin or find a different source that supports the exact claim."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Including the previous faculties, more than 500 students have graduated from the college since 1988.",
+   "markers": [
+    "arabiangulfuniversity"
+   ],
+   "paper_ids": [
+    "31818e16edf02fd10c44b854dc85cbfd4589cd44"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8993,
+   "evidence": {
+    "paper_id": "31818e16edf02fd10c44b854dc85cbfd4589cd44",
+    "source_title": "arabiangulfuniversity",
+    "supported": false,
+    "sentence": "The College of Graduate Studies, which was established in 1994, includes programs that existed under the two previous faculties: the Faculty of Applied Science and the Faculty of Education.",
+    "page": 1,
+    "snippet": "The College of Graduate Studies, which was",
+    "cosine": 0.8993,
+    "reason": "The passage does not provide any information about the number of students who have graduated from the college since 1988.",
+    "window": "About College Dean of the College Vice Dean Organization Chart Faculty Members College Programs French Arabian Business School About College The College of Graduate Studies, which was established in 1994, includes programs that existed under the two previous faculties: the Faculty of Applied Science and the Faculty of Education. This College currently includes a wide range of scientific disciplines that are unique and unavailable in other universities of the Arab Gulf states."
+   },
+   "evidences": [
+    {
+     "paper_id": "31818e16edf02fd10c44b854dc85cbfd4589cd44",
+     "source_title": "arabiangulfuniversity",
+     "supported": false,
+     "sentence": "The College of Graduate Studies, which was established in 1994, includes programs that existed under the two previous faculties: the Faculty of Applied Science and the Faculty of Education.",
+     "page": 1,
+     "snippet": "The College of Graduate Studies, which was",
+     "cosine": 0.8993,
+     "reason": "The passage does not provide any information about the number of students who have graduated from the college since 1988.",
+     "window": "About College Dean of the College Vice Dean Organization Chart Faculty Members College Programs French Arabian Business School About College The College of Graduate Studies, which was established in 1994, includes programs that existed under the two previous faculties: the Faculty of Applied Science and the Faculty of Education. This College currently includes a wide range of scientific disciplines that are unique and unavailable in other universities of the Arab Gulf states."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "Including the previous faculties"
+    ],
+    "missing": [
+     "more than 500 students have graduated from the college since 1988"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Including the previous faculties",
+      "paper_id": "31818e16edf02fd10c44b854dc85cbfd4589cd44",
+      "source_title": "arabiangulfuniversity",
+      "sentence": "The College of Graduate Studies, which was established in 1994, includes programs that existed under the two previous faculties: the Faculty of Applied Science and the Faculty of Education.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "more than 500 students have graduated from the college since 1988.",
+    "reason": "The passage asserts a specific fact (number of graduates and a date) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific number 'more than 500' and the year '1988' are not mentioned in the source; also, the source does not state that graduates from the previous faculties are counted",
+    "rewrite_suggestion": "The College of Graduate Studies, established in 1994, includes programs that existed under the two previous faculties: the Faculty of Applied Science and the Faculty of Education.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not contain any number of graduates, nor does it mention the year 1988. The shown sentence only describes the college's establishment and its inclusion of programs from previous faculties, not a graduation count. Therefore, the claim's core components are entirely unsupported by the cited source."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "In addition, she and her crew were involved in original animation casting and voice directions of several productions created in India.",
+   "markers": [
+    "elizalewis"
+   ],
+   "paper_ids": [
+    "90c81d3fabb258b3608656139a1004d4ac05f761"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.792,
+   "evidence": {
+    "paper_id": "90c81d3fabb258b3608656139a1004d4ac05f761",
+    "source_title": "elizalewis",
+    "supported": false,
+    "sentence": "Starting 17 August 2019, viewers can now catch their favorite show from Monday to Saturday, offering a perfect start to an entertaining weekend packed with action, drama and more.",
+    "page": 1,
+    "snippet": "Starting 17 August 2019, viewers can now",
+    "cosine": 0.792,
+    "reason": "The passage discusses TV channel programming and appointments, not animation casting or voice direction in India.",
+    "window": "TV Channels English Entertainment 18 Aug, 2019 ##### COLORS Tamil extends fiction line-up from Monday to Saturda On popular demand, COLORS Tamil has announced an extension in the telecast of its fiction line-up. Starting 17 August 2019, viewers can now catch their favorite show from Monday to Saturday, offering a perfect start to an entertaining weekend packed with action, drama and more. TV Channels 17 Aug, 2019 ##### iTV Network appoints R K Arora as director - strategy and planning Noida: In an announcement made on Friday by iTV Network, R K Arora joins as director - strategy and planning."
+   },
+   "evidences": [
+    {
+     "paper_id": "90c81d3fabb258b3608656139a1004d4ac05f761",
+     "source_title": "elizalewis",
+     "supported": false,
+     "sentence": "Starting 17 August 2019, viewers can now catch their favorite show from Monday to Saturday, offering a perfect start to an entertaining weekend packed with action, drama and more.",
+     "page": 1,
+     "snippet": "Starting 17 August 2019, viewers can now",
+     "cosine": 0.792,
+     "reason": "The passage discusses TV channel programming and appointments, not animation casting or voice direction in India.",
+     "window": "TV Channels English Entertainment 18 Aug, 2019 ##### COLORS Tamil extends fiction line-up from Monday to Saturda On popular demand, COLORS Tamil has announced an extension in the telecast of its fiction line-up. Starting 17 August 2019, viewers can now catch their favorite show from Monday to Saturday, offering a perfect start to an entertaining weekend packed with action, drama and more. TV Channels 17 Aug, 2019 ##### iTV Network appoints R K Arora as director - strategy and planning Noida: In an announcement made on Friday by iTV Network, R K Arora joins as director - strategy and planning."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "several productions created in India"
+    ],
+    "missing": [
+     "she and her crew were involved in original animation casting",
+     "she and her crew were involved in voice directions"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "several productions created in India",
+      "paper_id": "90c81d3fabb258b3608656139a1004d4ac05f761",
+      "source_title": "elizalewis",
+      "sentence": "The segment on the show will witness the... TV Channels 16 Aug, 2019 ##### Star India distributes eco-friendly flags on account of India's 73rd Independence Day!",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the cited individual's involvement in animation casting and voice direction. The citation is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about 'she and her crew' being involved in original animation casting and voice directions of several productions created in India",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a collection of unrelated TV news articles (e.g., about schedule extensions, appointments, etc.) and does not mention any person, animation, casting, voice directions, or productions created in India. The shown sentence is about COLORS Tamil's fiction line-up, which is completely irrelevant to the claim. Therefore, no component of the claim can be proven from this source."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "She spends long stretches of time working on her novels, often spending 20 to 30 hour periods on her typewriter.",
+   "markers": [
+    "daniellesteel"
+   ],
+   "paper_ids": [
+    "c405c5093e445d16e390c91dc1bf46aca3ba3af1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9089,
+   "evidence": {
+    "paper_id": "c405c5093e445d16e390c91dc1bf46aca3ba3af1",
+    "source_title": "daniellesteel",
+    "supported": false,
+    "sentence": "I've written 163 books on this typewriter, and it's still going strong.",
+    "page": 1,
+    "snippet": "I've written 163 books on this typewriter,",
+    "cosine": 0.9089,
+    "reason": "The passage mentions the author has written 163 books on her typewriter but does not provide any information about the duration of her work sessions.",
+    "window": "My beloved, partially handmade 1946 Olympia standard typewriter. I've written 163 books on this typewriter, and it's still going strong. I love these mementos that my children have given me for good luck."
+   },
+   "evidences": [
+    {
+     "paper_id": "c405c5093e445d16e390c91dc1bf46aca3ba3af1",
+     "source_title": "daniellesteel",
+     "supported": false,
+     "sentence": "I've written 163 books on this typewriter, and it's still going strong.",
+     "page": 1,
+     "snippet": "I've written 163 books on this typewriter,",
+     "cosine": 0.9089,
+     "reason": "The passage mentions the author has written 163 books on her typewriter but does not provide any information about the duration of her work sessions.",
+     "window": "My beloved, partially handmade 1946 Olympia standard typewriter. I've written 163 books on this typewriter, and it's still going strong. I love these mementos that my children have given me for good luck."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "She spends long stretches of time working on her novels"
+    ],
+    "missing": [
+     "often spending 20 to 30 hour periods on her typewriter"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "She spends long stretches of time working on her novels",
+      "paper_id": "c405c5093e445d16e390c91dc1bf46aca3ba3af1",
+      "source_title": "daniellesteel",
+      "sentence": "The desktop is so crowded that, when I'm writing, I have to take them off the desk until I finish the book.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a specific fact about the author's work habits (spending 20 to 30 hour periods on her typewriter) which the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "spending 20 to 30 hour periods on her typewriter",
+    "rewrite_suggestion": "She works late into the night on her novels, as indicated by her statement, 'I work very late.'",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool's shown sentence only mentions that she wrote 163 books on the typewriter, which does not address the claim about 20-30 hour periods. The source text contains no mention of spending 20-30 hour periods, nor any specific duration of work sessions. Therefore, the claim contains a substantive component not supported by the source, requiring the author to either add a citation for that specific detail or rewrite the claim to match what the source actually says (e.g., working late at night)."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "The patent was granted on August 17, 1966 and seems to be one of the first software patents.",
+   "markers": [
+    "softwarepatent"
+   ],
+   "paper_ids": [
+    "1921dc5105d71f4366a6c0d68650fdd3276e10cc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1921dc5105d71f4366a6c0d68650fdd3276e10cc",
+    "source_title": "softwarepatent",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "A 1966 Presidential Commission on the Patent System is cited, which recommended that software patents should not be permitted, because satisfactory growth in the industry had taken place in the absence of patent protection; and reliable prior art searches would not be available.",
+    "page": 1,
+    "snippet": "A 1966 Presidential Commission on the Patent",
+    "reason": "The passage does not state the date the patent was granted, nor does it state that it is one of the first software patents.",
+    "votes": "2-0",
+    "window": "A 1966 Presidential Commission on the Patent System is cited, which recommended that software patents should not be permitted, because satisfactory growth in the industry had taken place in the absence of patent protection; and reliable prior art searches would not be available. According to Beresford (2000, p.4), this UK Hearing Officer decision is the first reported software patent decision worldwide."
+   },
+   "evidences": [
+    {
+     "paper_id": "1921dc5105d71f4366a6c0d68650fdd3276e10cc",
+     "source_title": "softwarepatent",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "A 1966 Presidential Commission on the Patent System is cited, which recommended that software patents should not be permitted, because satisfactory growth in the industry had taken place in the absence of patent protection; and reliable prior art searches would not be available.",
+     "page": 1,
+     "snippet": "A 1966 Presidential Commission on the Patent",
+     "reason": "The passage does not state the date the patent was granted, nor does it state that it is one of the first software patents.",
+     "votes": "2-0",
+     "window": "A 1966 Presidential Commission on the Patent System is cited, which recommended that software patents should not be permitted, because satisfactory growth in the industry had taken place in the absence of patent protection; and reliable prior art searches would not be available. According to Beresford (2000, p.4), this UK Hearing Officer decision is the first reported software patent decision worldwide."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the date the patent was granted, nor does it state that it is one of the first software patents.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The patent was granted on August 17, 1966 and seems to be one of the first software patents.",
+    "reason": "The passage asserts facts (grant date and significance) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is stating information that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific patent granted on August 17, 1966, and the assertion that it is one of the first software patents",
+    "rewrite_suggestion": "A 1966 UK Hearing Officer decision (Slee & Harris's Application) is considered the first reported software patent decision.",
+    "proofs": [
+     "Slee & Harris's Application, 1966, R.P.C. 194. According to Beresford (2000, p.4), this UK Hearing Officer decision is the first reported software patent decision worldwide."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not mention any patent granted on August 17, 1966, nor does it identify a specific patent as one of the first. The closest reference is a 1966 UK decision, but it is a hearing officer decision, not a granted patent with that date. Therefore, the claim includes an unsourced component that the author must either cite or remove."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "He was named a Parade All-American and McDonald's All-American as a senior in 2014.",
+   "markers": [
+    "joelberryii"
+   ],
+   "paper_ids": [
+    "0c22868a1653f9ebfb87e9a694256c948b2b3541"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8878,
+   "evidence": {
+    "paper_id": "0c22868a1653f9ebfb87e9a694256c948b2b3541",
+    "source_title": "joelberryii",
+    "supported": false,
+    "sentence": "Steven Branscombe, USA TODAY SporFullscreenHawaii Rainbow Warriors, Big West.",
+    "page": 1,
+    "snippet": "Steven Branscombe, USA TODAY SporFullscreenHawaii Rainbow Warriors,",
+    "cosine": 0.8878,
+    "reason": "The passage lists college basketball teams and conferences but does not mention the individual named in the claim or any of his accolades.",
+    "window": "Mark Humphrey, APFullscreenWichita State Shockers, Missouri Valley. Steven Branscombe, USA TODAY SporFullscreenHawaii Rainbow Warriors, Big West. Joe Maiorana, USA TODAY SportsFullscreenUNC Asheville, Big South Ben McKeown, APFullscreenAustin Peay, Ohio Valley Jim Brown, USA TODAY SportsFullscreenOregon, Pac-12 Christopher Hanewinckel, USA TODAY SportsFullscreenDuke Blue Devils, ACC."
+   },
+   "evidences": [
+    {
+     "paper_id": "0c22868a1653f9ebfb87e9a694256c948b2b3541",
+     "source_title": "joelberryii",
+     "supported": false,
+     "sentence": "Steven Branscombe, USA TODAY SporFullscreenHawaii Rainbow Warriors, Big West.",
+     "page": 1,
+     "snippet": "Steven Branscombe, USA TODAY SporFullscreenHawaii Rainbow Warriors,",
+     "cosine": 0.8878,
+     "reason": "The passage lists college basketball teams and conferences but does not mention the individual named in the claim or any of his accolades.",
+     "window": "Mark Humphrey, APFullscreenWichita State Shockers, Missouri Valley. Steven Branscombe, USA TODAY SporFullscreenHawaii Rainbow Warriors, Big West. Joe Maiorana, USA TODAY SportsFullscreenUNC Asheville, Big South Ben McKeown, APFullscreenAustin Peay, Ohio Valley Jim Brown, USA TODAY SportsFullscreenOregon, Pac-12 Christopher Hanewinckel, USA TODAY SportsFullscreenDuke Blue Devils, ACC."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "McDonald's All-American; Parade All-American",
+    "missing_from": [
+     "0c22868a1653f9ebfb87e9a694256c948b2b3541"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was named a Parade All-American and McDonald's All-American as a senior in 2014.",
+    "reason": "The passage asserts specific facts (awards and year) that the cited source is expected to prove. This falls under the 'full' scope as it's a direct claim about the subject's achievements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "He was named a Parade All-American and McDonald's All-American as a senior in 2014",
+    "rewrite_suggestion": "He was three times voted Mr. Florida Basketball and led his team to three state championships.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not mention Parade All-American or McDonald's All-American honors; it only discusses Joel Berry II's high school career, including being three-time Mr. Florida Basketball and winning state championships. The claim's specific honors are entirely absent from the provided source, so the author must either provide a citation that supports them or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "The all-time peak generation from photovoltaics was 9.55 GW on 14 May 2019.",
+   "markers": [
+    "solarpowerintheunitedkin"
+   ],
+   "paper_ids": [
+    "ca8746b96f10eabead3fe64623740a2919bf6b72"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8512,
+   "evidence": {
+    "paper_id": "ca8746b96f10eabead3fe64623740a2919bf6b72",
+    "source_title": "solarpowerintheunitedkin",
+    "supported": false,
+    "sentence": "### Latest News #### New masters course: MSc Solar Cell Technology 12 March 2019 by Jamie Taylor Our new course is designed to train physical science and engineering graduates to develop new photovoltaic devices and test their effectiveness as a global energy resource.",
+    "page": 1,
+    "snippet": "### Latest News #### New masters course:",
+    "cosine": 0.8512,
+    "reason": "The passage does not contain any information about the all-time peak generation from photovoltaics or the date it occurred.",
+    "window": "Donate your PV Data Our Microgen site records PV generation in the UK by collecting data from volunteers. ### Latest News #### New masters course: MSc Solar Cell Technology 12 March 2019 by Jamie Taylor Our new course is designed to train physical science and engineering graduates to develop new photovoltaic devices and test their effectiveness as a global energy resource. The course is based ... Continue reading All News ### Current Conditions in Sheffield Solar power 1.835772W/m2 Electrical power 5.887129883712 W For a typical installation* *Based on a 4kWp PV array Last updated: 0 Days Ago ### Contact Us +44(0)114 222 3533Sheffield Solar Department of Physics and Astronomy Hicks Building Hounsfield Road S3 7RH ### New masters course: MSc Solar Cell Technology Our new course is designed to train physical science and engineering graduates to develop new photovoltaic devices and test their effectiveness as a global energy resource."
+   },
+   "evidences": [
+    {
+     "paper_id": "ca8746b96f10eabead3fe64623740a2919bf6b72",
+     "source_title": "solarpowerintheunitedkin",
+     "supported": false,
+     "sentence": "### Latest News #### New masters course: MSc Solar Cell Technology 12 March 2019 by Jamie Taylor Our new course is designed to train physical science and engineering graduates to develop new photovoltaic devices and test their effectiveness as a global energy resource.",
+     "page": 1,
+     "snippet": "### Latest News #### New masters course:",
+     "cosine": 0.8512,
+     "reason": "The passage does not contain any information about the all-time peak generation from photovoltaics or the date it occurred.",
+     "window": "Donate your PV Data Our Microgen site records PV generation in the UK by collecting data from volunteers. ### Latest News #### New masters course: MSc Solar Cell Technology 12 March 2019 by Jamie Taylor Our new course is designed to train physical science and engineering graduates to develop new photovoltaic devices and test their effectiveness as a global energy resource. The course is based ... Continue reading All News ### Current Conditions in Sheffield Solar power 1.835772W/m2 Electrical power 5.887129883712 W For a typical installation* *Based on a 4kWp PV array Last updated: 0 Days Ago ### Contact Us +44(0)114 222 3533Sheffield Solar Department of Physics and Astronomy Hicks Building Hounsfield Road S3 7RH ### New masters course: MSc Solar Cell Technology Our new course is designed to train physical science and engineering graduates to develop new photovoltaic devices and test their effectiveness as a global energy resource."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The all-time peak generation from photovoltaics was 9.55 GW on 14 May 2019.",
+    "reason": "The passage asserts a specific factual claim (peak generation amount and date) that the cited source is expected to prove. This falls under the 'full' scope as it's a direct statement of fact attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific peak value of 9.55 GW and the date 14 May 2019 are not present in the cited source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text from Sheffield Solar's PV_Live page contains no numerical data or dates for an all-time peak generation. The claim attributes a specific value (9.55 GW) and a specific date (14 May 2019) to this source, but neither appears anywhere in the provided text. Therefore, the author must either add a correct citation for that data or rewrite the claim to avoid attributing unsupported figures to this source."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Muhammed later gave Gelini a lesson in Mardi Gras style which pushed Gelini to move to New Orleans after graduation.",
+   "markers": [
+    "chawa"
+   ],
+   "paper_ids": [
+    "d06dd837e97d7d2926e83912fb208df366dfaec0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8552,
+   "evidence": {
+    "paper_id": "d06dd837e97d7d2926e83912fb208df366dfaec0",
+    "source_title": "chawa",
+    "supported": false,
+    "sentence": "J'Wan joined the group when he was still in high school.",
+    "page": 1,
+    "snippet": "J'Wan joined the group when he was",
+    "cosine": 0.8552,
+    "reason": "The passage mentions Gelini learning Mardi Gras Indian beats from Norwood \"Geechie\" Johnson and playing drums for Monk Boudreaux, but it does not mention Muhammed or any lesson in Mardi Gras style that pushed Gelini to move to New Orleans.",
+    "window": "The most prominent Mardi Gras Indian today is Monk Boudreaux, the Big Chief of the Golden Eagles tribe, and his grandson J'Wan Boudreaux (who holds the position of Spyboy in the tribe) is stepping up with Cha Wa to propel their culture forward. J'Wan joined the group when he was still in high school. At the time, Gelini, then a recent Berklee School of Music grad, had been playing drums for Boudreaux's grandfather, having learned the traditional Mardi Gras Indian beats from original Wild Magnolias bass drummer Norwood \"Geechie\" Johnson at Sunday night Indian practices in Uptown New Orleans."
+   },
+   "evidences": [
+    {
+     "paper_id": "d06dd837e97d7d2926e83912fb208df366dfaec0",
+     "source_title": "chawa",
+     "supported": false,
+     "sentence": "J'Wan joined the group when he was still in high school.",
+     "page": 1,
+     "snippet": "J'Wan joined the group when he was",
+     "cosine": 0.8552,
+     "reason": "The passage mentions Gelini learning Mardi Gras Indian beats from Norwood \"Geechie\" Johnson and playing drums for Monk Boudreaux, but it does not mention Muhammed or any lesson in Mardi Gras style that pushed Gelini to move to New Orleans.",
+     "window": "The most prominent Mardi Gras Indian today is Monk Boudreaux, the Big Chief of the Golden Eagles tribe, and his grandson J'Wan Boudreaux (who holds the position of Spyboy in the tribe) is stepping up with Cha Wa to propel their culture forward. J'Wan joined the group when he was still in high school. At the time, Gelini, then a recent Berklee School of Music grad, had been playing drums for Boudreaux's grandfather, having learned the traditional Mardi Gras Indian beats from original Wild Magnolias bass drummer Norwood \"Geechie\" Johnson at Sunday night Indian practices in Uptown New Orleans."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "muhammed",
+    "missing_from": [
+     "d06dd837e97d7d2926e83912fb208df366dfaec0"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Muhammed later gave Gelini a lesson in Mardi Gras style which pushed Gelini to move to New Orleans after graduation.",
+    "reason": "The passage directly states a sequence of events and a causal link between them, implying that the cited source is expected to provide the evidence for this narrative. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Muhammed giving Gelini a lesson in Mardi Gras style that pushed him to move to New Orleans after graduation",
+    "rewrite_suggestion": "Gelini, a recent Berklee School of Music grad, learned traditional Mardi Gras Indian beats from Norwood 'Geechie' Johnson and played drums for Big Chief Monk Boudreaux in New Orleans.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim introduces a person named Muhammed who supposedly gave Gelini a lesson that caused his move to New Orleans after graduation. The source text contains no mention of Muhammed or any such lesson, nor does it state that a lesson motivated Gelini's move. The source indicates Gelini learned from Norwood 'Geechie' Johnson and was already in New Orleans as a recent Berklee grad, but this does not support the claim as written. Therefore, the author must either add a citation for the missing components or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "With Haile Giyorgis' removal from office by then-Regent \"Ras\" Tafari Makonnen in 1917, the post of \"Negadras\" of Addis Ababa lost most of its powers to the office of \"Kantiba\", the head of the municipal government, which had been created in 1910, with other towns later following suit.",
+   "markers": [
+    "hailegiyorgiswoldemikael"
+   ],
+   "paper_ids": [
+    "372e8a95cbfc13ace831392280369142a4f2aa31"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "372e8a95cbfc13ace831392280369142a4f2aa31",
+    "source_title": "hailegiyorgiswoldemikael",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "However, these last years never again saw him wield significant power either nationally or in Addis Ababa as he had from 1900 to 1917.",
+    "page": 1,
+    "snippet": "However, these last years never again saw",
+    "reason": "the passage does not state that the post of 'Negadras' of Addis Ababa lost most of its powers to the office of 'Kantiba', nor that the 'Kantiba' office was created in 1910.",
+    "votes": "2-0",
+    "window": "However, these last years never again saw him wield significant power either nationally or in Addis Ababa as he had from 1900 to 1917. The Negadras barricaded himself in his house in the Arada and Teferi was forced to surround his home with troops and physically remove him from power. In July 1917 Teferi put him in chains and stripped him of all his important offices."
+   },
+   "evidences": [
+    {
+     "paper_id": "372e8a95cbfc13ace831392280369142a4f2aa31",
+     "source_title": "hailegiyorgiswoldemikael",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "However, these last years never again saw him wield significant power either nationally or in Addis Ababa as he had from 1900 to 1917.",
+     "page": 1,
+     "snippet": "However, these last years never again saw",
+     "reason": "the passage does not state that the post of 'Negadras' of Addis Ababa lost most of its powers to the office of 'Kantiba', nor that the 'Kantiba' office was created in 1910.",
+     "votes": "2-0",
+     "window": "However, these last years never again saw him wield significant power either nationally or in Addis Ababa as he had from 1900 to 1917. The Negadras barricaded himself in his house in the Arada and Teferi was forced to surround his home with troops and physically remove him from power. In July 1917 Teferi put him in chains and stripped him of all his important offices."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the post of 'Negadras' of Addis Ababa lost most of its powers to the office of 'Kantiba', nor that the 'Kantiba' office was created in 1910.",
+   "subject_guard": {
+    "subject": "Tafari Makonnen",
+    "missing_from": [
+     "372e8a95cbfc13ace831392280369142a4f2aa31"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "With Haile Giyorgis' removal from office by then-Regent \"Ras\" Tafari Makonnen in 1917, the post of \"Negadras\" of Addis Ababa lost most of its powers to the office of \"Kantiba\", the head of the municipal government, which had been created in 1910, with other towns later following suit.",
+    "reason": "The passage asserts specific historical facts and dates, directly attributing the information about the transfer of power and the creation of the \"Kantiba\" office to the cited source. This falls under the 'full' scope as the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Negadras of Addis Ababa lost most of its powers to the office of Kantiba after 1917, that the Kantiba office was created in 1910, and that other towns later followed suit are not present in the cited source.",
+    "rewrite_suggestion": "With Haile Giyorgis' removal from office by then-Regent Ras Tafari Makonnen in 1917, he lost all his important offices and never again wielded significant power as Negadras.",
+    "proofs": [
+     "In July 1917 Teferi put him in chains and stripped him of all his important offices.",
+     "He ruled Addis Ababa not with the actual title of mayor (Kentiba), but as Negadras (or head of the merchants) from 1900 to 1917."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only indicates that Haile Giyorgis never again wielded significant power after 1917, which partially supports his loss of power but does not cover the removal by Ras Tafari or any transfer to the Kantiba office. The source text confirms the removal and that Kentiba means mayor, but it does not state that the Negadras lost powers to the Kantiba, that the Kantiba office was created in 1910, or that other towns followed suit. These missing components are substantive and unsourced, requiring the author to either add a citation or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "Modern English formed in 1979 in Colchester, Essex, England.",
+   "markers": [
+    "imeltwithyou"
+   ],
+   "paper_ids": [
+    "2b252f7de4ecdcb56e486da066e7d32a4b9dfeb1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2b252f7de4ecdcb56e486da066e7d32a4b9dfeb1",
+    "source_title": "imeltwithyou",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Essex, England-birthed five-piece Modern English boasts a legacy that's pretty much the reverse of its '80s post-punk peers.",
+    "page": 1,
+    "snippet": "Essex, England-birthed five-piece Modern English boasts a",
+    "reason": "The passage does not state that Modern English formed in 1979 or in Colchester, Essex, England.",
+    "votes": "2-0",
+    "window": "Essex, England-birthed five-piece Modern English boasts a legacy that's pretty much the reverse of its '80s post-punk peers. Where similar outfits enjoyed serious commercial success in their homeland but only cult-band status in the U.S., frontman Robbie Grey and Modern English achieved the opposite. However, the past year remarks the band's official return to form, with almost all of the original lineup now reassembled: Gary McDowell on keyboards, Michael Conroy on bass, and Stephen Walker on keyboards. Casual fans might be surprised to know that's gone on more or less continuously since the group's heyday, with frontman Robbie Grey continuing to release new music under the Modern English name."
+   },
+   "evidences": [
+    {
+     "paper_id": "2b252f7de4ecdcb56e486da066e7d32a4b9dfeb1",
+     "source_title": "imeltwithyou",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Essex, England-birthed five-piece Modern English boasts a legacy that's pretty much the reverse of its '80s post-punk peers.",
+     "page": 1,
+     "snippet": "Essex, England-birthed five-piece Modern English boasts a",
+     "reason": "The passage does not state that Modern English formed in 1979 or in Colchester, Essex, England.",
+     "votes": "2-0",
+     "window": "Essex, England-birthed five-piece Modern English boasts a legacy that's pretty much the reverse of its '80s post-punk peers. Where similar outfits enjoyed serious commercial success in their homeland but only cult-band status in the U.S., frontman Robbie Grey and Modern English achieved the opposite. However, the past year remarks the band's official return to form, with almost all of the original lineup now reassembled: Gary McDowell on keyboards, Michael Conroy on bass, and Stephen Walker on keyboards. Casual fans might be surprised to know that's gone on more or less continuously since the group's heyday, with frontman Robbie Grey continuing to release new music under the Modern English name."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Modern English formed in 1979 or in Colchester, Essex, England.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Modern English formed in 1979 in Colchester, Essex, England.",
+    "reason": "The passage asserts a specific historical fact (the formation date and location of Modern English) and directly attributes this information to the citation. This falls under the 'full' scope as the cited source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "formation year 1979 and the specific town Colchester",
+    "rewrite_suggestion": "Modern English originated in Essex, England.",
+    "proofs": [
+     "Essex, England-birthed five-piece Modern English boasts a legacy that's pretty much the reverse of its '80s post-punk peers."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Modern English formed in 1979 in Colchester, Essex, England. The source only describes the band as 'Essex, England-birthed' and provides no formation year or mention of Colchester. The shown sentence proves the band's name and its origin in Essex, England, but fails to support the year and specific town, which are entirely absent from the source."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "Adjustments have been made since 2017, resulting in a slightly different platform appearing on the Justice Democrats webpage at a given time.",
+   "markers": [
+    "justicedemocrats"
+   ],
+   "paper_ids": [
+    "c1687f380b8a7c2bbc215f8d4ef619d185dcc923"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.886,
+   "evidence": {
+    "paper_id": "c1687f380b8a7c2bbc215f8d4ef619d185dcc923",
+    "source_title": "justicedemocrats",
+    "supported": false,
+    "sentence": "If the Democrats refuse to embrace this platform, they'll continue to lose, either to Republicans or to us.",
+    "page": 1,
+    "snippet": "If the Democrats refuse to embrace this",
+    "cosine": 0.886,
+    "reason": "The passage discusses the Justice Democrats' platform but does not mention any adjustments made since 2017 or how the platform might appear differently on their webpage.",
+    "window": "And it's a movement of, by, and for working people. If the Democrats refuse to embrace this platform, they'll continue to lose, either to Republicans or to us. Transform Our Economy We need a bold economic vision that will both reclaim lost capital and put money back in the pockets of hard-working Americans, and create millions of new jobs for those who have been left out of the workforce."
+   },
+   "evidences": [
+    {
+     "paper_id": "c1687f380b8a7c2bbc215f8d4ef619d185dcc923",
+     "source_title": "justicedemocrats",
+     "supported": false,
+     "sentence": "If the Democrats refuse to embrace this platform, they'll continue to lose, either to Republicans or to us.",
+     "page": 1,
+     "snippet": "If the Democrats refuse to embrace this",
+     "cosine": 0.886,
+     "reason": "The passage discusses the Justice Democrats' platform but does not mention any adjustments made since 2017 or how the platform might appear differently on their webpage.",
+     "window": "And it's a movement of, by, and for working people. If the Democrats refuse to embrace this platform, they'll continue to lose, either to Republicans or to us. Transform Our Economy We need a bold economic vision that will both reclaim lost capital and put money back in the pockets of hard-working Americans, and create millions of new jobs for those who have been left out of the workforce."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "adjustments",
+    "missing_from": [
+     "c1687f380b8a7c2bbc215f8d4ef619d185dcc923"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Adjustments have been made since 2017, resulting in a slightly different platform appearing on the Justice Democrats webpage at a given time.",
+    "reason": "The passage directly states a fact about the Justice Democrats' platform and implies the cited source would support this factual claim. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that adjustments have been made since 2017 and that a slightly different platform appears at a given time is entirely unsupported by the provided source text.",
+    "rewrite_suggestion": "Justice Democrats' platform, as presented on their webpage, contains policies such as the Green New Deal and Medicare for All.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not address any part of the claim. The source text is a static list of platform policies with no mention of adjustments, version changes, or the year 2017. Therefore, the required components are not provable from the source at all, so the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "The Winter Hill Gang was thought to have skimmed $10,000 per week from the parking lot operation at World Jai Alai, but this was never proven.",
+   "markers": [
+    "rogerwheelerbusinessman"
+   ],
+   "paper_ids": [
+    "6fc35461caa4d2990210d4e7e4b980709d659f94"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7867,
+   "evidence": {
+    "paper_id": "6fc35461caa4d2990210d4e7e4b980709d659f94",
+    "source_title": "rogerwheelerbusinessman",
+    "supported": false,
+    "sentence": "Businessman, Roger Wheeler, the former chairman of Telex Corp. and former owner of World Jai Alai was murdered May 27, 1981, at Southern Hills Country Club in Tulsa, Oklahoma, while sitting in his car.",
+    "page": 1,
+    "snippet": "Businessman, Roger Wheeler, the former chairman of",
+    "cosine": 0.7867,
+    "reason": "The passage mentions an embezzlement scheme at World Jai Alai but does not mention the Winter Hill Gang or any specific amount skimmed per week.",
+    "window": "# Roger Wheeler ### Businessman Production Notes Businessman, Roger Wheeler, the former chairman of Telex Corp. and former owner of World Jai Alai was murdered May 27, 1981, at Southern Hills Country Club in Tulsa, Oklahoma, while sitting in his car. At age fifty-five, he was leaving the golf club after his weekly golf game and was murdered for having uncovered an embezzlement scheme that was going on at his business, World Jai Alai."
+   },
+   "evidences": [
+    {
+     "paper_id": "6fc35461caa4d2990210d4e7e4b980709d659f94",
+     "source_title": "rogerwheelerbusinessman",
+     "supported": false,
+     "sentence": "Businessman, Roger Wheeler, the former chairman of Telex Corp. and former owner of World Jai Alai was murdered May 27, 1981, at Southern Hills Country Club in Tulsa, Oklahoma, while sitting in his car.",
+     "page": 1,
+     "snippet": "Businessman, Roger Wheeler, the former chairman of",
+     "cosine": 0.7867,
+     "reason": "The passage mentions an embezzlement scheme at World Jai Alai but does not mention the Winter Hill Gang or any specific amount skimmed per week.",
+     "window": "# Roger Wheeler ### Businessman Production Notes Businessman, Roger Wheeler, the former chairman of Telex Corp. and former owner of World Jai Alai was murdered May 27, 1981, at Southern Hills Country Club in Tulsa, Oklahoma, while sitting in his car. At age fifty-five, he was leaving the golf club after his weekly golf game and was murdered for having uncovered an embezzlement scheme that was going on at his business, World Jai Alai."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Winter Hill Gang was thought to have skimmed $10,000 per week from the parking lot operation at World Jai Alai, but this was never proven.",
+    "reason": "The passage directly states a claim about the Winter Hill Gang and the parking lot operation, implying the citation is expected to support this specific assertion. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Winter Hill Gang was thought to have skimmed $10,000 per week from the parking lot operation at World Jai Alai and that this was never proven is entirely absent from the cited source.",
+    "rewrite_suggestion": "Roger Wheeler was murdered after uncovering an embezzlement scheme at World Jai Alai, and three members of the Winter Hill Gang were convicted for his murder.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence and the entire source text only mention an embezzlement scheme at World Jai Alai and the subsequent murder and convictions, but contain no mention of a specific $10,000 per week skimming from a parking lot, nor any assertion about it being thought but never proven. Therefore every component of the claim is unprovable from this source, requiring the author either to add a different citation or to rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "The 2011\u201312 season was St Johnstone's third consecutive season in the Scottish Premier League, having competed in the league since their promotion in the 2008\u201309 season.",
+   "markers": [
+    "201112stjohnstonefcseaso"
+   ],
+   "paper_ids": [
+    "45ef1f11f0af5479f2159d456d499eb4f650c12f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "45ef1f11f0af5479f2159d456d499eb4f650c12f",
+    "source_title": "201112stjohnstonefcseaso",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "St Johnstone secured the Scottish First Division title after coming from behind to beat Morton and end their seven-year absence from Scotland's top flight.",
+    "page": 1,
+    "snippet": "St Johnstone secured the Scottish First Division",
+    "reason": "The passage does not state that the 2011-12 season was St Johnstone's third consecutive season in the Scottish Premier League or that they were promoted in the 2008-09 season.",
+    "votes": "2-0",
+    "window": "St Johnstone secured the Scottish First Division title after coming from behind to beat Morton and end their seven-year absence from Scotland's top flight."
+   },
+   "evidences": [
+    {
+     "paper_id": "45ef1f11f0af5479f2159d456d499eb4f650c12f",
+     "source_title": "201112stjohnstonefcseaso",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "St Johnstone secured the Scottish First Division title after coming from behind to beat Morton and end their seven-year absence from Scotland's top flight.",
+     "page": 1,
+     "snippet": "St Johnstone secured the Scottish First Division",
+     "reason": "The passage does not state that the 2011-12 season was St Johnstone's third consecutive season in the Scottish Premier League or that they were promoted in the 2008-09 season.",
+     "votes": "2-0",
+     "window": "St Johnstone secured the Scottish First Division title after coming from behind to beat Morton and end their seven-year absence from Scotland's top flight."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the 2011-12 season was St Johnstone's third consecutive season in the Scottish Premier League or that they were promoted in the 2008-09 season.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The 2011-12 season was St Johnstone's third consecutive season in the Scottish Premier League, having competed in the league since their promotion in the 2008-09 season.",
+    "reason": "The passage asserts facts (season number, league status, promotion year) that are directly attributed to the cited source. The citation is expected to prove these specific details.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that the 2011\u201312 season was St Johnstone's third consecutive season in the Scottish Premier League and that they have competed in the league since promotion in the 2008\u201309 season. The cited source only discusses their promotion in 2009 (end of the 2008\u201309 season) and does not mention any subsequent seasons, particularly the 2011\u201312 season or the number of consecutive seasons.",
+    "rewrite_suggestion": "St Johnstone won promotion to the Scottish Premier League at the end of the 2008\u201309 season after securing the Scottish First Division title.",
+    "proofs": [
+     "St Johnstone secured the Scottish First Division title after coming from behind to beat Morton and end their seven-year absence from Scotland's top flight."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two components: that the 2011\u201312 season was St Johnstone's third consecutive season in the Scottish Premier League, and that they have competed since promotion in the 2008\u201309 season. The provided source text only covers the promotion event in 2009 and does not mention the 2011\u201312 season or any consecutive seasons. Therefore, the essential components of the claim are not provable from the source at all, making this an author problem requiring a new citation or a rewrite."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "In 2004, with David Cobb as its presidential candidate, the Green-Rainbow ticket was unable to meet the required 3% threshold, and subsequently lost recognition in Massachusetts of state party status.",
+   "markers": [
+    "greenrainbowparty"
+   ],
+   "paper_ids": [
+    "121a422d656d352305095238555e34c753d8eabc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "121a422d656d352305095238555e34c753d8eabc",
+    "source_title": "greenrainbowparty",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "``He has a long history of involvement with the Greens,\" asserts Galvin, referring to the Green Party, which lost its designation as an official political party in 2004 and is now called the Green-Rainbow party.",
+    "page": 1,
+    "snippet": "``He has a long history of involvement",
+    "reason": "The passage does not mention David Cobb as the presidential candidate or the 3% threshold.",
+    "votes": "2-0",
+    "window": "``He has a long history of involvement with the Greens,\" asserts Galvin, referring to the Green Party, which lost its designation as an official political party in 2004 and is now called the Green-Rainbow party."
+   },
+   "evidences": [
+    {
+     "paper_id": "121a422d656d352305095238555e34c753d8eabc",
+     "source_title": "greenrainbowparty",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "``He has a long history of involvement with the Greens,\" asserts Galvin, referring to the Green Party, which lost its designation as an official political party in 2004 and is now called the Green-Rainbow party.",
+     "page": 1,
+     "snippet": "``He has a long history of involvement",
+     "reason": "The passage does not mention David Cobb as the presidential candidate or the 3% threshold.",
+     "votes": "2-0",
+     "window": "``He has a long history of involvement with the Greens,\" asserts Galvin, referring to the Green Party, which lost its designation as an official political party in 2004 and is now called the Green-Rainbow party."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention David Cobb as the presidential candidate or the 3% threshold.",
+   "subject_guard": {
+    "subject": "David Cobb",
+    "missing_from": [
+     "121a422d656d352305095238555e34c753d8eabc"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2004, with David Cobb as its presidential candidate, the Green-Rainbow ticket was unable to meet the required 3% threshold, and subsequently lost recognition in Massachusetts of state party status.",
+    "reason": "The passage asserts specific facts (year, candidate, threshold, consequence) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is stating facts that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Green-Rainbow ticket with David Cobb as its presidential candidate in 2004 was unable to meet the required 3% threshold is not supported. The source only states that the Green Party lost its official party designation in 2004, but does not mention David Cobb, the 3% threshold, or a causal link.",
+    "rewrite_suggestion": "In 2004, the Green Party (later called Green-Rainbow) lost its designation as an official political party in Massachusetts.",
+    "proofs": [
+     "``He has a long history of involvement with the Greens,\" asserts Galvin, referring to the Green Party, which lost its designation as an official political party in 2004 and is now called the Green-Rainbow party."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that the party lost its designation in 2004, but neither it nor any other sentence in the source mentions David Cobb as a presidential candidate or a 3% threshold in 2004. The claim adds these unsupported details, so the author must either cite a source for them or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "The period of the tenth and ninth centuries BCE has been the subject of an intense scholarly dispute, as well as of ongoing archaeological investigations.",
+   "markers": [
+    "cityofdavid"
+   ],
+   "paper_ids": [
+    "764955264c179a31039cd1ab0003eae3fb5b0762"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "764955264c179a31039cd1ab0003eae3fb5b0762",
+    "source_title": "cityofdavid",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The normally reserved Amihai Mazar of Hebrew University, one of the most esteemed scholars in the field of biblical archaeology and author of the standard textbook, Archaeology of the Land of the Bible, 10,000-586 BCE, has described the discovery as 'something of a miracle'.\"",
+    "page": 1,
+    "snippet": "The normally reserved Amihai Mazar of Hebrew",
+    "reason": "The passage does not mention the tenth and ninth centuries BCE or any scholarly dispute or ongoing archaeological investigations related to this period.",
+    "votes": "2-0",
+    "window": "The normally reserved Amihai Mazar of Hebrew University, one of the most esteemed scholars in the field of biblical archaeology and author of the standard textbook, Archaeology of the Land of the Bible, 10,000-586 BCE, has described the discovery as 'something of a miracle'.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "764955264c179a31039cd1ab0003eae3fb5b0762",
+     "source_title": "cityofdavid",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The normally reserved Amihai Mazar of Hebrew University, one of the most esteemed scholars in the field of biblical archaeology and author of the standard textbook, Archaeology of the Land of the Bible, 10,000-586 BCE, has described the discovery as 'something of a miracle'.\"",
+     "page": 1,
+     "snippet": "The normally reserved Amihai Mazar of Hebrew",
+     "reason": "The passage does not mention the tenth and ninth centuries BCE or any scholarly dispute or ongoing archaeological investigations related to this period.",
+     "votes": "2-0",
+     "window": "The normally reserved Amihai Mazar of Hebrew University, one of the most esteemed scholars in the field of biblical archaeology and author of the standard textbook, Archaeology of the Land of the Bible, 10,000-586 BCE, has described the discovery as 'something of a miracle'.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the tenth and ninth centuries BCE or any scholarly dispute or ongoing archaeological investigations related to this period.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The period of the tenth and ninth centuries BCE has been the subject of an intense scholarly dispute, as well as of ongoing archaeological investigations.",
+    "reason": "The passage directly states a scholarly dispute and ongoing investigations related to a specific historical period, implying that the cited source is expected to provide evidence or details about this dispute and these investigations.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The biblical account of history has been dismissed as unreliable by a cadre of scholars, some of whom have an overtly political agenda, arguing that the traditional account was resurrected by the Zionists to justify dispossessing Palestinian Arabs.",
+     "Mazar's latest excavation in the City of David, in the southern shadow of the Temple Mount, has shaken up the archaeological world.",
+     "Within the dirt fill between the stones were found pottery shards dating to the 11th century BCE, the time when David established his monarchy."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence discusses Amihai Mazar calling a discovery 'something of a miracle' but does not mention any scholarly dispute or ongoing investigations regarding the 10th-9th centuries BCE. However, the source text contains explicit references to a scholarly debate (e.g., minimalists vs. traditionalists) and to ongoing excavations (Mazar's dig), so the proof exists in the source but was not shown by the tool. Therefore, the tool must display the correct supporting sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t25",
+   "text": "RCA Inspiration a division of RCA Records alongside Fo Yo Soul Recordings released the album on May 31, 2019.",
+   "markers": [
+    "longlivelove"
+   ],
+   "paper_ids": [
+    "b56adaaf7162119aa3e541cdd640faaee2980b97"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b56adaaf7162119aa3e541cdd640faaee2980b97",
+    "source_title": "longlivelove",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: \u200eLong Live Love by Kirk Franklin on Apple Music (meta data) PUBLISHED DATETIME: 2019-05-31T07:00:00.000Z Shopping Bag Search apple.com Shopping Bag Apple Music Preview #### Get Apple Music on iOS, Android, Mac, and Windows Learn More 10 Songs, 49 Minutes ### EDITORS' NOTES Whether you discovered Kirk Franklin through his breakthrough \"Stomp\" in 1997 or Kanye West's \"Ultralight Beam\" in 2016, the gospel artist's message of the Lord's good word remains timeless.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: \u200eLong Live Love by",
+    "reason": "The passage does not mention RCA Inspiration, RCA Records, or Fo Yo Soul Recordings.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: \u200eLong Live Love by Kirk Franklin on Apple Music (meta data) PUBLISHED DATETIME: 2019-05-31T07:00:00.000Z Shopping Bag Search apple.com Shopping Bag Apple Music Preview #### Get Apple Music on iOS, Android, Mac, and Windows Learn More 10 Songs, 49 Minutes ### EDITORS' NOTES Whether you discovered Kirk Franklin through his breakthrough \"Stomp\" in 1997 or Kanye West's \"Ultralight Beam\" in 2016, the gospel artist's message of the Lord's good word remains timeless."
+   },
+   "evidences": [
+    {
+     "paper_id": "b56adaaf7162119aa3e541cdd640faaee2980b97",
+     "source_title": "longlivelove",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: \u200eLong Live Love by Kirk Franklin on Apple Music (meta data) PUBLISHED DATETIME: 2019-05-31T07:00:00.000Z Shopping Bag Search apple.com Shopping Bag Apple Music Preview #### Get Apple Music on iOS, Android, Mac, and Windows Learn More 10 Songs, 49 Minutes ### EDITORS' NOTES Whether you discovered Kirk Franklin through his breakthrough \"Stomp\" in 1997 or Kanye West's \"Ultralight Beam\" in 2016, the gospel artist's message of the Lord's good word remains timeless.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: \u200eLong Live Love by",
+     "reason": "The passage does not mention RCA Inspiration, RCA Records, or Fo Yo Soul Recordings.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: \u200eLong Live Love by Kirk Franklin on Apple Music (meta data) PUBLISHED DATETIME: 2019-05-31T07:00:00.000Z Shopping Bag Search apple.com Shopping Bag Apple Music Preview #### Get Apple Music on iOS, Android, Mac, and Windows Learn More 10 Songs, 49 Minutes ### EDITORS' NOTES Whether you discovered Kirk Franklin through his breakthrough \"Stomp\" in 1997 or Kanye West's \"Ultralight Beam\" in 2016, the gospel artist's message of the Lord's good word remains timeless."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention RCA Inspiration, RCA Records, or Fo Yo Soul Recordings.",
+   "subject_guard": {
+    "subject": "Fo Yo Soul Recordings; RCA Records; rca inspiration",
+    "missing_from": [
+     "b56adaaf7162119aa3e541cdd640faaee2980b97"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The album was released on May 31, 2019.",
+    "reason": "The passage asserts a specific fact (release date) that is directly attributed to the cited source, implying the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that the album was released by RCA Inspiration (a division of RCA Records) and Fo Yo Soul Recordings, but the source text does not mention either label.",
+    "rewrite_suggestion": "The album Long Live Love by Kirk Franklin was released on May 31, 2019.",
+    "proofs": [
+     "PUBLISHED DATETIME: 2019-05-31T07:00:00.000Z"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The date component is supported by the metadata shown, but the claim also attributes the release to RCA Inspiration and Fo Yo Soul Recordings, which are entirely absent from the provided source text. Since a substantive component is unprovable from the source, the author must either add a citation for the labels or rewrite the claim to omit them."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "The Terrex AV81 was initially developed in 2000 by Timoney for Singapore Technologies Kinetics.",
+   "markers": [
+    "timoneytechnologylimited"
+   ],
+   "paper_ids": [
+    "5f19fad231b0167ff5dcd2338e4ccd7a0da73cf8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8301,
+   "evidence": {
+    "paper_id": "5f19fad231b0167ff5dcd2338e4ccd7a0da73cf8",
+    "source_title": "timoneytechnologylimited",
+    "supported": false,
+    "sentence": "Follow the company to be always up to date with this company",
+    "page": 1,
+    "snippet": "Follow the company to be always up",
+    "cosine": 0.8301,
+    "reason": "The passage does not contain any information about the development of the Terrex AV81, its initial development date, or the companies involved.",
+    "window": "Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company ### Most Read"
+   },
+   "evidences": [
+    {
+     "paper_id": "5f19fad231b0167ff5dcd2338e4ccd7a0da73cf8",
+     "source_title": "timoneytechnologylimited",
+     "supported": false,
+     "sentence": "Follow the company to be always up to date with this company",
+     "page": 1,
+     "snippet": "Follow the company to be always up",
+     "cosine": 0.8301,
+     "reason": "The passage does not contain any information about the development of the Terrex AV81, its initial development date, or the companies involved.",
+     "window": "Press Releases Regional Offices ### Make an Enquiry Follow this company Follow the company to be always up to date with this company ### Most Read"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Singapore Technologies Kinetics",
+    "missing_from": [
+     "5f19fad231b0167ff5dcd2338e4ccd7a0da73cf8"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Terrex AV81 was initially developed in 2000 by Timoney for Singapore Technologies Kinetics.",
+    "reason": "The passage directly states a fact about the development of the Terrex AV81, attributing it to Timoney and Singapore Technologies Kinetics. This is a factual claim that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The Terrex AV81 was initially developed in 2000 by Timoney for Singapore Technologies Kinetics.",
+    "rewrite_suggestion": "The Terrex AV81 is an armoured infantry fighting vehicle.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text (Army Technology article on Terrex) contains no information about a development year of 2000, the involvement of Timoney, or the customer Singapore Technologies Kinetics. It only lists technical specifications. The shown sentence is a generic prompt to follow the company and does not support any component of the claim. Therefore, every component is unproven from this source, and the author must add a citation or rewrite the claim to match what the source actually supports."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "c405c5093e445d16e390c91dc1bf46aca3ba3af1": {
+    "title": "daniellesteel",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c512a545b1fd1f88d9f587f652b2b290ebe44226": {
+    "title": "bloodontheleaves",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ca8746b96f10eabead3fe64623740a2919bf6b72": {
+    "title": "solarpowerintheunitedkin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c1687f380b8a7c2bbc215f8d4ef619d185dcc923": {
+    "title": "justicedemocrats",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ae74e6267d7d404d7eed2fc850e401ea0389a3da": {
+    "title": "lianlunson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5f19fad231b0167ff5dcd2338e4ccd7a0da73cf8": {
+    "title": "timoneytechnologylimited",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b56adaaf7162119aa3e541cdd640faaee2980b97": {
+    "title": "longlivelove",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b0149caf31cab141ae189295694f8914da85a20e": {
+    "title": "secondamendmenttotheunit",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "eacaef9425af75535f6df14e325e6b1c737775c3": {
+    "title": "yahooanswers",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d06dd837e97d7d2926e83912fb208df366dfaec0": {
+    "title": "chawa",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "90c81d3fabb258b3608656139a1004d4ac05f761": {
+    "title": "elizalewis",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "764955264c179a31039cd1ab0003eae3fb5b0762": {
+    "title": "cityofdavid",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "23e4db59aea03ed8320bf2afb012d758f02dcd66": {
+    "title": "nanticokepennsylvania",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "31818e16edf02fd10c44b854dc85cbfd4589cd44": {
+    "title": "arabiangulfuniversity",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0c22868a1653f9ebfb87e9a694256c948b2b3541": {
+    "title": "joelberryii",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "121a422d656d352305095238555e34c753d8eabc": {
+    "title": "greenrainbowparty",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "dd1777ad7bfaab537442386a391ecdf71b756cf5": {
+    "title": "jankowski",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2fbff2929941a0590d825172899bee87a169acd6": {
+    "title": "didarganjassemblyconstit",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "6fc35461caa4d2990210d4e7e4b980709d659f94": {
+    "title": "rogerwheelerbusinessman",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "372e8a95cbfc13ace831392280369142a4f2aa31": {
+    "title": "hailegiyorgiswoldemikael",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3b00940230811961430eeb7370914b59b0a7a137": {
+    "title": "glennhaughton",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "666377a43ace886ebbb8c55683fd247d5134c177": {
+    "title": "fairfaxvirginia",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "45ef1f11f0af5479f2159d456d499eb4f650c12f": {
+    "title": "201112stjohnstonefcseaso",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2b252f7de4ecdcb56e486da066e7d32a4b9dfeb1": {
+    "title": "imeltwithyou",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1921dc5105d71f4366a6c0d68650fdd3276e10cc": {
+    "title": "softwarepatent",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1e3039b205309778136168d656caafb874d87969": {
+    "title": "thenegotiationbrooklynni",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 0,
+   "unsupported": 26,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:49:35",
+  "marker_errors": [],
+  "processing_time_seconds": 491.2,
+  "source_hashes": {
+   "thenegotiationbrooklynni.txt": "bdf8dc125de8a8db310449e2759ef877a23eaec2",
+   "lianlunson.txt": "cff13e794dbfdaa86f4079f83f5289027a3f8f73",
+   "yahooanswers.txt": "b457869de231e7e5390ec49eed0e32534c5469ac",
+   "secondamendmenttotheunit.txt": "87c66e4b5f31736f7e97c50b6b6c03a010d85f65",
+   "bloodontheleaves.txt": "eeabd9955d3c1b2d8cef2a6ffb9aafb2571ceaee",
+   "nanticokepennsylvania.txt": "b36fc49c641d3ae942a8b294d1d8c6f58b254a67",
+   "glennhaughton.txt": "c8957ee8109126eccccc2ba89cfb56bc88e86dd4",
+   "jankowski.txt": "19c0d45954ed4c7e16cff7c60970edbcf697b5bf",
+   "fairfaxvirginia.txt": "6b5c6eafaa06d4c4d9df19835bb81b04477f7b7e",
+   "didarganjassemblyconstit.txt": "fcf896537b1eeff27ad6b17a84fb60cc071f025f",
+   "arabiangulfuniversity.txt": "f98f5ab6d2b09bd77bdb43b3e713d57257a0e62c",
+   "elizalewis.txt": "92d49d0c7bdad612582e10344c4b2e26d2c0128f",
+   "daniellesteel.txt": "2b0500d96d84bd937d580935bebee0dbe9f52002",
+   "softwarepatent.txt": "4ce63dd8fe48e4fa979e52f67815cfa2dd16cdac",
+   "joelberryii.txt": "06bf72c79847fc80cbd6bcedf59bac843820bcdd",
+   "solarpowerintheunitedkin.txt": "90ca60c999d59d399bcaef35a85087acadd304f1",
+   "chawa.txt": "6383c8605cbc6072545f40fde269b01b90b92197",
+   "hailegiyorgiswoldemikael.txt": "c2486ed310c940c5963e25a4dfa9bcc68defd0cb",
+   "imeltwithyou.txt": "17a22589c1275d627c662febe1a28e44398f2954",
+   "justicedemocrats.txt": "4fed674ee7765b92e910dd1deb998f74fbfdb07d",
+   "rogerwheelerbusinessman.txt": "81b877edad5e10545139f81b1c58c1b5c5c1adb0",
+   "201112stjohnstonefcseaso.txt": "a976e9224e093394af5b91f32e516599cf0b9d70",
+   "greenrainbowparty.txt": "19244a2330a291bb5f6f009eb271773746486a5f",
+   "cityofdavid.txt": "b376957511a15dac3c03848c7ba3f108aef9ed09",
+   "longlivelove.txt": "111560f031e9f02f5fa150deb61e40eb9c94ce2b",
+   "timoneytechnologylimited.txt": "fffac5e109cf926f88a77b1c9516a2a1be5a4b00"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 337,
+    "prompt_tokens": 364237,
+    "completion_tokens": 11106,
+    "cost_usd": 0.040887
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 28,
+    "prompt_tokens": 99714,
+    "completion_tokens": 51782,
+    "cost_usd": 0.023243
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 26,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 26,
+   "actions": {
+    "add_citation_or_rewrite": 25,
+    "wrong_or_insufficient_evidence": 1
+   },
+   "proof_may_exist": [
+    "t24"
+   ],
+   "conflicts": [
+    "t10"
+   ],
+   "rescued": [],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "1e3039b205309778136168d656caafb874d87969",
+   "key": "thenegotiationbrooklynni",
+   "filename": "thenegotiationbrooklynni.txt",
+   "title": "thenegotiationbrooklynni",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ae74e6267d7d404d7eed2fc850e401ea0389a3da",
+   "key": "lianlunson",
+   "filename": "lianlunson.txt",
+   "title": "lianlunson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "eacaef9425af75535f6df14e325e6b1c737775c3",
+   "key": "yahooanswers",
+   "filename": "yahooanswers.txt",
+   "title": "yahooanswers",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b0149caf31cab141ae189295694f8914da85a20e",
+   "key": "secondamendmenttotheunit",
+   "filename": "secondamendmenttotheunit.txt",
+   "title": "secondamendmenttotheunit",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c512a545b1fd1f88d9f587f652b2b290ebe44226",
+   "key": "bloodontheleaves",
+   "filename": "bloodontheleaves.txt",
+   "title": "bloodontheleaves",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "23e4db59aea03ed8320bf2afb012d758f02dcd66",
+   "key": "nanticokepennsylvania",
+   "filename": "nanticokepennsylvania.txt",
+   "title": "nanticokepennsylvania",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3b00940230811961430eeb7370914b59b0a7a137",
+   "key": "glennhaughton",
+   "filename": "glennhaughton.txt",
+   "title": "glennhaughton",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "dd1777ad7bfaab537442386a391ecdf71b756cf5",
+   "key": "jankowski",
+   "filename": "jankowski.txt",
+   "title": "jankowski",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "666377a43ace886ebbb8c55683fd247d5134c177",
+   "key": "fairfaxvirginia",
+   "filename": "fairfaxvirginia.txt",
+   "title": "fairfaxvirginia",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2fbff2929941a0590d825172899bee87a169acd6",
+   "key": "didarganjassemblyconstit",
+   "filename": "didarganjassemblyconstit.txt",
+   "title": "didarganjassemblyconstit",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "31818e16edf02fd10c44b854dc85cbfd4589cd44",
+   "key": "arabiangulfuniversity",
+   "filename": "arabiangulfuniversity.txt",
+   "title": "arabiangulfuniversity",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "90c81d3fabb258b3608656139a1004d4ac05f761",
+   "key": "elizalewis",
+   "filename": "elizalewis.txt",
+   "title": "elizalewis",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c405c5093e445d16e390c91dc1bf46aca3ba3af1",
+   "key": "daniellesteel",
+   "filename": "daniellesteel.txt",
+   "title": "daniellesteel",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1921dc5105d71f4366a6c0d68650fdd3276e10cc",
+   "key": "softwarepatent",
+   "filename": "softwarepatent.txt",
+   "title": "softwarepatent",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0c22868a1653f9ebfb87e9a694256c948b2b3541",
+   "key": "joelberryii",
+   "filename": "joelberryii.txt",
+   "title": "joelberryii",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ca8746b96f10eabead3fe64623740a2919bf6b72",
+   "key": "solarpowerintheunitedkin",
+   "filename": "solarpowerintheunitedkin.txt",
+   "title": "solarpowerintheunitedkin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d06dd837e97d7d2926e83912fb208df366dfaec0",
+   "key": "chawa",
+   "filename": "chawa.txt",
+   "title": "chawa",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "372e8a95cbfc13ace831392280369142a4f2aa31",
+   "key": "hailegiyorgiswoldemikael",
+   "filename": "hailegiyorgiswoldemikael.txt",
+   "title": "hailegiyorgiswoldemikael",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2b252f7de4ecdcb56e486da066e7d32a4b9dfeb1",
+   "key": "imeltwithyou",
+   "filename": "imeltwithyou.txt",
+   "title": "imeltwithyou",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c1687f380b8a7c2bbc215f8d4ef619d185dcc923",
+   "key": "justicedemocrats",
+   "filename": "justicedemocrats.txt",
+   "title": "justicedemocrats",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6fc35461caa4d2990210d4e7e4b980709d659f94",
+   "key": "rogerwheelerbusinessman",
+   "filename": "rogerwheelerbusinessman.txt",
+   "title": "rogerwheelerbusinessman",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "45ef1f11f0af5479f2159d456d499eb4f650c12f",
+   "key": "201112stjohnstonefcseaso",
+   "filename": "201112stjohnstonefcseaso.txt",
+   "title": "201112stjohnstonefcseaso",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "121a422d656d352305095238555e34c753d8eabc",
+   "key": "greenrainbowparty",
+   "filename": "greenrainbowparty.txt",
+   "title": "greenrainbowparty",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "764955264c179a31039cd1ab0003eae3fb5b0762",
+   "key": "cityofdavid",
+   "filename": "cityofdavid.txt",
+   "title": "cityofdavid",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b56adaaf7162119aa3e541cdd640faaee2980b97",
+   "key": "longlivelove",
+   "filename": "longlivelove.txt",
+   "title": "longlivelove",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5f19fad231b0167ff5dcd2338e4ccd7a0da73cf8",
+   "key": "timoneytechnologylimited",
+   "filename": "timoneytechnologylimited.txt",
+   "title": "timoneytechnologylimited",
+   "num_claims": 0
+  }
+ ]
+}

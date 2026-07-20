@@ -1,0 +1,16 @@
+# On Linux, plain PyPI torch is a multi-GB CUDA build that hard-crashes on GPUs
+# it has no kernels for (torch.AcceleratorError on first encode — found on the
+# 2026-07-14 clean-venv test). This tool's embeddings are CPU-sized by design,
+# so Linux installs pin the CPU wheel from the PyTorch index. Mac/Windows PyPI
+# wheels are already CPU-only.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.12.1+cpu; sys_platform == 'linux'
+torch==2.12.1; sys_platform != 'linux'
+
+litellm==1.74.0
+sentence-transformers==5.5.1
+PyPDF2==3.0.1
+nltk==3.9.4
+requests==2.32.4
+beautifulsoup4==4.13.4
+numpy

@@ -1,0 +1,2012 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train heldout batch 6 (refuted)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "The local Arakwal Aboriginal people's name for the area is \"Cavvanbah\", meaning \"meeting place\".",
+   "markers": [
+    "byronbaynewsouthwales"
+   ],
+   "paper_ids": [
+    "2abc402671744e746b5ad78ae206ae8514875ffd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7924,
+   "evidence": {
+    "paper_id": "2abc402671744e746b5ad78ae206ae8514875ffd",
+    "source_title": "byronbaynewsouthwales",
+    "supported": false,
+    "sentence": "A simple phone call service hailed as saving the lives of thousands of arrested Aboriginal people is under threat because of a funding feud between the state and federal governments.",
+    "page": 1,
+    "snippet": "A simple phone call service hailed as",
+    "cosine": 0.7924,
+    "reason": "The passage discusses a phone call service for arrested Aboriginal people and does not mention the Arakwal Aboriginal people or the name 'Cavvanbah'.",
+    "window": "The Wayback Machine - https://web.archive.org/web/20140324075539/http://www.theherald.com.au/story/1503982/buck-passing-threatens-aboriginal-lifeline/ #### Weather Your 4-day local weather forecast Monday March 24, 2014 Larger / SmallerNight Mode # Buck passing threatens Aboriginal lifeline ## By Ilya Gridneff May 15, 2013, 4:21 p.m. A simple phone call service hailed as saving the lives of thousands of arrested Aboriginal people is under threat because of a funding feud between the state and federal governments. A simple phone call service hailed as saving the lives of thousands of arrested Aboriginal people is under threat because of a funding feud between the state and federal governments. NSW police are required by law to call the Aboriginal Legal Service if an Aboriginal person is taken into custody as part of the custody notification service."
+   },
+   "evidences": [
+    {
+     "paper_id": "2abc402671744e746b5ad78ae206ae8514875ffd",
+     "source_title": "byronbaynewsouthwales",
+     "supported": false,
+     "sentence": "A simple phone call service hailed as saving the lives of thousands of arrested Aboriginal people is under threat because of a funding feud between the state and federal governments.",
+     "page": 1,
+     "snippet": "A simple phone call service hailed as",
+     "cosine": 0.7924,
+     "reason": "The passage discusses a phone call service for arrested Aboriginal people and does not mention the Arakwal Aboriginal people or the name 'Cavvanbah'.",
+     "window": "The Wayback Machine - https://web.archive.org/web/20140324075539/http://www.theherald.com.au/story/1503982/buck-passing-threatens-aboriginal-lifeline/ #### Weather Your 4-day local weather forecast Monday March 24, 2014 Larger / SmallerNight Mode # Buck passing threatens Aboriginal lifeline ## By Ilya Gridneff May 15, 2013, 4:21 p.m. A simple phone call service hailed as saving the lives of thousands of arrested Aboriginal people is under threat because of a funding feud between the state and federal governments. A simple phone call service hailed as saving the lives of thousands of arrested Aboriginal people is under threat because of a funding feud between the state and federal governments. NSW police are required by law to call the Aboriginal Legal Service if an Aboriginal person is taken into custody as part of the custody notification service."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The local Arakwal Aboriginal people's name for the area is \"Cavvanbah\", meaning \"meeting place\".",
+    "reason": "The passage directly states a fact attributed to the local Arakwal Aboriginal people, which the citation is expected to prove. This falls under the 'full' scope as it asserts information that the source should support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 that the local Arakwal Aboriginal people's name for the area is 'Cavvanbah', meaning 'meeting place' \u2014 is not present in the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source is an article about a funding dispute for an Aboriginal legal service phone line. It contains no reference to the Arakwal people, the name 'Cavvanbah', or any meaning 'meeting place'. Therefore the claim is completely unsupported by the source, and the author must either add a proper citation or rewrite the claim to omit this information."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "As Liverpool had already qualified for the group stage by clinching the second place at domestic league, the berth reserved for the English runner-up was given to the champions of the 2018\u201319 Austrian Bundesliga \u2013 the 11th-ranked association according to next season's access list.",
+   "markers": [
+    "201819uefachampionsleagu"
+   ],
+   "paper_ids": [
+    "46e9eb693f207ec536c80d78e786dcdbf200fd8d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "46e9eb693f207ec536c80d78e786dcdbf200fd8d",
+    "source_title": "201819uefachampionsleagu",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "If they qualify through their domestic championship then the champions of the 11th-ranked association take that place.",
+    "page": 1,
+    "snippet": "If they qualify through their domestic championship",
+    "reason": "the passage does not state that Liverpool had already qualified for the group stage by clinching second place in the domestic league",
+    "votes": "2-0",
+    "window": "If they qualify through their domestic championship then the champions of the 11th-ranked association take that place. Helped in no small part by Salzburg's run to the UEFA Europa League semi-finals, Austria are up to 11th. The Czech Republic are beneficiaries of that in 2018/19 but Austria's rise means it could be them in 2019/20."
+   },
+   "evidences": [
+    {
+     "paper_id": "46e9eb693f207ec536c80d78e786dcdbf200fd8d",
+     "source_title": "201819uefachampionsleagu",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "If they qualify through their domestic championship then the champions of the 11th-ranked association take that place.",
+     "page": 1,
+     "snippet": "If they qualify through their domestic championship",
+     "reason": "the passage does not state that Liverpool had already qualified for the group stage by clinching second place in the domestic league",
+     "votes": "2-0",
+     "window": "If they qualify through their domestic championship then the champions of the 11th-ranked association take that place. Helped in no small part by Salzburg's run to the UEFA Europa League semi-finals, Austria are up to 11th. The Czech Republic are beneficiaries of that in 2018/19 but Austria's rise means it could be them in 2019/20."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that Liverpool had already qualified for the group stage by clinching second place in the domestic league",
+   "subject_guard": {
+    "subject": "Austrian Bundesliga",
+    "missing_from": [
+     "46e9eb693f207ec536c80d78e786dcdbf200fd8d"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Liverpool had already qualified for the group stage by clinching the second place at domestic league, the berth reserved for the English runner-up was given to the champions of the 2018\u201319 Austrian Bundesliga \u2013 the 11th-ranked association according to next season's access list.",
+    "reason": "The passage asserts specific facts about team qualification and league rankings, directly attributing this information to the cited source. This falls under the 'full' scope as the citation is expected to prove these factual statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the berth reserved for the English runner-up was given to the Austrian Bundesliga champions is not supported; the source discusses the Champions League holders' berth, not the English runner-up berth. Additionally, Liverpool's specific qualification via second place is not mentioned.",
+    "rewrite_suggestion": "If the UEFA Champions League holders qualify through their domestic championship, then the champions of the 11th-ranked association (Austria in 2019/20) take that place.",
+    "proofs": [
+     "Helped in no small part by Salzburg's run to the UEFA Europa League semi-finals, Austria are up to 11th.",
+     "The UEFA Champions League holders are also guaranteed a group berth. If they qualify through their domestic championship then the champions of the 11th-ranked association take that place.",
+     "The Czech Republic are beneficiaries of that in 2018/19 but Austria's rise means it could be them in 2019/20."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim incorrectly attributes the reallocation to the English runner-up berth, whereas the source only discusses the UEFA Champions League holders' berth. It also includes an assertion about Liverpool's qualification that is not present in the source. The source does support that Austria is the 11th-ranked association and the rule for holders, but the key components of the claim are unsupported, requiring author revision or additional citation."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "USC was a somewhat established national football power under Howard Jones and had begun a major rivalry with Notre Dame when UCLA joined the Pacific Coast Conference in 1928.",
+   "markers": [
+    "uclauscrivalry"
+   ],
+   "paper_ids": [
+    "d9ac0c767b4b958f9b8bba8a856cebb25f237e00"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8579,
+   "evidence": {
+    "paper_id": "d9ac0c767b4b958f9b8bba8a856cebb25f237e00",
+    "source_title": "uclauscrivalry",
+    "supported": false,
+    "sentence": "AD FREE You Are Here > CFB Home > Schools > UCLA Bruins > 1928 > Schedule and Results News: s-r blog:Your One-Stop Resource for 2014 College Football Data Support us without the ads?",
+    "page": 1,
+    "snippet": "AD FREE You Are Here > CFB",
+    "cosine": 0.8579,
+    "reason": "The passage is a schedule and results page for UCLA's 1928 football season and does not contain information about USC's football status or its rivalry with Notre Dame.",
+    "window": "Collection: Wide Crawl Number 13 Web Wide Crawl Number 13 The Wayback Machine - https://web.archive.org/web/20151005072800/http://www.sports-reference.com/cfb/schools/ucla/1928-schedule.html Sports-Reference: Baseball \u00b7 (college) \u00b7 (college) \u00b7 Hockey \u00b7 Olympics \u00b7 S-R Blog \u00b7 Question or Comment? AD FREE You Are Here > CFB Home > Schools > UCLA Bruins > 1928 > Schedule and Results News: s-r blog:Your One-Stop Resource for 2014 College Football Data Support us without the ads? Go Ad-Free."
+   },
+   "evidences": [
+    {
+     "paper_id": "d9ac0c767b4b958f9b8bba8a856cebb25f237e00",
+     "source_title": "uclauscrivalry",
+     "supported": false,
+     "sentence": "AD FREE You Are Here > CFB Home > Schools > UCLA Bruins > 1928 > Schedule and Results News: s-r blog:Your One-Stop Resource for 2014 College Football Data Support us without the ads?",
+     "page": 1,
+     "snippet": "AD FREE You Are Here > CFB",
+     "cosine": 0.8579,
+     "reason": "The passage is a schedule and results page for UCLA's 1928 football season and does not contain information about USC's football status or its rivalry with Notre Dame.",
+     "window": "Collection: Wide Crawl Number 13 Web Wide Crawl Number 13 The Wayback Machine - https://web.archive.org/web/20151005072800/http://www.sports-reference.com/cfb/schools/ucla/1928-schedule.html Sports-Reference: Baseball \u00b7 (college) \u00b7 (college) \u00b7 Hockey \u00b7 Olympics \u00b7 S-R Blog \u00b7 Question or Comment? AD FREE You Are Here > CFB Home > Schools > UCLA Bruins > 1928 > Schedule and Results News: s-r blog:Your One-Stop Resource for 2014 College Football Data Support us without the ads? Go Ad-Free."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Howard Jones; Notre Dame; usc",
+    "missing_from": [
+     "d9ac0c767b4b958f9b8bba8a856cebb25f237e00"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "USC was a somewhat established national football power under Howard Jones and had begun a major rivalry with Notre Dame when UCLA joined the Pacific Coast Conference in 1928.",
+    "reason": "The passage asserts historical facts about USC's football status and the beginning of a rivalry, directly attributing this information to the cited source. This falls under the default 'full' scope as the source is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "USC's status as a somewhat established national football power under Howard Jones and its major rivalry with Notre Dame are not mentioned in the cited source.",
+    "rewrite_suggestion": "UCLA joined the Pacific Coast Conference in 1928, as shown by its schedule listing the conference.",
+    "proofs": [
+     "Conference: PCC \u25aa Conference Record: 0-4 (Schedule and Results)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is unrelated metadata and does not support any component. The source text only contains UCLA's 1928 schedule and conference affiliation; it contains no information about USC's football program under Howard Jones or a Notre Dame rivalry. The component about UCLA joining the PCC in 1928 is provable from the source (the conference listing) but was not shown, so the tool's display fails. Since the major substantive components about USC are entirely absent from the source, the author must add a citation for those or rewrite the claim to only what the source supports."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "His brother Vinnie Paul, the drummer of Pantera and Hellyeah, was also buried in a Kiss Kasket at his funeral in 2018.",
+   "markers": [
+    "kisskasket"
+   ],
+   "paper_ids": [
+    "7de9fc55846e4ebfe0ed3a70dea7752189587fe1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.881,
+   "evidence": {
+    "paper_id": "7de9fc55846e4ebfe0ed3a70dea7752189587fe1",
+    "source_title": "kisskasket",
+    "supported": false,
+    "sentence": "He was also buried in a \"Kiss Kasket\" as he had requested in his will.",
+    "page": 1,
+    "snippet": "He was also buried in a \"Kiss",
+    "cosine": 0.881,
+    "reason": "The passage mentions Dimebag Darrell being buried in a Kiss Kasket, but it does not mention his brother Vinnie Paul or his funeral in 2018.",
+    "window": "\"Dimebag\" Darrell's grave is located at the Moore Memorial Gardens Cemetery in Arlington, Texas. He was also buried in a \"Kiss Kasket\" as he had requested in his will. Gene Simmons said, \"There were a limited number made and I sent mine to the family of 'Dimebag' Darrell."
+   },
+   "evidences": [
+    {
+     "paper_id": "7de9fc55846e4ebfe0ed3a70dea7752189587fe1",
+     "source_title": "kisskasket",
+     "supported": false,
+     "sentence": "He was also buried in a \"Kiss Kasket\" as he had requested in his will.",
+     "page": 1,
+     "snippet": "He was also buried in a \"Kiss",
+     "cosine": 0.881,
+     "reason": "The passage mentions Dimebag Darrell being buried in a Kiss Kasket, but it does not mention his brother Vinnie Paul or his funeral in 2018.",
+     "window": "\"Dimebag\" Darrell's grave is located at the Moore Memorial Gardens Cemetery in Arlington, Texas. He was also buried in a \"Kiss Kasket\" as he had requested in his will. Gene Simmons said, \"There were a limited number made and I sent mine to the family of 'Dimebag' Darrell."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "His brother Vinnie Paul was buried in a Kiss Kasket at his funeral in 2018.",
+    "reason": "The passage directly states a fact about a person's burial, which is directly attributable to the cited source. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes Vinnie Paul's burial in a Kiss Kasket in 2018 to this source, but the source only discusses Dimebag Darrell's burial in 2004 and never mentions Vinnie Paul.",
+    "rewrite_suggestion": "Dimebag Darrell was buried in a Kiss Kasket.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source is about Dimebag Darrell, not his brother Vinnie Paul. It states that Dimebag was buried in a Kiss Kasket in 2004, but the claim refers to Vinnie Paul's funeral in 2018. No sentence in the source supports any component of the claim regarding Vinnie Paul."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "The Istanbul-Sofia Express is the successor to the Balkan Express, which operated between Istanbul and Belgrade, Serbia until June 2013.",
+   "markers": [
+    "istanbulsofiaexpress"
+   ],
+   "paper_ids": [
+    "0ec33cd333503c1c84648a942dfffebb0df35665"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7593,
+   "evidence": {
+    "paper_id": "0ec33cd333503c1c84648a942dfffebb0df35665",
+    "source_title": "istanbulsofiaexpress",
+    "supported": false,
+    "sentence": "Hopefully, it'll open again in September, after renewing the lines between Cerkezkoy and Halkali.",
+    "page": 1,
+    "snippet": "Hopefully, it'll open again in September, after",
+    "cosine": 0.7593,
+    "reason": "The passage does not mention the Istanbul-Sofia Express or the Balkan Express, nor does it provide any information about their operational history or routes.",
+    "window": "Join 2,601 other followers ### 5th Anniversary Railway Infrastructure # Holiday time for Halkali By Onur Uysal on 19 Apr 13 \u2022 ( Leave a comment ) Halkali, the Europe-wide known railway terminal of Turkey, is planned to be kept closed to trains during summer. Hopefully, it'll open again in September, after renewing the lines between Cerkezkoy and Halkali. During that time, all trains coming from Europe will either stop at Cerkezkoy, or will pass to Asian side by ferry."
+   },
+   "evidences": [
+    {
+     "paper_id": "0ec33cd333503c1c84648a942dfffebb0df35665",
+     "source_title": "istanbulsofiaexpress",
+     "supported": false,
+     "sentence": "Hopefully, it'll open again in September, after renewing the lines between Cerkezkoy and Halkali.",
+     "page": 1,
+     "snippet": "Hopefully, it'll open again in September, after",
+     "cosine": 0.7593,
+     "reason": "The passage does not mention the Istanbul-Sofia Express or the Balkan Express, nor does it provide any information about their operational history or routes.",
+     "window": "Join 2,601 other followers ### 5th Anniversary Railway Infrastructure # Holiday time for Halkali By Onur Uysal on 19 Apr 13 \u2022 ( Leave a comment ) Halkali, the Europe-wide known railway terminal of Turkey, is planned to be kept closed to trains during summer. Hopefully, it'll open again in September, after renewing the lines between Cerkezkoy and Halkali. During that time, all trains coming from Europe will either stop at Cerkezkoy, or will pass to Asian side by ferry."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Balkan Express; Istanbul-Sofia Express; istanbul-sofia express",
+    "missing_from": [
+     "0ec33cd333503c1c84648a942dfffebb0df35665"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Istanbul-Sofia Express is the successor to the Balkan Express, which operated between Istanbul and Belgrade, Serbia until June 2013.",
+    "reason": "The passage directly states a historical fact about the train service, attributing this information to the cited source. This falls under the 'full' scope as the citation is expected to prove the factual assertion made in the passage.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: the Istanbul-Sofia Express is the successor to the Balkan Express, which operated between Istanbul and Belgrade, Serbia until June 2013.",
+    "rewrite_suggestion": "The source does not mention these trains; the claim should be removed or supported by a different source.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a blog post about Halkali terminal closure and does not mention the Istanbul-Sofia Express, the Balkan Express, or any June 2013 date. Therefore, all components of the claim are absent from the source, requiring the author to add a proper citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "The \"five-string, funk-R&B\" bass line was played by Ethan Farmer, and the drum fill, \"an 80s kind-of snare with a big reverb on it,\" was inspired by John Mellencamp's \"Jack & Diane\".",
+   "markers": [
+    "emotioncarlyraejepsenalb"
+   ],
+   "paper_ids": [
+    "73359d6fc7ff8e26c18e41671db32b070f80206c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8367,
+   "evidence": {
+    "paper_id": "73359d6fc7ff8e26c18e41671db32b070f80206c",
+    "source_title": "emotioncarlyraejepsenalb",
+    "supported": false,
+    "sentence": "You'll hear the first demo for the song, a version she co-wrote with her longtime collaborator Tavish Crowe.",
+    "page": 1,
+    "snippet": "You'll hear the first demo for the",
+    "cosine": 0.8367,
+    "reason": "The passage does not mention Ethan Farmer, the specific bass line, or any inspiration for the drum fill from John Mellencamp's \"Jack & Diane\".",
+    "window": "In this episode, Carly tells the story of how the song was made. You'll hear the first demo for the song, a version she co-wrote with her longtime collaborator Tavish Crowe. And you'll hear how that led to the album version."
+   },
+   "evidences": [
+    {
+     "paper_id": "73359d6fc7ff8e26c18e41671db32b070f80206c",
+     "source_title": "emotioncarlyraejepsenalb",
+     "supported": false,
+     "sentence": "You'll hear the first demo for the song, a version she co-wrote with her longtime collaborator Tavish Crowe.",
+     "page": 1,
+     "snippet": "You'll hear the first demo for the",
+     "cosine": 0.8367,
+     "reason": "The passage does not mention Ethan Farmer, the specific bass line, or any inspiration for the drum fill from John Mellencamp's \"Jack & Diane\".",
+     "window": "In this episode, Carly tells the story of how the song was made. You'll hear the first demo for the song, a version she co-wrote with her longtime collaborator Tavish Crowe. And you'll hear how that led to the album version."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Ethan Farmer; John Mellencamp's Jack",
+    "missing_from": [
+     "73359d6fc7ff8e26c18e41671db32b070f80206c"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes specific musical elements and inspirations, attributing them to the cited source. This falls under the default 'full' scope as it asserts facts and findings that the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim\u2014the specific bass line, bassist, drum fill description, and its inspiration\u2014is absent from the cited source. No mention of Ethan Farmer, a five-string bass, funk-R&B style, a snare with reverb, or John Mellencamp's 'Jack & Diane' appears in the provided source text.",
+    "rewrite_suggestion": "The source discusses the creation of 'When I Needed You' but does not address the bass line or drum fill; remove those details or add a citation that supports them.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text (Song Exploder episode on Carly Rae Jepsen's 'When I Needed You') contains no information about Ethan Farmer, a five-string funk-R&B bass line, a snare drum fill with reverb, or an inspiration from John Mellencamp's 'Jack & Diane'. All substantive components of the claim are absent from the cited source, so the author must either add a proper citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "In 1991, she married Maciej Lubnauer, a financier with whom she has a daughter named Anna.",
+   "markers": [
+    "katarzynalubnauer"
+   ],
+   "paper_ids": [
+    "d5e427c3d618d23cd009254ab00bfa2827ea0241"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d5e427c3d618d23cd009254ab00bfa2827ea0241",
+    "source_title": "katarzynalubnauer",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "W zesz\u0142ym roku mia\u0142a pani srebrne gody, czyli dwadzie\u015bcia pi\u0119\u0107 lat ma\u0142\u017ce\u0144stwa z jednym i tym samym m\u0119\u017cem... i jeszcze nie zd\u0105\u017cyli\u015bmy zrobi\u0107 \u017cadnej imprezy.",
+    "page": 1,
+    "snippet": "W zesz\u0142ym roku mia\u0142a pani srebrne gody,",
+    "reason": "The passage does not mention the year of marriage or the name of the husband or daughter.",
+    "votes": "2-0",
+    "window": "W zesz\u0142ym roku mia\u0142a pani srebrne gody, czyli dwadzie\u015bcia pi\u0119\u0107 lat ma\u0142\u017ce\u0144stwa z jednym i tym samym m\u0119\u017cem... i jeszcze nie zd\u0105\u017cyli\u015bmy zrobi\u0107 \u017cadnej imprezy. Jest te\u017c z moim m\u0119\u017cem cz\u0119stym recenzentem tego, co m\u00f3wi\u0119 publicznie. Poznali\u015bmy si\u0119 w harcerstwie, 58 \u0141WDH, razem uprawiali\u015bmy \u017ceglarstwo, oboje mamy patenty sternik\u00f3w. C\u00f3rka w zesz\u0142ym roku zda\u0142a matur\u0119."
+   },
+   "evidences": [
+    {
+     "paper_id": "d5e427c3d618d23cd009254ab00bfa2827ea0241",
+     "source_title": "katarzynalubnauer",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "W zesz\u0142ym roku mia\u0142a pani srebrne gody, czyli dwadzie\u015bcia pi\u0119\u0107 lat ma\u0142\u017ce\u0144stwa z jednym i tym samym m\u0119\u017cem... i jeszcze nie zd\u0105\u017cyli\u015bmy zrobi\u0107 \u017cadnej imprezy.",
+     "page": 1,
+     "snippet": "W zesz\u0142ym roku mia\u0142a pani srebrne gody,",
+     "reason": "The passage does not mention the year of marriage or the name of the husband or daughter.",
+     "votes": "2-0",
+     "window": "W zesz\u0142ym roku mia\u0142a pani srebrne gody, czyli dwadzie\u015bcia pi\u0119\u0107 lat ma\u0142\u017ce\u0144stwa z jednym i tym samym m\u0119\u017cem... i jeszcze nie zd\u0105\u017cyli\u015bmy zrobi\u0107 \u017cadnej imprezy. Jest te\u017c z moim m\u0119\u017cem cz\u0119stym recenzentem tego, co m\u00f3wi\u0119 publicznie. Poznali\u015bmy si\u0119 w harcerstwie, 58 \u0141WDH, razem uprawiali\u015bmy \u017ceglarstwo, oboje mamy patenty sternik\u00f3w. C\u00f3rka w zesz\u0142ym roku zda\u0142a matur\u0119."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the year of marriage or the name of the husband or daughter.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1991, she married Maciej Lubnauer, a financier with whom she has a daughter named Anna.",
+    "reason": "The passage asserts specific biographical facts (marriage date, husband's profession, daughter's name) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the husband's name (Maciej Lubnauer), his profession (financier), and the daughter's name (Anna) are not mentioned in the cited source",
+    "rewrite_suggestion": "She married in 1991 (as indicated by her 25th wedding anniversary in 2016) and has a daughter (the source does not name her husband or daughter).",
+    "proofs": [
+     "W zesz\u0142ym roku mia\u0142a pani srebrne gody, czyli dwadzie\u015bcia pi\u0119\u0107 lat ma\u0142\u017ce\u0144stwa z jednym i tym samym m\u0119\u017cem... i jeszcze nie zd\u0105\u017cyli\u015bmy zrobi\u0107 \u017cadnej imprezy.",
+     "(meta data) PUBLISHED DATETIME: 2017-03-03",
+     "C\u00f3rka w zesz\u0142ym roku zda\u0142a matur\u0119."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only establishes the length of marriage (~25 years in 2016, implying 1991) and the existence of a husband, but it does not provide his name (Maciej Lubnauer), his profession (financier), or the daughter's name (Anna). These specific details are not found anywhere in the source text, so the author must either add a citation for them or rewrite the claim to exclude them."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "The purpose of journaling is to have students reflect and think about their experiences away from school and in some cases away from home.",
+   "markers": [
+    "linworthalternativeprogr"
+   ],
+   "paper_ids": [
+    "c1bb9a510d62048ee9e36bae4fecf99c0dd095c8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8045,
+   "evidence": {
+    "paper_id": "c1bb9a510d62048ee9e36bae4fecf99c0dd095c8",
+    "source_title": "linworthalternativeprogr",
+    "supported": false,
+    "sentence": "## The Partnership \u2013 Linworth's Commitment to the Future The partnership of the school and the community is essential to Linworth's educational commitment to expose students to a broad spectrum of educational options.",
+    "page": 1,
+    "snippet": "## The Partnership \u2013 Linworth's Commitment to",
+    "cosine": 0.8045,
+    "reason": "The passage discusses experiential learning and community partnerships but does not mention journaling or student reflection on experiences away from school.",
+    "window": "Here, he or she experiences a representative sample of the activities of the business or service, in a 50/50 exchange of service for learning. ## The Partnership \u2013 Linworth's Commitment to the Future The partnership of the school and the community is essential to Linworth's educational commitment to expose students to a broad spectrum of educational options. The continued support and assisstance of the community is crucial to sustaining the neccessary balance between classroom and experiential learning."
+   },
+   "evidences": [
+    {
+     "paper_id": "c1bb9a510d62048ee9e36bae4fecf99c0dd095c8",
+     "source_title": "linworthalternativeprogr",
+     "supported": false,
+     "sentence": "## The Partnership \u2013 Linworth's Commitment to the Future The partnership of the school and the community is essential to Linworth's educational commitment to expose students to a broad spectrum of educational options.",
+     "page": 1,
+     "snippet": "## The Partnership \u2013 Linworth's Commitment to",
+     "cosine": 0.8045,
+     "reason": "The passage discusses experiential learning and community partnerships but does not mention journaling or student reflection on experiences away from school.",
+     "window": "Here, he or she experiences a representative sample of the activities of the business or service, in a 50/50 exchange of service for learning. ## The Partnership \u2013 Linworth's Commitment to the Future The partnership of the school and the community is essential to Linworth's educational commitment to expose students to a broad spectrum of educational options. The continued support and assisstance of the community is crucial to sustaining the neccessary balance between classroom and experiential learning."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "concept",
+    "scoped_assertion": "The purpose of journaling is to have students reflect and think about their experiences away from school and in some cases away from home.",
+    "reason": "The passage defines the purpose of journaling, and the citation is likely used to back this definition or concept. The rest of the passage is the author's own description of the journaling process.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about the purpose of journaling is not present in the cited source; the source discusses a Walkabout experiential program with no mention of journaling.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text describes the Linworth Alternative Program's Walkabout, an experiential learning program, but contains no reference to journaling or its purpose. The shown sentence about the school-community partnership is entirely unrelated. Therefore, the claim is unsourced from this citation and requires the author to either add a supporting citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "Sandra was awarded a grant from 2008-2015 from the Canada First World War Internment Fund to complete her book on Ukrainians in Canada, \"The Stories Were Not Told: Stories and Photographs from Canada's First Internment Camps, 1914-1920\".",
+   "markers": [
+    "sandrasemchuk"
+   ],
+   "paper_ids": [
+    "e869bcd120e486b2474954da71d11ddd347370d5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e869bcd120e486b2474954da71d11ddd347370d5",
+    "source_title": "sandrasemchuk",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Scholarly study, Politics and organizational life of interned Ukrainians before, during and after internment.",
+    "page": 1,
+    "snippet": "Scholarly study, Politics and organizational life of",
+    "reason": "The passage does not mention Sandra being awarded a grant, the specific dates of the grant (2008-2015), or the name of the fund (Canada First World War Internment Fund).",
+    "votes": "2-0",
+    "window": "Scholarly study, Politics and organizational life of interned Ukrainians before, during and after internment."
+   },
+   "evidences": [
+    {
+     "paper_id": "e869bcd120e486b2474954da71d11ddd347370d5",
+     "source_title": "sandrasemchuk",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Scholarly study, Politics and organizational life of interned Ukrainians before, during and after internment.",
+     "page": 1,
+     "snippet": "Scholarly study, Politics and organizational life of",
+     "reason": "The passage does not mention Sandra being awarded a grant, the specific dates of the grant (2008-2015), or the name of the fund (Canada First World War Internment Fund).",
+     "votes": "2-0",
+     "window": "Scholarly study, Politics and organizational life of interned Ukrainians before, during and after internment."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Sandra being awarded a grant, the specific dates of the grant (2008-2015), or the name of the fund (Canada First World War Internment Fund).",
+   "subject_guard": {
+    "subject": "Stories Were Not Told",
+    "missing_from": [
+     "e869bcd120e486b2474954da71d11ddd347370d5"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Sandra was awarded a grant from 2008-2015 from the Canada First World War Internment Fund to complete her book on Ukrainians in Canada, \"The Stories Were Not Told: Stories and Photographs from Canada's First Internment Camps, 1914-1920\".",
+    "reason": "The passage asserts a specific fact (award of a grant and details of a book) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 that Sandra was awarded a grant from 2008-2015 from the Canada First World War Internment Fund to complete her book 'The Stories Were Not Told' \u2014 is absent from the source.",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Kassandra Luciuk, Toronto, ON Scholarly study, Politics and organizational life of interned Ukrainians before, during and after internment. $ 3,750"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that Sandra was awarded a grant from 2008-2015 from the Canada First World War Internment Fund for a specific book. The provided source text lists grants from the Canadian First World War Internment Recognition Fund, but contains no mention of Sandra, the dates 2008-2015, or the book title 'The Stories Were Not Told'. The closest entry is for Kassandra Luciuk, a different person with a different project. Therefore, no component of the claim is supported by the source."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In recent years the Witness Security Unit was moved from the State Protection Group to the Anti Terrorism & Security Group.",
+   "markers": [
+    "stateprotectiongroup"
+   ],
+   "paper_ids": [
+    "75552fbbe2ef7a1b5674887ec7b81d775323494a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "75552fbbe2ef7a1b5674887ec7b81d775323494a",
+    "source_title": "stateprotectiongroup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Witness Security Unit is responsible for the administration and management of the NSW witness protection program.",
+    "page": 1,
+    "snippet": "The Witness Security Unit is responsible for",
+    "reason": "The passage does not mention any recent changes in the organizational structure of the Witness Security Unit.",
+    "votes": "2-0",
+    "window": "The Witness Security Unit is responsible for the administration and management of the NSW witness protection program."
+   },
+   "evidences": [
+    {
+     "paper_id": "75552fbbe2ef7a1b5674887ec7b81d775323494a",
+     "source_title": "stateprotectiongroup",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Witness Security Unit is responsible for the administration and management of the NSW witness protection program.",
+     "page": 1,
+     "snippet": "The Witness Security Unit is responsible for",
+     "reason": "The passage does not mention any recent changes in the organizational structure of the Witness Security Unit.",
+     "votes": "2-0",
+     "window": "The Witness Security Unit is responsible for the administration and management of the NSW witness protection program."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention any recent changes in the organizational structure of the Witness Security Unit.",
+   "component_check": {
+    "found": [
+     "from the State Protection Group",
+     "to the Anti Terrorism & Security Group"
+    ],
+    "missing": [
+     "the Witness Security Unit was moved"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "from the State Protection Group",
+      "paper_id": "75552fbbe2ef7a1b5674887ec7b81d775323494a",
+      "source_title": "stateprotectiongroup",
+      "sentence": "The Command's response comes from four major groups; Anti Terrorism & Security Group, Coordinated Response Group, Operations Group and the State Protection Group which are administratively supported by a Business Support Unit.",
+      "page": 1
+     },
+     {
+      "component": "to the Anti Terrorism & Security Group",
+      "paper_id": "75552fbbe2ef7a1b5674887ec7b81d775323494a",
+      "source_title": "stateprotectiongroup",
+      "sentence": "The Command's response comes from four major groups; Anti Terrorism & Security Group, Coordinated Response Group, Operations Group and the State Protection Group which are administratively supported by a Business Support Unit.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Witness Security Unit was moved from the State Protection Group to the Anti Terrorism & Security Group.",
+    "reason": "The passage directly states a factual claim about the movement of a unit, which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Witness Security Unit was moved from the State Protection Group to the Anti Terrorism & Security Group in recent years is entirely unsupported; the source only states the current location of the unit.",
+    "rewrite_suggestion": "The Witness Security Unit is part of the Anti Terrorism & Security Group within the NSW Police Force's Counter Terrorism & Special Tactics Command.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts a historical transfer of the Witness Security Unit between two groups, but the provided source text only describes the current organizational structure, listing the unit under the Anti Terrorism & Security Group. No mention of any move, timeframe, or previous placement under the State Protection Group exists in the source, so the entire substantive component of the claim is unproven. The tool showed a sentence about the unit's current responsibilities, which does not cover the move component; therefore the author must either add a citation for the move or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Missile Command would have been dropped because of poor playability.",
+   "markers": [
+    "listofintellivisiongames"
+   ],
+   "paper_ids": [
+    "ccea11129d3100d3b255e42f90f63233c6e4eddf"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8242,
+   "evidence": {
+    "paper_id": "ccea11129d3100d3b255e42f90f63233c6e4eddf",
+    "source_title": "listofintellivisiongames",
+    "supported": false,
+    "sentence": "3:23:01 \u2013 Game Review: TRON MAZE-A-TRON (part 1)",
+    "page": 1,
+    "snippet": "3:23:01 \u2013 Game Review: TRON MAZE-A-TRON (part",
+    "cosine": 0.8242,
+    "reason": "The passage does not mention Missile Command or any reasons for its potential discontinuation.",
+    "window": "3:22:57 \u2013 Intellivisionaries Promo 3:23:01 \u2013 Game Review: TRON MAZE-A-TRON (part 1) 4:22:39 \u2013 Interview: Russ Haft"
+   },
+   "evidences": [
+    {
+     "paper_id": "ccea11129d3100d3b255e42f90f63233c6e4eddf",
+     "source_title": "listofintellivisiongames",
+     "supported": false,
+     "sentence": "3:23:01 \u2013 Game Review: TRON MAZE-A-TRON (part 1)",
+     "page": 1,
+     "snippet": "3:23:01 \u2013 Game Review: TRON MAZE-A-TRON (part",
+     "cosine": 0.8242,
+     "reason": "The passage does not mention Missile Command or any reasons for its potential discontinuation.",
+     "window": "3:22:57 \u2013 Intellivisionaries Promo 3:23:01 \u2013 Game Review: TRON MAZE-A-TRON (part 1) 4:22:39 \u2013 Interview: Russ Haft"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Missile Command would have been dropped because of poor playability.",
+    "reason": "The passage directly states a claim about the game Missile Command and attributes it to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Missile Command would have been dropped because of poor playability",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes a statement about Missile Command to a source that is entirely about Tron Maze-A-Tron. The source text contains no mention of Missile Command, its playability, or any decision to drop it. Therefore, the author must add a citation for this subclaim or rewrite the claim to remove the unsupported assertion."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "The fifth season will also include Irish actor, musician and real-life police detective, Kieran O'Reilly, who will play the role of \"White Hair\".",
+   "markers": [
+    "vikingsseason5"
+   ],
+   "paper_ids": [
+    "f1277eb70cee4ac14d5741f18eaaef3677b6f10e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f1277eb70cee4ac14d5741f18eaaef3677b6f10e",
+    "source_title": "vikingsseason5",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"To have big film and television productions coming to Ireland is very much a positive thing, especially for Irish actors,\" says Irish actor/musician Kieron O'Reilly best known for his role as Detective Ciaran Madden in RTE's Love\\Hate.",
+    "page": 1,
+    "snippet": "\"To have big film and television productions",
+    "reason": "The passage does not mention the character name 'White Hair'.",
+    "votes": "2-0",
+    "window": "\"To have big film and television productions coming to Ireland is very much a positive thing, especially for Irish actors,\" says Irish actor/musician Kieron O'Reilly best known for his role as Detective Ciaran Madden in RTE's Love\\Hate. O'Reilly was recently cast in Mel Gibson's The Professor and The Madman and hit television show, Vikings."
+   },
+   "evidences": [
+    {
+     "paper_id": "f1277eb70cee4ac14d5741f18eaaef3677b6f10e",
+     "source_title": "vikingsseason5",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"To have big film and television productions coming to Ireland is very much a positive thing, especially for Irish actors,\" says Irish actor/musician Kieron O'Reilly best known for his role as Detective Ciaran Madden in RTE's Love\\Hate.",
+     "page": 1,
+     "snippet": "\"To have big film and television productions",
+     "reason": "The passage does not mention the character name 'White Hair'.",
+     "votes": "2-0",
+     "window": "\"To have big film and television productions coming to Ireland is very much a positive thing, especially for Irish actors,\" says Irish actor/musician Kieron O'Reilly best known for his role as Detective Ciaran Madden in RTE's Love\\Hate. O'Reilly was recently cast in Mel Gibson's The Professor and The Madman and hit television show, Vikings."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the character name 'White Hair'.",
+   "subject_guard": {
+    "subject": "White Hair",
+    "missing_from": [
+     "f1277eb70cee4ac14d5741f18eaaef3677b6f10e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The fifth season will include Kieran O'Reilly, who will play the role of \"White Hair\".",
+    "reason": "The passage asserts a specific fact about the content of the fifth season, directly attributing this information to the cited source. This falls under the 'full' scope as the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts that the fifth season of Vikings will include Kieran O'Reilly playing the role 'White Hair', and that he is a real-life police detective. The source only shows that Kieron O'Reilly is an Irish actor/musician and that he was cast in Vikings, but provides no season number, no character name, and no indication he is a real-life detective. The name spelling also differs.",
+    "rewrite_suggestion": "The cast of Vikings includes Irish actor and musician Kieron O'Reilly, who was cast in the show (no season or character specified).",
+    "proofs": [
+     "\"To have big film and television productions coming to Ireland is very much a positive thing, especially for Irish actors,\" says Irish actor/musician Kieron O'Reilly best known for his role as Detective Ciaran Madden in RTE's Love\\Hate.",
+     "O'Reilly was recently cast in Mel Gibson's The Professor and The Madman and hit television show, Vikings."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only establishes that Kieron O'Reilly is an Irish actor/musician, but the claim adds that he is a real-life police detective, appears in the fifth season, and plays a character named 'White Hair'\u2014none of which appear in the source. The source also spells the name 'Kieron' not 'Kieran'. Because these substantive components are entirely absent from the source text, the author must either add a citation for them or revise the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "In 1861, under the command of Percival Drayton in activities near Charleston, he was made supervisor of a colony of over 100 former slaves on Otter Island in December 1861.",
+   "markers": [
+    "jameswnicholson"
+   ],
+   "paper_ids": [
+    "ea96283d98874ed506edeb4dc10b8d600c005ceb"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8625,
+   "evidence": {
+    "paper_id": "ea96283d98874ed506edeb4dc10b8d600c005ceb",
+    "source_title": "jameswnicholson",
+    "supported": false,
+    "sentence": "The navy established colonies for the former slaves and, in return, some contrabands served as crewmen on navy ships and gunboats and as river pilots, spies, and guides.",
+    "page": 1,
+    "snippet": "The navy established colonies for the former",
+    "cosine": 0.8625,
+    "reason": "The passage does not mention Percival Drayton, Otter Island, or the specific date of December 1861, nor does it state that a colony of over 100 former slaves was supervised.",
+    "window": "In Bluejackets and Contrabands, Barbara Brooks Tomblin examines the relationship between the Union Navy and the contrabands. The navy established colonies for the former slaves and, in return, some contrabands served as crewmen on navy ships and gunboats and as river pilots, spies, and guides. Tomblin presents a rare picture of the contrabands and casts light on the vital contributions of African Americans to the Union Navy and the Union cause."
+   },
+   "evidences": [
+    {
+     "paper_id": "ea96283d98874ed506edeb4dc10b8d600c005ceb",
+     "source_title": "jameswnicholson",
+     "supported": false,
+     "sentence": "The navy established colonies for the former slaves and, in return, some contrabands served as crewmen on navy ships and gunboats and as river pilots, spies, and guides.",
+     "page": 1,
+     "snippet": "The navy established colonies for the former",
+     "cosine": 0.8625,
+     "reason": "The passage does not mention Percival Drayton, Otter Island, or the specific date of December 1861, nor does it state that a colony of over 100 former slaves was supervised.",
+     "window": "In Bluejackets and Contrabands, Barbara Brooks Tomblin examines the relationship between the Union Navy and the contrabands. The navy established colonies for the former slaves and, in return, some contrabands served as crewmen on navy ships and gunboats and as river pilots, spies, and guides. Tomblin presents a rare picture of the contrabands and casts light on the vital contributions of African Americans to the Union Navy and the Union cause."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Otter Island; Percival Drayton",
+    "missing_from": [
+     "ea96283d98874ed506edeb4dc10b8d600c005ceb"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1861, under the command of Percival Drayton in activities near Charleston, he was made supervisor of a colony of over 100 former slaves on Otter Island in December 1861.",
+    "reason": "The passage asserts specific facts (dates, names, locations, numbers) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: In 1861, under the command of Percival Drayton in activities near Charleston, he was made supervisor of a colony of over 100 former slaves on Otter Island in December 1861.",
+    "rewrite_suggestion": "The navy established colonies for the former slaves.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only states that the navy established colonies for former slaves, but it does not mention Percival Drayton, Otter Island, a supervisor, a specific number of slaves, or the date December 1861. The source text contains no further details that could support these components; the only substantive sentence is the one already shown. Therefore, every component of the claim is unprovable from the cited source, requiring the author to either provide a citation that contains these specifics or rewrite the claim down to what the source supports."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "Bhagalpur Junction is among the selected railway stations of India where automated are installed.",
+   "markers": [
+    "bhagalpurjunctionrailway"
+   ],
+   "paper_ids": [
+    "a35fb967df6e31d889ed28c1c51303df29942b2a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a35fb967df6e31d889ed28c1c51303df29942b2a",
+    "source_title": "bhagalpurjunctionrailway",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "It is one of the very few railway stations of the country where Escalators would be installed for the convenience of passengers.",
+    "page": 1,
+    "snippet": "It is one of the very few",
+    "reason": "The passage mentions escalators, not automated doors.",
+    "votes": "2-0",
+    "window": "It is one of the very few railway stations of the country where Escalators would be installed for the convenience of passengers."
+   },
+   "evidences": [
+    {
+     "paper_id": "a35fb967df6e31d889ed28c1c51303df29942b2a",
+     "source_title": "bhagalpurjunctionrailway",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "It is one of the very few railway stations of the country where Escalators would be installed for the convenience of passengers.",
+     "page": 1,
+     "snippet": "It is one of the very few",
+     "reason": "The passage mentions escalators, not automated doors.",
+     "votes": "2-0",
+     "window": "It is one of the very few railway stations of the country where Escalators would be installed for the convenience of passengers."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage mentions escalators, not automated doors.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Bhagalpur Junction is among the selected railway stations of India where automated are installed.",
+    "reason": "The passage directly states a fact about Bhagalpur Junction railway station and implies the cited source would support this factual claim. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim identifies Bhagalpur Junction as the station, but the cited source discusses Patna Junction, not Bhagalpur Junction. No mention of Bhagalpur exists in the source.",
+    "rewrite_suggestion": "Patna Junction is among the selected railway stations of India where automated escalators are installed.",
+    "proofs": [
+     "It is one of the very few railway stations of the country where Escalators would be installed for the convenience of passengers."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Bhagalpur Junction is among selected stations with automated escalators, but the cited source text is about Patna Junction and never mentions Bhagalpur Junction. The shown sentence also refers to Patna Junction, so the station name component is entirely unsupported by the source. The author must either change the station name to Patna Junction or find a different source that supports Bhagalpur Junction."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "DARPA searched around for another service sponsor, was unable to find one, and axed the procurement of the demonstrators at the end of the year.",
+   "markers": [
+    "unmannedcombatarmedrotor"
+   ],
+   "paper_ids": [
+    "2dd4c791111efa0abf9040ff632e9165c1265e0b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2dd4c791111efa0abf9040ff632e9165c1265e0b",
+    "source_title": "unmannedcombatarmedrotor",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "UCAR was a DARPA programme for a unmanned rotorcraft that could work in \"packs\" with manned helicopters, and was going quite well (in the laboratory) until the US Army said it wasn't going to fund it any more.",
+    "page": 1,
+    "snippet": "UCAR was a DARPA programme for a",
+    "reason": "The passage does not mention DARPA searching for another service sponsor, being unable to find one, or axing the procurement of demonstrators.",
+    "votes": "2-0",
+    "window": "UCAR was a DARPA programme for a unmanned rotorcraft that could work in \"packs\" with manned helicopters, and was going quite well (in the laboratory) until the US Army said it wasn't going to fund it any more."
+   },
+   "evidences": [
+    {
+     "paper_id": "2dd4c791111efa0abf9040ff632e9165c1265e0b",
+     "source_title": "unmannedcombatarmedrotor",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "UCAR was a DARPA programme for a unmanned rotorcraft that could work in \"packs\" with manned helicopters, and was going quite well (in the laboratory) until the US Army said it wasn't going to fund it any more.",
+     "page": 1,
+     "snippet": "UCAR was a DARPA programme for a",
+     "reason": "The passage does not mention DARPA searching for another service sponsor, being unable to find one, or axing the procurement of demonstrators.",
+     "votes": "2-0",
+     "window": "UCAR was a DARPA programme for a unmanned rotorcraft that could work in \"packs\" with manned helicopters, and was going quite well (in the laboratory) until the US Army said it wasn't going to fund it any more."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention DARPA searching for another service sponsor, being unable to find one, or axing the procurement of demonstrators.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "DARPA was unable to find another service sponsor and axed the procurement of the demonstrators at the end of the year.",
+    "reason": "The passage directly states a factual event that occurred, implying the cited source is expected to provide evidence for this event. There is no indication that the citation is for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire sequence of DARPA searching for another service sponsor, failing, and then cancelling the demonstrator procurement at year's end is absent from the source. The source only states that the US Army stopped funding the UCAR program.",
+    "rewrite_suggestion": "The UCAR program was cancelled after the US Army declined to continue funding it.",
+    "proofs": [
+     "UCAR was a DARPA programme for a unmanned rotorcraft that could work in \"packs\" with manned helicopters, and was going quite well (in the laboratory) until the US Army said it wasn't going to fund it any more."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not mention DARPA searching for another service sponsor, failing to find one, or cancelling the procurement of demonstrators at the end of the year. The source text also lacks any such statements; it only indicates that the US Army stopped funding the program. Therefore, key components of the claim are not provable from the cited source, requiring the author to either add a proper citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "She has over 100 blogs on scaling up on her site at www.juliapimsleur.com and her blog on Forbes.com.",
+   "markers": [
+    "juliapimsleur"
+   ],
+   "paper_ids": [
+    "b7e842acbbc7ffe57acd9dcc65e361a42fa16ec6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8393,
+   "evidence": {
+    "paper_id": "b7e842acbbc7ffe57acd9dcc65e361a42fa16ec6",
+    "source_title": "juliapimsleur",
+    "supported": false,
+    "sentence": "Many [...]4,922 views | Jun 11, 2014 ## Why Do So Few U.S.",
+    "page": 1,
+    "snippet": "Many [...]4,922 views | Jun 11, 2014",
+    "cosine": 0.8393,
+    "reason": "The passage does not mention the number of blogs on scaling up on the author's website or Forbes.com.",
+    "window": "Only half of the 5% women were actually CEOs. Many [...]4,922 views | Jun 11, 2014 ## Why Do So Few U.S. Businesses Sell Internationally?"
+   },
+   "evidences": [
+    {
+     "paper_id": "b7e842acbbc7ffe57acd9dcc65e361a42fa16ec6",
+     "source_title": "juliapimsleur",
+     "supported": false,
+     "sentence": "Many [...]4,922 views | Jun 11, 2014 ## Why Do So Few U.S.",
+     "page": 1,
+     "snippet": "Many [...]4,922 views | Jun 11, 2014",
+     "cosine": 0.8393,
+     "reason": "The passage does not mention the number of blogs on scaling up on the author's website or Forbes.com.",
+     "window": "Only half of the 5% women were actually CEOs. Many [...]4,922 views | Jun 11, 2014 ## Why Do So Few U.S. Businesses Sell Internationally?"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "She has over 100 blogs on scaling up on her site at www.juliapimsleur.com and her blog on Forbes.com.",
+    "reason": "The passage directly states a fact about the number of blogs and their location, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "over 100 blogs on scaling up on her site www.juliapimsleur.com",
+    "rewrite_suggestion": "She is a Forbes contributor who writes numerous articles on entrepreneurship, including topics such as raising capital and business lessons.",
+    "proofs": [
+     "Julia PimsleurContributor|Entrepreneurs",
+     "981 views | Aug 31, 2015 ## 5 Business Lessons I Learned in Improv Class"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text shows Julia Pimsleur as a Forbes contributor with a list of articles, supporting the component 'her blog on Forbes.com', but it does not mention any blogs on her own site, a specific count of 'over 100', or the topic 'scaling up'. The shown sentence is incomplete and irrelevant. Since at least one substantive component is missing from the source, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "He contested that seat again in the elections of 2014 and lost by a margin of little over 6,000 votes.",
+   "markers": [
+    "thummalanageswararao"
+   ],
+   "paper_ids": [
+    "6124d2cd77829906a06d449a2fd6088039136127"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.929,
+   "evidence": {
+    "paper_id": "6124d2cd77829906a06d449a2fd6088039136127",
+    "source_title": "thummalanageswararao",
+    "supported": false,
+    "sentence": "The mega 7-phase Lok Sabha elections are just a few hours away from conclusion with the voting in last phase scheduled Read More",
+    "page": 1,
+    "snippet": "The mega 7-phase Lok Sabha elections are",
+    "cosine": 0.929,
+    "reason": "The passage discusses the 2019 Lok Sabha elections and does not contain any information about the 2014 elections or specific vote margins.",
+    "window": "Lok Sabha Election Exit Poll 2019 \u2013 Live Updates The mega 7-phase Lok Sabha elections are just a few hours away from conclusion with the voting in last phase scheduled Read More Lok Sabha Elections 2019 \u2013 Seventh Phase Live Updates"
+   },
+   "evidences": [
+    {
+     "paper_id": "6124d2cd77829906a06d449a2fd6088039136127",
+     "source_title": "thummalanageswararao",
+     "supported": false,
+     "sentence": "The mega 7-phase Lok Sabha elections are just a few hours away from conclusion with the voting in last phase scheduled Read More",
+     "page": 1,
+     "snippet": "The mega 7-phase Lok Sabha elections are",
+     "cosine": 0.929,
+     "reason": "The passage discusses the 2019 Lok Sabha elections and does not contain any information about the 2014 elections or specific vote margins.",
+     "window": "Lok Sabha Election Exit Poll 2019 \u2013 Live Updates The mega 7-phase Lok Sabha elections are just a few hours away from conclusion with the voting in last phase scheduled Read More Lok Sabha Elections 2019 \u2013 Seventh Phase Live Updates"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM returned no usable source sentence (fragments or claim echo)",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a specific fact (election result and margin) that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states a margin of 'little over 6,000 votes,' but the source shows the margin as 5,609 votes (70251 - 64642). The source does not support a margin over 6,000; in fact it contradicts it.",
+    "rewrite_suggestion": "He contested that seat again in the elections of 2014 and lost by a margin of 5,609 votes.",
+    "proofs": [
+     "2014112KhammamGENAjay Kumar PuvvadaMaleINC70251Thummala Nageswar RaoMaleTDP64642"
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "2014112KhammamGENAjay Kumar PuvvadaMaleINC70251Thummala Nageswar RaoMaleTDP64642",
+     "why": "The source shows a margin of 5,609 votes (70251 - 64642), which is less than 6,000, contradicting the claim of 'little over 6,000 votes.'"
+    },
+    "why": "The only component provable from the source is that Thummala Nageswar Rao contested in 2014; however, the claim's specified margin of 'little over 6,000 votes' is not supported and is directly contradicted by the source, which gives a margin of 5,609 votes. The shown sentence is irrelevant, and the missing subclaim about the margin requires author correction."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Long based Mr. Peabody on a car mechanic who lived in his hometown of Joplin, Missouri while Billy Little was based on his own son Griffith.",
+   "markers": [
+    "mrpeabodysapples"
+   ],
+   "paper_ids": [
+    "4817d180e44c35eb2dfa7fb2acf4bdd8a48643ce"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.786,
+   "evidence": {
+    "paper_id": "4817d180e44c35eb2dfa7fb2acf4bdd8a48643ce",
+    "source_title": "mrpeabodysapples",
+    "supported": false,
+    "sentence": "Sport: Coverage of Olympic games and major sports tournaments, plus controversial sports stories such as Roger Bannister's sub-four minute mile and Ben Johnson's drug-fueled win in Seoul in 1988",
+    "page": 1,
+    "snippet": "Sport: Coverage of Olympic games and major",
+    "cosine": 0.786,
+    "reason": "The passage discusses historical events and topics but does not mention the inspiration for the character Mr. Peabody or Billy Little.",
+    "window": "Politics: The civil rights movement, the suffrage movement, the Thatcher-Major-Blair years in the UK, the second Reagan administration, and the George W. Bush presidency Sport: Coverage of Olympic games and major sports tournaments, plus controversial sports stories such as Roger Bannister's sub-four minute mile and Ben Johnson's drug-fueled win in Seoul in 1988 Economics: The Industrial Revolution, the Great Depression, the savings and loan crisis, the growth of China as a financial power, and the Asian banking crisis"
+   },
+   "evidences": [
+    {
+     "paper_id": "4817d180e44c35eb2dfa7fb2acf4bdd8a48643ce",
+     "source_title": "mrpeabodysapples",
+     "supported": false,
+     "sentence": "Sport: Coverage of Olympic games and major sports tournaments, plus controversial sports stories such as Roger Bannister's sub-four minute mile and Ben Johnson's drug-fueled win in Seoul in 1988",
+     "page": 1,
+     "snippet": "Sport: Coverage of Olympic games and major",
+     "cosine": 0.786,
+     "reason": "The passage discusses historical events and topics but does not mention the inspiration for the character Mr. Peabody or Billy Little.",
+     "window": "Politics: The civil rights movement, the suffrage movement, the Thatcher-Major-Blair years in the UK, the second Reagan administration, and the George W. Bush presidency Sport: Coverage of Olympic games and major sports tournaments, plus controversial sports stories such as Roger Bannister's sub-four minute mile and Ben Johnson's drug-fueled win in Seoul in 1988 Economics: The Industrial Revolution, the Great Depression, the savings and loan crisis, the growth of China as a financial power, and the Asian banking crisis"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Billy Little; long",
+    "missing_from": [
+     "4817d180e44c35eb2dfa7fb2acf4bdd8a48643ce"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Long based Mr. Peabody on a car mechanic who lived in his hometown of Joplin, Missouri while Billy Little was based on his own son Griffith.",
+    "reason": "The passage directly attributes the basis for the characters Mr. Peabody and Billy Little to the cited source. This is a factual claim about the origin of the characters that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: that Long based Mr. Peabody on a car mechanic from Joplin, Missouri, and that Billy Little was based on his own son Griffith",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a marketing description of The Times Digital Archive and contains no information about Long, Mr. Peabody, Billy Little, Joplin, or Griffith. None of the components of the claim appear anywhere in the source, and the shown sentences are from an unrelated section about sports coverage. Therefore, the claim is entirely unsupported by the cited source, and the author must either provide a correct citation or rewrite the claim to remove these unsupported assertions."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "That same year he resigned his Fellowship to become President of Queen's College in Galway.",
+   "markers": [
+    "wjmstarkie"
+   ],
+   "paper_ids": [
+    "137cb681da8fea3696eefb703e1960f1c909eae7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9187,
+   "evidence": {
+    "paper_id": "137cb681da8fea3696eefb703e1960f1c909eae7",
+    "source_title": "wjmstarkie",
+    "supported": false,
+    "sentence": "Kirwan held a Docorate of Divinity was the first President of Queen's College Galway.",
+    "page": 1,
+    "snippet": "Kirwan held a Docorate of Divinity was",
+    "cosine": 0.9187,
+    "reason": "The passage states that Rev. Kirwan was the first President of Queen's College Galway, but it does not mention the year he resigned his Fellowship or that he did so to become President.",
+    "window": "Joseph W. Kirwan, 1845-1849 A thoughtful and eloquent speaker Rev. Kirwan held a Docorate of Divinity was the first President of Queen's College Galway. ### Quick facts NUI Galway Has Over: 18,000 students"
+   },
+   "evidences": [
+    {
+     "paper_id": "137cb681da8fea3696eefb703e1960f1c909eae7",
+     "source_title": "wjmstarkie",
+     "supported": false,
+     "sentence": "Kirwan held a Docorate of Divinity was the first President of Queen's College Galway.",
+     "page": 1,
+     "snippet": "Kirwan held a Docorate of Divinity was",
+     "cosine": 0.9187,
+     "reason": "The passage states that Rev. Kirwan was the first President of Queen's College Galway, but it does not mention the year he resigned his Fellowship or that he did so to become President.",
+     "window": "Joseph W. Kirwan, 1845-1849 A thoughtful and eloquent speaker Rev. Kirwan held a Docorate of Divinity was the first President of Queen's College Galway. ### Quick facts NUI Galway Has Over: 18,000 students"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "That same year he resigned his Fellowship to become President of Queen's College in Galway.",
+    "reason": "The passage asserts a specific historical fact (resignation and appointment) that is directly attributed to the cited source. The citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that Kirwan resigned his Fellowship in the same year he became President",
+    "rewrite_suggestion": "He became the first President of Queen's College Galway in 1845.",
+    "proofs": [
+     "The Rev. Joseph W. Kirwan, 1845-1849",
+     "Rev. Kirwan held a Docorate of Divinity was the first President of Queen's College Galway."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source confirms that Kirwan was the first President of Queen's College Galway, but it says nothing about him resigning a Fellowship. The claim requires proof of a resignation and a specific year for that event, neither of which appears in the provided source text. The author must either add a citation for the resignation or rewrite the claim to only state what the source supports."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The Carteret ministry was the ministry that was in office between 1742 and 1744 following the defeat of Sir Robert Walpole's ministry by a margin of 1 vote.",
+   "markers": [
+    "carteretministry"
+   ],
+   "paper_ids": [
+    "e0067c284d46550b76d4d37d51379af4deec9b5e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9283,
+   "evidence": {
+    "paper_id": "e0067c284d46550b76d4d37d51379af4deec9b5e",
+    "source_title": "carteretministry",
+    "supported": false,
+    "sentence": "At this time the King was still the effective head of the Government; ministers regarded and referred to him as their 'Master' and themselves as his 'servants'; the 'Closet', where the most important of them worked with him, was a higher political level than the Cabinet; the Government of the day and their supporters were known as the 'Court'; and the symbol and sign of real ministerial power was 'habitual, frequent, familiar access' to the King.",
+    "page": 1,
+    "snippet": "At this time the King was still",
+    "cosine": 0.9283,
+    "reason": "The passage discusses Sir Robert Walpole's ministry but does not mention the Carteret ministry or its dates, nor does it mention Walpole's defeat by a margin of one vote.",
+    "window": "Walpole's premiership inaugurated a new type of prime minister, seated in the House of Commons, as first lord of the Treasury and chancellor of the Exchequer, with the dual function of 'minister with the King in the House of Commons', and 'minister for the House of Commons in the Closet'. At this time the King was still the effective head of the Government; ministers regarded and referred to him as their 'Master' and themselves as his 'servants'; the 'Closet', where the most important of them worked with him, was a higher political level than the Cabinet; the Government of the day and their supporters were known as the 'Court'; and the symbol and sign of real ministerial power was 'habitual, frequent, familiar access' to the King. By creating a minister who, in Pitt's words, 'went directly' between the King and the House of Commons, Walpole supplied a link, hitherto missing, between the two centres of political power.23 Walpole introduced this innovation by electing to remain in the House of Commons when, in 1721, he entered on his long period of office as head of the Treasury."
+   },
+   "evidences": [
+    {
+     "paper_id": "e0067c284d46550b76d4d37d51379af4deec9b5e",
+     "source_title": "carteretministry",
+     "supported": false,
+     "sentence": "At this time the King was still the effective head of the Government; ministers regarded and referred to him as their 'Master' and themselves as his 'servants'; the 'Closet', where the most important of them worked with him, was a higher political level than the Cabinet; the Government of the day and their supporters were known as the 'Court'; and the symbol and sign of real ministerial power was 'habitual, frequent, familiar access' to the King.",
+     "page": 1,
+     "snippet": "At this time the King was still",
+     "cosine": 0.9283,
+     "reason": "The passage discusses Sir Robert Walpole's ministry but does not mention the Carteret ministry or its dates, nor does it mention Walpole's defeat by a margin of one vote.",
+     "window": "Walpole's premiership inaugurated a new type of prime minister, seated in the House of Commons, as first lord of the Treasury and chancellor of the Exchequer, with the dual function of 'minister with the King in the House of Commons', and 'minister for the House of Commons in the Closet'. At this time the King was still the effective head of the Government; ministers regarded and referred to him as their 'Master' and themselves as his 'servants'; the 'Closet', where the most important of them worked with him, was a higher political level than the Cabinet; the Government of the day and their supporters were known as the 'Court'; and the symbol and sign of real ministerial power was 'habitual, frequent, familiar access' to the King. By creating a minister who, in Pitt's words, 'went directly' between the King and the House of Commons, Walpole supplied a link, hitherto missing, between the two centres of political power.23 Walpole introduced this innovation by electing to remain in the House of Commons when, in 1721, he entered on his long period of office as head of the Treasury."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Carteret ministry was in office between 1742 and 1744 following the defeat of Sir Robert Walpole's ministry by a margin of 1 vote.",
+    "reason": "The passage asserts a historical fact about the dates and circumstances of the Carteret ministry. The citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The source does not mention a 'Carteret ministry', does not give the specific date range 1742\u20131744 for any ministry, and does not state that Walpole's ministry was defeated by a single vote.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is unrelated to the claim. The source text contains no mention of a 'Carteret ministry' by that name, no statement that such a ministry lasted from 1742 to 1744, and no reference to Walpole's ministry being defeated by exactly one vote. Therefore every substantive component of the claim is unprovable from the provided source, requiring the author to add a citation or rewrite."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "He jumped well throughout the race and went clear with three fences to jump, then easily drew clear to win by 36 lengths.",
+   "markers": [
+    "kautostar"
+   ],
+   "paper_ids": [
+    "788a120043c899b2e7e5b161c6748bcb0ba30ee5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8467,
+   "evidence": {
+    "paper_id": "788a120043c899b2e7e5b161c6748bcb0ba30ee5",
+    "source_title": "kautostar",
+    "supported": false,
+    "sentence": "Go to Horse Racing Results",
+    "page": 1,
+    "snippet": "Go to Horse Racing Results",
+    "cosine": 0.8467,
+    "reason": "The passage is a race header and does not contain any information about the race's performance or outcome.",
+    "window": "Go to Race Passes Go to Horse Racing Results ## 3:05 Saturday 26 December 2009"
+   },
+   "evidences": [
+    {
+     "paper_id": "788a120043c899b2e7e5b161c6748bcb0ba30ee5",
+     "source_title": "kautostar",
+     "supported": false,
+     "sentence": "Go to Horse Racing Results",
+     "page": 1,
+     "snippet": "Go to Horse Racing Results",
+     "cosine": 0.8467,
+     "reason": "The passage is a race header and does not contain any information about the race's performance or outcome.",
+     "window": "Go to Race Passes Go to Horse Racing Results ## 3:05 Saturday 26 December 2009"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He jumped well throughout the race and went clear with three fences to jump, then easily drew clear to win by 36 lengths.",
+    "reason": "The passage describes specific race results and performance metrics. The citation is expected to prove these factual claims about the race outcome.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about Kauto Star's jumping, clear lead, and winning margin (36 lengths) is not present in the source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is a race result page listing runners, weights, and metadata, but it contains no running commentary or race description. None of the claim's components\u2014jumping well, going clear with three fences left, easily drawing clear, or winning by 36 lengths\u2014are stated or implied in the provided text. The shown sentence ('Go to Horse Racing Results') is irrelevant, and the source offers no evidence for any part of the claim, so the author must either add a proper citation or rewrite the claim to match what the source actually contains."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "However, neither the manager of the store nor the developer have said anything about it since 2014.",
+   "markers": [
+    "winrocktowncenter"
+   ],
+   "paper_ids": [
+    "67152ed3369f6f02d76ad778b0c311e313b419fc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7749,
+   "evidence": {
+    "paper_id": "67152ed3369f6f02d76ad778b0c311e313b419fc",
+    "source_title": "winrocktowncenter",
+    "supported": false,
+    "sentence": "\"In the difficult years that ensued, 2008, 2009, 2010 up to today, it just became very clear that a large development had to be more than just a shopping center,\" he said in a recent interview.",
+    "page": 1,
+    "snippet": "\"In the difficult years that ensued, 2008,",
+    "cosine": 0.7749,
+    "reason": "The passage does not mention whether the manager or developer have spoken about the store since 2014.",
+    "window": "Goodman Realty has owned Winrock since 2007, and CEO Gary Goodman said he liked the idea of \"doing something really different with it.\" \"In the difficult years that ensued, 2008, 2009, 2010 up to today, it just became very clear that a large development had to be more than just a shopping center,\" he said in a recent interview. While recession slowed progress, activity has increased in recent years with the addition of three new restaurants \u2014 including a 25,200-square-foot Dave & Buster's that opens to the public Monday \u2014 and last fall's debut of Regal Cinemas' 16-screen IMAX theater."
+   },
+   "evidences": [
+    {
+     "paper_id": "67152ed3369f6f02d76ad778b0c311e313b419fc",
+     "source_title": "winrocktowncenter",
+     "supported": false,
+     "sentence": "\"In the difficult years that ensued, 2008, 2009, 2010 up to today, it just became very clear that a large development had to be more than just a shopping center,\" he said in a recent interview.",
+     "page": 1,
+     "snippet": "\"In the difficult years that ensued, 2008,",
+     "cosine": 0.7749,
+     "reason": "The passage does not mention whether the manager or developer have spoken about the store since 2014.",
+     "window": "Goodman Realty has owned Winrock since 2007, and CEO Gary Goodman said he liked the idea of \"doing something really different with it.\" \"In the difficult years that ensued, 2008, 2009, 2010 up to today, it just became very clear that a large development had to be more than just a shopping center,\" he said in a recent interview. While recession slowed progress, activity has increased in recent years with the addition of three new restaurants \u2014 including a 25,200-square-foot Dave & Buster's that opens to the public Monday \u2014 and last fall's debut of Regal Cinemas' 16-screen IMAX theater."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The manager of the store or the developer have said something about it since 2014.",
+    "reason": "The passage directly asserts a negative fact (nothing has been said) that the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that neither the store manager nor the developer have said anything about it since 2014: the source does not mention any store manager, and it directly quotes the developer in 2014, contradicting the assertion that he has said nothing since 2014.",
+    "rewrite_suggestion": "The source does not contain any statements from a store manager, and the only developer statement in the source is from 2014.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "\"In the difficult years that ensued, 2008, 2009, 2010 up to today, it just became very clear that a large development had to be more than just a shopping center,\" he said in a recent interview.",
+     "why": "This sentence shows the developer made a statement in 2014, contradicting the claim that the developer has said nothing about it since 2014."
+    },
+    "why": "The claim asserts a negative (no statements since 2014) about two parties, but the cited source (a 2014 article) contains a direct quote from the developer in that same year, which contradicts the claim regarding the developer. Additionally, the source does not mention any store manager at all, making that component entirely unsupported. Therefore the author must either add citations for the missing/contradicted elements or rewrite the claim to align with the source."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "One of the most popular programs is the \"Sew Like a Pro\" series, which teaches basic through advanced sewing skills.",
+   "markers": [
+    "fashioninstituteoftechno"
+   ],
+   "paper_ids": [
+    "81047ca936b1e1cad5c61ed335dbde4711ca60d6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.734,
+   "evidence": {
+    "paper_id": "81047ca936b1e1cad5c61ed335dbde4711ca60d6",
+    "source_title": "fashioninstituteoftechno",
+    "supported": false,
+    "sentence": "Computer Training: Business (CTB) Computer Training: Design (CTD) Computer Technology: Patternmaking (CTP) Fashion Career EssentialsShort courses offering business methods presented by industry experts.",
+    "page": 1,
+    "snippet": "Computer Training: Business (CTB) Computer Training: Design",
+    "cosine": 0.734,
+    "reason": "The passage does not mention a program called \"Sew Like a Pro\" or any sewing skills courses.",
+    "window": "Online Courses (OL sections) Creative Business Ownership (CEO) Brand Management Strategies (SXB) Data Analytics: Retail Marketing (SXY) Omni-Channel Management (SXR) Design and Business SoftwareDigital solutions popular in fashion business and design. Computer Training: Business (CTB) Computer Training: Design (CTD) Computer Technology: Patternmaking (CTP) Fashion Career EssentialsShort courses offering business methods presented by industry experts. Fashion Business (SXF) Fashion Technology (FTS) Sustainable Design Entrepreneurs (SUS) Tools of the Trade (TOT) Talks and Tours: Fashion ResourcesFashion-related trend and cultural influence lectures plus visits."
+   },
+   "evidences": [
+    {
+     "paper_id": "81047ca936b1e1cad5c61ed335dbde4711ca60d6",
+     "source_title": "fashioninstituteoftechno",
+     "supported": false,
+     "sentence": "Computer Training: Business (CTB) Computer Training: Design (CTD) Computer Technology: Patternmaking (CTP) Fashion Career EssentialsShort courses offering business methods presented by industry experts.",
+     "page": 1,
+     "snippet": "Computer Training: Business (CTB) Computer Training: Design",
+     "cosine": 0.734,
+     "reason": "The passage does not mention a program called \"Sew Like a Pro\" or any sewing skills courses.",
+     "window": "Online Courses (OL sections) Creative Business Ownership (CEO) Brand Management Strategies (SXB) Data Analytics: Retail Marketing (SXY) Omni-Channel Management (SXR) Design and Business SoftwareDigital solutions popular in fashion business and design. Computer Training: Business (CTB) Computer Training: Design (CTD) Computer Technology: Patternmaking (CTP) Fashion Career EssentialsShort courses offering business methods presented by industry experts. Fashion Business (SXF) Fashion Technology (FTS) Sustainable Design Entrepreneurs (SUS) Tools of the Trade (TOT) Talks and Tours: Fashion ResourcesFashion-related trend and cultural influence lectures plus visits."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Sew Like",
+    "missing_from": [
+     "81047ca936b1e1cad5c61ed335dbde4711ca60d6"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts that the \"Sew Like a Pro\" series is one of the most popular programs and describes its content.",
+    "reason": "The passage makes a factual claim about the popularity and content of a program, which is directly attributable to the cited source. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes the existence and description of a 'Sew Like a Pro' sewing series to the cited source, but the source text contains no mention of any sewing program or that series.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text from the Fashion Institute of Technology lists numerous noncredit course categories (e.g., computer training, fashion business, product development) but never mentions 'Sew Like a Pro', sewing, or any basic-to-advanced sewing instruction. No component of the claim\u2014neither the program name nor its description\u2014can be found in the provided source, so the author must either add a different citation or rewrite the claim to remove the unsourced attribution."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "AIP also warns that it can take as long as 120 days for a charity to actually receive a text donation and that wireless carriers may limit the number of times per month a user can donate via text.",
+   "markers": [
+    "mobiledonating"
+   ],
+   "paper_ids": [
+    "ab3d4109e4edd95f8a884a407ee3b5b78e41cc32"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8423,
+   "evidence": {
+    "paper_id": "ab3d4109e4edd95f8a884a407ee3b5b78e41cc32",
+    "source_title": "mobiledonating",
+    "supported": false,
+    "sentence": "In the Internet age where giving directly to charity only requires a few clicks of a mouse or touches on...",
+    "page": 1,
+    "snippet": "In the Internet age where giving directly",
+    "cosine": 0.8423,
+    "reason": "The passage does not contain any information about the time it takes for charities to receive text donations or limitations on text donation frequency.",
+    "window": "## California AG Accuses Another Aid Charity of Misleading Donors with Inflated Gifts-in-Kind Reporting The office of the California Attorney General OAG is committed to protecting generous donors from the harm caused by misleading... Read More... ## Is the United Way Relevant in the Internet Age? In the Internet age where giving directly to charity only requires a few clicks of a mouse or touches on... Read More..."
+   },
+   "evidences": [
+    {
+     "paper_id": "ab3d4109e4edd95f8a884a407ee3b5b78e41cc32",
+     "source_title": "mobiledonating",
+     "supported": false,
+     "sentence": "In the Internet age where giving directly to charity only requires a few clicks of a mouse or touches on...",
+     "page": 1,
+     "snippet": "In the Internet age where giving directly",
+     "cosine": 0.8423,
+     "reason": "The passage does not contain any information about the time it takes for charities to receive text donations or limitations on text donation frequency.",
+     "window": "## California AG Accuses Another Aid Charity of Misleading Donors with Inflated Gifts-in-Kind Reporting The office of the California Attorney General OAG is committed to protecting generous donors from the harm caused by misleading... Read More... ## Is the United Way Relevant in the Internet Age? In the Internet age where giving directly to charity only requires a few clicks of a mouse or touches on... Read More..."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts and findings (time for charity to receive donation, carrier limitations) that are directly attributed to AIP, implying the cited source is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "AIP's warning about 120-day delay and carrier limits on text donations",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not address the claim, and the provided source text contains no mention of text donations, 120-day delays, or carrier limits. Therefore no component of the claim is provable from the cited source, so the author must add a citation or rewrite the claim to remove the unsourced specifics."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "73359d6fc7ff8e26c18e41671db32b070f80206c": {
+    "title": "emotioncarlyraejepsenalb",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c1bb9a510d62048ee9e36bae4fecf99c0dd095c8": {
+    "title": "linworthalternativeprogr",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "137cb681da8fea3696eefb703e1960f1c909eae7": {
+    "title": "wjmstarkie",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "81047ca936b1e1cad5c61ed335dbde4711ca60d6": {
+    "title": "fashioninstituteoftechno",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "75552fbbe2ef7a1b5674887ec7b81d775323494a": {
+    "title": "stateprotectiongroup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "788a120043c899b2e7e5b161c6748bcb0ba30ee5": {
+    "title": "kautostar",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7de9fc55846e4ebfe0ed3a70dea7752189587fe1": {
+    "title": "kisskasket",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b7e842acbbc7ffe57acd9dcc65e361a42fa16ec6": {
+    "title": "juliapimsleur",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4817d180e44c35eb2dfa7fb2acf4bdd8a48643ce": {
+    "title": "mrpeabodysapples",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ccea11129d3100d3b255e42f90f63233c6e4eddf": {
+    "title": "listofintellivisiongames",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "67152ed3369f6f02d76ad778b0c311e313b419fc": {
+    "title": "winrocktowncenter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d9ac0c767b4b958f9b8bba8a856cebb25f237e00": {
+    "title": "uclauscrivalry",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0ec33cd333503c1c84648a942dfffebb0df35665": {
+    "title": "istanbulsofiaexpress",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e869bcd120e486b2474954da71d11ddd347370d5": {
+    "title": "sandrasemchuk",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ea96283d98874ed506edeb4dc10b8d600c005ceb": {
+    "title": "jameswnicholson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2dd4c791111efa0abf9040ff632e9165c1265e0b": {
+    "title": "unmannedcombatarmedrotor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a35fb967df6e31d889ed28c1c51303df29942b2a": {
+    "title": "bhagalpurjunctionrailway",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "46e9eb693f207ec536c80d78e786dcdbf200fd8d": {
+    "title": "201819uefachampionsleagu",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d5e427c3d618d23cd009254ab00bfa2827ea0241": {
+    "title": "katarzynalubnauer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2abc402671744e746b5ad78ae206ae8514875ffd": {
+    "title": "byronbaynewsouthwales",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "6124d2cd77829906a06d449a2fd6088039136127": {
+    "title": "thummalanageswararao",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f1277eb70cee4ac14d5741f18eaaef3677b6f10e": {
+    "title": "vikingsseason5",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ab3d4109e4edd95f8a884a407ee3b5b78e41cc32": {
+    "title": "mobiledonating",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e0067c284d46550b76d4d37d51379af4deec9b5e": {
+    "title": "carteretministry",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 25,
+   "supported": 0,
+   "unsupported": 24,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 15:02:52",
+  "marker_errors": [],
+  "processing_time_seconds": 348.2,
+  "source_hashes": {
+   "byronbaynewsouthwales.txt": "dca8143a13cfc6b4ec12451edf196aaa0e0ef845",
+   "201819uefachampionsleagu.txt": "5be7391dd6c97e532cdfae46161ef2a59f0d214a",
+   "uclauscrivalry.txt": "54cb7bb7aea49c41ed484eccc9069c3d0270168a",
+   "kisskasket.txt": "f2138130ce1603f553965c36324e541c398ac9de",
+   "istanbulsofiaexpress.txt": "ac7ed9354da136874c7c5fa7e912888ca98543df",
+   "emotioncarlyraejepsenalb.txt": "f6586c2e50c4838e22c4d84f1b359d323999c358",
+   "katarzynalubnauer.txt": "d5cbcbba3a67079cfff14212f3a2e5da698fe2c6",
+   "linworthalternativeprogr.txt": "4fdc307156b616d519403b9920ccc625250f1633",
+   "sandrasemchuk.txt": "99a831a2952c14aac32449ec72c94d53c619fc8e",
+   "stateprotectiongroup.txt": "2bfb8c6657ce698e576d2205b566bce3303a1c0f",
+   "listofintellivisiongames.txt": "fb9d9f36f4a43dc9c31064de12f7457ec5ac4ef3",
+   "vikingsseason5.txt": "494dbf080e6e66685fea3ddabc86619b261988d9",
+   "jameswnicholson.txt": "66616bed3efa04f30b491680d5a56b23bf0bf878",
+   "bhagalpurjunctionrailway.txt": "77397717a9bcdb5997cc732fef5e7109a2729250",
+   "unmannedcombatarmedrotor.txt": "9ae6544f2f746739db735a905994290de9883669",
+   "juliapimsleur.txt": "dbff5caac5a164da744e8648238a0c3345644aff",
+   "thummalanageswararao.txt": "307e243a16387f983fbf0baef11952c6e57b8752",
+   "mrpeabodysapples.txt": "912bb70489391a547b49a8172064ed12407ed202",
+   "wjmstarkie.txt": "800bdf00f30231485e7a0dd1655bcf8449c47158",
+   "carteretministry.txt": "2efc5ed99d1b4dd4dde3c0d4a717893d7f773af2",
+   "kautostar.txt": "b7b91b9a294ed32d36b63a8047c4c9feb59edbc2",
+   "winrocktowncenter.txt": "bae1f38e9b99d00d5fdc44d9a94cddbbb209c3b7",
+   "fashioninstituteoftechno.txt": "c104e3c4cca280af9cea03f57389ad5cc097eeb6",
+   "mobiledonating.txt": "28a551969bfb66907e95531c7770b7da69da5761"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 292,
+    "prompt_tokens": 336065,
+    "completion_tokens": 8923,
+    "cost_usd": 0.03739
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 28,
+    "prompt_tokens": 107198,
+    "completion_tokens": 57158,
+    "cost_usd": 0.023425
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 23,
+    "methods": 0,
+    "concept": 1,
+    "related": 0
+   },
+   "scoped_ids": [
+    "t8"
+   ]
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 24,
+   "actions": {
+    "add_citation_or_rewrite": 24
+   },
+   "proof_may_exist": [],
+   "conflicts": [
+    "t17",
+    "t22"
+   ],
+   "rescued": [],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "2abc402671744e746b5ad78ae206ae8514875ffd",
+   "key": "byronbaynewsouthwales",
+   "filename": "byronbaynewsouthwales.txt",
+   "title": "byronbaynewsouthwales",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46e9eb693f207ec536c80d78e786dcdbf200fd8d",
+   "key": "201819uefachampionsleagu",
+   "filename": "201819uefachampionsleagu.txt",
+   "title": "201819uefachampionsleagu",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d9ac0c767b4b958f9b8bba8a856cebb25f237e00",
+   "key": "uclauscrivalry",
+   "filename": "uclauscrivalry.txt",
+   "title": "uclauscrivalry",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7de9fc55846e4ebfe0ed3a70dea7752189587fe1",
+   "key": "kisskasket",
+   "filename": "kisskasket.txt",
+   "title": "kisskasket",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0ec33cd333503c1c84648a942dfffebb0df35665",
+   "key": "istanbulsofiaexpress",
+   "filename": "istanbulsofiaexpress.txt",
+   "title": "istanbulsofiaexpress",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "73359d6fc7ff8e26c18e41671db32b070f80206c",
+   "key": "emotioncarlyraejepsenalb",
+   "filename": "emotioncarlyraejepsenalb.txt",
+   "title": "emotioncarlyraejepsenalb",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d5e427c3d618d23cd009254ab00bfa2827ea0241",
+   "key": "katarzynalubnauer",
+   "filename": "katarzynalubnauer.txt",
+   "title": "katarzynalubnauer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c1bb9a510d62048ee9e36bae4fecf99c0dd095c8",
+   "key": "linworthalternativeprogr",
+   "filename": "linworthalternativeprogr.txt",
+   "title": "linworthalternativeprogr",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e869bcd120e486b2474954da71d11ddd347370d5",
+   "key": "sandrasemchuk",
+   "filename": "sandrasemchuk.txt",
+   "title": "sandrasemchuk",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "75552fbbe2ef7a1b5674887ec7b81d775323494a",
+   "key": "stateprotectiongroup",
+   "filename": "stateprotectiongroup.txt",
+   "title": "stateprotectiongroup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ccea11129d3100d3b255e42f90f63233c6e4eddf",
+   "key": "listofintellivisiongames",
+   "filename": "listofintellivisiongames.txt",
+   "title": "listofintellivisiongames",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f1277eb70cee4ac14d5741f18eaaef3677b6f10e",
+   "key": "vikingsseason5",
+   "filename": "vikingsseason5.txt",
+   "title": "vikingsseason5",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ea96283d98874ed506edeb4dc10b8d600c005ceb",
+   "key": "jameswnicholson",
+   "filename": "jameswnicholson.txt",
+   "title": "jameswnicholson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a35fb967df6e31d889ed28c1c51303df29942b2a",
+   "key": "bhagalpurjunctionrailway",
+   "filename": "bhagalpurjunctionrailway.txt",
+   "title": "bhagalpurjunctionrailway",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2dd4c791111efa0abf9040ff632e9165c1265e0b",
+   "key": "unmannedcombatarmedrotor",
+   "filename": "unmannedcombatarmedrotor.txt",
+   "title": "unmannedcombatarmedrotor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b7e842acbbc7ffe57acd9dcc65e361a42fa16ec6",
+   "key": "juliapimsleur",
+   "filename": "juliapimsleur.txt",
+   "title": "juliapimsleur",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6124d2cd77829906a06d449a2fd6088039136127",
+   "key": "thummalanageswararao",
+   "filename": "thummalanageswararao.txt",
+   "title": "thummalanageswararao",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4817d180e44c35eb2dfa7fb2acf4bdd8a48643ce",
+   "key": "mrpeabodysapples",
+   "filename": "mrpeabodysapples.txt",
+   "title": "mrpeabodysapples",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "137cb681da8fea3696eefb703e1960f1c909eae7",
+   "key": "wjmstarkie",
+   "filename": "wjmstarkie.txt",
+   "title": "wjmstarkie",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e0067c284d46550b76d4d37d51379af4deec9b5e",
+   "key": "carteretministry",
+   "filename": "carteretministry.txt",
+   "title": "carteretministry",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "788a120043c899b2e7e5b161c6748bcb0ba30ee5",
+   "key": "kautostar",
+   "filename": "kautostar.txt",
+   "title": "kautostar",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "67152ed3369f6f02d76ad778b0c311e313b419fc",
+   "key": "winrocktowncenter",
+   "filename": "winrocktowncenter.txt",
+   "title": "winrocktowncenter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "81047ca936b1e1cad5c61ed335dbde4711ca60d6",
+   "key": "fashioninstituteoftechno",
+   "filename": "fashioninstituteoftechno.txt",
+   "title": "fashioninstituteoftechno",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ab3d4109e4edd95f8a884a407ee3b5b78e41cc32",
+   "key": "mobiledonating",
+   "filename": "mobiledonating.txt",
+   "title": "mobiledonating",
+   "num_claims": 0
+  }
+ ]
+}

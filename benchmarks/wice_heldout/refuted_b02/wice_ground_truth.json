@@ -1,0 +1,249 @@
+{
+ "split": "train",
+ "mode": "heldout_all",
+ "batch": 2,
+ "label_filter": "not_supported",
+ "exclude_used": true,
+ "claims": {
+  "malaria": {
+   "wice_id": "train42805",
+   "split_index": 233,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 63
+  },
+  "californiastateuniversit": {
+   "wice_id": "train02199",
+   "split_index": 242,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 76
+  },
+  "royallondonhospital": {
+   "wice_id": "train49574",
+   "split_index": 260,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 39
+  },
+  "codetermination": {
+   "wice_id": "train46520",
+   "split_index": 270,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 130
+  },
+  "unconditionalcashtransfe": {
+   "wice_id": "train14111",
+   "split_index": 271,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 102
+  },
+  "2017selangorfaseason": {
+   "wice_id": "train31500",
+   "split_index": 282,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 84
+  },
+  "pentimalsystem": {
+   "wice_id": "train31439",
+   "split_index": 284,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 184
+  },
+  "wheredoesthisdoorgo": {
+   "wice_id": "train04358",
+   "split_index": 290,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 1566
+  },
+  "hemabenacharya": {
+   "wice_id": "train08522",
+   "split_index": 301,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     11
+    ]
+   ],
+   "n_source_sentences": 25
+  },
+  "fulham": {
+   "wice_id": "train09159",
+   "split_index": 317,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 33
+  },
+  "tokipona": {
+   "wice_id": "train40315",
+   "split_index": 318,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 211
+  },
+  "corriesanders": {
+   "wice_id": "train15364",
+   "split_index": 320,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 49
+  },
+  "7rings": {
+   "wice_id": "train24509",
+   "split_index": 330,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 389
+  },
+  "positivism": {
+   "wice_id": "train18552",
+   "split_index": 331,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 266
+  },
+  "batman1989film": {
+   "wice_id": "train40115",
+   "split_index": 340,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 173
+  },
+  "llantrisant": {
+   "wice_id": "train37559",
+   "split_index": 353,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 295
+  },
+  "stanleyfischer": {
+   "wice_id": "train00079",
+   "split_index": 355,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 226
+  },
+  "nowshahr": {
+   "wice_id": "train17396",
+   "split_index": 357,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     17
+    ]
+   ],
+   "n_source_sentences": 26
+  },
+  "worldwarii": {
+   "wice_id": "train36701",
+   "split_index": 360,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 84
+  },
+  "jacyntagalabadaarachchi": {
+   "wice_id": "train10209",
+   "split_index": 366,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 85
+  },
+  "haroldjbrubaker": {
+   "wice_id": "train32164",
+   "split_index": 374,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 87
+  },
+  "amaliearena": {
+   "wice_id": "train30904",
+   "split_index": 380,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 66
+  },
+  "spacestation13": {
+   "wice_id": "train08179",
+   "split_index": 390,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 157
+  },
+  "counseloreducation": {
+   "wice_id": "train06847",
+   "split_index": 391,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 97
+  },
+  "medicalscientisttraining": {
+   "wice_id": "train05238",
+   "split_index": 413,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 16
+  },
+  "johnsalvi": {
+   "wice_id": "train12933",
+   "split_index": 425,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 55
+  }
+ }
+}

@@ -1,0 +1,53 @@
+verdict-level agreement: 24/26 (92%)
+confusion (wice_label -> tool):
+  not_supported          -> not_supported           24
+  not_supported          -> partially_supported      1   <-- disagreement
+  not_supported          -> supported                1   <-- disagreement
+
+arbiter-adjudicated agreement: 14/26 (53%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> not_supported           14
+  not_supported          -> partially_supported     11   <-- disagreement
+  not_supported          -> supported                1   <-- disagreement
+adjudication flips: 10
+  - listofunproducedmarvelco   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - splashh                    not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - leepeltier                 not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - chriscapuano               not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - tempovideogame             not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - andymcnab                  not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - universityoftechnologysy   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - mohammedfahadalharthi      not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - effectsofhurricaneandrew   not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+  - stphanesparagna            not_supported -> partially_supported    wice=not_supported          (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 26 refuted rows: base=1, adjudicated=1
+*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — stop and report ***
+
+per-claim:
+  OK  wtmartin                   wice=not_supported          tool=not_supported          
+  OK  angmey                     wice=not_supported          tool=not_supported          
+  OK  randallpark                wice=not_supported          tool=not_supported          
+  OK  listofunproducedmarvelco   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  2015unitedkingdomgeneral   wice=not_supported          tool=not_supported          
+  OK  splashh                    wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  davidgardinerpolitician    wice=not_supported          tool=not_supported          
+  OK  2018texaselections         wice=not_supported          tool=not_supported          
+  OK  leepeltier                 wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  aireuropa                  wice=not_supported          tool=not_supported          
+  OK  mitre10cup                 wice=not_supported          tool=not_supported          
+  OK  chriscapuano               wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  pimax                      wice=not_supported          tool=not_supported          
+  OK  tempovideogame             wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  andymcnab                  wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  rosamundbartlett           wice=not_supported          tool=not_supported          
+  OK  shoheioka                  wice=not_supported          tool=not_supported          
+  OK  songsofournativedaughter   wice=not_supported          tool=not_supported          
+  OK  johnfcookjr                wice=not_supported          tool=not_supported          
+  OK  universityoftechnologysy   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  pachinko                   wice=not_supported          tool=not_supported          
+  DIFF democraticleftalliance     wice=not_supported          tool=supported              
+  OK  mohammedfahadalharthi      wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  effectsofhurricaneandrew   wice=not_supported          tool=not_supported          adj=partially_supported    
+  OK  stphanesparagna            wice=not_supported          tool=not_supported          adj=partially_supported    
+  DIFF indianhospital             wice=not_supported          tool=partially_supported    picks_in_gold=0/1

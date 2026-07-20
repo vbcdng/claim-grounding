@@ -1,0 +1,2203 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 14 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section of the text and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County, Oregon was named for him.",
+   "markers": [
+    "williamsharney"
+   ],
+   "paper_ids": [
+    "f076a0cf5a724cf3c9aead16e2ab87301b8118e4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9888,
+   "evidence": {
+    "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+    "source_title": "williamsharney",
+    "supported": true,
+    "sentence": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him.",
+    "page": 1,
+    "snippet": "Harney died at his home near Orlando,",
+    "cosine": 0.9888,
+    "reason": "near-verbatim match (cosine 0.9888 \u2265 0.97)",
+    "window": "After retiring in 1863, he served with the Indian Peace Commission, and in 1884 he married Mary St. Cyr. Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him. He is the namesake of the Oregon community of Harney, Harney Valley, Harney Lake, and Fort Harney (1867-1880)."
+   },
+   "evidences": [
+    {
+     "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+     "source_title": "williamsharney",
+     "supported": true,
+     "sentence": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him.",
+     "page": 1,
+     "snippet": "Harney died at his home near Orlando,",
+     "cosine": 0.9888,
+     "reason": "near-verbatim match (cosine 0.9888 \u2265 0.97)",
+     "window": "After retiring in 1863, he served with the Indian Peace Commission, and in 1884 he married Mary St. Cyr. Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him. He is the namesake of the Oregon community of Harney, Harney Valley, Harney Lake, and Fort Harney (1867-1880)."
+    }
+   ],
+   "votes": null,
+   "reason": "near-verbatim match (cosine 0.9888 \u2265 0.97)",
+   "covering": {
+    "covered": [
+     {
+      "component": "Harney died at his home near Orlando, Florida, in 1889",
+      "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+      "source_title": "williamsharney",
+      "sentence": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him.",
+      "page": 1,
+      "snippet": "Harney died at his home near Orlando,"
+     },
+     {
+      "component": "Harney County, Oregon was named for him",
+      "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+      "source_title": "williamsharney",
+      "sentence": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him.",
+      "page": 1,
+      "snippet": "Harney died at his home near Orlando,"
+     },
+     {
+      "component": "Harney died just months after Harney County was named for him",
+      "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+      "source_title": "williamsharney",
+      "sentence": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him.",
+      "page": 1,
+      "snippet": "Harney died at his home near Orlando,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+      "source_title": "williamsharney",
+      "text": "Harney died at his home near Orlando, Florida, in 1889, just months after Harney County was named for him.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t2",
+   "text": "The diocese is currently a titular see of the Patriarchate of Constantinople, and Gerasimos Papadopoulos was titular Bishop of Abydos from 1962 until his death in 1995.",
+   "markers": [
+    "abydoshellespont"
+   ],
+   "paper_ids": [
+    "30236d9d76199121c5d83fc49348a3b66f237637"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "30236d9d76199121c5d83fc49348a3b66f237637",
+    "source_title": "abydoshellespont",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "On April 6, 1962 the Synod of the Patriarchate elected Gerasimos as titular Bishop of Abydos.",
+    "page": 1,
+    "snippet": "On April 6, 1962 the Synod of",
+    "reason": "the passage does not state that the diocese is currently a titular see of the Patriarchate of Constantinople",
+    "votes": "2-0",
+    "window": "On April 6, 1962 the Synod of the Patriarchate elected Gerasimos as titular Bishop of Abydos. On May 20, 1962 he was consecrated in Boston and would serve as the Bishop of the Diocese of Boston. At this point we must emphasize that even when he became a bishop in 1962, he believed steadfastly that the priesthood is one. Seeker of the truth, teacher of the truth and servant of the truth was the Bishop of Abydos, Gerasimos of blessed memory. When someone understands the absolute nature of this indifference, he also understand how and why Bishop Gerasimos of Abydos remained a monk of the Holy Mountain, and particularly of the Skete of St. Anna, while he lived and served in the great metropolitan cities of the two continents and in the great university centers of the world: Boston, Oxford, Munich, Athens. At times of inner difficulties all could find refuge and spiritual help in the ascetic cell of Abba Gerasimos, Bishop of Abydos. He believed that the bishop has nothing more than the priest, being only an archpriest, the first among priests. Primarily the bishop has the particular charisma from God to ordain other priests."
+   },
+   "evidences": [
+    {
+     "paper_id": "30236d9d76199121c5d83fc49348a3b66f237637",
+     "source_title": "abydoshellespont",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "On April 6, 1962 the Synod of the Patriarchate elected Gerasimos as titular Bishop of Abydos.",
+     "page": 1,
+     "snippet": "On April 6, 1962 the Synod of",
+     "reason": "the passage does not state that the diocese is currently a titular see of the Patriarchate of Constantinople",
+     "votes": "2-0",
+     "window": "On April 6, 1962 the Synod of the Patriarchate elected Gerasimos as titular Bishop of Abydos. On May 20, 1962 he was consecrated in Boston and would serve as the Bishop of the Diocese of Boston. At this point we must emphasize that even when he became a bishop in 1962, he believed steadfastly that the priesthood is one. Seeker of the truth, teacher of the truth and servant of the truth was the Bishop of Abydos, Gerasimos of blessed memory. When someone understands the absolute nature of this indifference, he also understand how and why Bishop Gerasimos of Abydos remained a monk of the Holy Mountain, and particularly of the Skete of St. Anna, while he lived and served in the great metropolitan cities of the two continents and in the great university centers of the world: Boston, Oxford, Munich, Athens. At times of inner difficulties all could find refuge and spiritual help in the ascetic cell of Abba Gerasimos, Bishop of Abydos. He believed that the bishop has nothing more than the priest, being only an archpriest, the first among priests. Primarily the bishop has the particular charisma from God to ordain other priests."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the diocese is currently a titular see of the Patriarchate of Constantinople",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Gerasimos Papadopoulos was titular Bishop of Abydos from 1962 until his death in 1995.",
+    "reason": "The passage asserts a specific fact (the tenure of a bishop) that is directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the diocese is currently a titular see of the Patriarchate of Constantinople is not supported by the source and requires either a new citation or removal.",
+    "rewrite_suggestion": "Gerasimos Papadopoulos was titular Bishop of Abydos from 1962 until his death in 1995.",
+    "proofs": [
+     "On April 6, 1962 the Synod of the Patriarchate elected Gerasimos as titular Bishop of Abydos.",
+     "He gave up the spirit on June 12, 1995, the day of the Holy Spirit."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the start of Gerasimos's tenure in 1962, not the end date or the current titular status of the diocese. The source does provide evidence of his title until death, but the claim's first component (the diocese is currently a titular see of the Patriarchate) is entirely absent from the source. Therefore, the author must address this unsourced subclaim by either adding a citation or rewriting the claim."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "They have played at their Sandygate Road home in the Sheffield suburb of Crosspool since formation, with the ground being officially recognised by the Guinness Book of Records as \"The Oldest Football Ground in the World\".",
+   "markers": [
+    "hallamfc"
+   ],
+   "paper_ids": [
+    "651cece343ea6c32378e54be60afc5a7e5439aa4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8612,
+   "evidence": {
+    "paper_id": "651cece343ea6c32378e54be60afc5a7e5439aa4",
+    "source_title": "hallamfc",
+    "supported": true,
+    "sentence": "The site is the Guinness World Record holder for being the oldest football ground in the world.",
+    "page": 1,
+    "snippet": "The site is the Guinness World Record",
+    "cosine": 0.8612,
+    "reason": "The passage explicitly states that the club plays at Sandygate Road and that the site is the Guinness World Record holder for being the oldest football ground in the world.",
+    "window": "Hallam FC was founded in 1860 and the club still play at their original ground at Sandygate Road. The site is the Guinness World Record holder for being the oldest football ground in the world. The match was played under the so-called \"Sheffield Rules\" which became the basis of the modern game, introducing elements such as throw-ins and corner kicks."
+   },
+   "evidences": [
+    {
+     "paper_id": "651cece343ea6c32378e54be60afc5a7e5439aa4",
+     "source_title": "hallamfc",
+     "supported": true,
+     "sentence": "The site is the Guinness World Record holder for being the oldest football ground in the world.",
+     "page": 1,
+     "snippet": "The site is the Guinness World Record",
+     "cosine": 0.8612,
+     "reason": "The passage explicitly states that the club plays at Sandygate Road and that the site is the Guinness World Record holder for being the oldest football ground in the world.",
+     "window": "Hallam FC was founded in 1860 and the club still play at their original ground at Sandygate Road. The site is the Guinness World Record holder for being the oldest football ground in the world. The match was played under the so-called \"Sheffield Rules\" which became the basis of the modern game, introducing elements such as throw-ins and corner kicks."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the club plays at Sandygate Road and that the site is the Guinness World Record holder for being the oldest football ground in the world.",
+   "covering": {
+    "covered": [
+     {
+      "component": "They have played at their Sandygate Road home in the Sheffield suburb of Crosspool since formation",
+      "paper_id": "651cece343ea6c32378e54be60afc5a7e5439aa4",
+      "source_title": "hallamfc",
+      "sentence": "Hallam FC was founded in 1860 and the club still play at their original ground at Sandygate Road.",
+      "page": 1,
+      "snippet": "Hallam FC was founded in 1860 and"
+     },
+     {
+      "component": "the ground being officially recognised by the Guinness Book of Records as \"The Oldest Football Ground in the World\"",
+      "paper_id": "651cece343ea6c32378e54be60afc5a7e5439aa4",
+      "source_title": "hallamfc",
+      "sentence": "The site is the Guinness World Record holder for being the oldest football ground in the world.",
+      "page": 1,
+      "snippet": "The site is the Guinness World Record"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "651cece343ea6c32378e54be60afc5a7e5439aa4",
+      "source_title": "hallamfc",
+      "text": "Hallam FC was founded in 1860 and the club still play at their original ground at Sandygate Road. The site is the Guinness World Record holder for being the oldest football ground in the world.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "It was introduced in 1986 and was originally called the Satellite Tour, before being renamed with its present title in 1990.",
+   "markers": [
+    "2018challengetour"
+   ],
+   "paper_ids": [
+    "705864000485279eaf28bda14a94f09409a13e69"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "705864000485279eaf28bda14a94f09409a13e69",
+    "source_title": "2018challengetour",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Best nine results in three different countries to count\u2014 Apollo Week Training School first staged1990\u2014 PGA European Tour and Professional Golfers' Association announced formation of the Ryder Cup Joint Venture (21.11.90)\u2014 PGA European Satellite Tour renamed PGA European Challenge Tour\u2014 Challenge",
+    "page": 1,
+    "snippet": "Best nine results in three different countries",
+    "reason": "The passage does not state that the Satellite Tour was introduced in 1986.",
+    "votes": "2-0",
+    "window": "Best nine results in three different countries to count\u2014 Apollo Week Training School first staged1990\u2014 PGA European Tour and Professional Golfers' Association announced formation of the Ryder Cup Joint Venture (21.11.90)\u2014 PGA European Satellite Tour renamed PGA European Challenge Tour\u2014 Challenge This money was \"official\"1989\u2014 PGA European Satellite Tour started with its own Order of Merit with the top five being eligible for full PGA European Tour Membership the following season under Category 11(b). Minimum number of tournaments to be played for inclusion in the Order of Merit raised from seven to nine\u2014 Introduction of the Satellite Tour\u2014 Exemption into The Open Championship reduced from the top ten (in the top 25) to the top five (in the top 25), not otherwise exempt, at the Car Care Plan"
+   },
+   "evidences": [
+    {
+     "paper_id": "705864000485279eaf28bda14a94f09409a13e69",
+     "source_title": "2018challengetour",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Best nine results in three different countries to count\u2014 Apollo Week Training School first staged1990\u2014 PGA European Tour and Professional Golfers' Association announced formation of the Ryder Cup Joint Venture (21.11.90)\u2014 PGA European Satellite Tour renamed PGA European Challenge Tour\u2014 Challenge",
+     "page": 1,
+     "snippet": "Best nine results in three different countries",
+     "reason": "The passage does not state that the Satellite Tour was introduced in 1986.",
+     "votes": "2-0",
+     "window": "Best nine results in three different countries to count\u2014 Apollo Week Training School first staged1990\u2014 PGA European Tour and Professional Golfers' Association announced formation of the Ryder Cup Joint Venture (21.11.90)\u2014 PGA European Satellite Tour renamed PGA European Challenge Tour\u2014 Challenge This money was \"official\"1989\u2014 PGA European Satellite Tour started with its own Order of Merit with the top five being eligible for full PGA European Tour Membership the following season under Category 11(b). Minimum number of tournaments to be played for inclusion in the Order of Merit raised from seven to nine\u2014 Introduction of the Satellite Tour\u2014 Exemption into The Open Championship reduced from the top ten (in the top 25) to the top five (in the top 25), not otherwise exempt, at the Car Care Plan"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the Satellite Tour was introduced in 1986.",
+   "component_check": {
+    "found": [
+     "It was originally called the Satellite Tour",
+     "It was renamed with its present title in 1990"
+    ],
+    "missing": [
+     "It was introduced in 1986"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "It was originally called the Satellite Tour",
+      "paper_id": "705864000485279eaf28bda14a94f09409a13e69",
+      "source_title": "2018challengetour",
+      "sentence": "Minimum number of tournaments to be played for inclusion in the Order of Merit raised from seven to nine\u2014 Introduction of the Satellite Tour\u2014 Exemption into The Open Championship reduced from the top ten (in the top 25) to the top five (in the top 25), not otherwise exempt, at the Car Care Plan",
+      "page": 1
+     },
+     {
+      "component": "It was renamed with its present title in 1990",
+      "paper_id": "705864000485279eaf28bda14a94f09409a13e69",
+      "source_title": "2018challengetour",
+      "sentence": "Best nine results in three different countries to count\u2014 Apollo Week Training School first staged1990\u2014 PGA European Tour and Professional Golfers' Association announced formation of the Ryder Cup Joint Venture (21.11.90)\u2014 PGA European Satellite Tour renamed PGA European Challenge Tour\u2014 Challenge",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts (dates and names) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 2,
+    "conflict": null,
+    "why": "The shown sentence only includes the rename to 'PGA European Challenge Tour' in 1990, but it omits the introduction year (1986) and the original name 'Satellite Tour'. Both of these are verifiable in the source text (the 1986 entry explicitly states 'Introduction of the Satellite Tour'), so the tool failed to display complete proof. The claim itself is supported by the source; the tool needs to show the correct supporting sentences."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "In 2016, anti-abortion activist Jeremy Fraser won the party's leadership in what was called an \"invalid takeover\" by Skowronski.",
+   "markers": [
+    "albertasocialcreditparty"
+   ],
+   "paper_ids": [
+    "fa37fdfc449d6a5cf1f60c4bf53a95d10a46215b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fa37fdfc449d6a5cf1f60c4bf53a95d10a46215b",
+    "source_title": "albertasocialcreditparty",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "## 7 thoughts on \"Anti-Abortion activists stage an \"invalid takeover\" of Alberta's Social Credit Party\"",
+    "page": 1,
+    "snippet": "## 7 thoughts on \"Anti-Abortion activists stage",
+    "reason": "The passage does not mention Jeremy Fraser or the year 2016.",
+    "votes": "2-0",
+    "window": "## 7 thoughts on \"Anti-Abortion activists stage an \"invalid takeover\" of Alberta's Social Credit Party\""
+   },
+   "evidences": [
+    {
+     "paper_id": "fa37fdfc449d6a5cf1f60c4bf53a95d10a46215b",
+     "source_title": "albertasocialcreditparty",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "## 7 thoughts on \"Anti-Abortion activists stage an \"invalid takeover\" of Alberta's Social Credit Party\"",
+     "page": 1,
+     "snippet": "## 7 thoughts on \"Anti-Abortion activists stage",
+     "reason": "The passage does not mention Jeremy Fraser or the year 2016.",
+     "votes": "2-0",
+     "window": "## 7 thoughts on \"Anti-Abortion activists stage an \"invalid takeover\" of Alberta's Social Credit Party\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Jeremy Fraser or the year 2016.",
+   "subject_guard": {
+    "subject": "Jeremy Fraser",
+    "missing_from": [
+     "fa37fdfc449d6a5cf1f60c4bf53a95d10a46215b"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2016, anti-abortion activist Jeremy Fraser won the party's leadership in what was called an \"invalid takeover\" by Skowronski.",
+    "reason": "The passage directly states a fact and attributes a quote to Skowronski, implying the cited source is expected to prove this specific event and statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Jeremy Fraser winning the party's leadership and Skowronski calling it an 'invalid takeover'",
+    "rewrite_suggestion": "In 2016, anti-abortion activists staged an 'invalid takeover' of Alberta's Social Credit Party.",
+    "proofs": [
+     "Anti-Abortion activists stage an \"invalid takeover\" of Alberta's Social Credit Party"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes specific details (Jeremy Fraser, leadership win, Skowronski's quote) to the cited source, but the source text only contains a blog post title about an 'invalid takeover' by anti-abortion activists in 2016. The shown sentence is a comment section header, not evidence. The unsourced components are not provable from the provided source, so the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "It is the eighth university in Ireland, and the fourth in the Dublin Region, following Trinity College Dublin, University College Dublin, and Dublin City University.",
+   "markers": [
+    "technologicaluniversityd"
+   ],
+   "paper_ids": [
+    "d245d10220c1a7482e19dcc11fb74625116d7f7b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d245d10220c1a7482e19dcc11fb74625116d7f7b",
+    "source_title": "technologicaluniversityd",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin.",
+    "page": 1,
+    "snippet": "The new university will add to a",
+    "reason": "The passage does not state that the university is the eighth in Ireland or the fourth in the Dublin Region.",
+    "votes": "2-0",
+    "window": "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin."
+   },
+   "evidences": [
+    {
+     "paper_id": "d245d10220c1a7482e19dcc11fb74625116d7f7b",
+     "source_title": "technologicaluniversityd",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin.",
+     "page": 1,
+     "snippet": "The new university will add to a",
+     "reason": "The passage does not state that the university is the eighth in Ireland or the fourth in the Dublin Region.",
+     "votes": "2-0",
+     "window": "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the university is the eighth in Ireland or the fourth in the Dublin Region.",
+   "component_check": {
+    "found": [
+     "Trinity College Dublin is a university in the Dublin Region.",
+     "University College Dublin is a university in the Dublin Region."
+    ],
+    "missing": [
+     "It is the eighth university in Ireland.",
+     "It is the fourth university in the Dublin Region."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Trinity College Dublin is a university in the Dublin Region.",
+      "paper_id": "d245d10220c1a7482e19dcc11fb74625116d7f7b",
+      "source_title": "technologicaluniversityd",
+      "sentence": "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin.",
+      "page": 1
+     },
+     {
+      "component": "University College Dublin is a university in the Dublin Region.",
+      "paper_id": "d245d10220c1a7482e19dcc11fb74625116d7f7b",
+      "source_title": "technologicaluniversityd",
+      "sentence": "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts factual statements about the university's ranking and position relative to other universities. The citation is expected to prove these specific facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the eighth university in Ireland and the fourth in the Dublin Region",
+    "rewrite_suggestion": "It is a new technological university that will add to the existing cluster of Dublin universities, which includes Trinity College Dublin, University College Dublin, and Dublin City University.",
+    "proofs": [
+     "The new university will add to a powerful existing cluster of universities in Dublin, including Dublin City University, Trinity College Dublin (TCD) and University College Dublin."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the university is the eighth in Ireland and the fourth in Dublin, but the source text only mentions that it adds to a cluster of three existing Dublin universities. No information about the total number of universities in Ireland or Dublin is provided. Therefore, the numeric components are unsupported and require a citation or removal."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "In June 2017, the University of Chicago announced plans to renovate the interior and reopen the former station entrance as a part of their Arts Block complex.",
+   "markers": [
+    "garfieldstationctagreenl"
+   ],
+   "paper_ids": [
+    "b2e9dba9ac307954db9d0ca5ab543f96ec92490c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8258,
+   "evidence": {
+    "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+    "source_title": "garfieldstationctagreenl",
+    "supported": true,
+    "sentence": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: University of Chicago to",
+    "cosine": 0.8258,
+    "reason": "The passage states that the University of Chicago announced plans to renovate the interior and reopen the station as part of their Arts Block complex, matching the claim's assertion.",
+    "window": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard. The Chicago Transit Authority announced today that its board approved a contract for the University, through its Lake Park Associates subsidiary, to lease the historic station, following a competitive bidding process."
+   },
+   "evidences": [
+    {
+     "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+     "source_title": "garfieldstationctagreenl",
+     "supported": true,
+     "sentence": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: University of Chicago to",
+     "cosine": 0.8258,
+     "reason": "The passage states that the University of Chicago announced plans to renovate the interior and reopen the station as part of their Arts Block complex, matching the claim's assertion.",
+     "window": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard. The Chicago Transit Authority announced today that its board approved a contract for the University, through its Lake Park Associates subsidiary, to lease the historic station, following a competitive bidding process."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the University of Chicago announced plans to renovate the interior and reopen the station as part of their Arts Block complex, matching the claim's assertion.",
+   "covering": {
+    "covered": [
+     {
+      "component": "University of Chicago announced plans in June 2017",
+      "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+      "source_title": "garfieldstationctagreenl",
+      "sentence": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: University of Chicago to"
+     },
+     {
+      "component": "renovate the interior",
+      "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+      "source_title": "garfieldstationctagreenl",
+      "sentence": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: University of Chicago to"
+     },
+     {
+      "component": "reopen the former station entrance",
+      "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+      "source_title": "garfieldstationctagreenl",
+      "sentence": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: University of Chicago to"
+     },
+     {
+      "component": "as a part of their Arts Block complex",
+      "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+      "source_title": "garfieldstationctagreenl",
+      "sentence": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: University of Chicago to"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+      "source_title": "garfieldstationctagreenl",
+      "text": "(meta data) TITLE: University of Chicago to renovate, reopen historic CTA Green Line station (meta data) PUBLISHED DATETIME: 19-08-23 # University of Chicago to renovate, reopen historic CTA Green Line station Jun 14, 2017 The University of Chicago will renovate the interior of the shuttered, 125-year-old Chicago Transit Authority Green Line stationhouse in Washington Park as part of an ongoing effort to establish a major arts and culture corridor, called the Arts Block, along East Garfield Boulevard.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t8",
+   "text": "He and the Browns mutually parted ways before the teams' home opener on September 27, 2015.",
+   "markers": [
+    "andymoeller"
+   ],
+   "paper_ids": [
+    "ab218c883e537bed573898ae9e7019fe64cc1522"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ab218c883e537bed573898ae9e7019fe64cc1522",
+    "source_title": "andymoeller",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"The Browns and Offensive line Coach Andy Moeller have mutually agreed to part ways, effective immediately,\" the team said in a statement written in conjunction with Moeller's agent, Paul R. Sheehy.",
+    "page": 1,
+    "snippet": "\"The Browns and Offensive line Coach Andy",
+    "reason": "The passage does not mention the date September 27, 2015.",
+    "votes": "2-0",
+    "window": "\"The Browns and Offensive line Coach Andy Moeller have mutually agreed to part ways, effective immediately,\" the team said in a statement written in conjunction with Moeller's agent, Paul R. Sheehy."
+   },
+   "evidences": [
+    {
+     "paper_id": "ab218c883e537bed573898ae9e7019fe64cc1522",
+     "source_title": "andymoeller",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"The Browns and Offensive line Coach Andy Moeller have mutually agreed to part ways, effective immediately,\" the team said in a statement written in conjunction with Moeller's agent, Paul R. Sheehy.",
+     "page": 1,
+     "snippet": "\"The Browns and Offensive line Coach Andy",
+     "reason": "The passage does not mention the date September 27, 2015.",
+     "votes": "2-0",
+     "window": "\"The Browns and Offensive line Coach Andy Moeller have mutually agreed to part ways, effective immediately,\" the team said in a statement written in conjunction with Moeller's agent, Paul R. Sheehy."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the date September 27, 2015.",
+   "component_check": {
+    "found": [
+     "He and the Browns mutually parted ways"
+    ],
+    "missing": [
+     "before the teams' home opener on September 27, 2015"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He and the Browns mutually parted ways",
+      "paper_id": "ab218c883e537bed573898ae9e7019fe64cc1522",
+      "source_title": "andymoeller",
+      "sentence": "\"The Browns and Offensive line Coach Andy Moeller have mutually agreed to part ways, effective immediately,\" the team said in a statement written in conjunction with Moeller's agent, Paul R. Sheehy.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He and the Browns mutually parted ways before the teams' home opener on September 27, 2015.",
+    "reason": "The passage asserts a specific fact (the date of parting ways) that is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the timing of the parting (before the teams' home opener on September 27, 2015)",
+    "rewrite_suggestion": "Andy Moeller and the Browns mutually parted ways, as the team announced on September 29, 2015.",
+    "proofs": [
+     "\"The Browns and Offensive line Coach Andy Moeller have mutually agreed to part ways, effective immediately,\" the team said in a statement written in conjunction with Moeller's agent, Paul R. Sheehy."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence correctly proves that Moeller and the Browns mutually parted ways, but it does not mention any date. The claim adds a specific timeframe (before the home opener on September 27, 2015) that is not present in the source text. Moreover, the source's publication date of Sept. 29 implies the parting was announced after that date, creating a contradiction. Therefore, the author must either provide a citation for the date or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "It began digital publishing in 2008 and became Western Canada's largest online-only publication by 2016.",
+   "markers": [
+    "dailyhive"
+   ],
+   "paper_ids": [
+    "0314eb209aae996c970f82b9b40578648198304c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0314eb209aae996c970f82b9b40578648198304c",
+    "source_title": "dailyhive",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Childhood friends Karm Sumal and Manny Bahia launched Vancity Buzz in a South Vancouver basement in 2008.",
+    "page": 1,
+    "snippet": "Childhood friends Karm Sumal and Manny Bahia",
+    "reason": "The passage does not state that the publication became Western Canada's largest online-only publication by 2016.",
+    "votes": "2-0",
+    "window": "Childhood friends Karm Sumal and Manny Bahia launched Vancity Buzz in a South Vancouver basement in 2008. Eight years after its launch, it boasts 7.5 million monthly page views and a devout social media following that includes more than 304,000 fans on Facebook and another 153,000 Twitter followers. The site began as an information source for local events (its initial tagline was \"Your inside source for Vancouver happenings\") before eventually expanding into breaking news. The company's Vancouver success led the partners to launch a Calgary version, Calgary Buzz, in 2015."
+   },
+   "evidences": [
+    {
+     "paper_id": "0314eb209aae996c970f82b9b40578648198304c",
+     "source_title": "dailyhive",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Childhood friends Karm Sumal and Manny Bahia launched Vancity Buzz in a South Vancouver basement in 2008.",
+     "page": 1,
+     "snippet": "Childhood friends Karm Sumal and Manny Bahia",
+     "reason": "The passage does not state that the publication became Western Canada's largest online-only publication by 2016.",
+     "votes": "2-0",
+     "window": "Childhood friends Karm Sumal and Manny Bahia launched Vancity Buzz in a South Vancouver basement in 2008. Eight years after its launch, it boasts 7.5 million monthly page views and a devout social media following that includes more than 304,000 fans on Facebook and another 153,000 Twitter followers. The site began as an information source for local events (its initial tagline was \"Your inside source for Vancouver happenings\") before eventually expanding into breaking news. The company's Vancouver success led the partners to launch a Calgary version, Calgary Buzz, in 2015."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the publication became Western Canada's largest online-only publication by 2016.",
+   "component_check": {
+    "found": [
+     "It began digital publishing in 2008"
+    ],
+    "missing": [
+     "It became Western Canada's largest online-only publication by 2016"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "It began digital publishing in 2008",
+      "paper_id": "0314eb209aae996c970f82b9b40578648198304c",
+      "source_title": "dailyhive",
+      "sentence": "Childhood friends Karm Sumal and Manny Bahia launched Vancity Buzz in a South Vancouver basement in 2008.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "It began digital publishing in 2008 and became Western Canada's largest online-only publication by 2016.",
+    "reason": "The passage asserts specific facts (dates and achievements) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "became Western Canada's largest online-only publication by 2016",
+    "rewrite_suggestion": "It began digital publishing in 2008 and by 2016 had rebranded as Daily Hive and expanded from its Western Canada roots into Toronto and Montreal.",
+    "proofs": [
+     "Childhood friends Karm Sumal and Manny Bahia launched Vancity Buzz in a South Vancouver basement in 2008.",
+     "Vancity Buzz, an eight-year-old digital publisher specializing in hyper-local news coverage, has rebranded itself as Daily Hive as it expands from its Western Canada roots into Toronto and Montreal."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that the publication launched in 2008, but does not mention 'digital publishing' explicitly, though that can be found elsewhere in the source. Critically, the claim that it 'became Western Canada's largest online-only publication by 2016' is entirely unsupported\u2014the source never states any superlative about size or scope. Since one substantive component is unprovable from the source, the author must either add a citation for that subclaim or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Marie Wilcox is the last fluent speaker of Wukchumni, a dialect of Tule-Kaweah, which is a Yokutsan indigenous language spoken by the Tule-Kaweah Yokuts of California.",
+   "markers": [
+    "mariewilcox"
+   ],
+   "paper_ids": [
+    "975c9c675716878a51b99455e880ec2b1020058d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "975c9c675716878a51b99455e880ec2b1020058d",
+    "source_title": "mariewilcox",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "This Op-Doc tells the story of Marie Wilcox, the last fluent speaker of the Wukchumni language, and the dictionary she has created.",
+    "page": 1,
+    "snippet": "This Op-Doc tells the story of Marie",
+    "reason": "The passage does not state that Wukchumni is a dialect of Tule-Kaweah, nor that Tule-Kaweah is a Yokutsan indigenous language, nor that it was spoken by the Tule-Kaweah Yokuts of California.",
+    "votes": "2-0",
+    "window": "This Op-Doc tells the story of Marie Wilcox, the last fluent speaker of the Wukchumni language, and the dictionary she has created. Ms. Wilcox's tribe, the Wukchumni, is not recognized by the federal government. By Emmanuel Vaughan-Lee Aug. 18, 2014VideoThis short documentary profiles the last fluent speaker of Wukchumni, a Native American language, and her creation of a comprehensive dictionary. It is part of the broader Yokuts tribal group native to Central California."
+   },
+   "evidences": [
+    {
+     "paper_id": "975c9c675716878a51b99455e880ec2b1020058d",
+     "source_title": "mariewilcox",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "This Op-Doc tells the story of Marie Wilcox, the last fluent speaker of the Wukchumni language, and the dictionary she has created.",
+     "page": 1,
+     "snippet": "This Op-Doc tells the story of Marie",
+     "reason": "The passage does not state that Wukchumni is a dialect of Tule-Kaweah, nor that Tule-Kaweah is a Yokutsan indigenous language, nor that it was spoken by the Tule-Kaweah Yokuts of California.",
+     "votes": "2-0",
+     "window": "This Op-Doc tells the story of Marie Wilcox, the last fluent speaker of the Wukchumni language, and the dictionary she has created. Ms. Wilcox's tribe, the Wukchumni, is not recognized by the federal government. By Emmanuel Vaughan-Lee Aug. 18, 2014VideoThis short documentary profiles the last fluent speaker of Wukchumni, a Native American language, and her creation of a comprehensive dictionary. It is part of the broader Yokuts tribal group native to Central California."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Wukchumni is a dialect of Tule-Kaweah, nor that Tule-Kaweah is a Yokutsan indigenous language, nor that it was spoken by the Tule-Kaweah Yokuts of California.",
+   "component_check": {
+    "found": [
+     "Marie Wilcox is the last fluent speaker of Wukchumni.",
+     "Tule-Kaweah is a Yokutsan indigenous language.",
+     "The Tule-Kaweah Yokuts are of California."
+    ],
+    "missing": [
+     "Wukchumni is a dialect of Tule-Kaweah."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Marie Wilcox is the last fluent speaker of Wukchumni.",
+      "paper_id": "975c9c675716878a51b99455e880ec2b1020058d",
+      "source_title": "mariewilcox",
+      "sentence": "This Op-Doc tells the story of Marie Wilcox, the last fluent speaker of the Wukchumni language, and the dictionary she has created.",
+      "page": 1
+     },
+     {
+      "component": "Tule-Kaweah is a Yokutsan indigenous language.",
+      "paper_id": "975c9c675716878a51b99455e880ec2b1020058d",
+      "source_title": "mariewilcox",
+      "sentence": "It is part of the broader Yokuts tribal group native to Central California.",
+      "page": 1
+     },
+     {
+      "component": "The Tule-Kaweah Yokuts are of California.",
+      "paper_id": "975c9c675716878a51b99455e880ec2b1020058d",
+      "source_title": "mariewilcox",
+      "sentence": "It is part of the broader Yokuts tribal group native to Central California.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Marie Wilcox is the last fluent speaker of Wukchumni, a dialect of Tule-Kaweah, which is a Yokutsan indigenous language spoken by the Tule-Kaweah Yokuts of California.",
+    "reason": "The passage directly states facts about Marie Wilcox and the language she speaks, implying that the citation is expected to prove these factual assertions. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Wukchumni is a dialect of Tule-Kaweah, that Tule-Kaweah is a Yokutsan indigenous language, and that it is spoken by the Tule-Kaweah Yokuts of California \u2014 none of these details appear in the cited source.",
+    "rewrite_suggestion": "Marie Wilcox is the last fluent speaker of Wukchumni, a Yokuts language spoken in Central California.",
+    "proofs": [
+     "This Op-Doc tells the story of Marie Wilcox, the last fluent speaker of the Wukchumni language, and the dictionary she has created."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports that Marie Wilcox is the last fluent speaker of Wukchumni, but the claim adds unsourced specifications about Tule-Kaweah and Yokutsan classification that are not present anywhere in the source text. Since these substantive components cannot be proven from the source, the author must either add a citation for them or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Keane is an Advisory Board Member of Spirit of America, a 501(c)(3) organization that supports the safety and success of Americans serving abroad and the local people and partners they seek to help.",
+   "markers": [
+    "jackkeane"
+   ],
+   "paper_ids": [
+    "15c5adeaf3b566b945ecc3ced79eb1187dcadec3"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9144,
+   "evidence": {
+    "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+    "source_title": "jackkeane",
+    "supported": true,
+    "sentence": "General Keane is currently a member of the Spirit of America advisory board.",
+    "page": 1,
+    "snippet": "General Keane is currently a member of",
+    "cosine": 0.9144,
+    "reason": "The passage explicitly states that General Keane is a member of the Spirit of America advisory board, which aligns with the claim.",
+    "window": "They have two adult children, Matthew and Daniel. General Keane is currently a member of the Spirit of America advisory board. ### Get connected Learn more about our work helping America's troops, diplomats, and local people in the world's toughest places."
+   },
+   "evidences": [
+    {
+     "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+     "source_title": "jackkeane",
+     "supported": true,
+     "sentence": "General Keane is currently a member of the Spirit of America advisory board.",
+     "page": 1,
+     "snippet": "General Keane is currently a member of",
+     "cosine": 0.9144,
+     "reason": "The passage explicitly states that General Keane is a member of the Spirit of America advisory board, which aligns with the claim.",
+     "window": "They have two adult children, Matthew and Daniel. General Keane is currently a member of the Spirit of America advisory board. ### Get connected Learn more about our work helping America's troops, diplomats, and local people in the world's toughest places."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that General Keane is a member of the Spirit of America advisory board, which aligns with the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Keane is an Advisory Board Member of Spirit of America",
+      "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+      "source_title": "jackkeane",
+      "sentence": "General Keane is currently a member of the Spirit of America advisory board.",
+      "page": 1,
+      "snippet": "General Keane is currently a member of"
+     },
+     {
+      "component": "Spirit of America supports the safety and success of Americans serving abroad",
+      "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+      "source_title": "jackkeane",
+      "sentence": "### Get connected Learn more about our work helping America's troops, diplomats, and local people in the world's toughest places.",
+      "page": 1,
+      "snippet": "### Get connected Learn more about our"
+     },
+     {
+      "component": "Spirit of America supports the local people and partners Americans serving abroad seek to help",
+      "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+      "source_title": "jackkeane",
+      "sentence": "### Get connected Learn more about our work helping America's troops, diplomats, and local people in the world's toughest places.",
+      "page": 1,
+      "snippet": "### Get connected Learn more about our"
+     }
+    ],
+    "uncovered": [
+     "Spirit of America is a 501(c)(3) organization"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+      "source_title": "jackkeane",
+      "text": "General Keane is currently a member of the Spirit of America advisory board. ### Get connected Learn more about our work helping America's troops, diplomats, and local people in the world's toughest places.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that Spirit of America is a 501(c)(3) organization and that its mission includes 'supports the safety and success' and 'partners' \u2014 none of these details appear in the cited source text.",
+    "rewrite_suggestion": "Keane is an Advisory Board Member of Spirit of America, an organization that helps America's troops, diplomats, and local people in the world's toughest places.",
+    "proofs": [
+     "General Keane is currently a member of the Spirit of America advisory board.",
+     "Learn more about our work helping America's troops, diplomats, and local people in the world's toughest places."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences confirm Keane's board membership and that the organization helps troops, diplomats, and local people, but the claim adds a specific tax-exempt status (501(c)(3)) and mission phrases ('safety and success', 'partners') that are absent from the source text. Those unsourced components cannot be proven from the provided source, so the author must either supply a separate citation or revise the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "As of April 2013, the movie is reported to have survived but without a projection print as of yet.",
+   "markers": [
+    "theinsideofthecup"
+   ],
+   "paper_ids": [
+    "414eb47f068b65ad78f99a9eb6a2995043144d3e"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "414eb47f068b65ad78f99a9eb6a2995043144d3e",
+    "source_title": "theinsideofthecup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab.",
+    "page": 1,
+    "snippet": "This will probably include some of the",
+    "reason": "The passage explicitly states that 'Inside of the Cup (surviving but so far with no projection print)' and the claim states 'As of April 2013, the movie is reported to have survived but without a projection print as of yet.' The date is not explicitly mentioned in the passage, but the core assertion is supported.",
+    "votes": "2-0",
+    "window": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab."
+   },
+   "evidences": [
+    {
+     "paper_id": "414eb47f068b65ad78f99a9eb6a2995043144d3e",
+     "source_title": "theinsideofthecup",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab.",
+     "page": 1,
+     "snippet": "This will probably include some of the",
+     "reason": "The passage explicitly states that 'Inside of the Cup (surviving but so far with no projection print)' and the claim states 'As of April 2013, the movie is reported to have survived but without a projection print as of yet.' The date is not explicitly mentioned in the passage, but the core assertion is supported.",
+     "votes": "2-0",
+     "window": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that 'Inside of the Cup (surviving but so far with no projection print)' and the claim states 'As of April 2013, the movie is reported to have survived but without a projection print as of yet.' The date is not explicitly mentioned in the passage, but the core assertion is supported.",
+   "covering": {
+    "covered": [
+     {
+      "component": "movie survived as of April 2013",
+      "paper_id": "414eb47f068b65ad78f99a9eb6a2995043144d3e",
+      "source_title": "theinsideofthecup",
+      "sentence": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab.",
+      "page": 1,
+      "snippet": "This will probably include some of the"
+     },
+     {
+      "component": "movie without a projection print as of yet",
+      "paper_id": "414eb47f068b65ad78f99a9eb6a2995043144d3e",
+      "source_title": "theinsideofthecup",
+      "sentence": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab.",
+      "page": 1,
+      "snippet": "This will probably include some of the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "414eb47f068b65ad78f99a9eb6a2995043144d3e",
+      "source_title": "theinsideofthecup",
+      "text": "This will probably include some of the director's American films: Social Hypocrites (now restored), Flash of the Emerald (the one surviving reel), Inside of the Cup (surviving but so far with no projection print), Eye for Eye (two surviving reals), Sisters, and the French film Le Nabab.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "The organization aims to reform Taiwan's referendum laws and push for legislative review of the CSSTA, along with other cross-strait pacts and economic bills.",
+   "markers": [
+    "sunflowerstudentmovement"
+   ],
+   "paper_ids": [
+    "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.93,
+   "evidence": {
+    "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+    "source_title": "sunflowerstudentmovement",
+    "supported": true,
+    "sentence": "In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said.",
+    "page": 1,
+    "snippet": "In its broader efforts to push for",
+    "cosine": 0.93,
+    "reason": "The passage states the organization aims to amend the Referendum Act and will discuss draft bills on issues including legislative review of a trade-in-services pact with China, which supports the claim's assertions about reforming referendum laws and pushing for legislative review of the CSSTA and other cross-strait pacts.",
+    "window": "To this end, it will launch a petition seeking at least 100,000 signatures within six months, for an amendment to the Referendum Act, Lin said at a press conference. In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said. The discussions will also include legislative review of a trade-in-services pact with China, he said, referring to the issue that spurred the student-led protests in Taiwan in March."
+   },
+   "evidences": [
+    {
+     "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+     "source_title": "sunflowerstudentmovement",
+     "supported": true,
+     "sentence": "In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said.",
+     "page": 1,
+     "snippet": "In its broader efforts to push for",
+     "cosine": 0.93,
+     "reason": "The passage states the organization aims to amend the Referendum Act and will discuss draft bills on issues including legislative review of a trade-in-services pact with China, which supports the claim's assertions about reforming referendum laws and pushing for legislative review of the CSSTA and other cross-strait pacts.",
+     "window": "To this end, it will launch a petition seeking at least 100,000 signatures within six months, for an amendment to the Referendum Act, Lin said at a press conference. In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said. The discussions will also include legislative review of a trade-in-services pact with China, he said, referring to the issue that spurred the student-led protests in Taiwan in March."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the organization aims to amend the Referendum Act and will discuss draft bills on issues including legislative review of a trade-in-services pact with China, which supports the claim's assertions about reforming referendum laws and pushing for legislative review of the CSSTA and other cross-strait pacts.",
+   "covering": {
+    "covered": [
+     {
+      "component": "organization aims to reform Taiwan's referendum laws",
+      "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+      "source_title": "sunflowerstudentmovement",
+      "sentence": "Lin Fei-fan and Chen Wei-ting, the two main leaders of a recent student-led occupation of the Legislature, established a new organization on Sunday with the primary aim of pushing for reform of the country's referendum law.",
+      "page": 1,
+      "snippet": "Lin Fei-fan and Chen Wei-ting, the two"
+     },
+     {
+      "component": "push for legislative review of the CSSTA",
+      "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+      "source_title": "sunflowerstudentmovement",
+      "sentence": "The discussions will also include legislative review of a trade-in-services pact with China, he said, referring to the issue that spurred the student-led protests in Taiwan in March.",
+      "page": 1,
+      "snippet": "The discussions will also include legislative review"
+     },
+     {
+      "component": "push for legislative review of other cross-strait pacts",
+      "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+      "source_title": "sunflowerstudentmovement",
+      "sentence": "In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said.",
+      "page": 1,
+      "snippet": "In its broader efforts to push for"
+     },
+     {
+      "component": "push for legislative review of economic bills",
+      "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+      "source_title": "sunflowerstudentmovement",
+      "sentence": "In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said.",
+      "page": 1,
+      "snippet": "In its broader efforts to push for"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+      "source_title": "sunflowerstudentmovement",
+      "text": "Lin Fei-fan and Chen Wei-ting, the two main leaders of a recent student-led occupation of the Legislature, established a new organization on Sunday with the primary aim of pushing for reform of the country's referendum law. Specifically, the new group, called Taiwan March, will advocate lowering the voter turnout threshold for a national referendum, which is currently 50 percent. To this end, it will launch a petition seeking at least 100,000 signatures within six months, for an amendment to the Referendum Act, Lin said at a press conference. In its broader efforts to push for political reforms, Taiwan March will collaborate with other civic groups to discuss draft bills on public issues such as free economic pilot zones in Taiwan and oversight of cross-strait agreements, Lin said. The discussions will also include legislative review of a trade-in-services pact with China, he said, referring to the issue that spurred the student-led protests in Taiwan in March.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t14",
+   "text": "Olivier offered her the chance to work and study at the Bristol Old Vic, advising her to play anything they threw at her to get experience; she was under contract to the Rank Organisation, which vetoed the idea.",
+   "markers": [
+    "jeansimmons"
+   ],
+   "paper_ids": [
+    "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8",
+    "source_title": "jeansimmons",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation.",
+    "page": 1,
+    "snippet": "She received the first of her Oscar",
+    "reason": "The passage states that Olivier suggested she go to drama school, and this was vetoed by the Rank Organisation. This directly supports the claim that Olivier offered her the chance to work and study, and that the Rank Organisation vetoed the idea.",
+    "votes": "2-0",
+    "window": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation."
+   },
+   "evidences": [
+    {
+     "paper_id": "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8",
+     "source_title": "jeansimmons",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation.",
+     "page": 1,
+     "snippet": "She received the first of her Oscar",
+     "reason": "The passage states that Olivier suggested she go to drama school, and this was vetoed by the Rank Organisation. This directly supports the claim that Olivier offered her the chance to work and study, and that the Rank Organisation vetoed the idea.",
+     "votes": "2-0",
+     "window": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Olivier suggested she go to drama school, and this was vetoed by the Rank Organisation. This directly supports the claim that Olivier offered her the chance to work and study, and that the Rank Organisation vetoed the idea.",
+   "covering": {
+    "covered": [
+     {
+      "component": "she was under contract to the Rank Organisation",
+      "paper_id": "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8",
+      "source_title": "jeansimmons",
+      "sentence": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation.",
+      "page": 1,
+      "snippet": "She received the first of her Oscar"
+     },
+     {
+      "component": "Rank Organisation vetoed the idea [of working/studying at Bristol Old Vic]",
+      "paper_id": "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8",
+      "source_title": "jeansimmons",
+      "sentence": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation.",
+      "page": 1,
+      "snippet": "She received the first of her Oscar"
+     }
+    ],
+    "uncovered": [
+     "Olivier offered her the chance to work and study at the Bristol Old Vic",
+     "Olivier advising her to play anything they threw at her to get experience",
+     "Olivier's advice to play anything to gain experience"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8",
+      "source_title": "jeansimmons",
+      "text": "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not mention Olivier offering her the chance to work and study at the Bristol Old Vic or advising her to play anything they threw at her.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Olivier offering her the chance to work and study at the Bristol Old Vic or advising her to play anything they threw at her",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Olivier offered her the chance to work and study at the Bristol Old Vic and advised her to play anything they threw at her",
+    "rewrite_suggestion": "Olivier suggested she go to drama school, but the Rank Organisation, to which she was under contract, vetoed the idea.",
+    "proofs": [
+     "She received the first of her Oscar nominations for the part, though she had never read or seen a Shakespeare play before, and Olivier's suggestion that she go to drama school was vetoed by the Rank Organisation.",
+     "Rank then sold her contract to Howard Hughes, and she went to Hollywood in 1950 with her husband, Stewart Granger, then a major star and 16 years her senior, whom she had worked with on the romantic comedy Adam and Evelyne (1949)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes specific details not present in the source: 'work and study at the Bristol Old Vic' and the advice 'play anything they threw at her'. The source only states that Olivier suggested she go to drama school, which was vetoed by Rank. Although the source indicates she was under contract to Rank (via the later sale of her contract), the shown sentence only covers the veto of drama school, not the Bristol Old Vic or the advice. The author must either provide a citation for the missing details or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "On 21 June 2017, Becker was declared bankrupt by the Bankruptcy and Companies Court.",
+   "markers": [
+    "borisbecker"
+   ],
+   "paper_ids": [
+    "36eae8a4161a3622be897ef8e6567ca27360a703"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+    "source_title": "borisbecker",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015.",
+    "page": 1,
+    "snippet": "Becker, now 49, was declared bankrupt on",
+    "reason": "The passage does not state the date of the bankruptcy declaration.",
+    "votes": "2-0",
+    "window": "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015. Agreeing to make an immediate bankruptcy order, the judge said: \"I am not persuaded on the evidence before me that it can be described as credible evidence.\" Ms Registrar Derrett concluded, \"with a degree of regret\", that there was a lack of credible evidence that his \"substantial\" debt would be paid soon and she refused to adjourn the case for a further 28 days. \"It is not often the case that a professional person has a judgment (debt) outstanding against them since October 2015."
+   },
+   "evidences": [
+    {
+     "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+     "source_title": "borisbecker",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015.",
+     "page": 1,
+     "snippet": "Becker, now 49, was declared bankrupt on",
+     "reason": "The passage does not state the date of the bankruptcy declaration.",
+     "votes": "2-0",
+     "window": "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015. Agreeing to make an immediate bankruptcy order, the judge said: \"I am not persuaded on the evidence before me that it can be described as credible evidence.\" Ms Registrar Derrett concluded, \"with a degree of regret\", that there was a lack of credible evidence that his \"substantial\" debt would be paid soon and she refused to adjourn the case for a further 28 days. \"It is not often the case that a professional person has a judgment (debt) outstanding against them since October 2015."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the date of the bankruptcy declaration.",
+   "component_check": {
+    "found": [
+     "Becker was declared bankrupt"
+    ],
+    "missing": [
+     "On 21 June 2017",
+     "by the Bankruptcy and Companies Court"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Becker was declared bankrupt",
+      "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+      "source_title": "borisbecker",
+      "sentence": "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On 21 June 2017, Becker was declared bankrupt by the Bankruptcy and Companies Court.",
+    "reason": "The passage directly states a fact (date of bankruptcy) attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the date '21 June 2017'",
+    "rewrite_suggestion": "Becker was declared bankrupt by the Bankruptcy and Companies Court.",
+    "proofs": [
+     "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015.",
+     "The Bankruptcy and Companies Court heard that Becker, who has a home in Wimbledon, had offered to remortgage his \u20ac6 million property (\u00a35.2m) in Majorca as part of a deal to pay off the debt."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Becker, now 49, was declared bankrupt on Wednesday over undisclosed sums of money he has owed to the London-based private bankers Arbuthnot Latham & Co, since October 2015.",
+     "why": "This sentence indicates the bankruptcy occurred on a Wednesday in 2019 (when Becker was 49), contradicting the claim's date of 21 June 2017."
+    },
+    "why": "The claim specifies a date of '21 June 2017', but the source text provides no support for that date and instead implies a bankruptcy in 2019 (article published August 2019, Becker described as 49). Since the date component is entirely absent from the source and conflicts with the source's timeline, the author must either provide a citation for that date or rewrite the claim to remove it. The other components (Becker, bankruptcy, and court) are provable from the source but not fully covered by the shown sentence for the court; however, the missing date makes this an author-side fix."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "The church later became a United Church in 1925 which was closed in 1968 and the building sold for $100 and moved to the Methodist Church camp at Arlington Beach on nearby Last Mountain Lake.",
+   "markers": [
+    "cymricsaskatchewan"
+   ],
+   "paper_ids": [
+    "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5",
+    "source_title": "cymricsaskatchewan",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church.",
+    "page": 1,
+    "snippet": "In 1968, Cymric United Church is purchased",
+    "reason": "The passage does not state that the church became a United Church in 1925 or that it was moved to the Methodist Church camp.",
+    "votes": "2-0",
+    "window": "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church."
+   },
+   "evidences": [
+    {
+     "paper_id": "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5",
+     "source_title": "cymricsaskatchewan",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church.",
+     "page": 1,
+     "snippet": "In 1968, Cymric United Church is purchased",
+     "reason": "The passage does not state that the church became a United Church in 1925 or that it was moved to the Methodist Church camp.",
+     "votes": "2-0",
+     "window": "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the church became a United Church in 1925 or that it was moved to the Methodist Church camp.",
+   "component_check": {
+    "found": [
+     "The building was sold for $100",
+     "The building was moved to the Methodist Church camp at Arlington Beach"
+    ],
+    "missing": [
+     "The church became a United Church in 1925",
+     "The church was closed in 1968"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The building was sold for $100",
+      "paper_id": "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5",
+      "source_title": "cymricsaskatchewan",
+      "sentence": "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church.",
+      "page": 1
+     },
+     {
+      "component": "The building was moved to the Methodist Church camp at Arlington Beach",
+      "paper_id": "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5",
+      "source_title": "cymricsaskatchewan",
+      "sentence": "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (dates, sale price, location) that are directly attributed to the cited source and are expected to be proven by it. There is no indication that the citation is only for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the church became a United Church in 1925 and that it was closed in 1968 is not supported by the source. The source does not mention a 1925 date or explicitly state that the church closed.",
+    "rewrite_suggestion": "In 1968, the Cymric United Church building was purchased for $100 and moved to Arlington Beach, a camp operated by the Free Methodist Church on Last Mountain Lake, where it continued to be used as a church.",
+    "proofs": [
+     "In 1968, Cymric United Church is purchased for $100.00 and moved to Arlington Beach and kept as a church.",
+     "After Arlington Beach was sold to the Canadian Sunday School Mission, buildings were moved and converted into dorms, and a large tabernacle was built for 300 people.",
+     "in 1960, the Free Methodist Church in Canada bought Arlington Beach from the Canadian Sunday School Mission for $14,000.00.",
+     "History \u2013 Last Mountain Valley No. 250 Last Mountain Regional Park NE side of Last Mountain Lake."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes components that are not provable from the cited source: the church becoming a United Church in 1925 and being closed in 1968 are not mentioned in the source text. Other components (sale, move, location) are supported by the source but were only partially shown by the tool. Because at least one substantive component is unprovable from the source, the author must either add a citation for those parts or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "It also speaks about their biggest accomplishments and that without their fans it would feel empty.",
+   "markers": [
+    "makeitrightbtssong"
+   ],
+   "paper_ids": [
+    "8dbf98812d8f9122a1a309ebfc00e41c73793a93"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8853,
+   "evidence": {
+    "paper_id": "8dbf98812d8f9122a1a309ebfc00e41c73793a93",
+    "source_title": "makeitrightbtssong",
+    "supported": true,
+    "sentence": "They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones.",
+    "page": 1,
+    "snippet": "They sing that their most successful moments",
+    "cosine": 0.8853,
+    "reason": "The passage states that BTS sings about their most successful moments feeling like a desert without their fans, which directly supports the claim that their biggest accomplishments would feel empty without their fans.",
+    "window": "It's about BTS and those they count on. They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones. Early on, it was revealed that the themes of Map of the Soul: Persona are grounded in Swiss psychoanalyst Carl Jung's theories of psychology, \"persona\" being an archetype of the human mind that deals with who we present ourselves to the world."
+   },
+   "evidences": [
+    {
+     "paper_id": "8dbf98812d8f9122a1a309ebfc00e41c73793a93",
+     "source_title": "makeitrightbtssong",
+     "supported": true,
+     "sentence": "They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones.",
+     "page": 1,
+     "snippet": "They sing that their most successful moments",
+     "cosine": 0.8853,
+     "reason": "The passage states that BTS sings about their most successful moments feeling like a desert without their fans, which directly supports the claim that their biggest accomplishments would feel empty without their fans.",
+     "window": "It's about BTS and those they count on. They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones. Early on, it was revealed that the themes of Map of the Soul: Persona are grounded in Swiss psychoanalyst Carl Jung's theories of psychology, \"persona\" being an archetype of the human mind that deals with who we present ourselves to the world."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that BTS sings about their most successful moments feeling like a desert without their fans, which directly supports the claim that their biggest accomplishments would feel empty without their fans.",
+   "covering": {
+    "covered": [
+     {
+      "component": "accomplishments would feel empty without fans",
+      "paper_id": "8dbf98812d8f9122a1a309ebfc00e41c73793a93",
+      "source_title": "makeitrightbtssong",
+      "sentence": "They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones.",
+      "page": 1,
+      "snippet": "They sing that their most successful moments"
+     }
+    ],
+    "uncovered": [
+     "biggest accomplishments"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8dbf98812d8f9122a1a309ebfc00e41c73793a93",
+      "source_title": "makeitrightbtssong",
+      "text": "They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones.",
+      "n_used": 1
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones."
+     ],
+     "why": "The shown sentence covers both components of the claim: it mentions 'their most successful moments' (biggest accomplishments) and states that without fans it would feel like a desert (empty). No components are missing or contradicted."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "They sing that their most successful moments (described as \"the sea\"), would feel like a desert without their fans and loved ones."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence covers both components of the claim: it mentions 'their most successful moments' (biggest accomplishments) and states that without fans it would feel like a desert (empty). No components are missing or contradicted."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "He was elected a knight of the shire (MP) for Monmouthshire in 1584, 1586 and 1593.",
+   "markers": [
+    "williamherbertplanter"
+   ],
+   "paper_ids": [
+    "c001e28a799914adccafa2addcb19adf547f3d97"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c001e28a799914adccafa2addcb19adf547f3d97",
+    "source_title": "williamherbertplanter",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "As knight for Monmouthshire, he was appointed to the subsidy committees on 24 Feb. 1585, 22 Feb. 1587 and 26 Feb. 1593.5 At home, Herbert planned a Welsh college to remedy the backwardness in religion of his fellow-countrymen.",
+    "page": 1,
+    "snippet": "As knight for Monmouthshire, he was appointed",
+    "reason": "The passage does not state that he was elected a knight of the shire (MP) for Monmouthshire in 1584 and 1586.",
+    "votes": "2-0",
+    "window": "As knight for Monmouthshire, he was appointed to the subsidy committees on 24 Feb. 1585, 22 Feb. 1587 and 26 Feb. 1593.5 At home, Herbert planned a Welsh college to remedy the backwardness in religion of his fellow-countrymen. 1593, before the end of the Parliament of that year."
+   },
+   "evidences": [
+    {
+     "paper_id": "c001e28a799914adccafa2addcb19adf547f3d97",
+     "source_title": "williamherbertplanter",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "As knight for Monmouthshire, he was appointed to the subsidy committees on 24 Feb. 1585, 22 Feb. 1587 and 26 Feb. 1593.5 At home, Herbert planned a Welsh college to remedy the backwardness in religion of his fellow-countrymen.",
+     "page": 1,
+     "snippet": "As knight for Monmouthshire, he was appointed",
+     "reason": "The passage does not state that he was elected a knight of the shire (MP) for Monmouthshire in 1584 and 1586.",
+     "votes": "2-0",
+     "window": "As knight for Monmouthshire, he was appointed to the subsidy committees on 24 Feb. 1585, 22 Feb. 1587 and 26 Feb. 1593.5 At home, Herbert planned a Welsh college to remedy the backwardness in religion of his fellow-countrymen. 1593, before the end of the Parliament of that year."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that he was elected a knight of the shire (MP) for Monmouthshire in 1584 and 1586.",
+   "component_check": {
+    "found": [
+     "He was elected a knight of the shire (MP) for Monmouthshire in 1586"
+    ],
+    "missing": [
+     "He was elected a knight of the shire (MP) for Monmouthshire in 1584",
+     "He was elected a knight of the shire (MP) for Monmouthshire in 1593"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He was elected a knight of the shire (MP) for Monmouthshire in 1586",
+      "paper_id": "c001e28a799914adccafa2addcb19adf547f3d97",
+      "source_title": "williamherbertplanter",
+      "sentence": "As knight for Monmouthshire, he was appointed to the subsidy committees on 24 Feb. 1585, 22 Feb. 1587 and 26 Feb. 1593.5 At home, Herbert planned a Welsh college to remedy the backwardness in religion of his fellow-countrymen.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (election years and constituency) that are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Of the two other committees to which he was appointed in 1584 one was concerned with Welsh affairs (19 Dec.), and the other with grain and game (date unknown).",
+     "In 1586 he introduced a bill concerning orphans in Monmouthshire (4 Nov.) and spoke the same day in the debate on Mary Queen of Scots.",
+     "As knight for Monmouthshire, he was appointed to the subsidy committees on 24 Feb. 1585, 22 Feb. 1587 and 26 Feb. 1593."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool's shown sentences mention only subsidy committee appointments in 1585, 1587, and 1593, but do not cover the claim's components of being elected MP in 1584, 1586, and 1593. However, the source text contains sentences that prove each component: committee appointment in 1584, introduction of a bill in 1586, and the designation 'knight for Monmouthshire' with a 1593 subsidy committee appointment. Therefore the proof exists in the source but was not shown, so the tool must display these correct sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t19",
+   "text": "The film had an early screening at Disney's Hollywood Studios on June 8, 2019.",
+   "markers": [
+    "toystory4"
+   ],
+   "paper_ids": [
+    "186ca31c604f5241274bd10a0f7557631e13e4ad"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9051,
+   "evidence": {
+    "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+    "source_title": "toystory4",
+    "supported": true,
+    "sentence": "Activities culminated in a special surprise following a screening of the film when filmmakers Josh Cooley, Mark Nielsen and Jonas Rivera, and voice cast members Tom Hanks (voice of Woody), Tim Allen (voice of Buzz Lightyear), Annie Potts (voice of Bo Peep), Tony Hale (voice of Forky), Keegan-Michael Key (voice of Ducky) and Keanu Reeves (voice of Duke Caboom) showed up in the theater to greet guests.",
+    "page": 1,
+    "snippet": "Activities culminated in a special surprise following",
+    "cosine": 0.9051,
+    "reason": "The passage states that Tom Hanks and Tim Allen visited Disney's Hollywood Studios on June 8, 2019, and that a screening of the film was followed by a surprise appearance from the filmmakers and voice cast members.",
+    "window": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks and Tim Allen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. Activities culminated in a special surprise following a screening of the film when filmmakers Josh Cooley, Mark Nielsen and Jonas Rivera, and voice cast members Tom Hanks (voice of Woody), Tim Allen (voice of Buzz Lightyear), Annie Potts (voice of Bo Peep), Tony Hale (voice of Forky), Keegan-Michael Key (voice of Ducky) and Keanu Reeves (voice of Duke Caboom) showed up in the theater to greet guests. Check out some more photos below of the cast meeting with their favorite Toy Story characters!"
+   },
+   "evidences": [
+    {
+     "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+     "source_title": "toystory4",
+     "supported": true,
+     "sentence": "Activities culminated in a special surprise following a screening of the film when filmmakers Josh Cooley, Mark Nielsen and Jonas Rivera, and voice cast members Tom Hanks (voice of Woody), Tim Allen (voice of Buzz Lightyear), Annie Potts (voice of Bo Peep), Tony Hale (voice of Forky), Keegan-Michael Key (voice of Ducky) and Keanu Reeves (voice of Duke Caboom) showed up in the theater to greet guests.",
+     "page": 1,
+     "snippet": "Activities culminated in a special surprise following",
+     "cosine": 0.9051,
+     "reason": "The passage states that Tom Hanks and Tim Allen visited Disney's Hollywood Studios on June 8, 2019, and that a screening of the film was followed by a surprise appearance from the filmmakers and voice cast members.",
+     "window": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks and Tim Allen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. Activities culminated in a special surprise following a screening of the film when filmmakers Josh Cooley, Mark Nielsen and Jonas Rivera, and voice cast members Tom Hanks (voice of Woody), Tim Allen (voice of Buzz Lightyear), Annie Potts (voice of Bo Peep), Tony Hale (voice of Forky), Keegan-Michael Key (voice of Ducky) and Keanu Reeves (voice of Duke Caboom) showed up in the theater to greet guests. Check out some more photos below of the cast meeting with their favorite Toy Story characters!"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Tom Hanks and Tim Allen visited Disney's Hollywood Studios on June 8, 2019, and that a screening of the film was followed by a surprise appearance from the filmmakers and voice cast members.",
+   "covering": {
+    "covered": [
+     {
+      "component": "film had an early screening",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "Activities culminated in a special surprise following a screening of the film when filmmakers Josh Cooley, Mark Nielsen and Jonas Rivera, and voice cast members Tom Hanks (voice of Woody), Tim Allen (voice of Buzz Lightyear), Annie Potts (voice of Bo Peep), Tony Hale (voice of Forky), Keegan-Michael Key (voice of Ducky) and Keanu Reeves (voice of Duke Caboom) showed up in the theater to greet guests.",
+      "page": 1,
+      "snippet": "Activities culminated in a special surprise following"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks, Annie Potts, Tim Allen, Tony Hale, Christina Hendricks and Keanu Reeves visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks,"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "(Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Tim Allen visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "(Photo by John Parra/Getty Images for Disney)"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "Filmmakers, voice talent and walk-around characters from Disney and Pixar's \"Toy Story 4\" descended upon Toy Story Land at Disney's Hollywood Studios in Orlando, Florida, to celebrate the upcoming release of the movie.",
+      "page": 1,
+      "snippet": "Filmmakers, voice talent and walk-around characters from"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks and Tim Allen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "(Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks, Annie Potts, Tim Allen, Tony Hale, Christina Hendricks, Keanu Reeves, Mark Nielsen, Josh Cooley and Jonas Rivera visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "(Photo by John Parra/Getty Images for Disney)"
+     },
+     {
+      "component": "at Disney's Hollywood Studios",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "(Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Jonas Rivera, Josh Cooley and Mark Nielsen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "(Photo by John Parra/Getty Images for Disney)"
+     },
+     {
+      "component": "on June 8, 2019",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks, Annie Potts, Tim Allen, Tony Hale, Christina Hendricks and Keanu Reeves visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks,"
+     },
+     {
+      "component": "on June 8, 2019",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks"
+     },
+     {
+      "component": "on June 8, 2019",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "(Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Tim Allen visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "(Photo by John Parra/Getty Images for Disney)"
+     },
+     {
+      "component": "on June 8, 2019",
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "sentence": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks and Tim Allen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "page": 1,
+      "snippet": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+      "source_title": "toystory4",
+      "text": "ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks, Annie Potts, Tim Allen, Tony Hale, Christina Hendricks and Keanu Reeves visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. Filmmakers, voice talent and walk-around characters from Disney and Pixar's \"Toy Story 4\" descended upon Toy Story Land at Disney's Hollywood Studios in Orlando, Florida, to celebrate the upcoming release of the movie. ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks and Tim Allen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. Activities culminated in a special surprise following a screening of the film when filmmakers Josh Cooley, Mark Nielsen and Jonas Rivera, and voice cast members Tom Hanks (voice of Woody), Tim Allen (voice of Buzz Lightyear), Annie Potts (voice of Bo Peep), Tony Hale (voice of Forky), Keegan-Michael Key (voice of Ducky) and Keanu Reeves (voice of Duke Caboom) showed up in the theater to greet guests. Check out some more photos below of the cast meeting with their favorite Toy Story characters! \"Toy Story 4\" opens in U.S. theaters on June 21, 2019. ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. (Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Tim Allen visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. (Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Annie Potts visits Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. (Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Jonas Rivera, Josh Cooley and Mark Nielsen visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida. (Photo by John Parra/Getty Images for Disney) ORLANDO, FLORIDA \u2013 JUNE 08: Tom Hanks, Annie Potts, Tim Allen, Tony Hale, Christina Hendricks, Keanu Reeves, Mark Nielsen, Josh Cooley and Jonas Rivera visit Toy Story Land at Disney's Hollywood Studios on June 08, 2019 in Orlando, Florida.",
+      "n_used": 8
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t20",
+   "text": "After the game was released in Europe, Nihilistic made demos of the game available for downloading over Xbox Live and PlayStation Network.",
+   "markers": [
+    "conan2007videogame"
+   ],
+   "paper_ids": [
+    "2469954577b7ef6e5595725a6a3b634e1d62b81b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+    "source_title": "conan2007videogame",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "THQ today announced that a new playable demo of its upcoming action title Conan has gone live on the Xbox Live Marketplace.",
+    "page": 1,
+    "snippet": "THQ today announced that a new playable",
+    "reason": "The passage does not mention Nihilistic as the developer that made the demos available.",
+    "votes": "2-0",
+    "window": "THQ today announced that a new playable demo of its upcoming action title Conan has gone live on the Xbox Live Marketplace. Hot on the heels of the 360 demo release, PlayStation 3 owners will be able to get the same demo on their own hardware on October 11th via the PlayStation Network Store."
+   },
+   "evidences": [
+    {
+     "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+     "source_title": "conan2007videogame",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "THQ today announced that a new playable demo of its upcoming action title Conan has gone live on the Xbox Live Marketplace.",
+     "page": 1,
+     "snippet": "THQ today announced that a new playable",
+     "reason": "The passage does not mention Nihilistic as the developer that made the demos available.",
+     "votes": "2-0",
+     "window": "THQ today announced that a new playable demo of its upcoming action title Conan has gone live on the Xbox Live Marketplace. Hot on the heels of the 360 demo release, PlayStation 3 owners will be able to get the same demo on their own hardware on October 11th via the PlayStation Network Store."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Nihilistic as the developer that made the demos available.",
+   "component_check": {
+    "found": [
+     "After the game was released in Europe"
+    ],
+    "missing": [
+     "Nihilistic made demos of the game available for downloading over Xbox Live and PlayStation Network"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "After the game was released in Europe",
+      "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+      "source_title": "conan2007videogame",
+      "sentence": "Genre: Action Release Date: October 23, 2007 (US) Release Date: September 28, 2007 (UK) Release Date: September 27, 2007 (AU) M for Mature Conan (X360)",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a factual event about the release of game demos, which is directly attributable to the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Nihilistic made demos of the game available (the source attributes the announcement to THQ and mentions a single demo, not multiple demos)",
+    "rewrite_suggestion": "After the game was released in Europe, a playable demo of the game was made available for downloading over Xbox Live and PlayStation Network.",
+    "proofs": [
+     "THQ today announced that a new playable demo of its upcoming action title Conan has gone live on the Xbox Live Marketplace.",
+     "Hot on the heels of the 360 demo release, PlayStation 3 owners will be able to get the same demo on their own hardware on October 11th via the PlayStation Network Store.",
+     "Release Date: September 28, 2007 (UK)",
+     "Release Date: September 27, 2007 (AU)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves the Xbox Live component. The source contains evidence for the European release date and PlayStation Network availability, but those are not shown. More critically, the source does not state that Nihilistic made the demo available (it says THQ announced) and refers to a single demo, not multiple demos. Therefore the claim cannot be supported as written; the author must either add a citation for the unsupported subclaim or rewrite to remove the unattributed actor and plural."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "b2e9dba9ac307954db9d0ca5ab543f96ec92490c": {
+    "title": "garfieldstationctagreenl",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "15c5adeaf3b566b945ecc3ced79eb1187dcadec3": {
+    "title": "jackkeane",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "0314eb209aae996c970f82b9b40578648198304c": {
+    "title": "dailyhive",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5": {
+    "title": "cymricsaskatchewan",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "414eb47f068b65ad78f99a9eb6a2995043144d3e": {
+    "title": "theinsideofthecup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "651cece343ea6c32378e54be60afc5a7e5439aa4": {
+    "title": "hallamfc",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "8dbf98812d8f9122a1a309ebfc00e41c73793a93": {
+    "title": "makeitrightbtssong",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ab218c883e537bed573898ae9e7019fe64cc1522": {
+    "title": "andymoeller",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c": {
+    "title": "sunflowerstudentmovement",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fa37fdfc449d6a5cf1f60c4bf53a95d10a46215b": {
+    "title": "albertasocialcreditparty",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "36eae8a4161a3622be897ef8e6567ca27360a703": {
+    "title": "borisbecker",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d245d10220c1a7482e19dcc11fb74625116d7f7b": {
+    "title": "technologicaluniversityd",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "705864000485279eaf28bda14a94f09409a13e69": {
+    "title": "2018challengetour",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "186ca31c604f5241274bd10a0f7557631e13e4ad": {
+    "title": "toystory4",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8": {
+    "title": "jeansimmons",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "c001e28a799914adccafa2addcb19adf547f3d97": {
+    "title": "williamherbertplanter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2469954577b7ef6e5595725a6a3b634e1d62b81b": {
+    "title": "conan2007videogame",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f076a0cf5a724cf3c9aead16e2ab87301b8118e4": {
+    "title": "williamsharney",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "30236d9d76199121c5d83fc49348a3b66f237637": {
+    "title": "abydoshellespont",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "975c9c675716878a51b99455e880ec2b1020058d": {
+    "title": "mariewilcox",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 21,
+   "supported": 9,
+   "unsupported": 11,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 15:10:39",
+  "marker_errors": [],
+  "processing_time_seconds": 328.1,
+  "source_hashes": {
+   "williamsharney.txt": "b58657c955a1c9d278211ddf2729e330950ba000",
+   "abydoshellespont.txt": "f402626c5d15f2f0a59e6b44c5bdff3ad6524ecd",
+   "hallamfc.txt": "935f13321ae8e7ceb2c32ec44f91ba20c2cbb82c",
+   "2018challengetour.txt": "eb8e18c9f26a500dff05f0c56a39d4ceea729e3e",
+   "albertasocialcreditparty.txt": "f81f9a49a76c4075220807ad450ecf98f6dd3910",
+   "technologicaluniversityd.txt": "ea3aeb3f34cf3ece6e036d0f9d1ea781a458f231",
+   "garfieldstationctagreenl.txt": "7b43b4a8649b9e56e71507cc942833d64ca3cb65",
+   "andymoeller.txt": "074c1a00cd75ed254e44a30b973886a192cee0e9",
+   "dailyhive.txt": "63cfdab4635b7277bf17d105e214f1b6c3304628",
+   "mariewilcox.txt": "d1df3ec0366a3aafe9f8ae0a6ebfacc2e760006b",
+   "jackkeane.txt": "41d69f1c12261de6b6e738d4cbee29ac662fb5ae",
+   "theinsideofthecup.txt": "b866fdb6d1263e496b11e9612aa35778f59a8709",
+   "sunflowerstudentmovement.txt": "6d6929ff59ca8e1162c150e3f19b431e973e8c1b",
+   "jeansimmons.txt": "c63cf4ffdeab844b9143648d2997014f5a1aeaaa",
+   "borisbecker.txt": "36a396bfb6784e0284df4cef22adc400dc84423f",
+   "cymricsaskatchewan.txt": "6d32df27149cd1d4e554a9264be2fad09a1f05c1",
+   "makeitrightbtssong.txt": "7974ea67b639200d707e657fa582f16f014db04c",
+   "williamherbertplanter.txt": "b82637c697a5bd2bc8efb70ff0874c283b9be554",
+   "toystory4.txt": "129d1a47f0bedf2789c82d279216fb102b2652bd",
+   "conan2007videogame.txt": "c95999fce1238b6587708b0f787d7c5de15873eb"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 307,
+    "prompt_tokens": 329457,
+    "completion_tokens": 14487,
+    "cost_usd": 0.03874
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 19,
+    "prompt_tokens": 78880,
+    "completion_tokens": 51113,
+    "cost_usd": 0.019788
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 11,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 14,
+   "actions": {
+    "add_citation_or_rewrite": 11,
+    "wrong_or_insufficient_evidence": 2,
+    "supported": 1
+   },
+   "proof_may_exist": [
+    "t18"
+   ],
+   "conflicts": [
+    "t15"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t17"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "f076a0cf5a724cf3c9aead16e2ab87301b8118e4",
+   "key": "williamsharney",
+   "filename": "williamsharney.txt",
+   "title": "williamsharney",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "30236d9d76199121c5d83fc49348a3b66f237637",
+   "key": "abydoshellespont",
+   "filename": "abydoshellespont.txt",
+   "title": "abydoshellespont",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "651cece343ea6c32378e54be60afc5a7e5439aa4",
+   "key": "hallamfc",
+   "filename": "hallamfc.txt",
+   "title": "hallamfc",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "705864000485279eaf28bda14a94f09409a13e69",
+   "key": "2018challengetour",
+   "filename": "2018challengetour.txt",
+   "title": "2018challengetour",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fa37fdfc449d6a5cf1f60c4bf53a95d10a46215b",
+   "key": "albertasocialcreditparty",
+   "filename": "albertasocialcreditparty.txt",
+   "title": "albertasocialcreditparty",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d245d10220c1a7482e19dcc11fb74625116d7f7b",
+   "key": "technologicaluniversityd",
+   "filename": "technologicaluniversityd.txt",
+   "title": "technologicaluniversityd",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b2e9dba9ac307954db9d0ca5ab543f96ec92490c",
+   "key": "garfieldstationctagreenl",
+   "filename": "garfieldstationctagreenl.txt",
+   "title": "garfieldstationctagreenl",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ab218c883e537bed573898ae9e7019fe64cc1522",
+   "key": "andymoeller",
+   "filename": "andymoeller.txt",
+   "title": "andymoeller",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0314eb209aae996c970f82b9b40578648198304c",
+   "key": "dailyhive",
+   "filename": "dailyhive.txt",
+   "title": "dailyhive",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "975c9c675716878a51b99455e880ec2b1020058d",
+   "key": "mariewilcox",
+   "filename": "mariewilcox.txt",
+   "title": "mariewilcox",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "15c5adeaf3b566b945ecc3ced79eb1187dcadec3",
+   "key": "jackkeane",
+   "filename": "jackkeane.txt",
+   "title": "jackkeane",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "414eb47f068b65ad78f99a9eb6a2995043144d3e",
+   "key": "theinsideofthecup",
+   "filename": "theinsideofthecup.txt",
+   "title": "theinsideofthecup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fe6bd26f3f58b1d8d04bed069801e846d2e0dd4c",
+   "key": "sunflowerstudentmovement",
+   "filename": "sunflowerstudentmovement.txt",
+   "title": "sunflowerstudentmovement",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c6e52e372a1a2c80705d9d9229bbf34c6e0004a8",
+   "key": "jeansimmons",
+   "filename": "jeansimmons.txt",
+   "title": "jeansimmons",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "36eae8a4161a3622be897ef8e6567ca27360a703",
+   "key": "borisbecker",
+   "filename": "borisbecker.txt",
+   "title": "borisbecker",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c9051a79dcd62b194bdb8b548d6bbd3ceb3880c5",
+   "key": "cymricsaskatchewan",
+   "filename": "cymricsaskatchewan.txt",
+   "title": "cymricsaskatchewan",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8dbf98812d8f9122a1a309ebfc00e41c73793a93",
+   "key": "makeitrightbtssong",
+   "filename": "makeitrightbtssong.txt",
+   "title": "makeitrightbtssong",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c001e28a799914adccafa2addcb19adf547f3d97",
+   "key": "williamherbertplanter",
+   "filename": "williamherbertplanter.txt",
+   "title": "williamherbertplanter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "186ca31c604f5241274bd10a0f7557631e13e4ad",
+   "key": "toystory4",
+   "filename": "toystory4.txt",
+   "title": "toystory4",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2469954577b7ef6e5595725a6a3b634e1d62b81b",
+   "key": "conan2007videogame",
+   "filename": "conan2007videogame.txt",
+   "title": "conan2007videogame",
+   "num_claims": 0
+  }
+ ]
+}

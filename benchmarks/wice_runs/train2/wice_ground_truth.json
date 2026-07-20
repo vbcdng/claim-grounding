@@ -1,0 +1,945 @@
+{
+ "split": "train",
+ "batch": 2,
+ "seed": 7,
+ "claims": {
+  "bradleycooper": {
+   "wice_id": "train37117",
+   "split_index": 494,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     87,
+     88
+    ],
+    [
+     87,
+     88,
+     89
+    ],
+    [
+     87,
+     88,
+     89,
+     90,
+     91
+    ]
+   ],
+   "n_source_sentences": 144
+  },
+  "museumlondon": {
+   "wice_id": "train47313",
+   "split_index": 1010,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     39
+    ],
+    [
+     39,
+     42
+    ],
+    [
+     39,
+     40
+    ],
+    [
+     39,
+     40,
+     42
+    ]
+   ],
+   "n_source_sentences": 78
+  },
+  "rorygaffney": {
+   "wice_id": "train28301",
+   "split_index": 1096,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 31
+  },
+  "princegeorgescountysheri": {
+   "wice_id": "train26109",
+   "split_index": 196,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     44,
+     45
+    ],
+    [
+     43,
+     44,
+     45
+    ]
+   ],
+   "n_source_sentences": 103
+  },
+  "diamondstingily": {
+   "wice_id": "train30584",
+   "split_index": 656,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     7,
+     29
+    ],
+    [
+     7,
+     23,
+     29
+    ],
+    [
+     7,
+     23,
+     24,
+     29
+    ],
+    [
+     7,
+     23,
+     24,
+     29
+    ]
+   ],
+   "n_source_sentences": 300
+  },
+  "stmarythevirgintarrantcr": {
+   "wice_id": "train41912",
+   "split_index": 479,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     18
+    ]
+   ],
+   "n_source_sentences": 136
+  },
+  "cliffordstarks": {
+   "wice_id": "train44669",
+   "split_index": 1249,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     28
+    ]
+   ],
+   "n_source_sentences": 146
+  },
+  "listofdeathnoteepisodes": {
+   "wice_id": "train14700",
+   "split_index": 27,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     18
+    ],
+    [
+     0,
+     18
+    ],
+    [
+     16,
+     18
+    ]
+   ],
+   "n_source_sentences": 86
+  },
+  "divnaljubojevi": {
+   "wice_id": "train06704",
+   "split_index": 692,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     26,
+     27
+    ]
+   ],
+   "n_source_sentences": 88
+  },
+  "phillester": {
+   "wice_id": "train42081",
+   "split_index": 209,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     18,
+     20
+    ],
+    [
+     17,
+     18,
+     19,
+     20
+    ]
+   ],
+   "n_source_sentences": 95
+  },
+  "thehongkongmassacre": {
+   "wice_id": "train35721",
+   "split_index": 628,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     9
+    ]
+   ],
+   "n_source_sentences": 46
+  },
+  "olgadanilov": {
+   "wice_id": "train34947",
+   "split_index": 4,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     29,
+     33,
+     34,
+     35
+    ]
+   ],
+   "n_source_sentences": 94
+  },
+  "kqfo": {
+   "wice_id": "train08907",
+   "split_index": 1057,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "n_source_sentences": 57
+  },
+  "insight": {
+   "wice_id": "train05550",
+   "split_index": 949,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     9,
+     10
+    ]
+   ],
+   "n_source_sentences": 136
+  },
+  "hanggliding": {
+   "wice_id": "train41652",
+   "split_index": 13,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 63
+  },
+  "thomasholmes1stbaronholm": {
+   "wice_id": "train37191",
+   "split_index": 15,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 114
+  },
+  "nevilleprice": {
+   "wice_id": "train30640",
+   "split_index": 1185,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     0,
+     33,
+     34,
+     38,
+     44,
+     47
+    ],
+    [
+     33,
+     34,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     0,
+     33,
+     34,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     38,
+     44,
+     47
+    ],
+    [
+     0,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     38,
+     44,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     38,
+     44,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     47
+    ],
+    [
+     0,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     35,
+     38,
+     44,
+     47
+    ],
+    [
+     0,
+     33,
+     34,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     29,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     28,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     35,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     28,
+     29,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47,
+     48
+    ],
+    [
+     28,
+     33,
+     34,
+     35,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     35,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     45,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     38,
+     43,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     29,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     47
+    ],
+    [
+     0,
+     28,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     47,
+     48
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     45,
+     47
+    ],
+    [
+     0,
+     28,
+     29,
+     33,
+     34,
+     35,
+     38,
+     43,
+     44,
+     47,
+     48
+    ]
+   ],
+   "n_source_sentences": 117
+  },
+  "espanolaexpress": {
+   "wice_id": "train49780",
+   "split_index": 154,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     11,
+     19
+    ],
+    [
+     5,
+     20,
+     21
+    ],
+    [
+     5,
+     11,
+     19
+    ],
+    [
+     11,
+     20,
+     21
+    ],
+    [
+     0,
+     20,
+     21
+    ],
+    [
+     0,
+     11,
+     19
+    ]
+   ],
+   "n_source_sentences": 117
+  },
+  "isaiahstewart": {
+   "wice_id": "train07338",
+   "split_index": 914,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     95
+    ],
+    [
+     0,
+     95
+    ]
+   ],
+   "n_source_sentences": 145
+  },
+  "alexandrupopescu": {
+   "wice_id": "train39198",
+   "split_index": 1131,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     0,
+     37,
+     48
+    ],
+    [
+     28,
+     37,
+     39
+    ],
+    [
+     0,
+     28,
+     37,
+     39
+    ],
+    [
+     0,
+     28,
+     37,
+     48
+    ],
+    [
+     20,
+     29,
+     37,
+     39
+    ],
+    [
+     0,
+     20,
+     29,
+     37,
+     39
+    ],
+    [
+     0,
+     20,
+     29,
+     37,
+     48
+    ],
+    [
+     20,
+     28,
+     29,
+     37,
+     39
+    ]
+   ],
+   "n_source_sentences": 55
+  },
+  "gmbtradeunion": {
+   "wice_id": "train15783",
+   "split_index": 240,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     38
+    ]
+   ],
+   "n_source_sentences": 64
+  },
+  "salamishahtillet": {
+   "wice_id": "train46324",
+   "split_index": 163,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     16
+    ]
+   ],
+   "n_source_sentences": 111
+  },
+  "michaelbaysunrealizedpro": {
+   "wice_id": "train38585",
+   "split_index": 1252,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 68
+  },
+  "solarpowerintheunitedkin": {
+   "wice_id": "train21465",
+   "split_index": 32,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 66
+  },
+  "waleedmajid": {
+   "wice_id": "train27994",
+   "split_index": 311,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     0
+    ]
+   ],
+   "n_source_sentences": 38
+  }
+ }
+}

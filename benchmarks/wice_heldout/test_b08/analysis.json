@@ -1,0 +1,2742 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 8 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Gaskell was born Elizabeth Cleghorn Stevenson on 29 September 1810 in Lindsey Row, Chelsea, London, at the house that is now 93 Cheyne Walk.",
+   "markers": [
+    "elizabethgaskell"
+   ],
+   "paper_ids": [
+    "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+    "source_title": "elizabethgaskell",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Elizabeth Gaskell Biography -",
+    "reason": "",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk."
+   },
+   "evidences": [
+    {
+     "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+     "source_title": "elizabethgaskell",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Elizabeth Gaskell Biography -",
+     "reason": "",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Gaskell was born Elizabeth Cleghorn Stevenson",
+      "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+      "source_title": "elizabethgaskell",
+      "sentence": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Elizabeth Gaskell Biography -"
+     },
+     {
+      "component": "on 29 September 1810",
+      "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+      "source_title": "elizabethgaskell",
+      "sentence": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Elizabeth Gaskell Biography -"
+     },
+     {
+      "component": "in Lindsey Row, Chelsea, London",
+      "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+      "source_title": "elizabethgaskell",
+      "sentence": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Elizabeth Gaskell Biography -"
+     },
+     {
+      "component": "at the house that is now 93 Cheyne Walk",
+      "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+      "source_title": "elizabethgaskell",
+      "sentence": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Elizabeth Gaskell Biography -"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+      "source_title": "elizabethgaskell",
+      "text": "(meta data) TITLE: Elizabeth Gaskell Biography - The Gaskell Society (meta data) PUBLISHER: https://www.facebook.com/pages/Elizabeth-Gaskell-and-her-Manchester-Home/105239599511435 Skip to Main Content The Gaskell Society Celebrating the life and work of Elizabeth Gaskell # Elizabeth Gaskell Biography \"To begin with the old rigmarole of childhood\u2026\" Wives and Daughters (1866) (Chapter 1) Elizabeth Gaskell Timeline Elizabeth Cleghorn Gaskell (1810-65) was born on 29 September 1810 in Lindsey Row, Chelsea, at the house which is now 93 Cheyne Walk.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t2",
+   "text": "Some individuals and religious groups, for example, retain beliefs or practices which involve acts contrary to established law, such as the use of cannabis by members of the Rastafari movement, the religious use of eagle feathers by non-Native Americans (contrary to the eagle feather law, 50 CFR 22), or the practice of polygamy amongst the LDS Church in the 19th century.",
+   "markers": [
+    "religiousintolerance"
+   ],
+   "paper_ids": [
+    "06a9329360396ccc2ef817ad61f4d3936564c078"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9079,
+   "evidence": {
+    "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+    "source_title": "religiousintolerance",
+    "supported": true,
+    "sentence": "From the 1860s to the 1880s, the United States government passed laws to make this religious practice illegal.",
+    "page": 1,
+    "snippet": "From the 1860s to the 1880s, the",
+    "cosine": 0.9079,
+    "reason": "The passage directly supports the claim that polygamy was practiced by the LDS Church in the 19th century and that this practice became contrary to established law.",
+    "window": "Following a revelation to Joseph Smith, the practice of plural marriage was instituted among Church members in the early 1840s (see section 132). From the 1860s to the 1880s, the United States government passed laws to make this religious practice illegal. These laws were eventually upheld by the U.S. Supreme Court."
+   },
+   "evidences": [
+    {
+     "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+     "source_title": "religiousintolerance",
+     "supported": true,
+     "sentence": "From the 1860s to the 1880s, the United States government passed laws to make this religious practice illegal.",
+     "page": 1,
+     "snippet": "From the 1860s to the 1880s, the",
+     "cosine": 0.9079,
+     "reason": "The passage directly supports the claim that polygamy was practiced by the LDS Church in the 19th century and that this practice became contrary to established law.",
+     "window": "Following a revelation to Joseph Smith, the practice of plural marriage was instituted among Church members in the early 1840s (see section 132). From the 1860s to the 1880s, the United States government passed laws to make this religious practice illegal. These laws were eventually upheld by the U.S. Supreme Court."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly supports the claim that polygamy was practiced by the LDS Church in the 19th century and that this practice became contrary to established law.",
+   "covering": {
+    "covered": [
+     {
+      "component": "practice of polygamy amongst the LDS Church in the 19th century",
+      "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+      "source_title": "religiousintolerance",
+      "sentence": "Press dispatches having been sent for political purposes, from Salt Lake City, which have been widely published, to the effect that the Utah Commission, in their recent report to the Secretary of the Interior, allege that plural marriages are still being solemnized and that forty or more such marriages have been contracted in Utah since last June or during the past year, also that in public discourses the leaders of the Church have taught, encouraged and urged the continuance of the practice of polygamy",
+      "page": 1,
+      "snippet": "Press dispatches having been sent for political"
+     },
+     {
+      "component": "practice of polygamy amongst the LDS Church in the 19th century",
+      "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+      "source_title": "religiousintolerance",
+      "sentence": "Following a revelation to Joseph Smith, the practice of plural marriage was instituted among Church members in the early 1840s (see section 132).",
+      "page": 1,
+      "snippet": "Following a revelation to Joseph Smith, the"
+     },
+     {
+      "component": "practice of polygamy amongst the LDS Church in the 19th century",
+      "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+      "source_title": "religiousintolerance",
+      "sentence": "Inasmuch as laws have been enacted by Congress forbidding plural marriages, which laws have been pronounced constitutional by the court of last resort, I hereby declare my intention to submit to those laws, and to use my influence with the members of the Church over which I preside to have them do likewise.",
+      "page": 1,
+      "snippet": "Inasmuch as laws have been enacted by"
+     }
+    ],
+    "uncovered": [
+     "use of cannabis by members of the Rastafari movement",
+     "religious use of eagle feathers by non-Native Americans (contrary to the eagle feather law, 50 CFR 22)"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+      "source_title": "religiousintolerance",
+      "text": "Following a revelation to Joseph Smith, the practice of plural marriage was instituted among Church members in the early 1840s (see section 132). From the 1860s to the 1880s, the United States government passed laws to make this religious practice illegal. These laws were eventually upheld by the U.S. Supreme Court. After receiving revelation, President Wilford Woodruff issued the following Manifesto, which was accepted by the Church as authoritative and binding on October 6, 1890. This led to the end of the practice of plural marriage in the Church. To Whom It May Concern: Press dispatches having been sent for political purposes, from Salt Lake City, which have been widely published, to the effect that the Utah Commission, in their recent report to the Secretary of the Interior, allege that plural marriages are still being solemnized and that forty or more such marriages have been contracted in Utah since last June or during the past year, also that in public discourses the leaders of the Church have taught, encouraged and urged the continuance of the practice of polygamy I, therefore, as President of The Church of Jesus Christ of Latter-day Saints, do hereby, in the most solemn manner, declare that these charges are false. We are not teaching polygamy or plural marriage, nor permitting any person to enter into its practice, and I deny that either forty or any other number of plural marriages have during that period been solemnized in our Temples or in any other place in the Territory. One case has been reported, in which the parties allege that the marriage was performed in the Endowment House, in Salt Lake City, in the Spring of 1889, but I have not been able to learn who performed the ceremony; whatever was done in this matter was without my knowledge. In consequence of this alleged occurrence the Endowment House was, by my instructions, taken down without delay. Inasmuch as laws have been enacted by Congress forbidding plural marriages, which laws have been pronounced constitutional by the court of last resort, I hereby declare my intention to submit to those laws, and to use my influence with the members of the Church over which I preside to have them do likewise.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not mention the Rastafari movement's use of cannabis or the religious use of eagle feathers by non-Native Americans.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the Rastafari movement's use of cannabis or the religious use of eagle feathers by non-Native Americans",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes two specific examples (cannabis use by Rastafari and eagle feather use by non-Native Americans) that are not mentioned anywhere in the cited source. The author must either add separate citations for those examples or remove them from the claim.",
+    "rewrite_suggestion": "Some individuals and religious groups, for example, retain beliefs or practices which involve acts contrary to established law, such as the practice of polygamy amongst the LDS Church in the 19th century.",
+    "proofs": [
+     "Following a revelation to Joseph Smith, the practice of plural marriage was instituted among Church members in the early 1840s (see section 132).",
+     "From the 1860s to the 1880s, the United States government passed laws to make this religious practice illegal.",
+     "Inasmuch as laws have been enacted by Congress forbidding plural marriages, which laws have been pronounced constitutional by the court of last resort, I hereby declare my intention to submit to those laws, and to use my influence with the members of the Church over which I preside to have them do likewise."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text (religiousintolerance) only discusses the practice of polygamy among the LDS Church and its conflict with U.S. law. The other two examples in the claim\u2014cannabis use by Rastafari and eagle feather use by non-Native Americans\u2014are entirely absent from the source. Therefore, the author must add citations for these unsourced components or rewrite the claim to include only the polygamy example, which is fully supported by the shown sentences."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "The hotel was used to provide hospitality to visitors who had jail related business.",
+   "markers": [
+    "oldtollandcountyjailandm"
+   ],
+   "paper_ids": [
+    "d18fd7223937d4027e8c458e05f09358e41403b4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7899,
+   "evidence": {
+    "paper_id": "d18fd7223937d4027e8c458e05f09358e41403b4",
+    "source_title": "oldtollandcountyjailandm",
+    "supported": true,
+    "sentence": "People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses.",
+    "page": 1,
+    "snippet": "People having business with the courts, and",
+    "cosine": 0.7899,
+    "reason": "The passage states the hotel was for people having business with the courts, which aligns with the claim of providing hospitality to visitors with jail-related business.",
+    "window": "Before a disastrous fire in 1893, there was an actual hotel attached to the jail It was known as the County House. People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses. After the courts moved to Rockville, the hotel was no longer needed, and when it burned to the ground it was replaced by a residence for the jailer and his family."
+   },
+   "evidences": [
+    {
+     "paper_id": "d18fd7223937d4027e8c458e05f09358e41403b4",
+     "source_title": "oldtollandcountyjailandm",
+     "supported": true,
+     "sentence": "People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses.",
+     "page": 1,
+     "snippet": "People having business with the courts, and",
+     "cosine": 0.7899,
+     "reason": "The passage states the hotel was for people having business with the courts, which aligns with the claim of providing hospitality to visitors with jail-related business.",
+     "window": "Before a disastrous fire in 1893, there was an actual hotel attached to the jail It was known as the County House. People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses. After the courts moved to Rockville, the hotel was no longer needed, and when it burned to the ground it was replaced by a residence for the jailer and his family."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the hotel was for people having business with the courts, which aligns with the claim of providing hospitality to visitors with jail-related business.",
+   "covering": {
+    "covered": [
+     {
+      "component": "hotel provided hospitality to visitors",
+      "paper_id": "d18fd7223937d4027e8c458e05f09358e41403b4",
+      "source_title": "oldtollandcountyjailandm",
+      "sentence": "People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses.",
+      "page": 1,
+      "snippet": "People having business with the courts, and"
+     },
+     {
+      "component": "visitors had jail related business",
+      "paper_id": "d18fd7223937d4027e8c458e05f09358e41403b4",
+      "source_title": "oldtollandcountyjailandm",
+      "sentence": "People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses.",
+      "page": 1,
+      "snippet": "People having business with the courts, and"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d18fd7223937d4027e8c458e05f09358e41403b4",
+      "source_title": "oldtollandcountyjailandm",
+      "text": "People having business with the courts, and other travelers, needed a place to stay, meals, and a livery stable to provide transportation or tend to the needs of their horses.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "He died at his home in Eaton Square in London on 18 April 1862 and was buried and commemorated by a table tomb at St John's Church at West Wickham in Bromley.",
+   "markers": [
+    "johnwestroyalnavyofficer"
+   ],
+   "paper_ids": [
+    "d39f660adf4f7bc16231f06a1b3109974ccd7f4e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d39f660adf4f7bc16231f06a1b3109974ccd7f4e",
+    "source_title": "johnwestroyalnavyofficer",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Born July 28th 1774 died April 18th 1862.",
+    "page": 1,
+    "snippet": "Born July 28th 1774 died April 18th",
+    "reason": "the passage does not state where he died or that he was buried and commemorated by a table tomb at St John's Church at West Wickham in Bromley",
+    "votes": "2-0",
+    "window": "Born July 28th 1774 died April 18th 1862. He was the son of Temple West, Esquire, a Lieutenant-Colonel, 1st Regiment of Guards, and representative of the family of the Wests. Formerly of the counties of Buckingham and Northampton to whom a tablet is inscribed in this church."
+   },
+   "evidences": [
+    {
+     "paper_id": "d39f660adf4f7bc16231f06a1b3109974ccd7f4e",
+     "source_title": "johnwestroyalnavyofficer",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Born July 28th 1774 died April 18th 1862.",
+     "page": 1,
+     "snippet": "Born July 28th 1774 died April 18th",
+     "reason": "the passage does not state where he died or that he was buried and commemorated by a table tomb at St John's Church at West Wickham in Bromley",
+     "votes": "2-0",
+     "window": "Born July 28th 1774 died April 18th 1862. He was the son of Temple West, Esquire, a Lieutenant-Colonel, 1st Regiment of Guards, and representative of the family of the Wests. Formerly of the counties of Buckingham and Northampton to whom a tablet is inscribed in this church."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state where he died or that he was buried and commemorated by a table tomb at St John's Church at West Wickham in Bromley",
+   "subject_guard": {
+    "subject": "Eaton Square",
+    "missing_from": [
+     "d39f660adf4f7bc16231f06a1b3109974ccd7f4e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (death date, burial location, commemoration) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here, indicating a 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the place of death (his home in Eaton Square in London) and the specific burial details (a table tomb at St John's Church at West Wickham in Bromley)",
+    "rewrite_suggestion": "He died on 18 April 1862 and was buried at West Wickham, Kent, where a tablet is inscribed in his memory.",
+    "proofs": [
+     "Grave at West Wickham, Kent",
+     "Here lie interred the remains of Admiral Sir John West, Knight Grand Cross of the most Honourable Order of the Bath and Admiral of the Fleet. Born July 28th 1774 died April 18th 1862."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms the death date (18 April 1862). The claim includes a specific place of death (Eaton Square) and burial at St John's Church with a table tomb, none of which are present in the source text. The source does mention burial at West Wickham and a tablet, but not the exact church or a table tomb. Therefore, the author must either add a citation for these unsupported details or rewrite the claim to match the source's content."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "His experience and views on the subject are amply expressed in the book titled \u2018Innocence of the Pen Questioned' that he published in 2009.",
+   "markers": [
+    "victorivan"
+   ],
+   "paper_ids": [
+    "06d78a7a9616337cecc2f2dea2b5c5d2a2e826e0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "06d78a7a9616337cecc2f2dea2b5c5d2a2e826e0",
+    "source_title": "victorivan",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(This is in fact a stated objective of the book) 'Innocence of the pen questioned' dwells on several aspects of Ivan's own journalistic experience, including but not limited to Ravaya, the newspaper he founded and owns and edits.",
+    "page": 1,
+    "snippet": "(This is in fact a stated objective",
+    "reason": "The publication date of the book is stated as September 2010, not 2009.",
+    "votes": "2-0",
+    "window": "(This is in fact a stated objective of the book) 'Innocence of the pen questioned' dwells on several aspects of Ivan's own journalistic experience, including but not limited to Ravaya, the newspaper he founded and owns and edits. (meta data) TITLE: Media in the dock \u2013 'Innocence of the pen questioned' - Sri Lanka Guardian ## Header Ads # Media in the dock \u2013 'Innocence of the pen questioned' November 21, 2010 Education, Journalism, Lasanda Kurukulasuriya by Lasanda Kurukulasuriya (November 21, Colombo, Sri Lanka Guardian) Victor Ivan's new book \"Innocence of the pen questioned\" (Ravaya publication, Sept.2010) makes its appearance at a crucial point in time in the trajectory of Sri Lankan media and politics."
+   },
+   "evidences": [
+    {
+     "paper_id": "06d78a7a9616337cecc2f2dea2b5c5d2a2e826e0",
+     "source_title": "victorivan",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(This is in fact a stated objective of the book) 'Innocence of the pen questioned' dwells on several aspects of Ivan's own journalistic experience, including but not limited to Ravaya, the newspaper he founded and owns and edits.",
+     "page": 1,
+     "snippet": "(This is in fact a stated objective",
+     "reason": "The publication date of the book is stated as September 2010, not 2009.",
+     "votes": "2-0",
+     "window": "(This is in fact a stated objective of the book) 'Innocence of the pen questioned' dwells on several aspects of Ivan's own journalistic experience, including but not limited to Ravaya, the newspaper he founded and owns and edits. (meta data) TITLE: Media in the dock \u2013 'Innocence of the pen questioned' - Sri Lanka Guardian ## Header Ads # Media in the dock \u2013 'Innocence of the pen questioned' November 21, 2010 Education, Journalism, Lasanda Kurukulasuriya by Lasanda Kurukulasuriya (November 21, Colombo, Sri Lanka Guardian) Victor Ivan's new book \"Innocence of the pen questioned\" (Ravaya publication, Sept.2010) makes its appearance at a crucial point in time in the trajectory of Sri Lankan media and politics."
+    }
+   ],
+   "votes": null,
+   "reason": "The publication date of the book is stated as September 2010, not 2009.",
+   "component_check": {
+    "found": [
+     "His experience and views on the subject are expressed in this book."
+    ],
+    "missing": [
+     "He published a book titled \u2018Innocence of the Pen Questioned' in 2009."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "His experience and views on the subject are expressed in this book.",
+      "paper_id": "06d78a7a9616337cecc2f2dea2b5c5d2a2e826e0",
+      "source_title": "victorivan",
+      "sentence": "The author illustrates this with anecdotes from his personal experience.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "His experience and views on the subject are amply expressed in the book titled \u2018Innocence of the Pen Questioned' that he published in 2009.",
+    "reason": "The passage directly attributes the expression of experience and views to the cited book. This falls under the 'full' scope as the citation is expected to prove the content of the book.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that he published the book in 2009 (source says September 2010)",
+    "rewrite_suggestion": "His experience and views on the subject are amply expressed in the book titled \u2018Innocence of the Pen Questioned\u2019 published in 2010.",
+    "proofs": [
+     "'Innocence of the pen questioned' dwells on several aspects of Ivan's own journalistic experience, including but not limited to Ravaya, the newspaper he founded and owns and edits.",
+     "More importantly, the views expressed, subjective and individualistic though they may be, would hopefully initiate discussions towards the creation of a media culture that is more honest and self-critical."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Victor Ivan's new book 'Innocence of the pen questioned' (Ravaya publication, Sept.2010)",
+     "why": "The source states the book was published in September 2010, contradicting the claim's year of 2009."
+    },
+    "why": "The claim asserts publication in 2009, but the source explicitly says Sept. 2010, creating a contradiction. The shown sentence covers only the book's discussion of journalistic experience, not the author's views, although evidence for both exists in the source. Since the publication year is unsupported and contradicted, the author must correct that component\u2014either by changing the year to 2010 or by providing another citation."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "The Dakota War of 1862 and the American Civil War delayed further improvements.",
+   "markers": [
+    "redrivertrails"
+   ],
+   "paper_ids": [
+    "b27f125dda824bde63d3fb36b330284d9e2f8659"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b27f125dda824bde63d3fb36b330284d9e2f8659",
+    "source_title": "redrivertrails",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In August she attempted another trip to the mouth of the Assiniboine, but was turned back by the opening of Indian hostilities and the difficulty of descending Goose Rapids.",
+    "page": 1,
+    "snippet": "In August she attempted another trip to",
+    "reason": "The passage does not mention the Dakota War of 1862 or the American Civil War, nor does it state that these events delayed further improvements.",
+    "votes": "2-0",
+    "window": "In August she attempted another trip to the mouth of the Assiniboine, but was turned back by the opening of Indian hostilities and the difficulty of descending Goose Rapids. Captain Townsend of the Minnesota in 1878, said that he had been running steamboats on the Missouri during the Sioux trouble. Low water, scarcity of freight, and alarm about the Indians curtailed shipbuilding until 1870."
+   },
+   "evidences": [
+    {
+     "paper_id": "b27f125dda824bde63d3fb36b330284d9e2f8659",
+     "source_title": "redrivertrails",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In August she attempted another trip to the mouth of the Assiniboine, but was turned back by the opening of Indian hostilities and the difficulty of descending Goose Rapids.",
+     "page": 1,
+     "snippet": "In August she attempted another trip to",
+     "reason": "The passage does not mention the Dakota War of 1862 or the American Civil War, nor does it state that these events delayed further improvements.",
+     "votes": "2-0",
+     "window": "In August she attempted another trip to the mouth of the Assiniboine, but was turned back by the opening of Indian hostilities and the difficulty of descending Goose Rapids. Captain Townsend of the Minnesota in 1878, said that he had been running steamboats on the Missouri during the Sioux trouble. Low water, scarcity of freight, and alarm about the Indians curtailed shipbuilding until 1870."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the Dakota War of 1862 or the American Civil War, nor does it state that these events delayed further improvements.",
+   "component_check": {
+    "found": [
+     "These wars delayed further improvements."
+    ],
+    "missing": [
+     "The Dakota War of 1862 occurred.",
+     "The American Civil War occurred."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "These wars delayed further improvements.",
+      "paper_id": "b27f125dda824bde63d3fb36b330284d9e2f8659",
+      "source_title": "redrivertrails",
+      "sentence": "In August she attempted another trip to the mouth of the Assiniboine, but was turned back by the opening of Indian hostilities and the difficulty of descending Goose Rapids.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Dakota War of 1862 and the American Civil War delayed further improvements.",
+    "reason": "The passage directly states a historical fact that the citation is expected to support. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim attributes a delay to the American Civil War, but the source text makes no mention of the Civil War; only Indian hostilities (the Dakota War) are cited as a cause of delay.",
+    "rewrite_suggestion": "The Dakota War of 1862 delayed further improvements, such as shipbuilding and steamboat traffic on the Red River.",
+    "proofs": [
+     "In August she attempted another trip to the mouth of the Assiniboine, but was turned back by the opening of Indian hostilities and the difficulty of descending Goose Rapids.",
+     "Low water, scarcity of freight, and alarm about the Indians curtailed shipbuilding until 1870.",
+     "The Sioux outbreak influenced James W. Taylor to write to Major-General Pope of the United States army in regard to the International."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the American Civil War as a cause of delay, but the cited source never mentions the Civil War. The source does discuss the Dakota War (Indian hostilities/Sioux outbreak) and its effect on steamboating and shipbuilding, but the shown sentence only covers a single instance and does not fully prove the broader claim. Because at least one substantive component (the American Civil War) is entirely absent from the source, the author must either add a citation for that part or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "The Court announced judgment in favor of the bank on April 24, 2018, voting to affirm the lower court by a vote of 5-4.",
+   "markers": [
+    "jesnervarabbankplc"
+   ],
+   "paper_ids": [
+    "0d8a16513137ee8fa93e0ff8d77554d1bda30da7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0d8a16513137ee8fa93e0ff8d77554d1bda30da7",
+    "source_title": "jesnervarabbankplc",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "ImageThe Supreme Court case, decided by a 5-to-4 vote, concerned a bank based in Jordan that has been accused of processing financial transactions through a New York branch for groups linked to terrorism.",
+    "page": 1,
+    "snippet": "ImageThe Supreme Court case, decided by a",
+    "reason": "The passage does not state that the judgment was in favor of the bank.",
+    "votes": "2-0",
+    "window": "ImageThe Supreme Court case, decided by a 5-to-4 vote, concerned a bank based in Jordan that has been accused of processing financial transactions through a New York branch for groups linked to terrorism. The case decided on Tuesday, Jesner v. Arab Bank, No. 16-499, largely answered the question. The vote was 5 to 4, with the court's more conservative justices in the majority. CreditCreditEric Thayer for The New York Times By Adam Liptak Apr 24, 2018 WASHINGTON \u2014 Foreign corporations may not be sued in American courts for complicity in human rights abuses abroad, the Supreme Court ruled on Tuesday."
+   },
+   "evidences": [
+    {
+     "paper_id": "0d8a16513137ee8fa93e0ff8d77554d1bda30da7",
+     "source_title": "jesnervarabbankplc",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "ImageThe Supreme Court case, decided by a 5-to-4 vote, concerned a bank based in Jordan that has been accused of processing financial transactions through a New York branch for groups linked to terrorism.",
+     "page": 1,
+     "snippet": "ImageThe Supreme Court case, decided by a",
+     "reason": "The passage does not state that the judgment was in favor of the bank.",
+     "votes": "2-0",
+     "window": "ImageThe Supreme Court case, decided by a 5-to-4 vote, concerned a bank based in Jordan that has been accused of processing financial transactions through a New York branch for groups linked to terrorism. The case decided on Tuesday, Jesner v. Arab Bank, No. 16-499, largely answered the question. The vote was 5 to 4, with the court's more conservative justices in the majority. CreditCreditEric Thayer for The New York Times By Adam Liptak Apr 24, 2018 WASHINGTON \u2014 Foreign corporations may not be sued in American courts for complicity in human rights abuses abroad, the Supreme Court ruled on Tuesday."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the judgment was in favor of the bank.",
+   "component_check": {
+    "found": [
+     "The Court voted to affirm the lower court",
+     "The vote was 5-4"
+    ],
+    "missing": [
+     "The Court announced judgment in favor of the bank on April 24, 2018"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Court voted to affirm the lower court",
+      "paper_id": "0d8a16513137ee8fa93e0ff8d77554d1bda30da7",
+      "source_title": "jesnervarabbankplc",
+      "sentence": "It affirmed a decision of the United States Court of Appeals for the Second Circuit, in New York, which ruled in favor of Arab Bank, saying that corporations may not be sued under the 1789 law.",
+      "page": 1
+     },
+     {
+      "component": "The vote was 5-4",
+      "paper_id": "0d8a16513137ee8fa93e0ff8d77554d1bda30da7",
+      "source_title": "jesnervarabbankplc",
+      "sentence": "ImageThe Supreme Court case, decided by a 5-to-4 vote, concerned a bank based in Jordan that has been accused of processing financial transactions through a New York branch for groups linked to terrorism.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Court announced judgment in favor of the bank on April 24, 2018, voting to affirm the lower court by a vote of 5-4.",
+    "reason": "The passage asserts specific facts (date, outcome, vote count) that are directly attributed to the cited source and are expected to be proven by it. This falls under the 'full' scope as it's a direct claim of findings.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "By Adam Liptak Apr 24, 2018",
+     "It affirmed a decision of the United States Court of Appeals for the Second Circuit, in New York, which ruled in favor of Arab Bank, saying that corporations may not be sued under the 1789 law."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence only mentions a 5-to-4 vote about the case, but does not include the date (April 24, 2018) or the fact that the judgment affirmed the lower court in favor of the bank. However, the source text contains all these elements verbatim: the byline gives the date, the article states the vote was 5 to 4, and explicitly says it affirmed the Second Circuit's decision in favor of Arab Bank. Therefore, the tool incorrectly displayed an insufficient sentence, so the correct action is wrong_or_insufficient_evidence.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t8",
+   "text": "Hayden Norman Thorpe is an English singer, songwriter and multi-instrumentalist, originally from Kendal, Cumbria and currently based in Walthamstow, London.",
+   "markers": [
+    "haydenthorpe"
+   ],
+   "paper_ids": [
+    "62002d98758d3bbd9166fc0283176abd5121ee2d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "62002d98758d3bbd9166fc0283176abd5121ee2d",
+    "source_title": "haydenthorpe",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Held up as one of British indie's most individualistic talents, the four boys from Kendal held a mystery that set them apart from the trilby and winkle-picker-wearing hordes of noughties indie boys.",
+    "page": 1,
+    "snippet": "Held up as one of British indie's",
+    "reason": "The passage does not state that Hayden Norman Thorpe is a multi-instrumentalist or that he is currently based in Walthamstow, London.",
+    "votes": "2-0",
+    "window": "Held up as one of British indie's most individualistic talents, the four boys from Kendal held a mystery that set them apart from the trilby and winkle-picker-wearing hordes of noughties indie boys. At the heart of their appeal was frontman Hayden Thorpe, a whisper-delicate vocalist whose lyrics targeted toxic masculinity and latent sexuality long before such things became regular headlines."
+   },
+   "evidences": [
+    {
+     "paper_id": "62002d98758d3bbd9166fc0283176abd5121ee2d",
+     "source_title": "haydenthorpe",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Held up as one of British indie's most individualistic talents, the four boys from Kendal held a mystery that set them apart from the trilby and winkle-picker-wearing hordes of noughties indie boys.",
+     "page": 1,
+     "snippet": "Held up as one of British indie's",
+     "reason": "The passage does not state that Hayden Norman Thorpe is a multi-instrumentalist or that he is currently based in Walthamstow, London.",
+     "votes": "2-0",
+     "window": "Held up as one of British indie's most individualistic talents, the four boys from Kendal held a mystery that set them apart from the trilby and winkle-picker-wearing hordes of noughties indie boys. At the heart of their appeal was frontman Hayden Thorpe, a whisper-delicate vocalist whose lyrics targeted toxic masculinity and latent sexuality long before such things became regular headlines."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Hayden Norman Thorpe is a multi-instrumentalist or that he is currently based in Walthamstow, London.",
+   "component_check": {
+    "found": [
+     "He is originally from Kendal, Cumbria."
+    ],
+    "missing": [
+     "Hayden Norman Thorpe is an English singer, songwriter and multi-instrumentalist.",
+     "He is currently based in Walthamstow, London."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He is originally from Kendal, Cumbria.",
+      "paper_id": "62002d98758d3bbd9166fc0283176abd5121ee2d",
+      "source_title": "haydenthorpe",
+      "sentence": "Held up as one of British indie's most individualistic talents, the four boys from Kendal held a mystery that set them apart from the trilby and winkle-picker-wearing hordes of noughties indie boys.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Hayden Norman Thorpe is an English singer, songwriter and multi-instrumentalist, originally from Kendal, Cumbria and currently based in Walthamstow, London.",
+    "reason": "The passage directly states biographical facts about Hayden Norman Thorpe, which the citation is expected to prove. This falls under the 'full' scope as it asserts statements that the cited source is expected to verify.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Middle name 'Norman', nationality 'English' (source says 'British'), occupations 'songwriter' and 'multi-instrumentalist', geographic detail 'Cumbria' for origin, and current location 'Walthamstow, London'.",
+    "rewrite_suggestion": "Hayden Thorpe is a British singer and frontman, originally from Kendal.",
+    "proofs": [
+     "Former Wild Beasts frontman Hayden Thorpe tells NME's Tom Connick how the dissolution of his old band, and the subsequent rediscovery of his own, individual identify, informed 'Diviner'.",
+     "At the heart of their appeal was frontman Hayden Thorpe, a whisper-delicate vocalist whose lyrics targeted toxic masculinity and latent sexuality long before such things became regular headlines.",
+     "Held up as one of British indie's most individualistic talents, the four boys from Kendal held a mystery that set them apart from the trilby and winkle-picker-wearing hordes of noughties indie boys."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions 'the four boys from Kendal', which does not individually identify Thorpe or confirm his current location. Many components of the claim (middle name, nationality 'English', occupations 'songwriter' and 'multi-instrumentalist', the specific county 'Cumbria', and current base 'Walthamstow, London') are not found anywhere in the source text. The source does support that Thorpe is a singer/frontman and that the band is from Kendal, but these are insufficient to prove the full claim."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "The number of children who are out of school increased to 1.8 million in 2015\u20132016 out of more than 5 million registered students, according to the 2013 statistics released by the Ministry of Education.",
+   "markers": [
+    "yemenicivilwar2015presen"
+   ],
+   "paper_ids": [
+    "408523dbfcb2ac0461fbbb9c76e89f329b213d05"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8304,
+   "evidence": {
+    "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+    "source_title": "yemenicivilwar2015presen",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Education in Yemen Struggles after More than a Year of Conflict | Voices and Views: Middle East and North Africa 31 captures 18 Nov 2016 - 08 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive These crawls are part of an effort to archive pages as they are created and archive the pages that they refer to.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Education in Yemen Struggles",
+    "cosine": 0.8304,
+    "reason": "The passage does not contain any statistics about the number of children out of school or registered students in 2015-2016 or 2013.",
+    "window": "(meta data) TITLE: Education in Yemen Struggles after More than a Year of Conflict | Voices and Views: Middle East and North Africa 31 captures 18 Nov 2016 - 08 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive These crawls are part of an effort to archive pages as they are created and archive the pages that they refer to. That way, as the pages that are referenced are changed or taken from the web, a link to the version that was live when the page was written will be preserved."
+   },
+   "evidences": [
+    {
+     "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+     "source_title": "yemenicivilwar2015presen",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Education in Yemen Struggles after More than a Year of Conflict | Voices and Views: Middle East and North Africa 31 captures 18 Nov 2016 - 08 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive These crawls are part of an effort to archive pages as they are created and archive the pages that they refer to.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Education in Yemen Struggles",
+     "cosine": 0.8304,
+     "reason": "The passage does not contain any statistics about the number of children out of school or registered students in 2015-2016 or 2013.",
+     "window": "(meta data) TITLE: Education in Yemen Struggles after More than a Year of Conflict | Voices and Views: Middle East and North Africa 31 captures 18 Nov 2016 - 08 Oct 2022 About this capture COLLECTED BY Organization: Internet Archive These crawls are part of an effort to archive pages as they are created and archive the pages that they refer to. That way, as the pages that are referenced are changed or taken from the web, a link to the version that was live when the page was written will be preserved."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The number of children who are out of school increased to 1.8 million in 2015\u20132016 out of more than 5 million registered students, according to the 2013 statistics released by the Ministry of Education.",
+    "reason": "The passage directly attributes the statistics about out-of-school children to the cited source, indicating that the source is expected to prove this factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire statistical claim \u2014 including the 1.8 million out-of-school children, the 5 million registered students, and the attribution to 2013 Ministry of Education statistics \u2014 is not present in the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text consists only of metadata and navigation elements from a World Bank blog page; it contains no statistics, no mention of 1.8 million out-of-school children, no registered-student figure, and no reference to 2013 Ministry of Education data. The shown sentence is metadata about a web capture, not evidence for any component of the claim. Therefore the author must either supply a source that actually contains this data or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "It is named \"Sarmientosaurus musacchio\" in honor of the town and of the late Dr. Eduardo Musacchio, a paleontologist and professor at the National University of Patagonia San Juan Bosco.",
+   "markers": [
+    "sarmientochubut"
+   ],
+   "paper_ids": [
+    "46efe4be2bdaf1103504865756c83451b473edcf"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9214,
+   "evidence": {
+    "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+    "source_title": "sarmientochubut",
+    "supported": true,
+    "sentence": "(Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)",
+    "page": 1,
+    "snippet": "(Sarmientosaurus is named after the town of",
+    "cosine": 0.9214,
+    "reason": "The passage explicitly states that 'musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011' and that 'Sarmientosaurus is named after the town of Sarmiento'.",
+    "window": "Paleontologists including Rube\u0301n D. F. Marti\u0301nez of the National University of Patagonia in Argentina found the skull in 1997. (Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.) For a while, it was not clear what kind of dinosaur it was."
+   },
+   "evidences": [
+    {
+     "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+     "source_title": "sarmientochubut",
+     "supported": true,
+     "sentence": "(Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)",
+     "page": 1,
+     "snippet": "(Sarmientosaurus is named after the town of",
+     "cosine": 0.9214,
+     "reason": "The passage explicitly states that 'musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011' and that 'Sarmientosaurus is named after the town of Sarmiento'.",
+     "window": "Paleontologists including Rube\u0301n D. F. Marti\u0301nez of the National University of Patagonia in Argentina found the skull in 1997. (Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.) For a while, it was not clear what kind of dinosaur it was."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that 'musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011' and that 'Sarmientosaurus is named after the town of Sarmiento'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "named \"Sarmientosaurus musacchio\"",
+      "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+      "source_title": "sarmientochubut",
+      "sentence": "The discovery of the skull and part of the neck led paleontologists to announce on Tuesday in the journal PLOS One the naming of a new dinosaur, Sarmientosaurus musacchioi.",
+      "page": 1,
+      "snippet": "The discovery of the skull and part"
+     },
+     {
+      "component": "in honor of the town",
+      "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+      "source_title": "sarmientochubut",
+      "sentence": "(Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)",
+      "page": 1,
+      "snippet": "(Sarmientosaurus is named after the town of"
+     },
+     {
+      "component": "in honor of the late Dr. Eduardo Musacchio",
+      "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+      "source_title": "sarmientochubut",
+      "sentence": "(Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)",
+      "page": 1,
+      "snippet": "(Sarmientosaurus is named after the town of"
+     },
+     {
+      "component": "Dr. Eduardo Musacchio was a paleontologist",
+      "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+      "source_title": "sarmientochubut",
+      "sentence": "(Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)",
+      "page": 1,
+      "snippet": "(Sarmientosaurus is named after the town of"
+     }
+    ],
+    "uncovered": [
+     "Dr. Eduardo Musacchio was a professor at the National University of Patagonia San Juan Bosco"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+      "source_title": "sarmientochubut",
+      "text": "The discovery of the skull and part of the neck led paleontologists to announce on Tuesday in the journal PLOS One the naming of a new dinosaur, Sarmientosaurus musacchioi. [\u2026] (Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes the incorrect species name 'Sarmientosaurus musacchio' (source has 'musacchioi') and describes Eduardo Musacchio as a professor at the National University of Patagonia San Juan Bosco, which is not mentioned in the source.",
+    "rewrite_suggestion": "It is named Sarmientosaurus musacchioi in honor of the town of Sarmiento and of the late paleontologist Eduardo Musacchio.",
+    "proofs": [
+     "The discovery of the skull and part of the neck led paleontologists to announce on Tuesday in the journal PLOS One the naming of a new dinosaur, Sarmientosaurus musacchioi.",
+     "(Sarmientosaurus is named after the town of Sarmiento, close to where the skull was discovered; musacchioi honors Eduardo Musacchio, a paleontologist who died in 2011.)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences prove that the dinosaur is named Sarmientosaurus musacchioi after the town and in honor of Eduardo Musacchio, a paleontologist. However, the claim uses the spelling 'musacchio' (missing the 'i') and adds that Musacchio was a professor at the National University of Patagonia San Juan Bosco, which the source does not state. These unsupported components require the author to either correct the name and add a citation for the affiliation or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Named after Selman Waksman, it was first awarded in 1968.",
+   "markers": [
+    "selmanawaksmanawardinmic"
+   ],
+   "paper_ids": [
+    "ae2042bf378a78eda7b62f36d8a4e53f3fe6c22f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ae2042bf378a78eda7b62f36d8a4e53f3fe6c22f",
+    "source_title": "selmanawaksmanawardinmic",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Established by the Waksman Foundation for Microbiology, the Selman A. Waksman Award is a prize of $20,000 that is presented to recognize a major advance in the field of microbiology.",
+    "page": 1,
+    "snippet": "Established by the Waksman Foundation for Microbiology,",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Established by the Waksman Foundation for Microbiology, the Selman A. Waksman Award is a prize of $20,000 that is presented to recognize a major advance in the field of microbiology. Jack L. Strominger (1968)For his elegant studies on the biosynthesis of the bacterial cell wall and the mode of action of antibiotics."
+   },
+   "evidences": [
+    {
+     "paper_id": "ae2042bf378a78eda7b62f36d8a4e53f3fe6c22f",
+     "source_title": "selmanawaksmanawardinmic",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Established by the Waksman Foundation for Microbiology, the Selman A. Waksman Award is a prize of $20,000 that is presented to recognize a major advance in the field of microbiology.",
+     "page": 1,
+     "snippet": "Established by the Waksman Foundation for Microbiology,",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Established by the Waksman Foundation for Microbiology, the Selman A. Waksman Award is a prize of $20,000 that is presented to recognize a major advance in the field of microbiology. Jack L. Strominger (1968)For his elegant studies on the biosynthesis of the bacterial cell wall and the mode of action of antibiotics."
+    }
+   ],
+   "votes": null,
+   "reason": "'named' is never mentioned in the cited source's text \u2014 topically similar passages cannot prove a claim about an entity the source does not name",
+   "subject_guard": {
+    "subject": "named",
+    "missing_from": [
+     "ae2042bf378a78eda7b62f36d8a4e53f3fe6c22f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The award was first awarded in 1968.",
+    "reason": "The passage asserts a specific fact (the year the award was first given) that is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Established by the Waksman Foundation for Microbiology, the Selman A. Waksman Award is a prize of $20,000 that is presented to recognize a major advance in the field of microbiology."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim has two components: the award's name (clearly supported by the shown sentence) and the first award year (1968). The shown sentence does not mention the year, but the source text lists 'Jack L. Strominger (1968)' as the earliest recipient, establishing that the award was first given in 1968. Because proof for the second component exists in the source but is not among the shown sentences, the tool's display is insufficient, requiring a 'wrong_or_insufficient_evidence' outcome.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t12",
+   "text": "The ABC complaints unit agreed with AIJAC that Hamas's status was not, according to the Australian Government, based on any occupation.",
+   "markers": [
+    "aijac"
+   ],
+   "paper_ids": [
+    "ac2a8d487df10b6890a614f2235ffff2bbfac2c9"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+    "source_title": "aijac",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "AIJAC went on to note that: \"The description of Hamas and Palestinian Islamic Jihad being designated because of 'their continued resistance against Israeli occupation' frankly seems an expression of the views of the author of the article regarding these two groups, not Australian law.",
+    "page": 1,
+    "snippet": "AIJAC went on to note that: \"The",
+    "reason": "The passage does not state that the ABC complaints unit agreed with AIJAC.",
+    "votes": "2-0",
+    "window": "AIJAC went on to note that: \"The description of Hamas and Palestinian Islamic Jihad being designated because of 'their continued resistance against Israeli occupation' frankly seems an expression of the views of the author of the article regarding these two groups, not Australian law. AIJAC noted that this description of the designation of the two groups is incorrect and \"The Australian National Security website does not state anywhere that 'occupation' is the reason for their listing. It explains that Hamas and Palestinian Islamic Jihad are designated as terrorist organisations because they are against the existence of the State of Israel and use terrorism to achieve this goal.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+     "source_title": "aijac",
+     "sentence": "In upholding the complaint, the ABC Audience and Consumer Affairs unit stated, \"In response to your concerns, ABC News have advised that the summary in the sidebar for 'Palestine's Hamas' did not accurately reflect the description by Australian National Security. Accordingly, the article has been amended to read: 'Palestine's Hamas \u2014 Two Palestinian groups, Hamas and the Palestinian Islamic Jihad, have been designated for their attacks on Israeli citizens.'\"",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+     "source_title": "aijac",
+     "sentence": "AIJAC noted that this description of the designation of the two groups is incorrect and \"The Australian National Security website does not state anywhere that 'occupation' is the reason for their listing.\"",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the Australian National Security website does not mention 'occupation' as the reason for Hamas's listing, and that the ABC Audience and Consumer Affairs unit agreed that the summary did not accurately reflect the Australian National Security description. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "The ABC complaints unit agreed with AIJAC",
+     "Hamas's status was not based on any occupation"
+    ],
+    "missing": [
+     "according to the Australian Government"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The ABC complaints unit agreed with AIJAC",
+      "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+      "source_title": "aijac",
+      "sentence": "Readers' Letters The Arts Contact Us Browse > Home / News / Complaint Two: ABC # Complaint Two: ABC Email This Post 3 Comments August 9, 2018 by J-Wire Newsdesk Read on for article An AIJAC complaint against an article on the ABC's website, which claimed Hamas and Islamic Jihad are listed as terrorists by Australia simply because of \"their continued resistance against Israeli occupation\", has been upheld by the ABC's Audience and Consumer Affairs unit.",
+      "page": 1
+     },
+     {
+      "component": "Hamas's status was not based on any occupation",
+      "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+      "source_title": "aijac",
+      "sentence": "AIJAC noted that this description of the designation of the two groups is incorrect and \"The Australian National Security website does not state anywhere that 'occupation' is the reason for their listing.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "In upholding the complaint, the ABC Audience and Consumer Affairs unit stated, \"In response to your concerns, ABC News have advised that the summary in the sidebar for 'Palestine's Hamas' did not accurately reflect the description by Australian National Security. Accordingly, the article has been amended to read: 'Palestine's Hamas \u2014 Two Palestinian groups, Hamas and the Palestinian Islamic Jihad, have been designated for their attacks on Israeli citizens.'\"",
+     "AIJAC noted that this description of the designation of the two groups is incorrect and \"The Australian National Security website does not state anywhere that 'occupation' is the reason for their listing.\""
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim requires showing that the ABC complaints unit agreed with AIJAC that the Australian Government does not base Hamas's status on occupation. The tool's shown sentence only quotes AIJAC's own note, omitting the ABC unit's explicit upholding of the complaint, which directly provides the needed evidence. That evidence exists verbatim in the source text, so the tool's selection is insufficient.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t13",
+   "text": "A new siding was provided in 1956 for Woodhall paper mill at the station, however in 1958, reports recommended that the station should be closed as revenue was in the region of \u00a31,750 per annum and there was only one goods train per day.",
+   "markers": [
+    "junipergreenrailwaystati"
+   ],
+   "paper_ids": [
+    "72c7e447ef57496d33cd69a3c3e4c0753b348d21"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9622,
+   "evidence": {
+    "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+    "source_title": "junipergreenrailwaystati",
+    "supported": true,
+    "sentence": "In 1956, a new siding was provided for the benefit of Woodhall paper mill at Juniper Green station, followed by its enlargement of the mill by its new owners, Inveresk Paper Company.",
+    "page": 1,
+    "snippet": "In 1956, a new siding was provided",
+    "cosine": 0.9622,
+    "reason": "The passage directly states that a new siding was provided in 1956 for Woodhall paper mill at Juniper Green station, and that in 1958, reports recommended closure due to low revenue and infrequent service.",
+    "window": "In 1943, the LMS decided that, in consequence of adequate bus transport, the passenger service would cease. In 1956, a new siding was provided for the benefit of Woodhall paper mill at Juniper Green station, followed by its enlargement of the mill by its new owners, Inveresk Paper Company. However, in 1958, reports provided by British Railways management, recommended that Juniper Green station should be closed as revenue was in the region of \u00a31,750 per annum and it was not cost effective."
+   },
+   "evidences": [
+    {
+     "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+     "source_title": "junipergreenrailwaystati",
+     "supported": true,
+     "sentence": "In 1956, a new siding was provided for the benefit of Woodhall paper mill at Juniper Green station, followed by its enlargement of the mill by its new owners, Inveresk Paper Company.",
+     "page": 1,
+     "snippet": "In 1956, a new siding was provided",
+     "cosine": 0.9622,
+     "reason": "The passage directly states that a new siding was provided in 1956 for Woodhall paper mill at Juniper Green station, and that in 1958, reports recommended closure due to low revenue and infrequent service.",
+     "window": "In 1943, the LMS decided that, in consequence of adequate bus transport, the passenger service would cease. In 1956, a new siding was provided for the benefit of Woodhall paper mill at Juniper Green station, followed by its enlargement of the mill by its new owners, Inveresk Paper Company. However, in 1958, reports provided by British Railways management, recommended that Juniper Green station should be closed as revenue was in the region of \u00a31,750 per annum and it was not cost effective."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that a new siding was provided in 1956 for Woodhall paper mill at Juniper Green station, and that in 1958, reports recommended closure due to low revenue and infrequent service.",
+   "covering": {
+    "covered": [
+     {
+      "component": "new siding provided in 1956 for Woodhall paper mill at the station",
+      "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+      "source_title": "junipergreenrailwaystati",
+      "sentence": "In 1956, a new siding was provided for the benefit of Woodhall paper mill at Juniper Green station, followed by its enlargement of the mill by its new owners, Inveresk Paper Company.",
+      "page": 1,
+      "snippet": "In 1956, a new siding was provided"
+     },
+     {
+      "component": "in 1958, reports recommended station closure",
+      "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+      "source_title": "junipergreenrailwaystati",
+      "sentence": "However, in 1958, reports provided by British Railways management, recommended that Juniper Green station should be closed as revenue was in the region of \u00a31,750 per annum and it was not cost effective.",
+      "page": 1,
+      "snippet": "However, in 1958, reports provided by British"
+     },
+     {
+      "component": "station revenue was in the region of \u00a31,750 per annum",
+      "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+      "source_title": "junipergreenrailwaystati",
+      "sentence": "However, in 1958, reports provided by British Railways management, recommended that Juniper Green station should be closed as revenue was in the region of \u00a31,750 per annum and it was not cost effective.",
+      "page": 1,
+      "snippet": "However, in 1958, reports provided by British"
+     },
+     {
+      "component": "only one goods train per day",
+      "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+      "source_title": "junipergreenrailwaystati",
+      "sentence": "By that time there was only one goods train running on the line per day.",
+      "page": 1,
+      "snippet": "By that time there was only one"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+      "source_title": "junipergreenrailwaystati",
+      "text": "In 1956, a new siding was provided for the benefit of Woodhall paper mill at Juniper Green station, followed by its enlargement of the mill by its new owners, Inveresk Paper Company. However, in 1958, reports provided by British Railways management, recommended that Juniper Green station should be closed as revenue was in the region of \u00a31,750 per annum and it was not cost effective. By that time there was only one goods train running on the line per day.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t14",
+   "text": "In January 2011, the group signed to Shady Records and left E1 Entertainment.",
+   "markers": [
+    "joellortiz"
+   ],
+   "paper_ids": [
+    "89b9c170c8f67582fdfc21016ddaaf410d1f2df5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "89b9c170c8f67582fdfc21016ddaaf410d1f2df5",
+    "source_title": "joellortiz",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Detroit lyricist is reviving his Shady Records company, and Wednesday (January 12) he announced the signing of two new acts: underground supergroup [artist id=\"3031489\"]Slaughterhouse[/artist] and upstart rapper [artist id=\"2043244\"]Yelawolf[/artist].",
+    "page": 1,
+    "snippet": "The Detroit lyricist is reviving his Shady",
+    "reason": "The passage does not mention E1 Entertainment or the group leaving it.",
+    "votes": "2-0",
+    "window": "The Detroit lyricist is reviving his Shady Records company, and Wednesday (January 12) he announced the signing of two new acts: underground supergroup [artist id=\"3031489\"]Slaughterhouse[/artist] and upstart rapper [artist id=\"2043244\"]Yelawolf[/artist]. The four-man Slaughterhouse collective \u2014 Joe Budden, Joell Ortiz, Crooked I and Royce Da 5'9\" \u2014 was in talks with Shady Records for longer than a year working on the deal."
+   },
+   "evidences": [
+    {
+     "paper_id": "89b9c170c8f67582fdfc21016ddaaf410d1f2df5",
+     "source_title": "joellortiz",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Detroit lyricist is reviving his Shady Records company, and Wednesday (January 12) he announced the signing of two new acts: underground supergroup [artist id=\"3031489\"]Slaughterhouse[/artist] and upstart rapper [artist id=\"2043244\"]Yelawolf[/artist].",
+     "page": 1,
+     "snippet": "The Detroit lyricist is reviving his Shady",
+     "reason": "The passage does not mention E1 Entertainment or the group leaving it.",
+     "votes": "2-0",
+     "window": "The Detroit lyricist is reviving his Shady Records company, and Wednesday (January 12) he announced the signing of two new acts: underground supergroup [artist id=\"3031489\"]Slaughterhouse[/artist] and upstart rapper [artist id=\"2043244\"]Yelawolf[/artist]. The four-man Slaughterhouse collective \u2014 Joe Budden, Joell Ortiz, Crooked I and Royce Da 5'9\" \u2014 was in talks with Shady Records for longer than a year working on the deal."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention E1 Entertainment or the group leaving it.",
+   "component_check": {
+    "found": [
+     "In January 2011, the group signed to Shady Records"
+    ],
+    "missing": [
+     "the group left E1 Entertainment"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In January 2011, the group signed to Shady Records",
+      "paper_id": "89b9c170c8f67582fdfc21016ddaaf410d1f2df5",
+      "source_title": "joellortiz",
+      "sentence": "The Detroit lyricist is reviving his Shady Records company, and Wednesday (January 12) he announced the signing of two new acts: underground supergroup [artist id=\"3031489\"]Slaughterhouse[/artist] and upstart rapper [artist id=\"2043244\"]Yelawolf[/artist].",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In January 2011, the group signed to Shady Records and left E1 Entertainment.",
+    "reason": "The passage states a specific fact (a signing and departure date) that the citation is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "left E1 Entertainment",
+    "rewrite_suggestion": "In January 2011, the group signed to Shady Records.",
+    "proofs": [
+     "The Detroit lyricist is reviving his Shady Records company, and Wednesday (January 12) he announced the signing of two new acts: underground supergroup [artist id=\"3031489\"]Slaughterhouse[/artist] and upstart rapper [artist id=\"2043244\"]Yelawolf[/artist]."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms that in January 2011, Eminem announced the signing of Slaughterhouse to Shady Records, supporting the signing component. However, the claim also states that the group 'left E1 Entertainment,' a detail that does not appear anywhere in the provided source text. Therefore, the author must either add a citation for that subclaim or remove it."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "In 2019, it was reported that the campus had the highest number of \u201cmajor crimes\u201d of any public NYC high school in the 2017-18 school year, although it was not the most violent.",
+   "markers": [
+    "prospectheightshighschoo"
+   ],
+   "paper_ids": [
+    "ce0ea15f62dbc3b96f0d4c47be33d6ea422808d9"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ce0ea15f62dbc3b96f0d4c47be33d6ea422808d9",
+    "source_title": "prospectheightshighschoo",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Prospect Heights High School campus topped the list of the most major crimes, which also include assault and grand larceny, with five for the school year, according to the DOE.",
+    "page": 1,
+    "snippet": "The Prospect Heights High School campus topped",
+    "reason": "The passage does not state that the campus had the highest number of \"major crimes\" of any public NYC high school, nor does it mention that it was not the most violent.",
+    "votes": "2-0",
+    "window": "The Prospect Heights High School campus topped the list of the most major crimes, which also include assault and grand larceny, with five for the school year, according to the DOE."
+   },
+   "evidences": [
+    {
+     "paper_id": "ce0ea15f62dbc3b96f0d4c47be33d6ea422808d9",
+     "source_title": "prospectheightshighschoo",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Prospect Heights High School campus topped the list of the most major crimes, which also include assault and grand larceny, with five for the school year, according to the DOE.",
+     "page": 1,
+     "snippet": "The Prospect Heights High School campus topped",
+     "reason": "The passage does not state that the campus had the highest number of \"major crimes\" of any public NYC high school, nor does it mention that it was not the most violent.",
+     "votes": "2-0",
+     "window": "The Prospect Heights High School campus topped the list of the most major crimes, which also include assault and grand larceny, with five for the school year, according to the DOE."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the campus had the highest number of \"major crimes\" of any public NYC high school, nor does it mention that it was not the most violent.",
+   "component_check": {
+    "found": [
+     "In 2019, it was reported that the campus had the highest number of \u201cmajor crimes\u201d of any public NYC high school in the 2017-18 school year"
+    ],
+    "missing": [
+     "it was not the most violent"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 2019, it was reported that the campus had the highest number of \u201cmajor crimes\u201d of any public NYC high school in the 2017-18 school year",
+      "paper_id": "ce0ea15f62dbc3b96f0d4c47be33d6ea422808d9",
+      "source_title": "prospectheightshighschoo",
+      "sentence": "The Prospect Heights High School campus topped the list of the most major crimes, which also include assault and grand larceny, with five for the school year, according to the DOE.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2019, it was reported that the campus had the highest number of \u201cmajor crimes\u201d of any public NYC high school in the 2017-18 school year, although it was not the most violent.",
+    "reason": "The passage directly reports a finding or statistic attributed to a source, which is characteristic of a 'full' scope. The phrase 'it was reported that' indicates the content is being presented as a statement from the cited work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "New York City public schools logged 464 \"major crimes\" including a murder and 1,104 violent crimes such as rapes, robberies and assaults, newly released data for the 2017-18 academic year shows.",
+     "The Prospect Heights High School campus topped the list of the most major crimes, which also include assault and grand larceny, with five for the school year, according to the DOE.",
+     "Topping the list for violent crimes was the Brooklyn campus that includes Sheepshead Bay High School, Professional Pathways High School and two charter schools. The Avenue X campus logged a dozen such incidents."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that the campus had the highest number of major crimes, but it does not include the year (2017-18), the explicit context of public NYC high schools, or the caveat that it was not the most violent. All these components are provable from other sentences in the source text (the first sentence provides the year and context; the later sentence about Sheepshead Bay shows another campus topped violent crimes, implying this campus was not the most violent). Therefore, the tool displayed insufficient evidence, and the correct proof sentences are listed.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t16",
+   "text": "In the 18-34 male demographic, it's 5.0 rating nearly tripled its lead-in (1.7).",
+   "markers": [
+    "smallvilleseason1"
+   ],
+   "paper_ids": [
+    "8c79a0967c25551c3bf7803bc2085bbbef5fe0f0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "8c79a0967c25551c3bf7803bc2085bbbef5fe0f0",
+    "source_title": "smallvilleseason1",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "It also bagged the best 18-49 rating for a Frog net series premiere (3.8/9) as well as the best score for any episode of any series in the WB's history among adults 18-34 (4.5/12), men 18-34 (5.0/14) and men 18-49 (3.9/10).",
+    "page": 1,
+    "snippet": "It also bagged the best 18-49 rating",
+    "reason": "The passage does not mention the lead-in rating of 1.7 for the 18-34 male demographic.",
+    "votes": "2-0",
+    "window": "It also bagged the best 18-49 rating for a Frog net series premiere (3.8/9) as well as the best score for any episode of any series in the WB's history among adults 18-34 (4.5/12), men 18-34 (5.0/14) and men 18-49 (3.9/10). \"Smallville\" won its hour in demos such as persons 12-34 (4.4/12), men 18-34 (5.0/14) and teens (4.1/15), growing through its broadcast. \"Buffy\" got the best of the weblet war in 18-34 (3.5/10 vs. 2.8/8), with \"Gilmore\" doing better among women (3.9 vs. 3.7) and \"Buffy\" better among men (3.3 vs. 1.7)."
+   },
+   "evidences": [
+    {
+     "paper_id": "8c79a0967c25551c3bf7803bc2085bbbef5fe0f0",
+     "source_title": "smallvilleseason1",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "It also bagged the best 18-49 rating for a Frog net series premiere (3.8/9) as well as the best score for any episode of any series in the WB's history among adults 18-34 (4.5/12), men 18-34 (5.0/14) and men 18-49 (3.9/10).",
+     "page": 1,
+     "snippet": "It also bagged the best 18-49 rating",
+     "reason": "The passage does not mention the lead-in rating of 1.7 for the 18-34 male demographic.",
+     "votes": "2-0",
+     "window": "It also bagged the best 18-49 rating for a Frog net series premiere (3.8/9) as well as the best score for any episode of any series in the WB's history among adults 18-34 (4.5/12), men 18-34 (5.0/14) and men 18-49 (3.9/10). \"Smallville\" won its hour in demos such as persons 12-34 (4.4/12), men 18-34 (5.0/14) and teens (4.1/15), growing through its broadcast. \"Buffy\" got the best of the weblet war in 18-34 (3.5/10 vs. 2.8/8), with \"Gilmore\" doing better among women (3.9 vs. 3.7) and \"Buffy\" better among men (3.3 vs. 1.7)."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the lead-in rating of 1.7 for the 18-34 male demographic.",
+   "component_check": {
+    "found": [
+     "In the 18-34 male demographic, the rating was 5.0."
+    ],
+    "missing": [
+     "This rating nearly tripled its lead-in.",
+     "The lead-in rating was 1.7."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In the 18-34 male demographic, the rating was 5.0.",
+      "paper_id": "8c79a0967c25551c3bf7803bc2085bbbef5fe0f0",
+      "source_title": "smallvilleseason1",
+      "sentence": "It also bagged the best 18-49 rating for a Frog net series premiere (3.8/9) as well as the best score for any episode of any series in the WB's history among adults 18-34 (4.5/12), men 18-34 (5.0/14) and men 18-49 (3.9/10).",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In the 18-34 male demographic, it's 5.0 rating nearly tripled its lead-in (1.7).",
+    "reason": "The passage asserts a specific statistic (a 5.0 rating nearly tripling its lead-in) which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the lead-in rating of 1.7 for the 18-34 male demographic and the assertion that the 5.0 rating nearly tripled it",
+    "rewrite_suggestion": "In the 18-34 male demographic, it achieved a 5.0 rating, according to the source.",
+    "proofs": [
+     "It also bagged the best 18-49 rating for a Frog net series premiere (3.8/9) as well as the best score for any episode of any series in the WB's history among adults 18-34 (4.5/12), men 18-34 (5.0/14) and men 18-49 (3.9/10)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific lead-in rating (1.7) and the statement that the 5.0 rating nearly tripled it, but the source text does not mention any lead-in rating for the 18-34 male demographic. The rating of 5.0 is directly supported by the shown sentence, but the comparison to a lead-in is entirely absent from the source. Therefore the author must either provide a citation for the lead-in figure or rewrite the claim to omit that component."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "The album featured contributions from Sia Furler, Mike Del Rio, Cutfather, Pharrell Williams, MNEK and Ariel Rechtshaid.",
+   "markers": [
+    "kylieminogue"
+   ],
+   "paper_ids": [
+    "db28443127d5b11b4bfbe564bf6e6feb69cd688f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+    "source_title": "kylieminogue",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Kylie spent time cluing us in to what the process of piecing together her first studio album in four years was like, from switching her management over to Roc Nation to working with talents ranging from hit maker Pharrell Williams to French actor Cl\u00e9ment Sibony.",
+    "page": 1,
+    "snippet": "Kylie spent time cluing us in to",
+    "reason": "The passage does not mention contributions from Sia Furler, Mike Del Rio, Cutfather, MNEK, or Ariel Rechtshaid, only Pharrell Williams and Sia.",
+    "votes": "2-0",
+    "window": "Kylie spent time cluing us in to what the process of piecing together her first studio album in four years was like, from switching her management over to Roc Nation to working with talents ranging from hit maker Pharrell Williams to French actor Cl\u00e9ment Sibony. Sia co-wrote \"Kiss Me Once\" and co-executive-produced the whole album along with you. See All Slides Tags: Kylie Minogue, Pharrell, Sia, Spotlight (meta data) TITLE: Kylie Minogue Discusses Pharrell, Sia And New Album 'Kiss Me Once': Idolator Interview # Kylie Minogue Discusses Pharrell, Sia And New Album 'Kiss Me Once': Idolator Interview Robbie Daw February 25, 2014 5:34 am Pop Kylie. A lot of people were excited to hear you'd recorded with Ariel Rechtshaid."
+   },
+   "evidences": [
+    {
+     "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+     "source_title": "kylieminogue",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Kylie spent time cluing us in to what the process of piecing together her first studio album in four years was like, from switching her management over to Roc Nation to working with talents ranging from hit maker Pharrell Williams to French actor Cl\u00e9ment Sibony.",
+     "page": 1,
+     "snippet": "Kylie spent time cluing us in to",
+     "reason": "The passage does not mention contributions from Sia Furler, Mike Del Rio, Cutfather, MNEK, or Ariel Rechtshaid, only Pharrell Williams and Sia.",
+     "votes": "2-0",
+     "window": "Kylie spent time cluing us in to what the process of piecing together her first studio album in four years was like, from switching her management over to Roc Nation to working with talents ranging from hit maker Pharrell Williams to French actor Cl\u00e9ment Sibony. Sia co-wrote \"Kiss Me Once\" and co-executive-produced the whole album along with you. See All Slides Tags: Kylie Minogue, Pharrell, Sia, Spotlight (meta data) TITLE: Kylie Minogue Discusses Pharrell, Sia And New Album 'Kiss Me Once': Idolator Interview # Kylie Minogue Discusses Pharrell, Sia And New Album 'Kiss Me Once': Idolator Interview Robbie Daw February 25, 2014 5:34 am Pop Kylie. A lot of people were excited to hear you'd recorded with Ariel Rechtshaid."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention contributions from Sia Furler, Mike Del Rio, Cutfather, MNEK, or Ariel Rechtshaid, only Pharrell Williams and Sia.",
+   "subject_guard": {
+    "subject": "Mike Del Rio",
+    "missing_from": [
+     "db28443127d5b11b4bfbe564bf6e6feb69cd688f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The album featured contributions from Sia Furler, Mike Del Rio, Cutfather, Pharrell Williams, MNEK and Ariel Rechtshaid.",
+    "reason": "The passage directly lists contributors to the album, which is a factual statement expected to be supported by the cited source. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Contributions from Mike Del Rio, Cutfather, and MNEK are not mentioned anywhere in the cited source.",
+    "rewrite_suggestion": "The album featured contributions from Sia Furler, Pharrell Williams, and Ariel Rechtshaid.",
+    "proofs": [
+     "the album's title track, on which Minogue worked with the LP's executive producer Sia Furler.",
+     "Kylie spent time cluing us in to what the process of piecing together her first studio album in four years was like, from switching her management over to Roc Nation to working with talents ranging from hit maker Pharrell Williams to French actor Cl\u00e9ment Sibony.",
+     "the uplifting Ariel Rechtshaid composition \"If Only\""
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim lists six contributors, but the cited source only mentions Sia Furler, Pharrell Williams, and Ariel Rechtshaid; it contains no reference to Mike Del Rio, Cutfather, or MNEK. Therefore those three names are unsupported by the source, requiring either addition of a citation or rewriting the claim to exclude them. The shown sentence covers only Pharrell, so the tool's evidence is incomplete, but the dominant problem is the missing source support."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "In Tripoli, the GNC announced the temporary closure of the borders with Algeria, Niger, Chad and Sudan, and declared southern Libya as a \"closed military zone\".",
+   "markers": [
+    "factionalviolenceinlibya"
+   ],
+   "paper_ids": [
+    "d176c32dc88eb1f8d324eef69bf24bb58908696b"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8531,
+   "evidence": {
+    "paper_id": "d176c32dc88eb1f8d324eef69bf24bb58908696b",
+    "source_title": "factionalviolenceinlibya",
+    "supported": true,
+    "sentence": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: GNC announces temporary closure",
+    "cosine": 0.8531,
+    "reason": "The passage directly states that the GNC announced the temporary closure of borders with Algeria, Niger, Chad, and Sudan, and declared southern Libya a \"closed military zone\".",
+    "window": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported. GNC members passed the exceptional legislation with a majority of 136, designating the areas around Ghadamis, Ghat, Awbari, Al-Shati, Sebha, Murzuq and Kufra as closed zones of military operations."
+   },
+   "evidences": [
+    {
+     "paper_id": "d176c32dc88eb1f8d324eef69bf24bb58908696b",
+     "source_title": "factionalviolenceinlibya",
+     "supported": true,
+     "sentence": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: GNC announces temporary closure",
+     "cosine": 0.8531,
+     "reason": "The passage directly states that the GNC announced the temporary closure of borders with Algeria, Niger, Chad, and Sudan, and declared southern Libya a \"closed military zone\".",
+     "window": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported. GNC members passed the exceptional legislation with a majority of 136, designating the areas around Ghadamis, Ghat, Awbari, Al-Shati, Sebha, Murzuq and Kufra as closed zones of military operations."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the GNC announced the temporary closure of borders with Algeria, Niger, Chad, and Sudan, and declared southern Libya a \"closed military zone\".",
+   "covering": {
+    "covered": [
+     {
+      "component": "In Tripoli, the GNC announced the temporary closure of the borders with Algeria, Niger, Chad and Sudan",
+      "paper_id": "d176c32dc88eb1f8d324eef69bf24bb58908696b",
+      "source_title": "factionalviolenceinlibya",
+      "sentence": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: GNC announces temporary closure"
+     },
+     {
+      "component": "and declared southern Libya as a \"closed military zone\"",
+      "paper_id": "d176c32dc88eb1f8d324eef69bf24bb58908696b",
+      "source_title": "factionalviolenceinlibya",
+      "sentence": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: GNC announces temporary closure"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d176c32dc88eb1f8d324eef69bf24bb58908696b",
+      "source_title": "factionalviolenceinlibya",
+      "text": "(meta data) TITLE: GNC announces temporary closure of southern borders and declares south a \"closed military zone\" | # GNC announces temporary closure of southern borders and declares south a \"closed military zone\" Tripoli, 17 December: The General National Congress (GNC) declared much of the south a closed military zone on Sunday evening and announced that it would temporarily close the borders with Niger, Chad, Sudan and Algeria, state news agency LANA reported.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t19",
+   "text": "In November 2006, Hirst was curator of \"In the darkest hour there may be light\", shown at the Serpentine Gallery, London, the first public exhibition of (a small part of) his own collection.",
+   "markers": [
+    "damienhirst"
+   ],
+   "paper_ids": [
+    "bcc799fa20e9df671d283e4d43d11db984909b68"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bcc799fa20e9df671d283e4d43d11db984909b68",
+    "source_title": "damienhirst",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In the darkest hour there may be light therefore offered an opportunity to take a deep breath and be drawn in.",
+    "page": 1,
+    "snippet": "In the darkest hour there may be",
+    "reason": "The passage does not state that the exhibition was in November 2006 or that it was the first public exhibition of his collection.",
+    "votes": "2-0",
+    "window": "In the darkest hour there may be light therefore offered an opportunity to take a deep breath and be drawn in. It included a number of seminal works from the YBA-era, alongside their 1980s New York predecessors Jeff Koons, Richard Prince and Haim Steinbach, as well as some predictably dismal tat from Banksy and his younger, and by the looks of it slightly lost, generation of British artists. Works from Damien Hirst's murderme collection Although Damien Hirst and his every breath get miles of press in the British tabloid and other newspapers, critical appreciation of the work of Hirst and his generation has been scarce."
+   },
+   "evidences": [
+    {
+     "paper_id": "bcc799fa20e9df671d283e4d43d11db984909b68",
+     "source_title": "damienhirst",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In the darkest hour there may be light therefore offered an opportunity to take a deep breath and be drawn in.",
+     "page": 1,
+     "snippet": "In the darkest hour there may be",
+     "reason": "The passage does not state that the exhibition was in November 2006 or that it was the first public exhibition of his collection.",
+     "votes": "2-0",
+     "window": "In the darkest hour there may be light therefore offered an opportunity to take a deep breath and be drawn in. It included a number of seminal works from the YBA-era, alongside their 1980s New York predecessors Jeff Koons, Richard Prince and Haim Steinbach, as well as some predictably dismal tat from Banksy and his younger, and by the looks of it slightly lost, generation of British artists. Works from Damien Hirst's murderme collection Although Damien Hirst and his every breath get miles of press in the British tabloid and other newspapers, critical appreciation of the work of Hirst and his generation has been scarce."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the exhibition was in November 2006 or that it was the first public exhibition of his collection.",
+   "component_check": {
+    "found": [
+     "The exhibition was shown at the Serpentine Gallery, London"
+    ],
+    "missing": [
+     "In November 2006, Hirst was curator of \"In the darkest hour there may be light\"",
+     "This was the first public exhibition of (a small part of) his own collection"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The exhibition was shown at the Serpentine Gallery, London",
+      "paper_id": "bcc799fa20e9df671d283e4d43d11db984909b68",
+      "source_title": "damienhirst",
+      "sentence": "Why not go for it and really clutter the Serpentine Gallery?",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Hirst was curator of \"In the darkest hour there may be light\", shown at the Serpentine Gallery, London, the first public exhibition of (a small part of) his own collection.",
+    "reason": "The passage directly attributes the statement about Hirst's curatorial role and the exhibition to the cited source. This falls under the 'full' scope as the citation is expected to prove the factual assertion made in the passage.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Hirst was curator of the exhibition, and it was the first public exhibition of his own collection",
+    "rewrite_suggestion": "In November 2006, the exhibition 'In the darkest hour there may be light', showcasing works from Damien Hirst's murderme collection, was held at the Serpentine Gallery in London.",
+    "proofs": [
+     "In the darkest hour there may be light: Works from Damien Hirst's murderme collection Serpentine Gallery, London 25 November 2006 \u2013 28 January 2007"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not support any component of the claim. The source text confirms the exhibition title, date (25 November 2006), and location (Serpentine Gallery, London), but it never states that Hirst was the curator or that this was the first public exhibition of his collection. These missing substantive components require the author to add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "Some have argued that the methodology behind the determination of those who are subject to being detained at such facilities is not scientific and rational, resulting in the detention being merely punitive.",
+   "markers": [
+    "coalingastatehospital"
+   ],
+   "paper_ids": [
+    "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8503,
+   "evidence": {
+    "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+    "source_title": "coalingastatehospital",
+    "supported": true,
+    "sentence": "Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\"",
+    "page": 1,
+    "snippet": "Federal District Judge Donovan Frank said the",
+    "cosine": 0.8503,
+    "reason": "The passage states that local prosecutors, not clinicians, decide on continued detention based on a screening test for sex offenses, and that there is no clear evidence these tests are accurate, which supports the claim that the methodology is not scientific and rational.",
+    "window": "In a decision in June, a federal judge ruled that Minnesota's civil-commitment law for sex offenders violates the Constitution. Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\" For example, local prosecutors \u2014 not clinicians or mental health professionals \u2014 choose whether to seek continued detention based on a screening test that claims to predict a person's likelihood of committing another sex offense, though there is no clear evidence such tests are accurate."
+   },
+   "evidences": [
+    {
+     "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+     "source_title": "coalingastatehospital",
+     "supported": true,
+     "sentence": "Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\"",
+     "page": 1,
+     "snippet": "Federal District Judge Donovan Frank said the",
+     "cosine": 0.8503,
+     "reason": "The passage states that local prosecutors, not clinicians, decide on continued detention based on a screening test for sex offenses, and that there is no clear evidence these tests are accurate, which supports the claim that the methodology is not scientific and rational.",
+     "window": "In a decision in June, a federal judge ruled that Minnesota's civil-commitment law for sex offenders violates the Constitution. Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\" For example, local prosecutors \u2014 not clinicians or mental health professionals \u2014 choose whether to seek continued detention based on a screening test that claims to predict a person's likelihood of committing another sex offense, though there is no clear evidence such tests are accurate."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that local prosecutors, not clinicians, decide on continued detention based on a screening test for sex offenses, and that there is no clear evidence these tests are accurate, which supports the claim that the methodology is not scientific and rational.",
+   "covering": {
+    "covered": [
+     {
+      "component": "detention is punitive",
+      "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+      "source_title": "coalingastatehospital",
+      "sentence": "Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\"",
+      "page": 1,
+      "snippet": "Federal District Judge Donovan Frank said the"
+     },
+     {
+      "component": "methodology is not scientific and rational",
+      "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+      "source_title": "coalingastatehospital",
+      "sentence": "For example, local prosecutors \u2014 not clinicians or mental health professionals \u2014 choose whether to seek continued detention based on a screening test that claims to predict a person's likelihood of committing another sex offense, though there is no clear evidence such tests are accurate.",
+      "page": 1,
+      "snippet": "For example, local prosecutors \u2014 not clinicians"
+     },
+     {
+      "component": "detention is not scientific and rational",
+      "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+      "source_title": "coalingastatehospital",
+      "sentence": "For example, local prosecutors \u2014 not clinicians or mental health professionals \u2014 choose whether to seek continued detention based on a screening test that claims to predict a person's likelihood of committing another sex offense, though there is no clear evidence such tests are accurate.",
+      "page": 1,
+      "snippet": "For example, local prosecutors \u2014 not clinicians"
+     },
+     {
+      "component": "detention is merely punitive",
+      "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+      "source_title": "coalingastatehospital",
+      "sentence": "Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\"",
+      "page": 1,
+      "snippet": "Federal District Judge Donovan Frank said the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+      "source_title": "coalingastatehospital",
+      "text": "Federal District Judge Donovan Frank said the law imposes \"a punitive system that segregates and indefinitely detains a class of potentially dangerous individuals without the safeguards of the criminal justice system.\" For example, local prosecutors \u2014 not clinicians or mental health professionals \u2014 choose whether to seek continued detention based on a screening test that claims to predict a person's likelihood of committing another sex offense, though there is no clear evidence such tests are accurate.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t21",
+   "text": "Harrison was tutored at home until age 14 when he entered Hampden\u2013Sydney College, a Presbyterian college in Virginia.",
+   "markers": [
+    "williamhenryharrison"
+   ],
+   "paper_ids": [
+    "040022f6d41dfb1ed68c5a9c221f343f3a524f80"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+    "source_title": "williamhenryharrison",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia.",
+    "page": 1,
+    "snippet": "The boy enjoyed a solid education\u2014tutored at",
+    "reason": "The passage explicitly states that Harrison was tutored at home and then attended Hampden-Sydney College in Virginia.",
+    "votes": "2-0",
+    "window": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia."
+   },
+   "evidences": [
+    {
+     "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+     "source_title": "williamhenryharrison",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia.",
+     "page": 1,
+     "snippet": "The boy enjoyed a solid education\u2014tutored at",
+     "reason": "The passage explicitly states that Harrison was tutored at home and then attended Hampden-Sydney College in Virginia.",
+     "votes": "2-0",
+     "window": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Harrison was tutored at home and then attended Hampden-Sydney College in Virginia.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Harrison entered Hampden\u2013Sydney College",
+      "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+      "source_title": "williamhenryharrison",
+      "sentence": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia.",
+      "page": 1,
+      "snippet": "The boy enjoyed a solid education\u2014tutored at"
+     },
+     {
+      "component": "Hampden\u2013Sydney College was in Virginia",
+      "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+      "source_title": "williamhenryharrison",
+      "sentence": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia.",
+      "page": 1,
+      "snippet": "The boy enjoyed a solid education\u2014tutored at"
+     }
+    ],
+    "uncovered": [
+     "Harrison was tutored at home until age 14",
+     "Hampden\u2013Sydney College was a Presbyterian college",
+     "Hampden\u2013Sydney College's religious affiliation"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+      "source_title": "williamhenryharrison",
+      "text": "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific age '14' when he entered the college, and the denomination 'Presbyterian' for the college",
+    "rewrite_suggestion": "Harrison was tutored at home and then attended Hampden\u2013Sydney College in Virginia.",
+    "proofs": [
+     "The boy enjoyed a solid education\u2014tutored at home, then three years at Hampden-Sydney College in Hanover County, Virginia."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that Harrison was tutored at home and attended Hampden-Sydney College, but it does not mention the age 14 or that the college is Presbyterian. Neither detail appears anywhere in the provided source text, so they are unsourced asides. The author must either add a citation for those components or rewrite the claim to omit them."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Automatic number-plate recognition (ANPR) was introduced for use by the Traffic Corps in 2009, and the 'nationwide roll-out of ANPR technology [..] completed in 2010.",
+   "markers": [
+    "gardatrafficcorps"
+   ],
+   "paper_ids": [
+    "ca257fa6b3e25150b9e5bcafdd15c1f239c21ed2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ca257fa6b3e25150b9e5bcafdd15c1f239c21ed2",
+    "source_title": "gardatrafficcorps",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The nationwide roll-out of ANPR technology was completed in 2010 within the Garda Traffic Corps.",
+    "page": 1,
+    "snippet": "The nationwide roll-out of ANPR technology was",
+    "reason": "The passage does not mention the introduction of ANPR for use by the Traffic Corps in 2009.",
+    "votes": "2-0",
+    "window": "The nationwide roll-out of ANPR technology was completed in 2010 within the Garda Traffic Corps."
+   },
+   "evidences": [
+    {
+     "paper_id": "ca257fa6b3e25150b9e5bcafdd15c1f239c21ed2",
+     "source_title": "gardatrafficcorps",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The nationwide roll-out of ANPR technology was completed in 2010 within the Garda Traffic Corps.",
+     "page": 1,
+     "snippet": "The nationwide roll-out of ANPR technology was",
+     "reason": "The passage does not mention the introduction of ANPR for use by the Traffic Corps in 2009.",
+     "votes": "2-0",
+     "window": "The nationwide roll-out of ANPR technology was completed in 2010 within the Garda Traffic Corps."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the introduction of ANPR for use by the Traffic Corps in 2009.",
+   "component_check": {
+    "found": [
+     "The nationwide roll-out of ANPR technology was completed in 2010"
+    ],
+    "missing": [
+     "Automatic number-plate recognition (ANPR) was introduced for use by the Traffic Corps in 2009"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The nationwide roll-out of ANPR technology was completed in 2010",
+      "paper_id": "ca257fa6b3e25150b9e5bcafdd15c1f239c21ed2",
+      "source_title": "gardatrafficcorps",
+      "sentence": "The nationwide roll-out of ANPR technology was completed in 2010 within the Garda Traffic Corps.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Automatic number-plate recognition (ANPR) was introduced for use by the Traffic Corps in 2009, and the 'nationwide roll-out of ANPR technology [..] completed in 2010.",
+    "reason": "The passage directly states facts and dates related to the introduction and roll-out of ANPR technology, which are expected to be proven by the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "ANPR was introduced for use by the Traffic Corps in 2009",
+    "rewrite_suggestion": "Automatic number-plate recognition (ANPR) was used by the Garda Traffic Corps, and its nationwide roll-out was completed in 2010.",
+    "proofs": [
+     "The nationwide roll-out of ANPR technology was completed in 2010 within the Garda Traffic Corps."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim has two components: the introduction year (2009) and the roll-out completion (2010). The shown sentence supports only the roll-out part. The source text does not mention any introduction in 2009, so that component is unprovable from the cited source. The author must either provide a citation for the 2009 date or remove it from the claim."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "In 2016, the fate of the agency became uncertain, following a lack of commitment from the Government to include it in the budget documents following a spending review by then Chancellor of the Exchequer George Osborne.",
+   "markers": [
+    "nationalwildlifecrimeuni"
+   ],
+   "paper_ids": [
+    "b8d893059eb0b64b5c307d7f2aa38054e65617b1"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9205,
+   "evidence": {
+    "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+    "source_title": "nationalwildlifecrimeuni",
+    "supported": true,
+    "sentence": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks.",
+    "page": 1,
+    "snippet": "George Osborne's spending review, announced in November,",
+    "cosine": 0.9205,
+    "reason": "The passage states that George Osborne's spending review did not confirm government funding for the agency beyond March, leading to its expected closure within weeks, which supports the claim that its fate became uncertain due to a lack of government commitment following the spending review.",
+    "window": "The national wildlife crime unit (NWCU) was established in 2006 to investigate offences including rare-bird egg theft, deer poaching, the trade in endangered species, hare coursing, illegal taxidermy and cruelty to wild animals. George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks. The body, which receives the bulk of its funding from the Department for Environment, Food and Rural Affairs and the Home Office, was told shortly before Christmas that a decision would be made about its future before the end of January \u2013 but it still hasn't heard anything."
+   },
+   "evidences": [
+    {
+     "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+     "source_title": "nationalwildlifecrimeuni",
+     "supported": true,
+     "sentence": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks.",
+     "page": 1,
+     "snippet": "George Osborne's spending review, announced in November,",
+     "cosine": 0.9205,
+     "reason": "The passage states that George Osborne's spending review did not confirm government funding for the agency beyond March, leading to its expected closure within weeks, which supports the claim that its fate became uncertain due to a lack of government commitment following the spending review.",
+     "window": "The national wildlife crime unit (NWCU) was established in 2006 to investigate offences including rare-bird egg theft, deer poaching, the trade in endangered species, hare coursing, illegal taxidermy and cruelty to wild animals. George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks. The body, which receives the bulk of its funding from the Department for Environment, Food and Rural Affairs and the Home Office, was told shortly before Christmas that a decision would be made about its future before the end of January \u2013 but it still hasn't heard anything."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that George Osborne's spending review did not confirm government funding for the agency beyond March, leading to its expected closure within weeks, which supports the claim that its fate became uncertain due to a lack of government commitment following the spending review.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "agency's fate uncertain in 2016",
+      "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+      "source_title": "nationalwildlifecrimeuni",
+      "sentence": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks.",
+      "page": 1,
+      "snippet": "George Osborne's spending review, announced in November,"
+     },
+     {
+      "component": "lack of government commitment",
+      "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+      "source_title": "nationalwildlifecrimeuni",
+      "sentence": "\"The government must now offer a serious commitment to this unit and banish the shadow of financial uncertainty that has been lingering for far too long.\"",
+      "page": 1,
+      "snippet": "\"The government must now offer a serious"
+     },
+     {
+      "component": "agency not included in budget documents",
+      "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+      "source_title": "nationalwildlifecrimeuni",
+      "sentence": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks.",
+      "page": 1,
+      "snippet": "George Osborne's spending review, announced in November,"
+     },
+     {
+      "component": "spending review by George Osborne",
+      "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+      "source_title": "nationalwildlifecrimeuni",
+      "sentence": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks.",
+      "page": 1,
+      "snippet": "George Osborne's spending review, announced in November,"
+     },
+     {
+      "component": "Chancellor of the Exchequer George Osborne",
+      "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+      "source_title": "nationalwildlifecrimeuni",
+      "sentence": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks.",
+      "page": 1,
+      "snippet": "George Osborne's spending review, announced in November,",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+      "source_title": "nationalwildlifecrimeuni",
+      "text": "George Osborne's spending review, announced in November, did not confirm government funding for the agency beyond the end of March and it is now expected to close within weeks. [\u2026] \"The government must now offer a serious commitment to this unit and banish the shadow of financial uncertainty that has been lingering for far too long.\"",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t24",
+   "text": "The Granby Zoo eventually traded Cornelius to the San Diego Zoo in exchange for a giraffe.",
+   "markers": [
+    "corneliusthefirst"
+   ],
+   "paper_ids": [
+    "ff0b3ef124493c35c167019b9aac91c21773903b"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9312,
+   "evidence": {
+    "paper_id": "ff0b3ef124493c35c167019b9aac91c21773903b",
+    "source_title": "corneliusthefirst",
+    "supported": true,
+    "sentence": "It was later traded to the San Diego Zoo for a giraffe.",
+    "page": 1,
+    "snippet": "It was later traded to the San",
+    "cosine": 0.9312,
+    "reason": "The passage explicitly states that Cornelius I was traded to the San Diego Zoo for a giraffe.",
+    "window": "The Rhinoceros Party's original leader was Cornelius I, a rhinoceros foaled in Quebec's Granby Zoo. It was later traded to the San Diego Zoo for a giraffe. Story continues below advertisement The party's best showing was the 1980 federal election, when they garnered 110,597 votes, 1.01 per cent of the popular vote."
+   },
+   "evidences": [
+    {
+     "paper_id": "ff0b3ef124493c35c167019b9aac91c21773903b",
+     "source_title": "corneliusthefirst",
+     "supported": true,
+     "sentence": "It was later traded to the San Diego Zoo for a giraffe.",
+     "page": 1,
+     "snippet": "It was later traded to the San",
+     "cosine": 0.9312,
+     "reason": "The passage explicitly states that Cornelius I was traded to the San Diego Zoo for a giraffe.",
+     "window": "The Rhinoceros Party's original leader was Cornelius I, a rhinoceros foaled in Quebec's Granby Zoo. It was later traded to the San Diego Zoo for a giraffe. Story continues below advertisement The party's best showing was the 1980 federal election, when they garnered 110,597 votes, 1.01 per cent of the popular vote."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Cornelius I was traded to the San Diego Zoo for a giraffe.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Cornelius traded to San Diego Zoo for a giraffe",
+      "paper_id": "ff0b3ef124493c35c167019b9aac91c21773903b",
+      "source_title": "corneliusthefirst",
+      "sentence": "It was later traded to the San Diego Zoo for a giraffe.",
+      "page": 1,
+      "snippet": "It was later traded to the San"
+     },
+     {
+      "component": "Cornelius was at Granby Zoo",
+      "paper_id": "ff0b3ef124493c35c167019b9aac91c21773903b",
+      "source_title": "corneliusthefirst",
+      "sentence": "The Rhinoceros Party's original leader was Cornelius I, a rhinoceros foaled in Quebec's Granby Zoo.",
+      "page": 1,
+      "snippet": "The Rhinoceros Party's original leader was Cornelius"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ff0b3ef124493c35c167019b9aac91c21773903b",
+      "source_title": "corneliusthefirst",
+      "text": "The Rhinoceros Party's original leader was Cornelius I, a rhinoceros foaled in Quebec's Granby Zoo. It was later traded to the San Diego Zoo for a giraffe.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t25",
+   "text": "In 2018, Lincicome was granted a sponsor's exemption into the Barbasol Championship on the PGA Tour.",
+   "markers": [
+    "brittanylincicome"
+   ],
+   "paper_ids": [
+    "f105ddec908c56e580571d08d1bf1e374fa12d9c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9208,
+   "evidence": {
+    "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+    "source_title": "brittanylincicome",
+    "supported": true,
+    "sentence": "An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington.",
+    "page": 1,
+    "snippet": "An eight-time winner on the LPGA Tour,",
+    "cosine": 0.9208,
+    "reason": "The passage states that LPGA pro Brittany Lincicome was set to play in the PGA Tour's Barbasol Championship on a sponsor's exemption, and the article date is June 1, 2018, which supports the claim that she was granted this exemption in 2018.",
+    "window": "(meta data) TITLE: LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption - Golf Digest (meta data) AUTHOR: Dave Shedloski (meta data) COPYRIGHT: Copyright \u00a9 Cond\u00e9 Nast 2019 GolfDigest.com NewsletterSign up for our newsletterBarbasol ChampionshipJune 1, 2018 # LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption By Dave ShedloskiMaddie Meyer Victory in the last two editions of the Pure Silk-Bahamas LPGA Classic has opened a new door for Brittany Lincicome\u2014a chance to compete in a PGA Tour event. An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington. Golf World first reported on Friday morning that tournament officials planned to extend the invitation to Lincicome, with an official announcement expected to come as early as next week."
+   },
+   "evidences": [
+    {
+     "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+     "source_title": "brittanylincicome",
+     "supported": true,
+     "sentence": "An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington.",
+     "page": 1,
+     "snippet": "An eight-time winner on the LPGA Tour,",
+     "cosine": 0.9208,
+     "reason": "The passage states that LPGA pro Brittany Lincicome was set to play in the PGA Tour's Barbasol Championship on a sponsor's exemption, and the article date is June 1, 2018, which supports the claim that she was granted this exemption in 2018.",
+     "window": "(meta data) TITLE: LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption - Golf Digest (meta data) AUTHOR: Dave Shedloski (meta data) COPYRIGHT: Copyright \u00a9 Cond\u00e9 Nast 2019 GolfDigest.com NewsletterSign up for our newsletterBarbasol ChampionshipJune 1, 2018 # LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption By Dave ShedloskiMaddie Meyer Victory in the last two editions of the Pure Silk-Bahamas LPGA Classic has opened a new door for Brittany Lincicome\u2014a chance to compete in a PGA Tour event. An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington. Golf World first reported on Friday morning that tournament officials planned to extend the invitation to Lincicome, with an official announcement expected to come as early as next week."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that LPGA pro Brittany Lincicome was set to play in the PGA Tour's Barbasol Championship on a sponsor's exemption, and the article date is June 1, 2018, which supports the claim that she was granted this exemption in 2018.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Lincicome was granted a sponsor's exemption",
+      "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+      "source_title": "brittanylincicome",
+      "sentence": "An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington.",
+      "page": 1,
+      "snippet": "An eight-time winner on the LPGA Tour,"
+     },
+     {
+      "component": "Lincicome was granted a sponsor's exemption",
+      "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+      "source_title": "brittanylincicome",
+      "sentence": "(meta data) TITLE: LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption - Golf Digest (meta data) AUTHOR: Dave Shedloski (meta data) COPYRIGHT: Copyright \u00a9 Cond\u00e9 Nast 2019 GolfDigest.com NewsletterSign up for our newsletterBarbasol ChampionshipJune 1, 2018 # LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption By Dave ShedloskiMaddie Meyer Victory in the last two editions of the Pure Silk-Bahamas LPGA Classic has opened a new door for Brittany Lincicome\u2014a chance to compete in a PGA Tour event.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: LPGA pro Brittany Lincicome"
+     },
+     {
+      "component": "into the Barbasol Championship",
+      "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+      "source_title": "brittanylincicome",
+      "sentence": "An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington.",
+      "page": 1,
+      "snippet": "An eight-time winner on the LPGA Tour,"
+     },
+     {
+      "component": "on the PGA Tour",
+      "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+      "source_title": "brittanylincicome",
+      "sentence": "An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington.",
+      "page": 1,
+      "snippet": "An eight-time winner on the LPGA Tour,"
+     },
+     {
+      "component": "In 2018",
+      "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+      "source_title": "brittanylincicome",
+      "sentence": "(meta data) TITLE: LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption - Golf Digest (meta data) AUTHOR: Dave Shedloski (meta data) COPYRIGHT: Copyright \u00a9 Cond\u00e9 Nast 2019 GolfDigest.com NewsletterSign up for our newsletterBarbasol ChampionshipJune 1, 2018 # LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption By Dave ShedloskiMaddie Meyer Victory in the last two editions of the Pure Silk-Bahamas LPGA Classic has opened a new door for Brittany Lincicome\u2014a chance to compete in a PGA Tour event.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: LPGA pro Brittany Lincicome",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+      "source_title": "brittanylincicome",
+      "text": "(meta data) TITLE: LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption - Golf Digest (meta data) AUTHOR: Dave Shedloski (meta data) COPYRIGHT: Copyright \u00a9 Cond\u00e9 Nast 2019 GolfDigest.com NewsletterSign up for our newsletterBarbasol ChampionshipJune 1, 2018 # LPGA pro Brittany Lincicome set to play in PGA Tour event on sponsor's exemption By Dave ShedloskiMaddie Meyer Victory in the last two editions of the Pure Silk-Bahamas LPGA Classic has opened a new door for Brittany Lincicome\u2014a chance to compete in a PGA Tour event. An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states the Barbasol Championship was held July 19-22, but does not specify the year it was held in relation to Lincicome's exemption.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "An eight-time winner on the LPGA Tour, including two major titles, Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, held July 19-22 at Keene Trace Golf Club in Nicholsville, Ky., near Lexington."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence explicitly states that Lincicome will accept a sponsor's exemption to play in the PGA Tour's Barbasol Championship, which covers the exemption and tournament components. The date of the article (June 1, 2018) and the tournament dates (July 19-22) confirm the year 2018, and the source provides that context through the metadata included in the shown evidence. All claim components are proven by the shown sentences."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "The selection was based on a vote by the general public, for his work with both \"Backtrax USA\" and Sirius XM Hits 1.",
+   "markers": [
+    "backtraxusa"
+   ],
+   "paper_ids": [
+    "7315995bc27c442f82366d285226d33f563654f2"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+    "source_title": "backtraxusa",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The other two categories were voted on by the public.",
+    "page": 1,
+    "snippet": "The other two categories were voted on",
+    "reason": "The passage explicitly states that listener voting was administered for the Music Format On-Air Personality category, which includes KID KELLY, BACKTRAX USA WITH KID KELLY, and SIRIUS XM HITS 1.",
+    "votes": "2-0",
+    "window": "The other two categories were voted on by the public. Music Format On-Air Personality: KID KELLY, BACKTRAX USA WITH KID KELLY; syndicated by WESTWOOD ONE, on-air host and programmer, SIRIUS XM HITS 1 Listener voting was administered by VOTEM and overseen by the accounting firm of MILLER KAPLAN ARASE."
+   },
+   "evidences": [
+    {
+     "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+     "source_title": "backtraxusa",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The other two categories were voted on by the public.",
+     "page": 1,
+     "snippet": "The other two categories were voted on",
+     "reason": "The passage explicitly states that listener voting was administered for the Music Format On-Air Personality category, which includes KID KELLY, BACKTRAX USA WITH KID KELLY, and SIRIUS XM HITS 1.",
+     "votes": "2-0",
+     "window": "The other two categories were voted on by the public. Music Format On-Air Personality: KID KELLY, BACKTRAX USA WITH KID KELLY; syndicated by WESTWOOD ONE, on-air host and programmer, SIRIUS XM HITS 1 Listener voting was administered by VOTEM and overseen by the accounting firm of MILLER KAPLAN ARASE."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that listener voting was administered for the Music Format On-Air Personality category, which includes KID KELLY, BACKTRAX USA WITH KID KELLY, and SIRIUS XM HITS 1.",
+   "covering": {
+    "covered": [
+     {
+      "component": "selection based on public vote",
+      "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+      "source_title": "backtraxusa",
+      "sentence": "The inductees by public vote are:",
+      "page": 1,
+      "snippet": "The inductees by public vote are:"
+     },
+     {
+      "component": "work with \"Backtrax USA\"",
+      "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+      "source_title": "backtraxusa",
+      "sentence": "Music Format On-Air Personality: KID KELLY, BACKTRAX USA WITH KID KELLY; syndicated by WESTWOOD ONE, on-air host and programmer, SIRIUS XM HITS 1",
+      "page": 1,
+      "snippet": "Music Format On-Air Personality: KID KELLY, BACKTRAX"
+     },
+     {
+      "component": "work with Sirius XM Hits 1",
+      "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+      "source_title": "backtraxusa",
+      "sentence": "Music Format On-Air Personality: KID KELLY, BACKTRAX USA WITH KID KELLY; syndicated by WESTWOOD ONE, on-air host and programmer, SIRIUS XM HITS 1",
+      "page": 1,
+      "snippet": "Music Format On-Air Personality: KID KELLY, BACKTRAX"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+      "source_title": "backtraxusa",
+      "text": "The inductees by public vote are: Spoken Word Format On-Air Personality: MARK LEVIN, THE MARK LEVIN SHOW; syndicated by WESTWOOD ONE Music Format On-Air Personality: KID KELLY, BACKTRAX USA WITH KID KELLY; syndicated by WESTWOOD ONE, on-air host and programmer, SIRIUS XM HITS 1",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "ce0ea15f62dbc3b96f0d4c47be33d6ea422808d9": {
+    "title": "prospectheightshighschoo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "06d78a7a9616337cecc2f2dea2b5c5d2a2e826e0": {
+    "title": "victorivan",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "89b9c170c8f67582fdfc21016ddaaf410d1f2df5": {
+    "title": "joellortiz",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "06a9329360396ccc2ef817ad61f4d3936564c078": {
+    "title": "religiousintolerance",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d18fd7223937d4027e8c458e05f09358e41403b4": {
+    "title": "oldtollandcountyjailandm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ca257fa6b3e25150b9e5bcafdd15c1f239c21ed2": {
+    "title": "gardatrafficcorps",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d39f660adf4f7bc16231f06a1b3109974ccd7f4e": {
+    "title": "johnwestroyalnavyofficer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8c79a0967c25551c3bf7803bc2085bbbef5fe0f0": {
+    "title": "smallvilleseason1",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "62002d98758d3bbd9166fc0283176abd5121ee2d": {
+    "title": "haydenthorpe",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bcc799fa20e9df671d283e4d43d11db984909b68": {
+    "title": "damienhirst",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "46efe4be2bdaf1103504865756c83451b473edcf": {
+    "title": "sarmientochubut",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "72c7e447ef57496d33cd69a3c3e4c0753b348d21": {
+    "title": "junipergreenrailwaystati",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "7315995bc27c442f82366d285226d33f563654f2": {
+    "title": "backtraxusa",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ff0b3ef124493c35c167019b9aac91c21773903b": {
+    "title": "corneliusthefirst",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ae2042bf378a78eda7b62f36d8a4e53f3fe6c22f": {
+    "title": "selmanawaksmanawardinmic",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0d8a16513137ee8fa93e0ff8d77554d1bda30da7": {
+    "title": "jesnervarabbankplc",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "db28443127d5b11b4bfbe564bf6e6feb69cd688f": {
+    "title": "kylieminogue",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d176c32dc88eb1f8d324eef69bf24bb58908696b": {
+    "title": "factionalviolenceinlibya",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b27f125dda824bde63d3fb36b330284d9e2f8659": {
+    "title": "redrivertrails",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6": {
+    "title": "coalingastatehospital",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "f105ddec908c56e580571d08d1bf1e374fa12d9c": {
+    "title": "brittanylincicome",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ac2a8d487df10b6890a614f2235ffff2bbfac2c9": {
+    "title": "aijac",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "040022f6d41dfb1ed68c5a9c221f343f3a524f80": {
+    "title": "williamhenryharrison",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "408523dbfcb2ac0461fbbb9c76e89f329b213d05": {
+    "title": "yemenicivilwar2015presen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5": {
+    "title": "elizabethgaskell",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b8d893059eb0b64b5c307d7f2aa38054e65617b1": {
+    "title": "nationalwildlifecrimeuni",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 13,
+   "unsupported": 13,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:27:44",
+  "marker_errors": [],
+  "processing_time_seconds": 462.0,
+  "source_hashes": {
+   "elizabethgaskell.txt": "e8285358b7291b1abf2e68b8a536385903721b05",
+   "religiousintolerance.txt": "58b24749d16a83ba442e5e42ffde76e42cd85163",
+   "oldtollandcountyjailandm.txt": "0d49626529d88185403395f990b9894af01b1955",
+   "johnwestroyalnavyofficer.txt": "648409ac119ad91305e2d32e53a1f0fe7d801a53",
+   "victorivan.txt": "76f6a49c91acbf24b0ccfbd589570d66fa5fd10f",
+   "redrivertrails.txt": "f5c750d992a97ff8dfbbe5570c39594a99bac328",
+   "jesnervarabbankplc.txt": "5e964831ac34561c9f4de2c90764bbee32cdeb74",
+   "haydenthorpe.txt": "685125a1877b73349ee0a4e1f8c49d4b708ae6a9",
+   "yemenicivilwar2015presen.txt": "0ddefc4bdcb76f4dfbc43b6e66d924e74deaf7bf",
+   "sarmientochubut.txt": "e30b11b658ac4b047bed49f70e844424124ca121",
+   "selmanawaksmanawardinmic.txt": "646c35a3ff153a0d7591b54657ebeacce322a54f",
+   "aijac.txt": "e506924444144ee72add89cf47922342ab9e2c71",
+   "junipergreenrailwaystati.txt": "b39c4d834610dfbaea1beb57f79596ddb1615afa",
+   "joellortiz.txt": "1e45f1cfb60458fd39f84be6d804e45f045dc955",
+   "prospectheightshighschoo.txt": "ebe338f8fcd56a2f57bd7dd7e0085687aad078bd",
+   "smallvilleseason1.txt": "2e90340c3ec716c3d3df04d94beb5245ad7b6894",
+   "kylieminogue.txt": "11f36dbfc731e0c8442fdf78b0f311fb3f90b060",
+   "factionalviolenceinlibya.txt": "f781f3b19655da9c5d668b07efa5412e01f294e7",
+   "damienhirst.txt": "8e9325d1142e15091f22ce7d0b19375b387d380e",
+   "coalingastatehospital.txt": "b99a1c821fce51f8c605d144b7f415b35635d643",
+   "williamhenryharrison.txt": "b5b1f7d2024e05fe5b3c797292146c8ea2e123ea",
+   "gardatrafficcorps.txt": "3a40c6821406504e91f9120cb124740a8b8077e9",
+   "nationalwildlifecrimeuni.txt": "de143bddca2663081e8dfd91a9a4db36bc62670a",
+   "corneliusthefirst.txt": "33027375e347833be0acddf1a04732e4e7360756",
+   "brittanylincicome.txt": "145664cbac91d8e840c5f72dea47b2257521b078",
+   "backtraxusa.txt": "04e61ab4379764677166230e936f8e28b57f4b05"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 383,
+    "prompt_tokens": 428727,
+    "completion_tokens": 19294,
+    "cost_usd": 0.050743
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 22,
+    "prompt_tokens": 86086,
+    "completion_tokens": 51992,
+    "cost_usd": 0.021429
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 14,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 18,
+   "actions": {
+    "add_citation_or_rewrite": 13,
+    "wrong_or_insufficient_evidence": 4,
+    "supported": 1
+   },
+   "proof_may_exist": [
+    "t7",
+    "t11",
+    "t12",
+    "t15"
+   ],
+   "conflicts": [
+    "t5"
+   ],
+   "rescued": [
+    "t12"
+   ],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "99ce5b698b95aa3bf2e477f302df6e7b4248e9f5",
+   "key": "elizabethgaskell",
+   "filename": "elizabethgaskell.txt",
+   "title": "elizabethgaskell",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "06a9329360396ccc2ef817ad61f4d3936564c078",
+   "key": "religiousintolerance",
+   "filename": "religiousintolerance.txt",
+   "title": "religiousintolerance",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d18fd7223937d4027e8c458e05f09358e41403b4",
+   "key": "oldtollandcountyjailandm",
+   "filename": "oldtollandcountyjailandm.txt",
+   "title": "oldtollandcountyjailandm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d39f660adf4f7bc16231f06a1b3109974ccd7f4e",
+   "key": "johnwestroyalnavyofficer",
+   "filename": "johnwestroyalnavyofficer.txt",
+   "title": "johnwestroyalnavyofficer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "06d78a7a9616337cecc2f2dea2b5c5d2a2e826e0",
+   "key": "victorivan",
+   "filename": "victorivan.txt",
+   "title": "victorivan",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b27f125dda824bde63d3fb36b330284d9e2f8659",
+   "key": "redrivertrails",
+   "filename": "redrivertrails.txt",
+   "title": "redrivertrails",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0d8a16513137ee8fa93e0ff8d77554d1bda30da7",
+   "key": "jesnervarabbankplc",
+   "filename": "jesnervarabbankplc.txt",
+   "title": "jesnervarabbankplc",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "62002d98758d3bbd9166fc0283176abd5121ee2d",
+   "key": "haydenthorpe",
+   "filename": "haydenthorpe.txt",
+   "title": "haydenthorpe",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "408523dbfcb2ac0461fbbb9c76e89f329b213d05",
+   "key": "yemenicivilwar2015presen",
+   "filename": "yemenicivilwar2015presen.txt",
+   "title": "yemenicivilwar2015presen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46efe4be2bdaf1103504865756c83451b473edcf",
+   "key": "sarmientochubut",
+   "filename": "sarmientochubut.txt",
+   "title": "sarmientochubut",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ae2042bf378a78eda7b62f36d8a4e53f3fe6c22f",
+   "key": "selmanawaksmanawardinmic",
+   "filename": "selmanawaksmanawardinmic.txt",
+   "title": "selmanawaksmanawardinmic",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+   "key": "aijac",
+   "filename": "aijac.txt",
+   "title": "aijac",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "72c7e447ef57496d33cd69a3c3e4c0753b348d21",
+   "key": "junipergreenrailwaystati",
+   "filename": "junipergreenrailwaystati.txt",
+   "title": "junipergreenrailwaystati",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "89b9c170c8f67582fdfc21016ddaaf410d1f2df5",
+   "key": "joellortiz",
+   "filename": "joellortiz.txt",
+   "title": "joellortiz",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ce0ea15f62dbc3b96f0d4c47be33d6ea422808d9",
+   "key": "prospectheightshighschoo",
+   "filename": "prospectheightshighschoo.txt",
+   "title": "prospectheightshighschoo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8c79a0967c25551c3bf7803bc2085bbbef5fe0f0",
+   "key": "smallvilleseason1",
+   "filename": "smallvilleseason1.txt",
+   "title": "smallvilleseason1",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+   "key": "kylieminogue",
+   "filename": "kylieminogue.txt",
+   "title": "kylieminogue",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d176c32dc88eb1f8d324eef69bf24bb58908696b",
+   "key": "factionalviolenceinlibya",
+   "filename": "factionalviolenceinlibya.txt",
+   "title": "factionalviolenceinlibya",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bcc799fa20e9df671d283e4d43d11db984909b68",
+   "key": "damienhirst",
+   "filename": "damienhirst.txt",
+   "title": "damienhirst",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c4b363cd2ce00c5942e71c21ba1d2577fadd8bb6",
+   "key": "coalingastatehospital",
+   "filename": "coalingastatehospital.txt",
+   "title": "coalingastatehospital",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+   "key": "williamhenryharrison",
+   "filename": "williamhenryharrison.txt",
+   "title": "williamhenryharrison",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ca257fa6b3e25150b9e5bcafdd15c1f239c21ed2",
+   "key": "gardatrafficcorps",
+   "filename": "gardatrafficcorps.txt",
+   "title": "gardatrafficcorps",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b8d893059eb0b64b5c307d7f2aa38054e65617b1",
+   "key": "nationalwildlifecrimeuni",
+   "filename": "nationalwildlifecrimeuni.txt",
+   "title": "nationalwildlifecrimeuni",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ff0b3ef124493c35c167019b9aac91c21773903b",
+   "key": "corneliusthefirst",
+   "filename": "corneliusthefirst.txt",
+   "title": "corneliusthefirst",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f105ddec908c56e580571d08d1bf1e374fa12d9c",
+   "key": "brittanylincicome",
+   "filename": "brittanylincicome.txt",
+   "title": "brittanylincicome",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7315995bc27c442f82366d285226d33f563654f2",
+   "key": "backtraxusa",
+   "filename": "backtraxusa.txt",
+   "title": "backtraxusa",
+   "num_claims": 0
+  }
+ ]
+}

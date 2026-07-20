@@ -1,0 +1,2605 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 10 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section or a specific test batch.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Following the film's end credits, Angelica's voodoo doll of Sparrow has drifted to the island that she is marooned on.",
+   "markers": [
+    "jacksparrow"
+   ],
+   "paper_ids": [
+    "59781658ad07866db01e714acf9b8def3893575a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9048,
+   "evidence": {
+    "paper_id": "59781658ad07866db01e714acf9b8def3893575a",
+    "source_title": "jacksparrow",
+    "supported": false,
+    "sentence": "Rob Marshall's first three films, \"Chicago,\" \"Memoirs of a Geisha\" and \"Nine,\" have been honored with a total of 23 Academy Award\u00ae nominations.",
+    "page": 1,
+    "snippet": "Rob Marshall's first three films, \"Chicago,\" \"Memoirs",
+    "cosine": 0.9048,
+    "reason": "The passage discusses Oscar winners and film awards related to Rob Marshall's films and does not mention Angelica, Sparrow, voodoo dolls, or any plot details of a film.",
+    "window": "The editors include two Oscar winners, Michael Kahn (\"Prince of Persia: The Sands of Time\") and David Brenner (\"Born on the Fourth of July\"), as well as Wyatt Smith (Marshall's \"Nine\"). Rob Marshall's first three films, \"Chicago,\" \"Memoirs of a Geisha\" and \"Nine,\" have been honored with a total of 23 Academy Award\u00ae nominations. For his work on \"Chicago,\" winner of six Oscars\u00ae including Best Picture, Marshall received the Director's Guild Award, an Oscar nomination, a Golden Globe Award\u00ae nomination, a BAFTA nomination, The National Board of Review Award and the New York Film Critics Online Award."
+   },
+   "evidences": [
+    {
+     "paper_id": "59781658ad07866db01e714acf9b8def3893575a",
+     "source_title": "jacksparrow",
+     "supported": false,
+     "sentence": "Rob Marshall's first three films, \"Chicago,\" \"Memoirs of a Geisha\" and \"Nine,\" have been honored with a total of 23 Academy Award\u00ae nominations.",
+     "page": 1,
+     "snippet": "Rob Marshall's first three films, \"Chicago,\" \"Memoirs",
+     "cosine": 0.9048,
+     "reason": "The passage discusses Oscar winners and film awards related to Rob Marshall's films and does not mention Angelica, Sparrow, voodoo dolls, or any plot details of a film.",
+     "window": "The editors include two Oscar winners, Michael Kahn (\"Prince of Persia: The Sands of Time\") and David Brenner (\"Born on the Fourth of July\"), as well as Wyatt Smith (Marshall's \"Nine\"). Rob Marshall's first three films, \"Chicago,\" \"Memoirs of a Geisha\" and \"Nine,\" have been honored with a total of 23 Academy Award\u00ae nominations. For his work on \"Chicago,\" winner of six Oscars\u00ae including Best Picture, Marshall received the Director's Guild Award, an Oscar nomination, a Golden Globe Award\u00ae nomination, a BAFTA nomination, The National Board of Review Award and the New York Film Critics Online Award."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "following",
+    "missing_from": [
+     "59781658ad07866db01e714acf9b8def3893575a"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Angelica's voodoo doll of Sparrow has drifted to the island that she is marooned on.",
+    "reason": "The passage describes a specific plot point from a film and attributes it implicitly to the cited source, which is expected to prove this factual statement about the film's narrative.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about the post-credits scene involving Angelica's voodoo doll drifting to her marooned island is not present in the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source is a production announcement for 'Pirates of the Caribbean: On Stranger Tides' that describes filming locations, cast, and a brief plot summary but contains no mention of a post-credits scene, a voodoo doll, or the specific event of the doll drifting to an island where Angelica is marooned. The shown sentence about Rob Marshall's Oscar nominations is entirely irrelevant. Since no component of the claim can be found in the source text, the author must either add a different citation that covers this plot detail or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "He was on the Glickenhaus team for 2016, but their car was crashed during a practice session.",
+   "markers": [
+    "chrisharrisjournalist"
+   ],
+   "paper_ids": [
+    "46ef43e12241e1a2fef9340ee5d5b2a39c565404"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8949,
+   "evidence": {
+    "paper_id": "46ef43e12241e1a2fef9340ee5d5b2a39c565404",
+    "source_title": "chrisharrisjournalist",
+    "supported": false,
+    "sentence": "The experienced Manuel Lauck was the first driver to give the car an outing and concluded: \"For a first race after nearly three years, it was really positive.",
+    "page": 1,
+    "snippet": "The experienced Manuel Lauck was the first",
+    "cosine": 0.8949,
+    "reason": "The passage does not mention the Glickenhaus team or any car crashing during a practice session.",
+    "window": "This latest version benefits from a modified energy recuperation system and other revisions, and it will be driven at the Nurburgring 24 Hours by Top Gear television presenter Chris Harris and Evo journalist Jethro Bovingdon as part of the line-up. The experienced Manuel Lauck was the first driver to give the car an outing and concluded: \"For a first race after nearly three years, it was really positive. We're still only at the beginning of this story.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "46ef43e12241e1a2fef9340ee5d5b2a39c565404",
+     "source_title": "chrisharrisjournalist",
+     "supported": false,
+     "sentence": "The experienced Manuel Lauck was the first driver to give the car an outing and concluded: \"For a first race after nearly three years, it was really positive.",
+     "page": 1,
+     "snippet": "The experienced Manuel Lauck was the first",
+     "cosine": 0.8949,
+     "reason": "The passage does not mention the Glickenhaus team or any car crashing during a practice session.",
+     "window": "This latest version benefits from a modified energy recuperation system and other revisions, and it will be driven at the Nurburgring 24 Hours by Top Gear television presenter Chris Harris and Evo journalist Jethro Bovingdon as part of the line-up. The experienced Manuel Lauck was the first driver to give the car an outing and concluded: \"For a first race after nearly three years, it was really positive. We're still only at the beginning of this story.\""
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was on the Glickenhaus team for 2016.",
+    "reason": "The passage asserts a fact about the subject's involvement with the Glickenhaus team in 2016, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the Glickenhaus car was crashed during a practice session",
+    "rewrite_suggestion": "He was on the Glickenhaus team for 2016 as a guest driver for the N\u00fcrburgring 24 Hours.",
+    "proofs": [
+     "Top Gear television presenter Chris Harris and Evo journalist Jethro Bovingdon as part of the line-up."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim has two components. The first (being on the team) is provable from the source (which includes Chris Harris as a driver), but the shown sentence about Manuel Lauck does not prove it. The second component (a crash during a practice session) is entirely absent from the source text; the source mentions a retirement due to a water pump issue, not a crash. Since a substantive component is unprovable from the source, the author must either cite a different source or rewrite the claim to remove the unsupported crash statement."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "Students that arrived late would have to check in with the front office, and staff members began to screen students with metal detector wands before allowing them to enter.",
+   "markers": [
+    "marshallcountyhighschool"
+   ],
+   "paper_ids": [
+    "14a2dfdb4fb82d6f39234fd802feb23db3881f5d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "14a2dfdb4fb82d6f39234fd802feb23db3881f5d",
+    "source_title": "marshallcountyhighschool",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors.",
+    "page": 1,
+    "snippet": "Every morning, teachers and staff members search",
+    "reason": "The passage does not mention students arriving late or checking in with the front office.",
+    "votes": "2-0",
+    "window": "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors."
+   },
+   "evidences": [
+    {
+     "paper_id": "14a2dfdb4fb82d6f39234fd802feb23db3881f5d",
+     "source_title": "marshallcountyhighschool",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors.",
+     "page": 1,
+     "snippet": "Every morning, teachers and staff members search",
+     "reason": "The passage does not mention students arriving late or checking in with the front office.",
+     "votes": "2-0",
+     "window": "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention students arriving late or checking in with the front office.",
+   "component_check": {
+    "found": [
+     "staff members began to screen students with metal detector wands before allowing them to enter"
+    ],
+    "missing": [
+     "Students that arrived late would have to check in with the front office"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "staff members began to screen students with metal detector wands before allowing them to enter",
+      "paper_id": "14a2dfdb4fb82d6f39234fd802feb23db3881f5d",
+      "source_title": "marshallcountyhighschool",
+      "sentence": "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes actions taken by staff members, implying these actions are factual and would be supported by the cited source. There is no indication that the citation is for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Students that arrived late would have to check in with the front office",
+    "rewrite_suggestion": "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors.",
+    "proofs": [
+     "Every morning, teachers and staff members search students' backpacks and wand them with metal detectors."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes an unsourced component about late arrivals checking in with the front office, which does not appear anywhere in the provided source text. The source only describes the morning routine of wanding and searching, not a separate procedure for late students. Additionally, the phrase 'before allowing them to enter' is not explicitly stated, and 'began' is not present (the source uses present tense 'Every morning'). Therefore the author must either add a citation for the late-arrival check-in or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Dziabiak was born in Freedom, Pennsylvania, in 1987.",
+   "markers": [
+    "joshuadziabiak"
+   ],
+   "paper_ids": [
+    "359d58a298a22949456975a7ad7065fa257f23e8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "359d58a298a22949456975a7ad7065fa257f23e8",
+    "source_title": "joshuadziabiak",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "He grew up in Freedom, PA, on 20 acres of farmland.",
+    "page": 1,
+    "snippet": "He grew up in Freedom, PA, on",
+    "reason": "the passage states Dziabiak was born in 1988, not 1987.",
+    "votes": "2-0",
+    "window": "He grew up in Freedom, PA, on 20 acres of farmland. Year born: 1988"
+   },
+   "evidences": [
+    {
+     "paper_id": "359d58a298a22949456975a7ad7065fa257f23e8",
+     "source_title": "joshuadziabiak",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "He grew up in Freedom, PA, on 20 acres of farmland.",
+     "page": 1,
+     "snippet": "He grew up in Freedom, PA, on",
+     "reason": "the passage states Dziabiak was born in 1988, not 1987.",
+     "votes": "2-0",
+     "window": "He grew up in Freedom, PA, on 20 acres of farmland. Year born: 1988"
+    }
+   ],
+   "votes": null,
+   "reason": "the passage states Dziabiak was born in 1988, not 1987.",
+   "component_check": {
+    "found": [
+     "Dziabiak was born in Freedom, Pennsylvania"
+    ],
+    "missing": [
+     "in 1987"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Dziabiak was born in Freedom, Pennsylvania",
+      "paper_id": "359d58a298a22949456975a7ad7065fa257f23e8",
+      "source_title": "joshuadziabiak",
+      "sentence": "He grew up in Freedom, PA, on 20 acres of farmland.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Dziabiak was born in Freedom, Pennsylvania, in 1987.",
+    "reason": "The passage asserts specific biographical facts about Dziabiak, which the citation is expected to prove. This falls under the default 'full' scope as it's a direct statement of fact attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states Dziabiak was born in Freedom, Pennsylvania, in 1987, but the source never states his birthplace and states 'Year born: 1988', conflicting with the 1987 date.",
+    "rewrite_suggestion": "Dziabiak was born in 1988.",
+    "proofs": [],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence 'He grew up in Freedom, PA' does not prove birthplace nor birth year. The source text contains no statement that Dziabiak was born in Freedom, and explicitly lists 'Year born: 1988', contradicting the claimed 1987. Therefore, the claim is unsupported by the cited source and requires either additional citation or rewriting to match the source."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "New Zealand were the fourth and final team to qualify for the semi-finals after Pakistan were unable to increase their net run rate sufficiently enough in their match against Bangladesh at Lord's.",
+   "markers": [
+    "2019cricketworldcup"
+   ],
+   "paper_ids": [
+    "735e7299e408be383b4926091d507474af3ead96"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9252,
+   "evidence": {
+    "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+    "source_title": "2019cricketworldcup",
+    "supported": true,
+    "sentence": "To then book a place in the semi-finals, Pakistan had to bowl Bangladesh out for seven or less to have their Net Run Rate climb over New Zealand's.",
+    "page": 1,
+    "snippet": "To then book a place in the",
+    "cosine": 0.9252,
+    "reason": "The passage states that Pakistan needed to bowl Bangladesh out for seven or less to surpass New Zealand's net run rate, and Bangladesh passed seven, confirming New Zealand's semi-final spot.",
+    "window": "Pakistan batted first, setting Bangladesh a target of 316. To then book a place in the semi-finals, Pakistan had to bowl Bangladesh out for seven or less to have their Net Run Rate climb over New Zealand's. Bangladesh passed seven from the 11th ball of their innings, a single from Tamim Iqbal off Mohammad Amir confirming a fourth consecutive semi-final for New Zealand at the Men's Cricket World Cup."
+   },
+   "evidences": [
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "supported": true,
+     "sentence": "To then book a place in the semi-finals, Pakistan had to bowl Bangladesh out for seven or less to have their Net Run Rate climb over New Zealand's.",
+     "page": 1,
+     "snippet": "To then book a place in the",
+     "cosine": 0.9252,
+     "reason": "The passage states that Pakistan needed to bowl Bangladesh out for seven or less to surpass New Zealand's net run rate, and Bangladesh passed seven, confirming New Zealand's semi-final spot.",
+     "window": "Pakistan batted first, setting Bangladesh a target of 316. To then book a place in the semi-finals, Pakistan had to bowl Bangladesh out for seven or less to have their Net Run Rate climb over New Zealand's. Bangladesh passed seven from the 11th ball of their innings, a single from Tamim Iqbal off Mohammad Amir confirming a fourth consecutive semi-final for New Zealand at the Men's Cricket World Cup."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Pakistan needed to bowl Bangladesh out for seven or less to surpass New Zealand's net run rate, and Bangladesh passed seven, confirming New Zealand's semi-final spot.",
+   "covering": {
+    "covered": [
+     {
+      "component": "New Zealand were the fourth and final team to qualify for the semi-finals",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "Bangladesh passed seven from the 11th ball of their innings, a single from Tamim Iqbal off Mohammad Amir confirming a fourth consecutive semi-final for New Zealand at the Men's Cricket World Cup.",
+      "page": 1,
+      "snippet": "Bangladesh passed seven from the 11th ball"
+     },
+     {
+      "component": "New Zealand were the fourth and final team to qualify for the semi-finals",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 05 Jul 19 # New Zealand qualify for CWC19 semi-finals ### CWC19 news ShareURL Copied New Zealand have confirmed their place in the semi-finals of the 2019 ICC Men's Cricket World Cup.",
+      "page": 1,
+      "snippet": "About ICC Hall of Fame ICC on"
+     },
+     {
+      "component": "Pakistan were unable to increase their net run rate sufficiently enough",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "To then book a place in the semi-finals, Pakistan had to bowl Bangladesh out for seven or less to have their Net Run Rate climb over New Zealand's.",
+      "page": 1,
+      "snippet": "To then book a place in the"
+     },
+     {
+      "component": "in their match against Bangladesh at Lord's",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "The qualification of the Black Caps was dependent on whether Pakistan \u2013 trailing New Zealand by two points in the standings \u2013 could pull off a win of monstrous proportions against Bangladesh in their final group match at Lord's on Friday, with Net Run Rate to then separate the sides.",
+      "page": 1,
+      "snippet": "The qualification of the Black Caps was"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "text": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 05 Jul 19 # New Zealand qualify for CWC19 semi-finals ### CWC19 news ShareURL Copied New Zealand have confirmed their place in the semi-finals of the 2019 ICC Men's Cricket World Cup. The qualification of the Black Caps was dependent on whether Pakistan \u2013 trailing New Zealand by two points in the standings \u2013 could pull off a win of monstrous proportions against Bangladesh in their final group match at Lord's on Friday, with Net Run Rate to then separate the sides. Pakistan batted first, setting Bangladesh a target of 316. To then book a place in the semi-finals, Pakistan had to bowl Bangladesh out for seven or less to have their Net Run Rate climb over New Zealand's. Bangladesh passed seven from the 11th ball of their innings, a single from Tamim Iqbal off Mohammad Amir confirming a fourth consecutive semi-final for New Zealand at the Men's Cricket World Cup.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t6",
+   "text": "Trading as L\u00fcrssen Yachts, it is one of the leading builders of custom superyachts such as Paul Allen's \"Octopus\", David Geffen's \"Rising Sun\", and \"Azzam\", the largest private yacht in the world at 180 m in length.",
+   "markers": [
+    "lrssen"
+   ],
+   "paper_ids": [
+    "e10330106d02a84695dc59b377a5a1bc3d124dd6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e10330106d02a84695dc59b377a5a1bc3d124dd6",
+    "source_title": "lrssen",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "A German shipyard today launched Azzam, the world's largest private yacht, eclipsing the previous record holder, Russian oligarch Roman Abramovich's 533-foot Eclipse.",
+    "page": 1,
+    "snippet": "A German shipyard today launched Azzam, the",
+    "reason": "The passage does not mention Paul Allen's \"Octopus\" or David Geffen's \"Rising Sun\".",
+    "votes": "2-0",
+    "window": "A German shipyard today launched Azzam, the world's largest private yacht, eclipsing the previous record holder, Russian oligarch Roman Abramovich's 533-foot Eclipse. However the stats for this yacht built reportedly for a Saudi buyer are impressive: Length: 180 meters, or 590.55 feet. Photos of the ocean-liner-sized cruiser were posted this morning on the Superyachts.com website, which has tracked the progress of the yacht during its construction at Germany's L\u00fcrssen yard. Cost: If you have to ask... Construction costs vary widely at the superyacht end of the boat-building business, but a rough minimum for Azzam-class yachts is $1 million per meter."
+   },
+   "evidences": [
+    {
+     "paper_id": "e10330106d02a84695dc59b377a5a1bc3d124dd6",
+     "source_title": "lrssen",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "A German shipyard today launched Azzam, the world's largest private yacht, eclipsing the previous record holder, Russian oligarch Roman Abramovich's 533-foot Eclipse.",
+     "page": 1,
+     "snippet": "A German shipyard today launched Azzam, the",
+     "reason": "The passage does not mention Paul Allen's \"Octopus\" or David Geffen's \"Rising Sun\".",
+     "votes": "2-0",
+     "window": "A German shipyard today launched Azzam, the world's largest private yacht, eclipsing the previous record holder, Russian oligarch Roman Abramovich's 533-foot Eclipse. However the stats for this yacht built reportedly for a Saudi buyer are impressive: Length: 180 meters, or 590.55 feet. Photos of the ocean-liner-sized cruiser were posted this morning on the Superyachts.com website, which has tracked the progress of the yacht during its construction at Germany's L\u00fcrssen yard. Cost: If you have to ask... Construction costs vary widely at the superyacht end of the boat-building business, but a rough minimum for Azzam-class yachts is $1 million per meter."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Paul Allen's \"Octopus\" or David Geffen's \"Rising Sun\".",
+   "subject_guard": {
+    "subject": "David Geffen's Rising Sun; Paul Allen's Octopus; trading",
+    "missing_from": [
+     "e10330106d02a84695dc59b377a5a1bc3d124dd6"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "L\u00fcrssen Yachts is one of the leading builders of custom superyachts such as Paul Allen's \"Octopus\", David Geffen's \"Rising Sun\", and \"Azzam\", the largest private yacht in the world at 180 m in length.",
+    "reason": "The passage asserts specific facts and statements about L\u00fcrssen Yachts, including examples of their custom superyachts and the size of \"Azzam\". The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that L\u00fcrssen is a leading builder of custom superyachts and that it built Paul Allen's 'Octopus' and David Geffen's 'Rising Sun' is not supported by the source; the source only mentions Azzam. Also the specific trading name 'L\u00fcrssen Yachts' is not stated in the source.",
+    "rewrite_suggestion": "Built by the German shipyard L\u00fcrssen, the yacht 'Azzam' is the largest private yacht in the world at 180 m in length.",
+    "proofs": [
+     "A German shipyard today launched Azzam, the world's largest private yacht, eclipsing the previous record holder, Russian oligarch Roman Abramovich's 533-foot Eclipse.",
+     "Photos of the ocean-liner-sized cruiser were posted this morning on the Superyachts.com website, which has tracked the progress of the yacht during its construction at Germany's L\u00fcrssen yard.",
+     "Length: 180 meters, or 590.55 feet."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions Azzam as the world's largest private yacht but omits the L\u00fcrssen connection and the length. More critically, the claim includes unsupported assertions that L\u00fcrssen is a leading builder and that it built Octopus and Rising Sun\u2014none of which appear in the source. The source only supports that L\u00fcrssen built Azzam and that Azzam is the largest private yacht at 180 m. Therefore the author must either add citations for the missing parts or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "After a 3\u20132 home win over Bermuda and two losses to El Salvador, Jamaica finished in third place and was eliminated.",
+   "markers": [
+    "jamaicanationalfootballt"
+   ],
+   "paper_ids": [
+    "085e1df3c875989e384e7dc0c46682b2c43e15fa"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "085e1df3c875989e384e7dc0c46682b2c43e15fa",
+    "source_title": "jamaicanationalfootballt",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Jamaica tied 1-1 with Canada and Bermuda and then lost 2-0 to El Salvador, 1-0 to Canada, 2-1 to El Salvador.",
+    "page": 1,
+    "snippet": "Jamaica tied 1-1 with Canada and Bermuda",
+    "reason": "The passage does not state that Jamaica finished in third place or was eliminated after the mentioned matches.",
+    "votes": "2-0",
+    "window": "Jamaica tied 1-1 with Canada and Bermuda and then lost 2-0 to El Salvador, 1-0 to Canada, 2-1 to El Salvador. In qualifying Jamaica beat Puerto Rico 2-1 and was then faced Bermuda, Canada, and El Salvador from which two teams would advance to the final round. Jamaica then beat Bermuda 3-2 but did not qualify."
+   },
+   "evidences": [
+    {
+     "paper_id": "085e1df3c875989e384e7dc0c46682b2c43e15fa",
+     "source_title": "jamaicanationalfootballt",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Jamaica tied 1-1 with Canada and Bermuda and then lost 2-0 to El Salvador, 1-0 to Canada, 2-1 to El Salvador.",
+     "page": 1,
+     "snippet": "Jamaica tied 1-1 with Canada and Bermuda",
+     "reason": "The passage does not state that Jamaica finished in third place or was eliminated after the mentioned matches.",
+     "votes": "2-0",
+     "window": "Jamaica tied 1-1 with Canada and Bermuda and then lost 2-0 to El Salvador, 1-0 to Canada, 2-1 to El Salvador. In qualifying Jamaica beat Puerto Rico 2-1 and was then faced Bermuda, Canada, and El Salvador from which two teams would advance to the final round. Jamaica then beat Bermuda 3-2 but did not qualify."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Jamaica finished in third place or was eliminated after the mentioned matches.",
+   "component_check": {
+    "found": [
+     "Jamaica had a 3-2 home win over Bermuda",
+     "Jamaica had two losses to El Salvador",
+     "Jamaica was eliminated"
+    ],
+    "missing": [
+     "Jamaica finished in third place"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Jamaica had a 3-2 home win over Bermuda",
+      "paper_id": "085e1df3c875989e384e7dc0c46682b2c43e15fa",
+      "source_title": "jamaicanationalfootballt",
+      "sentence": "Jamaica then beat Bermuda 3-2 but did not qualify.",
+      "page": 1
+     },
+     {
+      "component": "Jamaica had two losses to El Salvador",
+      "paper_id": "085e1df3c875989e384e7dc0c46682b2c43e15fa",
+      "source_title": "jamaicanationalfootballt",
+      "sentence": "Jamaica tied 1-1 with Canada and Bermuda and then lost 2-0 to El Salvador, 1-0 to Canada, 2-1 to El Salvador.",
+      "page": 1
+     },
+     {
+      "component": "Jamaica was eliminated",
+      "paper_id": "085e1df3c875989e384e7dc0c46682b2c43e15fa",
+      "source_title": "jamaicanationalfootballt",
+      "sentence": "Jamaica withdrew from the elimination in order to restructure their team.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Jamaica finished in third place and was eliminated.",
+    "reason": "The passage asserts factual outcomes of a competition (final placement and elimination) which are directly attributable to the cited source. The ATTRIBUTION TEST applies here as these are findings expected to be proven by the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "home win and finishing in third place",
+    "rewrite_suggestion": "After a 3\u20132 win over Bermuda and two losses to El Salvador, Jamaica was eliminated (did not qualify).",
+    "proofs": [
+     "Jamaica then beat Bermuda 3-2 but did not qualify.",
+     "Jamaica tied 1-1 with Canada and Bermuda and then lost 2-0 to El Salvador, 1-0 to Canada, 2-1 to El Salvador."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not cover the 3-2 win over Bermuda or the elimination, and the source text does not mention that the win was at home or that Jamaica finished in third place. While the source supports the scoreline, losses, and elimination, the claim adds unsourced components (home, third place) that cannot be verified from the provided text."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "The museum was completed on budget, and opened three days ahead of schedule on July 1, 1976.",
+   "markers": [
+    "michaelcollinsastronaut"
+   ],
+   "paper_ids": [
+    "ec4277a456742c9cf03bcf453910d82419cd1b7d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+    "source_title": "michaelcollinsastronaut",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The National Air and Space Museum in Washington, DC opened on July 1, 1976.",
+    "page": 1,
+    "snippet": "The National Air and Space Museum in",
+    "reason": "the passage does not mention if the museum was completed on budget or opened three days ahead of schedule",
+    "votes": "2-0",
+    "window": "The National Air and Space Museum in Washington, DC opened on July 1, 1976. The opening was one of the highlights of America's Bicentennial Celebration."
+   },
+   "evidences": [
+    {
+     "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+     "source_title": "michaelcollinsastronaut",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The National Air and Space Museum in Washington, DC opened on July 1, 1976.",
+     "page": 1,
+     "snippet": "The National Air and Space Museum in",
+     "reason": "the passage does not mention if the museum was completed on budget or opened three days ahead of schedule",
+     "votes": "2-0",
+     "window": "The National Air and Space Museum in Washington, DC opened on July 1, 1976. The opening was one of the highlights of America's Bicentennial Celebration."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention if the museum was completed on budget or opened three days ahead of schedule",
+   "component_check": {
+    "found": [
+     "The museum opened on July 1, 1976."
+    ],
+    "missing": [
+     "The museum was completed on budget.",
+     "The museum opened three days ahead of schedule."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The museum opened on July 1, 1976.",
+      "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+      "source_title": "michaelcollinsastronaut",
+      "sentence": "The National Air and Space Museum in Washington, DC opened on July 1, 1976.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The museum was completed on budget, and opened three days ahead of schedule on July 1, 1976.",
+    "reason": "The passage asserts specific facts (completion on budget, opening date) that are directly attributed to the cited source. This falls under the 'full' scope as the source is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "completed on budget, and opened three days ahead of schedule",
+    "rewrite_suggestion": "The National Air and Space Museum opened on July 1, 1976.",
+    "proofs": [
+     "The National Air and Space Museum in Washington, DC opened on July 1, 1976."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes unsupported components 'completed on budget' and 'opened three days ahead of schedule' that are not mentioned anywhere in the provided source text. The shown sentence only confirms the opening date of July 1, 1976. Since these substantive components cannot be proven from the source, the author must either add a citation for them or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "The film won the award, making it one of six International Emmys for the UK, and one of three for the BBC, in 2009.",
+   "markers": [
+    "dustbinbabyfilm"
+   ],
+   "paper_ids": [
+    "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93",
+    "source_title": "dustbinbabyfilm",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Veteran presenter Sir David Frost won a special International Emmy last night, one of six British winners at a star-studded ceremony in New York that was dominated by the UK television industry.",
+    "page": 1,
+    "snippet": "Veteran presenter Sir David Frost won a",
+    "reason": "The passage does not state that the film won an award, only that it won an award in the children and young people category for the BBC.",
+    "votes": "2-0",
+    "window": "Veteran presenter Sir David Frost won a special International Emmy last night, one of six British winners at a star-studded ceremony in New York that was dominated by the UK television industry. Dustbin Baby, made by Kindle Entertainment, won a third award for the BBC in the children and young people category. It was a successful night for the BBC, with two of the top awards, for best male and female performance. Ben Whishaw won for his performance as Ben Coulter in BBC1's Criminal Justice, the acclaimed drama series about a young man wrongly convicted or murder."
+   },
+   "evidences": [
+    {
+     "paper_id": "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93",
+     "source_title": "dustbinbabyfilm",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Veteran presenter Sir David Frost won a special International Emmy last night, one of six British winners at a star-studded ceremony in New York that was dominated by the UK television industry.",
+     "page": 1,
+     "snippet": "Veteran presenter Sir David Frost won a",
+     "reason": "The passage does not state that the film won an award, only that it won an award in the children and young people category for the BBC.",
+     "votes": "2-0",
+     "window": "Veteran presenter Sir David Frost won a special International Emmy last night, one of six British winners at a star-studded ceremony in New York that was dominated by the UK television industry. Dustbin Baby, made by Kindle Entertainment, won a third award for the BBC in the children and young people category. It was a successful night for the BBC, with two of the top awards, for best male and female performance. Ben Whishaw won for his performance as Ben Coulter in BBC1's Criminal Justice, the acclaimed drama series about a young man wrongly convicted or murder."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the film won an award, only that it won an award in the children and young people category for the BBC.",
+   "component_check": {
+    "found": [
+     "it was one of six International Emmys for the UK in 2009",
+     "it was one of three International Emmys for the BBC in 2009"
+    ],
+    "missing": [
+     "The film won the award"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "it was one of six International Emmys for the UK in 2009",
+      "paper_id": "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93",
+      "source_title": "dustbinbabyfilm",
+      "sentence": "Veteran presenter Sir David Frost won a special International Emmy last night, one of six British winners at a star-studded ceremony in New York that was dominated by the UK television industry.",
+      "page": 1
+     },
+     {
+      "component": "it was one of three International Emmys for the BBC in 2009",
+      "paper_id": "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93",
+      "source_title": "dustbinbabyfilm",
+      "sentence": "It was a successful night for the BBC, with two of the top awards, for best male and female performance.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The film won the award, making it one of six International Emmys for the UK, and one of three for the BBC, in 2009.",
+    "reason": "The passage asserts specific facts (award win, number of Emmys for UK and BBC, year) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Veteran presenter Sir David Frost won a special International Emmy last night, one of six British winners at a star-studded ceremony in New York that was dominated by the UK television industry.",
+     "Dustbin Baby, made by Kindle Entertainment, won a third award for the BBC in the children and young people category."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence only covers Sir David Frost and the fact that there were six British winners, but it does not mention the film Dustbin Baby, its award, or that it was one of three for the BBC. All these components are supported by other sentences in the source text, so the tool should have shown those instead. The proof exists in the source but is not among the shown sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Among the wounded were two US citizens, six Japanese, and one Dutch national.",
+   "markers": [
+    "colombocentralbankbombin"
+   ],
+   "paper_ids": [
+    "6ebd62fb3a14f8c8d5e2f45781a571323cce0b36"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "6ebd62fb3a14f8c8d5e2f45781a571323cce0b36",
+    "source_title": "colombocentralbankbombin",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The foreigners were five British, five Japanese, four Singaporeans, five French, two Jordanians, two Australians and one each from Cuba, Lebanon, Egypt, Malaysia, Pakistan, India, the United States, Sweden and the Netherlands.",
+    "page": 1,
+    "snippet": "The foreigners were five British, five Japanese,",
+    "reason": "The passage does not mention two US citizens, six Japanese, or one Dutch national among the wounded.",
+    "votes": "2-0",
+    "window": "The foreigners were five British, five Japanese, four Singaporeans, five French, two Jordanians, two Australians and one each from Cuba, Lebanon, Egypt, Malaysia, Pakistan, India, the United States, Sweden and the Netherlands."
+   },
+   "evidences": [
+    {
+     "paper_id": "6ebd62fb3a14f8c8d5e2f45781a571323cce0b36",
+     "source_title": "colombocentralbankbombin",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The foreigners were five British, five Japanese, four Singaporeans, five French, two Jordanians, two Australians and one each from Cuba, Lebanon, Egypt, Malaysia, Pakistan, India, the United States, Sweden and the Netherlands.",
+     "page": 1,
+     "snippet": "The foreigners were five British, five Japanese,",
+     "reason": "The passage does not mention two US citizens, six Japanese, or one Dutch national among the wounded.",
+     "votes": "2-0",
+     "window": "The foreigners were five British, five Japanese, four Singaporeans, five French, two Jordanians, two Australians and one each from Cuba, Lebanon, Egypt, Malaysia, Pakistan, India, the United States, Sweden and the Netherlands."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention two US citizens, six Japanese, or one Dutch national among the wounded.",
+   "subject_guard": {
+    "subject": "among",
+    "missing_from": [
+     "6ebd62fb3a14f8c8d5e2f45781a571323cce0b36"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (number of wounded citizens from different nationalities) that are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The numbers of US citizens (two) and Japanese nationals (six) are not supported by the source; the source states one US citizen and five Japanese.",
+    "rewrite_suggestion": "Among the wounded were one US citizen, five Japanese, and one Dutch national.",
+    "proofs": [
+     "The foreigners were five British, five Japanese, four Singaporeans, five French, two Jordanians, two Australians and one each from Cuba, Lebanon, Egypt, Malaysia, Pakistan, India, the United States, Sweden and the Netherlands."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The foreigners were five British, five Japanese, four Singaporeans, five French, two Jordanians, two Australians and one each from Cuba, Lebanon, Egypt, Malaysia, Pakistan, India, the United States, Sweden and the Netherlands.",
+     "why": "The source states exactly one US citizen and five Japanese, contradicting the claim's two US citizens and six Japanese."
+    },
+    "why": "The claim asserts two US citizens and six Japanese among the wounded, but the source text lists only one US citizen and five Japanese. The Dutch national part is correct and supported by the shown sentence. However, the unsupported numbers for US and Japanese are not present in the source and are contradicted by it, so the author must either add a citation for those figures or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "On 1 February 2018, Austin was selected to represent Melbourne Victory in the E-League's inaugural season, alongside Mouad Zwed, becoming one of a handful of professional football players to compete in e-sports as well.",
+   "markers": [
+    "mitchaustin"
+   ],
+   "paper_ids": [
+    "7458d55f0fadf7b6b89dadda0f6f852b86783b2f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8953,
+   "evidence": {
+    "paper_id": "7458d55f0fadf7b6b89dadda0f6f852b86783b2f",
+    "source_title": "mitchaustin",
+    "supported": false,
+    "sentence": "# Victory locks in E-League team",
+    "page": 1,
+    "snippet": "# Victory locks in E-League team",
+    "cosine": 0.8953,
+    "reason": "The passage mentions Melbourne Victory locking in an E-League team but does not provide details about specific players selected or the date of selection.",
+    "window": "Fact sheet: Academy & Community Facility at Footscray Park # Victory locks in E-League team Melbourne Victory ### Latest news"
+   },
+   "evidences": [
+    {
+     "paper_id": "7458d55f0fadf7b6b89dadda0f6f852b86783b2f",
+     "source_title": "mitchaustin",
+     "supported": false,
+     "sentence": "# Victory locks in E-League team",
+     "page": 1,
+     "snippet": "# Victory locks in E-League team",
+     "cosine": 0.8953,
+     "reason": "The passage mentions Melbourne Victory locking in an E-League team but does not provide details about specific players selected or the date of selection.",
+     "window": "Fact sheet: Academy & Community Facility at Footscray Park # Victory locks in E-League team Melbourne Victory ### Latest news"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Mouad Zwed",
+    "missing_from": [
+     "7458d55f0fadf7b6b89dadda0f6f852b86783b2f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Austin was selected to represent Melbourne Victory in the E-League's inaugural season on 1 February 2018.",
+    "reason": "The passage asserts a specific fact (Austin's selection date and team) that the citation is expected to prove. This falls under the 'full' scope as it's a direct statement of fact attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date (1 February 2018), the selection of Austin alongside Mouad Zwed, and the statement about being one of a handful of professional football players in e-sports",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text contains only a headline 'Victory locks in E-League team' and a listing of unrelated news items. It does not include any mention of Austin, Mouad Zwed, a specific date, or the claim about being one of a handful of professional football players in e-sports. The shown sentence does not support any component of the claim, and the source text as a whole lacks the necessary details. Therefore the author must either add a proper citation for these claims or rewrite the statement to match what the source actually says."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "In 2014, the Central Bank of Malta issued a silver \u20ac10 and gold \u20ac50 coin in Camilleri's honour - and as part of the EUROPA star collector coin series which highlights European culture and events on an annual basis.",
+   "markers": [
+    "charlescamilleri"
+   ],
+   "paper_ids": [
+    "6da17fb8fd527e049c57e7bf2e5c33af807a4646"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "6da17fb8fd527e049c57e7bf2e5c33af807a4646",
+    "source_title": "charlescamilleri",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins | Coin Update (meta data) PUBLISHED DATETIME: 2014-02-25T15:20:45-04:00 Coin Update Coin Collecting News Widgets Magazine # Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins February 25, 2014 By Michael Alexander Leave a Comment The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Malta: 2014 Charles Camilleri",
+    "reason": "The passage does not state that the coins were issued in Camilleri's honor.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins | Coin Update (meta data) PUBLISHED DATETIME: 2014-02-25T15:20:45-04:00 Coin Update Coin Collecting News Widgets Magazine # Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins February 25, 2014 By Michael Alexander Leave a Comment The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers. 1500 pieces The two coins are issued in conjunction with the annual EUROPA star series \u2013 this year's theme is \"European Composers.\" The face value of \u20ac10 or \u20ac50 is seen just to the left of the portrait as well as the EUROPA star logo. The coins may be purchased from the counter of the Malta Coins Distribution Centre at the main building of the Central Bank of Malta in Valletta."
+   },
+   "evidences": [
+    {
+     "paper_id": "6da17fb8fd527e049c57e7bf2e5c33af807a4646",
+     "source_title": "charlescamilleri",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins | Coin Update (meta data) PUBLISHED DATETIME: 2014-02-25T15:20:45-04:00 Coin Update Coin Collecting News Widgets Magazine # Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins February 25, 2014 By Michael Alexander Leave a Comment The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Malta: 2014 Charles Camilleri",
+     "reason": "The passage does not state that the coins were issued in Camilleri's honor.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins | Coin Update (meta data) PUBLISHED DATETIME: 2014-02-25T15:20:45-04:00 Coin Update Coin Collecting News Widgets Magazine # Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins February 25, 2014 By Michael Alexander Leave a Comment The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers. 1500 pieces The two coins are issued in conjunction with the annual EUROPA star series \u2013 this year's theme is \"European Composers.\" The face value of \u20ac10 or \u20ac50 is seen just to the left of the portrait as well as the EUROPA star logo. The coins may be purchased from the counter of the Malta Coins Distribution Centre at the main building of the Central Bank of Malta in Valletta."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the coins were issued in Camilleri's honor.",
+   "component_check": {
+    "found": [
+     "In 2014, the Central Bank of Malta issued a silver \u20ac10 coin in Camilleri's honour.",
+     "In 2014, the Central Bank of Malta issued a gold \u20ac50 coin in Camilleri's honour.",
+     "The coins were part of the EUROPA star collector coin series."
+    ],
+    "missing": [
+     "The EUROPA star collector coin series highlights European culture and events on an annual basis."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 2014, the Central Bank of Malta issued a silver \u20ac10 coin in Camilleri's honour.",
+      "paper_id": "6da17fb8fd527e049c57e7bf2e5c33af807a4646",
+      "source_title": "charlescamilleri",
+      "sentence": "(meta data) TITLE: Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins | Coin Update (meta data) PUBLISHED DATETIME: 2014-02-25T15:20:45-04:00 Coin Update Coin Collecting News Widgets Magazine # Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins February 25, 2014 By Michael Alexander Leave a Comment The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers.",
+      "page": 1
+     },
+     {
+      "component": "In 2014, the Central Bank of Malta issued a gold \u20ac50 coin in Camilleri's honour.",
+      "paper_id": "6da17fb8fd527e049c57e7bf2e5c33af807a4646",
+      "source_title": "charlescamilleri",
+      "sentence": "(meta data) TITLE: Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins | Coin Update (meta data) PUBLISHED DATETIME: 2014-02-25T15:20:45-04:00 Coin Update Coin Collecting News Widgets Magazine # Malta: 2014 Charles Camilleri Gold and Silver Commemorative Coins February 25, 2014 By Michael Alexander Leave a Comment The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers.",
+      "page": 1
+     },
+     {
+      "component": "The coins were part of the EUROPA star collector coin series.",
+      "paper_id": "6da17fb8fd527e049c57e7bf2e5c33af807a4646",
+      "source_title": "charlescamilleri",
+      "sentence": "1500 pieces The two coins are issued in conjunction with the annual EUROPA star series \u2013 this year's theme is \"European Composers.\"",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2014, the Central Bank of Malta issued a silver \u20ac10 and gold \u20ac50 coin in Camilleri's honour - and as part of the EUROPA star collector coin series which highlights European culture and events on an annual basis.",
+    "reason": "The passage directly states facts and details about coins issued in honor of Camilleri and the EUROPA series. The citation is expected to prove these specific assertions.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The Central Bank of Malta have issued two coins which honor one of the country's most well-known and admired composers.",
+     "The face value of \u20ac10 or \u20ac50 is seen just to the left of the portrait as well as the EUROPA star logo.",
+     "\u20ac10 .925 silver 28.2 grams 38.6 mm. 5000 pieces \u20ac50 .916 gold 6.5 grams 21 mm. 1500 pieces",
+     "The reverse of both coins includes the Maltese national crest encircled with the 12 EU stars and the year of issue '2014'."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool's shown sentence only confirms that the Central Bank of Malta issued two coins honoring Camilleri, but fails to cover the year (2014), the specific denominations and metals (silver \u20ac10 and gold \u20ac50), and the EUROPA star series connection. All these details are present in the source text and have been quoted verbatim. The proof exists in the source but was not shown, so the tool needs to be fixed.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t13",
+   "text": "In Madras, she met and married the distinguished economist and diplomat Sir Benegal Rama Rau a Chitrapur Saraswat Brahmin and a south Indian from a distinguished family.",
+   "markers": [
+    "dhanvanthiramarau"
+   ],
+   "paper_ids": [
+    "99eed2a893f93abc6ab6796b89a4fa6e41ffff09"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "99eed2a893f93abc6ab6796b89a4fa6e41ffff09",
+    "source_title": "dhanvanthiramarau",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "From 1929 to 1938 she lived in London with her husband, Benegal Rama Rau, as representative for the All India Women's Conference.",
+    "page": 1,
+    "snippet": "From 1929 to 1938 she lived in",
+    "reason": "The passage does not state that Benegal Rama Rau was a distinguished economist and diplomat, a Chitrapur Saraswat Brahmin, or from a distinguished south Indian family.",
+    "votes": "2-0",
+    "window": "From 1929 to 1938 she lived in London with her husband, Benegal Rama Rau, as representative for the All India Women's Conference. When Benegal Rama Rau was posted to South Africa as High Commissioner in 1939, she went with him and organised the Indian women of Durban."
+   },
+   "evidences": [
+    {
+     "paper_id": "99eed2a893f93abc6ab6796b89a4fa6e41ffff09",
+     "source_title": "dhanvanthiramarau",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "From 1929 to 1938 she lived in London with her husband, Benegal Rama Rau, as representative for the All India Women's Conference.",
+     "page": 1,
+     "snippet": "From 1929 to 1938 she lived in",
+     "reason": "The passage does not state that Benegal Rama Rau was a distinguished economist and diplomat, a Chitrapur Saraswat Brahmin, or from a distinguished south Indian family.",
+     "votes": "2-0",
+     "window": "From 1929 to 1938 she lived in London with her husband, Benegal Rama Rau, as representative for the All India Women's Conference. When Benegal Rama Rau was posted to South Africa as High Commissioner in 1939, she went with him and organised the Indian women of Durban."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Benegal Rama Rau was a distinguished economist and diplomat, a Chitrapur Saraswat Brahmin, or from a distinguished south Indian family.",
+   "subject_guard": {
+    "subject": "Chitrapur Saraswat Brahmin",
+    "missing_from": [
+     "99eed2a893f93abc6ab6796b89a4fa6e41ffff09"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts facts about the marital and familial background of a person, which the cited source is expected to prove.",
+    "reason": "The passage states biographical facts about a person's marriage and family. There is no indication that the citation is used for methods, concepts, or related work; it is expected to support the factual claims made.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire description of the husband (titles, caste, regional background) and the location and event of meeting and marriage in Madras are not supported by the cited source. The source only mentions that she lived with her husband, Benegal Rama Rau, in London from 1929 to 1938.",
+    "rewrite_suggestion": "She married Benegal Rama Rau.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms she lived with her husband in London, not the meeting, marriage, or any details about his background. The source text never mentions meeting in Madras, his being a knighted economist and diplomat, his caste, or his family's distinction. All substantive components of the claim are absent from the source, so the author must either add a citation for these facts or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "In 2003, the station began syndication of the program \"\"Exploring Music\" with Bill McGlaughlin\", an educational daily program on various themes in classical music.",
+   "markers": [
+    "wfmt"
+   ],
+   "paper_ids": [
+    "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8612,
+   "evidence": {
+    "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+    "source_title": "wfmt",
+    "supported": true,
+    "sentence": "Exploring Music can be heard in over two hundred markets across the country as well as internationally, including broadcasts in Australia, New Zealand, and China, among others.",
+    "page": 1,
+    "snippet": "Exploring Music can be heard in over",
+    "cosine": 0.8612,
+    "reason": "The passage directly states that \"Exploring Music with Bill McGlaughlin\" began syndication on October 6, 2003, and describes it as a \"new daily program.\"",
+    "window": "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003. Exploring Music can be heard in over two hundred markets across the country as well as internationally, including broadcasts in Australia, New Zealand, and China, among others."
+   },
+   "evidences": [
+    {
+     "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+     "source_title": "wfmt",
+     "supported": true,
+     "sentence": "Exploring Music can be heard in over two hundred markets across the country as well as internationally, including broadcasts in Australia, New Zealand, and China, among others.",
+     "page": 1,
+     "snippet": "Exploring Music can be heard in over",
+     "cosine": 0.8612,
+     "reason": "The passage directly states that \"Exploring Music with Bill McGlaughlin\" began syndication on October 6, 2003, and describes it as a \"new daily program.\"",
+     "window": "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003. Exploring Music can be heard in over two hundred markets across the country as well as internationally, including broadcasts in Australia, New Zealand, and China, among others."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that \"Exploring Music with Bill McGlaughlin\" began syndication on October 6, 2003, and describes it as a \"new daily program.\"",
+   "covering": {
+    "covered": [
+     {
+      "component": "program began syndication in 2003",
+      "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+      "source_title": "wfmt",
+      "sentence": "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003.",
+      "page": 1,
+      "snippet": "In November 2002, the NEA announced a"
+     },
+     {
+      "component": "program name is \"Exploring Music\" with Bill McGlaughlin",
+      "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+      "source_title": "wfmt",
+      "sentence": "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003.",
+      "page": 1,
+      "snippet": "In November 2002, the NEA announced a"
+     },
+     {
+      "component": "program is daily",
+      "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+      "source_title": "wfmt",
+      "sentence": "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003.",
+      "page": 1,
+      "snippet": "In November 2002, the NEA announced a"
+     }
+    ],
+    "uncovered": [
+     "program is educational",
+     "program is on various themes in classical music"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+      "source_title": "wfmt",
+      "text": "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the description of the program as 'educational daily program on various themes in classical music'",
+    "rewrite_suggestion": "In 2003, the station began syndication of the program 'Exploring Music' with Bill McGlaughlin.",
+    "proofs": [
+     "In November 2002, the NEA announced a special grant to the WFMT Radio Network to fund the development of a new daily program: Exploring Music with Bill McGlaughlin, which began syndication on October 6, 2003."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a description of the program ('educational daily program on various themes in classical music') that is not present in the cited source. The source only states it is a 'new daily program' and gives the name. The shown sentences, while correctly proving the year and syndication, do not contain that description, and the source text also lacks it. Therefore, the author must either add a citation for that description or remove it to match the source."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "GECF joined as an eighth partner in 2014, enabling JODI also to cover nearly 90 percent of the global market for natural gas.",
+   "markers": [
+    "opec"
+   ],
+   "paper_ids": [
+    "1fef5987f26531547e624bdcd222f309c935305a"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1fef5987f26531547e624bdcd222f309c935305a",
+    "source_title": "opec",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand.",
+    "page": 1,
+    "snippet": "In April 2014 the Gas Exporting Countries",
+    "reason": "The passage explicitly states that the Gas Exporting Countries Forum joined as a JODI Partner in April 2014, bringing the number of participating countries to 77 and representing nearly 90% of the global natural gas supply and demand.",
+    "votes": "2-0",
+    "window": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand."
+   },
+   "evidences": [
+    {
+     "paper_id": "1fef5987f26531547e624bdcd222f309c935305a",
+     "source_title": "opec",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand.",
+     "page": 1,
+     "snippet": "In April 2014 the Gas Exporting Countries",
+     "reason": "The passage explicitly states that the Gas Exporting Countries Forum joined as a JODI Partner in April 2014, bringing the number of participating countries to 77 and representing nearly 90% of the global natural gas supply and demand.",
+     "votes": "2-0",
+     "window": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the Gas Exporting Countries Forum joined as a JODI Partner in April 2014, bringing the number of participating countries to 77 and representing nearly 90% of the global natural gas supply and demand.",
+   "covering": {
+    "covered": [
+     {
+      "component": "GECF joined as an eighth partner in 2014",
+      "paper_id": "1fef5987f26531547e624bdcd222f309c935305a",
+      "source_title": "opec",
+      "sentence": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand.",
+      "page": 1,
+      "snippet": "In April 2014 the Gas Exporting Countries"
+     },
+     {
+      "component": "enabling JODI also to cover nearly 90 percent of the global market for natural gas",
+      "paper_id": "1fef5987f26531547e624bdcd222f309c935305a",
+      "source_title": "opec",
+      "sentence": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand.",
+      "page": 1,
+      "snippet": "In April 2014 the Gas Exporting Countries"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "1fef5987f26531547e624bdcd222f309c935305a",
+      "source_title": "opec",
+      "text": "In April 2014 the Gas Exporting Countries Forum came on board as a JODI Partner, bringing the number of countries and economies participating in JODI-Gas to 77 countries - representing nearly 90% of the global natural gas supply and demand.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t16",
+   "text": "Brazil's Deputy Sports Minister, Luis Fernandes, responded by stating that there was \"no panic\".",
+   "markers": [
+    "2014fifaworldcuppreparat"
+   ],
+   "paper_ids": [
+    "a763ac2b39985716614d4769841fca155eee31ff"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.866,
+   "evidence": {
+    "paper_id": "a763ac2b39985716614d4769841fca155eee31ff",
+    "source_title": "2014fifaworldcuppreparat",
+    "supported": false,
+    "sentence": "# Transcript of conference call - Brazil Deputy Minister of Sport Luis Fernandes",
+    "page": 1,
+    "snippet": "# Transcript of conference call - Brazil",
+    "cosine": 0.866,
+    "reason": "The passage only identifies Luis Fernandes as Brazil's Deputy Minister of Sport and mentions a transcript of a conference call, but it does not contain his statement that there was 'no panic'.",
+    "window": "## Search form Search this site # Transcript of conference call - Brazil Deputy Minister of Sport Luis Fernandes ## Related News"
+   },
+   "evidences": [
+    {
+     "paper_id": "a763ac2b39985716614d4769841fca155eee31ff",
+     "source_title": "2014fifaworldcuppreparat",
+     "supported": false,
+     "sentence": "# Transcript of conference call - Brazil Deputy Minister of Sport Luis Fernandes",
+     "page": 1,
+     "snippet": "# Transcript of conference call - Brazil",
+     "cosine": 0.866,
+     "reason": "The passage only identifies Luis Fernandes as Brazil's Deputy Minister of Sport and mentions a transcript of a conference call, but it does not contain his statement that there was 'no panic'.",
+     "window": "## Search form Search this site # Transcript of conference call - Brazil Deputy Minister of Sport Luis Fernandes ## Related News"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "Brazil's Deputy Sports Minister, Luis Fernandes, responded"
+    ],
+    "missing": [
+     "there was \"no panic\""
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Brazil's Deputy Sports Minister, Luis Fernandes, responded",
+      "paper_id": "a763ac2b39985716614d4769841fca155eee31ff",
+      "source_title": "2014fifaworldcuppreparat",
+      "sentence": "# Transcript of conference call - Brazil Deputy Minister of Sport Luis Fernandes",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Brazil's Deputy Sports Minister, Luis Fernandes, responded by stating that there was \"no panic\".",
+    "reason": "The passage directly attributes a statement to a specific individual, implying that the cited source is expected to contain this information. This falls under the 'full' scope as it asserts a fact or statement that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the response stating that there was 'no panic'",
+    "rewrite_suggestion": "Brazil's Deputy Sports Minister, Luis Fernandes, participated in a conference call.",
+    "proofs": [
+     "# Transcript of conference call - Brazil Deputy Minister of Sport Luis Fernandes"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms the identity and role of Luis Fernandes and the existence of a conference call, but the claim includes a direct quotation ('no panic') that does not appear anywhere in the provided source text. Since this component is entirely unsupported and cannot be proven from the source, the author must either supply a citation for the quote or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "The 2016 Maryland flood severely impacted the historic district on July 30, 2016, as did another flood on May 27, 2018.",
+   "markers": [
+    "ellicottcityhistoricdist"
+   ],
+   "paper_ids": [
+    "fc4bf4eec2b8572c01b3eea6a0f8415357f266d3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fc4bf4eec2b8572c01b3eea6a0f8415357f266d3",
+    "source_title": "ellicottcityhistoricdist",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Larry Hogan, who canceled an Eastern Shore appearance to be with devastated business owners, was escorted through the wreckage that remained after sheets of rain tore through the city on Saturday night.",
+    "page": 1,
+    "snippet": "Larry Hogan, who canceled an Eastern Shore",
+    "reason": "the passage does not mention a flood on May 27, 2018.",
+    "votes": "2-0",
+    "window": "Larry Hogan, who canceled an Eastern Shore appearance to be with devastated business owners, was escorted through the wreckage that remained after sheets of rain tore through the city on Saturday night. All roads in and out of Ellicott City's historic district were blocked off Sunday, with access restricted to first responders. Saturday night's rapidly moving water overturned cars and washed away lower portions of the art galleries, antique shops and restaurants that line the city's historic Main Street. Ed Crowl, owner of Wagon Wheel Antique Shop, told the Baltimore Sun that he has been through Agnes and other flooding in the town, including in 2011, and was \"sort of calm now, because it's happened before.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "fc4bf4eec2b8572c01b3eea6a0f8415357f266d3",
+     "source_title": "ellicottcityhistoricdist",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Larry Hogan, who canceled an Eastern Shore appearance to be with devastated business owners, was escorted through the wreckage that remained after sheets of rain tore through the city on Saturday night.",
+     "page": 1,
+     "snippet": "Larry Hogan, who canceled an Eastern Shore",
+     "reason": "the passage does not mention a flood on May 27, 2018.",
+     "votes": "2-0",
+     "window": "Larry Hogan, who canceled an Eastern Shore appearance to be with devastated business owners, was escorted through the wreckage that remained after sheets of rain tore through the city on Saturday night. All roads in and out of Ellicott City's historic district were blocked off Sunday, with access restricted to first responders. Saturday night's rapidly moving water overturned cars and washed away lower portions of the art galleries, antique shops and restaurants that line the city's historic Main Street. Ed Crowl, owner of Wagon Wheel Antique Shop, told the Baltimore Sun that he has been through Agnes and other flooding in the town, including in 2011, and was \"sort of calm now, because it's happened before.\""
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention a flood on May 27, 2018.",
+   "component_check": {
+    "found": [
+     "The 2016 Maryland flood severely impacted the historic district on July 30, 2016."
+    ],
+    "missing": [
+     "Another flood occurred on May 27, 2018."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The 2016 Maryland flood severely impacted the historic district on July 30, 2016.",
+      "paper_id": "fc4bf4eec2b8572c01b3eea6a0f8415357f266d3",
+      "source_title": "ellicottcityhistoricdist",
+      "sentence": "Larry Hogan, who canceled an Eastern Shore appearance to be with devastated business owners, was escorted through the wreckage that remained after sheets of rain tore through the city on Saturday night.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (dates and events) that the cited source is expected to prove. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the component 'another flood on May 27, 2018' is not present in the cited source at all",
+    "rewrite_suggestion": "The 2016 Maryland flood severely impacted the historic district on July 30, 2016.",
+    "proofs": [
+     "Flash flood kills 2, devastates Maryland city's historic downtown",
+     "once-in-a-lifetime flooding that left at least two people dead and the city's historic downtown in shambles",
+     "Saturday night's rapidly moving water overturned cars and washed away lower portions of the art galleries, antique shops and restaurants that line the city's historic Main Street."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool's shown sentence only references the 2016 flood's aftermath but does not cover the claim's full scope. The source contains ample evidence that the 2016 flood severely impacted the historic district on July 30, 2016, but that evidence is not among the shown sentences. The 2018 flood component is entirely absent from the source text, making it an unsourced aside. The author must either add a citation for the 2018 flood or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Kevin J. Anderson was born March 27, 1962 in Racine, Wisconsin, and grew up in Oregon, Wisconsin.",
+   "markers": [
+    "kevinjanderson"
+   ],
+   "paper_ids": [
+    "9dbf54eca8e196c9b6709bb859eb9b592188cea4"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "9dbf54eca8e196c9b6709bb859eb9b592188cea4",
+    "source_title": "kevinjanderson",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: A Conversation With Kevin J. Anderson Book Publishing Writing Contests Writing Prompts # A Conversation With Kevin J. Anderson by Claire E. WhiteThe Internet Writing Journal, October 2003 Ever since he was a little boy growing up in the tiny town of Oregon, Wisconsin, Kevin J. Anderson knew that he wanted to be a writer.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: A Conversation With Kevin",
+    "reason": "The passage does not state Kevin J. Anderson's birth date or birthplace.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: A Conversation With Kevin J. Anderson Book Publishing Writing Contests Writing Prompts # A Conversation With Kevin J. Anderson by Claire E. WhiteThe Internet Writing Journal, October 2003 Ever since he was a little boy growing up in the tiny town of Oregon, Wisconsin, Kevin J. Anderson knew that he wanted to be a writer. Kevin and wife Rebecca Moesta during their travels."
+   },
+   "evidences": [
+    {
+     "paper_id": "9dbf54eca8e196c9b6709bb859eb9b592188cea4",
+     "source_title": "kevinjanderson",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: A Conversation With Kevin J. Anderson Book Publishing Writing Contests Writing Prompts # A Conversation With Kevin J. Anderson by Claire E. WhiteThe Internet Writing Journal, October 2003 Ever since he was a little boy growing up in the tiny town of Oregon, Wisconsin, Kevin J. Anderson knew that he wanted to be a writer.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: A Conversation With Kevin",
+     "reason": "The passage does not state Kevin J. Anderson's birth date or birthplace.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: A Conversation With Kevin J. Anderson Book Publishing Writing Contests Writing Prompts # A Conversation With Kevin J. Anderson by Claire E. WhiteThe Internet Writing Journal, October 2003 Ever since he was a little boy growing up in the tiny town of Oregon, Wisconsin, Kevin J. Anderson knew that he wanted to be a writer. Kevin and wife Rebecca Moesta during their travels."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state Kevin J. Anderson's birth date or birthplace.",
+   "component_check": {
+    "found": [
+     "Kevin J. Anderson grew up in Oregon, Wisconsin"
+    ],
+    "missing": [
+     "Kevin J. Anderson was born March 27, 1962",
+     "Kevin J. Anderson was born in Racine, Wisconsin"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Kevin J. Anderson grew up in Oregon, Wisconsin",
+      "paper_id": "9dbf54eca8e196c9b6709bb859eb9b592188cea4",
+      "source_title": "kevinjanderson",
+      "sentence": "(meta data) TITLE: A Conversation With Kevin J. Anderson Book Publishing Writing Contests Writing Prompts # A Conversation With Kevin J. Anderson by Claire E. WhiteThe Internet Writing Journal, October 2003 Ever since he was a little boy growing up in the tiny town of Oregon, Wisconsin, Kevin J. Anderson knew that he wanted to be a writer.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts factual biographical information about Kevin J. Anderson, which the cited source is expected to prove. This falls under the default 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Kevin J. Anderson was born March 27, 1962 in Racine, Wisconsin",
+    "rewrite_suggestion": "Kevin J. Anderson grew up in Oregon, Wisconsin.",
+    "proofs": [
+     "Ever since he was a little boy growing up in the tiny town of Oregon, Wisconsin, Kevin J. Anderson knew that he wanted to be a writer."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that Anderson grew up in Oregon, Wisconsin, but the claim also includes a specific birth date and birth place (Racine, Wisconsin) that are not mentioned anywhere in the provided source text. Since those components cannot be proven from this source, the author must either add a citation for the birth details or rewrite the claim to only include the supported growing-up statement."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "The first leg was played on April 17, and the second leg was played on April 25, 2018.",
+   "markers": [
+    "2018concacafchampionslea"
+   ],
+   "paper_ids": [
+    "299669f1432ec994303ec116b3e3a44b335b8d45"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+    "source_title": "2018concacafchampionslea",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The first leg of the final series will kick off at 8:15 pm ET, on Tuesday, April 17.",
+    "page": 1,
+    "snippet": "The first leg of the final series",
+    "reason": "",
+    "votes": "2-0",
+    "window": "The first leg of the final series will kick off at 8:15 pm ET, on Tuesday, April 17. The winner of the 2018 Concacaf Champions League will represent the region in the 2018 FIFA Club World Cup in the United Arab Emirates.2018 Scotiabank Concacaf Champions League Schedule \u2013 Finals*Listed in ETTuesday, April 17, 20188:15 pm Toronto FC (CAN) vs CD Guadalajara (MEX) \u2013 BMO Field, Toronto, CanadaWednesday, April 25, 20189:30 pm CD Guadalajara (MEX) vs Toronto FC (CAN) \u2013 Estadio Akron, Guadalajara, Mexico See also: 2018 Scotiabank CONCACAF Champions League Toronto FC (CAN) Guadalajara (MEX)"
+   },
+   "evidences": [
+    {
+     "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+     "source_title": "2018concacafchampionslea",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The first leg of the final series will kick off at 8:15 pm ET, on Tuesday, April 17.",
+     "page": 1,
+     "snippet": "The first leg of the final series",
+     "reason": "",
+     "votes": "2-0",
+     "window": "The first leg of the final series will kick off at 8:15 pm ET, on Tuesday, April 17. The winner of the 2018 Concacaf Champions League will represent the region in the 2018 FIFA Club World Cup in the United Arab Emirates.2018 Scotiabank Concacaf Champions League Schedule \u2013 Finals*Listed in ETTuesday, April 17, 20188:15 pm Toronto FC (CAN) vs CD Guadalajara (MEX) \u2013 BMO Field, Toronto, CanadaWednesday, April 25, 20189:30 pm CD Guadalajara (MEX) vs Toronto FC (CAN) \u2013 Estadio Akron, Guadalajara, Mexico See also: 2018 Scotiabank CONCACAF Champions League Toronto FC (CAN) Guadalajara (MEX)"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "first leg played on April 17",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "The first leg of the final series will kick off at 8:15 pm ET, on Tuesday, April 17.",
+      "page": 1,
+      "snippet": "The first leg of the final series"
+     },
+     {
+      "component": "second leg played on April 25, 2018",
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "sentence": "The winner of the 2018 Concacaf Champions League will represent the region in the 2018 FIFA Club World Cup in the United Arab Emirates.2018 Scotiabank Concacaf Champions League Schedule \u2013 Finals*Listed in ETTuesday, April 17, 20188:15 pm Toronto FC (CAN) vs CD Guadalajara (MEX) \u2013 BMO Field, Toronto, CanadaWednesday, April 25, 20189:30 pm CD Guadalajara (MEX) vs Toronto FC (CAN) \u2013 Estadio Akron, Guadalajara, Mexico See also: 2018 Scotiabank CONCACAF Champions League Toronto FC (CAN) Guadalajara (MEX)",
+      "page": 1,
+      "snippet": "The winner of the 2018 Concacaf Champions"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+      "source_title": "2018concacafchampionslea",
+      "text": "The first leg of the final series will kick off at 8:15 pm ET, on Tuesday, April 17. [\u2026] The winner of the 2018 Concacaf Champions League will represent the region in the 2018 FIFA Club World Cup in the United Arab Emirates.2018 Scotiabank Concacaf Champions League Schedule \u2013 Finals*Listed in ETTuesday, April 17, 20188:15 pm Toronto FC (CAN) vs CD Guadalajara (MEX) \u2013 BMO Field, Toronto, CanadaWednesday, April 25, 20189:30 pm CD Guadalajara (MEX) vs Toronto FC (CAN) \u2013 Estadio Akron, Guadalajara, Mexico See also: 2018 Scotiabank CONCACAF Champions League Toronto FC (CAN) Guadalajara (MEX)",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t20",
+   "text": "The series order was officially announced in May, with an anticipated premiere date of 2020.",
+   "markers": [
+    "bluey2018tvseries"
+   ],
+   "paper_ids": [
+    "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8299,
+   "evidence": {
+    "paper_id": "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9",
+    "source_title": "bluey2018tvseries",
+    "supported": true,
+    "sentence": "The second series will comprise of 52 x 7-minute episodes, with production commencing later this month.",
+    "page": 1,
+    "snippet": "The second series will comprise of 52",
+    "cosine": 0.8299,
+    "reason": "The passage states that the second series will debut in 2020 and that production commences later in May 2019, implying an announcement in May.",
+    "window": "In a second series Bluey will play fun and elaborate new games with her sister Bingo; Chilli's relationship with her girls will be further explored as she juggles work and family life; Bandit returns with his wry sense of humour; and we'll meet more of Bluey and Bingo's family and friends. The second series will comprise of 52 x 7-minute episodes, with production commencing later this month. Series two will debut on ABC KIDS and ABC KIDS iview in 2020."
+   },
+   "evidences": [
+    {
+     "paper_id": "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9",
+     "source_title": "bluey2018tvseries",
+     "supported": true,
+     "sentence": "The second series will comprise of 52 x 7-minute episodes, with production commencing later this month.",
+     "page": 1,
+     "snippet": "The second series will comprise of 52",
+     "cosine": 0.8299,
+     "reason": "The passage states that the second series will debut in 2020 and that production commences later in May 2019, implying an announcement in May.",
+     "window": "In a second series Bluey will play fun and elaborate new games with her sister Bingo; Chilli's relationship with her girls will be further explored as she juggles work and family life; Bandit returns with his wry sense of humour; and we'll meet more of Bluey and Bingo's family and friends. The second series will comprise of 52 x 7-minute episodes, with production commencing later this month. Series two will debut on ABC KIDS and ABC KIDS iview in 2020."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the second series will debut in 2020 and that production commences later in May 2019, implying an announcement in May.",
+   "covering": {
+    "covered": [
+     {
+      "component": "anticipated premiere date of 2020",
+      "paper_id": "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9",
+      "source_title": "bluey2018tvseries",
+      "sentence": "Series two will debut on ABC KIDS and ABC KIDS iview in 2020.",
+      "page": 1,
+      "snippet": "Series two will debut on ABC KIDS"
+     },
+     {
+      "component": "official announcement in May",
+      "paper_id": "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9",
+      "source_title": "bluey2018tvseries",
+      "sentence": "(meta data) TITLE: Renewed: Bluey \u2013 TV Tonight (meta data) PUBLISHED DATETIME: 2019-05-16T12:25:25+10:00 ## Australia's leading TV blog # Renewed: Bluey May 16th, 2019 By David Knox 5 commentsFiled under: News, Smash hit ABC KIDS series Bluey has been renewed for a second season.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Renewed: Bluey \u2013 TV",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "series order officially announced in May"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9",
+      "source_title": "bluey2018tvseries",
+      "text": "(meta data) TITLE: Renewed: Bluey \u2013 TV Tonight (meta data) PUBLISHED DATETIME: 2019-05-16T12:25:25+10:00 ## Australia's leading TV blog # Renewed: Bluey May 16th, 2019 By David Knox 5 commentsFiled under: News, Smash hit ABC KIDS series Bluey has been renewed for a second season. Since its launch the show regularly tops multichannel ratings. It is the #1 show of all time on iview, at 75 million program plays (55m this year alone). In a second series Bluey will play fun and elaborate new games with her sister Bingo; Chilli's relationship with her girls will be further explored as she juggles work and family life; Bandit returns with his wry sense of humour; and we'll meet more of Bluey and Bingo's family and friends. The second series will comprise of 52 x 7-minute episodes, with production commencing later this month. Series two will debut on ABC KIDS and ABC KIDS iview in 2020.",
+      "n_used": 2
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "Renewed: Bluey May 16th, 2019",
+      "Smash hit ABC KIDS series Bluey has been renewed for a second season.",
+      "Series two will debut on ABC KIDS and ABC KIDS iview in 2020."
+     ],
+     "why": "The shown sentences include the article's publication date (May 16, 2019) and the explicit statement that Bluey has been renewed for a second season, proving the official announcement in May. Additionally, the sentence 'Series two will debut ... in 2020' directly provides the anticipated premiere date. Both components of the claim are fully covered by the shown sentences."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_support": {
+    "reason": "the passage does not state that the series order was officially announced in May",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the series order was officially announced in May",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Renewed: Bluey May 16th, 2019",
+     "Smash hit ABC KIDS series Bluey has been renewed for a second season.",
+     "Series two will debut on ABC KIDS and ABC KIDS iview in 2020."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences include the article's publication date (May 16, 2019) and the explicit statement that Bluey has been renewed for a second season, proving the official announcement in May. Additionally, the sentence 'Series two will debut ... in 2020' directly provides the anticipated premiere date. Both components of the claim are fully covered by the shown sentences."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "The council was founded on 1 July 1997 with the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth and Auburn.",
+   "markers": [
+    "clareandgilbertvalleysco"
+   ],
+   "paper_ids": [
+    "54862a45c31d92c8cbf8a27a2db31e8a4806fceb"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8576,
+   "evidence": {
+    "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+    "source_title": "clareandgilbertvalleysco",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Clare & Gilbert Valleys",
+    "cosine": 0.8576,
+    "reason": "The passage explicitly states that the Clare & Gilbert Valleys Council was proclaimed on July 1, 1997, and formed through the amalgamation of the specified district councils.",
+    "window": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn. Distance of Principal Office to Adelaide: 143km Area of Council: 1,840km\u00b2 Total Roads including sealed and unsealed 1,833 Number of Rateable Assessments: 6,876 Number of Electors: State Roll: 6,637 Council Roll: 89 Total: 6,726 Population: 9,311 (SA Government Grants Commission 2018) Ranging from the district service towns of Clare, Riverton, Saddleworth and Auburn through to the villages of Stockport, Tarlee, Rhynie, Manoora, Marrabel, Waterloo, Mintaro, Penwortham, Leasingham, Watervale and Sevenhill."
+   },
+   "evidences": [
+    {
+     "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+     "source_title": "clareandgilbertvalleysco",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Clare & Gilbert Valleys",
+     "cosine": 0.8576,
+     "reason": "The passage explicitly states that the Clare & Gilbert Valleys Council was proclaimed on July 1, 1997, and formed through the amalgamation of the specified district councils.",
+     "window": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn. Distance of Principal Office to Adelaide: 143km Area of Council: 1,840km\u00b2 Total Roads including sealed and unsealed 1,833 Number of Rateable Assessments: 6,876 Number of Electors: State Roll: 6,637 Council Roll: 89 Total: 6,726 Population: 9,311 (SA Government Grants Commission 2018) Ranging from the district service towns of Clare, Riverton, Saddleworth and Auburn through to the villages of Stockport, Tarlee, Rhynie, Manoora, Marrabel, Waterloo, Mintaro, Penwortham, Leasingham, Watervale and Sevenhill."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the Clare & Gilbert Valleys Council was proclaimed on July 1, 1997, and formed through the amalgamation of the specified district councils.",
+   "covering": {
+    "covered": [
+     {
+      "component": "council founded on 1 July 1997",
+      "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+      "source_title": "clareandgilbertvalleysco",
+      "sentence": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Clare & Gilbert Valleys"
+     },
+     {
+      "component": "amalgamation of the District Council of Clare",
+      "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+      "source_title": "clareandgilbertvalleysco",
+      "sentence": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Clare & Gilbert Valleys"
+     },
+     {
+      "component": "amalgamation of the District Council of Riverton",
+      "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+      "source_title": "clareandgilbertvalleysco",
+      "sentence": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Clare & Gilbert Valleys"
+     },
+     {
+      "component": "amalgamation of the District Council of Saddleworth and Auburn",
+      "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+      "source_title": "clareandgilbertvalleysco",
+      "sentence": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Clare & Gilbert Valleys"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+      "source_title": "clareandgilbertvalleysco",
+      "text": "(meta data) TITLE: Clare & Gilbert Valleys Council - Council Profile (meta data) PUBLISHER: District Council of Clare and Gilbert Valleys Home :: Home:: Council Profile # \"Clare and Gilbert Valley Councils, vibrant communities working together\" 4 Gleeson Street Clare SA 5453 | After Hours: (08) 8842 6400 | fax: (08) 8842 3624 | Click to email #### The Clare & Gilbert Valleys Council was proclaimed on 1 July 1997, having been formed through the amalgamation of the District Council of Clare, the District Council of Riverton and the District Council of Saddleworth & Auburn.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t22",
+   "text": "Roughly half of this welfare assistance, or $462 billion went to families with children, most of which are headed by single parents.",
+   "markers": [
+    "welfare"
+   ],
+   "paper_ids": [
+    "72616913b0fd763a5654558d210c13a5ec5da0c2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9129,
+   "evidence": {
+    "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+    "source_title": "welfare",
+    "supported": false,
+    "sentence": "It exists to help families who may not qualify for other welfare programs.",
+    "page": 1,
+    "snippet": "It exists to help families who may",
+    "cosine": 0.9129,
+    "reason": "The passage discusses food assistance and does not mention the total amount of welfare assistance or the portion that went to families with children or single-parent households.",
+    "window": "It is a place where food is contributed and made available to those in need. It exists to help families who may not qualify for other welfare programs. If you find yourself struggling to put food on the table, you can dial 2-1-1 on your telephone to locate a local food pantry or food bank in your area."
+   },
+   "evidences": [
+    {
+     "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+     "source_title": "welfare",
+     "supported": false,
+     "sentence": "It exists to help families who may not qualify for other welfare programs.",
+     "page": 1,
+     "snippet": "It exists to help families who may",
+     "cosine": 0.9129,
+     "reason": "The passage discusses food assistance and does not mention the total amount of welfare assistance or the portion that went to families with children or single-parent households.",
+     "window": "It is a place where food is contributed and made available to those in need. It exists to help families who may not qualify for other welfare programs. If you find yourself struggling to put food on the table, you can dial 2-1-1 on your telephone to locate a local food pantry or food bank in your area."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "roughly",
+    "missing_from": [
+     "72616913b0fd763a5654558d210c13a5ec5da0c2"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a specific statistic ($462 billion) about welfare assistance, which is directly attributable to the cited source. This falls under the 'full' scope as it's a factual claim expected to be proven by the citation.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific dollar amount ($462 billion), the percentage ('roughly half'), and the claim that most families with children receiving welfare are headed by single parents are not present in the source text.",
+    "rewrite_suggestion": "Welfare assistance includes programs that support families with children, particularly single-parent families.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source text is an article listing various grants and programs for single mothers, but it contains no aggregate statistics on total welfare spending, no mention of $462 billion, and no statement that most families with children receiving welfare are headed by single parents. Therefore the author must either provide a citation for these figures or rewrite the claim to avoid unsupported quantitative and demographic assertions."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "On January 25, 2019, it was announced that Annett would be driving the No. 1 Chevrolet with the points from the No. 5 car going over to the No. 1 car.",
+   "markers": [
+    "michaelannett"
+   ],
+   "paper_ids": [
+    "daf3f636bf770b8226bfbf5988d069741e0f98ec"
+   ],
+   "verdict": "supported",
+   "method": "tail_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "daf3f636bf770b8226bfbf5988d069741e0f98ec",
+    "source_title": "michaelannett",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "\u00b7 Michael Annett, who has carried the No. 5 since he joined JRM, will drive the No. 1 Pilot Flying J Chevrolet.",
+    "page": 1,
+    "snippet": "\u00b7 Michael Annett, who has carried the",
+    "reason": "",
+    "votes": "2-0",
+    "window": "\u00b7 Michael Annett, who has carried the No. 5 since he joined JRM, will drive the No. 1 Pilot Flying J Chevrolet."
+   },
+   "evidences": [
+    {
+     "paper_id": "daf3f636bf770b8226bfbf5988d069741e0f98ec",
+     "source_title": "michaelannett",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "\u00b7 Michael Annett, who has carried the No. 5 since he joined JRM, will drive the No. 1 Pilot Flying J Chevrolet.",
+     "page": 1,
+     "snippet": "\u00b7 Michael Annett, who has carried the",
+     "reason": "",
+     "votes": "2-0",
+     "window": "\u00b7 Michael Annett, who has carried the No. 5 since he joined JRM, will drive the No. 1 Pilot Flying J Chevrolet."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "tail_rescue": {
+    "supported": true,
+    "reach": 2,
+    "lead_in": "On January 25, 2019, it was announced that Annett would be driving the No. 1 Chevrolet with the points from the No.",
+    "tail": "5 car going over to the No. 1 car."
+   },
+   "covering": {
+    "covered": [
+     {
+      "component": "Michael Annett driving the No. 1 car",
+      "paper_id": "daf3f636bf770b8226bfbf5988d069741e0f98ec",
+      "source_title": "michaelannett",
+      "sentence": "\u00b7 Michael Annett, who has carried the No. 5 since he joined JRM, will drive the No. 1 Pilot Flying J Chevrolet.",
+      "page": 1,
+      "snippet": "\u00b7 Michael Annett, who has carried the"
+     },
+     {
+      "component": "Points from the No. 5 team carrying over to the No. 1",
+      "paper_id": "daf3f636bf770b8226bfbf5988d069741e0f98ec",
+      "source_title": "michaelannett",
+      "sentence": "Points from the No. 5 team will carry over to the No. 1.",
+      "page": 1,
+      "snippet": "Points from the No. 5 team will"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "daf3f636bf770b8226bfbf5988d069741e0f98ec",
+      "source_title": "michaelannett",
+      "text": "\u00b7 Michael Annett, who has carried the No. 5 since he joined JRM, will drive the No. 1 Pilot Flying J Chevrolet. The No. 1 is significant to the Annett family, as sprint-car racing legend Sammy Swindell drove that number to great success in a car owned by Michael's father, Harrold Annett. Points from the No. 5 team will carry over to the No. 1.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t24",
+   "text": "On January 5, 1971, fellow Manson Family member Catherine \"Gypsy\" Share gave birth to a son while in jail awaiting trial; she later revealed that Grogan was the father.",
+   "markers": [
+    "steveclemgrogan"
+   ],
+   "paper_ids": [
+    "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05",
+    "source_title": "steveclemgrogan",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store.",
+    "page": 1,
+    "snippet": "In 1971, eight months after giving birth",
+    "reason": "The passage does not state that Catherine \"Gypsy\" Share gave birth on January 5, 1971, or that she was in jail awaiting trial at the time of birth.",
+    "votes": "2-0",
+    "window": "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store."
+   },
+   "evidences": [
+    {
+     "paper_id": "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05",
+     "source_title": "steveclemgrogan",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store.",
+     "page": 1,
+     "snippet": "In 1971, eight months after giving birth",
+     "reason": "The passage does not state that Catherine \"Gypsy\" Share gave birth on January 5, 1971, or that she was in jail awaiting trial at the time of birth.",
+     "votes": "2-0",
+     "window": "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Catherine \"Gypsy\" Share gave birth on January 5, 1971, or that she was in jail awaiting trial at the time of birth.",
+   "component_check": {
+    "found": [
+     "Share was a fellow Manson Family member.",
+     "She later revealed that Grogan was the father."
+    ],
+    "missing": [
+     "On January 5, 1971, Catherine \"Gypsy\" Share gave birth to a son while in jail awaiting trial."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Share was a fellow Manson Family member.",
+      "paper_id": "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05",
+      "source_title": "steveclemgrogan",
+      "sentence": "It was during this time that she met Manson and became an instant follower and family member.",
+      "page": 1
+     },
+     {
+      "component": "She later revealed that Grogan was the father.",
+      "paper_id": "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05",
+      "source_title": "steveclemgrogan",
+      "sentence": "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Grogan was the father of Catherine \"Gypsy\" Share's son.",
+    "reason": "The passage directly attributes a factual statement (paternity) to the cited source, which is expected to prove this claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date 'January 5, 1971', the claim that the birth occurred 'while in jail awaiting trial', and the assertion that she 'later revealed' paternity are not supported by the cited source.",
+    "rewrite_suggestion": "In 1971, fellow Manson Family member Catherine 'Gypsy' Share gave birth to a son fathered by Steven Grogan; she was arrested eight months later.",
+    "proofs": [
+     "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "In 1971, eight months after giving birth to her and Steven Grogan's son, she and other Family members were arrested after participating in a shoot out with police during a botched robbery at a gun store.",
+     "why": "This sentence indicates the birth occurred before the arrest, contradicting the claim that she gave birth while in jail awaiting trial."
+    },
+    "why": "The cited source confirms that Catherine Share gave birth to a son fathered by Steven Grogan in 1971, but it provides no specific date (January 5, 1971), nor does it state that she was in jail awaiting trial at the time of birth. In fact, the source says she was arrested eight months after giving birth, contradicting the jail claim. Additionally, the source does not mention that she later revealed the paternity; it simply states the paternity as fact. Therefore, the author must add a citation for these unsupported subclaims or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "Wingfield was a recipient of the Christiaan Hendrik Persoon medal for her scientific achievements from the Southern African Society for Plant Pathology.",
+   "markers": [
+    "brendawingfield"
+   ],
+   "paper_ids": [
+    "647ec53e1efce768403f6a432f64a01fd984058e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9174,
+   "evidence": {
+    "paper_id": "647ec53e1efce768403f6a432f64a01fd984058e",
+    "source_title": "brendawingfield",
+    "supported": false,
+    "sentence": "She has supervised and continues to advise a large number of postgraduate students working on plant pathogens.",
+    "page": 1,
+    "snippet": "She has supervised and continues to advise",
+    "cosine": 0.9174,
+    "reason": "The passage does not mention the Christiaan Hendrik Persoon medal or the Southern African Society for Plant Pathology.",
+    "window": "Her research over the past 20 years focused on the global movement and evolution of fungal pathogens and recently she expanded her research focus to study fungi at the population level. She has supervised and continues to advise a large number of postgraduate students working on plant pathogens. As programme leader at the Centre for Tree Health Biotechnology (one of South Africa's first six centres of excellence identified by the Department of Science and Technology and the National Research Foundation) during the first five years of its existence she played a leading role in the centre's development."
+   },
+   "evidences": [
+    {
+     "paper_id": "647ec53e1efce768403f6a432f64a01fd984058e",
+     "source_title": "brendawingfield",
+     "supported": false,
+     "sentence": "She has supervised and continues to advise a large number of postgraduate students working on plant pathogens.",
+     "page": 1,
+     "snippet": "She has supervised and continues to advise",
+     "cosine": 0.9174,
+     "reason": "The passage does not mention the Christiaan Hendrik Persoon medal or the Southern African Society for Plant Pathology.",
+     "window": "Her research over the past 20 years focused on the global movement and evolution of fungal pathogens and recently she expanded her research focus to study fungi at the population level. She has supervised and continues to advise a large number of postgraduate students working on plant pathogens. As programme leader at the Centre for Tree Health Biotechnology (one of South Africa's first six centres of excellence identified by the Department of Science and Technology and the National Research Foundation) during the first five years of its existence she played a leading role in the centre's development."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Christiaan Hendrik Persoon",
+    "missing_from": [
+     "647ec53e1efce768403f6a432f64a01fd984058e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Wingfield was a recipient of the Christiaan Hendrik Persoon medal for her scientific achievements from the Southern African Society for Plant Pathology.",
+    "reason": "The passage directly states a fact about the recipient of an award, which the citation is expected to prove. This falls under the 'full' scope as it's a direct assertion of information attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Christiaan Hendrik Persoon medal from the Southern African Society for Plant Pathology",
+    "rewrite_suggestion": "Wingfield has received numerous significant awards, including the Harry Oppenheimer Memorial Fellowship and the South African Society of Microbiology Gold Medal.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not mention the Christiaan Hendrik Persoon medal or the Southern African Society for Plant Pathology. The only sentence shown by the tool is about supervising postgraduate students, which does not relate to the claim. Since a core component of the claim is entirely absent from the cited source, the author must either add a citation for that medal or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "It is also located just a few blocks away from the Capital One Arena, the home court of the men's basketball team.",
+   "markers": [
+    "georgetownuniversity"
+   ],
+   "paper_ids": [
+    "889bae0e72151212d2f4cb7ba23318ea4f700d9b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8657,
+   "evidence": {
+    "paper_id": "889bae0e72151212d2f4cb7ba23318ea4f700d9b",
+    "source_title": "georgetownuniversity",
+    "supported": false,
+    "sentence": "Our downtown neighborhood is home to hundreds of companies and organizations representing a wide breadth of industries and sectors, including public relations firms; journalism, communications, and media organizations; sports industry companies; human resources agencies; government agencies; nonprofit organizations; and many more.",
+    "page": 1,
+    "snippet": "Our downtown neighborhood is home to hundreds",
+    "cosine": 0.8657,
+    "reason": "The passage mentions the proximity of the School of Continuing Studies to various companies and organizations but does not mention the Capital One Arena or any sports teams.",
+    "window": "## Connect with Industry A cardinal component of SCS's strategic vision is to harness strong partnerships and relationships with industry experts and organizations from the local community. Our downtown neighborhood is home to hundreds of companies and organizations representing a wide breadth of industries and sectors, including public relations firms; journalism, communications, and media organizations; sports industry companies; human resources agencies; government agencies; nonprofit organizations; and many more. Admissions & Aid News & Events For New Students For Current Students For International Students For Military Students For Online Students For Faculty For Alumni Open Faculty Positions Accessibility at Georgetown Noncredit Terms & Conditions Privacy Policy Terms of Use Public Safety Emergency Contact Info Georgetown UniversitySchool of Continuing Studies640 Massachusetts Ave NWWashington, DC 20001(202) 687-8700 ## Choose Your Term We are transitioning to a new system for applications to the Spring 2019 term and later."
+   },
+   "evidences": [
+    {
+     "paper_id": "889bae0e72151212d2f4cb7ba23318ea4f700d9b",
+     "source_title": "georgetownuniversity",
+     "supported": false,
+     "sentence": "Our downtown neighborhood is home to hundreds of companies and organizations representing a wide breadth of industries and sectors, including public relations firms; journalism, communications, and media organizations; sports industry companies; human resources agencies; government agencies; nonprofit organizations; and many more.",
+     "page": 1,
+     "snippet": "Our downtown neighborhood is home to hundreds",
+     "cosine": 0.8657,
+     "reason": "The passage mentions the proximity of the School of Continuing Studies to various companies and organizations but does not mention the Capital One Arena or any sports teams.",
+     "window": "## Connect with Industry A cardinal component of SCS's strategic vision is to harness strong partnerships and relationships with industry experts and organizations from the local community. Our downtown neighborhood is home to hundreds of companies and organizations representing a wide breadth of industries and sectors, including public relations firms; journalism, communications, and media organizations; sports industry companies; human resources agencies; government agencies; nonprofit organizations; and many more. Admissions & Aid News & Events For New Students For Current Students For International Students For Military Students For Online Students For Faculty For Alumni Open Faculty Positions Accessibility at Georgetown Noncredit Terms & Conditions Privacy Policy Terms of Use Public Safety Emergency Contact Info Georgetown UniversitySchool of Continuing Studies640 Massachusetts Ave NWWashington, DC 20001(202) 687-8700 ## Choose Your Term We are transitioning to a new system for applications to the Spring 2019 term and later."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Capital One Arena is the home court of the men's basketball team.",
+    "reason": "The passage states a factual claim about the location and purpose of the Capital One Arena, which is directly attributed to the cited source. The citation is expected to prove this specific piece of information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that the campus is 'just a few blocks away' from Capital One Arena, but the cited source (Georgetown SCS 'Our Campus' page) does not mention Capital One Arena at all or provide any distance or directional information relative to it.",
+    "rewrite_suggestion": "It is located in downtown D.C. on Massachusetts Avenue NW, near many businesses and organizations including sports industry companies.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes a specific location detail (distance from Capital One Arena) to the Georgetown SCS campus page, but that page contains no mention of Capital One Arena, the arena's name, or how many blocks away it is. The sentence shown by the tool does not support the claim, and no sentence in the source does. The component about the arena being the home court is arguably common knowledge, but the distance component is an unsourced aside that requires either a new citation or a rewrite to match what the source actually states."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "9dbf54eca8e196c9b6709bb859eb9b592188cea4": {
+    "title": "kevinjanderson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "735e7299e408be383b4926091d507474af3ead96": {
+    "title": "2019cricketworldcup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93": {
+    "title": "dustbinbabyfilm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "085e1df3c875989e384e7dc0c46682b2c43e15fa": {
+    "title": "jamaicanationalfootballt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "889bae0e72151212d2f4cb7ba23318ea4f700d9b": {
+    "title": "georgetownuniversity",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "299669f1432ec994303ec116b3e3a44b335b8d45": {
+    "title": "2018concacafchampionslea",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9": {
+    "title": "bluey2018tvseries",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "72616913b0fd763a5654558d210c13a5ec5da0c2": {
+    "title": "welfare",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "14a2dfdb4fb82d6f39234fd802feb23db3881f5d": {
+    "title": "marshallcountyhighschool",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "54862a45c31d92c8cbf8a27a2db31e8a4806fceb": {
+    "title": "clareandgilbertvalleysco",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "6da17fb8fd527e049c57e7bf2e5c33af807a4646": {
+    "title": "charlescamilleri",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e10330106d02a84695dc59b377a5a1bc3d124dd6": {
+    "title": "lrssen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "daf3f636bf770b8226bfbf5988d069741e0f98ec": {
+    "title": "michaelannett",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "59781658ad07866db01e714acf9b8def3893575a": {
+    "title": "jacksparrow",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7458d55f0fadf7b6b89dadda0f6f852b86783b2f": {
+    "title": "mitchaustin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a763ac2b39985716614d4769841fca155eee31ff": {
+    "title": "2014fifaworldcuppreparat",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab": {
+    "title": "wfmt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "1fef5987f26531547e624bdcd222f309c935305a": {
+    "title": "opec",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fc4bf4eec2b8572c01b3eea6a0f8415357f266d3": {
+    "title": "ellicottcityhistoricdist",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "359d58a298a22949456975a7ad7065fa257f23e8": {
+    "title": "joshuadziabiak",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "99eed2a893f93abc6ab6796b89a4fa6e41ffff09": {
+    "title": "dhanvanthiramarau",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05": {
+    "title": "steveclemgrogan",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "6ebd62fb3a14f8c8d5e2f45781a571323cce0b36": {
+    "title": "colombocentralbankbombin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ec4277a456742c9cf03bcf453910d82419cd1b7d": {
+    "title": "michaelcollinsastronaut",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "647ec53e1efce768403f6a432f64a01fd984058e": {
+    "title": "brendawingfield",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "46ef43e12241e1a2fef9340ee5d5b2a39c565404": {
+    "title": "chrisharrisjournalist",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 7,
+   "unsupported": 19,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:41:21",
+  "marker_errors": [],
+  "processing_time_seconds": 415.3,
+  "source_hashes": {
+   "jacksparrow.txt": "71ac0ced62742460002e38e5d1acbb03651349d9",
+   "chrisharrisjournalist.txt": "374a582c952ab458a37a3f4e6b412f9bfc693354",
+   "marshallcountyhighschool.txt": "134a122e88eac0218d8d439036235cf5e14c5a28",
+   "joshuadziabiak.txt": "b314c31e5c832741d0949a3ba81e1e44bc1ae263",
+   "2019cricketworldcup.txt": "6dbaca17d1d48bcc43817ab9586f53be0de0f8d7",
+   "lrssen.txt": "7dc8f6a90acdc437b5f6f324e88c2b41ace7906a",
+   "jamaicanationalfootballt.txt": "a727f552e8aae6d42f276ef554ad48294b027e60",
+   "michaelcollinsastronaut.txt": "9b7cf74d99140e533fd6858e5cb9566349405bf1",
+   "dustbinbabyfilm.txt": "d288de74291f8a2471d8e555cafc9da672c8f78e",
+   "colombocentralbankbombin.txt": "ad0de33dd63a74fb83e3a37584335dbd9d9e261f",
+   "mitchaustin.txt": "fdeacd503e19439e4a073b54dd81b917b8706496",
+   "charlescamilleri.txt": "ca3b01d1941ebb77d1cbbd974b4329f4b9384f54",
+   "dhanvanthiramarau.txt": "b63544cf94ac90d70a6f8fa4f60ca3cc08ce8ad0",
+   "wfmt.txt": "cfc2c886e44bb9756f37c2e2e89a51acb166a201",
+   "opec.txt": "aa0f14a2e87c6fbe1b48b3b708a1855e14f398bc",
+   "2014fifaworldcuppreparat.txt": "1a6cec5ae51d92e3ad24cbd88e2c100bfac02e90",
+   "ellicottcityhistoricdist.txt": "7721b0892920a78baac393e6c4229e74514f2ebe",
+   "kevinjanderson.txt": "bdf9d49fb82842515f72951f0845bd1bf3fe02bf",
+   "2018concacafchampionslea.txt": "b5bca76e471e26860709b9ec83e198c3cf4646c9",
+   "bluey2018tvseries.txt": "f9b6bc1980e9434652f213b467f6c091c5d4e819",
+   "clareandgilbertvalleysco.txt": "8c97897114613c45e946b55dd336241da33f62e3",
+   "welfare.txt": "dd4011c3346b82e309aea98c5210b2878e2d37ab",
+   "michaelannett.txt": "0fddd5cb215f2b118f35bbeacb7c138e1693e2a5",
+   "steveclemgrogan.txt": "cf499df4ddc1ada0fde1ebcab924d169b5266660",
+   "brendawingfield.txt": "da7f3875f1b6e59817ebc512305b57921515a156",
+   "georgetownuniversity.txt": "70a753d6fa5bc0d87e619f7c8a5a91759f3fad3c"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 376,
+    "prompt_tokens": 394826,
+    "completion_tokens": 15796,
+    "cost_usd": 0.045842
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 25,
+    "prompt_tokens": 91493,
+    "completion_tokens": 53272,
+    "cost_usd": 0.022527
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 19,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 21,
+   "actions": {
+    "add_citation_or_rewrite": 18,
+    "wrong_or_insufficient_evidence": 2,
+    "supported": 1
+   },
+   "proof_may_exist": [
+    "t9",
+    "t12"
+   ],
+   "conflicts": [
+    "t10",
+    "t24"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t20"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "59781658ad07866db01e714acf9b8def3893575a",
+   "key": "jacksparrow",
+   "filename": "jacksparrow.txt",
+   "title": "jacksparrow",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46ef43e12241e1a2fef9340ee5d5b2a39c565404",
+   "key": "chrisharrisjournalist",
+   "filename": "chrisharrisjournalist.txt",
+   "title": "chrisharrisjournalist",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "14a2dfdb4fb82d6f39234fd802feb23db3881f5d",
+   "key": "marshallcountyhighschool",
+   "filename": "marshallcountyhighschool.txt",
+   "title": "marshallcountyhighschool",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "359d58a298a22949456975a7ad7065fa257f23e8",
+   "key": "joshuadziabiak",
+   "filename": "joshuadziabiak.txt",
+   "title": "joshuadziabiak",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+   "key": "2019cricketworldcup",
+   "filename": "2019cricketworldcup.txt",
+   "title": "2019cricketworldcup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e10330106d02a84695dc59b377a5a1bc3d124dd6",
+   "key": "lrssen",
+   "filename": "lrssen.txt",
+   "title": "lrssen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "085e1df3c875989e384e7dc0c46682b2c43e15fa",
+   "key": "jamaicanationalfootballt",
+   "filename": "jamaicanationalfootballt.txt",
+   "title": "jamaicanationalfootballt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+   "key": "michaelcollinsastronaut",
+   "filename": "michaelcollinsastronaut.txt",
+   "title": "michaelcollinsastronaut",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5a4e8d5faba4b10dc19f13ac0cf3ba13032bcf93",
+   "key": "dustbinbabyfilm",
+   "filename": "dustbinbabyfilm.txt",
+   "title": "dustbinbabyfilm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6ebd62fb3a14f8c8d5e2f45781a571323cce0b36",
+   "key": "colombocentralbankbombin",
+   "filename": "colombocentralbankbombin.txt",
+   "title": "colombocentralbankbombin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7458d55f0fadf7b6b89dadda0f6f852b86783b2f",
+   "key": "mitchaustin",
+   "filename": "mitchaustin.txt",
+   "title": "mitchaustin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6da17fb8fd527e049c57e7bf2e5c33af807a4646",
+   "key": "charlescamilleri",
+   "filename": "charlescamilleri.txt",
+   "title": "charlescamilleri",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "99eed2a893f93abc6ab6796b89a4fa6e41ffff09",
+   "key": "dhanvanthiramarau",
+   "filename": "dhanvanthiramarau.txt",
+   "title": "dhanvanthiramarau",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "75c6f1c5a1f5e64cd41fbe915873e23689c5ecab",
+   "key": "wfmt",
+   "filename": "wfmt.txt",
+   "title": "wfmt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1fef5987f26531547e624bdcd222f309c935305a",
+   "key": "opec",
+   "filename": "opec.txt",
+   "title": "opec",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a763ac2b39985716614d4769841fca155eee31ff",
+   "key": "2014fifaworldcuppreparat",
+   "filename": "2014fifaworldcuppreparat.txt",
+   "title": "2014fifaworldcuppreparat",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fc4bf4eec2b8572c01b3eea6a0f8415357f266d3",
+   "key": "ellicottcityhistoricdist",
+   "filename": "ellicottcityhistoricdist.txt",
+   "title": "ellicottcityhistoricdist",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9dbf54eca8e196c9b6709bb859eb9b592188cea4",
+   "key": "kevinjanderson",
+   "filename": "kevinjanderson.txt",
+   "title": "kevinjanderson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "299669f1432ec994303ec116b3e3a44b335b8d45",
+   "key": "2018concacafchampionslea",
+   "filename": "2018concacafchampionslea.txt",
+   "title": "2018concacafchampionslea",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5b732954614ffc42dd1fc1a4031ed1076a4ebfe9",
+   "key": "bluey2018tvseries",
+   "filename": "bluey2018tvseries.txt",
+   "title": "bluey2018tvseries",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "54862a45c31d92c8cbf8a27a2db31e8a4806fceb",
+   "key": "clareandgilbertvalleysco",
+   "filename": "clareandgilbertvalleysco.txt",
+   "title": "clareandgilbertvalleysco",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "72616913b0fd763a5654558d210c13a5ec5da0c2",
+   "key": "welfare",
+   "filename": "welfare.txt",
+   "title": "welfare",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "daf3f636bf770b8226bfbf5988d069741e0f98ec",
+   "key": "michaelannett",
+   "filename": "michaelannett.txt",
+   "title": "michaelannett",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a9a93d6eb7d0ee5e29d8ba0dec77d7d8cb721c05",
+   "key": "steveclemgrogan",
+   "filename": "steveclemgrogan.txt",
+   "title": "steveclemgrogan",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "647ec53e1efce768403f6a432f64a01fd984058e",
+   "key": "brendawingfield",
+   "filename": "brendawingfield.txt",
+   "title": "brendawingfield",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "889bae0e72151212d2f4cb7ba23318ea4f700d9b",
+   "key": "georgetownuniversity",
+   "filename": "georgetownuniversity.txt",
+   "title": "georgetownuniversity",
+   "num_claims": 0
+  }
+ ]
+}

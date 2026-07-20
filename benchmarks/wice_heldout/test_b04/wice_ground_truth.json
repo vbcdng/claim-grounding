@@ -1,0 +1,901 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 4,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "71stprimetimeemmyawards": {
+   "wice_id": "test00874",
+   "split_index": 78,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13,
+     145
+    ]
+   ],
+   "n_source_sentences": 182
+  },
+  "jackmcquesten": {
+   "wice_id": "test01697",
+   "split_index": 79,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     56,
+     78
+    ],
+    [
+     55,
+     56,
+     58
+    ],
+    [
+     54,
+     56,
+     78
+    ],
+    [
+     56,
+     75,
+     76,
+     78
+    ],
+    [
+     54,
+     55,
+     56,
+     58
+    ],
+    [
+     55,
+     56,
+     58,
+     78
+    ],
+    [
+     54,
+     56,
+     75,
+     76,
+     78
+    ],
+    [
+     54,
+     55,
+     56,
+     58,
+     78
+    ]
+   ],
+   "n_source_sentences": 91
+  },
+  "2019globalt20canada": {
+   "wice_id": "test02236",
+   "split_index": 80,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     100,
+     108
+    ],
+    [
+     100,
+     103,
+     108
+    ],
+    [
+     104,
+     106,
+     108
+    ],
+    [
+     96,
+     102,
+     103,
+     108
+    ],
+    [
+     103,
+     104,
+     106,
+     108
+    ]
+   ],
+   "n_source_sentences": 132
+  },
+  "clearbodyclearmind": {
+   "wice_id": "test02679",
+   "split_index": 81,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     18,
+     20,
+     21
+    ],
+    [
+     20,
+     21,
+     22
+    ],
+    [
+     18,
+     20,
+     21,
+     22
+    ]
+   ],
+   "n_source_sentences": 29
+  },
+  "aarondford": {
+   "wice_id": "test03001",
+   "split_index": 82,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     32
+    ],
+    [
+     0,
+     32
+    ],
+    [
+     21,
+     22
+    ],
+    [
+     0,
+     22
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     6,
+     32
+    ],
+    [
+     22,
+     32
+    ],
+    [
+     6,
+     22,
+     32
+    ],
+    [
+     6,
+     21,
+     22
+    ],
+    [
+     21,
+     22,
+     32
+    ],
+    [
+     5,
+     6,
+     10
+    ],
+    [
+     0,
+     22,
+     32
+    ],
+    [
+     0,
+     6,
+     22
+    ],
+    [
+     5,
+     6,
+     10,
+     32
+    ],
+    [
+     5,
+     6,
+     10,
+     22
+    ],
+    [
+     5,
+     6,
+     10,
+     22,
+     32
+    ]
+   ],
+   "n_source_sentences": 138
+  },
+  "johnccalhoun": {
+   "wice_id": "test03718",
+   "split_index": 83,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34,
+     40,
+     41,
+     44
+    ],
+    [
+     34,
+     40,
+     44,
+     59
+    ],
+    [
+     28,
+     34,
+     40,
+     41
+    ],
+    [
+     32,
+     34,
+     41,
+     44
+    ],
+    [
+     32,
+     34,
+     44,
+     59
+    ],
+    [
+     28,
+     34,
+     40,
+     41,
+     44
+    ],
+    [
+     28,
+     32,
+     34,
+     40,
+     59
+    ],
+    [
+     28,
+     32,
+     34,
+     40,
+     41
+    ],
+    [
+     28,
+     34,
+     40,
+     41,
+     59
+    ],
+    [
+     28,
+     31,
+     34,
+     40,
+     41
+    ],
+    [
+     32,
+     34,
+     40,
+     44,
+     59
+    ],
+    [
+     32,
+     34,
+     40,
+     41,
+     44
+    ],
+    [
+     34,
+     40,
+     41,
+     44,
+     59
+    ],
+    [
+     28,
+     34,
+     40,
+     44,
+     59
+    ],
+    [
+     28,
+     31,
+     32,
+     34,
+     40,
+     59
+    ],
+    [
+     28,
+     31,
+     34,
+     40,
+     41,
+     44
+    ],
+    [
+     28,
+     31,
+     34,
+     40,
+     44,
+     59
+    ],
+    [
+     28,
+     31,
+     34,
+     40,
+     41,
+     59
+    ],
+    [
+     28,
+     31,
+     32,
+     34,
+     40,
+     41
+    ]
+   ],
+   "n_source_sentences": 86
+  },
+  "popeleoix": {
+   "wice_id": "test01035",
+   "split_index": 84,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13
+    ]
+   ],
+   "n_source_sentences": 70
+  },
+  "antipolicesentiment": {
+   "wice_id": "test02238",
+   "split_index": 85,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     34,
+     49
+    ],
+    [
+     17,
+     34,
+     49,
+     53
+    ],
+    [
+     28,
+     29,
+     30,
+     49
+    ],
+    [
+     17,
+     28,
+     29,
+     30,
+     49,
+     53
+    ]
+   ],
+   "n_source_sentences": 94
+  },
+  "naladamayanthi2003film": {
+   "wice_id": "test02553",
+   "split_index": 86,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 64
+  },
+  "philippastroudbaronessst": {
+   "wice_id": "test02877",
+   "split_index": 87,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     15
+    ]
+   ],
+   "n_source_sentences": 98
+  },
+  "declarationoftherightsof": {
+   "wice_id": "test01426",
+   "split_index": 88,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     33
+    ],
+    [
+     31,
+     33
+    ]
+   ],
+   "n_source_sentences": 41
+  },
+  "historyofgmail": {
+   "wice_id": "test03777",
+   "split_index": 89,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     25,
+     28
+    ],
+    [
+     27,
+     28
+    ],
+    [
+     21,
+     27,
+     28
+    ],
+    [
+     25,
+     27,
+     28,
+     32,
+     35
+    ]
+   ],
+   "n_source_sentences": 114
+  },
+  "aarondford2": {
+   "wice_id": "test04002",
+   "split_index": 90,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     13,
+     14
+    ],
+    [
+     12,
+     13
+    ],
+    [
+     13,
+     14,
+     30,
+     37
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "royhilton": {
+   "wice_id": "test01979",
+   "split_index": 91,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     2,
+     4,
+     11
+    ],
+    [
+     2,
+     10,
+     11
+    ],
+    [
+     0,
+     2,
+     11
+    ],
+    [
+     0,
+     2,
+     10,
+     11
+    ],
+    [
+     0,
+     2,
+     4,
+     11
+    ],
+    [
+     2,
+     4,
+     10,
+     11
+    ],
+    [
+     0,
+     2,
+     4,
+     10,
+     11
+    ]
+   ],
+   "n_source_sentences": 52
+  },
+  "halocombatevolvedanniver": {
+   "wice_id": "test00017",
+   "split_index": 92,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     25,
+     37,
+     40,
+     69
+    ],
+    [
+     0,
+     37,
+     40,
+     69
+    ],
+    [
+     0,
+     36,
+     37,
+     40,
+     69
+    ],
+    [
+     25,
+     27,
+     37,
+     40,
+     69
+    ],
+    [
+     0,
+     37,
+     39,
+     69,
+     70,
+     77,
+     83
+    ],
+    [
+     25,
+     37,
+     39,
+     69,
+     70,
+     77,
+     83
+    ],
+    [
+     0,
+     37,
+     40,
+     56,
+     57,
+     66,
+     69,
+     83
+    ],
+    [
+     25,
+     27,
+     37,
+     39,
+     69,
+     70,
+     77,
+     83
+    ],
+    [
+     25,
+     37,
+     40,
+     56,
+     57,
+     66,
+     69,
+     83
+    ],
+    [
+     0,
+     36,
+     37,
+     39,
+     69,
+     70,
+     77,
+     83
+    ],
+    [
+     25,
+     27,
+     37,
+     40,
+     56,
+     57,
+     66,
+     69,
+     83
+    ],
+    [
+     0,
+     36,
+     37,
+     40,
+     56,
+     57,
+     66,
+     69,
+     83
+    ]
+   ],
+   "n_source_sentences": 110
+  },
+  "oppenheimersecurityheari": {
+   "wice_id": "test03225",
+   "split_index": 93,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     26
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     25,
+     26
+    ],
+    [
+     21,
+     25,
+     99
+    ],
+    [
+     25,
+     98,
+     99
+    ],
+    [
+     25,
+     26,
+     99
+    ],
+    [
+     21,
+     25,
+     26
+    ],
+    [
+     21,
+     26,
+     99
+    ],
+    [
+     26,
+     98,
+     99
+    ],
+    [
+     21,
+     25,
+     26,
+     99
+    ],
+    [
+     25,
+     26,
+     98,
+     99
+    ]
+   ],
+   "n_source_sentences": 102
+  },
+  "akramkhandurrani": {
+   "wice_id": "test01957",
+   "split_index": 94,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     43
+    ],
+    [
+     32,
+     43,
+     62
+    ]
+   ],
+   "n_source_sentences": 90
+  },
+  "carterrowney": {
+   "wice_id": "test02661",
+   "split_index": 95,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     6,
+     8,
+     10
+    ],
+    [
+     0,
+     6,
+     8,
+     10
+    ],
+    [
+     6,
+     8,
+     9,
+     10
+    ],
+    [
+     0,
+     6,
+     8,
+     9,
+     10
+    ]
+   ],
+   "n_source_sentences": 84
+  },
+  "sanangelotexas": {
+   "wice_id": "test04349",
+   "split_index": 96,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     18,
+     19
+    ],
+    [
+     14,
+     18,
+     19
+    ],
+    [
+     17,
+     18,
+     19
+    ]
+   ],
+   "n_source_sentences": 75
+  },
+  "janetjackson": {
+   "wice_id": "test03394",
+   "split_index": 97,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     11,
+     12
+    ]
+   ],
+   "n_source_sentences": 36
+  },
+  "christianbergman": {
+   "wice_id": "test03788",
+   "split_index": 98,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     11
+    ],
+    [
+     10
+    ]
+   ],
+   "n_source_sentences": 28
+  },
+  "michaelcollinsastronaut": {
+   "wice_id": "test02547",
+   "split_index": 99,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     144
+    ]
+   ],
+   "n_source_sentences": 201
+  },
+  "liverpoolfc": {
+   "wice_id": "test04279",
+   "split_index": 100,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     19,
+     23,
+     24,
+     29,
+     30
+    ]
+   ],
+   "n_source_sentences": 48
+  },
+  "chabahar": {
+   "wice_id": "test03432",
+   "split_index": 101,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     8
+    ],
+    [
+     0
+    ],
+    [
+     0,
+     65
+    ],
+    [
+     8,
+     65
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     2,
+     6,
+     65
+    ],
+    [
+     0,
+     2,
+     65
+    ]
+   ],
+   "n_source_sentences": 97
+  },
+  "kapuvr": {
+   "wice_id": "test02196",
+   "split_index": 102,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     43
+    ]
+   ],
+   "n_source_sentences": 90
+  },
+  "pulpstudentpublication": {
+   "wice_id": "test02213",
+   "split_index": 103,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     46
+    ],
+    [
+     44
+    ],
+    [
+     44,
+     45
+    ]
+   ],
+   "n_source_sentences": 67
+  }
+ }
+}

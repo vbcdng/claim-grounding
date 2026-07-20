@@ -1,0 +1,2859 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE dev batch 2",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "On October 9, French Montana's brother Cokeboy Zack appeared on Revolt TV announcing the release of the mixtape \"Coke Zoo\", a collaboration between French Montana and Fetty Wap.",
+   "markers": [
+    "cokezoo"
+   ],
+   "paper_ids": [
+    "92943ac453356f04dec0465fbe5f1fa7bc8a2e19"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.86,
+   "evidence": {
+    "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+    "source_title": "cokezoo",
+    "supported": true,
+    "sentence": "Apparently, a mixtape with French Montana.",
+    "page": 1,
+    "snippet": "Apparently, a mixtape with French Montana.",
+    "cosine": 0.86,
+    "reason": "The passage states that French Montana's brother, Zack, announced on Revolt TV that a mixtape called \"Coke Zoo\" by French Montana and Fetty Wap is completed and will be released soon.",
+    "window": "So, what's the next move? Apparently, a mixtape with French Montana. During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days."
+   },
+   "evidences": [
+    {
+     "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+     "source_title": "cokezoo",
+     "supported": true,
+     "sentence": "Apparently, a mixtape with French Montana.",
+     "page": 1,
+     "snippet": "Apparently, a mixtape with French Montana.",
+     "cosine": 0.86,
+     "reason": "The passage states that French Montana's brother, Zack, announced on Revolt TV that a mixtape called \"Coke Zoo\" by French Montana and Fetty Wap is completed and will be released soon.",
+     "window": "So, what's the next move? Apparently, a mixtape with French Montana. During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that French Montana's brother, Zack, announced on Revolt TV that a mixtape called \"Coke Zoo\" by French Montana and Fetty Wap is completed and will be released soon.",
+   "covering": {
+    "covered": [
+     {
+      "component": "French Montana's brother Cokeboy Zack appeared on Revolt TV",
+      "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+      "source_title": "cokezoo",
+      "sentence": "During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days.",
+      "page": 1,
+      "snippet": "During an interview with Revolt, French's brother,"
+     },
+     {
+      "component": "announcing the release of the mixtape \"Coke Zoo\"",
+      "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+      "source_title": "cokezoo",
+      "sentence": "During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days.",
+      "page": 1,
+      "snippet": "During an interview with Revolt, French's brother,"
+     },
+     {
+      "component": "a collaboration between French Montana and Fetty Wap",
+      "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+      "source_title": "cokezoo",
+      "sentence": "During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days.",
+      "page": 1,
+      "snippet": "During an interview with Revolt, French's brother,"
+     },
+     {
+      "component": "a collaboration between French Montana and Fetty Wap",
+      "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+      "source_title": "cokezoo",
+      "sentence": "(meta data) TITLE: Ready For A Fetty Wap And French Montana Mixtape?",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Ready For A Fetty"
+     }
+    ],
+    "uncovered": [
+     "On October 9"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+      "source_title": "cokezoo",
+      "text": "(meta data) TITLE: Ready For A Fetty Wap And French Montana Mixtape? […] During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state the specific date of October 9th for the announcement.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the specific date of October 9th for the announcement",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "On October 9 and the nickname 'Cokeboy' (Zack is not called 'Cokeboy Zack' in the source)",
+    "rewrite_suggestion": "During an interview with Revolt, French Montana's brother Zack announced the release of the mixtape 'Coke Zoo', a collaboration between French Montana and Fetty Wap.",
+    "proofs": [
+     "During an interview with Revolt, French's brother, Zack, revealed that Zoovier and the Coke Boys captain joined forces for a project called Coke Zoo that's already completed — and will be dropping in a matter of days."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific date ('On October 9') that does not appear anywhere in the source text, and it refers to 'Cokeboy Zack' while the source only states 'French's brother, Zack' (without the epithet 'Cokeboy') and later calls him 'Coke Boys captain'. These unsupported components require either a new citation or a rewrite that matches what the source actually says. The remaining components (appearance on Revolt, announcement of 'Coke Zoo', collaboration) are all proven by the shown sentences."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "English began as a gospel singer and many of her most popular songs contain references to God, faith and belief in oneself.",
+   "markers": [
+    "kimenglish"
+   ],
+   "paper_ids": [
+    "eba14726f674586d18659d78007c7ce235291c5b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9255,
+   "evidence": {
+    "paper_id": "eba14726f674586d18659d78007c7ce235291c5b",
+    "source_title": "kimenglish",
+    "supported": false,
+    "sentence": "He offered his condolences to English, whom he called his \"sister in music\" and said he always respected her talents.",
+    "page": 1,
+    "snippet": "He offered his condolences to English, whom",
+    "cosine": 0.9255,
+    "reason": "The passage does not mention English's career as a gospel singer or the lyrical content of her songs.",
+    "window": "Maurice Joshua was a friend of English's and often worked with her, including on her 2007 album My Destiny. He offered his condolences to English, whom he called his \"sister in music\" and said he always respected her talents. \"Your voice could transcend like no other!"
+   },
+   "evidences": [
+    {
+     "paper_id": "eba14726f674586d18659d78007c7ce235291c5b",
+     "source_title": "kimenglish",
+     "supported": false,
+     "sentence": "He offered his condolences to English, whom he called his \"sister in music\" and said he always respected her talents.",
+     "page": 1,
+     "snippet": "He offered his condolences to English, whom",
+     "cosine": 0.9255,
+     "reason": "The passage does not mention English's career as a gospel singer or the lyrical content of her songs.",
+     "window": "Maurice Joshua was a friend of English's and often worked with her, including on her 2007 album My Destiny. He offered his condolences to English, whom he called his \"sister in music\" and said he always respected her talents. \"Your voice could transcend like no other!"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that English began as a gospel singer and that her songs contain references to God, faith, and belief in oneself is entirely absent from the cited source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source text describes Kim English as a house music singer who began her career in 1994 with the dance track 'Nite Life' and makes no mention of gospel singing or religious references in her songs. Neither component of the claim appears in the source, so the author must either add a citation supporting those statements or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "Police were called, but the members left before they arrived.",
+   "markers": [
+    "identityevropa"
+   ],
+   "paper_ids": [
+    "ab0c943194106eca22927c7984cfa75971e5c30c"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+    "source_title": "identityevropa",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down.",
+    "page": 1,
+    "snippet": "University spokesman Chris Nelson confirmed the group",
+    "reason": "The passage explicitly states that police arrived after the members had already left and taken down their banner.",
+    "votes": "2-0",
+    "window": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down."
+   },
+   "evidences": [
+    {
+     "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+     "source_title": "identityevropa",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down.",
+     "page": 1,
+     "snippet": "University spokesman Chris Nelson confirmed the group",
+     "reason": "The passage explicitly states that police arrived after the members had already left and taken down their banner.",
+     "votes": "2-0",
+     "window": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that police arrived after the members had already left and taken down their banner.",
+   "covering": {
+    "covered": [
+     {
+      "component": "members left before they arrived",
+      "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+      "source_title": "identityevropa",
+      "sentence": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down.",
+      "page": 1,
+      "snippet": "University spokesman Chris Nelson confirmed the group"
+     },
+     {
+      "component": "police were called",
+      "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+      "source_title": "identityevropa",
+      "sentence": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down.",
+      "page": 1,
+      "snippet": "University spokesman Chris Nelson confirmed the group",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+      "source_title": "identityevropa",
+      "text": "University spokesman Chris Nelson confirmed the group of about 11 men was on campus Saturday afternoon around 1:45 p.m. By the time police arrived at the block U, a concrete letter on Mount Van Cott above the school, the members were gone and had taken their banner down.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "It was executive produced by Coppola, Glazer, Roman Coppola, and Tony Hernandez with Shaffer as the special's musical director and onscreen accompanist.",
+   "markers": [
+    "averymurraychristmas"
+   ],
+   "paper_ids": [
+    "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8932,
+   "evidence": {
+    "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+    "source_title": "averymurraychristmas",
+    "supported": true,
+    "sentence": "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+    "page": 1,
+    "snippet": "The special is being exec produced by",
+    "cosine": 0.8932,
+    "reason": "The passage explicitly states that the special is executive produced by Coppola, Glazer, Roman Coppola, and Tony Hernandez, and also lists Paul Shaffer as part of the star-studded cast.",
+    "window": "The star-studded cast includes George Clooney, Paul Shaffer, Amy Poehler, Julie White, Dimitri Dimitrov, Michael Cera, Chris Rock, David Johansen, Maya Rudolph, Jason Schwartzman, Jenny Lewis, members of the band Phoenix, Rashida Jones and Miley Cyrus. The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez. ### Popular on Variety"
+   },
+   "evidences": [
+    {
+     "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+     "source_title": "averymurraychristmas",
+     "supported": true,
+     "sentence": "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+     "page": 1,
+     "snippet": "The special is being exec produced by",
+     "cosine": 0.8932,
+     "reason": "The passage explicitly states that the special is executive produced by Coppola, Glazer, Roman Coppola, and Tony Hernandez, and also lists Paul Shaffer as part of the star-studded cast.",
+     "window": "The star-studded cast includes George Clooney, Paul Shaffer, Amy Poehler, Julie White, Dimitri Dimitrov, Michael Cera, Chris Rock, David Johansen, Maya Rudolph, Jason Schwartzman, Jenny Lewis, members of the band Phoenix, Rashida Jones and Miley Cyrus. The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez. ### Popular on Variety"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the special is executive produced by Coppola, Glazer, Roman Coppola, and Tony Hernandez, and also lists Paul Shaffer as part of the star-studded cast.",
+   "covering": {
+    "covered": [
+     {
+      "component": "executive produced by Coppola",
+      "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+      "source_title": "averymurraychristmas",
+      "sentence": "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+      "page": 1,
+      "snippet": "The special is being exec produced by"
+     },
+     {
+      "component": "executive produced by Glazer",
+      "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+      "source_title": "averymurraychristmas",
+      "sentence": "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+      "page": 1,
+      "snippet": "The special is being exec produced by"
+     },
+     {
+      "component": "executive produced by Roman Coppola",
+      "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+      "source_title": "averymurraychristmas",
+      "sentence": "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+      "page": 1,
+      "snippet": "The special is being exec produced by"
+     },
+     {
+      "component": "executive produced by Tony Hernandez",
+      "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+      "source_title": "averymurraychristmas",
+      "sentence": "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+      "page": 1,
+      "snippet": "The special is being exec produced by"
+     },
+     {
+      "component": "Shaffer as the special's onscreen accompanist",
+      "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+      "source_title": "averymurraychristmas",
+      "sentence": "The star-studded cast includes George Clooney, Paul Shaffer, Amy Poehler, Julie White, Dimitri Dimitrov, Michael Cera, Chris Rock, David Johansen, Maya Rudolph, Jason Schwartzman, Jenny Lewis, members of the band Phoenix, Rashida Jones and Miley Cyrus.",
+      "page": 1,
+      "snippet": "The star-studded cast includes George Clooney, Paul",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Shaffer as the special's musical director"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+      "source_title": "averymurraychristmas",
+      "text": "The star-studded cast includes George Clooney, Paul Shaffer, Amy Poehler, Julie White, Dimitri Dimitrov, Michael Cera, Chris Rock, David Johansen, Maya Rudolph, Jason Schwartzman, Jenny Lewis, members of the band Phoenix, Rashida Jones and Miley Cyrus. The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that Shaffer was the special's musical director and onscreen accompanist.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Shaffer was the special's musical director and onscreen accompanist",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Shaffer's roles as musical director and onscreen accompanist",
+    "rewrite_suggestion": "It was executive produced by Coppola, Glazer, Roman Coppola, and Tony Hernandez, with Paul Shaffer appearing in the special as a cast member.",
+    "proofs": [
+     "The special is being exec produced by Coppola, Glazer, Roman Coppola and Tony Hernandez."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences confirm the executive producers, but the source only lists Paul Shaffer as a cast member, not as musical director or onscreen accompanist. Those components are not present in the source text, so the author must either add a citation for those roles or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "It was also named 2008 Best Video Game Soundtrack from both \"IGN\" and G.A.N.G.",
+   "markers": [
+    "videogameslive"
+   ],
+   "paper_ids": [
+    "1f9112331a76fa7caadca7538f2f586c607e8958"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9237,
+   "evidence": {
+    "paper_id": "1f9112331a76fa7caadca7538f2f586c607e8958",
+    "source_title": "videogameslive",
+    "supported": false,
+    "sentence": "\"What a fantastic honor for us and the entire game industry\", said prolific video game composer and co-creator/executive producer of Video Games Live, Tommy Tallarico.",
+    "page": 1,
+    "snippet": "\"What a fantastic honor for us and",
+    "cosine": 0.9237,
+    "reason": "The passage mentions a soundtrack album and its chart debut but does not mention any awards from IGN or G.A.N.G.",
+    "window": "There is even a soundtrack album released on the EMI Classics label and, surprising even fans of the genre, the album has debuted at the number 10 spot on the Billboard Classical Crossover Albums chart. \"What a fantastic honor for us and the entire game industry\", said prolific video game composer and co-creator/executive producer of Video Games Live, Tommy Tallarico. \"It's one of those things you always dream about as a musician growing up.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "1f9112331a76fa7caadca7538f2f586c607e8958",
+     "source_title": "videogameslive",
+     "supported": false,
+     "sentence": "\"What a fantastic honor for us and the entire game industry\", said prolific video game composer and co-creator/executive producer of Video Games Live, Tommy Tallarico.",
+     "page": 1,
+     "snippet": "\"What a fantastic honor for us and",
+     "cosine": 0.9237,
+     "reason": "The passage mentions a soundtrack album and its chart debut but does not mention any awards from IGN or G.A.N.G.",
+     "window": "There is even a soundtrack album released on the EMI Classics label and, surprising even fans of the genre, the album has debuted at the number 10 spot on the Billboard Classical Crossover Albums chart. \"What a fantastic honor for us and the entire game industry\", said prolific video game composer and co-creator/executive producer of Video Games Live, Tommy Tallarico. \"It's one of those things you always dream about as a musician growing up.\""
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the work was named 2008 Best Video Game Soundtrack from both IGN and G.A.N.G.",
+    "rewrite_suggestion": "The Video Games Live album debuted at #10 on the Billboard Classical Crossover Albums chart.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text (two articles about the Video Games Live album) contains no mention of any award from IGN or G.A.N.G., nor any reference to a '2008 Best Video Game Soundtrack' designation. The shown sentence quotes Tommy Tallarico about a general honor but does not support the specific award claim. Therefore, the claim is entirely unsupported by the source."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "An estimated 40 million players vied for spots in the solo and duos World Cup.",
+   "markers": [
+    "fortniteworldcup"
+   ],
+   "paper_ids": [
+    "17e12f1f32e2ce7e2608e11068b2e3b799b8b463"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9284,
+   "evidence": {
+    "paper_id": "17e12f1f32e2ce7e2608e11068b2e3b799b8b463",
+    "source_title": "fortniteworldcup",
+    "supported": true,
+    "sentence": "The game has nearly 250 million registered players, according to its publisher, Epic Games, and about 40 million of them participated in online qualifiers for the World Cup.",
+    "page": 1,
+    "snippet": "The game has nearly 250 million registered",
+    "cosine": 0.9284,
+    "reason": "The passage states that about 40 million players participated in online qualifiers for the World Cup.",
+    "window": "The status of that venue — best known for hosting the world's top tennis players at the United States Open, which will begin next month — was testament to the incredible popularity of Fortnite, a game that allows as many as 100 players to meet on a virtual island and battle it out until one is left. The game has nearly 250 million registered players, according to its publisher, Epic Games, and about 40 million of them participated in online qualifiers for the World Cup. Tickets to attend the weekend event cost $50 to $150."
+   },
+   "evidences": [
+    {
+     "paper_id": "17e12f1f32e2ce7e2608e11068b2e3b799b8b463",
+     "source_title": "fortniteworldcup",
+     "supported": true,
+     "sentence": "The game has nearly 250 million registered players, according to its publisher, Epic Games, and about 40 million of them participated in online qualifiers for the World Cup.",
+     "page": 1,
+     "snippet": "The game has nearly 250 million registered",
+     "cosine": 0.9284,
+     "reason": "The passage states that about 40 million players participated in online qualifiers for the World Cup.",
+     "window": "The status of that venue — best known for hosting the world's top tennis players at the United States Open, which will begin next month — was testament to the incredible popularity of Fortnite, a game that allows as many as 100 players to meet on a virtual island and battle it out until one is left. The game has nearly 250 million registered players, according to its publisher, Epic Games, and about 40 million of them participated in online qualifiers for the World Cup. Tickets to attend the weekend event cost $50 to $150."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that about 40 million players participated in online qualifiers for the World Cup.",
+   "covering": {
+    "covered": [
+     {
+      "component": "estimated 40 million players vied for spots in the solo and duos World Cup",
+      "paper_id": "17e12f1f32e2ce7e2608e11068b2e3b799b8b463",
+      "source_title": "fortniteworldcup",
+      "sentence": "The game has nearly 250 million registered players, according to its publisher, Epic Games, and about 40 million of them participated in online qualifiers for the World Cup.",
+      "page": 1,
+      "snippet": "The game has nearly 250 million registered"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "17e12f1f32e2ce7e2608e11068b2e3b799b8b463",
+      "source_title": "fortniteworldcup",
+      "text": "The game has nearly 250 million registered players, according to its publisher, Epic Games, and about 40 million of them participated in online qualifiers for the World Cup.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "Francis Church was a BAPC choir member and a cellist, and he led the successful drive for purchase of the original pipe organ at the Huguenot Road location of the church.",
+   "markers": [
+    "bonairpresbyterianchurch"
+   ],
+   "paper_ids": [
+    "720dbda814f691d65db05f32c2b358e700090517"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "720dbda814f691d65db05f32c2b358e700090517",
+    "source_title": "bonairpresbyterianchurch",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "I loved this obit lead from the Richmond Times-Dispatch, or anyway this is my reading of it: As a boy, Francis Church took piano lessons long enough to lose interest.",
+    "page": 1,
+    "snippet": "I loved this obit lead from the",
+    "reason": "The passage does not mention Francis Church being a BAPC choir member or leading a drive for the purchase of a pipe organ.",
+    "votes": "2-0",
+    "window": "I loved this obit lead from the Richmond Times-Dispatch, or anyway this is my reading of it: As a boy, Francis Church took piano lessons long enough to lose interest. But then the writer explains that one day Francis picked up a cello, and never put it down. Francis was a musician-critic. He loved the adventure of contemporary music and, tellingly, spent a stretch of time as second-chair cello with the modernist-oriented Louisville Symphony."
+   },
+   "evidences": [
+    {
+     "paper_id": "720dbda814f691d65db05f32c2b358e700090517",
+     "source_title": "bonairpresbyterianchurch",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "I loved this obit lead from the Richmond Times-Dispatch, or anyway this is my reading of it: As a boy, Francis Church took piano lessons long enough to lose interest.",
+     "page": 1,
+     "snippet": "I loved this obit lead from the",
+     "reason": "The passage does not mention Francis Church being a BAPC choir member or leading a drive for the purchase of a pipe organ.",
+     "votes": "2-0",
+     "window": "I loved this obit lead from the Richmond Times-Dispatch, or anyway this is my reading of it: As a boy, Francis Church took piano lessons long enough to lose interest. But then the writer explains that one day Francis picked up a cello, and never put it down. Francis was a musician-critic. He loved the adventure of contemporary music and, tellingly, spent a stretch of time as second-chair cello with the modernist-oriented Louisville Symphony."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Francis Church being a BAPC choir member or leading a drive for the purchase of a pipe organ.",
+   "component_check": {
+    "found": [
+     "Francis Church was a cellist"
+    ],
+    "missing": [
+     "Francis Church was a BAPC choir member",
+     "He led the successful drive for purchase of the original pipe organ at the Huguenot Road location of the church"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Francis Church was a cellist",
+      "paper_id": "720dbda814f691d65db05f32c2b358e700090517",
+      "source_title": "bonairpresbyterianchurch",
+      "sentence": "Francis L. Church,the longtime music critic for the Richmond News Leader, died last August at age 87.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Francis Church was a BAPC choir member and he led the successful drive for purchase of the original pipe organ at the Huguenot Road location of the church.",
+    "rewrite_suggestion": "Francis Church was a cellist.",
+    "proofs": [
+     "spent a stretch of time as second-chair cello with the modernist-oriented Louisville Symphony"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes assertions that Francis Church was a BAPC choir member and led a pipe organ purchase drive, but the source text contains no mention of any church affiliation, choir membership, or organ purchase. The source does confirm he was a cellist (via the Louisville Symphony role), yet the shown sentence does not support even that. Because several substantive components are entirely absent from the source, the author must add citations for those subclaims or rewrite the claim to only what the source supports."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "In November of that year the City of Milwaukee's Arts Board said the original search for a new flag wasn't inclusive enough, and that the flag may go back to the drawing board.",
+   "markers": [
+    "flagofmilwaukee"
+   ],
+   "paper_ids": [
+    "eac3b353409b2f6db23b269c047bd4fd7f134c27"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9265,
+   "evidence": {
+    "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+    "source_title": "flagofmilwaukee",
+    "supported": true,
+    "sentence": "Reno's New Flag Looks Suspiciously Familiar Chairman of the Arts Board Alderman Michael Murphy said of the original search \"it was grassroots support.",
+    "page": 1,
+    "snippet": "Reno's New Flag Looks Suspiciously Familiar Chairman",
+    "cosine": 0.9265,
+    "reason": "The passage states that the City of Milwaukee's Arts Board said 'this week' (November 14, 2018) that the original search wasn't inclusive enough and mentions a desire for more outreach, which supports the claim that the search wasn't inclusive enough and the flag might go back to the drawing board.",
+    "window": "The City of Milwaukee's Arts Board said this week that the original search in recent years wasn't inclusive enough. Reno's New Flag Looks Suspiciously Familiar Chairman of the Arts Board Alderman Michael Murphy said of the original search \"it was grassroots support. When you look at the very fine details on how the flag was chosen, there could have been a little more outreach specifically with people of color in our community.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+     "source_title": "flagofmilwaukee",
+     "supported": true,
+     "sentence": "Reno's New Flag Looks Suspiciously Familiar Chairman of the Arts Board Alderman Michael Murphy said of the original search \"it was grassroots support.",
+     "page": 1,
+     "snippet": "Reno's New Flag Looks Suspiciously Familiar Chairman",
+     "cosine": 0.9265,
+     "reason": "The passage states that the City of Milwaukee's Arts Board said 'this week' (November 14, 2018) that the original search wasn't inclusive enough and mentions a desire for more outreach, which supports the claim that the search wasn't inclusive enough and the flag might go back to the drawing board.",
+     "window": "The City of Milwaukee's Arts Board said this week that the original search in recent years wasn't inclusive enough. Reno's New Flag Looks Suspiciously Familiar Chairman of the Arts Board Alderman Michael Murphy said of the original search \"it was grassroots support. When you look at the very fine details on how the flag was chosen, there could have been a little more outreach specifically with people of color in our community.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the City of Milwaukee's Arts Board said 'this week' (November 14, 2018) that the original search wasn't inclusive enough and mentions a desire for more outreach, which supports the claim that the search wasn't inclusive enough and the flag might go back to the drawing board.",
+   "covering": {
+    "covered": [
+     {
+      "component": "City of Milwaukee's Arts Board said original search wasn't inclusive enough",
+      "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+      "source_title": "flagofmilwaukee",
+      "sentence": "The City of Milwaukee's Arts Board said this week that the original search in recent years wasn't inclusive enough.",
+      "page": 1,
+      "snippet": "The City of Milwaukee's Arts Board said"
+     },
+     {
+      "component": "flag may go back to the drawing board",
+      "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+      "source_title": "flagofmilwaukee",
+      "sentence": "The search for the \"People's Flag\" of Milwaukee could be heading back to the drawing board.",
+      "page": 1,
+      "snippet": "The search for the \"People's Flag\" of"
+     },
+     {
+      "component": "flag may go back to the drawing board",
+      "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+      "source_title": "flagofmilwaukee",
+      "sentence": "# The People's Flag of Milwaukee could be headed back to the drawing board",
+      "page": 1,
+      "snippet": "# The People's Flag of Milwaukee could"
+     }
+    ],
+    "uncovered": [
+     "November"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+      "source_title": "flagofmilwaukee",
+      "text": "# The People's Flag of Milwaukee could be headed back to the drawing board Posted: 9:36 PM, Nov 14, 2018 Updated: 2018-11-15 12:15:07-05 By: Tom Durian, Photojournalist Shaun Farrell The search for the \"People's Flag\" of Milwaukee could be heading back to the drawing board. The City of Milwaukee's Arts Board said this week that the original search in recent years wasn't inclusive enough.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not specify that the Arts Board made this statement in November of that year.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the Arts Board made this statement in November of that year",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the City of Milwaukee's Arts Board said the flag may go back to the drawing board",
+    "rewrite_suggestion": "In November of that year the City of Milwaukee's Arts Board said the original search wasn't inclusive enough, and the search for a new flag may go back to the drawing board.",
+    "proofs": [
+     "Posted: 9:36 PM, Nov 14, 2018 Updated: 2018-11-15 12:15:07-05",
+     "The City of Milwaukee's Arts Board said this week that the original search in recent years wasn't inclusive enough.",
+     "The search for the \"People's Flag\" of Milwaukee could be heading back to the drawing board."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes the statement that the flag may go back to the drawing board to the City of Milwaukee's Arts Board, but the source text presents that information as the article's own reporting, not as a statement from the Arts Board. The shown sentences prove the date and the Arts Board's comment about inclusivity, but the attribution of the 'may go back' component to the Arts Board is unsupported by the source. Therefore, the author must either rewrite the claim to remove the false attribution or add a citation for that specific subclaim."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "He appeared in the 2016 Grammy-nominated documentary film about American DJ and producer Steve Aoki, titled \"I'll Sleep When I'm Dead\".",
+   "markers": [
+    "travisbarker"
+   ],
+   "paper_ids": [
+    "650a8e0514141e82361286fca94cbdc1dd9d644e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "650a8e0514141e82361286fca94cbdc1dd9d644e",
+    "source_title": "travisbarker",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Fans of Grammy-nominated electronic music superstar, Steve Aoki, can now fully submerge themselves into the world of one of electronic music's most traveled and best-known artists as his own documentary, I'll Sleep When I'm Dead\", became available world-wide on August 19 via Netflix, the world's leading internet TV network.",
+    "page": 1,
+    "snippet": "Fans of Grammy-nominated electronic music superstar, Steve",
+    "reason": "The passage does not state that the person in question appeared in the documentary.",
+    "votes": "2-0",
+    "window": "Fans of Grammy-nominated electronic music superstar, Steve Aoki, can now fully submerge themselves into the world of one of electronic music's most traveled and best-known artists as his own documentary, I'll Sleep When I'm Dead\", became available world-wide on August 19 via Netflix, the world's leading internet TV network. Vulnerable and often bittersweet, \"I'll Sleep When I'm Dead\" was shot over the course of three years, during the making of his Neon Future double album (Dim Mak/Ultra Music, 2014/15). It follows his journey to play the biggest show of his career and centers around the complex yet loving relationship with his father, the Benihana restaurant tycoon, daredevil athlete, and former Olympian, Rocky Aoki."
+   },
+   "evidences": [
+    {
+     "paper_id": "650a8e0514141e82361286fca94cbdc1dd9d644e",
+     "source_title": "travisbarker",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Fans of Grammy-nominated electronic music superstar, Steve Aoki, can now fully submerge themselves into the world of one of electronic music's most traveled and best-known artists as his own documentary, I'll Sleep When I'm Dead\", became available world-wide on August 19 via Netflix, the world's leading internet TV network.",
+     "page": 1,
+     "snippet": "Fans of Grammy-nominated electronic music superstar, Steve",
+     "reason": "The passage does not state that the person in question appeared in the documentary.",
+     "votes": "2-0",
+     "window": "Fans of Grammy-nominated electronic music superstar, Steve Aoki, can now fully submerge themselves into the world of one of electronic music's most traveled and best-known artists as his own documentary, I'll Sleep When I'm Dead\", became available world-wide on August 19 via Netflix, the world's leading internet TV network. Vulnerable and often bittersweet, \"I'll Sleep When I'm Dead\" was shot over the course of three years, during the making of his Neon Future double album (Dim Mak/Ultra Music, 2014/15). It follows his journey to play the biggest show of his career and centers around the complex yet loving relationship with his father, the Benihana restaurant tycoon, daredevil athlete, and former Olympian, Rocky Aoki."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the person in question appeared in the documentary.",
+   "component_check": {
+    "found": [
+     "The film is about American DJ and producer Steve Aoki."
+    ],
+    "missing": [
+     "He appeared in the 2016 Grammy-nominated documentary film \"I'll Sleep When I'm Dead\"."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The film is about American DJ and producer Steve Aoki.",
+      "paper_id": "650a8e0514141e82361286fca94cbdc1dd9d644e",
+      "source_title": "travisbarker",
+      "sentence": "The film, which premiered to a sold-out audience at the Tribeca Film Festival this past spring, gives an inside look at the life of the international sensation, Steve Aoki, who stands as one of pop music's most tireless multi-hyphenates: founder of the taste-making record label Dim Mak and a chart-topping producer/remixer/DJ with his finger pressed firmly to the pulse of cutting-edge youth culture.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the documentary itself is Grammy-nominated",
+    "rewrite_suggestion": "He appeared in the 2016 documentary film about Grammy-nominated American DJ and producer Steve Aoki, titled 'I'll Sleep When I'm Dead'.",
+    "proofs": [
+     "The story is complimented by interviews with Aoki's beloved mother, sister/supermodel Devon Aoki, along with multiple big-name musicians and contemporaries including Diplo, Tiesto, Afrojack, Laidback Luke, Travis Barker, Pete Tong, will.i.am, and more.",
+     "The film, which premiered to a sold-out audience at the Tribeca Film Festival this past spring, gives an inside look at the life of the international sensation, Steve Aoki",
+     "Fans of Grammy-nominated electronic music superstar, Steve Aoki, can now fully submerge themselves into the world of one of electronic music's most traveled and best-known artists as his own documentary, I'll Sleep When I'm Dead\", became available world-wide on August 19 via Netflix, the world's leading internet TV network."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim incorrectly states that the documentary itself is Grammy-nominated, but the source only describes Steve Aoki as Grammy-nominated. Also, the shown sentence does not mention Travis Barker's appearance, although the source lists him as an interview subject. The author must either add a citation proving the documentary's Grammy nomination or rewrite the claim to attribute the nomination to Aoki. The tool should have shown the sentence listing Travis Barker among the interviewees."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In 1997, he was awarded the Medal of Honor, the nation's highest military decoration for valor, for his actions on December 26, 1944, in the vicinity of Sommocolonia, Italy.",
+   "markers": [
+    "johnrfox"
+   ],
+   "paper_ids": [
+    "85b59d753b4568def429203910a67f063f4dcc1f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "85b59d753b4568def429203910a67f063f4dcc1f",
+    "source_title": "johnrfox",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Lieutenant Fox's extraordinarily valorous actions exemplify the highest traditions of the military service.",
+    "page": 1,
+    "snippet": "Lieutenant Fox's extraordinarily valorous actions exemplify the",
+    "reason": "The passage does not state that the Medal of Honor was awarded in 1997.",
+    "votes": "2-0",
+    "window": "Lieutenant Fox's extraordinarily valorous actions exemplify the highest traditions of the military service. (meta data) TITLE: JOHN ROBERT FOX | Medal of Honor About Us Medal of Honor Recipients Citizen Honors Character Development About the CDP Request a CDP Kit Elementary Lessons Middle-High Lessons Educator Award News & Events ### Back to recipients #### FOX, JOHN For conspicuous gallantry and intrepidityat the risk of his life above and beyond the call of duty: First Lieutenant John R. Fox distinguished himself by extraordinary heroism at the risk of his own life on 26 December 1944 in the Serchio River Valley Sector, in the vicinity of Sommocolonia, Italy. This action, by Lieutenant Fox, at the cost of his own life, inflicted heavy casualties, causing the deaths of approxamately 100 German soldiers, thereby delaying the advance of the enemy until infantry and artillery units could by reorganized to meet the attack."
+   },
+   "evidences": [
+    {
+     "paper_id": "85b59d753b4568def429203910a67f063f4dcc1f",
+     "source_title": "johnrfox",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Lieutenant Fox's extraordinarily valorous actions exemplify the highest traditions of the military service.",
+     "page": 1,
+     "snippet": "Lieutenant Fox's extraordinarily valorous actions exemplify the",
+     "reason": "The passage does not state that the Medal of Honor was awarded in 1997.",
+     "votes": "2-0",
+     "window": "Lieutenant Fox's extraordinarily valorous actions exemplify the highest traditions of the military service. (meta data) TITLE: JOHN ROBERT FOX | Medal of Honor About Us Medal of Honor Recipients Citizen Honors Character Development About the CDP Request a CDP Kit Elementary Lessons Middle-High Lessons Educator Award News & Events ### Back to recipients #### FOX, JOHN For conspicuous gallantry and intrepidityat the risk of his life above and beyond the call of duty: First Lieutenant John R. Fox distinguished himself by extraordinary heroism at the risk of his own life on 26 December 1944 in the Serchio River Valley Sector, in the vicinity of Sommocolonia, Italy. This action, by Lieutenant Fox, at the cost of his own life, inflicted heavy casualties, causing the deaths of approxamately 100 German soldiers, thereby delaying the advance of the enemy until infantry and artillery units could by reorganized to meet the attack."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the Medal of Honor was awarded in 1997.",
+   "component_check": {
+    "found": [
+     "The award was for his actions on December 26, 1944.",
+     "His actions occurred in the vicinity of Sommocolonia, Italy."
+    ],
+    "missing": [
+     "In 1997, he was awarded the Medal of Honor.",
+     "The Medal of Honor is the nation's highest military decoration for valor."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The award was for his actions on December 26, 1944.",
+      "paper_id": "85b59d753b4568def429203910a67f063f4dcc1f",
+      "source_title": "johnrfox",
+      "sentence": "(meta data) TITLE: JOHN ROBERT FOX | Medal of Honor About Us Medal of Honor Recipients Citizen Honors Character Development About the CDP Request a CDP Kit Elementary Lessons Middle-High Lessons Educator Award News & Events ### Back to recipients #### FOX, JOHN For conspicuous gallantry and intrepidityat the risk of his life above and beyond the call of duty: First Lieutenant John R. Fox distinguished himself by extraordinary heroism at the risk of his own life on 26 December 1944 in the Serchio River Valley Sector, in the vicinity of Sommocolonia, Italy.",
+      "page": 1
+     },
+     {
+      "component": "His actions occurred in the vicinity of Sommocolonia, Italy.",
+      "paper_id": "85b59d753b4568def429203910a67f063f4dcc1f",
+      "source_title": "johnrfox",
+      "sentence": "(meta data) TITLE: JOHN ROBERT FOX | Medal of Honor About Us Medal of Honor Recipients Citizen Honors Character Development About the CDP Request a CDP Kit Elementary Lessons Middle-High Lessons Educator Award News & Events ### Back to recipients #### FOX, JOHN For conspicuous gallantry and intrepidityat the risk of his life above and beyond the call of duty: First Lieutenant John R. Fox distinguished himself by extraordinary heroism at the risk of his own life on 26 December 1944 in the Serchio River Valley Sector, in the vicinity of Sommocolonia, Italy.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "In 1997 (the year he was awarded the Medal of Honor)",
+    "rewrite_suggestion": "He was awarded the Medal of Honor, the nation's highest military decoration for valor, for his actions on December 26, 1944, in the vicinity of Sommocolonia, Italy.",
+    "proofs": [
+     "First Lieutenant John R. Fox distinguished himself by extraordinary heroism at the risk of his own life on 26 December 1944 in the Serchio River Valley Sector, in the vicinity of Sommocolonia, Italy.",
+     "For conspicuous gallantry and intrepidity at the risk of his life above and beyond the call of duty:"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not address any component of the claim. While the source text contains most of the claim (the Medal of Honor award, the date and location of the action), it does not mention the year 1997. Since the year is a specific date not provable from the source and not common knowledge, the claim requires either a new citation for that year or a rewrite that omits it. The tool's displayed evidence is insufficient, but the primary issue is an unsourced subclaim."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "It was her New York stage debut and her first theater appearance in 13 years.",
+   "markers": [
+    "amyadams"
+   ],
+   "paper_ids": [
+    "57b2bd574c837222a87448c6d67caad7a6b65333"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "57b2bd574c837222a87448c6d67caad7a6b65333",
+    "source_title": "amyadams",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "\"It's been 13 years since I was on a proper stage,\" she said.",
+    "page": 1,
+    "snippet": "\"It's been 13 years since I was",
+    "reason": "The passage explicitly states that it was her New York stage debut and that it had been 13 years since she was on a proper stage.",
+    "votes": "2-0",
+    "window": "\"It's been 13 years since I was on a proper stage,\" she said. She worked for years on the dinner theater circuit in Colorado and Minnesota before finally getting a few breaks in Hollywood. As for Ms. Adams, who is making her New York stage debut, Mr. Sheader knew her almost entirely from her movie work and especially \"The Fighter,\" in which she played Mark Wahlberg's tough-talking girlfriend. I was never at this level."
+   },
+   "evidences": [
+    {
+     "paper_id": "57b2bd574c837222a87448c6d67caad7a6b65333",
+     "source_title": "amyadams",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "\"It's been 13 years since I was on a proper stage,\" she said.",
+     "page": 1,
+     "snippet": "\"It's been 13 years since I was",
+     "reason": "The passage explicitly states that it was her New York stage debut and that it had been 13 years since she was on a proper stage.",
+     "votes": "2-0",
+     "window": "\"It's been 13 years since I was on a proper stage,\" she said. She worked for years on the dinner theater circuit in Colorado and Minnesota before finally getting a few breaks in Hollywood. As for Ms. Adams, who is making her New York stage debut, Mr. Sheader knew her almost entirely from her movie work and especially \"The Fighter,\" in which she played Mark Wahlberg's tough-talking girlfriend. I was never at this level."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that it was her New York stage debut and that it had been 13 years since she was on a proper stage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "New York stage debut",
+      "paper_id": "57b2bd574c837222a87448c6d67caad7a6b65333",
+      "source_title": "amyadams",
+      "sentence": "As for Ms. Adams, who is making her New York stage debut, Mr. Sheader knew her almost entirely from her movie work and especially \"The Fighter,\" in which she played Mark Wahlberg's tough-talking girlfriend.",
+      "page": 1,
+      "snippet": "As for Ms. Adams, who is making"
+     },
+     {
+      "component": "first theater appearance in 13 years",
+      "paper_id": "57b2bd574c837222a87448c6d67caad7a6b65333",
+      "source_title": "amyadams",
+      "sentence": "\"It's been 13 years since I was on a proper stage,\" she said.",
+      "page": 1,
+      "snippet": "\"It's been 13 years since I was"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "57b2bd574c837222a87448c6d67caad7a6b65333",
+      "source_title": "amyadams",
+      "text": "As for Ms. Adams, who is making her New York stage debut, Mr. Sheader knew her almost entirely from her movie work and especially \"The Fighter,\" in which she played Mark Wahlberg's tough-talking girlfriend. […] \"It's been 13 years since I was on a proper stage,\" she said.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t12",
+   "text": "Her debut feature film, \"The Whistleblower\", was released in 2011 and received nominations for six Genies at the 32nd Genie Awards, including Best Picture and Best Director.",
+   "markers": [
+    "larysakondracki"
+   ],
+   "paper_ids": [
+    "e008a187a5651dc61aaa413ac85e8bb34769ea89"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e008a187a5651dc61aaa413ac85e8bb34769ea89",
+    "source_title": "larysakondracki",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Other multiple nominees included Steven Silver's South African drama The Bang Bang Club with seven nods, Ken Scott's Starbuck comedy and Larysa Kondracki's The Whistleblower with six each, and Nathan Morlando's Edwin Boyd with five nominations.",
+    "page": 1,
+    "snippet": "Other multiple nominees included Steven Silver's South",
+    "reason": "The passage does not mention the year of release for 'The Whistleblower' or that it was nominated for Best Picture and Best Director.",
+    "votes": "2-0",
+    "window": "Other multiple nominees included Steven Silver's South African drama The Bang Bang Club with seven nods, Ken Scott's Starbuck comedy and Larysa Kondracki's The Whistleblower with six each, and Nathan Morlando's Edwin Boyd with five nominations."
+   },
+   "evidences": [
+    {
+     "paper_id": "e008a187a5651dc61aaa413ac85e8bb34769ea89",
+     "source_title": "larysakondracki",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Other multiple nominees included Steven Silver's South African drama The Bang Bang Club with seven nods, Ken Scott's Starbuck comedy and Larysa Kondracki's The Whistleblower with six each, and Nathan Morlando's Edwin Boyd with five nominations.",
+     "page": 1,
+     "snippet": "Other multiple nominees included Steven Silver's South",
+     "reason": "The passage does not mention the year of release for 'The Whistleblower' or that it was nominated for Best Picture and Best Director.",
+     "votes": "2-0",
+     "window": "Other multiple nominees included Steven Silver's South African drama The Bang Bang Club with seven nods, Ken Scott's Starbuck comedy and Larysa Kondracki's The Whistleblower with six each, and Nathan Morlando's Edwin Boyd with five nominations."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the year of release for 'The Whistleblower' or that it was nominated for Best Picture and Best Director.",
+   "component_check": {
+    "found": [
+     "\"The Whistleblower\" received nominations for six Genies."
+    ],
+    "missing": [
+     "Her debut feature film was \"The Whistleblower\".",
+     "\"The Whistleblower\" was released in 2011.",
+     "The nominations were at the 32nd Genie Awards."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "\"The Whistleblower\" received nominations for six Genies.",
+      "paper_id": "e008a187a5651dc61aaa413ac85e8bb34769ea89",
+      "source_title": "larysakondracki",
+      "sentence": "Other multiple nominees included Steven Silver's South African drama The Bang Bang Club with seven nods, Ken Scott's Starbuck comedy and Larysa Kondracki's The Whistleblower with six each, and Nathan Morlando's Edwin Boyd with five nominations.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the components: 'debut feature film', 'released in 2011', '32nd Genie Awards', and 'including Best Picture and Best Director'",
+    "rewrite_suggestion": "Larysa Kondracki's film The Whistleblower received six nominations at the Genie Awards.",
+    "proofs": [
+     "Other multiple nominees included Steven Silver's South African drama The Bang Bang Club with seven nods, Ken Scott's Starbuck comedy and Larysa Kondracki's The Whistleblower with six each, and Nathan Morlando's Edwin Boyd with five nominations."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes multiple unsupported components: that The Whistleblower is her debut feature, was released in 2011, was nominated at the 32nd Genie Awards, and was nominated for Best Picture and Best Director. The source only confirms that the film received six Genie nominations (as shown in the quoted sentence). No other sentences in the source provide the missing details. Therefore, the author must either add citations for those subclaims or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "She still bowls for the Whitchurch Bowling Club in North Cardiff and in 1988 became the clubs first member to be capped by Wales.",
+   "markers": [
+    "ninashipperlee"
+   ],
+   "paper_ids": [
+    "6a094d7f956d78611cca6e000b4a4e53c8d633ae"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "6a094d7f956d78611cca6e000b4a4e53c8d633ae",
+    "source_title": "ninashipperlee",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Nina Shipperlee became the first Club member to represent her country when she was selected for Wales in 1988.",
+    "page": 1,
+    "snippet": "Nina Shipperlee became the first Club member",
+    "reason": "The passage does not state that she still bowls for the Whitchurch Bowling Club in North Cardiff.",
+    "votes": "2-0",
+    "window": "Nina Shipperlee became the first Club member to represent her country when she was selected for Wales in 1988. Junior international caps were awarded to Rosemarie Price 1988 – 1995; Anne Humphreys 1988; Katie Lewis 2004 – 2013; Daniel Salmon 2008 – 2010 and Jon Williams 2013. Nina was followed into the Welsh team by Freda Humphreys in 1991 and Anne Smith 1999 – 2003. Nina was selected for Wales, every season, with one exception, until 2006."
+   },
+   "evidences": [
+    {
+     "paper_id": "6a094d7f956d78611cca6e000b4a4e53c8d633ae",
+     "source_title": "ninashipperlee",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Nina Shipperlee became the first Club member to represent her country when she was selected for Wales in 1988.",
+     "page": 1,
+     "snippet": "Nina Shipperlee became the first Club member",
+     "reason": "The passage does not state that she still bowls for the Whitchurch Bowling Club in North Cardiff.",
+     "votes": "2-0",
+     "window": "Nina Shipperlee became the first Club member to represent her country when she was selected for Wales in 1988. Junior international caps were awarded to Rosemarie Price 1988 – 1995; Anne Humphreys 1988; Katie Lewis 2004 – 2013; Daniel Salmon 2008 – 2010 and Jon Williams 2013. Nina was followed into the Welsh team by Freda Humphreys in 1991 and Anne Smith 1999 – 2003. Nina was selected for Wales, every season, with one exception, until 2006."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that she still bowls for the Whitchurch Bowling Club in North Cardiff.",
+   "component_check": {
+    "found": [
+     "In 1988, she became the club's first member to be capped by Wales."
+    ],
+    "missing": [
+     "She bowls for the Whitchurch Bowling Club in North Cardiff."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 1988, she became the club's first member to be capped by Wales.",
+      "paper_id": "6a094d7f956d78611cca6e000b4a4e53c8d633ae",
+      "source_title": "ninashipperlee",
+      "sentence": "Nina Shipperlee became the first Club member to represent her country when she was selected for Wales in 1988.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that she still bowls for the club (present tense) and the location 'in North Cardiff' are not supported by the source",
+    "rewrite_suggestion": "She bowled for the Whitchurch Bowling Club and in 1988 became the club's first member to be capped by Wales.",
+    "proofs": [
+     "Nina Shipperlee became the first Club member to represent her country when she was selected for Wales in 1988."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence correctly supports the 1988 achievement, but the claim also asserts that she 'still bowls' for the club, which is not stated anywhere in the source. Additionally, the source does not specify that the club is in 'North Cardiff.' Since these components are not provable from the provided text, the author must either add a citation for them or rewrite the claim to remove them."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "Concerning the issues with \"It Ain't Half Hot Mum\", Alex Massie wrote in January 2019, shortly after the starring actor Windsor Davies died, that \"even when judged by modern standards\" the series is a \"relatively minor offender when compared with programmes\" such as \"Mind Your Language\", \"Love Thy Neighbour\" and \"Curry and Chips\".",
+   "markers": [
+    "itainthalfhotmum"
+   ],
+   "paper_ids": [
+    "a193eb5d9641195d766ca477a070999d4f044c0e"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9033,
+   "evidence": {
+    "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+    "source_title": "itainthalfhotmum",
+    "supported": true,
+    "sentence": "In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips.",
+    "page": 1,
+    "snippet": "In truth, even when judged by modern",
+    "cosine": 0.9033,
+    "reason": "The passage directly states that 'even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips'.",
+    "window": "Homosexuals — poofs, in the parlance of the time — are both absurd and terrifying; so too, and perhaps even more so, are black men. In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips. Look them up on YouTube and see what I mean."
+   },
+   "evidences": [
+    {
+     "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+     "source_title": "itainthalfhotmum",
+     "supported": true,
+     "sentence": "In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips.",
+     "page": 1,
+     "snippet": "In truth, even when judged by modern",
+     "cosine": 0.9033,
+     "reason": "The passage directly states that 'even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips'.",
+     "window": "Homosexuals — poofs, in the parlance of the time — are both absurd and terrifying; so too, and perhaps even more so, are black men. In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips. Look them up on YouTube and see what I mean."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that 'even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Alex Massie wrote in January 2019",
+      "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+      "source_title": "itainthalfhotmum",
+      "sentence": "(meta data) TITLE: Don't believe the myth that this is a nation of Little Englanders - CapX (meta data) PUBLISHER: https://www.facebook.com/CapX.co #### All Topics #### #### About CapX 22 January 2019 # Don't believe the myth that this is a nation of Little Englanders Alex Massie The cast of 'It Ain't Half Hot Mum'.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Don't believe the myth"
+     },
+     {
+      "component": "shortly after the starring actor Windsor Davies died",
+      "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+      "source_title": "itainthalfhotmum",
+      "sentence": "The death of the actor Windsor Davies spawned a predictable flurry of nostalgia for the way things used to be.",
+      "page": 1,
+      "snippet": "The death of the actor Windsor Davies"
+     },
+     {
+      "component": "the series is a 'relatively minor offender when compared with programmes' such as 'Mind Your Language', 'Love Thy Neighbour' and 'Curry and Chips'",
+      "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+      "source_title": "itainthalfhotmum",
+      "sentence": "In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips.",
+      "page": 1,
+      "snippet": "In truth, even when judged by modern"
+     },
+     {
+      "component": "even when judged by modern standards",
+      "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+      "source_title": "itainthalfhotmum",
+      "sentence": "In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips.",
+      "page": 1,
+      "snippet": "In truth, even when judged by modern"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+      "source_title": "itainthalfhotmum",
+      "text": "(meta data) TITLE: Don't believe the myth that this is a nation of Little Englanders - CapX (meta data) PUBLISHER: https://www.facebook.com/CapX.co #### All Topics #### #### About CapX 22 January 2019 # Don't believe the myth that this is a nation of Little Englanders Alex Massie The cast of 'It Ain't Half Hot Mum'. […] The death of the actor Windsor Davies spawned a predictable flurry of nostalgia for the way things used to be. […] In truth, even when judged by modern standards IAHHM was a relatively minor offender when compared with programmes such as Mind Your Language, Love Thy Neighbour and Curry and Chips.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t15",
+   "text": "Dick Parsons, already a director on the board since 1991, was hired as Time Warner president in 1995, although the division operational heads continued to report directly to Chairman and CEO Gerald Levin.",
+   "markers": [
+    "warnermedia"
+   ],
+   "paper_ids": [
+    "17f959213d5dbd442bfd3e3de4a252e3aad39aa2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8236,
+   "evidence": {
+    "paper_id": "17f959213d5dbd442bfd3e3de4a252e3aad39aa2",
+    "source_title": "warnermedia",
+    "supported": false,
+    "sentence": "Our current CEO is, of course, Dick Parsons, who is perhaps the best known and most powerful CEO of color in the country.",
+    "page": 1,
+    "snippet": "Our current CEO is, of course, Dick",
+    "cosine": 0.8236,
+    "reason": "The passage does not mention Dick Parsons' hiring as Time Warner president in 1995 or the reporting structure of division operational heads.",
+    "window": "He spent most of his career at HBO. Our current CEO is, of course, Dick Parsons, who is perhaps the best known and most powerful CEO of color in the country. But dig a few levels below, and the palette is decidedly more monochromatic."
+   },
+   "evidences": [
+    {
+     "paper_id": "17f959213d5dbd442bfd3e3de4a252e3aad39aa2",
+     "source_title": "warnermedia",
+     "supported": false,
+     "sentence": "Our current CEO is, of course, Dick Parsons, who is perhaps the best known and most powerful CEO of color in the country.",
+     "page": 1,
+     "snippet": "Our current CEO is, of course, Dick",
+     "cosine": 0.8236,
+     "reason": "The passage does not mention Dick Parsons' hiring as Time Warner president in 1995 or the reporting structure of division operational heads.",
+     "window": "He spent most of his career at HBO. Our current CEO is, of course, Dick Parsons, who is perhaps the best known and most powerful CEO of color in the country. But dig a few levels below, and the palette is decidedly more monochromatic."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Parsons' role as director since 1991, his hiring as president in 1995, and the reporting structure to Gerald Levin",
+    "rewrite_suggestion": "Dick Parsons was the CEO of Time Warner at the time of this 2007 article; the source does not provide details on his earlier roles or reporting structure.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only states that Dick Parsons is the current CEO, but the claim includes specific historical details (his board membership since 1991, his hiring as president in 1995, and division heads reporting to Gerald Levin) that are nowhere in the provided source text. Since none of these components are provable from the source, the author must either add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "Emilee Lindner of MTV called the video \"mature, tasteful, and [...] sexy\".",
+   "markers": [
+    "styletaylorswiftsong"
+   ],
+   "paper_ids": [
+    "5c962ae70b522b5bede9f13929a95d611598bc60"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9442,
+   "evidence": {
+    "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+    "source_title": "styletaylorswiftsong",
+    "supported": true,
+    "sentence": "The new \"Style\" video, which debuted on \"Good Morning America\" on Friday morning (Feb. 13), is mature, tasteful, and, dare I say... sexy?",
+    "page": 1,
+    "snippet": "The new \"Style\" video, which debuted on",
+    "cosine": 0.9442,
+    "reason": "The passage directly quotes Emilee Lindner describing the video as \"mature, tasteful, and... sexy?\"",
+    "window": "But if you're expecting the goofy dancing from \"Shake It Off\" or the literal insanity of \"Blank Space,\" you're in for a big surprise. The new \"Style\" video, which debuted on \"Good Morning America\" on Friday morning (Feb. 13), is mature, tasteful, and, dare I say... sexy? \"Style\" is gorgeously shot and edited (what else would you expect from the Taylor crew?"
+   },
+   "evidences": [
+    {
+     "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+     "source_title": "styletaylorswiftsong",
+     "supported": true,
+     "sentence": "The new \"Style\" video, which debuted on \"Good Morning America\" on Friday morning (Feb. 13), is mature, tasteful, and, dare I say... sexy?",
+     "page": 1,
+     "snippet": "The new \"Style\" video, which debuted on",
+     "cosine": 0.9442,
+     "reason": "The passage directly quotes Emilee Lindner describing the video as \"mature, tasteful, and... sexy?\"",
+     "window": "But if you're expecting the goofy dancing from \"Shake It Off\" or the literal insanity of \"Blank Space,\" you're in for a big surprise. The new \"Style\" video, which debuted on \"Good Morning America\" on Friday morning (Feb. 13), is mature, tasteful, and, dare I say... sexy? \"Style\" is gorgeously shot and edited (what else would you expect from the Taylor crew?"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes Emilee Lindner describing the video as \"mature, tasteful, and... sexy?\"",
+   "byline_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Emilee Lindner of MTV called the video \"mature, tasteful, and [...] sexy\"",
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "sentence": "The new \"Style\" video, which debuted on \"Good Morning America\" on Friday morning (Feb. 13), is mature, tasteful, and, dare I say... sexy?",
+      "page": 1,
+      "snippet": "The new \"Style\" video, which debuted on"
+     },
+     {
+      "component": "Emilee Lindner of MTV called the video \"mature, tasteful, and [...] sexy\"",
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "sentence": "(meta data) TITLE: Taylor Swift's 'Style' Video Brings Out Sexy Taylor And We Love It - MTV (meta data) AUTHOR: Emilee Lindner (meta data) PUBLISHED DATETIME: 2015-02-13 08:49 Big Machine Records # Taylor Swift's 'Style' Video Brings Out Sexy Taylor And We Love It Take a step inside Taylor's gorgeous dreams.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Taylor Swift's 'Style' Video"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "text": "(meta data) TITLE: Taylor Swift's 'Style' Video Brings Out Sexy Taylor And We Love It - MTV (meta data) AUTHOR: Emilee Lindner (meta data) PUBLISHED DATETIME: 2015-02-13 08:49 Big Machine Records # Taylor Swift's 'Style' Video Brings Out Sexy Taylor And We Love It Take a step inside Taylor's gorgeous dreams. Emilee Lindner It's Friday the 13th -- Taylor's lucky number -- and we have a new Taylor Swift video! But if you're expecting the goofy dancing from \"Shake It Off\" or the literal insanity of \"Blank Space,\" you're in for a big surprise. The new \"Style\" video, which debuted on \"Good Morning America\" on Friday morning (Feb. 13), is mature, tasteful, and, dare I say... sexy?",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t17",
+   "text": "For the latter, she led an initiative called Lead Like A Woman, and featured in a short film named \"Leading with Intensity\" (2019) made by an all-female cast and crew.",
+   "markers": [
+    "jessicachastain"
+   ],
+   "paper_ids": [
+    "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8818,
+   "evidence": {
+    "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+    "source_title": "jessicachastain",
+    "supported": true,
+    "sentence": "With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative.",
+    "page": 1,
+    "snippet": "With Jessica Chastain as its Global Ambassador,",
+    "cosine": 0.8818,
+    "reason": "The passage states that Jessica Chastain was the Global Ambassador for Ralph Lauren's WOMAN INTENSE fragrance, and for the brand's Lead Like a Woman initiative, they made a short film titled 'Leading with Intensity' featuring an all-female cast and crew.",
+    "window": "Ralph Lauren is taking the name of their latest fragrance, WOMAN INTENSE, quite seriously. With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative. The flick features Chastain and a group of female leaders—including actor Jodi Balfour; actor and producer Alice Braga; chef Dominique Crenn; actor, director, writer and producer Zoe Lister-Jones; CEO and jewelry designer Jen Meyer; and philanthropist Kelly Sawyer; to name a few—challenging what it means to be an intense woman, and the negative stereotypes that come along with that."
+   },
+   "evidences": [
+    {
+     "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+     "source_title": "jessicachastain",
+     "supported": true,
+     "sentence": "With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative.",
+     "page": 1,
+     "snippet": "With Jessica Chastain as its Global Ambassador,",
+     "cosine": 0.8818,
+     "reason": "The passage states that Jessica Chastain was the Global Ambassador for Ralph Lauren's WOMAN INTENSE fragrance, and for the brand's Lead Like a Woman initiative, they made a short film titled 'Leading with Intensity' featuring an all-female cast and crew.",
+     "window": "Ralph Lauren is taking the name of their latest fragrance, WOMAN INTENSE, quite seriously. With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative. The flick features Chastain and a group of female leaders—including actor Jodi Balfour; actor and producer Alice Braga; chef Dominique Crenn; actor, director, writer and producer Zoe Lister-Jones; CEO and jewelry designer Jen Meyer; and philanthropist Kelly Sawyer; to name a few—challenging what it means to be an intense woman, and the negative stereotypes that come along with that."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Jessica Chastain was the Global Ambassador for Ralph Lauren's WOMAN INTENSE fragrance, and for the brand's Lead Like a Woman initiative, they made a short film titled 'Leading with Intensity' featuring an all-female cast and crew.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "initiative called Lead Like A Woman",
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "sentence": "I think that's what we really, really need to tackle, which is why I'm so excited about Ralph Lauren doing that with this campaign, the Lead Like A Woman initiative.",
+      "page": 1,
+      "snippet": "I think that's what we really, really"
+     },
+     {
+      "component": "short film named \"Leading with Intensity\"",
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "sentence": "With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative.",
+      "page": 1,
+      "snippet": "With Jessica Chastain as its Global Ambassador,"
+     },
+     {
+      "component": "film made by an all-female cast and crew",
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "sentence": "With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative.",
+      "page": 1,
+      "snippet": "With Jessica Chastain as its Global Ambassador,"
+     },
+     {
+      "component": "film made by an all-female cast and crew",
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "sentence": "How was working exclusively with an all-female cast and crew on the short film Leading with Intensity different without any men on set?",
+      "page": 1,
+      "snippet": "How was working exclusively with an all-female"
+     },
+     {
+      "component": "film made by an all-female cast and crew",
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "sentence": "I wasn't in a situation where I was hit over the head with the fact that it was an all-female cast and crew.",
+      "page": 1,
+      "snippet": "I wasn't in a situation where I"
+     },
+     {
+      "component": "2019",
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "sentence": "# Exclusive: Jessica Chastain On Her New Ralph Lauren Fragrances Campaign And Leading Like a Woman",
+      "page": 1,
+      "snippet": "# Exclusive: Jessica Chastain On Her New",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "she led the initiative"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+      "source_title": "jessicachastain",
+      "text": "# Exclusive: Jessica Chastain On Her New Ralph Lauren Fragrances Campaign And Leading Like a Woman Celia Shatzman Opinions expressed by Forbes Contributors are their own. I cover fashion, beauty and grooming. Ralph Lauren is taking the name of their latest fragrance, WOMAN INTENSE, quite seriously. With Jessica Chastain as its Global Ambassador, they made a short film, Leading with Intensity, featuring an all-female cast and crew, for the brand's Lead Like a Woman initiative. […] How was working exclusively with an all-female cast and crew on the short film Leading with Intensity different without any men on set? I just felt relaxed and comfortable. I wasn't in a situation where I was hit over the head with the fact that it was an all-female cast and crew. […] I think that's what we really, really need to tackle, which is why I'm so excited about Ralph Lauren doing that with this campaign, the Lead Like A Woman initiative.",
+      "n_used": 5
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "she led an initiative called Lead Like A Woman (source says she is Global Ambassador, not that she led it)",
+    "rewrite_suggestion": "For the latter, she served as Global Ambassador for the Lead Like a Woman initiative and featured in a short film named 'Leading with Intensity' (2019) made by an all-female cast and crew.",
+    "proofs": [
+     "The flick features Chastain and a group of female leaders—including actor Jodi Balfour; actor and producer Alice Braga; chef Dominique Crenn; actor, director, writer and producer Zoe Lister-Jones; CEO and jewelry designer Jen Meyer; and philanthropist Kelly Sawyer; to name a few—challenging what it means to be an intense woman, and the negative stereotypes that come along with that.",
+     "Apr 17, 2019, 09:00am # Exclusive: Jessica Chastain On Her New Ralph Lauren Fragrances Campaign And Leading Like a Woman"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim that she 'led' the initiative is not supported by the source, which identifies her as the Global Ambassador, a different role. Additionally, the shown sentences do not include proof that she featured in the film or the year 2019, though those details exist elsewhere in the source. Because a substantive component ('led') is entirely absent from the source, the author must either add a citation or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "\"Merry Company on a Terrace\" (1616) is in the collection of the Mauritshuis, the Hague.",
+   "markers": [
+    "willempieterszoonbuytewe"
+   ],
+   "paper_ids": [
+    "b84e9013aa77ee1d26e96799c47a617f50891b43"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8645,
+   "evidence": {
+    "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+    "source_title": "willempieterszoonbuytewe",
+    "supported": true,
+    "sentence": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest.",
+    "page": 1,
+    "snippet": "J. Paul Getty Museum, Los Angeles Mauritshuis,",
+    "cosine": 0.8645,
+    "reason": "The passage explicitly states that 'Merry Company on a Terrace (c. 1616–17), Willem Buytewech' is an acquisition by the Mauritshuis, The Hague.",
+    "window": "The Getty Research Institute, meanwhile, also made an important acquisition last month – a collection of rare books, prints, and manuscripts related to the culinary arts, Christ as the Man of Sorrows (1520–30), Quentin Metsys. J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest. Alongside Frans Hals, Buytewech was a key figure in the early development of Dutch genre painting – one only has to glance at this group of fashionable, flirtatious youths, cavorting in their finery on the terrace, to understand why his peers affectionately christened him 'Witty Willem'."
+   },
+   "evidences": [
+    {
+     "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+     "source_title": "willempieterszoonbuytewe",
+     "supported": true,
+     "sentence": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest.",
+     "page": 1,
+     "snippet": "J. Paul Getty Museum, Los Angeles Mauritshuis,",
+     "cosine": 0.8645,
+     "reason": "The passage explicitly states that 'Merry Company on a Terrace (c. 1616–17), Willem Buytewech' is an acquisition by the Mauritshuis, The Hague.",
+     "window": "The Getty Research Institute, meanwhile, also made an important acquisition last month – a collection of rare books, prints, and manuscripts related to the culinary arts, Christ as the Man of Sorrows (1520–30), Quentin Metsys. J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest. Alongside Frans Hals, Buytewech was a key figure in the early development of Dutch genre painting – one only has to glance at this group of fashionable, flirtatious youths, cavorting in their finery on the terrace, to understand why his peers affectionately christened him 'Witty Willem'."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that 'Merry Company on a Terrace (c. 1616–17), Willem Buytewech' is an acquisition by the Mauritshuis, The Hague.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Artwork title is 'Merry Company on a Terrace'",
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "sentence": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest.",
+      "page": 1,
+      "snippet": "J. Paul Getty Museum, Los Angeles Mauritshuis,"
+     },
+     {
+      "component": "Artwork title is 'Merry Company on a Terrace'",
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "sentence": "Merry Company on a Terrace (c. 1616–17), Willem Buytewech.",
+      "page": 1,
+      "snippet": "Merry Company on a Terrace (c. 1616–17),"
+     },
+     {
+      "component": "Artwork date is 1616",
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "sentence": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest.",
+      "page": 1,
+      "snippet": "J. Paul Getty Museum, Los Angeles Mauritshuis,"
+     },
+     {
+      "component": "Artwork date is 1616",
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "sentence": "Merry Company on a Terrace (c. 1616–17), Willem Buytewech.",
+      "page": 1,
+      "snippet": "Merry Company on a Terrace (c. 1616–17),"
+     },
+     {
+      "component": "Artwork is in the collection of the Mauritshuis",
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "sentence": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest.",
+      "page": 1,
+      "snippet": "J. Paul Getty Museum, Los Angeles Mauritshuis,"
+     },
+     {
+      "component": "Mauritshuis is located in The Hague",
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "sentence": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest.",
+      "page": 1,
+      "snippet": "J. Paul Getty Museum, Los Angeles Mauritshuis,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+      "source_title": "willempieterszoonbuytewe",
+      "text": "J. Paul Getty Museum, Los Angeles Mauritshuis, The HagueMerry Company on a Terrace (c. 1616–17), Willem Buytewech Though Willem Buytewech was well known in Haarlem in the early 17th century, only six oil paintings by the artist have survived; this acquisition by the Mauritshuis is one of his finest. Alongside Frans Hals, Buytewech was a key figure in the early development of Dutch genre painting – one only has to glance at this group of fashionable, flirtatious youths, cavorting in their finery on the terrace, to understand why his peers affectionately christened him 'Witty Willem'. Merry Company on a Terrace (c. 1616–17), Willem Buytewech.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t19",
+   "text": "In 2014 she returned to the Freer and Sackler Galleries, where she is currently the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+   "markers": [
+    "janstuart"
+   ],
+   "paper_ids": [
+    "3109a76726e2df9ed591bb072d47b138b675656f"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+    "source_title": "janstuart",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+    "page": 1,
+    "snippet": "The next \"At Work with Artwork\" discussion",
+    "reason": "The passage explicitly states that Jan Stuart is the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C., and that she assumed this post when she returned to the Freer|Sackler in 2014.",
+    "votes": "2-0",
+    "window": "The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C. In her previous tenure as curator of Chinese art at the Freer and Sackler galleries from 1988 to 2006, Stuart was instrumental in bringing greater attention to the fields of Buddhist sculpture, Chinese portraits and court paintings, and the later decorative arts of China through her research, original publications, and thought-provoking exhibitions and catalogues. (meta data) TITLE: Jan Stuart | Freer|Sackler (meta data) PUBLISHER: https://www.facebook.com/FreerSackler/ Skip to content Search for: HomeAbout UsContact UsStaffJan Stuart # Jan Stuart ### Melvin R. Seiden Curator of Chinese Art Or contact Weina Tray Jan Stuart is the first Melvin R. Seiden Curator of Chinese Art. She assumed the post when she returned to the Freer|Sackler in 2014, after serving as Keeper of Asia (department head) at the British Museum since 2006."
+   },
+   "evidences": [
+    {
+     "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+     "source_title": "janstuart",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+     "page": 1,
+     "snippet": "The next \"At Work with Artwork\" discussion",
+     "reason": "The passage explicitly states that Jan Stuart is the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C., and that she assumed this post when she returned to the Freer|Sackler in 2014.",
+     "votes": "2-0",
+     "window": "The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C. In her previous tenure as curator of Chinese art at the Freer and Sackler galleries from 1988 to 2006, Stuart was instrumental in bringing greater attention to the fields of Buddhist sculpture, Chinese portraits and court paintings, and the later decorative arts of China through her research, original publications, and thought-provoking exhibitions and catalogues. (meta data) TITLE: Jan Stuart | Freer|Sackler (meta data) PUBLISHER: https://www.facebook.com/FreerSackler/ Skip to content Search for: HomeAbout UsContact UsStaffJan Stuart # Jan Stuart ### Melvin R. Seiden Curator of Chinese Art Or contact Weina Tray Jan Stuart is the first Melvin R. Seiden Curator of Chinese Art. She assumed the post when she returned to the Freer|Sackler in 2014, after serving as Keeper of Asia (department head) at the British Museum since 2006."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Jan Stuart is the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C., and that she assumed this post when she returned to the Freer|Sackler in 2014.",
+   "covering": {
+    "covered": [
+     {
+      "component": "returned to the Freer and Sackler Galleries in 2014",
+      "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+      "source_title": "janstuart",
+      "sentence": "She assumed the post when she returned to the Freer|Sackler in 2014, after serving as Keeper of Asia (department head) at the British Museum since 2006.",
+      "page": 1,
+      "snippet": "She assumed the post when she returned"
+     },
+     {
+      "component": "currently the Melvin R. Seiden Curator of Chinese Art",
+      "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+      "source_title": "janstuart",
+      "sentence": "The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+      "page": 1,
+      "snippet": "The next \"At Work with Artwork\" discussion"
+     },
+     {
+      "component": "currently the Melvin R. Seiden Curator of Chinese Art",
+      "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+      "source_title": "janstuart",
+      "sentence": "(meta data) TITLE: Jan Stuart | Freer|Sackler (meta data) PUBLISHER: https://www.facebook.com/FreerSackler/ Skip to content Search for: HomeAbout UsContact UsStaffJan Stuart # Jan Stuart ### Melvin R. Seiden Curator of Chinese Art Or contact Weina Tray Jan Stuart is the first Melvin R. Seiden Curator of Chinese Art.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Jan Stuart | Freer|Sackler"
+     },
+     {
+      "component": "at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+      "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+      "source_title": "janstuart",
+      "sentence": "The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+      "page": 1,
+      "snippet": "The next \"At Work with Artwork\" discussion"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+      "source_title": "janstuart",
+      "text": "(meta data) TITLE: Jan Stuart | Freer|Sackler (meta data) PUBLISHER: https://www.facebook.com/FreerSackler/ Skip to content Search for: HomeAbout UsContact UsStaffJan Stuart # Jan Stuart ### Melvin R. Seiden Curator of Chinese Art Or contact Weina Tray Jan Stuart is the first Melvin R. Seiden Curator of Chinese Art. She assumed the post when she returned to the Freer|Sackler in 2014, after serving as Keeper of Asia (department head) at the British Museum since 2006. […] The next \"At Work with Artwork\" discussion will feature Jan Stuart, the Melvin R. Seiden Curator of Chinese Art at the Freer Gallery of Art and Arthur M. Sackler Gallery in Washington, D.C.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t20",
+   "text": "Both the men's and women's volleyball team also won the national student cup in 2019.",
+   "markers": [
+    "universityofessex"
+   ],
+   "paper_ids": [
+    "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9423,
+   "evidence": {
+    "paper_id": "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6",
+    "source_title": "universityofessex",
+    "supported": true,
+    "sentence": "Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up.",
+    "page": 1,
+    "snippet": "Both the men's and women's team took",
+    "cosine": 0.9423,
+    "reason": "The passage explicitly states that both the men's and women's volleyball teams won the Volleyball England National Student Cup in 2019.",
+    "window": "Essex volleyball teams win double national success # Double national success for Essex volleyball teams ### Date Fri 15 Feb 19 Essex's volleyball teams have secured a clean sweep at the national finals. Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up. The men's team was victorious against the University of Reading and the women's team defeated the University of East Anglia."
+   },
+   "evidences": [
+    {
+     "paper_id": "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6",
+     "source_title": "universityofessex",
+     "supported": true,
+     "sentence": "Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up.",
+     "page": 1,
+     "snippet": "Both the men's and women's team took",
+     "cosine": 0.9423,
+     "reason": "The passage explicitly states that both the men's and women's volleyball teams won the Volleyball England National Student Cup in 2019.",
+     "window": "Essex volleyball teams win double national success # Double national success for Essex volleyball teams ### Date Fri 15 Feb 19 Essex's volleyball teams have secured a clean sweep at the national finals. Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up. The men's team was victorious against the University of Reading and the women's team defeated the University of East Anglia."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that both the men's and women's volleyball teams won the Volleyball England National Student Cup in 2019.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "men's volleyball team won national student cup in 2019",
+      "paper_id": "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6",
+      "source_title": "universityofessex",
+      "sentence": "Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up.",
+      "page": 1,
+      "snippet": "Both the men's and women's team took"
+     },
+     {
+      "component": "women's volleyball team won national student cup in 2019",
+      "paper_id": "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6",
+      "source_title": "universityofessex",
+      "sentence": "Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up.",
+      "page": 1,
+      "snippet": "Both the men's and women's team took"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6",
+      "source_title": "universityofessex",
+      "text": "Both the men's and women's team took Volleyball England National Student Cup this year building on their achievements in 2018 when the men's team won the trophy and the women's team was a runner-up.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t21",
+   "text": "The result of the debate was that Pyrrhus admitted the error of the Monothelite position, and Maximus accompanied him to Rome in 645.",
+   "markers": [
+    "maximustheconfessor"
+   ],
+   "paper_ids": [
+    "e3acef4560c493361e795f1d9666562483895b41"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e3acef4560c493361e795f1d9666562483895b41",
+    "source_title": "maximustheconfessor",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "When the Monotheletic heresy spread, he concluded to proceed to Rome, and passing through Africa be held there, in the presence of the imperial governor and many bishops, a remarkable disputation with Pyrrhus, who had succeeded Sergius in the see of Constantinople, but was deposed and expelled for political reasons.",
+    "page": 1,
+    "snippet": "When the Monotheletic heresy spread, he concluded",
+    "reason": "the passage does not state that Pyrrhus admitted the error of the Monothelite position or that Maximus accompanied him to Rome.",
+    "votes": "2-0",
+    "window": "When the Monotheletic heresy spread, he concluded to proceed to Rome, and passing through Africa be held there, in the presence of the imperial governor and many bishops, a remarkable disputation with Pyrrhus, who had succeeded Sergius in the see of Constantinople, but was deposed and expelled for political reasons. It sounded all the depths of the controversy and ended with the temporary conversion of Pyrrhus to Dyotheletism.614614 The disputation is printed in the Opera of Maximus, ed. This disputation took place in July, 645, but we do not know in what city of Africa."
+   },
+   "evidences": [
+    {
+     "paper_id": "e3acef4560c493361e795f1d9666562483895b41",
+     "source_title": "maximustheconfessor",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "When the Monotheletic heresy spread, he concluded to proceed to Rome, and passing through Africa be held there, in the presence of the imperial governor and many bishops, a remarkable disputation with Pyrrhus, who had succeeded Sergius in the see of Constantinople, but was deposed and expelled for political reasons.",
+     "page": 1,
+     "snippet": "When the Monotheletic heresy spread, he concluded",
+     "reason": "the passage does not state that Pyrrhus admitted the error of the Monothelite position or that Maximus accompanied him to Rome.",
+     "votes": "2-0",
+     "window": "When the Monotheletic heresy spread, he concluded to proceed to Rome, and passing through Africa be held there, in the presence of the imperial governor and many bishops, a remarkable disputation with Pyrrhus, who had succeeded Sergius in the see of Constantinople, but was deposed and expelled for political reasons. It sounded all the depths of the controversy and ended with the temporary conversion of Pyrrhus to Dyotheletism.614614 The disputation is printed in the Opera of Maximus, ed. This disputation took place in July, 645, but we do not know in what city of Africa."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that Pyrrhus admitted the error of the Monothelite position or that Maximus accompanied him to Rome.",
+   "component_check": {
+    "found": [
+     "This event occurred in 645"
+    ],
+    "missing": [
+     "Pyrrhus admitted the error of the Monothelite position",
+     "Maximus accompanied Pyrrhus to Rome"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "This event occurred in 645",
+      "paper_id": "e3acef4560c493361e795f1d9666562483895b41",
+      "source_title": "maximustheconfessor",
+      "sentence": "This disputation took place in July, 645, but we do not know in what city of Africa.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Maximus accompanied Pyrrhus to Rome in 645",
+    "rewrite_suggestion": "The result of the debate was that Pyrrhus temporarily converted to Dyotheletism, and the disputation took place in July 645.",
+    "proofs": [
+     "This disputation took place in July, 645, but we do not know in what city of Africa.",
+     "It sounded all the depths of the controversy and ended with the temporary conversion of Pyrrhus to Dyotheletism."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Pyrrhus returned afterwards to the see of Constantinople and adopted the absurd theory of three wills in Christ, one personal anti two natural.",
+     "why": "The claim states Maximus accompanied Pyrrhus to Rome in 645, but the source says Pyrrhus returned to Constantinople after the debate, contradicting the destination to Rome."
+    },
+    "why": "The shown sentence does not mention the outcome of the debate or any journey to Rome. The source does contain a sentence proving that Pyrrhus temporarily converted (admitting error), but no source text supports the claim that Maximus accompanied Pyrrhus to Rome in 645; in fact, the source says Pyrrhus returned to Constantinople. Therefore, the claim has an unsupported subclaim (the Rome accompaniment) that cannot be fetched from the source, making this an author-side problem."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "She replaced James Marshall on 24 July 2019.",
+   "markers": [
+    "number10policyunit"
+   ],
+   "paper_ids": [
+    "eb6e1b39427ac25ad0bbdb801a7aa87cc85b20c7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "eb6e1b39427ac25ad0bbdb801a7aa87cc85b20c7",
+    "source_title": "number10policyunit",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Wednesday 24 JulyNoon: Theresa May will take her final PMQs in the Commons.",
+    "page": 1,
+    "snippet": "Wednesday 24 JulyNoon: Theresa May will take",
+    "reason": "The passage does not mention James Marshall or state that anyone replaced him.",
+    "votes": "2-0",
+    "window": "Wednesday 24 JulyNoon: Theresa May will take her final PMQs in the Commons. She will then return to Downing Street and give a short final speech before heading to Buckingham Palace to formally resign as prime minister. Shortly afterwards, Johnson will head to the palace to be invited by the Queen to form a government and become prime minister."
+   },
+   "evidences": [
+    {
+     "paper_id": "eb6e1b39427ac25ad0bbdb801a7aa87cc85b20c7",
+     "source_title": "number10policyunit",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Wednesday 24 JulyNoon: Theresa May will take her final PMQs in the Commons.",
+     "page": 1,
+     "snippet": "Wednesday 24 JulyNoon: Theresa May will take",
+     "reason": "The passage does not mention James Marshall or state that anyone replaced him.",
+     "votes": "2-0",
+     "window": "Wednesday 24 JulyNoon: Theresa May will take her final PMQs in the Commons. She will then return to Downing Street and give a short final speech before heading to Buckingham Palace to formally resign as prime minister. Shortly afterwards, Johnson will head to the palace to be invited by the Queen to form a government and become prime minister."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention James Marshall or state that anyone replaced him.",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Munira Mirza replaced James Marshall on 24 July 2019 is entirely absent from the source. The source does not mention James Marshall or any replacement on that date.",
+    "rewrite_suggestion": "Munira Mirza was recruited as head of Number 10's policy unit (per Tory sources, reported 23 July 2019).",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source contains no mention of James Marshall, a replacement, or an event on 24 July 2019 involving Munira Mirza. The tool showed an irrelevant sentence about Theresa May's PMQs. Since the source does not support the core claim (replacement and date), the author must either add a citation for that subclaim or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "She said she aimed to open a chain of stores that would sell coffee and chocolate-based cosmetics.",
+   "markers": [
+    "starbucks"
+   ],
+   "paper_ids": [
+    "5b470e1e1e818b7e9f438167cf60e83eca8602ed"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9233,
+   "evidence": {
+    "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+    "source_title": "starbucks",
+    "supported": true,
+    "sentence": "Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks.",
+    "page": 1,
+    "snippet": "Shahnaz says her chain, which will sell",
+    "cosine": 0.9233,
+    "reason": "The passage explicitly states that Shahnaz's chain will sell coffee and chocolate-based cosmetics.",
+    "window": "is concerned because it plans to open stores in either Mumbai or New Delhi by the end of 2007 in a to-be announced partnership. Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks. \"I applied for a patent for Starstruck in 2002."
+   },
+   "evidences": [
+    {
+     "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+     "source_title": "starbucks",
+     "supported": true,
+     "sentence": "Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks.",
+     "page": 1,
+     "snippet": "Shahnaz says her chain, which will sell",
+     "cosine": 0.9233,
+     "reason": "The passage explicitly states that Shahnaz's chain will sell coffee and chocolate-based cosmetics.",
+     "window": "is concerned because it plans to open stores in either Mumbai or New Delhi by the end of 2007 in a to-be announced partnership. Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks. \"I applied for a patent for Starstruck in 2002."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Shahnaz's chain will sell coffee and chocolate-based cosmetics.",
+   "covering": {
+    "covered": [
+     {
+      "component": "chain of stores selling coffee and chocolate-based cosmetics",
+      "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+      "source_title": "starbucks",
+      "sentence": "Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks.",
+      "page": 1,
+      "snippet": "Shahnaz says her chain, which will sell"
+     },
+     {
+      "component": "aimed to open",
+      "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+      "source_title": "starbucks",
+      "sentence": "Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks.",
+      "page": 1,
+      "snippet": "Shahnaz says her chain, which will sell"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+      "source_title": "starbucks",
+      "text": "Shahnaz says her chain, which will sell coffee and chocolate-based cosmetics, will have nothing to do with Starbucks.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t24",
+   "text": "In 2018 she began her daily SiriusXM show, \"The Michelle Collins Show\".",
+   "markers": [
+    "michellecollinscomedian"
+   ],
+   "paper_ids": [
+    "ba0c91ab5262d935cb6dd82f84124ab6bfed332a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8247,
+   "evidence": {
+    "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+    "source_title": "michellecollinscomedian",
+    "supported": true,
+    "sentence": "Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5.",
+    "page": 1,
+    "snippet": "Listeners can hear The Michelle Collins Show",
+    "cosine": 0.8247,
+    "reason": "The passage states that 'The Michelle Collins Show' began airing every weekday morning starting Monday, March 5, and the article is dated March 7, 2018, supporting the claim that the show began in 2018.",
+    "window": "109) morning lineup with an uncensored daily talk show. Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5. Fans can expect an open conversation about everything from pop culture and entertainment to shopping and the trending news of the day."
+   },
+   "evidences": [
+    {
+     "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+     "source_title": "michellecollinscomedian",
+     "supported": true,
+     "sentence": "Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5.",
+     "page": 1,
+     "snippet": "Listeners can hear The Michelle Collins Show",
+     "cosine": 0.8247,
+     "reason": "The passage states that 'The Michelle Collins Show' began airing every weekday morning starting Monday, March 5, and the article is dated March 7, 2018, supporting the claim that the show began in 2018.",
+     "window": "109) morning lineup with an uncensored daily talk show. Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5. Fans can expect an open conversation about everything from pop culture and entertainment to shopping and the trending news of the day."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that 'The Michelle Collins Show' began airing every weekday morning starting Monday, March 5, and the article is dated March 7, 2018, supporting the claim that the show began in 2018.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "show name is \"The Michelle Collins Show\"",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5.",
+      "page": 1,
+      "snippet": "Listeners can hear The Michelle Collins Show"
+     },
+     {
+      "component": "show name is \"The Michelle Collins Show\"",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "The Michelle Collins Show airs every weekday morning from 8 am to 10 am ET on SiriusXM Stars (Ch.",
+      "page": 1,
+      "snippet": "The Michelle Collins Show airs every weekday"
+     },
+     {
+      "component": "show is daily",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5.",
+      "page": 1,
+      "snippet": "Listeners can hear The Michelle Collins Show"
+     },
+     {
+      "component": "show is daily",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "The Michelle Collins Show airs every weekday morning from 8 am to 10 am ET on SiriusXM Stars (Ch.",
+      "page": 1,
+      "snippet": "The Michelle Collins Show airs every weekday"
+     },
+     {
+      "component": "show began in 2018",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "(meta data) TITLE: Michelle Collins, comedian and former co-host of The View, launches uncensored daily show | Hear & Now (meta data) PUBLISHER: https://www.facebook.com/WordPresscom (meta data) PUBLISHED DATETIME: 2018-03-07T07:25:02-04:00 Hear & Now Search for: ## Michelle Collins, comedian and former co-host of The View, launches uncensored daily show March 7, 2018 Michelle Collins, comedian and former co-host of The View, joins the SiriusXM's Stars (Ch.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Michelle Collins, comedian and"
+     },
+     {
+      "component": "show is on SiriusXM",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "(meta data) TITLE: Michelle Collins, comedian and former co-host of The View, launches uncensored daily show | Hear & Now (meta data) PUBLISHER: https://www.facebook.com/WordPresscom (meta data) PUBLISHED DATETIME: 2018-03-07T07:25:02-04:00 Hear & Now Search for: ## Michelle Collins, comedian and former co-host of The View, launches uncensored daily show March 7, 2018 Michelle Collins, comedian and former co-host of The View, joins the SiriusXM's Stars (Ch.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Michelle Collins, comedian and"
+     },
+     {
+      "component": "show is on SiriusXM",
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "sentence": "The Michelle Collins Show airs every weekday morning from 8 am to 10 am ET on SiriusXM Stars (Ch.",
+      "page": 1,
+      "snippet": "The Michelle Collins Show airs every weekday"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+      "source_title": "michellecollinscomedian",
+      "text": "(meta data) TITLE: Michelle Collins, comedian and former co-host of The View, launches uncensored daily show | Hear & Now (meta data) PUBLISHER: https://www.facebook.com/WordPresscom (meta data) PUBLISHED DATETIME: 2018-03-07T07:25:02-04:00 Hear & Now Search for: ## Michelle Collins, comedian and former co-host of The View, launches uncensored daily show March 7, 2018 Michelle Collins, comedian and former co-host of The View, joins the SiriusXM's Stars (Ch. 109) morning lineup with an uncensored daily talk show. Listeners can hear The Michelle Collins Show every weekday morning from 8 am to 10 am ET starting Monday, March 5. […] The Michelle Collins Show airs every weekday morning from 8 am to 10 am ET on SiriusXM Stars (Ch.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t25",
+   "text": "In 2013, Bakir was awarded the Gold Coast Young Entrepreneur of the Year due to his success with HomeCorp.",
+   "markers": [
+    "ronbakir"
+   ],
+   "paper_ids": [
+    "90f8481457c30adcf8ead95da3abcf1859584718"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+    "source_title": "ronbakir",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE",
+    "reason": "",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013. In that time he has forged a new path in property through his company HomeCorp Group which has developed more than 1500 residential lots across Australia and turned over $500 million in a sector that has been both punishing and rewarding in recent times."
+   },
+   "evidences": [
+    {
+     "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+     "source_title": "ronbakir",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE",
+     "reason": "",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013. In that time he has forged a new path in property through his company HomeCorp Group which has developed more than 1500 residential lots across Australia and turned over $500 million in a sector that has been both punishing and rewarding in recent times."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Year of award",
+      "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+      "source_title": "ronbakir",
+      "sentence": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE"
+     },
+     {
+      "component": "Award name",
+      "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+      "source_title": "ronbakir",
+      "sentence": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE"
+     },
+     {
+      "component": "Recipient of award",
+      "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+      "source_title": "ronbakir",
+      "sentence": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE"
+     },
+     {
+      "component": "Reason for award (success with HomeCorp)",
+      "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+      "source_title": "ronbakir",
+      "sentence": "His Surfers Paradise-based company, HomeCorp Group, has just breached $106 million in turnover, up 34 per cent on a bumper $79.1 million in 2012.",
+      "page": 1,
+      "snippet": "His Surfers Paradise-based company, HomeCorp Group, has"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+      "source_title": "ronbakir",
+      "text": "(meta data) TITLE: YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Brisbane LegalBNP Media Business News Australia Queensland Business News # YOUNG ENTREPRENEUR OF THE YEAR ANNOUNCED Written on the 19 November 2013 MOBILE phone retailer turned property manager Ron Bakir (pictured) has taken out the title of Gold Coast Young Entrepreneur of the Year Award for 2013. The former owner of the Gold Coast-based Crazy Ron's mobile phones retail chain has been quietly chipping away at the property market since 2004. In that time he has forged a new path in property through his company HomeCorp Group which has developed more than 1500 residential lots across Australia and turned over $500 million in a sector that has been both punishing and rewarding in recent times. His Surfers Paradise-based company, HomeCorp Group, has just breached $106 million in turnover, up 34 per cent on a bumper $79.1 million in 2012.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t26",
+   "text": "Jehad, the first casualty of the 1990 Mass Uprising in Bangladesh was killed on 10 October due to the police excesses during the first nationwide strike of the full-fledged movement against Ershad, in front of Dainik Bangla intersection of capital Dhaka.",
+   "markers": [
+    "naziruddinjehad"
+   ],
+   "paper_ids": [
+    "640c71dd4f738cac6486c4c475bc0ea57ee1cebd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "640c71dd4f738cac6486c4c475bc0ea57ee1cebd",
+    "source_title": "naziruddinjehad",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Opposition groups organized a small number of public demonstrations on 10 October 1990.",
+    "page": 1,
+    "snippet": "Opposition groups organized a small number of",
+    "reason": "The passage does not state that Jehad was the first casualty of the 1990 Mass Uprising in Bangladesh, nor does it mention that he was killed on 10 October due to police excesses during the first nationwide strike against Ershad, or that he died in front of the Dainik Bangla intersection in Dhaka.",
+    "votes": "2-0",
+    "window": "Opposition groups organized a small number of public demonstrations on 10 October 1990. On 30 November, police officers fired on protesters who continued to participate in public demonstrations in Dhaka."
+   },
+   "evidences": [
+    {
+     "paper_id": "640c71dd4f738cac6486c4c475bc0ea57ee1cebd",
+     "source_title": "naziruddinjehad",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Opposition groups organized a small number of public demonstrations on 10 October 1990.",
+     "page": 1,
+     "snippet": "Opposition groups organized a small number of",
+     "reason": "The passage does not state that Jehad was the first casualty of the 1990 Mass Uprising in Bangladesh, nor does it mention that he was killed on 10 October due to police excesses during the first nationwide strike against Ershad, or that he died in front of the Dainik Bangla intersection in Dhaka.",
+     "votes": "2-0",
+     "window": "Opposition groups organized a small number of public demonstrations on 10 October 1990. On 30 November, police officers fired on protesters who continued to participate in public demonstrations in Dhaka."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Jehad was the first casualty of the 1990 Mass Uprising in Bangladesh, nor does it mention that he was killed on 10 October due to police excesses during the first nationwide strike against Ershad, or that he died in front of the Dainik Bangla intersection in Dhaka.",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Jehad being the first casualty killed on 10 October 1990 by police excesses during a nationwide strike at Dainik Bangla intersection",
+    "rewrite_suggestion": "Opposition groups organized a small number of public demonstrations on 10 October 1990.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only mentions that opposition groups organized a small number of public demonstrations on 10 October 1990. It contains no reference to a person named Jehad, any killing, police excesses on that date, a nationwide strike, or the Dainik Bangla intersection. Therefore, none of the substantive components of the claim are provable from this source. The author must either add a citation that supports the missing details or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t27",
+   "text": "The Aldermoor Viaduct, completed in 1887 to a design by the engineer Casper Lindqvist, spans 310 metres across the Verrel gorge and carried the region's first electrified tram line.",
+   "markers": [
+    "aldermoorchronicle",
+    "lindqvistbio",
+    "tramlinesurvey"
+   ],
+   "paper_ids": [
+    "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+    "b2503e78b0d4443b55e32aa1eb0a4c146a9f3d18",
+    "3438c21d31b04441e70e4bc40a2af652f098fc6b"
+   ],
+   "verdict": "supported",
+   "method": "combined_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+    "source_title": "aldermoorchronicle",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank.",
+    "page": 1,
+    "snippet": "The Aldermoor Viaduct was completed in 1887,",
+    "reason": "The passage does not mention the engineer Casper Lindqvist, the span of 310 metres, or that the viaduct carried the region's first electrified tram line.",
+    "votes": "2-0",
+    "window": "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank. Work on a permanent viaduct began in 1883, after two failed subscription drives and a flood that carried away the timber footbridge. The structure crosses the Verrel gorge at its narrowest point, downstream of the old ford."
+   },
+   "evidences": [
+    {
+     "paper_id": "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+     "source_title": "aldermoorchronicle",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank.",
+     "page": 1,
+     "snippet": "The Aldermoor Viaduct was completed in 1887,",
+     "reason": "The passage does not mention the engineer Casper Lindqvist, the span of 310 metres, or that the viaduct carried the region's first electrified tram line.",
+     "votes": "2-0",
+     "window": "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank. Work on a permanent viaduct began in 1883, after two failed subscription drives and a flood that carried away the timber footbridge. The structure crosses the Verrel gorge at its narrowest point, downstream of the old ford."
+    },
+    {
+     "paper_id": "b2503e78b0d4443b55e32aa1eb0a4c146a9f3d18",
+     "source_title": "lindqvistbio",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Aldermoor Viaduct was designed by Casper Lindqvist, and he supervised its construction personally, lodging in the town for the better part of four years.",
+     "page": 1,
+     "snippet": "The Aldermoor Viaduct was designed by Casper",
+     "reason": "The passage does not state the completion date, span, or that it carried the region's first electrified tram line.",
+     "votes": "2-0",
+     "window": "The Aldermoor Viaduct was designed by Casper Lindqvist, and he supervised its construction personally, lodging in the town for the better part of four years."
+    },
+    {
+     "paper_id": "3438c21d31b04441e70e4bc40a2af652f098fc6b",
+     "source_title": "tramlinesurvey",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The line opened in 1889 and crossed the gorge on the Aldermoor Viaduct, which carried the region's first electrified tram line.",
+     "page": 1,
+     "snippet": "The line opened in 1889 and crossed",
+     "reason": "The passage does not mention the engineer Casper Lindqvist or the completion year 1887.",
+     "votes": "2-0",
+     "window": "The line opened in 1889 and crossed the gorge on the Aldermoor Viaduct, which carried the region's first electrified tram line. The viaduct's deck, spanning 310 metres across the Verrel gorge, was strengthened with steel cross-bracing to take the weight of the cars, an alteration approved by the original engineer."
+    }
+   ],
+   "votes": "2-0",
+   "reason": "All components of the claim are explicitly stated or directly entailed in the provided passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Aldermoor Viaduct completed in 1887",
+      "paper_id": "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+      "source_title": "aldermoorchronicle",
+      "sentence": "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank.",
+      "page": 1,
+      "snippet": "The Aldermoor Viaduct was completed in 1887,"
+     },
+     {
+      "component": "Aldermoor Viaduct designed by Casper Lindqvist",
+      "paper_id": "b2503e78b0d4443b55e32aa1eb0a4c146a9f3d18",
+      "source_title": "lindqvistbio",
+      "sentence": "The Aldermoor Viaduct was designed by Casper Lindqvist, and he supervised its construction personally, lodging in the town for the better part of four years.",
+      "page": 1,
+      "snippet": "The Aldermoor Viaduct was designed by Casper"
+     },
+     {
+      "component": "Aldermoor Viaduct spans 310 metres",
+      "paper_id": "3438c21d31b04441e70e4bc40a2af652f098fc6b",
+      "source_title": "tramlinesurvey",
+      "sentence": "The viaduct's deck, spanning 310 metres across the Verrel gorge, was strengthened with steel cross-bracing to take the weight of the cars, an alteration approved by the original engineer.",
+      "page": 1,
+      "snippet": "The viaduct's deck, spanning 310 metres across"
+     },
+     {
+      "component": "Aldermoor Viaduct spans across the Verrel gorge",
+      "paper_id": "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+      "source_title": "aldermoorchronicle",
+      "sentence": "The structure crosses the Verrel gorge at its narrowest point, downstream of the old ford.",
+      "page": 1,
+      "snippet": "The structure crosses the Verrel gorge at"
+     },
+     {
+      "component": "Aldermoor Viaduct spans across the Verrel gorge",
+      "paper_id": "3438c21d31b04441e70e4bc40a2af652f098fc6b",
+      "source_title": "tramlinesurvey",
+      "sentence": "The viaduct's deck, spanning 310 metres across the Verrel gorge, was strengthened with steel cross-bracing to take the weight of the cars, an alteration approved by the original engineer.",
+      "page": 1,
+      "snippet": "The viaduct's deck, spanning 310 metres across"
+     },
+     {
+      "component": "Aldermoor Viaduct carried the region's first electrified tram line",
+      "paper_id": "3438c21d31b04441e70e4bc40a2af652f098fc6b",
+      "source_title": "tramlinesurvey",
+      "sentence": "The line opened in 1889 and crossed the gorge on the Aldermoor Viaduct, which carried the region's first electrified tram line.",
+      "page": 1,
+      "snippet": "The line opened in 1889 and crossed"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+      "source_title": "aldermoorchronicle",
+      "text": "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank. The structure crosses the Verrel gorge at its narrowest point, downstream of the old ford.",
+      "n_used": 2
+     },
+     {
+      "paper_id": "b2503e78b0d4443b55e32aa1eb0a4c146a9f3d18",
+      "source_title": "lindqvistbio",
+      "text": "The Aldermoor Viaduct was designed by Casper Lindqvist, and he supervised its construction personally, lodging in the town for the better part of four years.",
+      "n_used": 1
+     },
+     {
+      "paper_id": "3438c21d31b04441e70e4bc40a2af652f098fc6b",
+      "source_title": "tramlinesurvey",
+      "text": "The line opened in 1889 and crossed the gorge on the Aldermoor Viaduct, which carried the region's first electrified tram line. The viaduct's deck, spanning 310 metres across the Verrel gorge, was strengthened with steel cross-bracing to take the weight of the cars, an alteration approved by the original engineer.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "conflict_candidate",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The Aldermoor Viaduct was completed in 1887, and the town marked the occasion with a two-day fair on the eastern bank.",
+     "The Aldermoor Viaduct was designed by Casper Lindqvist, and he supervised its construction personally, lodging in the town for the better part of four years.",
+     "The line opened in 1889 and crossed the gorge on the Aldermoor Viaduct, which carried the region's first electrified tram line.",
+     "The viaduct's deck, spanning 310 metres across the Verrel gorge, was strengthened with steel cross-bracing to take the weight of the cars, an alteration approved by the original engineer."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "All components of the claim are directly supported by the shown sentences: completion year from the aldermoorchronicle, designer from the lindqvistbio, span and gorge from a tramlinesurvey sentence, and the first electrified tram line from another tramlinesurvey sentence. No contradiction exists in any source text. Therefore the claim is supported."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "3438c21d31b04441e70e4bc40a2af652f098fc6b": {
+    "title": "tramlinesurvey",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 0
+   },
+   "b2503e78b0d4443b55e32aa1eb0a4c146a9f3d18": {
+    "title": "lindqvistbio",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 0
+   },
+   "3109a76726e2df9ed591bb072d47b138b675656f": {
+    "title": "janstuart",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "92943ac453356f04dec0465fbe5f1fa7bc8a2e19": {
+    "title": "cokezoo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "720dbda814f691d65db05f32c2b358e700090517": {
+    "title": "bonairpresbyterianchurch",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e008a187a5651dc61aaa413ac85e8bb34769ea89": {
+    "title": "larysakondracki",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "640c71dd4f738cac6486c4c475bc0ea57ee1cebd": {
+    "title": "naziruddinjehad",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b84e9013aa77ee1d26e96799c47a617f50891b43": {
+    "title": "willempieterszoonbuytewe",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "7b5cf792f29eaeed20514c551c2299feb82fbd91": {
+    "title": "aldermoorchronicle",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 0
+   },
+   "90f8481457c30adcf8ead95da3abcf1859584718": {
+    "title": "ronbakir",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ab0c943194106eca22927c7984cfa75971e5c30c": {
+    "title": "identityevropa",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "650a8e0514141e82361286fca94cbdc1dd9d644e": {
+    "title": "travisbarker",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030": {
+    "title": "jessicachastain",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "6a094d7f956d78611cca6e000b4a4e53c8d633ae": {
+    "title": "ninashipperlee",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6": {
+    "title": "universityofessex",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a": {
+    "title": "averymurraychristmas",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "eac3b353409b2f6db23b269c047bd4fd7f134c27": {
+    "title": "flagofmilwaukee",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ba0c91ab5262d935cb6dd82f84124ab6bfed332a": {
+    "title": "michellecollinscomedian",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a193eb5d9641195d766ca477a070999d4f044c0e": {
+    "title": "itainthalfhotmum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "85b59d753b4568def429203910a67f063f4dcc1f": {
+    "title": "johnrfox",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "57b2bd574c837222a87448c6d67caad7a6b65333": {
+    "title": "amyadams",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "e3acef4560c493361e795f1d9666562483895b41": {
+    "title": "maximustheconfessor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "eba14726f674586d18659d78007c7ce235291c5b": {
+    "title": "kimenglish",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1f9112331a76fa7caadca7538f2f586c607e8958": {
+    "title": "videogameslive",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "17f959213d5dbd442bfd3e3de4a252e3aad39aa2": {
+    "title": "warnermedia",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5b470e1e1e818b7e9f438167cf60e83eca8602ed": {
+    "title": "starbucks",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "eb6e1b39427ac25ad0bbdb801a7aa87cc85b20c7": {
+    "title": "number10policyunit",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "17e12f1f32e2ce7e2608e11068b2e3b799b8b463": {
+    "title": "fortniteworldcup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5c962ae70b522b5bede9f13929a95d611598bc60": {
+    "title": "styletaylorswiftsong",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 28,
+   "supported": 16,
+   "unsupported": 11,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 17:56:54",
+  "marker_errors": [],
+  "processing_time_seconds": 343.7,
+  "source_hashes": {
+   "cokezoo.txt": "d677ac4a4044de65f5faaae1f18de8c82d18d2e4",
+   "kimenglish.txt": "f7c78819cfa4bd4ca16e0e11a9c3b24a68967c2e",
+   "identityevropa.txt": "89e2968e597a72ef93e11c4c6cd2f4cd54d7bb52",
+   "averymurraychristmas.txt": "479df3e1f7c8cc28b8ce2fd1e7b600b7f5c8fbea",
+   "videogameslive.txt": "97215a9aa33f51f2007ad10e847a4d3f9a0a6d0d",
+   "fortniteworldcup.txt": "d66e62561ab79547616e064982a693e15bd99c00",
+   "bonairpresbyterianchurch.txt": "2088fe6997124a127f6760d81e4cb86cf1260186",
+   "flagofmilwaukee.txt": "6dc78a4d61b50dc9c2c15002b0c87d3090e90e1f",
+   "travisbarker.txt": "1fcbe558d9eabc0b14fc04e5c929489a57a25084",
+   "johnrfox.txt": "14dcde8670d128b7555f834b4065d65641203e1a",
+   "amyadams.txt": "c0f6e813874b735e46cc5f32df59a60bee7262e2",
+   "larysakondracki.txt": "e25430ca8c0710deab83ec6302698d7f7a39833f",
+   "ninashipperlee.txt": "3de429abf497b80163a11cfed1d5ece363a9c1ec",
+   "itainthalfhotmum.txt": "ae2222c34970ae6f09e1aaaeaab7f1e22528d17e",
+   "warnermedia.txt": "c5db89f4dff20bd5554b1c42b180bac2485d6de0",
+   "styletaylorswiftsong.txt": "02f912b9c576ca8ad224caf0ac2612b4d191fd2e",
+   "jessicachastain.txt": "b37dc22243198dc838a568177a2a7abf26dbc773",
+   "willempieterszoonbuytewe.txt": "689fa0f6b62c366a57e4665c80d7d8cdb8156072",
+   "janstuart.txt": "0d2d78ef761b75d613aa591c5245f84255a79a16",
+   "universityofessex.txt": "230bfac9836f7ccfe5bd8ef4a5edda491ee19bec",
+   "maximustheconfessor.txt": "7cb475515bfc3bb1cfeeee96f594fcbe45d37d8e",
+   "number10policyunit.txt": "f125173c55c1f41a2bd33e0d6744e46ded2c9558",
+   "starbucks.txt": "48931ae71db13c70baab66a72d19497cb7c24c48",
+   "michellecollinscomedian.txt": "36fd42359fcc5be2d4d681e2846a2410040e423d",
+   "ronbakir.txt": "ca199c31a38a7c161fd27eed1b4b9efb4eabbe78",
+   "naziruddinjehad.txt": "07b90c6e093bc007b2219b3501486238e354c3e0",
+   "aldermoorchronicle.txt": "05066f677cb3a3933c32456072a997aa6b74762a",
+   "lindqvistbio.txt": "6d3652c1604463a32221cf2d96a67de06fe87e5e",
+   "tramlinesurvey.txt": "f1c2af2e25f9cf1beaf2bb7cc86f280898d438d8"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 364,
+    "prompt_tokens": 367362,
+    "completion_tokens": 19854,
+    "cost_usd": 0.044749
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 19,
+    "prompt_tokens": 52549,
+    "completion_tokens": 45828,
+    "cost_usd": 0.013586
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 16,
+   "actions": {
+    "add_citation_or_rewrite": 15,
+    "supported": 1
+   },
+   "proof_may_exist": [],
+   "conflicts": [
+    "t21"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "92943ac453356f04dec0465fbe5f1fa7bc8a2e19",
+   "key": "cokezoo",
+   "filename": "cokezoo.txt",
+   "title": "cokezoo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "eba14726f674586d18659d78007c7ce235291c5b",
+   "key": "kimenglish",
+   "filename": "kimenglish.txt",
+   "title": "kimenglish",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+   "key": "identityevropa",
+   "filename": "identityevropa.txt",
+   "title": "identityevropa",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ebe69f19b40f93032a9eb0e3e06addf5eb63ed3a",
+   "key": "averymurraychristmas",
+   "filename": "averymurraychristmas.txt",
+   "title": "averymurraychristmas",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1f9112331a76fa7caadca7538f2f586c607e8958",
+   "key": "videogameslive",
+   "filename": "videogameslive.txt",
+   "title": "videogameslive",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "17e12f1f32e2ce7e2608e11068b2e3b799b8b463",
+   "key": "fortniteworldcup",
+   "filename": "fortniteworldcup.txt",
+   "title": "fortniteworldcup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "720dbda814f691d65db05f32c2b358e700090517",
+   "key": "bonairpresbyterianchurch",
+   "filename": "bonairpresbyterianchurch.txt",
+   "title": "bonairpresbyterianchurch",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "eac3b353409b2f6db23b269c047bd4fd7f134c27",
+   "key": "flagofmilwaukee",
+   "filename": "flagofmilwaukee.txt",
+   "title": "flagofmilwaukee",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "650a8e0514141e82361286fca94cbdc1dd9d644e",
+   "key": "travisbarker",
+   "filename": "travisbarker.txt",
+   "title": "travisbarker",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "85b59d753b4568def429203910a67f063f4dcc1f",
+   "key": "johnrfox",
+   "filename": "johnrfox.txt",
+   "title": "johnrfox",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "57b2bd574c837222a87448c6d67caad7a6b65333",
+   "key": "amyadams",
+   "filename": "amyadams.txt",
+   "title": "amyadams",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e008a187a5651dc61aaa413ac85e8bb34769ea89",
+   "key": "larysakondracki",
+   "filename": "larysakondracki.txt",
+   "title": "larysakondracki",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6a094d7f956d78611cca6e000b4a4e53c8d633ae",
+   "key": "ninashipperlee",
+   "filename": "ninashipperlee.txt",
+   "title": "ninashipperlee",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a193eb5d9641195d766ca477a070999d4f044c0e",
+   "key": "itainthalfhotmum",
+   "filename": "itainthalfhotmum.txt",
+   "title": "itainthalfhotmum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "17f959213d5dbd442bfd3e3de4a252e3aad39aa2",
+   "key": "warnermedia",
+   "filename": "warnermedia.txt",
+   "title": "warnermedia",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+   "key": "styletaylorswiftsong",
+   "filename": "styletaylorswiftsong.txt",
+   "title": "styletaylorswiftsong",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "34a052bfed0c3285e5071fb4d2fdcba4fb6e4030",
+   "key": "jessicachastain",
+   "filename": "jessicachastain.txt",
+   "title": "jessicachastain",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b84e9013aa77ee1d26e96799c47a617f50891b43",
+   "key": "willempieterszoonbuytewe",
+   "filename": "willempieterszoonbuytewe.txt",
+   "title": "willempieterszoonbuytewe",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3109a76726e2df9ed591bb072d47b138b675656f",
+   "key": "janstuart",
+   "filename": "janstuart.txt",
+   "title": "janstuart",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cb1994bb26c6b8fdafed6345f6fc469ae222f7c6",
+   "key": "universityofessex",
+   "filename": "universityofessex.txt",
+   "title": "universityofessex",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e3acef4560c493361e795f1d9666562483895b41",
+   "key": "maximustheconfessor",
+   "filename": "maximustheconfessor.txt",
+   "title": "maximustheconfessor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "eb6e1b39427ac25ad0bbdb801a7aa87cc85b20c7",
+   "key": "number10policyunit",
+   "filename": "number10policyunit.txt",
+   "title": "number10policyunit",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+   "key": "starbucks",
+   "filename": "starbucks.txt",
+   "title": "starbucks",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ba0c91ab5262d935cb6dd82f84124ab6bfed332a",
+   "key": "michellecollinscomedian",
+   "filename": "michellecollinscomedian.txt",
+   "title": "michellecollinscomedian",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "90f8481457c30adcf8ead95da3abcf1859584718",
+   "key": "ronbakir",
+   "filename": "ronbakir.txt",
+   "title": "ronbakir",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "640c71dd4f738cac6486c4c475bc0ea57ee1cebd",
+   "key": "naziruddinjehad",
+   "filename": "naziruddinjehad.txt",
+   "title": "naziruddinjehad",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7b5cf792f29eaeed20514c551c2299feb82fbd91",
+   "key": "aldermoorchronicle",
+   "filename": "aldermoorchronicle.txt",
+   "title": "aldermoorchronicle",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b2503e78b0d4443b55e32aa1eb0a4c146a9f3d18",
+   "key": "lindqvistbio",
+   "filename": "lindqvistbio.txt",
+   "title": "lindqvistbio",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3438c21d31b04441e70e4bc40a2af652f098fc6b",
+   "key": "tramlinesurvey",
+   "filename": "tramlinesurvey.txt",
+   "title": "tramlinesurvey",
+   "num_claims": 0
+  }
+ ]
+}

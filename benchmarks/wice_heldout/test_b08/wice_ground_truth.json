@@ -1,0 +1,800 @@
+{
+ "split": "test",
+ "mode": "heldout_all",
+ "batch": 8,
+ "label_filter": null,
+ "exclude_used": false,
+ "claims": {
+  "elizabethgaskell": {
+   "wice_id": "test02405",
+   "split_index": 182,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     8
+    ],
+    [
+     8,
+     9
+    ]
+   ],
+   "n_source_sentences": 90
+  },
+  "religiousintolerance": {
+   "wice_id": "test04098",
+   "split_index": 183,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 212
+  },
+  "oldtollandcountyjailandm": {
+   "wice_id": "test04229",
+   "split_index": 184,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     26
+    ],
+    [
+     26,
+     27
+    ],
+    [
+     23,
+     26
+    ],
+    [
+     22,
+     26
+    ],
+    [
+     23,
+     24,
+     26
+    ],
+    [
+     23,
+     26,
+     27
+    ],
+    [
+     22,
+     23,
+     26
+    ],
+    [
+     23,
+     24,
+     26,
+     27
+    ],
+    [
+     22,
+     23,
+     24,
+     26
+    ],
+    [
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ]
+   ],
+   "n_source_sentences": 85
+  },
+  "johnwestroyalnavyofficer": {
+   "wice_id": "test01985",
+   "split_index": 185,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     541,
+     546
+    ],
+    [
+     541,
+     542,
+     543
+    ]
+   ],
+   "n_source_sentences": 578
+  },
+  "victorivan": {
+   "wice_id": "test00342",
+   "split_index": 186,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     16,
+     19
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     11,
+     14,
+     16
+    ],
+    [
+     11,
+     16,
+     19
+    ],
+    [
+     11,
+     14,
+     19
+    ],
+    [
+     11,
+     13,
+     14
+    ],
+    [
+     14,
+     16,
+     19
+    ],
+    [
+     11,
+     13,
+     16,
+     19
+    ],
+    [
+     11,
+     14,
+     16,
+     19
+    ],
+    [
+     11,
+     13,
+     14,
+     19
+    ],
+    [
+     11,
+     14,
+     16,
+     19
+    ]
+   ],
+   "n_source_sentences": 198
+  },
+  "redrivertrails": {
+   "wice_id": "test01756",
+   "split_index": 187,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 295
+  },
+  "jesnervarabbankplc": {
+   "wice_id": "test04331",
+   "split_index": 188,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     6,
+     9,
+     10
+    ],
+    [
+     6,
+     9,
+     36
+    ],
+    [
+     9,
+     11,
+     36
+    ],
+    [
+     9,
+     10,
+     11
+    ],
+    [
+     9,
+     10,
+     11,
+     36
+    ],
+    [
+     6,
+     9,
+     10,
+     11
+    ],
+    [
+     9,
+     10,
+     11,
+     15
+    ],
+    [
+     6,
+     9,
+     10,
+     36
+    ],
+    [
+     6,
+     9,
+     10,
+     15
+    ],
+    [
+     6,
+     9,
+     10,
+     15,
+     36
+    ],
+    [
+     9,
+     10,
+     11,
+     15,
+     36
+    ],
+    [
+     6,
+     9,
+     10,
+     11,
+     36
+    ]
+   ],
+   "n_source_sentences": 57
+  },
+  "haydenthorpe": {
+   "wice_id": "test03043",
+   "split_index": 189,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     41,
+     42
+    ],
+    [
+     0,
+     41,
+     120
+    ],
+    [
+     39,
+     41,
+     42
+    ],
+    [
+     0,
+     39,
+     41,
+     120
+    ]
+   ],
+   "n_source_sentences": 183
+  },
+  "yemenicivilwar2015presen": {
+   "wice_id": "test01037",
+   "split_index": 190,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 124
+  },
+  "sarmientochubut": {
+   "wice_id": "test00441",
+   "split_index": 191,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     10,
+     25
+    ],
+    [
+     6,
+     10,
+     25
+    ]
+   ],
+   "n_source_sentences": 77
+  },
+  "selmanawaksmanawardinmic": {
+   "wice_id": "test03681",
+   "split_index": 192,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     21,
+     55
+    ],
+    [
+     0,
+     55
+    ],
+    [
+     0,
+     21,
+     55
+    ]
+   ],
+   "n_source_sentences": 57
+  },
+  "aijac": {
+   "wice_id": "test00010",
+   "split_index": 193,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     123
+    ],
+    [
+     123,
+     137
+    ],
+    [
+     123,
+     127
+    ],
+    [
+     123,
+     133,
+     134
+    ],
+    [
+     123,
+     127,
+     137
+    ],
+    [
+     123,
+     126,
+     127
+    ],
+    [
+     127,
+     133,
+     134
+    ],
+    [
+     123,
+     127,
+     133,
+     134
+    ],
+    [
+     123,
+     126,
+     127,
+     137
+    ],
+    [
+     123,
+     126,
+     127,
+     133,
+     134
+    ]
+   ],
+   "n_source_sentences": 236
+  },
+  "junipergreenrailwaystati": {
+   "wice_id": "test01701",
+   "split_index": 194,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     39,
+     40
+    ],
+    [
+     39,
+     40,
+     41
+    ]
+   ],
+   "n_source_sentences": 42
+  },
+  "joellortiz": {
+   "wice_id": "test02729",
+   "split_index": 195,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     0,
+     2,
+     11
+    ]
+   ],
+   "n_source_sentences": 39
+  },
+  "prospectheightshighschoo": {
+   "wice_id": "test04405",
+   "split_index": 196,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     38,
+     40,
+     48
+    ],
+    [
+     28,
+     38,
+     40,
+     48
+    ]
+   ],
+   "n_source_sentences": 110
+  },
+  "smallvilleseason1": {
+   "wice_id": "test03237",
+   "split_index": 197,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     18
+    ],
+    [
+     15
+    ],
+    [
+     14,
+     15
+    ]
+   ],
+   "n_source_sentences": 84
+  },
+  "kylieminogue": {
+   "wice_id": "test01047",
+   "split_index": 198,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     12,
+     13
+    ],
+    [
+     12,
+     13,
+     25
+    ],
+    [
+     11,
+     12,
+     13
+    ],
+    [
+     11,
+     12,
+     13,
+     25
+    ],
+    [
+     1,
+     12,
+     13,
+     25
+    ],
+    [
+     1,
+     11,
+     12,
+     13,
+     25
+    ]
+   ],
+   "n_source_sentences": 105
+  },
+  "factionalviolenceinlibya": {
+   "wice_id": "test02640",
+   "split_index": 199,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3,
+     5
+    ]
+   ],
+   "n_source_sentences": 29
+  },
+  "damienhirst": {
+   "wice_id": "test01467",
+   "split_index": 200,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     27,
+     28,
+     29
+    ],
+    [
+     26,
+     27,
+     29,
+     30
+    ],
+    [
+     27,
+     28,
+     29,
+     30
+    ],
+    [
+     26,
+     27,
+     28,
+     29
+    ],
+    [
+     26,
+     27,
+     29,
+     30,
+     42
+    ],
+    [
+     27,
+     28,
+     29,
+     31,
+     40
+    ],
+    [
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    [
+     27,
+     28,
+     29,
+     30,
+     31,
+     40
+    ],
+    [
+     26,
+     27,
+     28,
+     29,
+     31,
+     40
+    ],
+    [
+     26,
+     27,
+     29,
+     30,
+     31,
+     40
+    ],
+    [
+     26,
+     27,
+     28,
+     29,
+     30,
+     42
+    ],
+    [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     40
+    ],
+    [
+     26,
+     27,
+     29,
+     30,
+     31,
+     40,
+     42
+    ],
+    [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     40,
+     42
+    ]
+   ],
+   "n_source_sentences": 80
+  },
+  "coalingastatehospital": {
+   "wice_id": "test04144",
+   "split_index": 201,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     21,
+     30
+    ],
+    [
+     20,
+     21
+    ],
+    [
+     20,
+     21,
+     30
+    ],
+    [
+     20,
+     26,
+     27,
+     28,
+     29
+    ],
+    [
+     26,
+     27,
+     28,
+     29,
+     30
+    ]
+   ],
+   "n_source_sentences": 43
+  },
+  "williamhenryharrison": {
+   "wice_id": "test04225",
+   "split_index": 202,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     22
+    ],
+    [
+     11,
+     22
+    ]
+   ],
+   "n_source_sentences": 189
+  },
+  "gardatrafficcorps": {
+   "wice_id": "test02854",
+   "split_index": 203,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     135,
+     137
+    ],
+    [
+     131,
+     137
+    ]
+   ],
+   "n_source_sentences": 344
+  },
+  "nationalwildlifecrimeuni": {
+   "wice_id": "test00185",
+   "split_index": 204,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     3,
+     23,
+     25
+    ],
+    [
+     3,
+     25,
+     47,
+     48
+    ],
+    [
+     20,
+     23,
+     24,
+     25
+    ],
+    [
+     14,
+     19,
+     25,
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "n_source_sentences": 56
+  },
+  "corneliusthefirst": {
+   "wice_id": "test00057",
+   "split_index": 205,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     44,
+     45
+    ]
+   ],
+   "n_source_sentences": 57
+  },
+  "brittanylincicome": {
+   "wice_id": "test04273",
+   "split_index": 206,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7
+    ],
+    [
+     3,
+     7
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "backtraxusa": {
+   "wice_id": "test00308",
+   "split_index": 207,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     84,
+     90
+    ],
+    [
+     82,
+     88,
+     90
+    ]
+   ],
+   "n_source_sentences": 131
+  }
+ }
+}

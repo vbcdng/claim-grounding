@@ -1,0 +1,81 @@
+{
+  "paper": "chimpanzee_validation",
+  "text_file": "examples/chimpanzee_validation/my_text.md",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "created": "2026-07-04",
+  "basis": "Hand audit docs/HUMAN_VS_TOOL_DIVERGENCE_LAYER3.md (Redshaw & Suddendorf 2024) found tool==human 12/12 supported on the old flash model; re-audited 2026-07-04 on flash-lite — same 12/12. All sentences are near-verbatim or paraphrased from the single cited source.",
+  "claims": [
+    {
+      "id": "t0",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "Engelmann et al. report evidence that chimpanzees also prepare for multiple possible outcomes and suggest that they too represent exclusive-OR relations."
+    },
+    {
+      "id": "t1",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "Engelmann et al.’s study used an adaptation of our forked tube task , in which an experimenter drops a reward into an inverted Y-shaped tube with two exits, such that a participant must simultaneously cover both exits with one hand each to guarantee successfully catching it (also )."
+    },
+    {
+      "id": "t2",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "Across our studies, we have found little evidence that non-human primates insightfully prepare for mutually exclusive possibilities in this simple context ."
+    },
+    {
+      "id": "t3",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "In our experiments with 14 primates (five chimpanzees across two studies , five orangutans in one study , and four monkeys in one study ), we found that three chimpanzees, one orangutan and one capuchin monkey spontaneously covered both exits despite never seeing that behaviour before."
+    },
+    {
+      "id": "t4",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "Each of these five individuals regressed to covering one exit on subsequent trials."
+    },
+    {
+      "id": "t5",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "When two rewards were simultaneously dropped into two parallel tubes, chimpanzees spontaneously covered two exits on 24.4% of trials, seven times more often than when only one reward was unpredictably dropped into one of the two mutually exclusive tubes (on 3.4% of trials; see table 1 in )."
+    },
+    {
+      "id": "t6",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "The three individuals who learned to consistently cover both exits towards the end of the simultaneous trials (i.e. passing 90–100% of the final 10 trials) subsequently passed only 17–58% of mutually exclusive trials in a supplementary experiment."
+    },
+    {
+      "id": "t7",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "The apes had to cover both exits to guarantee a reward in the mutually exclusive trials, but could simply cover one exit to guarantee a reward in the simultaneous trials (see box 1 in )."
+    },
+    {
+      "id": "t8",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "The data indicate that the primates’ trouble with preparing for mutually exclusive possibilities was at least partly in their minds and not simply in their hands."
+    },
+    {
+      "id": "t9",
+      "expect": "supported",
+      "note": "paraphrase of the source ('too difficult for them' vs 'for some chimpanzees') — human audit confirmed supported (Layer-3 doc point 1)",
+      "text": "Three individuals had to be excluded [from Engelmann et al.'s study] because the target behaviour was too difficult for them (see supplementary material )."
+    },
+    {
+      "id": "t10",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "The preregistration states that the remaining chimpanzees were given up to three attempts per trial if they failed to balance either platform and that trials were excluded if they did not."
+    },
+    {
+      "id": "t11",
+      "expect": "supported",
+      "note": "human audit 2026-07-02 confirmed supported (12/12)",
+      "text": "On their first trial, 7/16 chimpanzees balanced both platforms in the control condition and 8/16 did so in the test condition."
+    }
+  ]
+}

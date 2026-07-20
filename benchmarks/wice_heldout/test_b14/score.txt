@@ -1,0 +1,51 @@
+verdict-level agreement: 6/20 (30%)
+confusion (wice_label -> tool):
+  partially_supported    -> not_supported           10   <-- disagreement
+  partially_supported    -> partially_supported      2
+  partially_supported    -> supported                2   <-- disagreement
+  supported              -> not_supported            1   <-- disagreement
+  supported              -> partially_supported      1   <-- disagreement
+  supported              -> supported                4
+
+arbiter-adjudicated agreement: 16/20 (80%)
+confusion (wice_label -> adjudicated):
+  partially_supported    -> partially_supported     11
+  partially_supported    -> supported                3   <-- disagreement
+  supported              -> not_supported            1   <-- disagreement
+  supported              -> supported                5
+adjudication flips: 11
+  + abydoshellespont           not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + albertasocialcreditparty   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + technologicaluniversityd   not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + andymoeller                not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + dailyhive                  not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + mariewilcox                not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + borisbecker                not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + cymricsaskatchewan         not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + makeitrightbtssong         partially_supported -> supported              wice=supported              (arbiter: gaps look minor — fully proven)
+  ~ williamherbertplanter      not_supported -> supported              wice=partially_supported    (arbiter: proof exists in source (verified quotes))
+  + conan2007videogame         not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 0 refuted rows: base=0, adjudicated=0
+
+per-claim:
+  OK  williamsharney             wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF abydoshellespont           wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF hallamfc                   wice=partially_supported    tool=supported              picks_in_gold=2/2
+  DIFF 2018challengetour          wice=supported              tool=not_supported          
+  DIFF albertasocialcreditparty   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF technologicaluniversityd   wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  garfieldstationctagreenl   wice=supported              tool=supported              picks_in_gold=0/1
+  DIFF andymoeller                wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF dailyhive                  wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF mariewilcox                wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  jackkeane                  wice=partially_supported    tool=partially_supported    picks_in_gold=1/2
+  OK  theinsideofthecup          wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF sunflowerstudentmovement   wice=partially_supported    tool=supported              picks_in_gold=3/3
+  OK  jeansimmons                wice=partially_supported    tool=partially_supported    picks_in_gold=1/1
+  DIFF borisbecker                wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF cymricsaskatchewan         wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF makeitrightbtssong         wice=supported              tool=partially_supported    adj=supported              picks_in_gold=1/1
+  DIFF williamherbertplanter      wice=partially_supported    tool=not_supported          adj=supported              
+  OK  toystory4                  wice=supported              tool=supported              picks_in_gold=2/8
+  DIFF conan2007videogame         wice=partially_supported    tool=not_supported          adj=partially_supported    

@@ -1,0 +1,7 @@
+Split the CLAIM into its citable components: the specific facts, findings, numbers, events, and attributions the writer credits to the cited source(s). An interpretive or evaluative assertion tied to the citation (a thesis, a causal generalization, a superlative) is also a component. Do NOT make components out of pure connective tissue (transitions, announcements). Keep each component a short self-contained assertion; at most 4 — merge the least separable ones if needed.
+
+Return ONLY a JSON object, no commentary:
+{"components": ["<short assertion>", ...]}
+
+CLAIM:
+{CLAIM}

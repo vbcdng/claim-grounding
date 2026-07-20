@@ -1,0 +1,2231 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train heldout batch 1 (refuted)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Martin did important editorial work and co-authored three influential books: \"Several complex variables\" (1948), \"Elementary differential equations\" (1956), and \"Differential space, quantum space, and prediction\" (1966).",
+   "markers": [
+    "wtmartin"
+   ],
+   "paper_ids": [
+    "8700771a376ba331fb6c3884e1744ee560b61b03"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8646,
+   "evidence": {
+    "paper_id": "8700771a376ba331fb6c3884e1744ee560b61b03",
+    "source_title": "wtmartin",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Longtime math department head Ted Martin dies at 92 | MIT News",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Longtime math department head",
+    "cosine": 0.8646,
+    "reason": "The passage only identifies the subject as Ted Martin and mentions his death at 92, but provides no information about his editorial work or book co-authorships.",
+    "window": "(meta data) TITLE: Longtime math department head Ted Martin dies at 92 | MIT News ## MIT News Office ## Browse ### Most Popular"
+   },
+   "evidences": [
+    {
+     "paper_id": "8700771a376ba331fb6c3884e1744ee560b61b03",
+     "source_title": "wtmartin",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Longtime math department head Ted Martin dies at 92 | MIT News",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Longtime math department head",
+     "cosine": 0.8646,
+     "reason": "The passage only identifies the subject as Ted Martin and mentions his death at 92, but provides no information about his editorial work or book co-authorships.",
+     "window": "(meta data) TITLE: Longtime math department head Ted Martin dies at 92 | MIT News ## MIT News Office ## Browse ### Most Popular"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Martin co-authored three influential books: \"Several complex variables\" (1948), \"Elementary differential equations\" (1956), and \"Differential space, quantum space, and prediction\" (1966).",
+    "reason": "The passage directly attributes the co-authorship of specific books and their publication years to Martin. This is a factual claim that the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "All components of the claim: Martin's editorial work and co-authorship of the three specific books with titles and years.",
+    "rewrite_suggestion": "Martin was a longtime math department head at MIT who died at age 92.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text contains only a title and metadata about Martin's death; it does not include any sentences about his editorial work or the three books listed in the claim. Therefore, no component of the claim is provable from this source, and the author must either add a citation that actually supports the claim or rewrite the claim to match what the source says (e.g., his role as department head)."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Although Ang Chan's surviving brothers, Ang Im and Ang Duang, immediately laid claim to the throne, the Vietnamese then occupying Cambodia did not allow them to be crowned.",
+   "markers": [
+    "angmey"
+   ],
+   "paper_ids": [
+    "d67ce191b721f2a989af3917e70f0ee04ea643af"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8627,
+   "evidence": {
+    "paper_id": "d67ce191b721f2a989af3917e70f0ee04ea643af",
+    "source_title": "angmey",
+    "supported": false,
+    "sentence": "The Khmer Heroes Sacrifice in the Dark World - in English",
+    "page": 1,
+    "snippet": "The Khmer Heroes Sacrifice in the Dark",
+    "cosine": 0.8627,
+    "reason": "The passage does not mention Ang Chan, his brothers, or any claims to the throne, nor does it discuss Vietnamese occupation of Cambodia.",
+    "window": "\u179c\u17b8\u179a\u1794\u17bb\u179a\u179f\u1781\u17d2\u1798\u17c2\u179a \u1792\u17d2\u179c\u17be\u1796\u179b\u17b7\u1780\u1798\u17d2\u1798 \u1780\u17d2\u1793\u17bb\u1784\u1796\u17b7\u1797\u1796\u17a2\u1793\u17d2\u1792\u1780\u17b6\u179b The Khmer Heroes Sacrifice in the Dark World - in English \u1798\u17a0\u17b6\u1782\u17d2\u179a\u17c4\u17c7\u1787\u17b6\u178f\u17b7\u1781\u17d2\u1798\u17c2\u179a\u17e2\u17e0\u17e1\u17e2 - \u178a\u17c4\u1799 \u1791\u17c0\u1784\u178e\u17b6\u179a\u17b7\u1791\u17d2\u1792"
+   },
+   "evidences": [
+    {
+     "paper_id": "d67ce191b721f2a989af3917e70f0ee04ea643af",
+     "source_title": "angmey",
+     "supported": false,
+     "sentence": "The Khmer Heroes Sacrifice in the Dark World - in English",
+     "page": 1,
+     "snippet": "The Khmer Heroes Sacrifice in the Dark",
+     "cosine": 0.8627,
+     "reason": "The passage does not mention Ang Chan, his brothers, or any claims to the throne, nor does it discuss Vietnamese occupation of Cambodia.",
+     "window": "\u179c\u17b8\u179a\u1794\u17bb\u179a\u179f\u1781\u17d2\u1798\u17c2\u179a \u1792\u17d2\u179c\u17be\u1796\u179b\u17b7\u1780\u1798\u17d2\u1798 \u1780\u17d2\u1793\u17bb\u1784\u1796\u17b7\u1797\u1796\u17a2\u1793\u17d2\u1792\u1780\u17b6\u179b The Khmer Heroes Sacrifice in the Dark World - in English \u1798\u17a0\u17b6\u1782\u17d2\u179a\u17c4\u17c7\u1787\u17b6\u178f\u17b7\u1781\u17d2\u1798\u17c2\u179a\u17e2\u17e0\u17e1\u17e2 - \u178a\u17c4\u1799 \u1791\u17c0\u1784\u178e\u17b6\u179a\u17b7\u1791\u17d2\u1792"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts historical facts about succession claims and Vietnamese intervention. The citation is expected to prove these factual statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: Ang Chan's surviving brothers Ang Im and Ang Duang immediately laid claim to the throne but the Vietnamese then occupying Cambodia did not allow them to be crowned.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a blog sidebar and metadata with no historical content. It contains only navigation links, book titles, and blog archive listings; none of the sentences address Ang Chan, his brothers, Vietnamese occupation, or any coronation events. Therefore, no component of the claim is provable from this source."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "He was the first actor cast on the show, with the producers having approached him before the pilot was ordered.",
+   "markers": [
+    "randallpark"
+   ],
+   "paper_ids": [
+    "27b3bf7c91a1a829dec5e53cc8d80bd81cf4f9c6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8096,
+   "evidence": {
+    "paper_id": "27b3bf7c91a1a829dec5e53cc8d80bd81cf4f9c6",
+    "source_title": "randallpark",
+    "supported": false,
+    "sentence": "I love making this show, and I'm just happy that people are enjoying them.",
+    "page": 1,
+    "snippet": "I love making this show, and I'm",
+    "cosine": 0.8096,
+    "reason": "The passage discusses a podcast and does not mention any actors or casting for a show.",
+    "window": "Thank you to all the regular listeners who have downloaded and subscribed to the podcast thus far. I love making this show, and I'm just happy that people are enjoying them. To catch up on previous episodes, check out the archive."
+   },
+   "evidences": [
+    {
+     "paper_id": "27b3bf7c91a1a829dec5e53cc8d80bd81cf4f9c6",
+     "source_title": "randallpark",
+     "supported": false,
+     "sentence": "I love making this show, and I'm just happy that people are enjoying them.",
+     "page": 1,
+     "snippet": "I love making this show, and I'm",
+     "cosine": 0.8096,
+     "reason": "The passage discusses a podcast and does not mention any actors or casting for a show.",
+     "window": "Thank you to all the regular listeners who have downloaded and subscribed to the podcast thus far. I love making this show, and I'm just happy that people are enjoying them. To catch up on previous episodes, check out the archive."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was the first actor cast on the show, with the producers having approached him before the pilot was ordered.",
+    "reason": "The passage directly states a fact about the casting of an actor, which is directly attributable to the cited source. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Randall Park was the first actor cast on Fresh Off the Boat and that producers approached him before the pilot was ordered is entirely absent from the cited source.",
+    "rewrite_suggestion": "Randall Park stars in the new sitcom Fresh Off the Boat, which premieres February 4 on ABC.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not contain any information about who was cast first, the order of casting, or when producers approached Randall Park. It only mentions that he stars in the show. The shown sentence is irrelevant, and no other part of the source supports the claim. Therefore, the author must either provide a citation for the casting details or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Kinberg stated that the film was intended to be the start of multiple installments focusing on Gambit.",
+   "markers": [
+    "listofunproducedmarvelco"
+   ],
+   "paper_ids": [
+    "c570f41b6e94a5dd58b6077218ab2743922086bd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9394,
+   "evidence": {
+    "paper_id": "c570f41b6e94a5dd58b6077218ab2743922086bd",
+    "source_title": "listofunproducedmarvelco",
+    "supported": false,
+    "sentence": "As for Gambit\u2026well, maybe it'll begin filming next year.",
+    "page": 1,
+    "snippet": "As for Gambit...well, maybe it'll begin filming",
+    "cosine": 0.9394,
+    "reason": "The passage mentions Gambit but does not state that Kinberg intended it to be the start of multiple installments.",
+    "window": "For now, Kinberg is rumored to be directing the new X-Men sequel, which will reportedly begin filming this year and centers on Sophie Turner's Jean Grey (and may be a retelling of the Dark Phoenix saga). As for Gambit\u2026well, maybe it'll begin filming next year. Maybe it won't."
+   },
+   "evidences": [
+    {
+     "paper_id": "c570f41b6e94a5dd58b6077218ab2743922086bd",
+     "source_title": "listofunproducedmarvelco",
+     "supported": false,
+     "sentence": "As for Gambit\u2026well, maybe it'll begin filming next year.",
+     "page": 1,
+     "snippet": "As for Gambit...well, maybe it'll begin filming",
+     "cosine": 0.9394,
+     "reason": "The passage mentions Gambit but does not state that Kinberg intended it to be the start of multiple installments.",
+     "window": "For now, Kinberg is rumored to be directing the new X-Men sequel, which will reportedly begin filming this year and centers on Sophie Turner's Jean Grey (and may be a retelling of the Dark Phoenix saga). As for Gambit\u2026well, maybe it'll begin filming next year. Maybe it won't."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "focusing on Gambit"
+    ],
+    "missing": [
+     "Kinberg stated that the film was intended to be the start of multiple installments"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "focusing on Gambit",
+      "paper_id": "c570f41b6e94a5dd58b6077218ab2743922086bd",
+      "source_title": "listofunproducedmarvelco",
+      "sentence": "In an interview with CinemaBlend, Kinberg offered yet another brief, optimistic update on Tatum's Gambit movie: In terms of Gambit, that's a movie that we're still developing very actively, and Channing [Tatum] is incredibly committed to it.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Kinberg stated that the film was intended to be the start of multiple installments focusing on Gambit.",
+    "reason": "The passage directly attributes a statement to Kinberg, implying the cited source is expected to contain this specific information. This falls under the 'full' scope as it's a direct assertion of a finding or statement from the cited work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the Gambit film was intended to be the start of multiple installments",
+    "rewrite_suggestion": "Kinberg stated that the Gambit film was still in development and planned to shoot at the beginning of next year.",
+    "proofs": [
+     "In terms of Gambit, that's a movie that we're still developing very actively, and Channing [Tatum] is incredibly committed to it. We plan to probably shoot that at the beginning of next year."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that Kinberg said the Gambit film was meant to launch a series of sequels. The provided source contains no such statement; Kinberg only discusses the development and filming timeline. Therefore the key component of the claim is unsupported by the source, requiring the author to add a citation or rewrite."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "Early 2015 saw the Labour lead continue to fall, disappearing by the start of March.",
+   "markers": [
+    "2015unitedkingdomgeneral"
+   ],
+   "paper_ids": [
+    "d1bbc479d3d6438a6bdcfdc2d12a6dc9509bc31f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d1bbc479d3d6438a6bdcfdc2d12a6dc9509bc31f",
+    "source_title": "2015unitedkingdomgeneral",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Populus is still showing a Labour lead, as did the monthly Ipsos MORI poll this week, but it's the underlying trends that count and, for now at least, the UKPR polling average puts the Tories into a tiny lead \u2013 CON 33%(nc), LAB 32%(-2), LDEM 7%(nc), UKIP 15%(nc), GRN 6%(nc).",
+    "page": 1,
+    "snippet": "Populus is still showing a Labour lead,",
+    "reason": "the passage does not state that the Labour lead disappeared by the start of March.",
+    "votes": "2-0",
+    "window": "Populus is still showing a Labour lead, as did the monthly Ipsos MORI poll this week, but it's the underlying trends that count and, for now at least, the UKPR polling average puts the Tories into a tiny lead \u2013 CON 33%(nc), LAB 32%(-2), LDEM 7%(nc), UKIP 15%(nc), GRN 6%(nc). After two months of very little movement there is finally some sign of a shift. YouGov's daily poll seems to have flipped over into showing a Tory lead \u2013 four of their five polls this week showed a Conservative lead."
+   },
+   "evidences": [
+    {
+     "paper_id": "d1bbc479d3d6438a6bdcfdc2d12a6dc9509bc31f",
+     "source_title": "2015unitedkingdomgeneral",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Populus is still showing a Labour lead, as did the monthly Ipsos MORI poll this week, but it's the underlying trends that count and, for now at least, the UKPR polling average puts the Tories into a tiny lead \u2013 CON 33%(nc), LAB 32%(-2), LDEM 7%(nc), UKIP 15%(nc), GRN 6%(nc).",
+     "page": 1,
+     "snippet": "Populus is still showing a Labour lead,",
+     "reason": "the passage does not state that the Labour lead disappeared by the start of March.",
+     "votes": "2-0",
+     "window": "Populus is still showing a Labour lead, as did the monthly Ipsos MORI poll this week, but it's the underlying trends that count and, for now at least, the UKPR polling average puts the Tories into a tiny lead \u2013 CON 33%(nc), LAB 32%(-2), LDEM 7%(nc), UKIP 15%(nc), GRN 6%(nc). After two months of very little movement there is finally some sign of a shift. YouGov's daily poll seems to have flipped over into showing a Tory lead \u2013 four of their five polls this week showed a Conservative lead."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the Labour lead disappeared by the start of March.",
+   "subject_guard": {
+    "subject": "early",
+    "missing_from": [
+     "d1bbc479d3d6438a6bdcfdc2d12a6dc9509bc31f"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Early 2015 saw the Labour lead continue to fall, disappearing by the start of March.",
+    "reason": "The passage asserts a specific factual claim about political polling data. The citation is expected to prove this specific finding.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Labour lead continued to fall in early 2015 and disappeared by the start of March is not supported by the cited source. The source shows Labour leads in early March polls and describes a shift occurring in mid-March.",
+    "rewrite_suggestion": "By mid-March 2015, the Labour lead had disappeared according to the UKPR polling average, though some individual polls still showed Labour leads.",
+    "proofs": [],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The cited source does not provide evidence that the Labour lead was continuously falling in early 2015 nor that it disappeared by the start of March. In fact, the source includes polls from March 8 and 11 showing Labour leads, contradicting the claim. The shown sentence only states a Tory lead in mid-March, not the trend or the specific timeline. Therefore the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "In February 2014, Vivian and Beal joined the pair to continue work on their second album, with Carlson stating that it would be more synth and loop based than their debut album.",
+   "markers": [
+    "splashh"
+   ],
+   "paper_ids": [
+    "b77fb13ade2711d35dc1c3112460f8d125fb7539"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b77fb13ade2711d35dc1c3112460f8d125fb7539",
+    "source_title": "splashh",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Hint: a new album recorded right here in New York.",
+    "page": 1,
+    "snippet": "Hint: a new album recorded right here",
+    "reason": "The passage does not mention Vivian, Beal, Carlson, the month of February, the year 2014, or the specific musical style of the second album.",
+    "votes": "2-0",
+    "window": "Hint: a new album recorded right here in New York. We had some beers and discussed what's next for the band."
+   },
+   "evidences": [
+    {
+     "paper_id": "b77fb13ade2711d35dc1c3112460f8d125fb7539",
+     "source_title": "splashh",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Hint: a new album recorded right here in New York.",
+     "page": 1,
+     "snippet": "Hint: a new album recorded right here",
+     "reason": "The passage does not mention Vivian, Beal, Carlson, the month of February, the year 2014, or the specific musical style of the second album.",
+     "votes": "2-0",
+     "window": "Hint: a new album recorded right here in New York. We had some beers and discussed what's next for the band."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Vivian, Beal, Carlson, the month of February, the year 2014, or the specific musical style of the second album.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific fact (Vivian and Beal joined in February 2014 and Carlson's statement about the album's direction) that is directly attributed to the cited source. The attribution test applies here, indicating a 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: the date February 2014, the names Vivian and Beal, the action 'joined the pair', the reference to a second album, and Carlson's statement about synth and loop based sound are not present in the cited source.",
+    "rewrite_suggestion": "In early 2014, Splashh hinted at a new album recorded in New York, but no details about specific band members, album number, or musical direction are provided in the source.",
+    "proofs": [
+     "Hint: a new album recorded right here in New York."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no mention of February 2014, Vivian, Beal, a 'pair', a second album, or a statement from Carlson about synth and loop based sound. The only relevant sentence is a vague hint about a new album, which does not cover any component of the claim. Therefore, the claim is unsupported and requires additional citation or rewriting."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "They named their first child David Gardiner Tyler in honor of his maternal grandfather.",
+   "markers": [
+    "davidgardinerpolitician"
+   ],
+   "paper_ids": [
+    "ad06f87e68ba9ffd4bac922988572fc69f6026d5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.849,
+   "evidence": {
+    "paper_id": "ad06f87e68ba9ffd4bac922988572fc69f6026d5",
+    "source_title": "davidgardinerpolitician",
+    "supported": false,
+    "sentence": "Daughter of the richest man in a small town, Florence Mabel Kling was born in Marion, Ohio, in 1860, and grew...",
+    "page": 1,
+    "snippet": "Daughter of the richest man in a",
+    "cosine": 0.849,
+    "reason": "The passage discusses Florence Harding and Anna Harrison, but does not mention David Gardiner Tyler or his naming.",
+    "window": "Biographies &amp; Portraits ## Bio Florence Harding Daughter of the richest man in a small town, Florence Mabel Kling was born in Marion, Ohio, in 1860, and grew... ## Bio Anna Harrison"
+   },
+   "evidences": [
+    {
+     "paper_id": "ad06f87e68ba9ffd4bac922988572fc69f6026d5",
+     "source_title": "davidgardinerpolitician",
+     "supported": false,
+     "sentence": "Daughter of the richest man in a small town, Florence Mabel Kling was born in Marion, Ohio, in 1860, and grew...",
+     "page": 1,
+     "snippet": "Daughter of the richest man in a",
+     "cosine": 0.849,
+     "reason": "The passage discusses Florence Harding and Anna Harrison, but does not mention David Gardiner Tyler or his naming.",
+     "window": "Biographies &amp; Portraits ## Bio Florence Harding Daughter of the richest man in a small town, Florence Mabel Kling was born in Marion, Ohio, in 1860, and grew... ## Bio Anna Harrison"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "They named their first child David Gardiner Tyler in honor of his maternal grandfather.",
+    "reason": "The passage directly states a fact that the citation is expected to prove, which is the naming of a child in honor of a grandfather. This falls under the 'full' scope as it's a direct assertion of information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the Tylers named their first child David Gardiner Tyler in honor of his maternal grandfather",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts a specific name and reason for naming the first child of John and Julia Tyler, but the provided source text (the Julia Tyler biography from the White House Historical Association) does not mention any children by name, nor any naming rationale. Therefore the claim is entirely unsupported by the cited source, and the author must either add a citation that contains this information or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "County Conventions held March 17, 2018, District Conventions held March 24, 2018, and a State Convention held April 14, 2018.",
+   "markers": [
+    "2018texaselections"
+   ],
+   "paper_ids": [
+    "50a2e26e01d35983ea3719555f27325e7b7ddf88"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "50a2e26e01d35983ea3719555f27325e7b7ddf88",
+    "source_title": "2018texaselections",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "However, Section 172.028(a) of the Texas Election Code was amended by House Bill 3103, 2013 Legislative Session, to provide that the state chair no longer certifies names of the district and statewide candidates for the primary ballot to county chairs.",
+    "page": 1,
+    "snippet": "However, Section 172.028(a) of the Texas Election",
+    "reason": "The passage does not mention the dates for County Conventions, District Conventions, or the State Convention.",
+    "votes": "2-0",
+    "window": "However, Section 172.028(a) of the Texas Election Code was amended by House Bill 3103, 2013 Legislative Session, to provide that the state chair no longer certifies names of the district and statewide candidates for the primary ballot to county chairs. Accordingly, the calendar continues to show the 9th day after the regular filing deadline as the deadline for state executive committee to set the date, hour, and place for convening the state convention. \u00a7\u00a7 551.002, 551.041 & 551.043 County convention for minor parties that are nominating candidates for single-county district, county, or precinct offices. Deadline for state executive committee to set date, hour, and place for convening state convention. State convention for minor party that is nominating candidates for statewide offices. \u00a7\u00a7 174.092 & 174.093."
+   },
+   "evidences": [
+    {
+     "paper_id": "50a2e26e01d35983ea3719555f27325e7b7ddf88",
+     "source_title": "2018texaselections",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "However, Section 172.028(a) of the Texas Election Code was amended by House Bill 3103, 2013 Legislative Session, to provide that the state chair no longer certifies names of the district and statewide candidates for the primary ballot to county chairs.",
+     "page": 1,
+     "snippet": "However, Section 172.028(a) of the Texas Election",
+     "reason": "The passage does not mention the dates for County Conventions, District Conventions, or the State Convention.",
+     "votes": "2-0",
+     "window": "However, Section 172.028(a) of the Texas Election Code was amended by House Bill 3103, 2013 Legislative Session, to provide that the state chair no longer certifies names of the district and statewide candidates for the primary ballot to county chairs. Accordingly, the calendar continues to show the 9th day after the regular filing deadline as the deadline for state executive committee to set the date, hour, and place for convening the state convention. \u00a7\u00a7 551.002, 551.041 & 551.043 County convention for minor parties that are nominating candidates for single-county district, county, or precinct offices. Deadline for state executive committee to set date, hour, and place for convening state convention. State convention for minor party that is nominating candidates for statewide offices. \u00a7\u00a7 174.092 & 174.093."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the dates for County Conventions, District Conventions, or the State Convention.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states specific dates for events. These dates are presented as facts that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific dates March 17, 2018 for County Conventions, March 24, 2018 for District Conventions, and April 14, 2018 for the State Convention are not stated in the cited source.",
+    "rewrite_suggestion": "County Conventions, District Conventions, and a State Convention were held in 2018 on dates set by the parties as specified in the Texas Election Code.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source does not specify any specific calendar dates for county, district, or state conventions; it only describes the legal framework for setting those dates. The author's claim includes exact dates (March 17, March 24, April 14, 2018) that are absent from the source text, so those components are entirely unsupported and cannot be proven from this source. The tool's shown sentence is irrelevant to the dates. Therefore the author must either add a citation providing those dates or rewrite the claim to remove them."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "The club finished the season in ninth place under Eriksson's successor Nigel Pearson.",
+   "markers": [
+    "leepeltier"
+   ],
+   "paper_ids": [
+    "a60fb32f1ea348eafccafc4dc3558931c2607949"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a60fb32f1ea348eafccafc4dc3558931c2607949",
+    "source_title": "leepeltier",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Last season: 9th",
+    "page": null,
+    "snippet": "Last season: 9th",
+    "reason": "The passage does not mention Nigel Pearson or Eriksson.",
+    "votes": "2-0",
+    "window": "Last season: 9th"
+   },
+   "evidences": [
+    {
+     "paper_id": "a60fb32f1ea348eafccafc4dc3558931c2607949",
+     "source_title": "leepeltier",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Last season: 9th",
+     "page": null,
+     "snippet": "Last season: 9th",
+     "reason": "The passage does not mention Nigel Pearson or Eriksson.",
+     "votes": "2-0",
+     "window": "Last season: 9th"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Nigel Pearson or Eriksson.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The club finished the season in ninth place under Eriksson's successor Nigel Pearson.",
+    "reason": "The passage asserts a factual statement about the club's performance, which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific fact.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Nigel Pearson being the successor to Sven-G\u00f6ran Eriksson",
+    "rewrite_suggestion": "Leicester City finished the season in ninth place under manager Nigel Pearson.",
+    "proofs": [
+     "Manager: Nigel PearsonLast season: 9th"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence 'Last season: 9th' does not identify the club or manager, and the source does not mention Pearson succeeding Eriksson. While the source confirms Leicester City finished ninth under Nigel Pearson, the component 'Eriksson's successor' is entirely absent, making this an author-side fix."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Air Europa flies to over 44 destinations around Spain, Europe, South America, North America, the Caribbean, and Morocco.",
+   "markers": [
+    "aireuropa"
+   ],
+   "paper_ids": [
+    "2973c94dd73081e8a930a2444ab8e861f23d8ec7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2973c94dd73081e8a930a2444ab8e861f23d8ec7",
+    "source_title": "aireuropa",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The routes further connect Spain with Latin America, both connected by a shared culture and language, across both North and South America.",
+    "page": 1,
+    "snippet": "The routes further connect Spain with Latin",
+    "reason": "The passage does not state the total number of destinations or mention destinations in the Caribbean or Morocco.",
+    "votes": "2-0",
+    "window": "The routes further connect Spain with Latin America, both connected by a shared culture and language, across both North and South America. # Route map Air Europa Airlines\u203aAir Europa (UX) ## Air Europa routes and airport map Last updated on: 2019-08-18 Find all Air Europa flights, destinations, routes and airports on this airline map. The airline now flies to 16 designations throughout the South American continent and aims to increase capacity by 8.5 percent in 2019 by adding three new routes and increasing capacity in existing markets. Starting June 1, the Spanish carrier will begin flying between its base in Madrid to Puerto Iguazu, Argentina and Medellin, Colombia with twice and three times weekly frequencies, respectively, while June 3 will see the airline fly to Panama City five times weekly. However, slowing growth can also leave room for Air Europa to take the lead in some of Iberia's key destinations and serve new markets with potential for growth."
+   },
+   "evidences": [
+    {
+     "paper_id": "2973c94dd73081e8a930a2444ab8e861f23d8ec7",
+     "source_title": "aireuropa",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The routes further connect Spain with Latin America, both connected by a shared culture and language, across both North and South America.",
+     "page": 1,
+     "snippet": "The routes further connect Spain with Latin",
+     "reason": "The passage does not state the total number of destinations or mention destinations in the Caribbean or Morocco.",
+     "votes": "2-0",
+     "window": "The routes further connect Spain with Latin America, both connected by a shared culture and language, across both North and South America. # Route map Air Europa Airlines\u203aAir Europa (UX) ## Air Europa routes and airport map Last updated on: 2019-08-18 Find all Air Europa flights, destinations, routes and airports on this airline map. The airline now flies to 16 designations throughout the South American continent and aims to increase capacity by 8.5 percent in 2019 by adding three new routes and increasing capacity in existing markets. Starting June 1, the Spanish carrier will begin flying between its base in Madrid to Puerto Iguazu, Argentina and Medellin, Colombia with twice and three times weekly frequencies, respectively, while June 3 will see the airline fly to Panama City five times weekly. However, slowing growth can also leave room for Air Europa to take the lead in some of Iberia's key destinations and serve new markets with potential for growth."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the total number of destinations or mention destinations in the Caribbean or Morocco.",
+   "component_check": {
+    "found": [
+     "destinations around South America"
+    ],
+    "missing": [
+     "Air Europa flies to over 44 destinations",
+     "destinations around Spain",
+     "destinations around Europe"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "destinations around South America",
+      "paper_id": "2973c94dd73081e8a930a2444ab8e861f23d8ec7",
+      "source_title": "aireuropa",
+      "sentence": "The routes further connect Spain with Latin America, both connected by a shared culture and language, across both North and South America.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Air Europa flies to over 44 destinations around Spain, Europe, South America, North America, the Caribbean, and Morocco.",
+    "reason": "The passage directly states facts about Air Europa's destinations, which the citation is expected to prove. This falls under the 'full' scope as it's a factual assertion attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Air Europa flies to over 44 destinations and to the specific regions of Spain, Europe, South America, North America, the Caribbean, and Morocco is not supported by the cited source. The source only mentions 16 destinations in South America.",
+    "rewrite_suggestion": "Air Europa flies to 16 destinations in South America.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The airline now flies to 16 designations throughout the South American continent",
+     "why": "This sentence states only 16 South American destinations, contradicting the claim of over 44 destinations across multiple regions."
+    },
+    "why": "The shown sentence does not support any component of the claim. The source text only mentions 16 destinations in South America, not the claimed number or other regions. Therefore, the claim is unsupported by the source, and the author must either add a citation for the missing parts or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "They joint the provincial rugby league by winning the third division in its first season, following promotion to the first division in 1987.",
+   "markers": [
+    "mitre10cup"
+   ],
+   "paper_ids": [
+    "d295c75628962c9b20c3adb8cc906ba3aa7a80e1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8757,
+   "evidence": {
+    "paper_id": "d295c75628962c9b20c3adb8cc906ba3aa7a80e1",
+    "source_title": "mitre10cup",
+    "supported": false,
+    "sentence": "First British rugby tourists take the field",
+    "page": 1,
+    "snippet": "First British rugby tourists take the field",
+    "cosine": 0.8757,
+    "reason": "The passage does not contain any information about the team joining the provincial rugby league, winning the third division, or promotion to the first division in 1987.",
+    "window": "##### 28 April 1888 First British rugby tourists take the field ##### 7 September 1921"
+   },
+   "evidences": [
+    {
+     "paper_id": "d295c75628962c9b20c3adb8cc906ba3aa7a80e1",
+     "source_title": "mitre10cup",
+     "supported": false,
+     "sentence": "First British rugby tourists take the field",
+     "page": 1,
+     "snippet": "First British rugby tourists take the field",
+     "cosine": 0.8757,
+     "reason": "The passage does not contain any information about the team joining the provincial rugby league, winning the third division, or promotion to the first division in 1987.",
+     "window": "##### 28 April 1888 First British rugby tourists take the field ##### 7 September 1921"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "They joined the provincial rugby league by winning the third division in its first season, following promotion to the first division in 1987.",
+    "reason": "The passage asserts specific facts (winning the third division, promotion to the first division in 1987) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "North Harbour's entry into provincial rugby, winning third division in first season, and promotion to first division in 1987",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence ('First British rugby tourists take the field') is entirely unrelated to the claim. The provided source text contains no information about North Harbour's league history, including any mention of joining a provincial league, winning a third division, or a 1987 promotion. Therefore, every component of the claim is unsupported by the cited source, and the author must either cite a source that contains this information or rewrite the claim."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "Chris also represented the Major League All Stars Versus the Japanese All Stars in several exhibition games in Japan in November of both 2006 and 2014.",
+   "markers": [
+    "chriscapuano"
+   ],
+   "paper_ids": [
+    "400aab527696614477b3897ba55c179468a0bd60"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "400aab527696614477b3897ba55c179468a0bd60",
+    "source_title": "chriscapuano",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Japan All-Star Series 2014 will feature MLB All-Stars traveling to Japan next week to play a five-game series against \"Samurai Japan\" (Japan's National Team).",
+    "page": 1,
+    "snippet": "The Japan All-Star Series 2014 will feature",
+    "reason": "The passage mentions Chris Capuano as a 2006 All-Star but does not state he played in exhibition games in Japan in 2006 or 2014.",
+    "votes": "2-0",
+    "window": "The Japan All-Star Series 2014 will feature MLB All-Stars traveling to Japan next week to play a five-game series against \"Samurai Japan\" (Japan's National Team). The pitching staff includes (alphabetically) Jeff Beliveau (TB); Jerry Blevins (WSH); 2006 All-Star Chris Capuano (NYY); Randy Choate (STL); Jeremy Guthrie (KC); Tommy Hunter (BAL); Tokyo native and 2013 All-Star Hisashi Iwakuma (SEA); 2013 All-Star Mark Melancon (PIT); Franklin Morales (COL); Hector Santiago (LAA); Matt Shoemaker (LAA); Jose Veras (HOU); Aichi native Tsuyoshi Wada (CHI); and Rob Wooten (MIL). Two exhibition games will complement the five-game series, with one game in Osaka (Koshien Stadium) and the other in Okinawa (Okinawa Cellular Stadium)."
+   },
+   "evidences": [
+    {
+     "paper_id": "400aab527696614477b3897ba55c179468a0bd60",
+     "source_title": "chriscapuano",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Japan All-Star Series 2014 will feature MLB All-Stars traveling to Japan next week to play a five-game series against \"Samurai Japan\" (Japan's National Team).",
+     "page": 1,
+     "snippet": "The Japan All-Star Series 2014 will feature",
+     "reason": "The passage mentions Chris Capuano as a 2006 All-Star but does not state he played in exhibition games in Japan in 2006 or 2014.",
+     "votes": "2-0",
+     "window": "The Japan All-Star Series 2014 will feature MLB All-Stars traveling to Japan next week to play a five-game series against \"Samurai Japan\" (Japan's National Team). The pitching staff includes (alphabetically) Jeff Beliveau (TB); Jerry Blevins (WSH); 2006 All-Star Chris Capuano (NYY); Randy Choate (STL); Jeremy Guthrie (KC); Tommy Hunter (BAL); Tokyo native and 2013 All-Star Hisashi Iwakuma (SEA); 2013 All-Star Mark Melancon (PIT); Franklin Morales (COL); Hector Santiago (LAA); Matt Shoemaker (LAA); Jose Veras (HOU); Aichi native Tsuyoshi Wada (CHI); and Rob Wooten (MIL). Two exhibition games will complement the five-game series, with one game in Osaka (Koshien Stadium) and the other in Okinawa (Okinawa Cellular Stadium)."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage mentions Chris Capuano as a 2006 All-Star but does not state he played in exhibition games in Japan in 2006 or 2014.",
+   "component_check": {
+    "found": [
+     "in several exhibition games in Japan"
+    ],
+    "missing": [
+     "Chris represented the Major League All Stars Versus the Japanese All Stars",
+     "in November of both 2006 and 2014"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "in several exhibition games in Japan",
+      "paper_id": "400aab527696614477b3897ba55c179468a0bd60",
+      "source_title": "chriscapuano",
+      "sentence": "Two exhibition games will complement the five-game series, with one game in Osaka (Koshien Stadium) and the other in Okinawa (Okinawa Cellular Stadium).",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Chris represented the Major League All Stars Versus the Japanese All Stars in several exhibition games in Japan in November of both 2006 and 2014.",
+    "reason": "The passage asserts specific facts (representation in games, dates) that are directly attributed to the cited source. The attribution test is met as the passage states what Chris did, implying the source confirms these actions.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Chris represented the Major League All Stars versus the Japanese All Stars in exhibition games in Japan in November of 2006",
+    "rewrite_suggestion": "Chris Capuano was a member of the MLB All-Star team that played exhibition games against Japan in November 2014.",
+    "proofs": [
+     "The pitching staff includes (alphabetically) Jeff Beliveau (TB); Jerry Blevins (WSH); 2006 All-Star Chris Capuano (NYY);",
+     "Two exhibition games will complement the five-game series, with one game in Osaka (Koshien Stadium) and the other in Okinawa (Okinawa Cellular Stadium).",
+     "The Japan All-Star Series 2014 will feature MLB All-Stars traveling to Japan next week to play a five-game series against \"Samurai Japan\" (Japan's National Team)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts Chris Capuano participated in both the 2006 and 2014 Japan All-Star exhibition series. The provided source only covers the 2014 series and confirms his participation then, but it contains no information about 2006. Additionally, the shown sentence does not even mention Capuano, failing to prove the 2014 component. Therefore the author must either add a citation for the 2006 claim or rewrite the claim to omit the unsupported year."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "As of February 2019, a small number of 8K backers had received headsets, with production being fulfilled considerably more slowly than the 5K+.",
+   "markers": [
+    "pimax"
+   ],
+   "paper_ids": [
+    "2d1ba0e56b0dc80a63a0744e87e83645ffb542ba"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8391,
+   "evidence": {
+    "paper_id": "2d1ba0e56b0dc80a63a0744e87e83645ffb542ba",
+    "source_title": "pimax",
+    "supported": false,
+    "sentence": "August 24, 2019",
+    "page": 1,
+    "snippet": "August 24, 2019",
+    "cosine": 0.8391,
+    "reason": "The provided passage does not contain any information about 8K backers, headset production, or comparisons to 5K+ fulfillment as of February 2019.",
+    "window": "##### Baby Rage Unveils Plans For Crossplay VR-PC Shooter Game Extreme Tactical Executioners August 24, 2019 ##### No Man's Sky VR PC Review: Fully-Realized Virtual Universe"
+   },
+   "evidences": [
+    {
+     "paper_id": "2d1ba0e56b0dc80a63a0744e87e83645ffb542ba",
+     "source_title": "pimax",
+     "supported": false,
+     "sentence": "August 24, 2019",
+     "page": 1,
+     "snippet": "August 24, 2019",
+     "cosine": 0.8391,
+     "reason": "The provided passage does not contain any information about 8K backers, headset production, or comparisons to 5K+ fulfillment as of February 2019.",
+     "window": "##### Baby Rage Unveils Plans For Crossplay VR-PC Shooter Game Extreme Tactical Executioners August 24, 2019 ##### No Man's Sky VR PC Review: Fully-Realized Virtual Universe"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "As of February 2019, a small number of 8K backers had received headsets, with production being fulfilled considerably more slowly than the 5K+.",
+    "reason": "The passage directly states a fact about the fulfillment of 8K backers and production speed, which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim lacks support in the source: no mention of backers receiving headsets by February 2019 or any comparison of production speed to the 5K+ model.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Pimax 8K Headset Delayed Again",
+     "why": "The source title indicates the headset is delayed, which directly contradicts the claim that a small number of backers had already received headsets."
+    },
+    "why": "The provided source text (an article from January 31, 2019 titled 'Pimax 8K Headset Delayed Again') contains no sentences stating that any backers had received 8K headsets by February 2019, nor any comparison of production speed between the 8K and 5K+ models. The tool's shown sentence 'August 24, 2019' is an unrelated date from a sidebar and does not support the claim. Since no component of the claim is provable from the given source, the author must either add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "In a retrospective review, IGN gave the game 7 out of 10.",
+   "markers": [
+    "tempovideogame"
+   ],
+   "paper_ids": [
+    "aadd1d01c7605e3323fc6394bd39aff135ea9211"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8641,
+   "evidence": {
+    "paper_id": "aadd1d01c7605e3323fc6394bd39aff135ea9211",
+    "source_title": "tempovideogame",
+    "supported": false,
+    "sentence": "Wolfenstein 2: The New Colossus for Switch Review",
+    "page": 1,
+    "snippet": "Wolfenstein 2: The New Colossus for Switch",
+    "cosine": 0.8641,
+    "reason": "The passage does not mention IGN or a review score for any game.",
+    "window": "Mario + Rabbids: Kingdom Battle - Donkey Kong Adventure Review Wolfenstein 2: The New Colossus for Switch Review Inside for Nintendo Switch Review"
+   },
+   "evidences": [
+    {
+     "paper_id": "aadd1d01c7605e3323fc6394bd39aff135ea9211",
+     "source_title": "tempovideogame",
+     "supported": false,
+     "sentence": "Wolfenstein 2: The New Colossus for Switch Review",
+     "page": 1,
+     "snippet": "Wolfenstein 2: The New Colossus for Switch",
+     "cosine": 0.8641,
+     "reason": "The passage does not mention IGN or a review score for any game.",
+     "window": "Mario + Rabbids: Kingdom Battle - Donkey Kong Adventure Review Wolfenstein 2: The New Colossus for Switch Review Inside for Nintendo Switch Review"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "IGN gave the game 7 out of 10.",
+    "reason": "The passage directly attributes a specific rating and score to the cited source (IGN), which is a factual claim expected to be supported by the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific score of 7 out of 10",
+    "rewrite_suggestion": "IGN published a retrospective review of the game.",
+    "proofs": [
+     "Reviewed on 32X / 18 Nov 2008"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The tool's shown sentence ('Wolfenstein 2: The New Colossus for Switch Review') is entirely irrelevant to the claim and proves nothing. The source text does contain a retrospective IGN review of Tempo (as shown by the heading and date), but it never states a score of 7/10. Since a substantive component (the rating) is absent from the source, the author must add a citation for that figure or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "Steven Billy Mitchell, CBE, DCM, MM (born 28 December 1959), usually known by the pseudonym and pen-name of Andy McNab, is a novelist and former British Army infantry soldier.",
+   "markers": [
+    "andymcnab"
+   ],
+   "paper_ids": [
+    "03ce85ff9292b0eb0e746d4623ff1fffc717bedf"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "03ce85ff9292b0eb0e746d4623ff1fffc717bedf",
+    "source_title": "andymcnab",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Biography: Andy McNab Andy McNab was found in a carrier bag outside Guy's Hospital in 1959.",
+    "page": 1,
+    "snippet": "Biography: Andy McNab Andy McNab was found",
+    "reason": "The passage does not state that Steven Billy Mitchell was born on 28 December 1959.",
+    "votes": "2-0",
+    "window": "Biography: Andy McNab Andy McNab was found in a carrier bag outside Guy's Hospital in 1959. On the one hand, Andy McNab is a fantastic recruitment tool. His military honours include the Military Medal and the Distinguished Conduct Medal. Photograph: Martin Argles for the Guardian Martin Argles/Guardian Simon Goodley Tuesday 4 September 2012 14.36 BST Former SAS man Andy McNab has made almost \u00a31m after the ebook platform he co-founded was sold to Tesco for \u00a34.5m. He joined the Royal Green Jackets in 1976, and became the youngest corporal in the army at 19. He says that \"I was responsible for 35 per cent of the infantry intake in the mid- to late Nineties,\" and the army has consulted him on recruitment and retention. He has written about his experiences in the SAS in three books: Bravo Two Zero, Immediate Action and Seven Troop, with Bravo Two Zero selling over 1.7m copies in the UK. Mobcast, which has 130,000 titles available for download to tablet computers and mobile phones, was founded by the soldier-cum-author in 2007 along with the company's boss, Tony Lynch."
+   },
+   "evidences": [
+    {
+     "paper_id": "03ce85ff9292b0eb0e746d4623ff1fffc717bedf",
+     "source_title": "andymcnab",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Biography: Andy McNab Andy McNab was found in a carrier bag outside Guy's Hospital in 1959.",
+     "page": 1,
+     "snippet": "Biography: Andy McNab Andy McNab was found",
+     "reason": "The passage does not state that Steven Billy Mitchell was born on 28 December 1959.",
+     "votes": "2-0",
+     "window": "Biography: Andy McNab Andy McNab was found in a carrier bag outside Guy's Hospital in 1959. On the one hand, Andy McNab is a fantastic recruitment tool. His military honours include the Military Medal and the Distinguished Conduct Medal. Photograph: Martin Argles for the Guardian Martin Argles/Guardian Simon Goodley Tuesday 4 September 2012 14.36 BST Former SAS man Andy McNab has made almost \u00a31m after the ebook platform he co-founded was sold to Tesco for \u00a34.5m. He joined the Royal Green Jackets in 1976, and became the youngest corporal in the army at 19. He says that \"I was responsible for 35 per cent of the infantry intake in the mid- to late Nineties,\" and the army has consulted him on recruitment and retention. He has written about his experiences in the SAS in three books: Bravo Two Zero, Immediate Action and Seven Troop, with Bravo Two Zero selling over 1.7m copies in the UK. Mobcast, which has 130,000 titles available for download to tablet computers and mobile phones, was founded by the soldier-cum-author in 2007 along with the company's boss, Tony Lynch."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Steven Billy Mitchell was born on 28 December 1959.",
+   "component_check": {
+    "found": [
+     "He is a former British Army infantry soldier."
+    ],
+    "missing": [
+     "Steven Billy Mitchell, CBE, DCM, MM was born on 28 December 1959.",
+     "He is usually known by the pseudonym and pen-name of Andy McNab.",
+     "He is a novelist."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He is a former British Army infantry soldier.",
+      "paper_id": "03ce85ff9292b0eb0e746d4623ff1fffc717bedf",
+      "source_title": "andymcnab",
+      "sentence": "He joined the Royal Green Jackets in 1976, and became the youngest corporal in the army at 19.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Steven Billy Mitchell, CBE, DCM, MM (born 28 December 1959), usually known by the pseudonym and pen-name of Andy McNab, is a novelist and former British Army infantry soldier.",
+    "reason": "The passage directly states facts about Andy McNab, including his birth date, pseudonym, profession, and military service. These are assertions that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The exact birth date '28 December 1959', the middle name 'Billy', and the honour 'CBE' are not supported by the cited source.",
+    "rewrite_suggestion": "Steven Mitchell, DCM, MM (born 1959), known as Andy McNab, is a novelist and former British Army infantry soldier.",
+    "proofs": [
+     "McNab's shares registered under his real name of Steven Mitchell.",
+     "His military honours include the Military Medal and the Distinguished Conduct Medal.",
+     "He joined the Royal Green Jackets in 1976"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim includes specific details (exact birth date, middle name 'Billy', and the honour 'CBE') that are not present in the provided source text. The source only confirms a birth year of 1959, the real name 'Steven Mitchell', and honours DCM and MM. The shown sentence is too narrow and does not cover any of the claim's components. Since at least one substantive component is unprovable from the source, the author must add a citation or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "She is also the author of \"Chekhov: Scenes from a Life\" (2004) and has translated two volumes of Anton Chekhov's short stories.",
+   "markers": [
+    "rosamundbartlett"
+   ],
+   "paper_ids": [
+    "d33993280a8611c3aeb30de9961712eb821fdca7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9239,
+   "evidence": {
+    "paper_id": "d33993280a8611c3aeb30de9961712eb821fdca7",
+    "source_title": "rosamundbartlett",
+    "supported": false,
+    "sentence": "It's hardly fair to compare her book with Joseph Frank's 50-years-in-the-making life of Dostoevsky, but in terms of English language biographies, at least, Tolstoy's great rival currently has the upper hand.",
+    "page": 1,
+    "snippet": "It's hardly fair to compare her book",
+    "cosine": 0.9239,
+    "reason": "The passage mentions a book by the author but does not state that she is the author of \"Chekhov: Scenes from a Life\" or that she has translated two volumes of Anton Chekhov's short stories.",
+    "window": "Bartlett aims for even-handedness but ends up scolding her subject anyway, grumbling in asides about his humourlessness, vanity and \"self-righteous hypocrisy\", and even getting impatient with him for writing \"very long\" letters about the meaning of life, which is surely a case of telling off Lassie for barking. It's hardly fair to compare her book with Joseph Frank's 50-years-in-the-making life of Dostoevsky, but in terms of English language biographies, at least, Tolstoy's great rival currently has the upper hand. Leo Tolstoy The Observer Biography books Reuse this content"
+   },
+   "evidences": [
+    {
+     "paper_id": "d33993280a8611c3aeb30de9961712eb821fdca7",
+     "source_title": "rosamundbartlett",
+     "supported": false,
+     "sentence": "It's hardly fair to compare her book with Joseph Frank's 50-years-in-the-making life of Dostoevsky, but in terms of English language biographies, at least, Tolstoy's great rival currently has the upper hand.",
+     "page": 1,
+     "snippet": "It's hardly fair to compare her book",
+     "cosine": 0.9239,
+     "reason": "The passage mentions a book by the author but does not state that she is the author of \"Chekhov: Scenes from a Life\" or that she has translated two volumes of Anton Chekhov's short stories.",
+     "window": "Bartlett aims for even-handedness but ends up scolding her subject anyway, grumbling in asides about his humourlessness, vanity and \"self-righteous hypocrisy\", and even getting impatient with him for writing \"very long\" letters about the meaning of life, which is surely a case of telling off Lassie for barking. It's hardly fair to compare her book with Joseph Frank's 50-years-in-the-making life of Dostoevsky, but in terms of English language biographies, at least, Tolstoy's great rival currently has the upper hand. Leo Tolstoy The Observer Biography books Reuse this content"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Anton Chekhov's",
+    "missing_from": [
+     "d33993280a8611c3aeb30de9961712eb821fdca7"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "She is also the author of \"Chekhov: Scenes from a Life\" (2004) and has translated two volumes of Anton Chekhov's short stories.",
+    "reason": "The passage directly attributes factual statements about the author's works to the cited source. This falls under the 'full' scope as the citation is expected to prove these biographical details.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Rosamund Bartlett is the author of 'Chekhov: Scenes from a Life' (2004) and has translated two volumes of Anton Chekhov's short stories is entirely absent from the provided source text, which only discusses her biography of Tolstoy.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the tool does not address any component of the claim; it compares Bartlett's Tolstoy biography to another work. The source text contains no mention of a Chekhov biography or any translations by Bartlett. Since the substantive components (specific publication and translation work) are not provable from the source at all, the author must either add a citation for those facts or rewrite the claim to exclude them."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "He trains with hometown club Wakayama Rikkyo in the Wakayama Prefecture.",
+   "markers": [
+    "shoheioka"
+   ],
+   "paper_ids": [
+    "fe812044316b396ce437d149954209dd9a573d2f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8513,
+   "evidence": {
+    "paper_id": "fe812044316b396ce437d149954209dd9a573d2f",
+    "source_title": "shoheioka",
+    "supported": false,
+    "sentence": "Oct. 20: Takashimadaira 20 km Road Race, Tokyo",
+    "page": 1,
+    "snippet": "Oct. 20: Takashimadaira 20 km Road Race,",
+    "cosine": 0.8513,
+    "reason": "The passage does not mention the hometown club Wakayama Rikkyo or the Wakayama Prefecture.",
+    "window": "Oct. 20: National Corporate Women's Ekiden Quaifier, Hyogo Oct. 20: Takashimadaira 20 km Road Race, Tokyo Oct. 26: Hakone Ekiden Yosenkai Qualifier Half Marathon, Tokyo"
+   },
+   "evidences": [
+    {
+     "paper_id": "fe812044316b396ce437d149954209dd9a573d2f",
+     "source_title": "shoheioka",
+     "supported": false,
+     "sentence": "Oct. 20: Takashimadaira 20 km Road Race, Tokyo",
+     "page": 1,
+     "snippet": "Oct. 20: Takashimadaira 20 km Road Race,",
+     "cosine": 0.8513,
+     "reason": "The passage does not mention the hometown club Wakayama Rikkyo or the Wakayama Prefecture.",
+     "window": "Oct. 20: National Corporate Women's Ekiden Quaifier, Hyogo Oct. 20: Takashimadaira 20 km Road Race, Tokyo Oct. 26: Hakone Ekiden Yosenkai Qualifier Half Marathon, Tokyo"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM returned no usable source sentence (fragments or claim echo)",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He trains with hometown club Wakayama Rikkyo in the Wakayama Prefecture.",
+    "reason": "The passage asserts a factual statement about the subject's training location. The citation is expected to prove this specific fact.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "trains with hometown club Wakayama Rikkyo",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no mention of 'Wakayama Rikkyo' or any training club. The only Wakayama reference is 'Wakayama T&F Assoc.' in the results list, which is not the claimed club. The shown sentence is entirely unrelated. Therefore the claim's core component is not provable from the cited source, requiring the author to add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "It also includes a cover of a 1970s Bob Marley classic and a song that draws its lyrics from two poems.",
+   "markers": [
+    "songsofournativedaughter"
+   ],
+   "paper_ids": [
+    "98ecfe281d6dbedf941d7fb11e77777be398c188"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.922,
+   "evidence": {
+    "paper_id": "98ecfe281d6dbedf941d7fb11e77777be398c188",
+    "source_title": "songsofournativedaughter",
+    "supported": false,
+    "sentence": "52 minutes, 36-page booklet with lyrics.",
+    "page": 1,
+    "snippet": "52 minutes, 36-page booklet with lyrics.",
+    "cosine": 0.922,
+    "reason": "The passage does not mention a cover of a Bob Marley song or a song with lyrics from two poems.",
+    "window": "These songs call on the persistent spirits of the daughters, mothers, and grandmothers who have fought for justice \u2013 in large, public ways \u2013 only now being recognized, and in countless domestic ways that will most likely never be acknowledged. 52 minutes, 36-page booklet with lyrics. RELATED VIDEOThe Making of \"Mama's Cryin' Long\" from Songs of Our Native Daughters"
+   },
+   "evidences": [
+    {
+     "paper_id": "98ecfe281d6dbedf941d7fb11e77777be398c188",
+     "source_title": "songsofournativedaughter",
+     "supported": false,
+     "sentence": "52 minutes, 36-page booklet with lyrics.",
+     "page": 1,
+     "snippet": "52 minutes, 36-page booklet with lyrics.",
+     "cosine": 0.922,
+     "reason": "The passage does not mention a cover of a Bob Marley song or a song with lyrics from two poems.",
+     "window": "These songs call on the persistent spirits of the daughters, mothers, and grandmothers who have fought for justice \u2013 in large, public ways \u2013 only now being recognized, and in countless domestic ways that will most likely never be acknowledged. 52 minutes, 36-page booklet with lyrics. RELATED VIDEOThe Making of \"Mama's Cryin' Long\" from Songs of Our Native Daughters"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts that the cited source includes a cover of a 1970s Bob Marley classic and a song that draws its lyrics from two poems.",
+    "reason": "The passage directly describes content that is expected to be found within the cited source. There is no indication that the citation is for methods, a concept, or related work; it appears to be a direct assertion of facts from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the album includes a cover of a 1970s Bob Marley classic and a song that draws its lyrics from two poems is not supported by the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence '52 minutes, 36-page booklet with lyrics' does not mention either a Bob Marley cover or a poem-inspired song. The full source text, which describes the album and lists tracks, contains no reference to a Bob Marley classic or a song drawing from two poems. Therefore, these components are entirely absent from the source, requiring the author to either add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "And as a member of Washingtonian's black elite, Cook demonstrated living proof that a black man in 19th century United States could infiltrate the three main spheres of influence in American life: the political, the social, and the economic.",
+   "markers": [
+    "johnfcookjr"
+   ],
+   "paper_ids": [
+    "b332af281c4fe7f24d9ff25aae196fc636338bd8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b332af281c4fe7f24d9ff25aae196fc636338bd8",
+    "source_title": "johnfcookjr",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Eureka Lodge has produced nine Most Worshipful Grand Masters: Edward M. Thomas (1861), Robert Booker (1864), John F. Cook (1866-73, 1876-77), William Taliaferro (1875), Samuel Rodger Watts (1884-86), John T. Layton (1905), John P. Turner (1920), George M. Ambler (1933) and Warren R. Whitley (1997-98).",
+    "page": 1,
+    "snippet": "Eureka Lodge has produced nine Most Worshipful",
+    "reason": "The passage does not mention Cook's membership in Washingtonian's black elite or his infiltration of political, social, and economic spheres.",
+    "votes": "2-0",
+    "window": "Eureka Lodge has produced nine Most Worshipful Grand Masters: Edward M. Thomas (1861), Robert Booker (1864), John F. Cook (1866-73, 1876-77), William Taliaferro (1875), Samuel Rodger Watts (1884-86), John T. Layton (1905), John P. Turner (1920), George M. Ambler (1933) and Warren R. Whitley (1997-98)."
+   },
+   "evidences": [
+    {
+     "paper_id": "b332af281c4fe7f24d9ff25aae196fc636338bd8",
+     "source_title": "johnfcookjr",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Eureka Lodge has produced nine Most Worshipful Grand Masters: Edward M. Thomas (1861), Robert Booker (1864), John F. Cook (1866-73, 1876-77), William Taliaferro (1875), Samuel Rodger Watts (1884-86), John T. Layton (1905), John P. Turner (1920), George M. Ambler (1933) and Warren R. Whitley (1997-98).",
+     "page": 1,
+     "snippet": "Eureka Lodge has produced nine Most Worshipful",
+     "reason": "The passage does not mention Cook's membership in Washingtonian's black elite or his infiltration of political, social, and economic spheres.",
+     "votes": "2-0",
+     "window": "Eureka Lodge has produced nine Most Worshipful Grand Masters: Edward M. Thomas (1861), Robert Booker (1864), John F. Cook (1866-73, 1876-77), William Taliaferro (1875), Samuel Rodger Watts (1884-86), John T. Layton (1905), John P. Turner (1920), George M. Ambler (1933) and Warren R. Whitley (1997-98)."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Cook's membership in Washingtonian's black elite or his infiltration of political, social, and economic spheres.",
+   "subject_guard": {
+    "subject": "United States",
+    "missing_from": [
+     "b332af281c4fe7f24d9ff25aae196fc636338bd8"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Cook demonstrated living proof that a black man in 19th century United States could infiltrate the three main spheres of influence in American life: the political, the social, and the economic.",
+    "reason": "The passage asserts a specific finding or statement about John F. Cook Jr.'s life and achievements, implying that the cited source is expected to provide evidence for this claim. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the assertions that Cook was a member of Washington's black elite and that he infiltrated the political, social, and economic spheres of influence",
+    "rewrite_suggestion": "John F. Cook served as a Most Worshipful Grand Master of Eureka Lodge No. 5, a notable achievement within a fraternal social organization.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim requires that the source show Cook was part of Washington's black elite and that he infiltrated political, social, and economic spheres; the source text only mentions his role as a Most Worshipful Grand Master in a Masonic lodge, with no reference to elite membership or any political or economic influence. Since these substantive components are not present in the source at all, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "Similarly, in the 2018 QS Top 50 Under 50 index of universities founded less than 50 years ago, UTS ranked 8th in the world and 1st in Australia.",
+   "markers": [
+    "universityoftechnologysy"
+   ],
+   "paper_ids": [
+    "296b062b8daad1d88a2d4ca6326e8e2d7e93b2af"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9533,
+   "evidence": {
+    "paper_id": "296b062b8daad1d88a2d4ca6326e8e2d7e93b2af",
+    "source_title": "universityoftechnologysy",
+    "supported": false,
+    "sentence": "Top 10 Universities in Europe Under 50 Years Old Discover the top 10 universities in Europe under 50 years old, based on the results of the QS Top 50 Under 50 2016-2017.",
+    "page": 1,
+    "snippet": "Top 10 Universities in Europe Under 50",
+    "cosine": 0.9533,
+    "reason": "The passage mentions the QS Top 50 Under 50 index but refers to the 2016-2017 results, not the 2018 results as stated in the claim.",
+    "window": "Click the QS Stars for detailed results COUNTRY GUIDE By location Rated only Compare Clear all Refine: By location #### Related content Top Young Universities in Australia Read about the top young Universities in Australia, based on the QS Top 50 Under 50 2016-2017. Top 10 Universities in Europe Under 50 Years Old Discover the top 10 universities in Europe under 50 years old, based on the results of the QS Top 50 Under 50 2016-2017. Asia's Top Young Universities: NTU vs HKUST Compare Asia's top young universities: Nanyang Technological University (NTU) and Hong Kong University of Science and Technology (HKUST)."
+   },
+   "evidences": [
+    {
+     "paper_id": "296b062b8daad1d88a2d4ca6326e8e2d7e93b2af",
+     "source_title": "universityoftechnologysy",
+     "supported": false,
+     "sentence": "Top 10 Universities in Europe Under 50 Years Old Discover the top 10 universities in Europe under 50 years old, based on the results of the QS Top 50 Under 50 2016-2017.",
+     "page": 1,
+     "snippet": "Top 10 Universities in Europe Under 50",
+     "cosine": 0.9533,
+     "reason": "The passage mentions the QS Top 50 Under 50 index but refers to the 2016-2017 results, not the 2018 results as stated in the claim.",
+     "window": "Click the QS Stars for detailed results COUNTRY GUIDE By location Rated only Compare Clear all Refine: By location #### Related content Top Young Universities in Australia Read about the top young Universities in Australia, based on the QS Top 50 Under 50 2016-2017. Top 10 Universities in Europe Under 50 Years Old Discover the top 10 universities in Europe under 50 years old, based on the results of the QS Top 50 Under 50 2016-2017. Asia's Top Young Universities: NTU vs HKUST Compare Asia's top young universities: Nanyang Technological University (NTU) and Hong Kong University of Science and Technology (HKUST)."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "similarly",
+    "missing_from": [
+     "296b062b8daad1d88a2d4ca6326e8e2d7e93b2af"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "UTS ranked 8th in the world and 1st in Australia in the 2018 QS Top 50 Under 50 index.",
+    "reason": "The passage directly states a factual finding (ranking) attributed to a specific index. This is a claim that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "UTS ranked 8th in the world and 1st in Australia in the 2018 QS Top 50 Under 50",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Discover the fastest-rising stars of the higher education world founded less than 50 years ago"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim asserts that UTS was 8th in the world and 1st in Australia in the 2018 QS Top 50 Under 50, but the provided source text does not contain any ranking data for UTS or any specific list beyond the top university. The shown sentence is about a different year and region. The source only confirms the existence of the 2018 index and its definition, not the claimed rankings. Therefore the author must either cite a source that includes those rankings or revise the claim to omit the unsupported ranks."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "The objective of this part is to get 3 numbers or symbols in a row for a jackpot.",
+   "markers": [
+    "pachinko"
+   ],
+   "paper_ids": [
+    "50fdaf1aaff3f275e00f36730406a16322e5322c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.712,
+   "evidence": {
+    "paper_id": "50fdaf1aaff3f275e00f36730406a16322e5322c",
+    "source_title": "pachinko",
+    "supported": false,
+    "sentence": "Demo broken Wrong Demo Annoying pop-ups in demo Incorrect game info Please explain: Stay updated!",
+    "page": 1,
+    "snippet": "Demo broken Wrong Demo Annoying pop-ups in",
+    "cosine": 0.712,
+    "reason": "The passage does not mention the objective of getting 3 numbers or symbols in a row for a jackpot.",
+    "window": "What is the ISSUE? Demo broken Wrong Demo Annoying pop-ups in demo Incorrect game info Please explain: Stay updated! Free Bonus offers and Casino news in your inbox monthly!"
+   },
+   "evidences": [
+    {
+     "paper_id": "50fdaf1aaff3f275e00f36730406a16322e5322c",
+     "source_title": "pachinko",
+     "supported": false,
+     "sentence": "Demo broken Wrong Demo Annoying pop-ups in demo Incorrect game info Please explain: Stay updated!",
+     "page": 1,
+     "snippet": "Demo broken Wrong Demo Annoying pop-ups in",
+     "cosine": 0.712,
+     "reason": "The passage does not mention the objective of getting 3 numbers or symbols in a row for a jackpot.",
+     "window": "What is the ISSUE? Demo broken Wrong Demo Annoying pop-ups in demo Incorrect game info Please explain: Stay updated! Free Bonus offers and Casino news in your inbox monthly!"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes the objective of a game or task, which is a factual statement that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "getting 3 numbers or symbols in a row for a jackpot",
+    "rewrite_suggestion": "The objective of this part is to have steel balls fall through obstacles in a Pachinko game, with much left to chance.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that the objective is to get 3 numbers or symbols in a row for a jackpot, but the cited source text on Pachinko does not mention any such objective. The source describes Pachinko as a game where steel balls fall through barriers and flappers, with no reference to matching symbols or a jackpot. Therefore, the claim is unsupported by the source and requires either a new citation or a rewrite."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "In the 2011 parliamentary election, SLD received 8.24% of the vote which gave it 27 seats in the Sejm.",
+   "markers": [
+    "democraticleftalliance"
+   ],
+   "paper_ids": [
+    "d2c7cd78fe33c80dae984a4f8636d11b4679733e"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": 0.869,
+   "evidence": {
+    "paper_id": "d2c7cd78fe33c80dae984a4f8636d11b4679733e",
+    "source_title": "democraticleftalliance",
+    "supported": false,
+    "sentence": "List of Members of Parliament in term 2011 - 2015",
+    "page": 1,
+    "snippet": "List of Members of Parliament in term",
+    "cosine": 0.869,
+    "reason": "The passage does not mention the SLD party or its election results.",
+    "window": "11Komitet Wyborczy Wyborc\u00f3w Mniejszo\u015b\u0107 Niemiecka 0,19% Yes1 List of Members of Parliament in term 2011 - 2015 Constituency no."
+   },
+   "evidences": [
+    {
+     "paper_id": "d2c7cd78fe33c80dae984a4f8636d11b4679733e",
+     "source_title": "democraticleftalliance",
+     "sentence": "3Komitet Wyborczy Sojusz Lewicy Demokratycznej 8,24% Yes27",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "d2c7cd78fe33c80dae984a4f8636d11b4679733e",
+     "source_title": "democraticleftalliance",
+     "sentence": "Election results \u00bbPoland Poland Poland",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the 'Komitet Wyborczy Sojusz Lewicy Demokratycznej' received 8.24% of the vote and 27 mandates in the Sejm. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "3Komitet Wyborczy Sojusz Lewicy Demokratycznej 8,24% Yes27",
+     "Election results \u00bbPoland Poland Poland"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The tool's shown sentence 'List of Members of Parliament in term 2011 - 2015' is merely a heading and provides no support for any component of the claim. However, the source text clearly contains the exact figures: '3Komitet Wyborczy Sojusz Lewicy Demokratycznej 8,24% Yes27' within the context of the 2011 election results, which proves the claim entirely. Thus the error is in the tool's selection of evidence, not in the source or the author's use of it.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t23",
+   "text": "During this period he inaugurated the Arab News Interactive Forum which hosts symposiums in the presence of officials and diplomats to discuss the current world affairs.",
+   "markers": [
+    "mohammedfahadalharthi"
+   ],
+   "paper_ids": [
+    "a07315131d8f15da2fcbba2b0e4741ebd7709383"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a07315131d8f15da2fcbba2b0e4741ebd7709383",
+    "source_title": "mohammedfahadalharthi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(AN photos by Ghazi Mahdi) 5 / 7 Arab News Editor in Chief Mohammed Fahad Al-Harthi addresses the Arab News Dialogue in Jeddah, attended by Pakistan Ambassador Manzoor ul Haq and community leaders Amir Muhammad Khan, S. Qasim Ali Naqvi and Syed Ehsanul Haque.",
+    "page": 1,
+    "snippet": "(AN photos by Ghazi Mahdi) 5 /",
+    "reason": "The passage does not mention the inauguration of the Arab News Interactive Forum or that it hosts symposiums in the presence of officials and diplomats to discuss current world affairs.",
+    "votes": "2-0",
+    "window": "(AN photos by Ghazi Mahdi) 5 / 7 Arab News Editor in Chief Mohammed Fahad Al-Harthi addresses the Arab News Dialogue in Jeddah, attended by Pakistan Ambassador Manzoor ul Haq and community leaders Amir Muhammad Khan, S. Qasim Ali Naqvi and Syed Ehsanul Haque. The forum's theme was: \"Expat Communities in Saudi Arabia: Their Contribution and Responsibilities.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "a07315131d8f15da2fcbba2b0e4741ebd7709383",
+     "source_title": "mohammedfahadalharthi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(AN photos by Ghazi Mahdi) 5 / 7 Arab News Editor in Chief Mohammed Fahad Al-Harthi addresses the Arab News Dialogue in Jeddah, attended by Pakistan Ambassador Manzoor ul Haq and community leaders Amir Muhammad Khan, S. Qasim Ali Naqvi and Syed Ehsanul Haque.",
+     "page": 1,
+     "snippet": "(AN photos by Ghazi Mahdi) 5 /",
+     "reason": "The passage does not mention the inauguration of the Arab News Interactive Forum or that it hosts symposiums in the presence of officials and diplomats to discuss current world affairs.",
+     "votes": "2-0",
+     "window": "(AN photos by Ghazi Mahdi) 5 / 7 Arab News Editor in Chief Mohammed Fahad Al-Harthi addresses the Arab News Dialogue in Jeddah, attended by Pakistan Ambassador Manzoor ul Haq and community leaders Amir Muhammad Khan, S. Qasim Ali Naqvi and Syed Ehsanul Haque. The forum's theme was: \"Expat Communities in Saudi Arabia: Their Contribution and Responsibilities.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the inauguration of the Arab News Interactive Forum or that it hosts symposiums in the presence of officials and diplomats to discuss current world affairs.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "During this period he inaugurated the Arab News Interactive Forum which hosts symposiums in the presence of officials and diplomats to discuss the current world affairs.",
+    "reason": "The passage directly states an action taken by the individual, implying the cited source is expected to provide evidence for this inauguration and the forum's activities.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim: 'During this period he inaugurated the Arab News Interactive Forum which hosts symposiums in the presence of officials and diplomats to discuss the current world affairs.' The source contains no mention of an 'Interactive Forum' or any inauguration; it only describes an 'Arab News Dialogue' that he addressed, with a theme about expatriate communities.",
+    "rewrite_suggestion": "During this period he addressed the Arab News Dialogue in Jeddah, attended by officials and diplomats, to discuss expatriate communities.",
+    "proofs": [
+     "Arab News Editor in Chief Mohammed Fahad Al-Harthi addresses the Arab News Dialogue in Jeddah, attended by Pakistan Ambassador Manzoor ul Haq and community leaders Amir Muhammad Khan, S. Qasim Ali Naqvi and Syed Ehsanul Haque. The forum's theme was: \"Expat Communities in Saudi Arabia: Their Contribution and Responsibilities.\""
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the subject inaugurated the 'Arab News Interactive Forum' and that this forum hosts symposiums about current world affairs. However, the source only documents an event called the 'Arab News Dialogue' that he addressed, with a specific theme about expatriate communities. There is no reference to any 'Interactive Forum', an act of inauguration, or a general discussion of current world affairs. All substantive components of the claim are absent from the source, requiring the author to either add a citation or rewrite the claim to match the source's content."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "Throughout the state, rainfall totals ranged from light to moderate, with precipitation from the storm peaked at 13.98 inches (355 mm) in the Everglades portions of Miami-Dade County.",
+   "markers": [
+    "effectsofhurricaneandrew"
+   ],
+   "paper_ids": [
+    "53582bd663cbf0c8a21246f3bdf2dc1183e34150"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8788,
+   "evidence": {
+    "paper_id": "53582bd663cbf0c8a21246f3bdf2dc1183e34150",
+    "source_title": "effectsofhurricaneandrew",
+    "supported": false,
+    "sentence": "The graphics below show the storm total rainfall for Andrew...data by the National Climatic Data Center in Asheville, NC and South Florida Water Management.",
+    "page": 1,
+    "snippet": "The graphics below show the storm total",
+    "cosine": 0.8788,
+    "reason": "The passage mentions rainfall totals for Hurricane Andrew but does not provide specific figures or locations for the precipitation amounts.",
+    "window": "Its track is below, produced by the National Hurricane Center. The graphics below show the storm total rainfall for Andrew...data by the National Climatic Data Center in Asheville, NC and South Florida Water Management. The first row of maps show the detail in South Florida near Andrew's track."
+   },
+   "evidences": [
+    {
+     "paper_id": "53582bd663cbf0c8a21246f3bdf2dc1183e34150",
+     "source_title": "effectsofhurricaneandrew",
+     "supported": false,
+     "sentence": "The graphics below show the storm total rainfall for Andrew...data by the National Climatic Data Center in Asheville, NC and South Florida Water Management.",
+     "page": 1,
+     "snippet": "The graphics below show the storm total",
+     "cosine": 0.8788,
+     "reason": "The passage mentions rainfall totals for Hurricane Andrew but does not provide specific figures or locations for the precipitation amounts.",
+     "window": "Its track is below, produced by the National Hurricane Center. The graphics below show the storm total rainfall for Andrew...data by the National Climatic Data Center in Asheville, NC and South Florida Water Management. The first row of maps show the detail in South Florida near Andrew's track."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Miami-Dade County; throughout",
+    "missing_from": [
+     "53582bd663cbf0c8a21246f3bdf2dc1183e34150"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "rainfall totals ranged from light to moderate, with precipitation from the storm peaked at 13.98 inches (355 mm) in the Everglades portions of Miami-Dade County.",
+    "reason": "The passage directly states factual findings (rainfall totals and peak precipitation) that are attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is presenting data that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific peak precipitation of 13.98 inches (355 mm) and the classification of rainfall as 'light to moderate' statewide are not found in the cited source.",
+    "rewrite_suggestion": "Storm total rainfall for Hurricane Andrew is shown in graphics from the National Climatic Data Center and South Florida Water Management.",
+    "proofs": [
+     "The graphics below show the storm total rainfall for Andrew...data by the National Climatic Data Center in Asheville, NC and South Florida Water Management."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only references graphics containing storm total rainfall data, but does not provide any specific numeric peak or qualitative range. The source text itself contains no mention of 13.98 inches, 355 mm, or 'light to moderate' rainfall totals. Therefore, every substantive component of the claim is unprovable from the cited source, requiring the author to either add a citation that contains that data or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "He made his debut for the club on 27 August, starting in a 1\u20130 win over Desportivo Aves which saw Boavista register their first win of the season.",
+   "markers": [
+    "stphanesparagna"
+   ],
+   "paper_ids": [
+    "bde176d88e387a31b046e6b6567999c9fd409295"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8418,
+   "evidence": {
+    "paper_id": "bde176d88e387a31b046e6b6567999c9fd409295",
+    "source_title": "stphanesparagna",
+    "supported": false,
+    "sentence": "Off for Cristian Arango Rodrigo Alves Carlos Ponck 81' Off for Sami Ryan Gauld Vitor Gomes 68' Red Card Miguel Leal 4-2-3-1 Leonardo Ruiz 75' On for Iv\u00e1n Bulos Yusupha Om Njie 73' On for Rochinha 82' On for Mateus Ricardo Soares",
+    "page": 1,
+    "snippet": "Off for Cristian Arango Rodrigo Alves Carlos",
+    "cosine": 0.8418,
+    "reason": "The passage does not mention the date of the debut, the opponent, the score, or that it was the club's first win of the season.",
+    "window": "## Live feed ## Line-ups V\u00edtor Bruno Eduardo Machado S. Sparagna 57' Raphael Rossi 73' Off for Carra\u00e7a F\u00e1bio Espinho 31' Yellow Card 82' Off for Kuca Renato Santos 80' Yellow Card Idrissa Mandiang 75' Off for Leonardo Ruiz Iv\u00e1n Bulos 56' Yellow Card Nelson Lenho 74' Off for Cristian Arango Rodrigo Alves Carlos Ponck 81' Off for Sami Ryan Gauld Vitor Gomes 68' Red Card Miguel Leal 4-2-3-1 Leonardo Ruiz 75' On for Iv\u00e1n Bulos Yusupha Om Njie 73' On for Rochinha 82' On for Mateus Ricardo Soares 4-4-2 (D.P.)"
+   },
+   "evidences": [
+    {
+     "paper_id": "bde176d88e387a31b046e6b6567999c9fd409295",
+     "source_title": "stphanesparagna",
+     "supported": false,
+     "sentence": "Off for Cristian Arango Rodrigo Alves Carlos Ponck 81' Off for Sami Ryan Gauld Vitor Gomes 68' Red Card Miguel Leal 4-2-3-1 Leonardo Ruiz 75' On for Iv\u00e1n Bulos Yusupha Om Njie 73' On for Rochinha 82' On for Mateus Ricardo Soares",
+     "page": 1,
+     "snippet": "Off for Cristian Arango Rodrigo Alves Carlos",
+     "cosine": 0.8418,
+     "reason": "The passage does not mention the date of the debut, the opponent, the score, or that it was the club's first win of the season.",
+     "window": "## Live feed ## Line-ups V\u00edtor Bruno Eduardo Machado S. Sparagna 57' Raphael Rossi 73' Off for Carra\u00e7a F\u00e1bio Espinho 31' Yellow Card 82' Off for Kuca Renato Santos 80' Yellow Card Idrissa Mandiang 75' Off for Leonardo Ruiz Iv\u00e1n Bulos 56' Yellow Card Nelson Lenho 74' Off for Cristian Arango Rodrigo Alves Carlos Ponck 81' Off for Sami Ryan Gauld Vitor Gomes 68' Red Card Miguel Leal 4-2-3-1 Leonardo Ruiz 75' On for Iv\u00e1n Bulos Yusupha Om Njie 73' On for Rochinha 82' On for Mateus Ricardo Soares 4-4-2 (D.P.)"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He made his debut for the club on 27 August, starting in a 1\u20130 win over Desportivo Aves which saw Boavista register their first win of the season.",
+    "reason": "The passage asserts specific facts (date of debut, match result, team's first win) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that he made his debut on 27 August and that the win was Boavista's first of the season; no evidence for those in the source.",
+    "rewrite_suggestion": "He was in the lineup for Boavista's 1-0 win over Desportivo Aves, but the source does not mention a debut on 27 August or that it was the first win of the season.",
+    "proofs": [
+     "Boavista vs. Desportivo Aves live: Liga Portuguesa 2017/2018 - AS.com",
+     "S. Sparagna 57' Raphael Rossi"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim includes a specific date (27 August) and a statement about the win being Boavista's first of the season, neither of which appear in the provided source. The source does show a 1-0 win over Desportivo Aves and includes a player named Sparagna in the lineup, but does not mention a debut or that it was the first win. The shown sentences are a scrambled substitution list and do not support the claim. Therefore, the author must add citations or rewrite the claim."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "At several points when rates of TB diagnosis lessened, the efforts to prevent the disease were defunded, resulting in an increase in infection rates again.",
+   "markers": [
+    "indianhospital"
+   ],
+   "paper_ids": [
+    "15537961c8728d1f2e8be0abcb8b468bd052b77e"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9033,
+   "evidence": {
+    "paper_id": "15537961c8728d1f2e8be0abcb8b468bd052b77e",
+    "source_title": "indianhospital",
+    "supported": true,
+    "sentence": "[21] Although past governments made concentrated efforts to combat TB during periods of outbreaks, there were never consistent treatment campaigns.",
+    "page": 1,
+    "snippet": "Although past governments made concentrated efforts to",
+    "cosine": 0.9033,
+    "reason": "The passage states that when TB rates declined, healthcare intervention was abandoned, which supports the claim that efforts to prevent the disease were defunded, resulting in an increase in infection rates.",
+    "window": "[20] Unemployment, mental illness, and addiction have been found to worsen rates of TB as well. [21] Although past governments made concentrated efforts to combat TB during periods of outbreaks, there were never consistent treatment campaigns. Historically, when TB rates declined, healthcare intervention was abandoned."
+   },
+   "evidences": [
+    {
+     "paper_id": "15537961c8728d1f2e8be0abcb8b468bd052b77e",
+     "source_title": "indianhospital",
+     "supported": true,
+     "sentence": "[21] Although past governments made concentrated efforts to combat TB during periods of outbreaks, there were never consistent treatment campaigns.",
+     "page": 1,
+     "snippet": "Although past governments made concentrated efforts to",
+     "cosine": 0.9033,
+     "reason": "The passage states that when TB rates declined, healthcare intervention was abandoned, which supports the claim that efforts to prevent the disease were defunded, resulting in an increase in infection rates.",
+     "window": "[20] Unemployment, mental illness, and addiction have been found to worsen rates of TB as well. [21] Although past governments made concentrated efforts to combat TB during periods of outbreaks, there were never consistent treatment campaigns. Historically, when TB rates declined, healthcare intervention was abandoned."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that when TB rates declined, healthcare intervention was abandoned, which supports the claim that efforts to prevent the disease were defunded, resulting in an increase in infection rates.",
+   "covering": {
+    "covered": [
+     {
+      "component": "efforts to prevent the disease were defunded when TB diagnosis rates lessened",
+      "paper_id": "15537961c8728d1f2e8be0abcb8b468bd052b77e",
+      "source_title": "indianhospital",
+      "sentence": "Historically, when TB rates declined, healthcare intervention was abandoned.",
+      "page": 1,
+      "snippet": "Historically, when TB rates declined, healthcare intervention"
+     }
+    ],
+    "uncovered": [
+     "defunding efforts resulted in an increase in infection rates"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "15537961c8728d1f2e8be0abcb8b468bd052b77e",
+      "source_title": "indianhospital",
+      "text": "Historically, when TB rates declined, healthcare intervention was abandoned. [\u2026] Historically, when TB rates declined, healthcare intervention was abandoned.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not state that defunding efforts to prevent TB resulted in an increase in infection rates.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "defunding efforts to prevent TB resulted in an increase in infection rates",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that at several points when rates of TB diagnosis lessened, prevention efforts were defunded, and this caused an increase in infection rates again.",
+    "rewrite_suggestion": "Historically, when TB rates declined, healthcare intervention was abandoned, and there were never consistent treatment campaigns.",
+    "proofs": [
+     "Historically, when TB rates declined, healthcare intervention was abandoned."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts a specific causal pattern with multiple occurrences, defunding, and a resulting increase in infection rates. The source only states that historically, when TB rates declined, healthcare intervention was abandoned, and that treatment campaigns were never consistent. It does not specify that this happened at several points, that the abandonment constituted defunding, or that it resulted in an increase in infection rates. Therefore, several substantive components of the claim are not supported by the cited source."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "a07315131d8f15da2fcbba2b0e4741ebd7709383": {
+    "title": "mohammedfahadalharthi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d67ce191b721f2a989af3917e70f0ee04ea643af": {
+    "title": "angmey",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d33993280a8611c3aeb30de9961712eb821fdca7": {
+    "title": "rosamundbartlett",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a60fb32f1ea348eafccafc4dc3558931c2607949": {
+    "title": "leepeltier",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b332af281c4fe7f24d9ff25aae196fc636338bd8": {
+    "title": "johnfcookjr",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "27b3bf7c91a1a829dec5e53cc8d80bd81cf4f9c6": {
+    "title": "randallpark",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "50a2e26e01d35983ea3719555f27325e7b7ddf88": {
+    "title": "2018texaselections",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "400aab527696614477b3897ba55c179468a0bd60": {
+    "title": "chriscapuano",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "53582bd663cbf0c8a21246f3bdf2dc1183e34150": {
+    "title": "effectsofhurricaneandrew",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "98ecfe281d6dbedf941d7fb11e77777be398c188": {
+    "title": "songsofournativedaughter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d2c7cd78fe33c80dae984a4f8636d11b4679733e": {
+    "title": "democraticleftalliance",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "03ce85ff9292b0eb0e746d4623ff1fffc717bedf": {
+    "title": "andymcnab",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ad06f87e68ba9ffd4bac922988572fc69f6026d5": {
+    "title": "davidgardinerpolitician",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2973c94dd73081e8a930a2444ab8e861f23d8ec7": {
+    "title": "aireuropa",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d295c75628962c9b20c3adb8cc906ba3aa7a80e1": {
+    "title": "mitre10cup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "296b062b8daad1d88a2d4ca6326e8e2d7e93b2af": {
+    "title": "universityoftechnologysy",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2d1ba0e56b0dc80a63a0744e87e83645ffb542ba": {
+    "title": "pimax",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "aadd1d01c7605e3323fc6394bd39aff135ea9211": {
+    "title": "tempovideogame",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c570f41b6e94a5dd58b6077218ab2743922086bd": {
+    "title": "listofunproducedmarvelco",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fe812044316b396ce437d149954209dd9a573d2f": {
+    "title": "shoheioka",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "15537961c8728d1f2e8be0abcb8b468bd052b77e": {
+    "title": "indianhospital",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "50fdaf1aaff3f275e00f36730406a16322e5322c": {
+    "title": "pachinko",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8700771a376ba331fb6c3884e1744ee560b61b03": {
+    "title": "wtmartin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bde176d88e387a31b046e6b6567999c9fd409295": {
+    "title": "stphanesparagna",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b77fb13ade2711d35dc1c3112460f8d125fb7539": {
+    "title": "splashh",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d1bbc479d3d6438a6bdcfdc2d12a6dc9509bc31f": {
+    "title": "2015unitedkingdomgeneral",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 2,
+   "unsupported": 24,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:29:09",
+  "marker_errors": [],
+  "processing_time_seconds": 545.6,
+  "source_hashes": {
+   "wtmartin.txt": "382643ef6dd0e21145bc4c10daada5a5874aae16",
+   "angmey.txt": "4088bf29660591e69054d1b32aa3cd13ce96aed9",
+   "randallpark.txt": "be5f659235886499b4561581324717967ca5357e",
+   "listofunproducedmarvelco.txt": "192808c2e4bb1df77a321dce78ff1b6435fc24e9",
+   "2015unitedkingdomgeneral.txt": "de500417e91e1c6ec445b8aaa5e07d2ba3c30e7c",
+   "splashh.txt": "e4f046b5a7dc61d9fa3627e9516ec918b6bf4ed8",
+   "davidgardinerpolitician.txt": "d510654b4461c26900ad268e97f8f3b8e03cabc1",
+   "2018texaselections.txt": "40a0db9a1e3470e2d794a209260cb2868cefa36f",
+   "leepeltier.txt": "1ebd418ec87d84dd6ccbb54c3b5bef109f96b2a3",
+   "aireuropa.txt": "dd0c901ee479bca049a11fd2d3be37ef79c85cb6",
+   "mitre10cup.txt": "629bba521098610e45640a89cc7adb448dc30047",
+   "chriscapuano.txt": "19cc9d24e751408b2f19211b6aaf77051afa91c9",
+   "pimax.txt": "d5f1cfa1e0e0249841a7e2417df2d246784fa701",
+   "tempovideogame.txt": "14048b4f86d6dc9399ab4ab1955c4a46eeb51da7",
+   "andymcnab.txt": "774702af8960ffb00a40957e43c03b7810fddb0f",
+   "rosamundbartlett.txt": "f72911c5d4b77c97a6eabdb73c99726e5b9207b0",
+   "shoheioka.txt": "445e44c3d8137f083778efb7a1d0d634acadc2af",
+   "songsofournativedaughter.txt": "3a0feebe1a7f0fd255c2f16516f813558733d60f",
+   "johnfcookjr.txt": "7f05de7cf35d2539038524d0fdcd0a86f3685a55",
+   "universityoftechnologysy.txt": "5d9eaaa736628284f1cfe3ff439373dd24dd7ad1",
+   "pachinko.txt": "350d95dbb3e1f8275657693dead97527d53fc2d9",
+   "democraticleftalliance.txt": "6c8f43a5a4d8319b4bb6a90154f14bb6531176bf",
+   "mohammedfahadalharthi.txt": "f8e608e1e38bec2b6000f613dbe4553a1746d834",
+   "effectsofhurricaneandrew.txt": "d450495f35a302ccd9d4c703fdfc1d8f469345ff",
+   "stphanesparagna.txt": "4437b57ea18d881f8821f6cac34f63fd90e37ceb",
+   "indianhospital.txt": "fcec7b7ec0c4aef0f51d9ecbe5af021c5ce5d3a0"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 408,
+    "prompt_tokens": 606324,
+    "completion_tokens": 13628,
+    "cost_usd": 0.066288
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 30,
+    "prompt_tokens": 155562,
+    "completion_tokens": 61177,
+    "cost_usd": 0.032937
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 25,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 26,
+   "actions": {
+    "add_citation_or_rewrite": 25,
+    "wrong_or_insufficient_evidence": 1
+   },
+   "proof_may_exist": [
+    "t22"
+   ],
+   "conflicts": [
+    "t10",
+    "t13"
+   ],
+   "rescued": [
+    "t22"
+   ],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "8700771a376ba331fb6c3884e1744ee560b61b03",
+   "key": "wtmartin",
+   "filename": "wtmartin.txt",
+   "title": "wtmartin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d67ce191b721f2a989af3917e70f0ee04ea643af",
+   "key": "angmey",
+   "filename": "angmey.txt",
+   "title": "angmey",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "27b3bf7c91a1a829dec5e53cc8d80bd81cf4f9c6",
+   "key": "randallpark",
+   "filename": "randallpark.txt",
+   "title": "randallpark",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c570f41b6e94a5dd58b6077218ab2743922086bd",
+   "key": "listofunproducedmarvelco",
+   "filename": "listofunproducedmarvelco.txt",
+   "title": "listofunproducedmarvelco",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d1bbc479d3d6438a6bdcfdc2d12a6dc9509bc31f",
+   "key": "2015unitedkingdomgeneral",
+   "filename": "2015unitedkingdomgeneral.txt",
+   "title": "2015unitedkingdomgeneral",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b77fb13ade2711d35dc1c3112460f8d125fb7539",
+   "key": "splashh",
+   "filename": "splashh.txt",
+   "title": "splashh",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ad06f87e68ba9ffd4bac922988572fc69f6026d5",
+   "key": "davidgardinerpolitician",
+   "filename": "davidgardinerpolitician.txt",
+   "title": "davidgardinerpolitician",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "50a2e26e01d35983ea3719555f27325e7b7ddf88",
+   "key": "2018texaselections",
+   "filename": "2018texaselections.txt",
+   "title": "2018texaselections",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a60fb32f1ea348eafccafc4dc3558931c2607949",
+   "key": "leepeltier",
+   "filename": "leepeltier.txt",
+   "title": "leepeltier",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2973c94dd73081e8a930a2444ab8e861f23d8ec7",
+   "key": "aireuropa",
+   "filename": "aireuropa.txt",
+   "title": "aireuropa",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d295c75628962c9b20c3adb8cc906ba3aa7a80e1",
+   "key": "mitre10cup",
+   "filename": "mitre10cup.txt",
+   "title": "mitre10cup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "400aab527696614477b3897ba55c179468a0bd60",
+   "key": "chriscapuano",
+   "filename": "chriscapuano.txt",
+   "title": "chriscapuano",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2d1ba0e56b0dc80a63a0744e87e83645ffb542ba",
+   "key": "pimax",
+   "filename": "pimax.txt",
+   "title": "pimax",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "aadd1d01c7605e3323fc6394bd39aff135ea9211",
+   "key": "tempovideogame",
+   "filename": "tempovideogame.txt",
+   "title": "tempovideogame",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "03ce85ff9292b0eb0e746d4623ff1fffc717bedf",
+   "key": "andymcnab",
+   "filename": "andymcnab.txt",
+   "title": "andymcnab",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d33993280a8611c3aeb30de9961712eb821fdca7",
+   "key": "rosamundbartlett",
+   "filename": "rosamundbartlett.txt",
+   "title": "rosamundbartlett",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fe812044316b396ce437d149954209dd9a573d2f",
+   "key": "shoheioka",
+   "filename": "shoheioka.txt",
+   "title": "shoheioka",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "98ecfe281d6dbedf941d7fb11e77777be398c188",
+   "key": "songsofournativedaughter",
+   "filename": "songsofournativedaughter.txt",
+   "title": "songsofournativedaughter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b332af281c4fe7f24d9ff25aae196fc636338bd8",
+   "key": "johnfcookjr",
+   "filename": "johnfcookjr.txt",
+   "title": "johnfcookjr",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "296b062b8daad1d88a2d4ca6326e8e2d7e93b2af",
+   "key": "universityoftechnologysy",
+   "filename": "universityoftechnologysy.txt",
+   "title": "universityoftechnologysy",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "50fdaf1aaff3f275e00f36730406a16322e5322c",
+   "key": "pachinko",
+   "filename": "pachinko.txt",
+   "title": "pachinko",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d2c7cd78fe33c80dae984a4f8636d11b4679733e",
+   "key": "democraticleftalliance",
+   "filename": "democraticleftalliance.txt",
+   "title": "democraticleftalliance",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a07315131d8f15da2fcbba2b0e4741ebd7709383",
+   "key": "mohammedfahadalharthi",
+   "filename": "mohammedfahadalharthi.txt",
+   "title": "mohammedfahadalharthi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "53582bd663cbf0c8a21246f3bdf2dc1183e34150",
+   "key": "effectsofhurricaneandrew",
+   "filename": "effectsofhurricaneandrew.txt",
+   "title": "effectsofhurricaneandrew",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bde176d88e387a31b046e6b6567999c9fd409295",
+   "key": "stphanesparagna",
+   "filename": "stphanesparagna.txt",
+   "title": "stphanesparagna",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "15537961c8728d1f2e8be0abcb8b468bd052b77e",
+   "key": "indianhospital",
+   "filename": "indianhospital.txt",
+   "title": "indianhospital",
+   "num_claims": 0
+  }
+ ]
+}

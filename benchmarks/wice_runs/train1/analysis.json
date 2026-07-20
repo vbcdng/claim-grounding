@@ -1,0 +1,2661 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train batch 1",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section of the text.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "The second half began on June 11, 2016, and the series ended July 23, 2016.",
+   "markers": [
+    "listofhellonwheelsepisod"
+   ],
+   "paper_ids": [
+    "5a32a515e8a89e1a4dc89781659dbf62aa3f40c3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5a32a515e8a89e1a4dc89781659dbf62aa3f40c3",
+    "source_title": "listofhellonwheelsepisod",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "AMC announced today that the final seven episodes of Hell on Wheels will begin airing Saturday, June 11, followed by the premiere of the new Robert Redford-produced limited event series The American West.",
+    "page": 1,
+    "snippet": "AMC announced today that the final seven",
+    "reason": "the end date of the series is not mentioned",
+    "votes": "2-0",
+    "window": "AMC announced today that the final seven episodes of Hell on Wheels will begin airing Saturday, June 11, followed by the premiere of the new Robert Redford-produced limited event series The American West. Hell on Wheels premieres Saturday, June 11 at 9/8c on AMC, followed by The American West at 10/9c."
+   },
+   "evidences": [
+    {
+     "paper_id": "5a32a515e8a89e1a4dc89781659dbf62aa3f40c3",
+     "source_title": "listofhellonwheelsepisod",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "AMC announced today that the final seven episodes of Hell on Wheels will begin airing Saturday, June 11, followed by the premiere of the new Robert Redford-produced limited event series The American West.",
+     "page": 1,
+     "snippet": "AMC announced today that the final seven",
+     "reason": "the end date of the series is not mentioned",
+     "votes": "2-0",
+     "window": "AMC announced today that the final seven episodes of Hell on Wheels will begin airing Saturday, June 11, followed by the premiere of the new Robert Redford-produced limited event series The American West. Hell on Wheels premieres Saturday, June 11 at 9/8c on AMC, followed by The American West at 10/9c."
+    }
+   ],
+   "votes": null,
+   "reason": "the end date of the series is not mentioned",
+   "component_check": {
+    "found": [
+     "The second half began on June 11, 2016"
+    ],
+    "missing": [
+     "the series ended July 23, 2016"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The second half began on June 11, 2016",
+      "paper_id": "5a32a515e8a89e1a4dc89781659dbf62aa3f40c3",
+      "source_title": "listofhellonwheelsepisod",
+      "sentence": "AMC announced today that the final seven episodes of Hell on Wheels will begin airing Saturday, June 11, followed by the premiere of the new Robert Redford-produced limited event series The American West.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The second half began on June 11, 2016, and the series ended July 23, 2016.",
+    "reason": "The passage asserts specific dates related to an event, which the citation is expected to prove. This falls under the 'full' scope as it's a factual claim directly tied to the citation.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the series ended July 23, 2016",
+    "rewrite_suggestion": "The second half began on June 11, 2016.",
+    "proofs": [
+     "AMC announced today that the final seven episodes of Hell on Wheels will begin airing Saturday, June 11, followed by the premiere of the new Robert Redford-produced limited event series The American West."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the start date of the second half (June 11, 2016), but the claim's additional component—that the series ended on July 23, 2016—does not appear anywhere in the provided source text. Since this date is not a common-knowledge fact, the author must either add a citation for the end date or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "\"Panzer Dragoon Zwei\" was released in March 1996 in Japan.",
+   "markers": [
+    "panzerdragooniizwei"
+   ],
+   "paper_ids": [
+    "cc8f3acf8c2c4a9703231909c82d815e726ebd85"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cc8f3acf8c2c4a9703231909c82d815e726ebd85",
+    "source_title": "panzerdragooniizwei",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "3月 1日 パンツァードラグーン ツヴァイ",
+    "page": null,
+    "snippet": "3月 1日 パンツァードラグーン ツヴァイ",
+    "reason": "",
+    "votes": "2-0",
+    "window": "3月 1日 パンツァードラグーン ツヴァイ"
+   },
+   "evidences": [
+    {
+     "paper_id": "cc8f3acf8c2c4a9703231909c82d815e726ebd85",
+     "source_title": "panzerdragooniizwei",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "3月 1日 パンツァードラグーン ツヴァイ",
+     "page": null,
+     "snippet": "3月 1日 パンツァードラグーン ツヴァイ",
+     "reason": "",
+     "votes": "2-0",
+     "window": "3月 1日 パンツァードラグーン ツヴァイ"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "\"Panzer Dragoon Zwei\" release date in Japan",
+      "paper_id": "cc8f3acf8c2c4a9703231909c82d815e726ebd85",
+      "source_title": "panzerdragooniizwei",
+      "sentence": "3月 1日 パンツァードラグーン ツヴァイ",
+      "page": null,
+      "snippet": "3月 1日 パンツァードラグーン ツヴァイ"
+     },
+     {
+      "component": "\"Panzer Dragoon Zwei\" release month in Japan",
+      "paper_id": "cc8f3acf8c2c4a9703231909c82d815e726ebd85",
+      "source_title": "panzerdragooniizwei",
+      "sentence": "3月 1日 パンツァードラグーン ツヴァイ",
+      "page": null,
+      "snippet": "3月 1日 パンツァードラグーン ツヴァイ"
+     },
+     {
+      "component": "\"Panzer Dragoon Zwei\" release year in Japan",
+      "paper_id": "cc8f3acf8c2c4a9703231909c82d815e726ebd85",
+      "source_title": "panzerdragooniizwei",
+      "sentence": "3月 1日 パンツァードラグーン ツヴァイ",
+      "page": null,
+      "snippet": "3月 1日 パンツァードラグーン ツヴァイ"
+     }
+    ],
+    "uncovered": [
+     "March",
+     "1996"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": []
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the year 1996",
+    "rewrite_suggestion": "Panzer Dragoon Zwei was released on March 1 in Japan.",
+    "proofs": [],
+    "quotes_dropped": 2,
+    "conflict": null,
+    "why": "The shown sentence provides the month and day (March 1) for the game, but the claim includes the year 1996, which is not stated anywhere in the source text. The location 'Japan' is implicitly supported by the page context but is not in the shown sentence. Since the year is entirely absent from the source, the author must either add a citation that states the year or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "They were quickly pushed into combat, performing air raids as early as the beginning of August 2014 and later expanding their area of operation.",
+   "markers": [
+    "sukhoisu25"
+   ],
+   "paper_ids": [
+    "3600cf5680f441cb6903f5fdaf7611ab6d94577e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "3600cf5680f441cb6903f5fdaf7611ab6d94577e",
+    "source_title": "sukhoisu25",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Search for: # Iraqi Su-25s debut in combat ISIS in the North * News Catch, Attack 2014/12/26 AIRheads/MB UPDATED 15 FEBRUARY 2015 | Iraqi piloted Sukhoi Su-25s (\"Frogfoot\") have seen combat against ISIS positions for the first time in the north of the country this month, local media in Iraq report.",
+    "page": 1,
+    "snippet": "Search for: # Iraqi Su-25s debut in",
+    "reason": "the passage does not state that the air raids began as early as the beginning of August 2014",
+    "votes": "2-0",
+    "window": "Search for: # Iraqi Su-25s debut in combat ISIS in the North * News Catch, Attack 2014/12/26 AIRheads/MB UPDATED 15 FEBRUARY 2015 | Iraqi piloted Sukhoi Su-25s (\"Frogfoot\") have seen combat against ISIS positions for the first time in the north of the country this month, local media in Iraq report. \"Iran has used its own Air Force to attack ISIS since the beginning of the group's offensive, but mostly to keep them away from the Iranian border,\" Khoury said. © 2014 Airheadsfly.com editor Marcel Burger #### See our entire Iraqsyrialog One of the ex-Iraqi Air Force Su-25KUBs returned by Iran in July 2014 (Footage by Iraqi Air Force) # Post navigation Previous PostSecond A400M for Turkish Air ForceNext PostPRESS PLAY: Most senior Turkish fighter jock still has it! See the video footage of Iran returing Su-25s to Iraq in July 2014: The Iraqi Air Force is working hard to train its pilots to operate the Su-25s. Fighter jets also bombed Islamic State militants in northwest Iraq on Thursday night. U.S. airstrikes on Islamic State positions have begun. Thursday's attack came two days after Iraqi jets struck an ISIS convoy near the northern city of Mosul. The close-air support and ground attack jets have reportedly hit targets near Tikrit, a strategically located city which saw much fighting over the last decade."
+   },
+   "evidences": [
+    {
+     "paper_id": "3600cf5680f441cb6903f5fdaf7611ab6d94577e",
+     "source_title": "sukhoisu25",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Search for: # Iraqi Su-25s debut in combat ISIS in the North * News Catch, Attack 2014/12/26 AIRheads/MB UPDATED 15 FEBRUARY 2015 | Iraqi piloted Sukhoi Su-25s (\"Frogfoot\") have seen combat against ISIS positions for the first time in the north of the country this month, local media in Iraq report.",
+     "page": 1,
+     "snippet": "Search for: # Iraqi Su-25s debut in",
+     "reason": "the passage does not state that the air raids began as early as the beginning of August 2014",
+     "votes": "2-0",
+     "window": "Search for: # Iraqi Su-25s debut in combat ISIS in the North * News Catch, Attack 2014/12/26 AIRheads/MB UPDATED 15 FEBRUARY 2015 | Iraqi piloted Sukhoi Su-25s (\"Frogfoot\") have seen combat against ISIS positions for the first time in the north of the country this month, local media in Iraq report. \"Iran has used its own Air Force to attack ISIS since the beginning of the group's offensive, but mostly to keep them away from the Iranian border,\" Khoury said. © 2014 Airheadsfly.com editor Marcel Burger #### See our entire Iraqsyrialog One of the ex-Iraqi Air Force Su-25KUBs returned by Iran in July 2014 (Footage by Iraqi Air Force) # Post navigation Previous PostSecond A400M for Turkish Air ForceNext PostPRESS PLAY: Most senior Turkish fighter jock still has it! See the video footage of Iran returing Su-25s to Iraq in July 2014: The Iraqi Air Force is working hard to train its pilots to operate the Su-25s. Fighter jets also bombed Islamic State militants in northwest Iraq on Thursday night. U.S. airstrikes on Islamic State positions have begun. Thursday's attack came two days after Iraqi jets struck an ISIS convoy near the northern city of Mosul. The close-air support and ground attack jets have reportedly hit targets near Tikrit, a strategically located city which saw much fighting over the last decade."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the air raids began as early as the beginning of August 2014",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "They were quickly pushed into combat, performing air raids as early as the beginning of August 2014 and later expanding their area of operation.",
+    "reason": "The passage asserts specific facts about the actions and timeline of the subject, which are directly attributed to the cited source. The attribution test is met as the passage states what 'they' did, implying the source provides this information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the Su-25s performed air raids as early as the beginning of August 2014 and were quickly pushed into combat is not supported by any factual statement in the source; the closest statement is a speculative probability. Also the claim of expanding operations is contradicted by the shown sentence that calls December the first time in the north.",
+    "rewrite_suggestion": "The Iraqi Su-25s were first reported in combat in December 2014, with earlier speculation of involvement in August; their area of operation later included strikes near Tikrit.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Iraqi piloted Sukhoi Su-25s (\"Frogfoot\") have seen combat against ISIS positions for the first time in the north of the country this month, local media in Iraq report.",
+     "why": "This sentence states that combat occurred for the first time in December 2014 (\"this month\"), directly contradicting the claim that air raids happened as early as August 2014."
+    },
+    "why": "The shown sentence from the tool contradicts the claim's date, and no sentence in the source definitively states that Su-25s conducted air raids in August 2014 or that they were quickly pushed into combat. The August article only offers speculation, not a factual statement. Therefore the author must either add a citation for the August date and the rapid deployment or rewrite the claim to match what the source actually supports (e.g., first combat in December 2014)."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "By March 2017, Psyonix reported that \"Rocket League\" had sold more than 10.5 million copies across all platforms, and had 29 million registered players, with about a fourth of that having played during February 2017.",
+   "markers": [
+    "rocketleague"
+   ],
+   "paper_ids": [
+    "1e6c3ad4bfc53b804714b593a176be3daa915a81"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+    "source_title": "rocketleague",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "About a fourth of the 29 million registered players (around 7 million) played Rocket League in February, Dunham said.",
+    "page": 1,
+    "snippet": "About a fourth of the 29 million",
+    "reason": "All components of the claim are directly stated in the passage.",
+    "votes": "2-0",
+    "window": "About a fourth of the 29 million registered players (around 7 million) played Rocket League in February, Dunham said. VP Jeremy Dunham told Kinda Funny Games that the game has now hit 10.5 million copies, with the total number of registered players hitting almost 29 million."
+   },
+   "evidences": [
+    {
+     "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+     "source_title": "rocketleague",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "About a fourth of the 29 million registered players (around 7 million) played Rocket League in February, Dunham said.",
+     "page": 1,
+     "snippet": "About a fourth of the 29 million",
+     "reason": "All components of the claim are directly stated in the passage.",
+     "votes": "2-0",
+     "window": "About a fourth of the 29 million registered players (around 7 million) played Rocket League in February, Dunham said. VP Jeremy Dunham told Kinda Funny Games that the game has now hit 10.5 million copies, with the total number of registered players hitting almost 29 million."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are directly stated in the passage.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Psyonix reported 'Rocket League' sold more than 10.5 million copies by March 2017",
+      "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+      "source_title": "rocketleague",
+      "sentence": "VP Jeremy Dunham told Kinda Funny Games that the game has now hit 10.5 million copies, with the total number of registered players hitting almost 29 million.",
+      "page": 1,
+      "snippet": "VP Jeremy Dunham told Kinda Funny Games"
+     },
+     {
+      "component": "'Rocket League' had 29 million registered players by March 2017",
+      "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+      "source_title": "rocketleague",
+      "sentence": "VP Jeremy Dunham told Kinda Funny Games that the game has now hit 10.5 million copies, with the total number of registered players hitting almost 29 million.",
+      "page": 1,
+      "snippet": "VP Jeremy Dunham told Kinda Funny Games"
+     },
+     {
+      "component": "About a fourth of registered players played in February 2017",
+      "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+      "source_title": "rocketleague",
+      "sentence": "About a fourth of the 29 million registered players (around 7 million) played Rocket League in February, Dunham said.",
+      "page": 1,
+      "snippet": "About a fourth of the 29 million"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+      "source_title": "rocketleague",
+      "text": "VP Jeremy Dunham told Kinda Funny Games that the game has now hit 10.5 million copies, with the total number of registered players hitting almost 29 million. That figure includes free copies of the game given to PlayStation Plus subscribers on PlayStation 4 at launch in July 2015, as well as split-screen players. About a fourth of the 29 million registered players (around 7 million) played Rocket League in February, Dunham said.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t5",
+   "text": "The station was founded in 1974 by Casimir Stanczykowski; CKJS was the second station to be established by Stanczykowski, behind Montreal's multicultural station CFMB.",
+   "markers": [
+    "ckjs"
+   ],
+   "paper_ids": [
+    "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f",
+    "source_title": "ckjs",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974.",
+    "page": 1,
+    "snippet": "The latter, CKJS 810, was also founded",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974. #### Retirements prompted deal CFMB was founded in 1962 by Casimir Stanczykowski."
+   },
+   "evidences": [
+    {
+     "paper_id": "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f",
+     "source_title": "ckjs",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974.",
+     "page": 1,
+     "snippet": "The latter, CKJS 810, was also founded",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974. #### Retirements prompted deal CFMB was founded in 1962 by Casimir Stanczykowski."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "The station was founded in 1974",
+      "paper_id": "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f",
+      "source_title": "ckjs",
+      "sentence": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974.",
+      "page": 1,
+      "snippet": "The latter, CKJS 810, was also founded"
+     },
+     {
+      "component": "The station was founded by Casimir Stanczykowski",
+      "paper_id": "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f",
+      "source_title": "ckjs",
+      "sentence": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974.",
+      "page": 1,
+      "snippet": "The latter, CKJS 810, was also founded"
+     }
+    ],
+    "uncovered": [
+     "CKJS was the second station to be established by Stanczykowski",
+     "CKJS was established behind Montreal's multicultural station CFMB",
+     "CKJS's establishment relative to CFMB"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f",
+      "source_title": "ckjs",
+      "text": "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not state that CKJS was the second station established by Stanczykowski, behind Montreal's multicultural station CFMB.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "CKJS was the second station established by Stanczykowski, behind Montreal's multicultural station CFMB",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "CFMB was founded in 1962 by Casimir Stanczykowski.",
+     "The latter, CKJS 810, was also founded by Casimir Stanczykowski in 1974."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that CKJS was founded in 1974 by Casimir Stanczykowski. It does not show that CKJS was the second station established by him, nor that CFMB was the first. The source text contains the necessary proof (CFMB founded in 1962 by the same founder), but that sentence was not included among the shown supporting sentences. Therefore, the tool should display the correct proof sentences."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "Before his election in 2008, Porter was working as a lecturer at Curtin University and the University of Western Australia as well as retaining, part-time, his position as senior prosecutor at the DPP.",
+   "markers": [
+    "christianporter"
+   ],
+   "paper_ids": [
+    "da571c819d4855f685fa8cac19f9eac90bb65798"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9061,
+   "evidence": {
+    "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+    "source_title": "christianporter",
+    "supported": true,
+    "sentence": "He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+    "page": 1,
+    "snippet": "He has also lectured at the University",
+    "cosine": 0.9061,
+    "reason": "The passage states that before entering politics, Porter worked as a Senior State Prosecutor for the Director of Public Prosecutions WA and lectured at the University of Western Australia and Curtin University, which directly supports the claim.",
+    "window": "Prior to politics, Christian worked as a lawyer in both the commercial and government settings; beginning his career at Clayton Utz and then later working as a Senior State Prosecutor for the Director of Public Prosecutions WA, where he prosecuted criminal trials for the State. He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University. ## WATCHChristian's Maiden Speech Read transcript"
+   },
+   "evidences": [
+    {
+     "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+     "source_title": "christianporter",
+     "supported": true,
+     "sentence": "He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+     "page": 1,
+     "snippet": "He has also lectured at the University",
+     "cosine": 0.9061,
+     "reason": "The passage states that before entering politics, Porter worked as a Senior State Prosecutor for the Director of Public Prosecutions WA and lectured at the University of Western Australia and Curtin University, which directly supports the claim.",
+     "window": "Prior to politics, Christian worked as a lawyer in both the commercial and government settings; beginning his career at Clayton Utz and then later working as a Senior State Prosecutor for the Director of Public Prosecutions WA, where he prosecuted criminal trials for the State. He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University. ## WATCHChristian's Maiden Speech Read transcript"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that before entering politics, Porter worked as a Senior State Prosecutor for the Director of Public Prosecutions WA and lectured at the University of Western Australia and Curtin University, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Porter was working as a lecturer at Curtin University",
+      "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+      "source_title": "christianporter",
+      "sentence": "He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+      "page": 1,
+      "snippet": "He has also lectured at the University"
+     },
+     {
+      "component": "Porter was working as a lecturer at the University of Western Australia",
+      "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+      "source_title": "christianporter",
+      "sentence": "He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+      "page": 1,
+      "snippet": "He has also lectured at the University"
+     },
+     {
+      "component": "Porter was retaining, part-time, his position as senior prosecutor at the DPP",
+      "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+      "source_title": "christianporter",
+      "sentence": "Prior to politics, Christian worked as a lawyer in both the commercial and government settings; beginning his career at Clayton Utz and then later working as a Senior State Prosecutor for the Director of Public Prosecutions WA, where he prosecuted criminal trials for the State.",
+      "page": 1,
+      "snippet": "Prior to politics, Christian worked as a"
+     }
+    ],
+    "uncovered": [
+     "Porter's election in 2008"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+      "source_title": "christianporter",
+      "text": "Prior to politics, Christian worked as a lawyer in both the commercial and government settings; beginning his career at Clayton Utz and then later working as a Senior State Prosecutor for the Director of Public Prosecutions WA, where he prosecuted criminal trials for the State. He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes an unsourced date '2008', incorrectly states Porter was a 'lecturer' at Curtin (source says 'Professor'), and asserts he retained his senior prosecutor position part-time concurrently, none of which are supported by the source.",
+    "rewrite_suggestion": "Before entering federal parliament, Porter had lectured at the University of Western Australia and was a professor of law at Curtin University, having previously worked as a Senior State Prosecutor for the DPP.",
+    "proofs": [
+     "He has also lectured at the University of Western Australia in law, public policy and economics and, immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+     "Prior to politics, Christian worked as a lawyer in both the commercial and government settings; beginning his career at Clayton Utz and then later working as a Senior State Prosecutor for the Director of Public Prosecutions WA, where he prosecuted criminal trials for the State."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "immediately before entering Federal Parliament, Christian was a Professor of Law at Curtin University.",
+     "why": "The source states Porter was a Professor at Curtin, not a lecturer, directly contradicting the claim's 'lecturer' component."
+    },
+    "why": "The claim contains multiple components not provable from the source: the date '2008' is absent, the title at Curtin is 'Professor' not 'lecturer' (a contradiction), and the part-time retention of the senior prosecutor role is not stated. The only supported component is 'lecturer at UWA', which is proven by the shown sentence. Since substantive components are unsourced or contradicted, the author must add citations or rewrite the claim."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "Five objects dating from around 150 AD, were inside including a glass jug with a Mediterranean stamp and samian ware dishes used for libations.",
+   "markers": [
+    "harpenden"
+   ],
+   "paper_ids": [
+    "6a7880a9e1c5c034dbf8a3975b7c8308b919ccbd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8404,
+   "evidence": {
+    "paper_id": "6a7880a9e1c5c034dbf8a3975b7c8308b919ccbd",
+    "source_title": "harpenden",
+    "supported": false,
+    "sentence": "More about... Archaeology & Geology Next meeting Next exhibition Proposal for new houses in Moreton Avenue- 1905 Akrill House St George's School - a brief history by Joe Pennell",
+    "page": 1,
+    "snippet": "More about... Archaeology & Geology Next meeting",
+    "cosine": 0.8404,
+    "reason": "The provided passage does not contain any information about objects, their dates, or specific items like a glass jug or samian ware dishes.",
+    "window": "The Wayback Machine - https://web.archive.org/web/20140424160940/http://www.harpenden-history.org.uk/page_id__108_path__0p4p51p.aspx Skip to content | Privacy and cookies Home > Topics > Archaeology & Geology > Burial Mound in the Lea Valley > Browse the site User name: Password: Forgot password? More about... Archaeology & Geology Next meeting Next exhibition Proposal for new houses in Moreton Avenue- 1905 Akrill House St George's School - a brief history by Joe Pennell"
+   },
+   "evidences": [
+    {
+     "paper_id": "6a7880a9e1c5c034dbf8a3975b7c8308b919ccbd",
+     "source_title": "harpenden",
+     "supported": false,
+     "sentence": "More about... Archaeology & Geology Next meeting Next exhibition Proposal for new houses in Moreton Avenue- 1905 Akrill House St George's School - a brief history by Joe Pennell",
+     "page": 1,
+     "snippet": "More about... Archaeology & Geology Next meeting",
+     "cosine": 0.8404,
+     "reason": "The provided passage does not contain any information about objects, their dates, or specific items like a glass jug or samian ware dishes.",
+     "window": "The Wayback Machine - https://web.archive.org/web/20140424160940/http://www.harpenden-history.org.uk/page_id__108_path__0p4p51p.aspx Skip to content | Privacy and cookies Home > Topics > Archaeology & Geology > Burial Mound in the Lea Valley > Browse the site User name: Password: Forgot password? More about... Archaeology & Geology Next meeting Next exhibition Proposal for new houses in Moreton Avenue- 1905 Akrill House St George's School - a brief history by Joe Pennell"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (objects, dates, types of pottery) that are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire description of five objects dating from around 150 AD, a glass jug with a Mediterranean stamp, and samian ware dishes used for libations",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text contains only metadata and navigation; it does not mention any objects, dates, glass jugs, stamps, or samian ware dishes. Therefore, none of the claim's components are provable from this source. The author must either cite a different source that supports these details or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "At the London Olympics 2012 she came 5th in the Women's K4 500m final (competing with Louisa Sawers, Jess Walker and Angela Hannah) and came 6th in the K1 500m.",
+   "markers": [
+    "rachelcawthorn"
+   ],
+   "paper_ids": [
+    "4ef901ec8c6cd7aeb7f3ea876bad81f34ee7db6a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8502,
+   "evidence": {
+    "paper_id": "4ef901ec8c6cd7aeb7f3ea876bad81f34ee7db6a",
+    "source_title": "rachelcawthorn",
+    "supported": false,
+    "sentence": "Rachel Cawthorn had the following podium finishes at the Flatwater World Championships: 3rd 2010 K1 500 m.",
+    "page": 1,
+    "snippet": "Rachel Cawthorn had the following podium finishes",
+    "cosine": 0.8502,
+    "reason": "The passage does not mention the London Olympics 2012 or Rachel Cawthorn's placings in the Women's K4 500m and K1 500m events.",
+    "window": "Country: Great Britain Sport: Canoeing ## Biography Rachel Cawthorn had the following podium finishes at the Flatwater World Championships: 3rd 2010 K1 500 m. ## Results 2012 Summer"
+   },
+   "evidences": [
+    {
+     "paper_id": "4ef901ec8c6cd7aeb7f3ea876bad81f34ee7db6a",
+     "source_title": "rachelcawthorn",
+     "supported": false,
+     "sentence": "Rachel Cawthorn had the following podium finishes at the Flatwater World Championships: 3rd 2010 K1 500 m.",
+     "page": 1,
+     "snippet": "Rachel Cawthorn had the following podium finishes",
+     "cosine": 0.8502,
+     "reason": "The passage does not mention the London Olympics 2012 or Rachel Cawthorn's placings in the Women's K4 500m and K1 500m events.",
+     "window": "Country: Great Britain Sport: Canoeing ## Biography Rachel Cawthorn had the following podium finishes at the Flatwater World Championships: 3rd 2010 K1 500 m. ## Results 2012 Summer"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "At the London Olympics 2012 she came 5th in the Women's K4 500m final and came 6th in the K1 500m.",
+    "reason": "The passage asserts specific factual results (placing 5th and 6th in Olympic events) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are presented as findings from the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific finishing positions (5th in K4 500m, 6th in K1 500m) and the names of teammates (Louisa Sawers, Jess Walker, Angela Hannah) are not present in the provided source.",
+    "rewrite_suggestion": "At the London Olympics 2012 she competed in the Women's K4 500m final and the K1 500m.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states specific Olympic placements (5th in K4, 6th in K1) and names teammates, but the cited source only lists that she participated in those events without any finishing positions or teammate names. The shown sentence is about a World Championship podium, irrelevant to the Olympic claim. Therefore, the author must either add a source that provides these details or rewrite the claim to reflect what the source actually supports."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "\"Oracle of Seasons\" and \"Ages\" were critical and commercial successes, selling 3.96 million copies each.",
+   "markers": [
+    "thelegendofzeldaoracleof"
+   ],
+   "paper_ids": [
+    "8600740c8678828c10690e4df13b9edf0d6f4d1f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8479,
+   "evidence": {
+    "paper_id": "8600740c8678828c10690e4df13b9edf0d6f4d1f",
+    "source_title": "thelegendofzeldaoracleof",
+    "supported": false,
+    "sentence": "The Legend of Zelda: The Four Swords Adventure",
+    "page": 1,
+    "snippet": "The Legend of Zelda: The Four Swords",
+    "cosine": 0.8479,
+    "reason": "The passage does not mention sales figures or critical reception for 'Oracle of Seasons' and 'Oracle of Ages'.",
+    "window": "The Legend of Zelda: The Wind Waker The Legend of Zelda: The Four Swords Adventure N/A"
+   },
+   "evidences": [
+    {
+     "paper_id": "8600740c8678828c10690e4df13b9edf0d6f4d1f",
+     "source_title": "thelegendofzeldaoracleof",
+     "supported": false,
+     "sentence": "The Legend of Zelda: The Four Swords Adventure",
+     "page": 1,
+     "snippet": "The Legend of Zelda: The Four Swords",
+     "cosine": 0.8479,
+     "reason": "The passage does not mention sales figures or critical reception for 'Oracle of Seasons' and 'Oracle of Ages'.",
+     "window": "The Legend of Zelda: The Wind Waker The Legend of Zelda: The Four Swords Adventure N/A"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The cited source is expected to prove that \"Oracle of Seasons\" and \"Ages\" sold 3.96 million copies each.",
+    "reason": "The passage asserts specific sales figures attributed to the cited works. This falls under the 'full' scope as the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Oracle of Seasons and Ages were critical and commercial successes, and that they sold 3.96 million copies each, is not supported by the provided source text—no sales figures or evaluations appear.",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The Legend of Zelda: Oracle of Seasons The Legend of Zelda: Oracle of Ages"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text lists the two game titles under a '(millions)' header but never provides any sales numbers, nor any statement about critical or commercial success. The shown sentence is completely unrelated. Thus the core components of the claim—the specific sales figure and the success judgment—are absent from the source. The author must add a different citation or rewrite the claim to omit these unsupported elements."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Tiana Tolstoi is an Egyptian-born French model of Korean, Serbian, and Russian descent.",
+   "markers": [
+    "tianatolstoi"
+   ],
+   "paper_ids": [
+    "ebecbc8d69817e20cc80801fca21a672fce388c3"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+    "source_title": "tianatolstoi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Model Tiana Tolstoi at",
+    "reason": "",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\""
+   },
+   "evidences": [
+    {
+     "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+     "source_title": "tianatolstoi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Model Tiana Tolstoi at",
+     "reason": "",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\""
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Tiana Tolstoi is an Egyptian-born model",
+      "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+      "source_title": "tianatolstoi",
+      "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Model Tiana Tolstoi at"
+     },
+     {
+      "component": "Tiana Tolstoi is of Korean descent",
+      "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+      "source_title": "tianatolstoi",
+      "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Model Tiana Tolstoi at"
+     },
+     {
+      "component": "Tiana Tolstoi is of Serbian descent",
+      "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+      "source_title": "tianatolstoi",
+      "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Model Tiana Tolstoi at"
+     },
+     {
+      "component": "Tiana Tolstoi is of Russian descent",
+      "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+      "source_title": "tianatolstoi",
+      "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Model Tiana Tolstoi at"
+     },
+     {
+      "component": "Tiana Tolstoi is French",
+      "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+      "source_title": "tianatolstoi",
+      "sentence": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Model Tiana Tolstoi at"
+     }
+    ],
+    "uncovered": [
+     "Egyptian-born French"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+      "source_title": "tianatolstoi",
+      "text": "(meta data) TITLE: Model Tiana Tolstoi at New York Fashion Week| Nordstrom Fashion Blog ALL POSTS Fashion Week # New York Fashion Week: Otherworldly Model Tiana Tolstoi Loves New York By Laura Cassidy on February 14, 2016 Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly—which is why I was taken by surprise when her eyes got wide and wild as she exclaimed, \"But I love New York!\"",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that she is French (nationality) is not stated in the source; the source says she was raised and schooled in Paris but never calls her French.",
+    "rewrite_suggestion": "Tiana Tolstoi is an Egyptian-born model of Korean, Serbian, and Russian descent.",
+    "proofs": [
+     "Born in Egypt to a family who traces its heritage to Korea, Serbia and Russia, and then raised and schooled in Paris, on-the-rise model Tiana Tolstoi is the very definition of cultured and worldly"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown source sentence confirms that Tiana Tolstoi was born in Egypt and has Korean, Serbian, and Russian heritage, and that she is a model. However, the claim also describes her as 'French', which is not stated anywhere in the source text. The source only says she was 'raised and schooled in Paris', which does not explicitly assert French nationality. Since that component is not provable from the provided source, the author must either add a citation for her French nationality or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "\"The Seattle Times\" reported that the Orient Express, owned by Gun \"Ed\" Ting, had managed to attract former regulars of Andy's Diner, despite the significant change in menu from steak, potatoes, and other traditional diner fare to American Chinese cuisine.",
+   "markers": [
+    "andysdiner"
+   ],
+   "paper_ids": [
+    "da74d2dd7dbed196562cacc9cc92d3b1f8bdcdc3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "da74d2dd7dbed196562cacc9cc92d3b1f8bdcdc3",
+    "source_title": "andysdiner",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "And in the wake of that post, I had a nice chance to chat with long-retired owner Andy Yurkanin who promised to take me to lunch once the place re-opened: He'll get his chance soon, because today the famous railcar-diner debuted as the Orient Express, specializing in Chinese, Thai and American food and offering (get this!)",
+    "page": 1,
+    "snippet": "And in the wake of that post,",
+    "reason": "The passage does not mention 'The Seattle Times' reporting on the Orient Express or its menu changes, nor does it state that the Orient Express attracted former regulars of Andy's Diner.",
+    "votes": "2-0",
+    "window": "And in the wake of that post, I had a nice chance to chat with long-retired owner Andy Yurkanin who promised to take me to lunch once the place re-opened: He'll get his chance soon, because today the famous railcar-diner debuted as the Orient Express, specializing in Chinese, Thai and American food and offering (get this!) Meanwhile, over on Fourth Avenue South, the new owner of the Orient Express, Gun Ting (late of Wild Ginger and known as Ed to many of his friends), greets his first paying guests today."
+   },
+   "evidences": [
+    {
+     "paper_id": "da74d2dd7dbed196562cacc9cc92d3b1f8bdcdc3",
+     "source_title": "andysdiner",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "And in the wake of that post, I had a nice chance to chat with long-retired owner Andy Yurkanin who promised to take me to lunch once the place re-opened: He'll get his chance soon, because today the famous railcar-diner debuted as the Orient Express, specializing in Chinese, Thai and American food and offering (get this!)",
+     "page": 1,
+     "snippet": "And in the wake of that post,",
+     "reason": "The passage does not mention 'The Seattle Times' reporting on the Orient Express or its menu changes, nor does it state that the Orient Express attracted former regulars of Andy's Diner.",
+     "votes": "2-0",
+     "window": "And in the wake of that post, I had a nice chance to chat with long-retired owner Andy Yurkanin who promised to take me to lunch once the place re-opened: He'll get his chance soon, because today the famous railcar-diner debuted as the Orient Express, specializing in Chinese, Thai and American food and offering (get this!) Meanwhile, over on Fourth Avenue South, the new owner of the Orient Express, Gun Ting (late of Wild Ginger and known as Ed to many of his friends), greets his first paying guests today."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention 'The Seattle Times' reporting on the Orient Express or its menu changes, nor does it state that the Orient Express attracted former regulars of Andy's Diner.",
+   "component_check": {
+    "found": [
+     "the Orient Express was owned by Gun \"Ed\" Ting"
+    ],
+    "missing": [
+     "The Seattle Times reported",
+     "the Orient Express attracted former regulars of Andy's Diner",
+     "Andy's Diner's menu was steak, potatoes, and other traditional diner fare"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "the Orient Express was owned by Gun \"Ed\" Ting",
+      "paper_id": "da74d2dd7dbed196562cacc9cc92d3b1f8bdcdc3",
+      "source_title": "andysdiner",
+      "sentence": "Meanwhile, over on Fourth Avenue South, the new owner of the Orient Express, Gun Ting (late of Wild Ginger and known as Ed to many of his friends), greets his first paying guests today.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Seattle Times reported that the Orient Express had managed to attract former regulars of Andy's Diner.",
+    "reason": "The passage directly reports a finding attributed to 'The Seattle Times', which is cited. This falls under the 'full' scope as the citation is expected to prove the reported fact.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "attracting former regulars of Andy's Diner and the specific menu change description (from steak/potatoes to American Chinese cuisine) are not supported by the source text.",
+    "rewrite_suggestion": "The Seattle Times reported that the Orient Express, owned by Gun 'Ed' Ting, opened as a restaurant specializing in Chinese, Thai and American food.",
+    "proofs": [
+     "He'll get his chance soon, because today the famous railcar-diner debuted as the Orient Express, specializing in Chinese, Thai and American food and offering (get this!) on-site childcare.",
+     "Meanwhile, over on Fourth Avenue South, the new owner of the Orient Express, Gun Ting (late of Wild Ginger and known as Ed to many of his friends), greets his first paying guests today."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences only cover the restaurant's opening and its cuisine offerings but omit the ownership and two critical components: the claim that it attracted former regulars of Andy's Diner is entirely absent from the source, and the description of the menu change from traditional diner fare to 'American Chinese cuisine' is not stated (the source says 'Chinese, Thai and American food'). Since some components are not provable from the source at all, the author must either add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "The band toured the UK between June and August.",
+   "markers": [
+    "farq"
+   ],
+   "paper_ids": [
+    "9bf4c6e6e39819468dec655237dd4ac524a19c13"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8464,
+   "evidence": {
+    "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+    "source_title": "farq",
+    "supported": true,
+    "sentence": "June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP!",
+    "page": 1,
+    "snippet": "June 19 1:00pm O2 ABC GlasgowJune 20",
+    "cosine": 0.8464,
+    "reason": "The passage lists specific UK dates for the band in June, July, and August, directly supporting the claim that they toured the UK during that period.",
+    "window": "ACOUSTIC SESSIONS LIVE FEATURESON THE ROADVIDEO INTERVIEWS + FEATURES BEHIND THE SCENES IN THE SPOTLIGHT TRACK BY TRACK ALBUMS THAT CHANGED MY LIFE NOTHING COOL RHYMES W/ MINDY BRITTANY HAS AN APPETITE CASSADEE'S CORNER MARIEL'S CLOSET ESSENTIAL LISTENING TEN YEARS ON ALBUMS OF THE YEAR ## Slider ## Slider ### Lower Than Atlantis UK Dates Lower Than Atlantis will be playing several UK dates over summer. June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP! ON FACEBOOK ## Twitter FIND US ON TWITTER Tweets by @AlterThePress Alter The Press!"
+   },
+   "evidences": [
+    {
+     "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+     "source_title": "farq",
+     "supported": true,
+     "sentence": "June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP!",
+     "page": 1,
+     "snippet": "June 19 1:00pm O2 ABC GlasgowJune 20",
+     "cosine": 0.8464,
+     "reason": "The passage lists specific UK dates for the band in June, July, and August, directly supporting the claim that they toured the UK during that period.",
+     "window": "ACOUSTIC SESSIONS LIVE FEATURESON THE ROADVIDEO INTERVIEWS + FEATURES BEHIND THE SCENES IN THE SPOTLIGHT TRACK BY TRACK ALBUMS THAT CHANGED MY LIFE NOTHING COOL RHYMES W/ MINDY BRITTANY HAS AN APPETITE CASSADEE'S CORNER MARIEL'S CLOSET ESSENTIAL LISTENING TEN YEARS ON ALBUMS OF THE YEAR ## Slider ## Slider ### Lower Than Atlantis UK Dates Lower Than Atlantis will be playing several UK dates over summer. June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP! ON FACEBOOK ## Twitter FIND US ON TWITTER Tweets by @AlterThePress Alter The Press!"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage lists specific UK dates for the band in June, July, and August, directly supporting the claim that they toured the UK during that period.",
+   "covering": {
+    "covered": [
+     {
+      "component": "The band toured the UK",
+      "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+      "source_title": "farq",
+      "sentence": "June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP!",
+      "page": 1,
+      "snippet": "June 19 1:00pm O2 ABC GlasgowJune 20"
+     },
+     {
+      "component": "The band toured the UK",
+      "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+      "source_title": "farq",
+      "sentence": "ACOUSTIC SESSIONS LIVE FEATURESON THE ROADVIDEO INTERVIEWS + FEATURES BEHIND THE SCENES IN THE SPOTLIGHT TRACK BY TRACK ALBUMS THAT CHANGED MY LIFE NOTHING COOL RHYMES W/ MINDY BRITTANY HAS AN APPETITE CASSADEE'S CORNER MARIEL'S CLOSET ESSENTIAL LISTENING TEN YEARS ON ALBUMS OF THE YEAR ## Slider ## Slider ### Lower Than Atlantis UK Dates Lower Than Atlantis will be playing several UK dates over summer.",
+      "page": 1,
+      "snippet": "ACOUSTIC SESSIONS LIVE FEATURESON THE ROADVIDEO INTERVIEWS"
+     },
+     {
+      "component": "between June and August",
+      "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+      "source_title": "farq",
+      "sentence": "June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP!",
+      "page": 1,
+      "snippet": "June 19 1:00pm O2 ABC GlasgowJune 20"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+      "source_title": "farq",
+      "text": "ACOUSTIC SESSIONS LIVE FEATURESON THE ROADVIDEO INTERVIEWS + FEATURES BEHIND THE SCENES IN THE SPOTLIGHT TRACK BY TRACK ALBUMS THAT CHANGED MY LIFE NOTHING COOL RHYMES W/ MINDY BRITTANY HAS AN APPETITE CASSADEE'S CORNER MARIEL'S CLOSET ESSENTIAL LISTENING TEN YEARS ON ALBUMS OF THE YEAR ## Slider ## Slider ### Lower Than Atlantis UK Dates Lower Than Atlantis will be playing several UK dates over summer. June 19 1:00pm O2 ABC GlasgowJune 20 8:00pm The Varsity WolverhamptonJune 22 8:00pm Face Bar ReadingJune 23 7:00pm Supporting Hot Water Music NewportJune 24 8:00pm Central Station WrexhamJune 26 12:00pm Ghostfest 2010 LeedsJuly 2 7:00pm Sno!Bar Milton KeynesJuly 16 7:00pm with Young Guns The Garage LondonJuly 17 8:00pm Dour Festival BelgiumJuly 18 12:30pm Guilfest Festival GuildfordJuly 30 9:00pm Sonisphere FestivalAug 6 5:00pm Relentless Board Masters NewquayAug 8 8:00Ppm Hevy Music Festival Kent #### No comments: Subscribe to: Post Comments (Atom) ## Search Box ## Facebook LIKE ATP!",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "John Norman (born May 5, 1966 Terrell, Texas) is an American graphic designer and advertising executive, currently the Chief Creative Officer of Translation LLC in New York City.",
+   "markers": [
+    "johncharlesnorman"
+   ],
+   "paper_ids": [
+    "61d7eb670d16db3ca7bddeef159a7ee15cb39f0c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "61d7eb670d16db3ca7bddeef159a7ee15cb39f0c",
+    "source_title": "johncharlesnorman",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Name: John NormanTitle: Partner/Chief Creative Officer at TranslationYears in ad industry: 20+First job in ad industry: Wieden + Kennedy Amsterdam John Norman has always made things—drawing to impress other kids or working his way through college as a carpenter.",
+    "page": 1,
+    "snippet": "Name: John NormanTitle: Partner/Chief Creative Officer at",
+    "reason": "The passage does not state John Norman's birth date or birthplace.",
+    "votes": "2-0",
+    "window": "Name: John NormanTitle: Partner/Chief Creative Officer at TranslationYears in ad industry: 20+First job in ad industry: Wieden + Kennedy Amsterdam John Norman has always made things—drawing to impress other kids or working his way through college as a carpenter. A gig at Hewlett-Packard led to a position at Goodby Silverstein & Partners, before he took the chief creative officer position at The Martin Agency in 2009. In 2012, Norman became CCO of TBWA\\Chiat\\Day LA, and two years later, he joined Translation, after a year of being recruited by founder and CEO Steve Stoute. After school, Norman worked as a graphic designer in Dallas."
+   },
+   "evidences": [
+    {
+     "paper_id": "61d7eb670d16db3ca7bddeef159a7ee15cb39f0c",
+     "source_title": "johncharlesnorman",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Name: John NormanTitle: Partner/Chief Creative Officer at TranslationYears in ad industry: 20+First job in ad industry: Wieden + Kennedy Amsterdam John Norman has always made things—drawing to impress other kids or working his way through college as a carpenter.",
+     "page": 1,
+     "snippet": "Name: John NormanTitle: Partner/Chief Creative Officer at",
+     "reason": "The passage does not state John Norman's birth date or birthplace.",
+     "votes": "2-0",
+     "window": "Name: John NormanTitle: Partner/Chief Creative Officer at TranslationYears in ad industry: 20+First job in ad industry: Wieden + Kennedy Amsterdam John Norman has always made things—drawing to impress other kids or working his way through college as a carpenter. A gig at Hewlett-Packard led to a position at Goodby Silverstein & Partners, before he took the chief creative officer position at The Martin Agency in 2009. In 2012, Norman became CCO of TBWA\\Chiat\\Day LA, and two years later, he joined Translation, after a year of being recruited by founder and CEO Steve Stoute. After school, Norman worked as a graphic designer in Dallas."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state John Norman's birth date or birthplace.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "John Norman was born on May 5, 1966 in Terrell, Texas.",
+    "reason": "The passage asserts facts about John Norman's birth date and place, which are directly attributable to the cited source and expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes unsourced birth details (May 5, 1966 Terrell, Texas), nationality (American), and the specific company name 'Translation LLC' with location 'New York City' that are not found in the provided source text. The source supports 'John Norman', 'graphic designer', 'advertising executive', and 'Chief Creative Officer at Translation'.",
+    "rewrite_suggestion": "John Norman is a graphic designer and advertising executive, currently the Chief Creative Officer at Translation.",
+    "proofs": [
+     "Name: John NormanTitle: Partner/Chief Creative Officer at Translation",
+     "After school, Norman worked as a graphic designer in Dallas."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only confirms John Norman's name and his title (Partner/Chief Creative Officer at Translation). However, the claim also includes a specific birth date and place (May 5, 1966 Terrell, Texas), the nationality 'American', and the exact company name 'Translation LLC' with location 'New York City' — none of these appear anywhere in the provided source text. The source does state that Norman worked as a graphic designer (supporting that component), but the missing subclaims are not provable from this source. Therefore the author must either add a citation for those unsourced components or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "The series filmed in the Spanish cities Seville, Cáceres, Almodóvar del Río, Santiponce, Zumaia and Bermeo.",
+   "markers": [
+    "gameofthronesseason7"
+   ],
+   "paper_ids": [
+    "d05a0261b67af785ab68a6d892e09ca7afb5faa8"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d05a0261b67af785ab68a6d892e09ca7afb5faa8",
+    "source_title": "gameofthronesseason7",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Locations for shooting in Spain will include Sevilla, Caceres, Almodovar del Rio, Santiponce, Zumaia and Bermeo.",
+    "page": 1,
+    "snippet": "Locations for shooting in Spain will include",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Locations for shooting in Spain will include Sevilla, Caceres, Almodovar del Rio, Santiponce, Zumaia and Bermeo."
+   },
+   "evidences": [
+    {
+     "paper_id": "d05a0261b67af785ab68a6d892e09ca7afb5faa8",
+     "source_title": "gameofthronesseason7",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Locations for shooting in Spain will include Sevilla, Caceres, Almodovar del Rio, Santiponce, Zumaia and Bermeo.",
+     "page": 1,
+     "snippet": "Locations for shooting in Spain will include",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Locations for shooting in Spain will include Sevilla, Caceres, Almodovar del Rio, Santiponce, Zumaia and Bermeo."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "The series filmed in the Spanish cities Seville, Cáceres, Almodóvar del Río, Santiponce, Zumaia and Bermeo.",
+      "paper_id": "d05a0261b67af785ab68a6d892e09ca7afb5faa8",
+      "source_title": "gameofthronesseason7",
+      "sentence": "Locations for shooting in Spain will include Sevilla, Caceres, Almodovar del Rio, Santiponce, Zumaia and Bermeo.",
+      "page": 1,
+      "snippet": "Locations for shooting in Spain will include"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d05a0261b67af785ab68a6d892e09ca7afb5faa8",
+      "source_title": "gameofthronesseason7",
+      "text": "Locations for shooting in Spain will include Sevilla, Caceres, Almodovar del Rio, Santiponce, Zumaia and Bermeo.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t15",
+   "text": "Tromarama (est. 2006, Bandung) is an Indonesian art collective founded by Febie Babyrose (b. 1985, Jakarta), Ruddy Hatumena (b. 1984, Bahrain) and Herbert Hans (b. 1984, Jakarta).",
+   "markers": [
+    "tromarama"
+   ],
+   "paper_ids": [
+    "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+    "source_title": "tromarama",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+    "page": 1,
+    "snippet": "Initiating as a collective in 2006 in",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings."
+   },
+   "evidences": [
+    {
+     "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+     "source_title": "tromarama",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+     "page": 1,
+     "snippet": "Initiating as a collective in 2006 in",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Tromarama founded in 2006",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+      "page": 1,
+      "snippet": "Initiating as a collective in 2006 in"
+     },
+     {
+      "component": "Tromarama founded in 2006",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "(meta data) TITLE: Edouard Malingue Gallery ## Edouard Malingue GalleryRepresented artists ###### Works (53) ## ## ###### Biography ## Tromarama ##### Bandung, Indonesia, 2006 Engaging with the notion of hyperreality in the digital age, Tromarama explores the interrelationship between the virtual and the physical world.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Edouard Malingue Gallery ##"
+     },
+     {
+      "component": "Tromarama founded in Bandung",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+      "page": 1,
+      "snippet": "Initiating as a collective in 2006 in"
+     },
+     {
+      "component": "Tromarama founded in Bandung",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "(meta data) TITLE: Edouard Malingue Gallery ## Edouard Malingue GalleryRepresented artists ###### Works (53) ## ## ###### Biography ## Tromarama ##### Bandung, Indonesia, 2006 Engaging with the notion of hyperreality in the digital age, Tromarama explores the interrelationship between the virtual and the physical world.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Edouard Malingue Gallery ##"
+     },
+     {
+      "component": "Tromarama founded by Febie Babyrose",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+      "page": 1,
+      "snippet": "Initiating as a collective in 2006 in"
+     },
+     {
+      "component": "Tromarama founded by Ruddy Hatumena",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+      "page": 1,
+      "snippet": "Initiating as a collective in 2006 in"
+     },
+     {
+      "component": "Tromarama founded by Herbert Hans",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+      "page": 1,
+      "snippet": "Initiating as a collective in 2006 in"
+     },
+     {
+      "component": "Indonesian art collective",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings.",
+      "page": 1,
+      "snippet": "Initiating as a collective in 2006 in",
+      "via": "escalation"
+     },
+     {
+      "component": "Indonesian",
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "sentence": "Students in respectively graphic design, advertising and printmaking, the triumvirate came together for the creation of 'Serigala Militia' (2006) – a stop motion animation film made of hundreds of woodcut plywood boards, flashing in speeding sequence to the beats of Seringai, an Indonesian hard rock band.",
+      "page": 1,
+      "snippet": "Students in respectively graphic design, advertising and",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Ruddy Hatumena born in Bahrain",
+     "Herbert Hans born 1984",
+     "Herbert Hans born in Jakarta",
+     "Febie Babyrose born 1985",
+     "Febie Babyrose born in Jakarta",
+     "Ruddy Hatumena born 1984"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+      "source_title": "tromarama",
+      "text": "(meta data) TITLE: Edouard Malingue Gallery ## Edouard Malingue GalleryRepresented artists ###### Works (53) ## ## ###### Biography ## Tromarama ##### Bandung, Indonesia, 2006 Engaging with the notion of hyperreality in the digital age, Tromarama explores the interrelationship between the virtual and the physical world. Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings. Channelling language, text, wit, sequence as well as interaction through their varied practice, Tromarama reflect on the cornerstones of Indonesia's political and cultural environment [1], a form of perceptive engagement that applies globally. The trio met while studying at the Institute Technology of Bandung, which since the 90s and 2000s has been active in the support of video art and the city's creative currents. Students in respectively graphic design, advertising and printmaking, the triumvirate came together for the creation of 'Serigala Militia' (2006) – a stop motion animation film made of hundreds of woodcut plywood boards, flashing in speeding sequence to the beats of Seringai, an Indonesian hard rock band.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The birthplaces and birth years of the founders are not mentioned in the passage.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The birth years and birthplaces of Febie Babyrose (b. 1985, Jakarta), Ruddy Hatumena (b. 1984, Bahrain), and Herbert Hans (b. 1984, Jakarta) are not present in the cited source.",
+    "rewrite_suggestion": "Tromarama (est. 2006, Bandung) is an Indonesian art collective founded by Febie Babyrose, Ruddy Hatumena, and Herbert Hans.",
+    "proofs": [
+     "Initiating as a collective in 2006 in Bandung, Indonesia, Febie Babyrose, Ruddy Hatumena and Herbert Hans create works that combine video, installation, computer programming and public participation depicting the influence of digital media on society's perception of its surroundings."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes birth years and birthplaces for each founder, but the source text from Edouard Malingue Gallery contains no such biographical data. The supported components—founding year, location, collective status, and founders' names—are all confirmed by the shown sentence. Therefore, the author must either add a citation for the birth details or rewrite the claim to remove them."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "He attended Notre Dame College Prep and commuted two hours from Wauconda, Illinois to play under coach Tom Les.",
+   "markers": [
+    "mattmooney"
+   ],
+   "paper_ids": [
+    "da4ce6df1d76f8942f5d31b026bdc17390533a6c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9428,
+   "evidence": {
+    "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+    "source_title": "mattmooney",
+    "supported": true,
+    "sentence": "He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame.",
+    "page": 1,
+    "snippet": "He commuted two hours daily from his",
+    "cosine": 0.9428,
+    "reason": "The passage directly states that Matt commuted two hours daily from Wauconda to play for Coach Tom Les at Notre Dame.",
+    "window": "Matt showed his determination in high school. He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame. Now he's grown into a 6-3 shooter and a stabilizing force for the Red Raiders."
+   },
+   "evidences": [
+    {
+     "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+     "source_title": "mattmooney",
+     "supported": true,
+     "sentence": "He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame.",
+     "page": 1,
+     "snippet": "He commuted two hours daily from his",
+     "cosine": 0.9428,
+     "reason": "The passage directly states that Matt commuted two hours daily from Wauconda to play for Coach Tom Les at Notre Dame.",
+     "window": "Matt showed his determination in high school. He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame. Now he's grown into a 6-3 shooter and a stabilizing force for the Red Raiders."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Matt commuted two hours daily from Wauconda to play for Coach Tom Les at Notre Dame.",
+   "covering": {
+    "covered": [
+     {
+      "component": "attended Notre Dame College Prep",
+      "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+      "source_title": "mattmooney",
+      "sentence": "For four years, every practice and every game, Sandy Levy sat in the same spot in the Notre Dame College Prep gym.",
+      "page": 1,
+      "snippet": "For four years, every practice and every"
+     },
+     {
+      "component": "commuted two hours from Wauconda, Illinois",
+      "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+      "source_title": "mattmooney",
+      "sentence": "He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame.",
+      "page": 1,
+      "snippet": "He commuted two hours daily from his"
+     },
+     {
+      "component": "played under coach Tom Les",
+      "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+      "source_title": "mattmooney",
+      "sentence": "He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame.",
+      "page": 1,
+      "snippet": "He commuted two hours daily from his"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+      "source_title": "mattmooney",
+      "text": "For four years, every practice and every game, Sandy Levy sat in the same spot in the Notre Dame College Prep gym. […] He commuted two hours daily from his home in Wauconda to play for Coach Tom Les at Notre Dame.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t17",
+   "text": "Ultimately, in a shock result, Labor came up just one seat short of the 36-seat swing it needed to win back government in its own right, and was able to form a minority government with the support of independent Peter Wellington.",
+   "markers": [
+    "campbellnewman"
+   ],
+   "paper_ids": [
+    "714a92cd046efb39f2a4b4dd61f7dd31b8a69850"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "714a92cd046efb39f2a4b4dd61f7dd31b8a69850",
+    "source_title": "campbellnewman",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Three seats, Mansfield, Maryborough and Whitsunday remained undecided on Saturday night, but Labor was expected to pick up enough to form a majority government.",
+    "page": 1,
+    "snippet": "Three seats, Mansfield, Maryborough and Whitsunday remained",
+    "reason": "the passage does not state that Labor came up just one seat short of the 36-seat swing it needed to win back government in its own right",
+    "votes": "2-0",
+    "window": "Three seats, Mansfield, Maryborough and Whitsunday remained undecided on Saturday night, but Labor was expected to pick up enough to form a majority government. Photo: Robert Shakespeare Even if Labor falls short, it is likely to have support of both Katter Australia Party and independent Peter Wellington in a hung parliament."
+   },
+   "evidences": [
+    {
+     "paper_id": "714a92cd046efb39f2a4b4dd61f7dd31b8a69850",
+     "source_title": "campbellnewman",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Three seats, Mansfield, Maryborough and Whitsunday remained undecided on Saturday night, but Labor was expected to pick up enough to form a majority government.",
+     "page": 1,
+     "snippet": "Three seats, Mansfield, Maryborough and Whitsunday remained",
+     "reason": "the passage does not state that Labor came up just one seat short of the 36-seat swing it needed to win back government in its own right",
+     "votes": "2-0",
+     "window": "Three seats, Mansfield, Maryborough and Whitsunday remained undecided on Saturday night, but Labor was expected to pick up enough to form a majority government. Photo: Robert Shakespeare Even if Labor falls short, it is likely to have support of both Katter Australia Party and independent Peter Wellington in a hung parliament."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that Labor came up just one seat short of the 36-seat swing it needed to win back government in its own right",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Labor came up just one seat short of the 36-seat swing it needed to win back government in its own right, and was able to form a minority government with the support of independent Peter Wellington.",
+    "reason": "The passage directly states a factual outcome of an election, attributing this result to the cited source. This is a direct assertion of findings that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Labor came up just one seat short of the 36-seat swing it needed to win back government in its own right",
+    "rewrite_suggestion": "Ultimately, in a shock result, Labor fell short of a majority but was able to form a minority government with the support of independent Peter Wellington.",
+    "proofs": [
+     "Even if Labor falls short, it is likely to have support of both Katter Australia Party and independent Peter Wellington in a hung parliament.",
+     "A new political landscape will greet Queensland, with Labor set to take back power after just three years."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim includes a specific numeric detail ('one seat short of the 36-seat swing') that does not appear anywhere in the provided source text. Although some components (shock result, minority government with Wellington) are present in the source, the missing numeric subclaim is not provable from the cited source, requiring the author to either add a citation for that detail or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "For their 2017 entry, the broadcaster announced on 14 September 2016 that they would revert to a casting show format for the national final, similar to the format used in 2010 and 2012, which resulted in a first place and a top ten result respectively at Eurovision for Germany.",
+   "markers": [
+    "germanyintheeurovisionso"
+   ],
+   "paper_ids": [
+    "fb036e276eddcaac6458183867be775c0ae05742"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fb036e276eddcaac6458183867be775c0ae05742",
+    "source_title": "germanyintheeurovisionso",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Confirming their participation in the 2017 Eurovision Song Contest to ESCToday back in May, it has today been confirmed that the German national broadcaster will once again opt for a national final in order to select the country's representative for the competition.",
+    "page": 1,
+    "snippet": "Confirming their participation in the 2017 Eurovision",
+    "reason": "The passage does not mention the date of the announcement (14 September 2016) or the specific results (first place and top ten) achieved in Eurovision with the 2010 and 2012 formats.",
+    "votes": "2-0",
+    "window": "Confirming their participation in the 2017 Eurovision Song Contest to ESCToday back in May, it has today been confirmed that the German national broadcaster will once again opt for a national final in order to select the country's representative for the competition. (meta data) TITLE: Eurovision Germany: Back to basics in German national final - ESCToday.com (meta data) AUTHOR: https://www.facebook.com/JessRWeaver (meta data) PUBLISHER: http://facebook.com/esctoday # Germany: Back to basics in German national final The German national broadcaster, ARD, has today confirmed that the country will go back to basics in their upcoming national final, reverting back to a similar selection process which brought the country their best results to date. Once submissions close, an expert committee will then shortlist a total of 30 candidates who will then compete in a second round of castings, where a total of 5 finalists will be selected to compete in the national final in Cologne on the 9 February 2017 from 20:15 CET, hosted by Barbara Schöneberger. Entitled Unser Song 2017, submissions are now open for artists who are looking to compete in the national final."
+   },
+   "evidences": [
+    {
+     "paper_id": "fb036e276eddcaac6458183867be775c0ae05742",
+     "source_title": "germanyintheeurovisionso",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Confirming their participation in the 2017 Eurovision Song Contest to ESCToday back in May, it has today been confirmed that the German national broadcaster will once again opt for a national final in order to select the country's representative for the competition.",
+     "page": 1,
+     "snippet": "Confirming their participation in the 2017 Eurovision",
+     "reason": "The passage does not mention the date of the announcement (14 September 2016) or the specific results (first place and top ten) achieved in Eurovision with the 2010 and 2012 formats.",
+     "votes": "2-0",
+     "window": "Confirming their participation in the 2017 Eurovision Song Contest to ESCToday back in May, it has today been confirmed that the German national broadcaster will once again opt for a national final in order to select the country's representative for the competition. (meta data) TITLE: Eurovision Germany: Back to basics in German national final - ESCToday.com (meta data) AUTHOR: https://www.facebook.com/JessRWeaver (meta data) PUBLISHER: http://facebook.com/esctoday # Germany: Back to basics in German national final The German national broadcaster, ARD, has today confirmed that the country will go back to basics in their upcoming national final, reverting back to a similar selection process which brought the country their best results to date. Once submissions close, an expert committee will then shortlist a total of 30 candidates who will then compete in a second round of castings, where a total of 5 finalists will be selected to compete in the national final in Cologne on the 9 February 2017 from 20:15 CET, hosted by Barbara Schöneberger. Entitled Unser Song 2017, submissions are now open for artists who are looking to compete in the national final."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the date of the announcement (14 September 2016) or the specific results (first place and top ten) achieved in Eurovision with the 2010 and 2012 formats.",
+   "component_check": {
+    "found": [
+     "The 2010 format resulted in a first place at Eurovision for Germany."
+    ],
+    "missing": [
+     "The broadcaster announced on 14 September 2016 that they would revert to a casting show format for the national final for their 2017 entry.",
+     "This format was similar to the format used in 2010 and 2012.",
+     "The 2012 format resulted in a top ten result at Eurovision for Germany."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The 2010 format resulted in a first place at Eurovision for Germany.",
+      "paper_id": "fb036e276eddcaac6458183867be775c0ae05742",
+      "source_title": "germanyintheeurovisionso",
+      "sentence": "Lena, who represented Germany in both 2010 and 2011 and brought Germany their second Eurovision victory, encourages artists to submit their applications for the selection: I can only advise everyone to send in their applications.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (dates, format changes, and past results) that are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date '14 September 2016', the comparison to formats used in 2010 and 2012, and the assertion that those formats yielded a first place and top ten result.",
+    "rewrite_suggestion": "For their 2017 entry, the broadcaster announced that they would revert to a national final selection process with castings, similar to the format that brought Germany its best results.",
+    "proofs": [
+     "Confirming their participation in the 2017 Eurovision Song Contest to ESCToday back in May, it has today been confirmed that the German national broadcaster will once again opt for a national final in order to select the country's representative for the competition.",
+     "The German national broadcaster, ARD, has today confirmed that the country will go back to basics in their upcoming national final, reverting back to a similar selection process which brought the country their best results to date."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a specific date (14 September 2016) and references to the 2010 and 2012 formats and their results (first place and top ten) that are not present in the cited source text. The source only states a general 'today' and a 'similar selection process which brought the country their best results', without specifying years or outcomes. Therefore the author must either add a citation for those missing subclaims or rewrite the claim to align with what the source actually supports."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "The Supreme Court has agreed to hear the case as \"R.G. & G.R. Harris Funeral Homes Inc. v. Equal Employment Opportunity Commission\" during the 2019-2020 term.",
+   "markers": [
+    "lgbtemploymentdiscrimina"
+   ],
+   "paper_ids": [
+    "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62",
+    "source_title": "lgbtemploymentdiscrimina",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Harris Funeral Homes v. Equal Employment Opportunity Commission, No. 18-107, concerns Aimee Stephens, who was fired from a Michigan funeral home after she announced in 2013 that she was a transgender woman and would start working in women's clothing.",
+    "page": 1,
+    "snippet": "Harris Funeral Homes v. Equal Employment Opportunity",
+    "reason": "The passage does not state that the Supreme Court agreed to hear the case during the 2019-2020 term.",
+    "votes": "2-0",
+    "window": "Harris Funeral Homes v. Equal Employment Opportunity Commission, No. 18-107, concerns Aimee Stephens, who was fired from a Michigan funeral home after she announced in 2013 that she was a transgender woman and would start working in women's clothing. The justices also agreed to decide the separate question of whether Title VII bars discrimination against transgender people."
+   },
+   "evidences": [
+    {
+     "paper_id": "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62",
+     "source_title": "lgbtemploymentdiscrimina",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Harris Funeral Homes v. Equal Employment Opportunity Commission, No. 18-107, concerns Aimee Stephens, who was fired from a Michigan funeral home after she announced in 2013 that she was a transgender woman and would start working in women's clothing.",
+     "page": 1,
+     "snippet": "Harris Funeral Homes v. Equal Employment Opportunity",
+     "reason": "The passage does not state that the Supreme Court agreed to hear the case during the 2019-2020 term.",
+     "votes": "2-0",
+     "window": "Harris Funeral Homes v. Equal Employment Opportunity Commission, No. 18-107, concerns Aimee Stephens, who was fired from a Michigan funeral home after she announced in 2013 that she was a transgender woman and would start working in women's clothing. The justices also agreed to decide the separate question of whether Title VII bars discrimination against transgender people."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the Supreme Court agreed to hear the case during the 2019-2020 term.",
+   "tail_rescue": {
+    "supported": false,
+    "tried": [
+     1,
+     2
+    ]
+   },
+   "component_check": {
+    "found": [
+     "The Supreme Court has agreed to hear the case",
+     "The case is \"R.G. & G.R. Harris Funeral Homes Inc. v. Equal Employment Opportunity Commission\""
+    ],
+    "missing": [
+     "The case will be heard during the 2019-2020 term"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Supreme Court has agreed to hear the case",
+      "paper_id": "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62",
+      "source_title": "lgbtemploymentdiscrimina",
+      "sentence": "The Supreme Court agreed to hear the case from New York, Altitude Express Inc. v. Zarda, No. 17-1623, along with one from Georgia that came to the opposite conclusion, Bostock v. Clayton County, Ga., No. 17-1618.",
+      "page": 1
+     },
+     {
+      "component": "The case is \"R.G. & G.R. Harris Funeral Homes Inc. v. Equal Employment Opportunity Commission\"",
+      "paper_id": "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62",
+      "source_title": "lgbtemploymentdiscrimina",
+      "sentence": "Harris Funeral Homes v. Equal Employment Opportunity Commission, No. 18-107, concerns Aimee Stephens, who was fired from a Michigan funeral home after she announced in 2013 that she was a transgender woman and would start working in women's clothing.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Supreme Court has agreed to hear the case as \"R.G. & G.R. Harris Funeral Homes Inc. v. Equal Employment Opportunity Commission\" during the 2019-2020 term.",
+    "reason": "The passage states a specific fact (the Supreme Court agreeing to hear a case and its name/term) which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes 'Inc.' in the case name (the source uses 'R.G. & G.R. Harris Funeral Homes' without 'Inc.') and states the case was heard during the '2019-2020 term', which is not mentioned in the source.",
+    "rewrite_suggestion": "The Supreme Court agreed to hear the case R.G. & G.R. Harris Funeral Homes v. Equal Employment Opportunity Commission.",
+    "proofs": [
+     "The justices also agreed to decide the separate question of whether Title VII bars discrimination against transgender people.",
+     "The case, R.G. & G.R. Harris Funeral Homes v. Equal Employment Opportunity Commission, No. 18-107, concerns Aimee Stephens, who was fired from a Michigan funeral home after she announced in 2013 that she was a transgender woman and would start working in women's clothing."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only states that the case concerns Aimee Stephens, omitting the Supreme Court's agreement to hear the case, the full case name, and the term. The source does contain the agreement and the case name (without 'Inc.'), but the term '2019-2020 term' is not present. Because the claim includes two unsourced components (the 'Inc.' and the term), the author must add a citation or rewrite the claim. The provable components are listed in proof_sentences."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The district serves northeastern Jefferson County, including suburban areas to the north and rural areas to the south.",
+   "markers": [
+    "foxc6schooldistrict"
+   ],
+   "paper_ids": [
+    "5466894c8b071201ede131ccff32b71e58032d7f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8918,
+   "evidence": {
+    "paper_id": "5466894c8b071201ede131ccff32b71e58032d7f",
+    "source_title": "foxc6schooldistrict",
+    "supported": false,
+    "sentence": "Here, you'll find everything you need to know about the district.",
+    "page": 1,
+    "snippet": "Here, you'll find everything you need to",
+    "cosine": 0.8918,
+    "reason": "The passage does not mention the geographical location or specific areas served by the school district.",
+    "window": "Supporting these schools are numerous departments and programs designed to encourage student achievement, character, and excellence. Here, you'll find everything you need to know about the district. Please use the navigation menu to the left to make a selection, or choose one of the links below."
+   },
+   "evidences": [
+    {
+     "paper_id": "5466894c8b071201ede131ccff32b71e58032d7f",
+     "source_title": "foxc6schooldistrict",
+     "supported": false,
+     "sentence": "Here, you'll find everything you need to know about the district.",
+     "page": 1,
+     "snippet": "Here, you'll find everything you need to",
+     "cosine": 0.8918,
+     "reason": "The passage does not mention the geographical location or specific areas served by the school district.",
+     "window": "Supporting these schools are numerous departments and programs designed to encourage student achievement, character, and excellence. Here, you'll find everything you need to know about the district. Please use the navigation menu to the left to make a selection, or choose one of the links below."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The district serves northeastern Jefferson County, including suburban areas to the north and rural areas to the south.",
+    "reason": "The passage asserts facts about the school district's service area, which the citation is expected to prove. There is no indication that the citation is only for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire geographic description (northeastern Jefferson County, suburban north, rural south) is not supported by the source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts specific geographic service areas for the district, but the provided source text contains no mention of Jefferson County, suburban areas, or rural areas. The only location information is the street address in Arnold, MO. Therefore, no part of the claim can be proven from this source, so the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "He served as the leader of the political and military department for the Assyrian Democratic Movement.",
+   "markers": [
+    "hammurabihumanrightsorga"
+   ],
+   "paper_ids": [
+    "ee4ba8fc79fe5572195b2f657195494afc37b4d2"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9123,
+   "evidence": {
+    "paper_id": "ee4ba8fc79fe5572195b2f657195494afc37b4d2",
+    "source_title": "hammurabihumanrightsorga",
+    "supported": true,
+    "sentence": "He is the former CEO of Ashur Satellite TV, and a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003).",
+    "page": 1,
+    "snippet": "He is the former CEO of Ashur",
+    "cosine": 0.9123,
+    "reason": "The passage explicitly states that William Warda was 'a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003)'.",
+    "window": "William Warda is Chairman of the Alliance of Iraqi Minorities, and Co-Founder of the Hammurabi Human Rights Organization (HHRO). He is the former CEO of Ashur Satellite TV, and a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003). Contribution (Book and Lecture Series) Saddam Hussein, Operation Iraqi Freedom, the Islamic State: Can Religious Pluralism Survive the Onslaught?"
+   },
+   "evidences": [
+    {
+     "paper_id": "ee4ba8fc79fe5572195b2f657195494afc37b4d2",
+     "source_title": "hammurabihumanrightsorga",
+     "supported": true,
+     "sentence": "He is the former CEO of Ashur Satellite TV, and a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003).",
+     "page": 1,
+     "snippet": "He is the former CEO of Ashur",
+     "cosine": 0.9123,
+     "reason": "The passage explicitly states that William Warda was 'a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003)'.",
+     "window": "William Warda is Chairman of the Alliance of Iraqi Minorities, and Co-Founder of the Hammurabi Human Rights Organization (HHRO). He is the former CEO of Ashur Satellite TV, and a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003). Contribution (Book and Lecture Series) Saddam Hussein, Operation Iraqi Freedom, the Islamic State: Can Religious Pluralism Survive the Onslaught?"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that William Warda was 'a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003)'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "leader of the political and military department for the Assyrian Democratic Movement",
+      "paper_id": "ee4ba8fc79fe5572195b2f657195494afc37b4d2",
+      "source_title": "hammurabihumanrightsorga",
+      "sentence": "He is the former CEO of Ashur Satellite TV, and a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003).",
+      "page": 1,
+      "snippet": "He is the former CEO of Ashur"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ee4ba8fc79fe5572195b2f657195494afc37b4d2",
+      "source_title": "hammurabihumanrightsorga",
+      "text": "He is the former CEO of Ashur Satellite TV, and a former leader of political and military affairs of the Assyrian Democratic Movement in Nineveh (2003).",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t22",
+   "text": "The collection has a particular focus on West Africa, with a number of artifacts from the Akan, Bamileke, Yoruba, and the Kingdom of Bamum.",
+   "markers": [
+    "glenbowmuseum"
+   ],
+   "paper_ids": [
+    "8c683753502f966a2254660530468883d450e49c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9138,
+   "evidence": {
+    "paper_id": "8c683753502f966a2254660530468883d450e49c",
+    "source_title": "glenbowmuseum",
+    "supported": true,
+    "sentence": "Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+    "page": 1,
+    "snippet": "Collected in the 1960s, objects in the",
+    "cosine": 0.9138,
+    "reason": "The passage explicitly states that the African collection has a focus on West Africa and mentions artifacts from the Yoruba, Akan, Bamum, and Bamileke cultures, directly supporting the claim.",
+    "window": "(meta data) TITLE: Glenbow > Collections & Research > Museum Collections > World Cultures > Africa Museum CollectionsCommunity HistoryMilitary & Mounted PoliceMineralsNative North AmericaWorld Cultures AfricaLatin AmericaOceaniaAsia ArtLibraryArchives Search the Collections Personal Collecting and Research The Qatiktalik (Fullerton Harbour) Photo Narrative Project # Africa The African collection contains over 5000 artifacts with a focus on the cultures of West Africa. Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields. MaskBamum, Cameroon Grassfieldsmid 20th centurycloth, glass beads, plant fibreFD 47 The elephant, symbol of the Fon, is represented in this mask made of cloth, woven plants, and beadwork."
+   },
+   "evidences": [
+    {
+     "paper_id": "8c683753502f966a2254660530468883d450e49c",
+     "source_title": "glenbowmuseum",
+     "supported": true,
+     "sentence": "Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+     "page": 1,
+     "snippet": "Collected in the 1960s, objects in the",
+     "cosine": 0.9138,
+     "reason": "The passage explicitly states that the African collection has a focus on West Africa and mentions artifacts from the Yoruba, Akan, Bamum, and Bamileke cultures, directly supporting the claim.",
+     "window": "(meta data) TITLE: Glenbow > Collections & Research > Museum Collections > World Cultures > Africa Museum CollectionsCommunity HistoryMilitary & Mounted PoliceMineralsNative North AmericaWorld Cultures AfricaLatin AmericaOceaniaAsia ArtLibraryArchives Search the Collections Personal Collecting and Research The Qatiktalik (Fullerton Harbour) Photo Narrative Project # Africa The African collection contains over 5000 artifacts with a focus on the cultures of West Africa. Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields. MaskBamum, Cameroon Grassfieldsmid 20th centurycloth, glass beads, plant fibreFD 47 The elephant, symbol of the Fon, is represented in this mask made of cloth, woven plants, and beadwork."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the African collection has a focus on West Africa and mentions artifacts from the Yoruba, Akan, Bamum, and Bamileke cultures, directly supporting the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "collection focus on West Africa",
+      "paper_id": "8c683753502f966a2254660530468883d450e49c",
+      "source_title": "glenbowmuseum",
+      "sentence": "(meta data) TITLE: Glenbow > Collections & Research > Museum Collections > World Cultures > Africa Museum CollectionsCommunity HistoryMilitary & Mounted PoliceMineralsNative North AmericaWorld Cultures AfricaLatin AmericaOceaniaAsia ArtLibraryArchives Search the Collections Personal Collecting and Research The Qatiktalik (Fullerton Harbour) Photo Narrative Project # Africa The African collection contains over 5000 artifacts with a focus on the cultures of West Africa.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Glenbow > Collections &"
+     },
+     {
+      "component": "artifacts from the Akan",
+      "paper_id": "8c683753502f966a2254660530468883d450e49c",
+      "source_title": "glenbowmuseum",
+      "sentence": "Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+      "page": 1,
+      "snippet": "Collected in the 1960s, objects in the"
+     },
+     {
+      "component": "artifacts from the Bamileke",
+      "paper_id": "8c683753502f966a2254660530468883d450e49c",
+      "source_title": "glenbowmuseum",
+      "sentence": "Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+      "page": 1,
+      "snippet": "Collected in the 1960s, objects in the"
+     },
+     {
+      "component": "artifacts from the Yoruba",
+      "paper_id": "8c683753502f966a2254660530468883d450e49c",
+      "source_title": "glenbowmuseum",
+      "sentence": "Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+      "page": 1,
+      "snippet": "Collected in the 1960s, objects in the"
+     },
+     {
+      "component": "artifacts from the Kingdom of Bamum",
+      "paper_id": "8c683753502f966a2254660530468883d450e49c",
+      "source_title": "glenbowmuseum",
+      "sentence": "Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+      "page": 1,
+      "snippet": "Collected in the 1960s, objects in the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8c683753502f966a2254660530468883d450e49c",
+      "source_title": "glenbowmuseum",
+      "text": "(meta data) TITLE: Glenbow > Collections & Research > Museum Collections > World Cultures > Africa Museum CollectionsCommunity HistoryMilitary & Mounted PoliceMineralsNative North AmericaWorld Cultures AfricaLatin AmericaOceaniaAsia ArtLibraryArchives Search the Collections Personal Collecting and Research The Qatiktalik (Fullerton Harbour) Photo Narrative Project # Africa The African collection contains over 5000 artifacts with a focus on the cultures of West Africa. Collected in the 1960s, objects in the collection represent the range of West Africa's diverse cultures notably from the Yoruba people of Nigeria, the Akan speakers of Ghana, and the Bamum and Bamileke kingdoms of the Cameroon Grassfields.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t23",
+   "text": "\"Always Remember Us This Way\" entered the UK Singles Chart at number 39 with sales of 11,029 units on the chart dated October 12, 2018.",
+   "markers": [
+    "alwaysrememberusthisway"
+   ],
+   "paper_ids": [
+    "604a96d5cda4a585dae601cdbfd64bd5cd119e03"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.834,
+   "evidence": {
+    "paper_id": "604a96d5cda4a585dae601cdbfd64bd5cd119e03",
+    "source_title": "alwaysrememberusthisway",
+    "supported": false,
+    "sentence": "Becoming the first single to debut at No.1 since Drake's Nice For What in April, and the first by a British act since Ed Sheeran's Shape Of You in January 2017, the track's consumption of 54,421 units was 5.38% above the 51,641 sales of Calvin Harris & Sam Smith's Promises, which consequently drifts to No.2 after five weeks in pole position.",
+    "page": 1,
+    "snippet": "Becoming the first single to debut at",
+    "cosine": 0.834,
+    "reason": "The passage discusses chart performance but does not mention the song \"Always Remember Us This Way\" or its specific chart position and sales figures.",
+    "window": "Pepper tops all-time chart for National Album Day Charts analysis: It's a Funky Friday for Dave & Fredo Charts analysis: A Star Is Born races to No.1 Airplay analysis: Calvin Harris & Sam Smith maintain grip on radio No.1 ERA v IFPI: Kim Bayley hits out at 'blinkered' attitude to physical music # Charts analysis: It's a Funky Friday for Dave & Fredo Alan Jones Friday, Oct 12th 2018 at 6:00PM Winning a closely contested battle for chart supremacy, Funky Friday opens atop the chart for Dave & Fredo. Becoming the first single to debut at No.1 since Drake's Nice For What in April, and the first by a British act since Ed Sheeran's Shape Of You in January 2017, the track's consumption of 54,421 units was 5.38% above the 51,641 sales of Calvin Harris & Sam Smith's Promises, which consequently drifts to No.2 after five weeks in pole position. Funky ... # Login to access this article To access this article you need to be a subscriber."
+   },
+   "evidences": [
+    {
+     "paper_id": "604a96d5cda4a585dae601cdbfd64bd5cd119e03",
+     "source_title": "alwaysrememberusthisway",
+     "supported": false,
+     "sentence": "Becoming the first single to debut at No.1 since Drake's Nice For What in April, and the first by a British act since Ed Sheeran's Shape Of You in January 2017, the track's consumption of 54,421 units was 5.38% above the 51,641 sales of Calvin Harris & Sam Smith's Promises, which consequently drifts to No.2 after five weeks in pole position.",
+     "page": 1,
+     "snippet": "Becoming the first single to debut at",
+     "cosine": 0.834,
+     "reason": "The passage discusses chart performance but does not mention the song \"Always Remember Us This Way\" or its specific chart position and sales figures.",
+     "window": "Pepper tops all-time chart for National Album Day Charts analysis: It's a Funky Friday for Dave & Fredo Charts analysis: A Star Is Born races to No.1 Airplay analysis: Calvin Harris & Sam Smith maintain grip on radio No.1 ERA v IFPI: Kim Bayley hits out at 'blinkered' attitude to physical music # Charts analysis: It's a Funky Friday for Dave & Fredo Alan Jones Friday, Oct 12th 2018 at 6:00PM Winning a closely contested battle for chart supremacy, Funky Friday opens atop the chart for Dave & Fredo. Becoming the first single to debut at No.1 since Drake's Nice For What in April, and the first by a British act since Ed Sheeran's Shape Of You in January 2017, the track's consumption of 54,421 units was 5.38% above the 51,641 sales of Calvin Harris & Sam Smith's Promises, which consequently drifts to No.2 after five weeks in pole position. Funky ... # Login to access this article To access this article you need to be a subscriber."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The song \"Always Remember Us This Way\" entered the UK Singles Chart at number 39 with sales of 11,029 units on the chart dated October 12, 2018.",
+    "reason": "The passage directly states a specific fact (chart position and sales) attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about 'Always Remember Us This Way' entering at number 39 with 11,029 units on October 12, 2018 is unsupported by the cited source, which discusses a different song.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text discusses the chart performance of 'Funky Friday' by Dave & Fredo, and contains no mention of the song 'Always Remember Us This Way', its chart position, sales figures, or the specific date. The shown sentence is entirely irrelevant to the claim. Therefore, no component of the claim can be proven from the source, and the author must either provide an appropriate citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "In 2018 the National staged another revival, directed by Joe Hill-Gibbins and starring Kate Fleetwood.",
+   "markers": [
+    "rodneyackland"
+   ],
+   "paper_ids": [
+    "83384cca34107a81fb7ca09a9418b5d328e8607b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "83384cca34107a81fb7ca09a9418b5d328e8607b",
+    "source_title": "rodneyackland",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Kate Fleetwood lends the hostess the right air of public solitude and there is strong support from Jonathan Slinger as the brutal movie-maker, Danny Webb as the anxious Austrian and Sinéad Matthews as his partner, who professes leftwing leanings but is too befuddled to vote.",
+    "page": 1,
+    "snippet": "Kate Fleetwood lends the hostess the right",
+    "reason": "The passage does not mention a revival in 2018 or that Joe Hill-Gibbins directed it.",
+    "votes": "2-0",
+    "window": "Kate Fleetwood lends the hostess the right air of public solitude and there is strong support from Jonathan Slinger as the brutal movie-maker, Danny Webb as the anxious Austrian and Sinéad Matthews as his partner, who professes leftwing leanings but is too befuddled to vote. Lyttelton, LondonJoe Hill-Gibbins gives Rodney Ackland's drama the full expressionist works in a production of visual bravura Michael Billington Thu 26 Apr 2018 06.49 EDT Last modified on Mon 3 Dec 2018 10.14 EST Raffish bohemia … Charles Edwards and Kate Fleetwood in Absolute Hell. The piece has had a rum history. It bombed badly at its premiere, under the title The Pink Room, but a revised version enjoyed big success at the Orange Tree in 1988 and at the National in 1995, and it continues to fascinate."
+   },
+   "evidences": [
+    {
+     "paper_id": "83384cca34107a81fb7ca09a9418b5d328e8607b",
+     "source_title": "rodneyackland",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Kate Fleetwood lends the hostess the right air of public solitude and there is strong support from Jonathan Slinger as the brutal movie-maker, Danny Webb as the anxious Austrian and Sinéad Matthews as his partner, who professes leftwing leanings but is too befuddled to vote.",
+     "page": 1,
+     "snippet": "Kate Fleetwood lends the hostess the right",
+     "reason": "The passage does not mention a revival in 2018 or that Joe Hill-Gibbins directed it.",
+     "votes": "2-0",
+     "window": "Kate Fleetwood lends the hostess the right air of public solitude and there is strong support from Jonathan Slinger as the brutal movie-maker, Danny Webb as the anxious Austrian and Sinéad Matthews as his partner, who professes leftwing leanings but is too befuddled to vote. Lyttelton, LondonJoe Hill-Gibbins gives Rodney Ackland's drama the full expressionist works in a production of visual bravura Michael Billington Thu 26 Apr 2018 06.49 EDT Last modified on Mon 3 Dec 2018 10.14 EST Raffish bohemia … Charles Edwards and Kate Fleetwood in Absolute Hell. The piece has had a rum history. It bombed badly at its premiere, under the title The Pink Room, but a revised version enjoyed big success at the Orange Tree in 1988 and at the National in 1995, and it continues to fascinate."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention a revival in 2018 or that Joe Hill-Gibbins directed it.",
+   "component_check": {
+    "found": [
+     "directed by Joe Hill-Gibbins",
+     "starring Kate Fleetwood"
+    ],
+    "missing": [
+     "In 2018 the National staged another revival"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "directed by Joe Hill-Gibbins",
+      "paper_id": "83384cca34107a81fb7ca09a9418b5d328e8607b",
+      "source_title": "rodneyackland",
+      "sentence": "In an attempt to boost the play's significance, Hill-Gibbins gives it the full expressionist works.",
+      "page": 1
+     },
+     {
+      "component": "starring Kate Fleetwood",
+      "paper_id": "83384cca34107a81fb7ca09a9418b5d328e8607b",
+      "source_title": "rodneyackland",
+      "sentence": "Lyttelton, LondonJoe Hill-Gibbins gives Rodney Ackland's drama the full expressionist works in a production of visual bravura Michael Billington Thu 26 Apr 2018 06.49 EDT Last modified on Mon 3 Dec 2018 10.14 EST Raffish bohemia … Charles Edwards and Kate Fleetwood in Absolute Hell.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2018 the National staged another revival, directed by Joe Hill-Gibbins and starring Kate Fleetwood.",
+    "reason": "The passage asserts a specific fact (the staging of a revival in 2018 with specific director and star) that the cited source is expected to prove. There is no indication that the citation is for methods, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "At the curtain call for this revival of Rodney Ackland's 1952 play, a total of 28 actors line up across the Lyttelton stage.",
+     "Lyttelton, LondonJoe Hill-Gibbins gives Rodney Ackland's drama the full expressionist works",
+     "Kate Fleetwood lends the hostess the right air of public solitude",
+     "At the Lyttelton, London, until 16 June. Box office: 020-7452 3000. National Theatre"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim is fully supported by the source text: the article is dated 2018, describes a revival at the National Theatre (Lyttelton) directed by Joe Hill-Gibbins and featuring Kate Fleetwood. However, the shown sentence only discusses Fleetwood's performance and does not include any of the other components (year, venue, director, revival status). Since all necessary proof exists in the source but was not displayed, the tool must fix the displayed evidence.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t25",
+   "text": "She competed in the women's team foil event at the 1976 Summer Olympics.",
+   "markers": [
+    "dorianapigliapoco"
+   ],
+   "paper_ids": [
+    "2cc49d397675384789f028ecbce37f0778a46f08"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2cc49d397675384789f028ecbce37f0778a46f08",
+    "source_title": "dorianapigliapoco",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "1976 Summer Women's Foil, Team ## Women's Foil, Team",
+    "page": 1,
+    "snippet": "1976 Summer Women's Foil, Team ## Women's",
+    "reason": "",
+    "votes": "2-0",
+    "window": "1976 Summer Women's Foil, Team ## Women's Foil, Team"
+   },
+   "evidences": [
+    {
+     "paper_id": "2cc49d397675384789f028ecbce37f0778a46f08",
+     "source_title": "dorianapigliapoco",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "1976 Summer Women's Foil, Team ## Women's Foil, Team",
+     "page": 1,
+     "snippet": "1976 Summer Women's Foil, Team ## Women's",
+     "reason": "",
+     "votes": "2-0",
+     "window": "1976 Summer Women's Foil, Team ## Women's Foil, Team"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "competed in the women's team foil event",
+      "paper_id": "2cc49d397675384789f028ecbce37f0778a46f08",
+      "source_title": "dorianapigliapoco",
+      "sentence": "1976 Summer Women's Foil, Team ## Women's Foil, Team",
+      "page": 1,
+      "snippet": "1976 Summer Women's Foil, Team ## Women's"
+     },
+     {
+      "component": "at the 1976 Summer Olympics",
+      "paper_id": "2cc49d397675384789f028ecbce37f0778a46f08",
+      "source_title": "dorianapigliapoco",
+      "sentence": "1976 Summer Women's Foil, Team ## Women's Foil, Team",
+      "page": 1,
+      "snippet": "1976 Summer Women's Foil, Team ## Women's"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "2cc49d397675384789f028ecbce37f0778a46f08",
+      "source_title": "dorianapigliapoco",
+      "text": "1976 Summer Women's Foil, Team ## Women's Foil, Team",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t26",
+   "text": "He was quickly picked up by AZ, where he went through the several youth teams.",
+   "markers": [
+    "mikhailrosheuvel"
+   ],
+   "paper_ids": [
+    "b3ae3460fadf42788c33ee91275e099ecef23e55"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b3ae3460fadf42788c33ee91275e099ecef23e55",
+    "source_title": "mikhailrosheuvel",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Ajax scout de speler al op jonge leeftijd, maar na een seizoen in Amsterdam was hij al weer klaar.",
+    "page": 1,
+    "snippet": "Ajax scout de speler al op jonge",
+    "reason": "The passage does not state that he was quickly picked up by AZ.",
+    "votes": "2-0",
+    "window": "Ajax scout de speler al op jonge leeftijd, maar na een seizoen in Amsterdam was hij al weer klaar. \"Ik heb alle jeugdelftallen mogen door lopen en heb fijne jaren gekend in de Kaasstad, maar tot een wedstrijd in het belofte-elftal is het nooit gekomen. Alkmaar Zaanstreek, kortweg AZ, ging met de rechtsbuiten aan de haal. Bij Hellas Sport, ook een amateurvereniging uit Zaandam, werd Mikhail plots opgemerkt door een andere eredivisionist."
+   },
+   "evidences": [
+    {
+     "paper_id": "b3ae3460fadf42788c33ee91275e099ecef23e55",
+     "source_title": "mikhailrosheuvel",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Ajax scout de speler al op jonge leeftijd, maar na een seizoen in Amsterdam was hij al weer klaar.",
+     "page": 1,
+     "snippet": "Ajax scout de speler al op jonge",
+     "reason": "The passage does not state that he was quickly picked up by AZ.",
+     "votes": "2-0",
+     "window": "Ajax scout de speler al op jonge leeftijd, maar na een seizoen in Amsterdam was hij al weer klaar. \"Ik heb alle jeugdelftallen mogen door lopen en heb fijne jaren gekend in de Kaasstad, maar tot een wedstrijd in het belofte-elftal is het nooit gekomen. Alkmaar Zaanstreek, kortweg AZ, ging met de rechtsbuiten aan de haal. Bij Hellas Sport, ook een amateurvereniging uit Zaandam, werd Mikhail plots opgemerkt door een andere eredivisionist."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that he was quickly picked up by AZ.",
+   "component_check": {
+    "found": [
+     "He was picked up by AZ"
+    ],
+    "missing": [
+     "He went through the several youth teams"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He was picked up by AZ",
+      "paper_id": "b3ae3460fadf42788c33ee91275e099ecef23e55",
+      "source_title": "mikhailrosheuvel",
+      "sentence": "Alkmaar Zaanstreek, kortweg AZ, ging met de rechtsbuiten aan de haal.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a factual claim about the subject's career progression. The citation is expected to support this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the adverb 'quickly' modifying 'picked up' (the source does not state that he was picked up quickly)",
+    "rewrite_suggestion": "He was picked up by AZ, where he went through the several youth teams.",
+    "proofs": [
+     "Alkmaar Zaanstreek, kortweg AZ, ging met de rechtsbuiten aan de haal.",
+     "Ik heb alle jeugdelftallen mogen door lopen en heb fijne jaren gekend in de Kaasstad"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence discusses Ajax, not AZ. The source does contain sentences proving that AZ picked him up and that he went through all youth teams there. However, the claim includes the modifier 'quickly', which is not stated in the source. Therefore the author must either remove 'quickly' or add a citation for that specific detail."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "6a7880a9e1c5c034dbf8a3975b7c8308b919ccbd": {
+    "title": "harpenden",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5a32a515e8a89e1a4dc89781659dbf62aa3f40c3": {
+    "title": "listofhellonwheelsepisod",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "9bf4c6e6e39819468dec655237dd4ac524a19c13": {
+    "title": "farq",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62": {
+    "title": "lgbtemploymentdiscrimina",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8c683753502f966a2254660530468883d450e49c": {
+    "title": "glenbowmuseum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4ef901ec8c6cd7aeb7f3ea876bad81f34ee7db6a": {
+    "title": "rachelcawthorn",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "61d7eb670d16db3ca7bddeef159a7ee15cb39f0c": {
+    "title": "johncharlesnorman",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f": {
+    "title": "ckjs",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "714a92cd046efb39f2a4b4dd61f7dd31b8a69850": {
+    "title": "campbellnewman",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "da4ce6df1d76f8942f5d31b026bdc17390533a6c": {
+    "title": "mattmooney",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "cc8f3acf8c2c4a9703231909c82d815e726ebd85": {
+    "title": "panzerdragooniizwei",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3": {
+    "title": "tromarama",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "8600740c8678828c10690e4df13b9edf0d6f4d1f": {
+    "title": "thelegendofzeldaoracleof",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3600cf5680f441cb6903f5fdaf7611ab6d94577e": {
+    "title": "sukhoisu25",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5466894c8b071201ede131ccff32b71e58032d7f": {
+    "title": "foxc6schooldistrict",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ebecbc8d69817e20cc80801fca21a672fce388c3": {
+    "title": "tianatolstoi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b3ae3460fadf42788c33ee91275e099ecef23e55": {
+    "title": "mikhailrosheuvel",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1e6c3ad4bfc53b804714b593a176be3daa915a81": {
+    "title": "rocketleague",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fb036e276eddcaac6458183867be775c0ae05742": {
+    "title": "germanyintheeurovisionso",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ee4ba8fc79fe5572195b2f657195494afc37b4d2": {
+    "title": "hammurabihumanrightsorga",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "da74d2dd7dbed196562cacc9cc92d3b1f8bdcdc3": {
+    "title": "andysdiner",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "da571c819d4855f685fa8cac19f9eac90bb65798": {
+    "title": "christianporter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d05a0261b67af785ab68a6d892e09ca7afb5faa8": {
+    "title": "gameofthronesseason7",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "2cc49d397675384789f028ecbce37f0778a46f08": {
+    "title": "dorianapigliapoco",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "83384cca34107a81fb7ca09a9418b5d328e8607b": {
+    "title": "rodneyackland",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "604a96d5cda4a585dae601cdbfd64bd5cd119e03": {
+    "title": "alwaysrememberusthisway",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 12,
+   "unsupported": 14,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 21:07:59",
+  "marker_errors": [],
+  "processing_time_seconds": 264.6,
+  "source_hashes": {
+   "listofhellonwheelsepisod.txt": "afbd1c4247e498e32c3c0ea90d5b4bcaaa823f94",
+   "panzerdragooniizwei.txt": "11e3702ea80aaf67d1f4a3d33216d07b70cd079d",
+   "sukhoisu25.txt": "f1cd407b0a3fa5811b7f0691679dca9503d16989",
+   "rocketleague.txt": "217d8a73e52b391b7c065ed57e817271040a9872",
+   "ckjs.txt": "0524445d8e402645d9551ee7252d9139b26d1909",
+   "christianporter.txt": "3c27fa231a92c1430c7f6117a75cde690098a552",
+   "harpenden.txt": "e274895f706d9267a7a1a904c729b9135f5a49ed",
+   "rachelcawthorn.txt": "2f7c15f9670caea8ca0ae332a045d1d493147c7b",
+   "thelegendofzeldaoracleof.txt": "82a0c3c59d9aade267c02284c9b6257427748742",
+   "tianatolstoi.txt": "c675b3d6b2ea3730516759057e0445dc935d738f",
+   "andysdiner.txt": "be24025a3879cddef5377036262967eb88d1e46b",
+   "farq.txt": "d96b56ad0b195726317bfd17e14dcd1c2c749176",
+   "johncharlesnorman.txt": "61e1e91f035cd79f70a7ae948f26a23d1784bf0a",
+   "gameofthronesseason7.txt": "4e3167d37633a7231cd9581fe61f87470701ba8f",
+   "tromarama.txt": "06063248b55314fbd86455146dc07a5590488a11",
+   "mattmooney.txt": "27aee29131355523dc139dfd0b36a8291e130c14",
+   "campbellnewman.txt": "99a6349733d8aded45f932ffc6837b83e52006e7",
+   "germanyintheeurovisionso.txt": "8ed3cb8ccca2ac0a8a0e71cbc3d0554f4be33c4e",
+   "lgbtemploymentdiscrimina.txt": "8daafb12a8256dd796ec00d6a04d922a418e0665",
+   "foxc6schooldistrict.txt": "3a9306aa8256dddbf2381f9e3d48e07783090478",
+   "hammurabihumanrightsorga.txt": "4ba0313c4b9151468c5fabc18dbcf97dc43ae612",
+   "glenbowmuseum.txt": "cb5357b5e1cd960ac285d36a2494a9c8cddc124a",
+   "alwaysrememberusthisway.txt": "9311c1cd407f609d8ee0e6b664e12cc6459c9296",
+   "rodneyackland.txt": "3d426b56028e6e208aba590d41e6fd83d4b95c78",
+   "dorianapigliapoco.txt": "f2e672e91bcaecff3f085cf11706d8194d6b45de",
+   "mikhailrosheuvel.txt": "6f5eccf5339997d9d38cc686cc63f20927021657"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 406,
+    "prompt_tokens": 422272,
+    "completion_tokens": 20255,
+    "cost_usd": 0.050401
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 25,
+    "prompt_tokens": 70814,
+    "completion_tokens": 60764,
+    "cost_usd": 0.021308
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 14,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 19,
+   "actions": {
+    "add_citation_or_rewrite": 17,
+    "wrong_or_insufficient_evidence": 2
+   },
+   "proof_may_exist": [
+    "t24"
+   ],
+   "conflicts": [
+    "t3",
+    "t6"
+   ],
+   "rescued": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "5a32a515e8a89e1a4dc89781659dbf62aa3f40c3",
+   "key": "listofhellonwheelsepisod",
+   "filename": "listofhellonwheelsepisod.txt",
+   "title": "listofhellonwheelsepisod",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cc8f3acf8c2c4a9703231909c82d815e726ebd85",
+   "key": "panzerdragooniizwei",
+   "filename": "panzerdragooniizwei.txt",
+   "title": "panzerdragooniizwei",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3600cf5680f441cb6903f5fdaf7611ab6d94577e",
+   "key": "sukhoisu25",
+   "filename": "sukhoisu25.txt",
+   "title": "sukhoisu25",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1e6c3ad4bfc53b804714b593a176be3daa915a81",
+   "key": "rocketleague",
+   "filename": "rocketleague.txt",
+   "title": "rocketleague",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e28acc5cdd9f273f65a819f9c2b4bda42ba8c56f",
+   "key": "ckjs",
+   "filename": "ckjs.txt",
+   "title": "ckjs",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "da571c819d4855f685fa8cac19f9eac90bb65798",
+   "key": "christianporter",
+   "filename": "christianporter.txt",
+   "title": "christianporter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6a7880a9e1c5c034dbf8a3975b7c8308b919ccbd",
+   "key": "harpenden",
+   "filename": "harpenden.txt",
+   "title": "harpenden",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4ef901ec8c6cd7aeb7f3ea876bad81f34ee7db6a",
+   "key": "rachelcawthorn",
+   "filename": "rachelcawthorn.txt",
+   "title": "rachelcawthorn",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8600740c8678828c10690e4df13b9edf0d6f4d1f",
+   "key": "thelegendofzeldaoracleof",
+   "filename": "thelegendofzeldaoracleof.txt",
+   "title": "thelegendofzeldaoracleof",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ebecbc8d69817e20cc80801fca21a672fce388c3",
+   "key": "tianatolstoi",
+   "filename": "tianatolstoi.txt",
+   "title": "tianatolstoi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "da74d2dd7dbed196562cacc9cc92d3b1f8bdcdc3",
+   "key": "andysdiner",
+   "filename": "andysdiner.txt",
+   "title": "andysdiner",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9bf4c6e6e39819468dec655237dd4ac524a19c13",
+   "key": "farq",
+   "filename": "farq.txt",
+   "title": "farq",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "61d7eb670d16db3ca7bddeef159a7ee15cb39f0c",
+   "key": "johncharlesnorman",
+   "filename": "johncharlesnorman.txt",
+   "title": "johncharlesnorman",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d05a0261b67af785ab68a6d892e09ca7afb5faa8",
+   "key": "gameofthronesseason7",
+   "filename": "gameofthronesseason7.txt",
+   "title": "gameofthronesseason7",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "09d7f462921c783c6f5f7d8b9e30f853d3ae89d3",
+   "key": "tromarama",
+   "filename": "tromarama.txt",
+   "title": "tromarama",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "da4ce6df1d76f8942f5d31b026bdc17390533a6c",
+   "key": "mattmooney",
+   "filename": "mattmooney.txt",
+   "title": "mattmooney",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "714a92cd046efb39f2a4b4dd61f7dd31b8a69850",
+   "key": "campbellnewman",
+   "filename": "campbellnewman.txt",
+   "title": "campbellnewman",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fb036e276eddcaac6458183867be775c0ae05742",
+   "key": "germanyintheeurovisionso",
+   "filename": "germanyintheeurovisionso.txt",
+   "title": "germanyintheeurovisionso",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "175b67afd929ef4bfb78fc7dc0f92d90f14d9c62",
+   "key": "lgbtemploymentdiscrimina",
+   "filename": "lgbtemploymentdiscrimina.txt",
+   "title": "lgbtemploymentdiscrimina",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5466894c8b071201ede131ccff32b71e58032d7f",
+   "key": "foxc6schooldistrict",
+   "filename": "foxc6schooldistrict.txt",
+   "title": "foxc6schooldistrict",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ee4ba8fc79fe5572195b2f657195494afc37b4d2",
+   "key": "hammurabihumanrightsorga",
+   "filename": "hammurabihumanrightsorga.txt",
+   "title": "hammurabihumanrightsorga",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8c683753502f966a2254660530468883d450e49c",
+   "key": "glenbowmuseum",
+   "filename": "glenbowmuseum.txt",
+   "title": "glenbowmuseum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "604a96d5cda4a585dae601cdbfd64bd5cd119e03",
+   "key": "alwaysrememberusthisway",
+   "filename": "alwaysrememberusthisway.txt",
+   "title": "alwaysrememberusthisway",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "83384cca34107a81fb7ca09a9418b5d328e8607b",
+   "key": "rodneyackland",
+   "filename": "rodneyackland.txt",
+   "title": "rodneyackland",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2cc49d397675384789f028ecbce37f0778a46f08",
+   "key": "dorianapigliapoco",
+   "filename": "dorianapigliapoco.txt",
+   "title": "dorianapigliapoco",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b3ae3460fadf42788c33ee91275e099ecef23e55",
+   "key": "mikhailrosheuvel",
+   "filename": "mikhailrosheuvel.txt",
+   "title": "mikhailrosheuvel",
+   "num_claims": 0
+  }
+ ]
+}

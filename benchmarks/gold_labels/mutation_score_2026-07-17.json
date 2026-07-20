@@ -1,0 +1,99 @@
+{
+  "catch_rate": "6/8",
+  "rows": [
+    {
+      "claim": "t8",
+      "kind": "negate",
+      "old": "the liver compensates by downregulating its own synthesis",
+      "new": "the liver compensates by upregulating its own synthesis",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "supported",
+      "added_flags": [],
+      "caught": false
+    },
+    {
+      "claim": "t17",
+      "kind": "num_10x",
+      "old": "covering more than three million person-years",
+      "new": "covering more than thirty million person-years",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "supported",
+      "added_flags": [
+        "arb:add_citation_or_rewrite",
+        "uncovered:1"
+      ],
+      "caught": true
+    },
+    {
+      "claim": "t18",
+      "kind": "flip_dir",
+      "old": "carried no excess cardiovascular risk (hazard ratio 0.93)",
+      "new": "carried substantial excess cardiovascular risk (hazard ratio 1.93)",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "unsupported",
+      "added_flags": [
+        "arb:add_citation_or_rewrite"
+      ],
+      "caught": true
+    },
+    {
+      "claim": "t20",
+      "kind": "flip_dir",
+      "old": "actually had a *lower* risk of cardiovascular disease than non-consumers (hazard ratio 0.89)",
+      "new": "actually had a *higher* risk of cardiovascular disease than non-consumers (hazard ratio 1.89)",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "unsupported",
+      "added_flags": [
+        "arb:add_citation_or_rewrite"
+      ],
+      "caught": true
+    },
+    {
+      "claim": "t22",
+      "kind": "num",
+      "old": "associated with a 17% higher risk of incident cardiovascular disease (HR 1.17)",
+      "new": "associated with a 70% higher risk of incident cardiovascular disease (HR 1.70)",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "unsupported",
+      "added_flags": [
+        "arb:add_citation_or_rewrite"
+      ],
+      "caught": true
+    },
+    {
+      "claim": "t29",
+      "kind": "num",
+      "old": "a 42% higher risk of type 2 diabetes (relative risk 1.42)",
+      "new": "a 22% higher risk of type 2 diabetes (relative risk 1.22)",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "supported",
+      "added_flags": [],
+      "caught": false
+    },
+    {
+      "claim": "t30",
+      "kind": "num",
+      "old": "coronary heart disease risk 54% higher (RR 1.54)",
+      "new": "coronary heart disease risk 154% higher (RR 2.54)",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "supported",
+      "added_flags": [
+        "arb:add_citation_or_rewrite",
+        "uncovered:1"
+      ],
+      "caught": true
+    },
+    {
+      "claim": "t39",
+      "kind": "num",
+      "old": "capped cholesterol at 300 mg/day, about one and a half eggs",
+      "new": "capped cholesterol at 500 mg/day, about two and a half eggs",
+      "baseline_verdict": "supported",
+      "mutated_verdict": "supported",
+      "added_flags": [
+        "uncovered:2"
+      ],
+      "caught": true
+    }
+  ]
+}

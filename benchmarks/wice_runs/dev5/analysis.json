@@ -1,0 +1,930 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE dev batch 5",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section of the article.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "His final match in England took place on 1 February 1958, when he scored the opening goal to help United defeat Arsenal 5–4.",
+   "markers": [
+    "duncanedwards"
+   ],
+   "paper_ids": [
+    "9da54d1f917d41835f9b033778d297b8b1104339"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "9da54d1f917d41835f9b033778d297b8b1104339",
+    "source_title": "duncanedwards",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Duncan Edwards opened the scoring with a fierce shot from the edge of the area, Bobby Charlton beat Jack Kelsey on the half-hour and Tommy Taylor gave United a seemingly unassailable three-goal lead at half time.",
+    "page": 1,
+    "snippet": "Duncan Edwards opened the scoring with a",
+    "reason": "The passage does not state that the match on February 1, 1958, was his final match in England.",
+    "votes": "2-0",
+    "window": "Duncan Edwards opened the scoring with a fierce shot from the edge of the area, Bobby Charlton beat Jack Kelsey on the half-hour and Tommy Taylor gave United a seemingly unassailable three-goal lead at half time. Vic Groves went close to an equaliser but the 'Busby Babes' held out for a famous 5-4 victory. More than 63,000 fans packed into Arsenal's ground for the visit of Manchester United on Saturday, February 1, 1958. They regrouped and regained control, Dennis Viollet firing the visitors back in front before Taylor grabbed his second and United's fifth."
+   },
+   "evidences": [
+    {
+     "paper_id": "9da54d1f917d41835f9b033778d297b8b1104339",
+     "source_title": "duncanedwards",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Duncan Edwards opened the scoring with a fierce shot from the edge of the area, Bobby Charlton beat Jack Kelsey on the half-hour and Tommy Taylor gave United a seemingly unassailable three-goal lead at half time.",
+     "page": 1,
+     "snippet": "Duncan Edwards opened the scoring with a",
+     "reason": "The passage does not state that the match on February 1, 1958, was his final match in England.",
+     "votes": "2-0",
+     "window": "Duncan Edwards opened the scoring with a fierce shot from the edge of the area, Bobby Charlton beat Jack Kelsey on the half-hour and Tommy Taylor gave United a seemingly unassailable three-goal lead at half time. Vic Groves went close to an equaliser but the 'Busby Babes' held out for a famous 5-4 victory. More than 63,000 fans packed into Arsenal's ground for the visit of Manchester United on Saturday, February 1, 1958. They regrouped and regained control, Dennis Viollet firing the visitors back in front before Taylor grabbed his second and United's fifth."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the match on February 1, 1958, was his final match in England.",
+   "component_check": {
+    "found": [
+     "His final match in England took place on 1 February 1958",
+     "he scored the opening goal",
+     "United defeated Arsenal 5–4"
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "His final match in England took place on 1 February 1958",
+      "paper_id": "9da54d1f917d41835f9b033778d297b8b1104339",
+      "source_title": "duncanedwards",
+      "sentence": "More than 63,000 fans packed into Arsenal's ground for the visit of Manchester United on Saturday, February 1, 1958.",
+      "page": 1
+     },
+     {
+      "component": "he scored the opening goal",
+      "paper_id": "9da54d1f917d41835f9b033778d297b8b1104339",
+      "source_title": "duncanedwards",
+      "sentence": "Duncan Edwards opened the scoring with a fierce shot from the edge of the area, Bobby Charlton beat Jack Kelsey on the half-hour and Tommy Taylor gave United a seemingly unassailable three-goal lead at half time.",
+      "page": 1
+     },
+     {
+      "component": "United defeated Arsenal 5–4",
+      "paper_id": "9da54d1f917d41835f9b033778d297b8b1104339",
+      "source_title": "duncanedwards",
+      "sentence": "Vic Groves went close to an equaliser but the 'Busby Babes' held out for a famous 5-4 victory.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (date, score, goal scorer) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here, indicating a 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "More than 63,000 fans packed into Arsenal's ground for the visit of Manchester United on Saturday, February 1, 1958.",
+     "Duncan Edwards opened the scoring with a fierce shot from the edge of the area",
+     "the 'Busby Babes' held out for a famous 5-4 victory.",
+     "Sadly, it was to be their last game on British soil."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that Duncan Edwards scored the opening goal, but the claim also requires proof of the date (1 February 1958), that it was his final match in England, and that United won 5-4. All these facts are present in the source text (quote provided) but are not included in the shown sentence. Therefore the tool displayed insufficient evidence; the correct action is to show all relevant sentences.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Former governor and vice presidential nominee Sarah Palin and Fox News host Laura Ingraham are considering primary challenges to Murkowski.",
+   "markers": [
+    "2022unitedstatessenateel"
+   ],
+   "paper_ids": [
+    "c087881f7bdf05e99bf013399570c651ee278894"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c087881f7bdf05e99bf013399570c651ee278894",
+    "source_title": "2022unitedstatessenateel",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The tweet was widely viewed as a thinly-veiled threat to challenge Murkowski in her 2022 reelection campaign to the Senate.",
+    "page": 1,
+    "snippet": "The tweet was widely viewed as a",
+    "reason": "The passage does not mention Laura Ingraham or any consideration of a primary challenge by her.",
+    "votes": "2-0",
+    "window": "The tweet was widely viewed as a thinly-veiled threat to challenge Murkowski in her 2022 reelection campaign to the Senate. Hey @LisaMurkowski - I can see 2022 from my house... — Sarah Palin (@SarahPalinUSA) October 5, 2018 Earlier this year, Palin expressed a willingness to run for public office again, according to The Hill."
+   },
+   "evidences": [
+    {
+     "paper_id": "c087881f7bdf05e99bf013399570c651ee278894",
+     "source_title": "2022unitedstatessenateel",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The tweet was widely viewed as a thinly-veiled threat to challenge Murkowski in her 2022 reelection campaign to the Senate.",
+     "page": 1,
+     "snippet": "The tweet was widely viewed as a",
+     "reason": "The passage does not mention Laura Ingraham or any consideration of a primary challenge by her.",
+     "votes": "2-0",
+     "window": "The tweet was widely viewed as a thinly-veiled threat to challenge Murkowski in her 2022 reelection campaign to the Senate. Hey @LisaMurkowski - I can see 2022 from my house... — Sarah Palin (@SarahPalinUSA) October 5, 2018 Earlier this year, Palin expressed a willingness to run for public office again, according to The Hill."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Laura Ingraham or any consideration of a primary challenge by her.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual claim about political figures considering primary challenges. The citation is expected to prove this specific assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Laura Ingraham considering a primary challenge to Murkowski",
+    "rewrite_suggestion": "Sarah Palin posted a tweet widely interpreted as a threat to challenge Murkowski in the 2022 primary.",
+    "proofs": [
+     "The tweet was widely viewed as a thinly-veiled threat to challenge Murkowski in her 2022 reelection campaign to the Senate."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that both Sarah Palin and Laura Ingraham are considering primary challenges to Senator Murkowski. The source text contains no mention of Laura Ingraham, and the only reference to Palin is a tweet interpreted as a threat to challenge, not a statement that she is 'considering' a primary challenge. Therefore, two substantive components are unprovable from the source, requiring the author to either add a citation for Ingraham or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "In 2018, the film was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".",
+   "markers": [
+    "theshiningfilm"
+   ],
+   "paper_ids": [
+    "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d",
+    "source_title": "theshiningfilm",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Library of Congress announced Wednesday, Dec. 12, 2018, that the films \"Jurassic Park,\" ''Brokeback Mountain\" and \"My Fair Lady\" are among the 25 movies tapped for preservation this year.",
+    "page": 1,
+    "snippet": "The Library of Congress announced Wednesday, Dec.",
+    "reason": "the passage does not mention the film being selected for preservation in 2018",
+    "votes": "2-0",
+    "window": "The Library of Congress announced Wednesday, Dec. 12, 2018, that the films \"Jurassic Park,\" ''Brokeback Mountain\" and \"My Fair Lady\" are among the 25 movies tapped for preservation this year. The library selected movies for preservation because of their cultural, historic and artist importance since the registry began in 1988. Steven Spielberg's 1993 original \"Jurassic Park\" was a blockbuster and the top public vote-getter to make its way into the registry this year."
+   },
+   "evidences": [
+    {
+     "paper_id": "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d",
+     "source_title": "theshiningfilm",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Library of Congress announced Wednesday, Dec. 12, 2018, that the films \"Jurassic Park,\" ''Brokeback Mountain\" and \"My Fair Lady\" are among the 25 movies tapped for preservation this year.",
+     "page": 1,
+     "snippet": "The Library of Congress announced Wednesday, Dec.",
+     "reason": "the passage does not mention the film being selected for preservation in 2018",
+     "votes": "2-0",
+     "window": "The Library of Congress announced Wednesday, Dec. 12, 2018, that the films \"Jurassic Park,\" ''Brokeback Mountain\" and \"My Fair Lady\" are among the 25 movies tapped for preservation this year. The library selected movies for preservation because of their cultural, historic and artist importance since the registry began in 1988. Steven Spielberg's 1993 original \"Jurassic Park\" was a blockbuster and the top public vote-getter to make its way into the registry this year."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention the film being selected for preservation in 2018",
+   "component_check": {
+    "found": [
+     "The Library of Congress made this selection",
+     "The film was selected as being \"culturally, historically, or aesthetically significant\""
+    ],
+    "missing": [
+     "In 2018, the film was selected for preservation in the United States National Film Registry"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Library of Congress made this selection",
+      "paper_id": "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d",
+      "source_title": "theshiningfilm",
+      "sentence": "The Library of Congress announced Wednesday, Dec. 12, 2018, that the films \"Jurassic Park,\" ''Brokeback Mountain\" and \"My Fair Lady\" are among the 25 movies tapped for preservation this year.",
+      "page": 1
+     },
+     {
+      "component": "The film was selected as being \"culturally, historically, or aesthetically significant\"",
+      "paper_id": "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d",
+      "source_title": "theshiningfilm",
+      "sentence": "The library selected movies for preservation because of their cultural, historic and artist importance since the registry began in 1988.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2018, the film was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".",
+    "reason": "The passage directly states a fact (the film's selection for preservation and the reason for it) that is attributed to the Library of Congress, implying the cited source is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the exact phrase 'culturally, historically, or aesthetically significant' attributed to the selection reason, which does not appear in the source text",
+    "rewrite_suggestion": "In 2018, the film was selected for preservation in the United States National Film Registry by the Library of Congress for its cultural, historical, or aesthetic significance.",
+    "proofs": [
+     "The Library of Congress announced Wednesday, Dec. 12, 2018, that the films 'Jurassic Park,' ''Brokeback Mountain' and 'My Fair Lady' are among the 25 movies tapped for preservation this year.",
+     "The national library chose a few more memorable titles such as 'The Shining,'",
+     "The library selected movies for preservation because of their cultural, historic and artist importance"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not mention 'The Shining' at all, and although the source text confirms the film's selection and a similar reason for preservation, it does not contain the exact quoted phrase 'culturally, historically, or aesthetically significant'. That component is therefore unprovable from the cited source, requiring the author to either add a citation for that phrase or rewrite the claim to match the source's wording."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Teaching Excellence Framework (TEF): LIPA was placed in the gold category, achieving the 15th highest award in the country.",
+   "markers": [
+    "markfeatherstonewitty"
+   ],
+   "paper_ids": [
+    "9f9c7f740b25c5c4bf6cc01fe3cb3a4701c4f14b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "9f9c7f740b25c5c4bf6cc01fe3cb3a4701c4f14b",
+    "source_title": "markfeatherstonewitty",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "## ​Teaching Excellence Framework Results Our teaching received the top Gold rating in the Government's Teaching Excellence Framework (TEF) Awards, which were announced in June 2017.The award means that the TEF panel judged that LIPA delivers consistently outstanding teaching, learning and outcomes for its students.",
+    "page": 1,
+    "snippet": "## ​Teaching Excellence Framework Results Our teaching",
+    "reason": "The passage does not mention LIPA achieving the 15th highest award in the country.",
+    "votes": "2-0",
+    "window": "## ​Teaching Excellence Framework Results Our teaching received the top Gold rating in the Government's Teaching Excellence Framework (TEF) Awards, which were announced in June 2017.The award means that the TEF panel judged that LIPA delivers consistently outstanding teaching, learning and outcomes for its students. It is of the highest quality found in the UK.The TEF was introduced by the Government to build evidence about the performance of the UK's world-class higher education sector, complementing the existing Research Excellence Framework with an analysis of teaching and learning outcomes."
+   },
+   "evidences": [
+    {
+     "paper_id": "9f9c7f740b25c5c4bf6cc01fe3cb3a4701c4f14b",
+     "source_title": "markfeatherstonewitty",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "## ​Teaching Excellence Framework Results Our teaching received the top Gold rating in the Government's Teaching Excellence Framework (TEF) Awards, which were announced in June 2017.The award means that the TEF panel judged that LIPA delivers consistently outstanding teaching, learning and outcomes for its students.",
+     "page": 1,
+     "snippet": "## ​Teaching Excellence Framework Results Our teaching",
+     "reason": "The passage does not mention LIPA achieving the 15th highest award in the country.",
+     "votes": "2-0",
+     "window": "## ​Teaching Excellence Framework Results Our teaching received the top Gold rating in the Government's Teaching Excellence Framework (TEF) Awards, which were announced in June 2017.The award means that the TEF panel judged that LIPA delivers consistently outstanding teaching, learning and outcomes for its students. It is of the highest quality found in the UK.The TEF was introduced by the Government to build evidence about the performance of the UK's world-class higher education sector, complementing the existing Research Excellence Framework with an analysis of teaching and learning outcomes."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention LIPA achieving the 15th highest award in the country.",
+   "component_check": {
+    "found": [
+     "LIPA was placed in the gold category of the Teaching Excellence Framework (TEF)"
+    ],
+    "missing": [
+     "LIPA achieved the 15th highest award in the country"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "LIPA was placed in the gold category of the Teaching Excellence Framework (TEF)",
+      "paper_id": "9f9c7f740b25c5c4bf6cc01fe3cb3a4701c4f14b",
+      "source_title": "markfeatherstonewitty",
+      "sentence": "## ​Teaching Excellence Framework Results Our teaching received the top Gold rating in the Government's Teaching Excellence Framework (TEF) Awards, which were announced in June 2017.The award means that the TEF panel judged that LIPA delivers consistently outstanding teaching, learning and outcomes for its students.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "LIPA was placed in the gold category, achieving the 15th highest award in the country.",
+    "reason": "The passage directly states a factual claim about LIPA's ranking and award category, which is expected to be supported by the cited source. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "achieving the 15th highest award in the country",
+    "rewrite_suggestion": "LIPA was placed in the gold category in the Teaching Excellence Framework (TEF).",
+    "proofs": [
+     "Our teaching received the top Gold rating in the Government's Teaching Excellence Framework (TEF) Awards, which were announced in June 2017."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms the gold rating, but the claim adds a specific rank ('15th highest award') that does not appear anywhere in the cited source. Since the source does not mention any ranking, the author must either provide a citation for the rank or remove it from the claim."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "Daktronics was founded in 1968 by Aelred Kurtenbach and Duane Sander, professors of electrical engineering at South Dakota State University in Brookings, SD.",
+   "markers": [
+    "daktronics"
+   ],
+   "paper_ids": [
+    "96754f44fa0c1023fa42687291712072a4758eff"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "96754f44fa0c1023fa42687291712072a4758eff",
+    "source_title": "daktronics",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968.",
+    "page": 1,
+    "snippet": "The company was founded by Al Kurtenbach",
+    "reason": "The passage does not mention Duane Sander as a founder.",
+    "votes": "2-0",
+    "window": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968. Bigger The process, which is based on many Japanese techniques, is far more efficient than it was when Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State started the company in 1968. They were more interested in biomedical instrumentation than scoreboards."
+   },
+   "evidences": [
+    {
+     "paper_id": "96754f44fa0c1023fa42687291712072a4758eff",
+     "source_title": "daktronics",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968.",
+     "page": 1,
+     "snippet": "The company was founded by Al Kurtenbach",
+     "reason": "The passage does not mention Duane Sander as a founder.",
+     "votes": "2-0",
+     "window": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968. Bigger The process, which is based on many Japanese techniques, is far more efficient than it was when Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State started the company in 1968. They were more interested in biomedical instrumentation than scoreboards."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Duane Sander as a founder.",
+   "component_check": {
+    "found": [
+     "Daktronics was founded in 1968",
+     "Aelred Kurtenbach and Duane Sander were professors of electrical engineering",
+     "They were professors at South Dakota State University"
+    ],
+    "missing": [
+     "Daktronics was founded by Aelred Kurtenbach and Duane Sander"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Daktronics was founded in 1968",
+      "paper_id": "96754f44fa0c1023fa42687291712072a4758eff",
+      "source_title": "daktronics",
+      "sentence": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968.",
+      "page": 1
+     },
+     {
+      "component": "Aelred Kurtenbach and Duane Sander were professors of electrical engineering",
+      "paper_id": "96754f44fa0c1023fa42687291712072a4758eff",
+      "source_title": "daktronics",
+      "sentence": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968.",
+      "page": 1
+     },
+     {
+      "component": "They were professors at South Dakota State University",
+      "paper_id": "96754f44fa0c1023fa42687291712072a4758eff",
+      "source_title": "daktronics",
+      "sentence": "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Daktronics was founded in 1968 by Aelred Kurtenbach and Duane Sander, professors of electrical engineering at South Dakota State University in Brookings, SD.",
+    "reason": "The passage directly states facts about the founding of Daktronics, which are attributed to the citation. This falls under the 'full' scope as the citation is expected to prove these specific facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The names of the founders (Aelred Kurtenbach and Duane Sander) and the assertion that both were professors of electrical engineering are not supported by the cited source.",
+    "rewrite_suggestion": "Daktronics was founded in 1968 by Al Kurtenbach and a fellow electrical engineering professor at South Dakota State University in Brookings, SD.",
+    "proofs": [
+     "The company was founded by Al Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State in 1968.",
+     "Kurtenbach and a fellow electrical engineering professor at nearby South Dakota State started the company in 1968.",
+     "Daktronics' vast warehouse in Brookings, S.D."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text provides only 'Al Kurtenbach' (not 'Aelred Kurtenbach') and an unnamed 'fellow electrical engineering professor' (not 'Duane Sander'), and it does not explicitly state that Kurtenbach himself was a professor. Since these substantive details are absent from the cited source, the author must either add a citation for them or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "Ronnie O'Sullivan was the defending champion, but he decided not to compete this year.",
+   "markers": [
+    "2012premierleaguesnooker"
+   ],
+   "paper_ids": [
+    "e549aaec6049a122d575f8ae2563e74e394477b3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e549aaec6049a122d575f8ae2563e74e394477b3",
+    "source_title": "2012premierleaguesnooker",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "He said today: \"I have decided not to enter any tournaments for the time being including this year's Premier League and forthcoming WPBSA ranking events.",
+    "page": 1,
+    "snippet": "He said today: \"I have decided not",
+    "reason": "The passage does not state that Ronnie O'Sullivan was the defending champion.",
+    "votes": "2-0",
+    "window": "He said today: \"I have decided not to enter any tournaments for the time being including this year's Premier League and forthcoming WPBSA ranking events. The Wayback Machine - https://web.archive.org/web/20131014044624/http://www.grovesnooker.co.uk/2012/06/06/ronnie-osullivan-statement/ Snooker Players Chen Zhe Judd Trump Liang Wenbo Liu Song Li Hang Li Yan Yu Delu Zhang Anda Billy O'Connor Table Tennis Players Ethan Walsh Star tables ## Ronnie O'Sullivan: statement 6 June 2012 4 Comments Ronnie O'Sullivan has decided to make good on his desire to take some time off from competitive snooker."
+   },
+   "evidences": [
+    {
+     "paper_id": "e549aaec6049a122d575f8ae2563e74e394477b3",
+     "source_title": "2012premierleaguesnooker",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "He said today: \"I have decided not to enter any tournaments for the time being including this year's Premier League and forthcoming WPBSA ranking events.",
+     "page": 1,
+     "snippet": "He said today: \"I have decided not",
+     "reason": "The passage does not state that Ronnie O'Sullivan was the defending champion.",
+     "votes": "2-0",
+     "window": "He said today: \"I have decided not to enter any tournaments for the time being including this year's Premier League and forthcoming WPBSA ranking events. The Wayback Machine - https://web.archive.org/web/20131014044624/http://www.grovesnooker.co.uk/2012/06/06/ronnie-osullivan-statement/ Snooker Players Chen Zhe Judd Trump Liang Wenbo Liu Song Li Hang Li Yan Yu Delu Zhang Anda Billy O'Connor Table Tennis Players Ethan Walsh Star tables ## Ronnie O'Sullivan: statement 6 June 2012 4 Comments Ronnie O'Sullivan has decided to make good on his desire to take some time off from competitive snooker."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Ronnie O'Sullivan was the defending champion.",
+   "component_check": {
+    "found": [
+     "he decided not to compete this year"
+    ],
+    "missing": [
+     "Ronnie O'Sullivan was the defending champion"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "he decided not to compete this year",
+      "paper_id": "e549aaec6049a122d575f8ae2563e74e394477b3",
+      "source_title": "2012premierleaguesnooker",
+      "sentence": "He said today: \"I have decided not to enter any tournaments for the time being including this year's Premier League and forthcoming WPBSA ranking events.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Ronnie O'Sullivan was the defending champion, but he decided not to compete this year.",
+    "reason": "The passage makes a direct factual claim about Ronnie O'Sullivan's participation in the tournament, which the citation is expected to support. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Ronnie O'Sullivan was the defending champion (the source does not state that he held that title)",
+    "rewrite_suggestion": "Ronnie O'Sullivan decided not to compete in this year's Premier League.",
+    "proofs": [
+     "He said today: \"I have decided not to enter any tournaments for the time being including this year's Premier League and forthcoming WPBSA ranking events.\""
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim has two components: that O'Sullivan was the defending champion and that he decided not to compete. The shown sentence supports the decision to skip the Premier League this year, but the source never mentions that he was the defending champion. Since that component is entirely unsourced, the author must either add a citation for the defending-champion fact or remove it from the claim."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "He stepped down in December, to take up the financially lucrative post as advisor to the Saudi Arabia national football team.",
+   "markers": [
+    "ronnieallen"
+   ],
+   "paper_ids": [
+    "a9d8ee9b4026982a9c94612cf268542f48874e1d"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8815,
+   "evidence": {
+    "paper_id": "a9d8ee9b4026982a9c94612cf268542f48874e1d",
+    "source_title": "ronnieallen",
+    "supported": true,
+    "sentence": "Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team.",
+    "page": 1,
+    "snippet": "Allen returned to The Hawthorns to act",
+    "cosine": 0.8815,
+    "reason": "The passage states that the individual left his role as manager in December 1977 to act as advisor to the Saudi Arabian national team.",
+    "window": "He joined Albion from Port Vale in March 1950 and left for Crystal Palace in May 1961. Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team. He returned as manager between July 1981 and May 1982 and was general manager thereafter until June 1983, later acting as coach and scout at the club."
+   },
+   "evidences": [
+    {
+     "paper_id": "a9d8ee9b4026982a9c94612cf268542f48874e1d",
+     "source_title": "ronnieallen",
+     "supported": true,
+     "sentence": "Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team.",
+     "page": 1,
+     "snippet": "Allen returned to The Hawthorns to act",
+     "cosine": 0.8815,
+     "reason": "The passage states that the individual left his role as manager in December 1977 to act as advisor to the Saudi Arabian national team.",
+     "window": "He joined Albion from Port Vale in March 1950 and left for Crystal Palace in May 1961. Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team. He returned as manager between July 1981 and May 1982 and was general manager thereafter until June 1983, later acting as coach and scout at the club."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the individual left his role as manager in December 1977 to act as advisor to the Saudi Arabian national team.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He stepped down in December",
+      "paper_id": "a9d8ee9b4026982a9c94612cf268542f48874e1d",
+      "source_title": "ronnieallen",
+      "sentence": "Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team.",
+      "page": 1,
+      "snippet": "Allen returned to The Hawthorns to act"
+     },
+     {
+      "component": "to take up the financially lucrative post as advisor to the Saudi Arabia national football team",
+      "paper_id": "a9d8ee9b4026982a9c94612cf268542f48874e1d",
+      "source_title": "ronnieallen",
+      "sentence": "Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team.",
+      "page": 1,
+      "snippet": "Allen returned to The Hawthorns to act"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a9d8ee9b4026982a9c94612cf268542f48874e1d",
+      "source_title": "ronnieallen",
+      "text": "Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states he left to act as advisor to the Saudi Arabian national team in December 1977, but does not mention the post being financially lucrative.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the post was financially lucrative",
+    "rewrite_suggestion": "He stepped down in December, to take up the post as advisor to the Saudi Arabia national football team.",
+    "proofs": [
+     "Allen returned to The Hawthorns to act as scouting advisor from January to May 1977 - then as manager from June 1977 to December 1977 before leaving to act as advisor to the Saudi Arabian national team."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim adds 'financially lucrative' to describe the advisor post, but the source text only states that he left to act as advisor to the Saudi Arabian national team, with no mention of the compensation. Since 'financially lucrative' is a substantive component not found in the source, the author must either cite a source for that claim or remove it. The remaining components (stepping down in December and taking the advisor role) are supported by the shown sentence."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "Fitzpatrick graduated from Kent State University with a Bachelor of Arts degree in journalism and sociology.",
+   "markers": [
+    "albertfitzpatrick"
+   ],
+   "paper_ids": [
+    "5cb9c1e0a06d0472e012eb00231549af4c9a96e8"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9268,
+   "evidence": {
+    "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+    "source_title": "albertfitzpatrick",
+    "supported": true,
+    "sentence": "After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology.",
+    "page": 1,
+    "snippet": "After spending six years in the Infantry",
+    "cosine": 0.9268,
+    "reason": "The passage states that Fitzpatrick majored in journalism and sociology at Kent State and graduated from there, which directly supports the claim.",
+    "window": "Fitzpatrick, the seventh of 12 children, started his journalism career as a part-time sports reporter for his hometown paper, the Elyria Chronicle Telegram. After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology. He graduated from Kent State in 1956."
+   },
+   "evidences": [
+    {
+     "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+     "source_title": "albertfitzpatrick",
+     "supported": true,
+     "sentence": "After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology.",
+     "page": 1,
+     "snippet": "After spending six years in the Infantry",
+     "cosine": 0.9268,
+     "reason": "The passage states that Fitzpatrick majored in journalism and sociology at Kent State and graduated from there, which directly supports the claim.",
+     "window": "Fitzpatrick, the seventh of 12 children, started his journalism career as a part-time sports reporter for his hometown paper, the Elyria Chronicle Telegram. After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology. He graduated from Kent State in 1956."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Fitzpatrick majored in journalism and sociology at Kent State and graduated from there, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "graduated from Kent State University",
+      "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+      "source_title": "albertfitzpatrick",
+      "sentence": "He graduated from Kent State in 1956.",
+      "page": 1,
+      "snippet": "He graduated from Kent State in 1956."
+     },
+     {
+      "component": "in journalism",
+      "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+      "source_title": "albertfitzpatrick",
+      "sentence": "After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology.",
+      "page": 1,
+      "snippet": "After spending six years in the Infantry"
+     },
+     {
+      "component": "and sociology",
+      "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+      "source_title": "albertfitzpatrick",
+      "sentence": "After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology.",
+      "page": 1,
+      "snippet": "After spending six years in the Infantry"
+     }
+    ],
+    "uncovered": [
+     "with a Bachelor of Arts degree"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+      "source_title": "albertfitzpatrick",
+      "text": "After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology. He graduated from Kent State in 1956.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Bachelor of Arts degree",
+    "rewrite_suggestion": "Fitzpatrick graduated from Kent State University, where he majored in journalism and sociology.",
+    "proofs": [
+     "After spending six years in the Infantry and Air Force, Fitzpatrick enrolled at Miami University in Oxford, Ohio and later transferred to Kent State where he majored in journalism and sociology.",
+     "He graduated from Kent State in 1956."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences confirm that Fitzpatrick graduated from Kent State and majored in journalism and sociology, but they do not mention a Bachelor of Arts degree. The source text also lacks any reference to a BA degree. Therefore, the component 'Bachelor of Arts' is unsupported and requires either a new citation or a rewrite to remove it."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "9da54d1f917d41835f9b033778d297b8b1104339": {
+    "title": "duncanedwards",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5cb9c1e0a06d0472e012eb00231549af4c9a96e8": {
+    "title": "albertfitzpatrick",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "96754f44fa0c1023fa42687291712072a4758eff": {
+    "title": "daktronics",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e549aaec6049a122d575f8ae2563e74e394477b3": {
+    "title": "2012premierleaguesnooker",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "9f9c7f740b25c5c4bf6cc01fe3cb3a4701c4f14b": {
+    "title": "markfeatherstonewitty",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d": {
+    "title": "theshiningfilm",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c087881f7bdf05e99bf013399570c651ee278894": {
+    "title": "2022unitedstatessenateel",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a9d8ee9b4026982a9c94612cf268542f48874e1d": {
+    "title": "ronnieallen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 9,
+   "supported": 2,
+   "unsupported": 6,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 21:03:32",
+  "marker_errors": [],
+  "processing_time_seconds": 112.0,
+  "source_hashes": {
+   "duncanedwards.txt": "6071d4c8f1f016ef91466f2455370ab06e27d856",
+   "2022unitedstatessenateel.txt": "f60e249785c61b55c7be28346107742fb3409bc5",
+   "theshiningfilm.txt": "d18bdbb300e9cbf44c54d34757f33bc63e0581c0",
+   "markfeatherstonewitty.txt": "643fd699d86cc5a0b290496c77536eb6d556cb19",
+   "daktronics.txt": "e7008659c2364322081d5aa4107539c58fda089f",
+   "2012premierleaguesnooker.txt": "4986810fc5e92ba12969eafb1e86d78fea74b448",
+   "ronnieallen.txt": "93f8e6cc306c5e7fe241b6b242eb770e0f64eb51",
+   "albertfitzpatrick.txt": "14cbe7b6703a9527defcbff5eccb4818d6fb6045"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 133,
+    "prompt_tokens": 134903,
+    "completion_tokens": 5811,
+    "cost_usd": 0.015815
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 9,
+    "prompt_tokens": 27211,
+    "completion_tokens": 16941,
+    "cost_usd": 0.006569
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 6,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 8,
+   "actions": {
+    "wrong_or_insufficient_evidence": 1,
+    "add_citation_or_rewrite": 7
+   },
+   "proof_may_exist": [
+    "t1"
+   ],
+   "conflicts": [],
+   "rescued": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "9da54d1f917d41835f9b033778d297b8b1104339",
+   "key": "duncanedwards",
+   "filename": "duncanedwards.txt",
+   "title": "duncanedwards",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c087881f7bdf05e99bf013399570c651ee278894",
+   "key": "2022unitedstatessenateel",
+   "filename": "2022unitedstatessenateel.txt",
+   "title": "2022unitedstatessenateel",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4c8cea84a9baf5011d5be8bbaa891f2f37540c6d",
+   "key": "theshiningfilm",
+   "filename": "theshiningfilm.txt",
+   "title": "theshiningfilm",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9f9c7f740b25c5c4bf6cc01fe3cb3a4701c4f14b",
+   "key": "markfeatherstonewitty",
+   "filename": "markfeatherstonewitty.txt",
+   "title": "markfeatherstonewitty",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "96754f44fa0c1023fa42687291712072a4758eff",
+   "key": "daktronics",
+   "filename": "daktronics.txt",
+   "title": "daktronics",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e549aaec6049a122d575f8ae2563e74e394477b3",
+   "key": "2012premierleaguesnooker",
+   "filename": "2012premierleaguesnooker.txt",
+   "title": "2012premierleaguesnooker",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a9d8ee9b4026982a9c94612cf268542f48874e1d",
+   "key": "ronnieallen",
+   "filename": "ronnieallen.txt",
+   "title": "ronnieallen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5cb9c1e0a06d0472e012eb00231549af4c9a96e8",
+   "key": "albertfitzpatrick",
+   "filename": "albertfitzpatrick.txt",
+   "title": "albertfitzpatrick",
+   "num_claims": 0
+  }
+ ]
+}

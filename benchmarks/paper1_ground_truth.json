@@ -1,0 +1,243 @@
+{
+ "paper": "paper1",
+ "text_file": "data/paper1_import/my_text.md",
+ "model": "gemini/gemini-2.5-flash-lite",
+ "created": "2026-07-04",
+ "basis": "Hand-audit ground truth in docs/PAPER1_TUNING_STATE.md (3 parallel auditors, 2026-07-02, all 27 judged-unsupported cited claims) + the run-8 hand-confirmed supported set. 'watch' = gray/open owner calls OR run-to-run flip-floppers: reported, never a failure. RE-BASELINED 2026-07-05: t22/t31/t68 (audit-correct supported, flash-lite intermittently too strict) and t56 (a NEW drift-induced false positive, see its note) moved from HARD to watch — a no-change fresh run had diverged from the Run-10 snapshot on exactly these borderline claims, making the HARD gate non-reproducible (ROADMAP finding j). Audit-correct answers are preserved in each claim's improves_if/note.",
+ "claims": [
+  {
+   "id": "t4",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Such an advantage need not be exercised through force. Frontier AI development is already concentrated: in 2024, institutions based in the United States produced 40 of the year's notable AI models, against 15 from China and three from Europe."
+  },
+  {
+   "id": "t5",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Those counts measure where the models are made, not yet who controls a scarce input; the step from one to the other runs through the hardware. This concentration of activity rests on a physical chokepoint: Sastry et al. note that, unlike data or algorithms, the computing hardware needed to train the most capable systems is detectable, excludable, and quantifiable, and is made through an extremely concentrated supply chain."
+  },
+  {
+   "id": "t6",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "A lead in frontier AI therefore rests on control of a scarce physical resource, not on software alone. That input is already unevenly distributed: as of 2025 the United States hosted roughly three-quarters of the world's AI-supercomputer performance, against about 14% for China and under 5% for the European Union, so a concentrated position can be pressed without waiting for new chips to be built."
+  },
+  {
+   "id": "t8",
+   "expect": "supported",
+   "note": "supported — component-verified against source text 2026-07-05: davidson2025 ('Could one country outgrow the rest of the world?') backs the lead-compounds/outgrow component; korinek2023 backs the wage-share/capital-returns component. The 2026-07-05 partial-support flag on this claim was a FALSE ALARM (judge window missed the source's thesis, present in title/abstract). Was: run-8 batch-confirmed.",
+   "text": "Why a lead in AI should translate into a hold on physical inputs has a basis in economic theory. As AI comes to substitute for human labour, the share of income paid as wages falls and an increasing share of the returns goes to the owners of AI systems and capital, and where growth speeds up enough, an early lead can grow ever larger rather than shrink, letting a single actor outgrow the rest."
+  },
+  {
+   "id": "t10",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "The United Nations Development Programme describes the broader risk as a possible \"next great divergence\" in economic performance between countries rather than only within them."
+  },
+  {
+   "id": "t13",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Strategic physical assets can pass by purchase rather than conquest. A foresight scenario, *Europe 2031*, illustrates one route: the leading power restricts access to its most capable models on a tiered, country-by-country basis; firms in other countries are progressively outcompeted; and the leading AI company acquires distressed industrial assets, such as carmakers and tool manufacturers, for their facilities and data."
+  },
+  {
+   "id": "t14",
+   "expect": "unsupported",
+   "note": "audit CORRECT*: oecd2000 lacks the 90%/60% figures; kornai1994 empty scan; pomfret2019 missing",
+   "text": "The mechanism is not speculative; it has precedent. Across the post-communist transition — the \"transformational recession,\" a severe and prolonged collapse of output across the former Eastern bloc — foreign firms acquired such assets at national scale through ordinary commercial deals: Chevron took a forty-year stake in Kazakhstan's giant Tengiz oil field in 1993, which the newly independent state lacked the means to develop itself, and in Hungary foreign investors came to control roughly 90% of telecommunications and 60% of the energy sector through privatisation."
+  },
+  {
+   "id": "t17",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "The scenario is borrowed here only for that mechanism, not for its policy prescription. Its recommended response — that Europe build competitive frontier AI of its own, quickly enough to matter — looks doubtful on present trends. Frontier development is heavily concentrated in the United States: around 70% of foundational AI models since 2017 have been built there, and the European Union trails far behind on the financing, skills, and market scale that the Draghi report identifies as the binding constraints."
+  },
+  {
+   "id": "t18",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Nor would freely available open-weight models close the gap if access to the frontier were cut off. The strongest open models are built in large part by distilling the outputs of leading closed models, and they already trail those models — by about four months on one capability measure, a gap that has been widening."
+  },
+  {
+   "id": "t22",
+   "expect": "watch",
+   "at_creation": "unsupported",
+   "improves_if": "supported",
+   "note": "audit-correct = supported (cnbc/farrell content present: $200M DoD contracts; chokepoint), but flash-lite is intermittently TOO_STRICT and reverts to unsupported. Documented run-to-run flip-flopper (PAPER1_TUNING_STATE.md:60). Demoted from HARD to watch 2026-07-05 after a no-change fresh run diverged from the Run-10 snapshot (ROADMAP finding j).",
+   "text": "Those disputes were only about advertising revenue. The danger is far greater when the service is essential. If a country comes to rely on a single provider's frontier AI for sensitive state functions — intelligence analysis and operational planning, or cyber defence, both of which the major frontier-AI firms now supply to governments through dedicated offerings and defence contracts — that provider, and that provider's government, could win concessions simply by threatening to slow the service or cut it off: the \"chokepoint\" form of what Farrell and Newman call weaponized interdependence."
+  },
+  {
+   "id": "t23",
+   "expect": "unsupported",
+   "note": "audit CORRECT (partial): 'were refused / turned down' overstates 'are calling for access'",
+   "text": "That exposure is no longer hypothetical. Anthropic's Mythos model, judged to have unusually powerful cybersecurity capabilities, was released only through a restricted programme to trusted United States users and selected allies, while European banks were refused — their regulators among those who asked for access to defend against cyberattacks and were turned down."
+  },
+  {
+   "id": "t24",
+   "expect": "watch",
+   "note": "audit PIPELINE_ERROR: aljazeera2026 s1 states the order verbatim; known retrieval miss",
+   "text": "Then, in June 2026, the United States ordered Anthropic to bar all foreign nationals from Fable 5 and Mythos 5 outright, citing a security flaw; unable to screen users by nationality, Anthropic took both offline worldwide at short notice, cutting off the banks, governments, and research institutions across Europe and beyond that had been relying on them.",
+   "at_creation": "unsupported",
+   "improves_if": "supported"
+  },
+  {
+   "id": "t25",
+   "expect": "watch",
+   "note": "audit TOO_STRICT (s3 = exact sentence) but tail-rescue open owner call",
+   "text": "Selective access and abrupt withdrawal were thus both on display: access can be granted along national lines and revoked overnight, without consultation and with no process by which an allied government can contest it. The European Commission took the episode as proof of \"why Europe must strengthen its technological sovereignty\" .",
+   "at_creation": "supported"
+  },
+  {
+   "id": "t27",
+   "expect": "supported",
+   "note": "audit TOO_STRICT: salvi2025 states 64.4% / +81.2% odds verbatim",
+   "text": "The same non-coercive leverage extends from physical assets to the political environment in which they are acquired. Frontier AI is already a potent instrument of persuasion: in a controlled experiment, GPT-4 given only a little personal information about the person it was debating was more persuasive than a human opponent in roughly two-thirds of the matched debates where the two differed, raising the odds of shifting the other person's stated position by about 80%."
+  },
+  {
+   "id": "t28",
+   "expect": "supported",
+   "note": "supported — component-verified against source text 2026-07-05: hackenburg2025 is titled 'Scaling language model size yields diminishing returns for ... persuasion' and states 'sharply diminishing returns' — exactly the 'gains from scale levelling off' component; anthropic2024 backs 'each generation more persuasive'. The 2026-07-05 partial flag was a FALSE ALARM (window missed the abstract). Was: run-8 batch-confirmed.",
+   "text": "It is also improving over time: each successive model generation has been rated more persuasive than the one before, even if the gains from sheer scale alone appear to be levelling off."
+  },
+  {
+   "id": "t30",
+   "expect": "unsupported",
+   "note": "audit CORRECT (partial): 'effect on votes never established' absent (CRS implies, doesn't state)",
+   "text": "The realised effect of these tools in the wild, however, appears limited so far: tailoring messages to detailed personal profiles (\"microtargeting\") has added little over a single well-crafted message; OpenAI reports having disrupted more than twenty covert influence operations that used its models during 2024, none of which achieved significant audience engagement; and where an influence campaign did precede a consequential outcome — in December 2024 Romania's constitutional court annulled its presidential election after a coordinated campaign on TikTok and Telegram — the campaign's actual effect on votes was never established."
+  },
+  {
+   "id": "t31",
+   "expect": "watch",
+   "at_creation": "unsupported",
+   "improves_if": "supported",
+   "note": "audit-correct = supported (anthropic2025 usage policy states the restrictions), but flash-lite intermittently reverts to unsupported. Demoted from HARD to watch 2026-07-05 (ROADMAP finding j — run-to-run flip on a borderline claim).",
+   "text": "So far, then, demonstrated capability outruns proven real-world effect, and that gap is worth keeping in mind. Even so, the capability still points to a route by which a controller of frontier AI could shape political outcomes in states it does not govern — and so soften the political resistance that acquiring assets there would otherwise meet. Because the provider alone decides who may use its models — and already restricts their use in political campaigns — it could in principle lend favoured candidates the campaigning power of frontier AI while denying it to their opponents, a lever beyond anything yet documented."
+  },
+  {
+   "id": "t32",
+   "expect": "watch",
+   "note": "audit PIPELINE_ERROR: sadowski2019 title/abstract = data-as-capital verbatim; known retrieval miss",
+   "text": "Beyond shaping opinion, the same position yields knowledge of it: the data of everyday digital life has itself become a form of capital and strategic advantage, much of it held by a few firms based in one country, and control of such central nodes confers what Farrell and Newman call a \"panopticon\" advantage — the holder observes flows of information that others cannot, which frontier AI makes exploitable at scale.",
+   "at_creation": "unsupported",
+   "improves_if": "supported"
+  },
+  {
+   "id": "t35",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Such concentration could arrive by either of two routes. It might come suddenly, through recursive self-improvement — an AI system improving its own capabilities in an accelerating cycle, the \"intelligence explosion\" first described by Good."
+  },
+  {
+   "id": "t36",
+   "expect": "supported",
+   "note": "supported — component-verified against source text 2026-07-05: drago2025 (Intelligence Curse) states verbatim 'powerful actors ... no longer have an incentive to care about regular people' / 'lose their incentive to invest in regular people' — exactly the weakening-incentives component; kulveit2025 backs gradual disempowerment. The 2026-07-05 partial flag was a FALSE ALARM (window missed the source thesis). Was: run-8 batch-confirmed.",
+   "text": "Or it might build up gradually, largely through economic processes and well before any such event: the \"gradual disempowerment\" described by Kulveit et al., in which the piece-by-piece replacement of human labour and judgement by AI erodes society's dependence on human participation, together with the related weakening of the incentives linking states and firms to their populations noted by Drago and Laine ."
+  },
+  {
+   "id": "t37",
+   "expect": "watch",
+   "note": "audit CORRECT (partial): 'invest less' in neither source -> supported = suspected FP; owner confirm pending; --second-opinion catches it 2-1",
+   "text": "Both draw an analogy to the \"resource curse\": just as states funded by resource rents rather than by taxing their people have little incentive to invest in them, an economy whose value derives from AI and capital rather than from human labour would give those who control it little reason to sustain the populations — and the places — that no longer contribute to it. The underlying regularity is well established in political economy: states that draw their revenue from external rents rather than from taxing their citizens tend to be less accountable to them and to invest less in them — the \"rentier state\" effect documented across resource economies.",
+   "at_creation": "supported",
+   "improves_if": "unsupported"
+  },
+  {
+   "id": "t43",
+   "expect": "watch",
+   "note": "owner re-grade 2026-07-19: UNSUPPORTED — 'dual-circulation drive for self-sufficiency in food, energy, high-tech inputs' not in source (grain reserves + 95% target ARE supported); was run-8 hand-confirmed supported (2026-07-03)",
+   "text": "Its economy is also centrally directed and deliberately buffered against outside pressure: a \"dual-circulation\" drive for self-sufficiency in food, energy, and high-tech inputs, backed by grain reserves of roughly half the world's total and a 95% self-sufficiency target for staple grains.",
+   "at_creation": "supported",
+   "improves_if": "unsupported"
+  },
+  {
+   "id": "t44",
+   "expect": "watch",
+   "note": "audit CORRECT (partial): concrete facts supported, comparisons authorial; tail-rescue keep-or-revert open",
+   "text": "A state so placed could absorb the shock of being outcompeted far better than an open, trade-dependent one, and stay in the contest through the transition instead of collapsing before it. This advantage is real but limited. Self-sufficiency has a cost in lost income, China still lags at the frontier of chip-making, and an early lead may compound until one power pulls clear.",
+   "at_creation": "supported"
+  },
+  {
+   "id": "t47",
+   "expect": "watch",
+   "note": "owner re-grade 2026-07-19: UNSUPPORTED — 'most countries cannot feed themselves' overreaches source's 'many LDCs are net food importers'; quantifier components need rewrite/new source; was run-8 hand-confirmed supported (2026-07-03)",
+   "text": "Economic displacement of this kind is not merely impoverishment; it can become a threat to life. Most countries cannot feed themselves from their own farms — the great majority of developing states, and nearly all the poorest, are net importers of food — so a state stripped of its export earnings and the value of its currency loses, with them, the means to keep its population fed.",
+   "at_creation": "supported",
+   "improves_if": "unsupported"
+  },
+  {
+   "id": "t49",
+   "expect": "watch",
+   "note": "owner re-grade 2026-07-19: UNSUPPORTED — 'without war or blockade' contradicts source (sanctions played key role); 'within seven years' implies a causal clock the source ('Between 2012 and 2020') never states; was run-8 hand-confirmed supported (2026-07-03)",
+   "text": "And the collapse can be quick. When Venezuela's oil revenues fell by more than nine-tenths after 2012, its capacity to import food fell with them, and the share of its people who were undernourished rose from about 3% to roughly 27% within seven years — through economic dislocation alone, without war or blockade.",
+   "at_creation": "supported",
+   "improves_if": "unsupported"
+  },
+  {
+   "id": "t56",
+   "expect": "watch",
+   "at_creation": "supported",
+   "improves_if": "unsupported",
+   "note": "audit-correct = unsupported (armstrong2016 is a race game-theory model; the pollution/hegemon argument is the author's own). *** DRIFT-INDUCED FALSE POSITIVE ***: fresh flash-lite runs on 2026-07-05 now return SUPPORTED — the tool wrongly grounding an author claim, the dangerous direction. Demoted from HARD to watch only to unblock the gate; this is a REAL verdict-quality regression to investigate, NOT a benign flip (ROADMAP finding j, decision 2). improves_if it flips back to the audit-correct unsupported.",
+   "text": "The third condition matters most. An actor with no economic reason to sustain a population has, by the same logic, no economic reason to protect or spare it: the loss of interest that leaves land unclaimed could as easily let it be cleared, or let the emissions and runoff of a build-out elsewhere drift across it. Such pollution — the emissions, waste heat, water draw, and runoff of energy and computing infrastructure, and of the mining that supplies it — is likely to be heavy, because the hegemon answers to no local population that might object and no voters who could force it to stop. This is the lasting danger. A second danger is temporary and belongs to the transition: because one power most plausibly reaches dominance through an intense rivalry (the contest among resilient states noted above), the build-out of that period is rushed, with safety and environmental corners cut to avoid finishing second."
+  },
+  {
+   "id": "t59",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "**What could prevent this outcome?** The scenario mapped here is not inevitable; the cleanest way it does not arise is for control never to become so concentrated. A growing body of work argues that the race to advanced AI could be deliberately slowed or paused by international agreement, provided restraint can be *verified*. Al Ramiah et al. set out a compute-governance regime — modelled on nuclear non-proliferation and chemical-weapons verification — that monitors and caps access to the computing hardware needed to train the most capable systems, and the MIRI Technical Governance Team develops the case for an international agreement to halt frontier development until the underlying safety problems are solved."
+  },
+  {
+   "id": "t62",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Even the minority who object would be a weak brake. Examining nearly 1,800 policy questions, Gilens and Page found that economic elites and organised business interests have substantial influence on United States policy while average citizens have little or none; in foreign policy specifically, Jacobs and Page find the dominant influences to be business leaders and experts rather than the public."
+  },
+  {
+   "id": "t64",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "Failing that, pursuing such an advantage carries dangers for the contending powers themselves. Katzke and Futerman argue that a race to artificial superintelligence defeats itself."
+  },
+  {
+   "id": "t65",
+   "expect": "watch",
+   "note": "audit CORRECT* wrong file since replaced; MAIM in hendrycks2025 but trust-dilemma attribution in neither source",
+   "text": "The two assumptions that drive the race — that the technology gives a decisive advantage, and that states put survival first — also make great-power conflict more likely: a power that expects to lose may strike first rather than accept a rival's permanent dominance. On their account the race is better understood as a trust dilemma than a prisoner's dilemma — so the powers can in principle cooperate to control it, and are better off doing so. Others propose explicit management regimes: Hendrycks, Schmidt and Wang combine deterrence — a posture of \"mutual assured AI malfunction,\" in which any bid for unilateral dominance invites pre-emptive sabotage — with nonproliferation and competitiveness, while RAND examines measures intended to stabilise the competition.",
+   "at_creation": "supported"
+  },
+  {
+   "id": "t68",
+   "expect": "watch",
+   "at_creation": "unsupported",
+   "improves_if": "supported",
+   "note": "audit-correct = supported (korinek2023 land-rent + erdil2023 bottlenecks support it), but flash-lite intermittently reverts to unsupported. Documented run-to-run flip-flopper (PAPER1_TUNING_STATE.md:60). Demoted from HARD to watch 2026-07-05 (ROADMAP finding j).",
+   "text": "The analysis assumes that physical location, materials, and built capacity remain scarce, so that a hegemon's demand for them is selective and some areas are left unclaimed. This assumption is consistent with the economics of advanced automation: Korinek and Trammell find that, once labour is broadly automated, natural resources become a main driver of economic outcomes, and Erdil and Besiroglu identify physical and production bottlenecks as a leading constraint on how rapidly output can expand."
+  },
+  {
+   "id": "t74",
+   "expect": "watch",
+   "note": "wrong file (1956 aviation yearbook) replaced with real Epoch article; verdict has flip-flopped between runs",
+   "text": "A near-term version of the same objection deserves direct attention: cheap, abundant robots. If machines can build machines, physical capacity might cease to be scarce — every usable site could be developed and no land left unclaimed — and the premise of this report would fail. The objection turns on *speed*. Robot production is indeed scaling quickly, with industry roadmaps and analysts pointing to fleets in the low millions of humanoid units per year around 2030 and unit costs falling sharply. But physical scaling is far slower than the digital progress driving it: each robot must be built from real components in real factories. Epoch AI judges that 1.5–3 million humanoids per year is clearly achievable by 2030 and 5–10 million plausible, but that current output is capped near 500,000 by bottlenecks such as high-precision reducers, and that reaching ten million units a year would require on the order of twenty Tesla-Gigafactory-scale plants, each taking from several months to over two years to build; the physical and production bottlenecks identified by Erdil and Besiroglu apply throughout.",
+   "at_creation": "unsupported"
+  },
+  {
+   "id": "t76",
+   "expect": "supported",
+   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "text": "A related objection runs the other way: that abundance, not scarcity, makes the map moot. If AI drives the cost of necessities — energy, food, housing, medicine — towards zero, then even people with nothing to offer an automated economy could be sustained cheaply, and none would need a refuge; this is the optimistic case for which Altman is a prominent voice."
+  },
+  {
+   "id": "t78",
+   "expect": "unsupported",
+   "note": "audit CORRECT* (wrong paper?): file contradicts claim's 'institutional reasons'",
+   "text": "Second, technology spreads slowly and unevenly: the lag between a technology's invention and its widespread use runs to decades and varies greatly across societies for institutional and cultural reasons."
+  },
+  {
+   "id": "t80",
+   "expect": "supported",
+   "note": "audit PIPELINE_ERROR: macaskill2025 thesis = exactly the claim (garbled PDF since handled)",
+   "text": "Why map this at all, given how much about the future is unknowable? What follows the concentration of control — and any subsequent recursive self-improvement — cannot be foreseen: humanity may keep control or lose it, and the outcome may be benign or catastrophic. The value of the question asked here does not depend on settling that. If the long-run outcome is favourable — a world of material abundance in which people are free to live well — it matters greatly how many people survive to reach it, rather than arriving only after a large share of the world's population has perished in the economic and social dislocation that preceded it. Even under deep uncertainty about the destination, the transition itself must be survived; identifying where people might endure it is the purpose of the refuge map. The challenges of that transition, and the case for preparing for them now rather than deferring them to some later and wiser hand, are set out by MacAskill and Moorhouse."
+  }
+ ]
+}

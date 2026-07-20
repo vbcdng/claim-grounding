@@ -1,0 +1,64 @@
+verdict-level agreement: 7/26 (26%)
+confusion (wice_label -> tool):
+  not_supported          -> supported                1   <-- disagreement
+  partially_supported    -> not_supported            9   <-- disagreement
+  partially_supported    -> partially_supported      1
+  partially_supported    -> supported                2   <-- disagreement
+  supported              -> not_supported            6   <-- disagreement
+  supported              -> partially_supported      1   <-- disagreement
+  supported              -> supported                6
+
+arbiter-adjudicated agreement: 18/26 (69%)
+confusion (wice_label -> adjudicated):
+  not_supported          -> supported                1   <-- disagreement
+  partially_supported    -> not_supported            1   <-- disagreement
+  partially_supported    -> partially_supported      9
+  partially_supported    -> supported                2   <-- disagreement
+  supported              -> partially_supported      4   <-- disagreement
+  supported              -> supported                9
+adjudication flips: 14
+  ~ geirhnneland               not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+  + thenationalabudhabi        not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + shineeworldiii             not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + philippelanon              not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + spaceshuttlechallengerdi   not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + sircharlespym1stbaronet    not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + jabbathehutt               not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  ~ icehockeyatthe2022winter   not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+  + busras                     not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + srilankanairlines          not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + museumofbadart             not_supported -> partially_supported    wice=partially_supported    (arbiter: mixed — parts provable, a component is not)
+  + ashlynharris               not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  + 2019cricketworldcup        not_supported -> supported              wice=supported              (arbiter: proof exists in source (verified quotes))
+  ~ influenza                  not_supported -> partially_supported    wice=supported              (arbiter: mixed — parts provable, a component is not)
+
+false-supports on 1 refuted rows: base=1, adjudicated=1
+*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — stop and report ***
+
+per-claim:
+  DIFF geirhnneland               wice=supported              tool=not_supported          adj=partially_supported    
+  DIFF thenationalabudhabi        wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  daniaramirez               wice=partially_supported    tool=partially_supported    picks_in_gold=0/1
+  OK  andrewnikou                wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF shineeworldiii             wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF philippelanon              wice=partially_supported    tool=not_supported          adj=partially_supported    
+  OK  apollo11                   wice=supported              tool=supported              picks_in_gold=1/3
+  OK  cyp1a2                     wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF spaceshuttlechallengerdi   wice=supported              tool=not_supported          adj=supported              
+  DIFF sircharlespym1stbaronet    wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF domeoftherock              wice=partially_supported    tool=supported              picks_in_gold=1/2
+  DIFF 2019stanleycupplayoffs     wice=partially_supported    tool=supported              picks_in_gold=1/2
+  DIFF jabbathehutt               wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF zachariasjimenez           wice=supported              tool=partially_supported    picks_in_gold=1/1
+  DIFF icehockeyatthe2022winter   wice=supported              tool=not_supported          adj=partially_supported    
+  DIFF busras                     wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF srilankanairlines          wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF museumofbadart             wice=partially_supported    tool=not_supported          adj=partially_supported    
+  DIFF ashlynharris               wice=supported              tool=not_supported          adj=supported              
+  DIFF 2019cricketworldcup        wice=supported              tool=not_supported          adj=supported              
+  DIFF dalehodgespark             wice=partially_supported    tool=not_supported          
+  DIFF influenza                  wice=supported              tool=not_supported          adj=partially_supported    
+  OK  sydenhamhighschool         wice=supported              tool=supported              picks_in_gold=1/1
+  OK  westwycombepark            wice=supported              tool=supported              picks_in_gold=1/1
+  DIFF fcbayernmunichjuniorteam   wice=not_supported          tool=supported              
+  OK  2018bulawayobombing        wice=supported              tool=supported              picks_in_gold=1/3

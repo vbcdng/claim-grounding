@@ -1,0 +1,17 @@
+You are checking which claims are CRUXES in an argument. A crux is a claim that the
+main conclusion genuinely depends on: if it turned out to be false, the conclusion
+would no longer stand (or would be seriously weakened).
+
+The main conclusion(s):
+{THESIS}
+
+Candidate claims (pre-selected by their position in the argument graph):
+{CANDIDATES}
+
+For each candidate, decide: if this claim were FALSE, would the conclusion still hold?
+- If the conclusion would fall or be seriously weakened -> it IS a crux (is_crux: true).
+- If the conclusion would survive (other independent support carries it, or the claim
+  is decorative / redundant) -> it is NOT a crux (is_crux: false).
+
+Return ONLY JSON, no prose, in exactly this shape:
+{"cruxes": [{"n": <candidate number>, "is_crux": true, "why": "<one short clause: how the conclusion depends on it, or why it doesn't>"}]}

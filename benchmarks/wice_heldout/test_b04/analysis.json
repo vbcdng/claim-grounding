@@ -1,0 +1,2768 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 4 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Including its nominations at the Creative Arts Awards, \"Game of Thrones\" established a new record for most Emmy nominations received in the same year by any comedy or drama series with 32, breaking the 25 years long record previously held by \"NYPD Blue\", which had scored 26 nominations for its first season in 1994.",
+   "markers": [
+    "71stprimetimeemmyawards"
+   ],
+   "paper_ids": [
+    "d348c4b67d1b750714742309d1f77544086ae8a9"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8859,
+   "evidence": {
+    "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+    "source_title": "71stprimetimeemmyawards",
+    "supported": true,
+    "sentence": "# Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations",
+    "page": 1,
+    "snippet": "# Emmy Nominations 2019: 'Game of Thrones'",
+    "cosine": 0.8859,
+    "reason": "The passage explicitly states that 'Game of Thrones' broke the 'NYPD Blue' record with 32 nominations, which aligns with the claim's assertion about the record and the number of nominations.",
+    "window": "'The Righteous Gemstones' Review: Danny McBride's Shtick Could Use a Revival # Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations ### by Adam Chitwood July 16, 2019"
+   },
+   "evidences": [
+    {
+     "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+     "source_title": "71stprimetimeemmyawards",
+     "supported": true,
+     "sentence": "# Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations",
+     "page": 1,
+     "snippet": "# Emmy Nominations 2019: 'Game of Thrones'",
+     "cosine": 0.8859,
+     "reason": "The passage explicitly states that 'Game of Thrones' broke the 'NYPD Blue' record with 32 nominations, which aligns with the claim's assertion about the record and the number of nominations.",
+     "window": "'The Righteous Gemstones' Review: Danny McBride's Shtick Could Use a Revival # Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations ### by Adam Chitwood July 16, 2019"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that 'Game of Thrones' broke the 'NYPD Blue' record with 32 nominations, which aligns with the claim's assertion about the record and the number of nominations.",
+   "covering": {
+    "covered": [
+     {
+      "component": "\"Game of Thrones\" received 32 Emmy nominations",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "# Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations",
+      "page": 1,
+      "snippet": "# Emmy Nominations 2019: 'Game of Thrones'"
+     },
+     {
+      "component": "\"Game of Thrones\" received 32 Emmy nominations",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "The divisive final season of \"Game of Thrones\" smashed the record for most Primetime Emmy nominations by a drama series in a single year, earning a whopping 32 nods Tuesday.",
+      "page": 1,
+      "snippet": "The divisive final season of \"Game of"
+     },
+     {
+      "component": "\"Game of Thrones\" received 32 Emmy nominations",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "In fact, Thrones landed a whopping 32 nominations, breaking a long standing record set by NYPD Blue for the most nominations for a single season.",
+      "page": 1,
+      "snippet": "In fact, Thrones landed a whopping 32"
+     },
+     {
+      "component": "\"Game of Thrones\" received 32 Emmy nominations",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "# Emmy 2019: Game of Thrones breaks 'NYPD Blue' record with 32 nominations",
+      "page": 1,
+      "snippet": "# Emmy 2019: Game of Thrones breaks"
+     },
+     {
+      "component": "This set a new record for most Emmy nominations in the same year by any comedy or drama series",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "# Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations",
+      "page": 1,
+      "snippet": "# Emmy Nominations 2019: 'Game of Thrones'"
+     },
+     {
+      "component": "This set a new record for most Emmy nominations in the same year by any comedy or drama series",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "The divisive final season of \"Game of Thrones\" smashed the record for most Primetime Emmy nominations by a drama series in a single year, earning a whopping 32 nods Tuesday.",
+      "page": 1,
+      "snippet": "The divisive final season of \"Game of"
+     },
+     {
+      "component": "This set a new record for most Emmy nominations in the same year by any comedy or drama series",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "In fact, Thrones landed a whopping 32 nominations, breaking a long standing record set by NYPD Blue for the most nominations for a single season.",
+      "page": 1,
+      "snippet": "In fact, Thrones landed a whopping 32"
+     },
+     {
+      "component": "The previous record was held by \"NYPD Blue\"",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "# Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations",
+      "page": 1,
+      "snippet": "# Emmy Nominations 2019: 'Game of Thrones'"
+     },
+     {
+      "component": "The previous record was held by \"NYPD Blue\"",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "In fact, Thrones landed a whopping 32 nominations, breaking a long standing record set by NYPD Blue for the most nominations for a single season.",
+      "page": 1,
+      "snippet": "In fact, Thrones landed a whopping 32"
+     },
+     {
+      "component": "1994",
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "sentence": "The show about families vying for the Iron Throne broke a 25-year nominations record for a drama series in a single year previously held by \"NYPD Blue,\" which earned 27 nods in 1994.",
+      "page": 1,
+      "snippet": "The show about families vying for the",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "The previous record was 26 nominations",
+     "The previous record was for \"NYPD Blue's\" first season",
+     "NYPD Blue's first season",
+     "Creative Arts Awards"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+      "source_title": "71stprimetimeemmyawards",
+      "text": "# Emmy Nominations 2019: 'Game of Thrones' Breaks 'NYPD Blue' Record with 32 Nominations ### by Adam Chitwood July 16, 2019 The 2019 Primetime Emmy Awards nominations have been announced, and as always when it comes to this notoriously finnicky organization, it's a mixed bag. The big news is that, as expected, the final season of Game of Thrones was recognized across the board. In fact, Thrones landed a whopping 32 nominations, breaking a long standing record set by NYPD Blue for the most nominations for a single season. [\u2026] # Emmy 2019: Game of Thrones breaks 'NYPD Blue' record with 32 nominations [\u2026] The divisive final season of \"Game of Thrones\" smashed the record for most Primetime Emmy nominations by a drama series in a single year, earning a whopping 32 nods Tuesday. HBO's fantasy epic enraged fans with its bumpy conclusion but still trounced the competition to strengthen its iron grip on the small-screen equivalent of the Oscars. \"The Marvelous Mrs. Maisel\" -- Amazon's story of a 1950s housewife-turned-stand up comic -- was a distant second on 20 nominations. \"Thrones\" is the most decorated fictional show in the awards' seven-decade history, and now has 161 nominations overall -- including 47 wins. ALSO READ: The science of Game of Thrones \"For those who will be adding 2019 to their long list of nominations and or wins from other years -- it never gets old!\" said Television Academy chairman and CEO Frank Scherma. The show about families vying for the Iron Throne broke a 25-year nominations record for a drama series in a single year previously held by \"NYPD Blue,\" which earned 27 nods in 1994.",
+      "n_used": 5
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage states 'NYPD Blue' earned 27 nods in 1994, not 26 as claimed.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes unsupported details: 'Including its nominations at the Creative Arts Awards', 'most Emmy nominations ... by any comedy or drama series' (source only says drama series), '26 nominations for NYPD Blue' (source says 27), and 'for its first season' (source does not specify first season).",
+    "rewrite_suggestion": "Game of Thrones broke the record for most Primetime Emmy nominations by a drama series in a single year with 32, breaking the 25-year record previously held by 'NYPD Blue,' which earned 27 nominations in 1994.",
+    "proofs": [
+     "The divisive final season of \"Game of Thrones\" smashed the record for most Primetime Emmy nominations by a drama series in a single year, earning a whopping 32 nods Tuesday.",
+     "The show about families vying for the Iron Throne broke a 25-year nominations record for a drama series in a single year previously held by \"NYPD Blue,\" which earned 27 nods in 1994."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The show about families vying for the Iron Throne broke a 25-year nominations record for a drama series in a single year previously held by \"NYPD Blue,\" which earned 27 nods in 1994.",
+     "why": "The claim states '26 nominations' but the source states '27 nods', a direct contradiction."
+    },
+    "why": "The claim includes several components not supported by the source: it mentions 'Creative Arts Awards' which the source does not; it asserts the record is for 'any comedy or drama series' whereas the source specifies only drama series; it states '26 nominations' for NYPD Blue but the source says '27 nods'; and it adds 'first season' which the source does not specify. Therefore, the author must add citations or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "She was an important player in their business affairs, and they also had several children together.",
+   "markers": [
+    "jackmcquesten"
+   ],
+   "paper_ids": [
+    "e402cbb07689a97b335c27a2db41970d42907f91"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e402cbb07689a97b335c27a2db41970d42907f91",
+    "source_title": "jackmcquesten",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "According to some, Kate was always looking after his business collections and made sure that he was always paid.",
+    "page": 1,
+    "snippet": "According to some, Kate was always looking",
+    "reason": "the passage does not state they had children together",
+    "votes": "2-0",
+    "window": "According to some, Kate was always looking after his business collections and made sure that he was always paid. Respectful of her upbringing, she gave birth to eight of her eleven children in a tent outside their western style houses, according to Koyukon (Athabascan) tradition. Jack and his able wife Kate established the Alaska Commercial Company in Circle. She was fluent in Russian, Koyukon, and English, and served as an important multi-lingual interpreter for her husband Jack and other Yukon traders such as Al Mayo and Arthur Harper throughout her life. Katherine or Kate, a Koyukon woman from Kokrines, a village situated about 80 miles west of Tanana. Jack McQuesten is seated in the center of the front row; circa 1895Photo from the Yukon Archives Additional mention has to be made of McQuesten's remarkable wife, Kate. Jack's wife, Katherine James McQuesten, was educated at Russian Mission on the lower Yukon River in a Russian Orthodox setting."
+   },
+   "evidences": [
+    {
+     "paper_id": "e402cbb07689a97b335c27a2db41970d42907f91",
+     "source_title": "jackmcquesten",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "According to some, Kate was always looking after his business collections and made sure that he was always paid.",
+     "page": 1,
+     "snippet": "According to some, Kate was always looking",
+     "reason": "the passage does not state they had children together",
+     "votes": "2-0",
+     "window": "According to some, Kate was always looking after his business collections and made sure that he was always paid. Respectful of her upbringing, she gave birth to eight of her eleven children in a tent outside their western style houses, according to Koyukon (Athabascan) tradition. Jack and his able wife Kate established the Alaska Commercial Company in Circle. She was fluent in Russian, Koyukon, and English, and served as an important multi-lingual interpreter for her husband Jack and other Yukon traders such as Al Mayo and Arthur Harper throughout her life. Katherine or Kate, a Koyukon woman from Kokrines, a village situated about 80 miles west of Tanana. Jack McQuesten is seated in the center of the front row; circa 1895Photo from the Yukon Archives Additional mention has to be made of McQuesten's remarkable wife, Kate. Jack's wife, Katherine James McQuesten, was educated at Russian Mission on the lower Yukon River in a Russian Orthodox setting."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state they had children together",
+   "component_check": {
+    "found": [
+     "They also had several children together."
+    ],
+    "missing": [
+     "She was an important player in their business affairs."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "They also had several children together.",
+      "paper_id": "e402cbb07689a97b335c27a2db41970d42907f91",
+      "source_title": "jackmcquesten",
+      "sentence": "Respectful of her upbringing, she gave birth to eight of her eleven children in a tent outside their western style houses, according to Koyukon (Athabascan) tradition.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the relationship and children, which the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "According to some, Kate was always looking after his business collections and made sure that he was always paid.",
+     "she gave birth to eight of her eleven children in a tent outside their western style houses, according to Koyukon (Athabascan) tradition."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only addresses the business role component (and even that is not fully proven as 'important player' without additional context), but it completely omits any evidence for the second component about having several children. The source text contains explicit statements about both components, so the tool needs to display the relevant sentences to cover the full claim.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t3",
+   "text": "In July 2019, Steven Taylor, Jasdeep Singh and Timil Patel withdrew from the tournament, after signing central contracts with USA Cricket.",
+   "markers": [
+    "2019globalt20canada"
+   ],
+   "paper_ids": [
+    "38481c0b77722005a7f1da34ba3d1bd97ae74c64"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "38481c0b77722005a7f1da34ba3d1bd97ae74c64",
+    "source_title": "2019globalt20canada",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Consequently it means that Taylor, Singh and Timil Patel have withdrawn from the Global T20 Canada which starts on July 25 in Brampton, Ontario.",
+    "page": 1,
+    "snippet": "Consequently it means that Taylor, Singh and",
+    "reason": "The passage does not state that Steven Taylor, Jasdeep Singh, and Timil Patel withdrew from the tournament after signing central contracts with USA Cricket.",
+    "votes": "2-0",
+    "window": "Consequently it means that Taylor, Singh and Timil Patel have withdrawn from the Global T20 Canada which starts on July 25 in Brampton, Ontario. USA Cricket 12-month contracts: Aaron Jones, Xavier Marshall, Monank Patel, Jessy Singh, Steven Taylor. USA Cricket three-month contracts: Timroy Allen, Karima Gore, Ian Holland, Akshay Homraj, Elmore Hutchinson, Nosthush Kenjige, Jaskaran Malhotra, Saurabh Netravalkar, Nisarg Patel, Sagar Patel, Timil Patel, Rusty Theron."
+   },
+   "evidences": [
+    {
+     "paper_id": "38481c0b77722005a7f1da34ba3d1bd97ae74c64",
+     "source_title": "2019globalt20canada",
+     "sentence": "The five players to secure one-year deals are batsmen Steven Taylor, Xavier Marshall, Monank Patel and Aaron Jones, and medium pacer Jessy Singh.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "38481c0b77722005a7f1da34ba3d1bd97ae74c64",
+     "source_title": "2019globalt20canada",
+     "sentence": "Consequently it means that Taylor, Singh and Timil Patel have withdrawn from the Global T20 Canada which starts on July 25 in Brampton, Ontario.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Steven Taylor, Singh, and Timil Patel withdrew from the Global T20 Canada because they received central contracts with USA Cricket. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "In July 2019, Steven Taylor, Jasdeep Singh and Timil Patel withdrew from the tournament"
+    ],
+    "missing": [
+     "after signing central contracts with USA Cricket"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In July 2019, Steven Taylor, Jasdeep Singh and Timil Patel withdrew from the tournament",
+      "paper_id": "38481c0b77722005a7f1da34ba3d1bd97ae74c64",
+      "source_title": "2019globalt20canada",
+      "sentence": "Consequently it means that Taylor, Singh and Timil Patel have withdrawn from the Global T20 Canada which starts on July 25 in Brampton, Ontario.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The five players to secure one-year deals are batsmen Steven Taylor, Xavier Marshall, Monank Patel and Aaron Jones, and medium pacer Jessy Singh.",
+     "Consequently it means that Taylor, Singh and Timil Patel have withdrawn from the Global T20 Canada which starts on July 25 in Brampton, Ontario."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence only covers the withdrawal of the three players and the tournament date, but it does not include the causal link that they withdrew after signing central contracts. The source does contain that information (the list of contracted players and the word 'Consequently'), so the proof exists but is not among the shown sentences. Therefore, the tool must show the additional sentences to fully support the claim.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t4",
+   "text": "The figure was a count of everyone who had completed the program, including people whose \"drug\" exposure was infrequent use of alcoholic drinks or prescription drugs.",
+   "markers": [
+    "clearbodyclearmind"
+   ],
+   "paper_ids": [
+    "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8734,
+   "evidence": {
+    "paper_id": "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c",
+    "source_title": "clearbodyclearmind",
+    "supported": true,
+    "sentence": "It did not mention that its definition of drug use included an occasional alcoholic drink or prescription medicine, and exposure to chemical toxins.",
+    "page": 1,
+    "snippet": "It did not mention that its definition",
+    "cosine": 0.8734,
+    "reason": "The passage states that the church's definition of drug use included occasional alcoholic drinks or prescription medicine, which directly supports the claim's assertion about the figure's inclusion criteria.",
+    "window": "In effect it claimed that the church had saved all those who had completed its drug programmes. It did not mention that its definition of drug use included an occasional alcoholic drink or prescription medicine, and exposure to chemical toxins. The ASA judgment said: \"The authority accepted that the ... programmes ... had enabled many people to overcome a dependency on drugs but was concerned that the advertisers had not proved that all those enrolled were dependent on street or prescription drugs at the time of enrolment, or that as many as 250,000 drug users had stopped ... as a direct result of Scientology's intervention.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c",
+     "source_title": "clearbodyclearmind",
+     "supported": true,
+     "sentence": "It did not mention that its definition of drug use included an occasional alcoholic drink or prescription medicine, and exposure to chemical toxins.",
+     "page": 1,
+     "snippet": "It did not mention that its definition",
+     "cosine": 0.8734,
+     "reason": "The passage states that the church's definition of drug use included occasional alcoholic drinks or prescription medicine, which directly supports the claim's assertion about the figure's inclusion criteria.",
+     "window": "In effect it claimed that the church had saved all those who had completed its drug programmes. It did not mention that its definition of drug use included an occasional alcoholic drink or prescription medicine, and exposure to chemical toxins. The ASA judgment said: \"The authority accepted that the ... programmes ... had enabled many people to overcome a dependency on drugs but was concerned that the advertisers had not proved that all those enrolled were dependent on street or prescription drugs at the time of enrolment, or that as many as 250,000 drug users had stopped ... as a direct result of Scientology's intervention.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the church's definition of drug use included occasional alcoholic drinks or prescription medicine, which directly supports the claim's assertion about the figure's inclusion criteria.",
+   "covering": {
+    "covered": [
+     {
+      "component": "figure was a count of everyone who had completed the program",
+      "paper_id": "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c",
+      "source_title": "clearbodyclearmind",
+      "sentence": "In effect it claimed that the church had saved all those who had completed its drug programmes.",
+      "page": 1,
+      "snippet": "In effect it claimed that the church"
+     },
+     {
+      "component": "included people whose \"drug\" exposure was infrequent use of alcoholic drinks or prescription drugs",
+      "paper_id": "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c",
+      "source_title": "clearbodyclearmind",
+      "sentence": "It did not mention that its definition of drug use included an occasional alcoholic drink or prescription medicine, and exposure to chemical toxins.",
+      "page": 1,
+      "snippet": "It did not mention that its definition"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c",
+      "source_title": "clearbodyclearmind",
+      "text": "In effect it claimed that the church had saved all those who had completed its drug programmes. It did not mention that its definition of drug use included an occasional alcoholic drink or prescription medicine, and exposure to chemical toxins.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t5",
+   "text": "He was arrested a second time as a result of a payment plan dispute concerning a borrowed tire.",
+   "markers": [
+    "aarondford"
+   ],
+   "paper_ids": [
+    "a52db556248fdead7458ed11682db466ae44bed4"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+    "source_title": "aarondford",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Ford, 46, was arrested on the warrant in December 1994 and arraigned in February 1995.",
+    "page": 1,
+    "snippet": "Ford, 46, was arrested on the warrant",
+    "reason": "the passage does not mention a payment plan dispute or a borrowed tire",
+    "votes": "2-0",
+    "window": "Ford, 46, was arrested on the warrant in December 1994 and arraigned in February 1995. Ford was arrested in June that year and accused of stealing $20 to $200 worth of tires in Brazos County. (meta data) TITLE: Nevada AG candidate Aaron Ford arrested 4 times in 1990s | Las Vegas Review-Journal (meta data) PUBLISHED DATETIME: 2019-08-09T14:01:50-07:00 101\u00b0 Partly Cloudy Las Vegas NV # Nevada AG candidate Aaron Ford arrested 4 times in 1990s Nevada Senate Majority Leader Aaron Ford, the Democratic candidate for attorney general, was arrested four times in Texas in the 1990s for public intoxication, stealing tires and twice for failing to appear in court \u2014 once for a speeding ticket and once for a theft charge. According to records, Texas authorities issued an arrest warrant for Ford in October 1994 after he skipped arraignment on a misdemeanor theft charge."
+   },
+   "evidences": [
+    {
+     "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+     "source_title": "aarondford",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Ford, 46, was arrested on the warrant in December 1994 and arraigned in February 1995.",
+     "page": 1,
+     "snippet": "Ford, 46, was arrested on the warrant",
+     "reason": "the passage does not mention a payment plan dispute or a borrowed tire",
+     "votes": "2-0",
+     "window": "Ford, 46, was arrested on the warrant in December 1994 and arraigned in February 1995. Ford was arrested in June that year and accused of stealing $20 to $200 worth of tires in Brazos County. (meta data) TITLE: Nevada AG candidate Aaron Ford arrested 4 times in 1990s | Las Vegas Review-Journal (meta data) PUBLISHED DATETIME: 2019-08-09T14:01:50-07:00 101\u00b0 Partly Cloudy Las Vegas NV # Nevada AG candidate Aaron Ford arrested 4 times in 1990s Nevada Senate Majority Leader Aaron Ford, the Democratic candidate for attorney general, was arrested four times in Texas in the 1990s for public intoxication, stealing tires and twice for failing to appear in court \u2014 once for a speeding ticket and once for a theft charge. According to records, Texas authorities issued an arrest warrant for Ford in October 1994 after he skipped arraignment on a misdemeanor theft charge."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention a payment plan dispute or a borrowed tire",
+   "component_check": {
+    "found": [
+     "concerning a borrowed tire"
+    ],
+    "missing": [
+     "He was arrested a second time",
+     "as a result of a payment plan dispute"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "concerning a borrowed tire",
+      "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+      "source_title": "aarondford",
+      "sentence": "(meta data) TITLE: Nevada AG candidate Aaron Ford arrested 4 times in 1990s | Las Vegas Review-Journal (meta data) PUBLISHED DATETIME: 2019-08-09T14:01:50-07:00 101\u00b0 Partly Cloudy Las Vegas NV # Nevada AG candidate Aaron Ford arrested 4 times in 1990s Nevada Senate Majority Leader Aaron Ford, the Democratic candidate for attorney general, was arrested four times in Texas in the 1990s for public intoxication, stealing tires and twice for failing to appear in court \u2014 once for a speeding ticket and once for a theft charge.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was arrested a second time as a result of a payment plan dispute concerning a borrowed tire.",
+    "reason": "The passage directly states a factual event that the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the reason for the second arrest: a payment plan dispute over a borrowed tire (source says he stole tires)",
+    "rewrite_suggestion": "He was arrested a second time on a warrant for failing to appear in court on a misdemeanor theft charge involving tires.",
+    "proofs": [
+     "Ford, 46, was arrested on the warrant in December 1994 and arraigned in February 1995.",
+     "Ford was arrested in June that year and accused of stealing $20 to $200 worth of tires in Brazos County."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Ford was arrested in June that year and accused of stealing $20 to $200 worth of tires in Brazos County.",
+     "why": "The claim states the dispute involved a borrowed tire, but the source says he was accused of stealing tires, contradicting the notion of a borrowing arrangement."
+    },
+    "why": "The claim asserts that the second arrest resulted from a payment plan dispute over a borrowed tire, but the source text only describes a theft of tires and a subsequent warrant for failing to appear in court. No mention of a payment plan or borrowed tire appears in the source, and the shown sentence merely confirms an arrest on a warrant. Therefore, the author must either provide a new citation for the disputed reason or rewrite the claim to match the source's account of a theft-related warrant arrest."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "Tyler, a former Democrat, was expelled from the Whig Party after vetoing bills passed by the Whig congressional majority to reestablish a national bank and raise tariffs.",
+   "markers": [
+    "johnccalhoun"
+   ],
+   "paper_ids": [
+    "20ffb7bd208526a6de2768dd600a8d13b728c21c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "20ffb7bd208526a6de2768dd600a8d13b728c21c",
+    "source_title": "johnccalhoun",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "A bill resurrecting the Bank of the United States\u2014the same national bank that had been dismantled by Jackson\u2014was sent to Tyler's desk.",
+    "page": 1,
+    "snippet": "A bill resurrecting the Bank of the",
+    "reason": "The passage does not state that Tyler was a former Democrat or that the bills he vetoed were to reestablish a national bank and raise tariffs.",
+    "votes": "2-0",
+    "window": "A bill resurrecting the Bank of the United States\u2014the same national bank that had been dismantled by Jackson\u2014was sent to Tyler's desk. Enraged Whig leaders denounced the President as a traitor and expelled him from the party two days later in a declaration published in newspapers throughout the nation. Congress passed another bill with language they hoped would appease the President, but Tyler vetoed it as well. The cabinet urged him to sign it, but Tyler used his power of veto."
+   },
+   "evidences": [
+    {
+     "paper_id": "20ffb7bd208526a6de2768dd600a8d13b728c21c",
+     "source_title": "johnccalhoun",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "A bill resurrecting the Bank of the United States\u2014the same national bank that had been dismantled by Jackson\u2014was sent to Tyler's desk.",
+     "page": 1,
+     "snippet": "A bill resurrecting the Bank of the",
+     "reason": "The passage does not state that Tyler was a former Democrat or that the bills he vetoed were to reestablish a national bank and raise tariffs.",
+     "votes": "2-0",
+     "window": "A bill resurrecting the Bank of the United States\u2014the same national bank that had been dismantled by Jackson\u2014was sent to Tyler's desk. Enraged Whig leaders denounced the President as a traitor and expelled him from the party two days later in a declaration published in newspapers throughout the nation. Congress passed another bill with language they hoped would appease the President, but Tyler vetoed it as well. The cabinet urged him to sign it, but Tyler used his power of veto."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Tyler was a former Democrat or that the bills he vetoed were to reestablish a national bank and raise tariffs.",
+   "component_check": {
+    "found": [
+     "Tyler was expelled from the Whig Party.",
+     "Tyler vetoed bills passed by the Whig congressional majority.",
+     "The bills were to reestablish a national bank."
+    ],
+    "missing": [
+     "Tyler was a former Democrat."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Tyler was expelled from the Whig Party.",
+      "paper_id": "20ffb7bd208526a6de2768dd600a8d13b728c21c",
+      "source_title": "johnccalhoun",
+      "sentence": "Enraged Whig leaders denounced the President as a traitor and expelled him from the party two days later in a declaration published in newspapers throughout the nation.",
+      "page": 1
+     },
+     {
+      "component": "Tyler vetoed bills passed by the Whig congressional majority.",
+      "paper_id": "20ffb7bd208526a6de2768dd600a8d13b728c21c",
+      "source_title": "johnccalhoun",
+      "sentence": "Congress passed another bill with language they hoped would appease the President, but Tyler vetoed it as well.",
+      "page": 1
+     },
+     {
+      "component": "The bills were to reestablish a national bank.",
+      "paper_id": "20ffb7bd208526a6de2768dd600a8d13b728c21c",
+      "source_title": "johnccalhoun",
+      "sentence": "A bill resurrecting the Bank of the United States\u2014the same national bank that had been dismantled by Jackson\u2014was sent to Tyler's desk.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Tyler, a former Democrat, was expelled from the Whig Party after vetoing bills passed by the Whig congressional majority to reestablish a national bank and raise tariffs.",
+    "reason": "The passage asserts specific historical facts about Tyler's political actions and expulsion from the Whig Party. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Tyler was a former Democrat is absent from the source; also, the source shows expulsion before the tariff vetoes, so the claim that expulsion followed tariff vetoes is unsupported.",
+    "rewrite_suggestion": "Tyler was expelled from the Whig Party after vetoing a bill to reestablish a national bank; he later vetoed tariff bills.",
+    "proofs": [
+     "A bill resurrecting the Bank of the United States\u2014the same national bank that had been dismantled by Jackson\u2014was sent to Tyler's desk.",
+     "Tyler used his power of veto.",
+     "Congress passed another bill with language they hoped would appease the President, but Tyler vetoed it as well.",
+     "Enraged Whig leaders denounced the President as a traitor and expelled him from the party two days later in a declaration published in newspapers throughout the nation."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Enraged Whig leaders denounced the President as a traitor and expelled him from the party two days later in a declaration published in newspapers throughout the nation.",
+     "why": "This expulsion occurs in the narrative before the section describing tariff vetoes, contradicting the claim that Tyler was expelled after vetoing tariff bills."
+    },
+    "why": "The claim has three components. 'Tyler was a former Democrat' is not stated anywhere in the source. 'Tyler was expelled from the Whig Party' is present in the source but not shown by the tool. 'Expulsion after vetoing bank and tariff bills' is partly contradicted: the source shows expulsion after bank vetoes but before tariff vetoes, so the timing of tariff vetoes is incorrect. Thus the author must either add a citation for the missing subclaim (former Democrat) or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "Setting out shortly after Christmas, he met with abbot Hugh of Cluny at Besan\u00e7on, where he was joined by the young monk Hildebrand, who afterwards became Pope Gregory VII; arriving in pilgrim garb at Rome in the following February, he was received with much cordiality, and at his consecration assumed the name Leo IX.",
+   "markers": [
+    "popeleoix"
+   ],
+   "paper_ids": [
+    "55abe6668dac255a75b7a51f4d86d61c3786d265"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "55abe6668dac255a75b7a51f4d86d61c3786d265",
+    "source_title": "popeleoix",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Bruno took the name Pope Leo IX.",
+    "page": 1,
+    "snippet": "Bruno took the name Pope Leo IX.",
+    "reason": "The passage does not mention the date of departure, the meeting with abbot Hugh of Cluny at Besan\u00e7on, or the monk Hildebrand.",
+    "votes": "2-0",
+    "window": "Bruno took the name Pope Leo IX. After the long journey, Bishop Bruno arrived in the holy city barefoot and dressed as a simple traveler. He was greeted by cheers at his humble manner and was immediately accepted by everyone as the new Holy Father."
+   },
+   "evidences": [
+    {
+     "paper_id": "55abe6668dac255a75b7a51f4d86d61c3786d265",
+     "source_title": "popeleoix",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Bruno took the name Pope Leo IX.",
+     "page": 1,
+     "snippet": "Bruno took the name Pope Leo IX.",
+     "reason": "The passage does not mention the date of departure, the meeting with abbot Hugh of Cluny at Besan\u00e7on, or the monk Hildebrand.",
+     "votes": "2-0",
+     "window": "Bruno took the name Pope Leo IX. After the long journey, Bishop Bruno arrived in the holy city barefoot and dressed as a simple traveler. He was greeted by cheers at his humble manner and was immediately accepted by everyone as the new Holy Father."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the date of departure, the meeting with abbot Hugh of Cluny at Besan\u00e7on, or the monk Hildebrand.",
+   "subject_guard": {
+    "subject": "Hugh of Cluny; setting",
+    "missing_from": [
+     "55abe6668dac255a75b7a51f4d86d61c3786d265"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts facts about Pope Leo IX's journey and consecration, which the cited source is expected to prove.",
+    "reason": "The passage presents factual statements about historical events and figures, directly attributing them to the cited source through the narrative flow. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire journey narrative (setting out shortly after Christmas, meeting with Hugh of Cluny at Besan\u00e7on, being joined by Hildebrand, and the specific timing 'following February') is absent from the source.",
+    "rewrite_suggestion": "After a long journey, Bishop Bruno arrived in Rome barefoot and dressed as a simple traveler, was greeted with cheers and immediately accepted, and took the name Pope Leo IX.",
+    "proofs": [
+     "After the long journey, Bishop Bruno arrived in the holy city barefoot and dressed as a simple traveler.",
+     "He was greeted by cheers at his humble manner and was immediately accepted by everyone as the new Holy Father.",
+     "Bruno took the name Pope Leo IX."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only covers Bruno's arrival as a humble traveler and his taking the name Leo IX. It contains none of the specific details about the timing (Christmas, February), the meeting with Hugh of Cluny at Besan\u00e7on, or the joining of Hildebrand. Those components are unattributed in the source, so the author must either add a citation for them or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "The dissent continued throughout the year with protesters participating in anti-police chants such as \u201cHow many kids did you kill today?\u201d.",
+   "markers": [
+    "antipolicesentiment"
+   ],
+   "paper_ids": [
+    "171412590697921eb26490e9eec384a777ad1f86"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.779,
+   "evidence": {
+    "paper_id": "171412590697921eb26490e9eec384a777ad1f86",
+    "source_title": "antipolicesentiment",
+    "supported": true,
+    "sentence": "The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\"",
+    "page": 1,
+    "snippet": "The microphone was seized, and one man",
+    "cosine": 0.779,
+    "reason": "The passage directly quotes the anti-police chant \"St. Louis P.D., K.K.K., how many kids did you kill today?\" which supports the claim's assertion about the chant used by protesters.",
+    "window": "As a musical act took the stage, a couple of dozen demonstrators ran up. The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\" About a dozen St. Louis police officers helped university security officers clear the stage."
+   },
+   "evidences": [
+    {
+     "paper_id": "171412590697921eb26490e9eec384a777ad1f86",
+     "source_title": "antipolicesentiment",
+     "supported": true,
+     "sentence": "The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\"",
+     "page": 1,
+     "snippet": "The microphone was seized, and one man",
+     "cosine": 0.779,
+     "reason": "The passage directly quotes the anti-police chant \"St. Louis P.D., K.K.K., how many kids did you kill today?\" which supports the claim's assertion about the chant used by protesters.",
+     "window": "As a musical act took the stage, a couple of dozen demonstrators ran up. The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\" About a dozen St. Louis police officers helped university security officers clear the stage."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes the anti-police chant \"St. Louis P.D., K.K.K., how many kids did you kill today?\" which supports the claim's assertion about the chant used by protesters.",
+   "covering": {
+    "covered": [
+     {
+      "component": "chant \"How many kids did you kill today?\"",
+      "paper_id": "171412590697921eb26490e9eec384a777ad1f86",
+      "source_title": "antipolicesentiment",
+      "sentence": "The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\"",
+      "page": 1,
+      "snippet": "The microphone was seized, and one man"
+     },
+     {
+      "component": "protesters participating in anti-police chants",
+      "paper_id": "171412590697921eb26490e9eec384a777ad1f86",
+      "source_title": "antipolicesentiment",
+      "sentence": "\"Just seeing the recent news with unarmed civilians being shot by the police, it's an obvious injustice,\" said Denisha Burns, 33, in Chicago, where protesters recited the names of people killed by police.",
+      "page": 1,
+      "snippet": "\"Just seeing the recent news with unarmed",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "dissent continued throughout the year"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "171412590697921eb26490e9eec384a777ad1f86",
+      "source_title": "antipolicesentiment",
+      "text": "The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\" [\u2026] \"Just seeing the recent news with unarmed civilians being shot by the police, it's an obvious injustice,\" said Denisha Burns, 33, in Chicago, where protesters recited the names of people killed by police.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The dissent continued throughout the year",
+    "rewrite_suggestion": "On Martin Luther King's birthday in 2015, protesters participated in anti-police chants such as 'How many kids did you kill today?'",
+    "proofs": [
+     "The microphone was seized, and one man shouted, \"St. Louis P.D., K.K.K., how many kids did you kill today?\""
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the component 'dissent continued throughout the year,' but the cited source describes only a single day's events (Martin Luther King's birthday in 2015). No sentence in the source supports the idea that the dissent lasted the entire year. The chant and protesters' participation are supported by the shown sentence, so the author must either add a citation for the temporal claim or rewrite to remove it."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "Madhavan later wrote and starred in a Hindi version, \"Ramji Londonwaley\", which released in September 2005.",
+   "markers": [
+    "naladamayanthi2003film"
+   ],
+   "paper_ids": [
+    "01971da606777a4caa21cb5ed2823db328f9bec6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "01971da606777a4caa21cb5ed2823db328f9bec6",
+    "source_title": "naladamayanthi2003film",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The actor was reportedly quite good in the film's Tamil original, Nala Damayanthi, and he shines through this simpleton role with flying colours.",
+    "page": 1,
+    "snippet": "The actor was reportedly quite good in",
+    "reason": "The passage does not mention a Hindi version of the film, its title, or its release date.",
+    "votes": "2-0",
+    "window": "The actor was reportedly quite good in the film's Tamil original, Nala Damayanthi, and he shines through this simpleton role with flying colours."
+   },
+   "evidences": [
+    {
+     "paper_id": "01971da606777a4caa21cb5ed2823db328f9bec6",
+     "source_title": "naladamayanthi2003film",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The actor was reportedly quite good in the film's Tamil original, Nala Damayanthi, and he shines through this simpleton role with flying colours.",
+     "page": 1,
+     "snippet": "The actor was reportedly quite good in",
+     "reason": "The passage does not mention a Hindi version of the film, its title, or its release date.",
+     "votes": "2-0",
+     "window": "The actor was reportedly quite good in the film's Tamil original, Nala Damayanthi, and he shines through this simpleton role with flying colours."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention a Hindi version of the film, its title, or its release date.",
+   "component_check": {
+    "found": [
+     "The Hindi version was titled \"Ramji Londonwaley\"",
+     "\"Ramji Londonwaley\" released in September 2005"
+    ],
+    "missing": [
+     "Madhavan later wrote and starred in a Hindi version"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Hindi version was titled \"Ramji Londonwaley\"",
+      "paper_id": "01971da606777a4caa21cb5ed2823db328f9bec6",
+      "source_title": "naladamayanthi2003film",
+      "sentence": "(meta data) TITLE: Alas, Ramji could have been good - Rediff.com movies Get Ahead Money Tips Rediff NewsAll News NewsApp (Free) Read news as it happens Sign in | Create a Rediffmail account Rediff.com \u00bb Movies \u00bb Alas, Ramji could have been good # Alas, Ramji could have been good September 02, 2005 19:18 IST Maybe it's because I was famished, and the very idea of a self-styled gourmet chef pulling off great epicurean feats effortlessly appealed to me, but I indulgently smiled through most of Ramji Londonwaley's first half.",
+      "page": 1
+     },
+     {
+      "component": "\"Ramji Londonwaley\" released in September 2005",
+      "paper_id": "01971da606777a4caa21cb5ed2823db328f9bec6",
+      "source_title": "naladamayanthi2003film",
+      "sentence": "(meta data) TITLE: Alas, Ramji could have been good - Rediff.com movies Get Ahead Money Tips Rediff NewsAll News NewsApp (Free) Read news as it happens Sign in | Create a Rediffmail account Rediff.com \u00bb Movies \u00bb Alas, Ramji could have been good # Alas, Ramji could have been good September 02, 2005 19:18 IST Maybe it's because I was famished, and the very idea of a self-styled gourmet chef pulling off great epicurean feats effortlessly appealed to me, but I indulgently smiled through most of Ramji Londonwaley's first half.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about a film's release date and its relation to another film, which are directly attributable to the cited source and expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes that Madhavan wrote the film and that it released in September 2005, neither of which is stated in the source. Only the fact that he starred in it is supported.",
+    "rewrite_suggestion": "Madhavan later starred in a Hindi version, 'Ramji Londonwaley'.",
+    "proofs": [
+     "Maybe it's because I was famished, and the very idea of a self-styled gourmet chef pulling off great epicurean feats effortlessly appealed to me, but I indulgently smiled through most of Ramji Londonwaley's first half. And this is all because of Madhavan."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only establishes that Madhavan performed in 'Ramji Londonwaley' (the review focuses on his acting). It does not state that he wrote the film, nor does it give a release date (the article is dated September 2, 2005, but that is the review date, not the film's release month). The tool's shown sentence is irrelevant to all components. The missing subclaims (writing and release date) require additional citations or a rewrite."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In 1987-89 she worked in Hong Kong and Macau amongst the addict community.",
+   "markers": [
+    "philippastroudbaronessst"
+   ],
+   "paper_ids": [
+    "c58ee134b0acd1d55b82d765953d2235292083d2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "c58ee134b0acd1d55b82d765953d2235292083d2",
+    "source_title": "philippastroudbaronessst",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Philippa Stroud on\u2026 working with addicts in Hong Kong (5 mins) \"If you are an addict in the UK, and you go through a drug rehab centre, and you fall out of it or don't succeed going through it, you may get one other chance, but you won't get many other opportunities.",
+    "page": 1,
+    "snippet": "Philippa Stroud on... working with addicts in",
+    "reason": "The passage does not mention the years 1987-89 or the locations Hong Kong and Macau.",
+    "votes": "2-0",
+    "window": "Philippa Stroud on\u2026 working with addicts in Hong Kong (5 mins) \"If you are an addict in the UK, and you go through a drug rehab centre, and you fall out of it or don't succeed going through it, you may get one other chance, but you won't get many other opportunities."
+   },
+   "evidences": [
+    {
+     "paper_id": "c58ee134b0acd1d55b82d765953d2235292083d2",
+     "source_title": "philippastroudbaronessst",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Philippa Stroud on\u2026 working with addicts in Hong Kong (5 mins) \"If you are an addict in the UK, and you go through a drug rehab centre, and you fall out of it or don't succeed going through it, you may get one other chance, but you won't get many other opportunities.",
+     "page": 1,
+     "snippet": "Philippa Stroud on... working with addicts in",
+     "reason": "The passage does not mention the years 1987-89 or the locations Hong Kong and Macau.",
+     "votes": "2-0",
+     "window": "Philippa Stroud on\u2026 working with addicts in Hong Kong (5 mins) \"If you are an addict in the UK, and you go through a drug rehab centre, and you fall out of it or don't succeed going through it, you may get one other chance, but you won't get many other opportunities."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the years 1987-89 or the locations Hong Kong and Macau.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1987-89 she worked in Hong Kong and Macau amongst the addict community.",
+    "reason": "The passage asserts a factual statement about the subject's activities and location during a specific time period, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific years '1987-89' and the location 'Macau' (the source only has a heading about Hong Kong, not a sentence, and no dates or Macau)",
+    "rewrite_suggestion": "She worked with addicts in Hong Kong (as per the source's heading) but the source does not provide the years 1987-89 or mention Macau.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that she worked in Hong Kong and Macau in 1987-89, but the provided source text contains no mention of Macau or the years 1987-89. The only reference to Hong Kong is a heading ('Philippa Stroud on\u2026 working with addicts in Hong Kong') which is not a sentence and does not include specific dates or locations beyond Hong Kong. Thus, the claim is entirely unsupported by the source."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Active citizenship was granted to men who were French, at least 25 years old, paid taxes equal to three days work, and could not be defined as servants (Thouret).",
+   "markers": [
+    "declarationoftherightsof"
+   ],
+   "paper_ids": [
+    "446d05aea919f6204b6b9a97b4f4964701d85260"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+    "source_title": "declarationoftherightsof",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Committee proposes that the necessary qualifications for the title of active citizen in the primary assembly of the canton be: (1) to be French or to have become French; (2) to have reached one's majority [be a legal adult; the age was set at 25]; (3) to have resided in the canton for at least",
+    "page": 1,
+    "snippet": "The Committee proposes that the necessary qualifications",
+    "reason": "the passage does not mention the tax requirement or the exclusion of servants.",
+    "votes": "2-0",
+    "window": "The Committee proposes that the necessary qualifications for the title of active citizen in the primary assembly of the canton be: (1) to be French or to have become French; (2) to have reached one's majority [be a legal adult; the age was set at 25]; (3) to have resided in the canton for at least"
+   },
+   "evidences": [
+    {
+     "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+     "source_title": "declarationoftherightsof",
+     "sentence": "but according to calculations that seem to be very definite, the number of active citizens, with deductions made for women, minors, and all those who are deprived of political rights for legitimate reasons, is reduced to one-sixth of the total population.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+     "source_title": "declarationoftherightsof",
+     "sentence": "The Committee proposes that the necessary qualifications for the title of active citizen in the primary assembly of the canton be: (1) to be French or to have become French; (2) to have reached one's majority [be a legal adult; the age was set at 25]; (3) to have resided in the canton for at least one year; (4) to pay direct taxes at a rate equal to the local value of three days of work, a value that will be assessed in monetary terms by the provincial assemblies; (5) to not be at the moment a servant, that is to say, in personal relationships that are all too incompatible with the independence necessary to the exercise of political rights.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the provided text. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "Active citizenship was granted to men",
+     "who were French",
+     "at least 25 years old"
+    ],
+    "missing": [
+     "paid taxes equal to three days work"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Active citizenship was granted to men",
+      "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+      "source_title": "declarationoftherightsof",
+      "sentence": "### Relation ### Identifier ## Text Item Type Metadata ### Text The number of individuals in France is about 26 million; but according to calculations that seem to be very definite, the number of active citizens, with deductions made for women, minors, and all those who are deprived of political rights for legitimate reasons, is reduced to one-sixth of the total population.",
+      "page": 1
+     },
+     {
+      "component": "who were French",
+      "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+      "source_title": "declarationoftherightsof",
+      "sentence": "The Committee proposes that the necessary qualifications for the title of active citizen in the primary assembly of the canton be: (1) to be French or to have become French; (2) to have reached one's majority [be a legal adult; the age was set at 25]; (3) to have resided in the canton for at least",
+      "page": 1
+     },
+     {
+      "component": "at least 25 years old",
+      "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+      "source_title": "declarationoftherightsof",
+      "sentence": "The Committee proposes that the necessary qualifications for the title of active citizen in the primary assembly of the canton be: (1) to be French or to have become French; (2) to have reached one's majority [be a legal adult; the age was set at 25]; (3) to have resided in the canton for at least",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "but according to calculations that seem to be very definite, the number of active citizens, with deductions made for women, minors, and all those who are deprived of political rights for legitimate reasons, is reduced to one-sixth of the total population.",
+     "The Committee proposes that the necessary qualifications for the title of active citizen in the primary assembly of the canton be: (1) to be French or to have become French; (2) to have reached one's majority [be a legal adult; the age was set at 25]; (3) to have resided in the canton for at least one year; (4) to pay direct taxes at a rate equal to the local value of three days of work, a value that will be assessed in monetary terms by the provincial assemblies; (5) to not be at the moment a servant, that is to say, in personal relationships that are all too incompatible with the independence necessary to the exercise of political rights."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim requires that active citizenship is limited to men (implied by excluding women), French, at least 25, paying taxes equal to three days' work, and not servants. The shown sentence only covers French and age. The source text contains all the missing elements (the tax condition, servant exclusion, and the gender restriction), but they were not included in the tool's display. Therefore the tool's evidence is insufficient; the proof exists in the source and must be shown verbatim.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t12",
+   "text": "On 1 September 2009, Gmail suffered another outage for several hours.",
+   "markers": [
+    "historyofgmail"
+   ],
+   "paper_ids": [
+    "b0caa9ed8e7bac78fe6414c815fc42aeb9650add"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b0caa9ed8e7bac78fe6414c815fc42aeb9650add",
+    "source_title": "historyofgmail",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again.",
+    "page": 1,
+    "snippet": "The firm described Tuesday's two-hour outage as",
+    "reason": "The passage does not mention an outage on September 1, 2009, nor does it specify the duration of the outage as 'several hours'.",
+    "votes": "2-0",
+    "window": "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again."
+   },
+   "evidences": [
+    {
+     "paper_id": "b0caa9ed8e7bac78fe6414c815fc42aeb9650add",
+     "source_title": "historyofgmail",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again.",
+     "page": 1,
+     "snippet": "The firm described Tuesday's two-hour outage as",
+     "reason": "The passage does not mention an outage on September 1, 2009, nor does it specify the duration of the outage as 'several hours'.",
+     "votes": "2-0",
+     "window": "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention an outage on September 1, 2009, nor does it specify the duration of the outage as 'several hours'.",
+   "component_check": {
+    "found": [
+     "Gmail suffered another outage on 1 September 2009"
+    ],
+    "missing": [
+     "the outage lasted for several hours"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Gmail suffered another outage on 1 September 2009",
+      "paper_id": "b0caa9ed8e7bac78fe6414c815fc42aeb9650add",
+      "source_title": "historyofgmail",
+      "sentence": "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Gmail suffered another outage for several hours on 1 September 2009.",
+    "reason": "The passage asserts a specific fact (an outage on a particular date) that the cited source is expected to prove. This falls under the definition of 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the duration 'several hours' is not supported; the source states a two-hour outage",
+    "rewrite_suggestion": "On 1 September 2009, Gmail suffered another two-hour outage.",
+    "proofs": [
+     "Page last updated at 07:54 GMT, Wednesday, 2 September 2009",
+     "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The firm described Tuesday's two-hour outage as a \"big deal\" and said it was investigating ways to ensure it did not happen again.",
+     "why": "The source states the outage lasted two hours, contradicting the claim's 'several hours'."
+    },
+    "why": "The claim states the outage lasted 'several hours', but the source explicitly describes it as a 'two-hour outage'. This component is not only unsupported but also contradicted by the source. The date and occurrence of an outage are provable from the source, but the shown sentence alone does not prove the specific date (though the article's metadata provides it). Since the duration component is not provable at all, the author must either add a different citation or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "He also co-sponsored the Nevada Pregnant Workers' Fairness Act to provide protections to female employees and applicants for employment from discriminatory or unlawful employment practices based on pregnancy, childbirth, or any related medical conditions.",
+   "markers": [
+    "aarondford2"
+   ],
+   "paper_ids": [
+    "dad910a9cac3e23e8e16a96c291745b533a52a9c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "dad910a9cac3e23e8e16a96c291745b533a52a9c",
+    "source_title": "aarondford2",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The new law, the Nevada Pregnant Workers' Fairness Act, is actually much broader than the name implies.",
+    "page": 1,
+    "snippet": "The new law, the Nevada Pregnant Workers'",
+    "reason": "The passage does not state that the claim's subject co-sponsored the act.",
+    "votes": "2-0",
+    "window": "The new law, the Nevada Pregnant Workers' Fairness Act, is actually much broader than the name implies. The Act makes it an unlawful employment practice for an employer to refuse to provide a reasonable accommodation to a female employee or applicant for a condition relating to pregnancy, childbirth or a related medical condition. It is also an unlawful employment practice to take adverse action against, or deny an employment opportunity to, an otherwise qualified female employee or applicant due to a request for, or use of, a reasonable accommodation. On June 2, 2017, Governor Sandoval signed into law Senate Bill No. 253, which greatly expands the legal protections for pregnant employees."
+   },
+   "evidences": [
+    {
+     "paper_id": "dad910a9cac3e23e8e16a96c291745b533a52a9c",
+     "source_title": "aarondford2",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The new law, the Nevada Pregnant Workers' Fairness Act, is actually much broader than the name implies.",
+     "page": 1,
+     "snippet": "The new law, the Nevada Pregnant Workers'",
+     "reason": "The passage does not state that the claim's subject co-sponsored the act.",
+     "votes": "2-0",
+     "window": "The new law, the Nevada Pregnant Workers' Fairness Act, is actually much broader than the name implies. The Act makes it an unlawful employment practice for an employer to refuse to provide a reasonable accommodation to a female employee or applicant for a condition relating to pregnancy, childbirth or a related medical condition. It is also an unlawful employment practice to take adverse action against, or deny an employment opportunity to, an otherwise qualified female employee or applicant due to a request for, or use of, a reasonable accommodation. On June 2, 2017, Governor Sandoval signed into law Senate Bill No. 253, which greatly expands the legal protections for pregnant employees."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the claim's subject co-sponsored the act.",
+   "component_check": {
+    "found": [
+     "The Act provides protections to female employees and applicants for employment.",
+     "Protections are from discriminatory or unlawful employment practices based on pregnancy, childbirth, or any related medical conditions."
+    ],
+    "missing": [
+     "He co-sponsored the Nevada Pregnant Workers' Fairness Act."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Act provides protections to female employees and applicants for employment.",
+      "paper_id": "dad910a9cac3e23e8e16a96c291745b533a52a9c",
+      "source_title": "aarondford2",
+      "sentence": "The Act makes it an unlawful employment practice for an employer to refuse to provide a reasonable accommodation to a female employee or applicant for a condition relating to pregnancy, childbirth or a related medical condition.",
+      "page": 1
+     },
+     {
+      "component": "Protections are from discriminatory or unlawful employment practices based on pregnancy, childbirth, or any related medical conditions.",
+      "paper_id": "dad910a9cac3e23e8e16a96c291745b533a52a9c",
+      "source_title": "aarondford2",
+      "sentence": "The Act makes it an unlawful employment practice for an employer to refuse to provide a reasonable accommodation to a female employee or applicant for a condition relating to pregnancy, childbirth or a related medical condition.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the Nevada Pregnant Workers' Fairness Act, which the citation is expected to prove. There is no indication that the citation is only for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that 'he' co-sponsored the Nevada Pregnant Workers' Fairness Act",
+    "rewrite_suggestion": "The Nevada Pregnant Workers' Fairness Act provides protections to female employees and applicants from discriminatory or unlawful employment practices based on pregnancy, childbirth, or any related medical conditions.",
+    "proofs": [
+     "The new law, the Nevada Pregnant Workers' Fairness Act, is actually much broader than the name implies.",
+     "The Act makes it an unlawful employment practice for an employer to refuse to provide a reasonable accommodation to a female employee or applicant for a condition relating to pregnancy, childbirth or a related medical condition."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes co-sponsorship of the Nevada Pregnant Workers' Fairness Act to an individual, but the cited source does not mention any person co-sponsoring the bill; it only describes the law's provisions. The protections portion of the claim is supported by the source, but the co-sponsorship component is entirely absent, requiring the author to add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "Hilton died in 2019 at the age of 75; he had dementia in his later years.",
+   "markers": [
+    "royhilton"
+   ],
+   "paper_ids": [
+    "8d297e5c954bd6d8ae226fc2726a6c3db48c9269"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8942,
+   "evidence": {
+    "paper_id": "8d297e5c954bd6d8ae226fc2726a6c3db48c9269",
+    "source_title": "royhilton",
+    "supported": true,
+    "sentence": "The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75.",
+    "page": 1,
+    "snippet": "The Randallstown resident, who suffered from Alzheimer's",
+    "cosine": 0.8942,
+    "reason": "The passage states that Roy Lee Hilton died at age 75 and suffered from dementia, directly supporting the claim's assertions about his age and condition. The date of death is not specified in the passage, but the claim states he died in 2019, which is not contradicted by the passage.",
+    "window": "An 11-year NFL veteran, Roy Lee Hilton died Sunday at Gilchrist Center Towson. The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75. Hilton played for the Colts from 1965 to 1973."
+   },
+   "evidences": [
+    {
+     "paper_id": "8d297e5c954bd6d8ae226fc2726a6c3db48c9269",
+     "source_title": "royhilton",
+     "supported": true,
+     "sentence": "The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75.",
+     "page": 1,
+     "snippet": "The Randallstown resident, who suffered from Alzheimer's",
+     "cosine": 0.8942,
+     "reason": "The passage states that Roy Lee Hilton died at age 75 and suffered from dementia, directly supporting the claim's assertions about his age and condition. The date of death is not specified in the passage, but the claim states he died in 2019, which is not contradicted by the passage.",
+     "window": "An 11-year NFL veteran, Roy Lee Hilton died Sunday at Gilchrist Center Towson. The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75. Hilton played for the Colts from 1965 to 1973."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Roy Lee Hilton died at age 75 and suffered from dementia, directly supporting the claim's assertions about his age and condition. The date of death is not specified in the passage, but the claim states he died in 2019, which is not contradicted by the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Hilton died at the age of 75",
+      "paper_id": "8d297e5c954bd6d8ae226fc2726a6c3db48c9269",
+      "source_title": "royhilton",
+      "sentence": "# Roy Hilton, longtime Baltimore Colts defensive end who was on Super Bowl-winning team, dies at age 75",
+      "page": 1,
+      "snippet": "# Roy Hilton, longtime Baltimore Colts defensive"
+     },
+     {
+      "component": "Hilton had dementia in his later years",
+      "paper_id": "8d297e5c954bd6d8ae226fc2726a6c3db48c9269",
+      "source_title": "royhilton",
+      "sentence": "The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75.",
+      "page": 1,
+      "snippet": "The Randallstown resident, who suffered from Alzheimer's"
+     }
+    ],
+    "uncovered": [
+     "Hilton died in 2019"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8d297e5c954bd6d8ae226fc2726a6c3db48c9269",
+      "source_title": "royhilton",
+      "text": "# Roy Hilton, longtime Baltimore Colts defensive end who was on Super Bowl-winning team, dies at age 75 Roy Hilton played for the Baltimore Colts from 1965 to 1973. (Baltimore Sun) In Super Bowl V, Baltimore Colts defensive end Roy Hilton played the game of his life: four tackles, two sacks and a fearsome fourth-quarter rush of the Dallas Cowboys quarterback that forced a hurried pass, a Colts interception and the tying touchdown. After the game, celebrating a 16-13 victory in Baltimore's locker room, head coach Don McCafferty approached Hilton, embraced the leggy defensive end and whispered, \"Thanks.\" \"That [moment] was the highlight of my entire career,\" Hilton said later. An 11-year NFL veteran, Roy Lee Hilton died Sunday at Gilchrist Center Towson. The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "died in 2019",
+    "rewrite_suggestion": "Hilton died at age 75; he had dementia in his later years.",
+    "proofs": [
+     "Roy Lee Hilton died Sunday at Gilchrist Center Towson. The Randallstown resident, who suffered from Alzheimer's disease and dementia, was 75."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the year 2019, but the source text never states the year of Hilton's death; it only says 'died Sunday' and the article's copyright year is not a direct statement of death year. The shown sentences prove that he died at age 75 and had dementia, but the year is an unsourced component. Therefore, the author must either add a citation for 2019 or remove it."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "Ben Kuchera of \"Ars Technica\" enjoyed the improvements of the \"Halo\" maps in \"Anniversary\"'s multiplayer mode, but criticized the inability to play said mode via four-person local split screen as in the original game.",
+   "markers": [
+    "halocombatevolvedanniver"
+   ],
+   "paper_ids": [
+    "c4e3f949eabb7f400807539c94130bace819ce9d"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.898,
+   "evidence": {
+    "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+    "source_title": "halocombatevolvedanniver",
+    "supported": true,
+    "sentence": "The game brings you into the Halo: Reach engine to play the six included classic multiplayer maps: Battle Canyon (Beaver Creak) High Noon (Hang 'Em High) Penance (Damnation) Solitary (Prisoner) Ridgeline (Timberland) Breakneck (Headlong) Each map can be played in a state close to its original design, or updated to fit in with the other Reach maps.",
+    "page": 1,
+    "snippet": "The game brings you into the Halo:",
+    "cosine": 0.898,
+    "reason": "The passage states that the ability to play local four-player splitscreen is gone, which aligns with the claim's criticism of this feature's absence.",
+    "window": "You can play the entire game through in co-op with another person over Xbox Live, which is amazing, but the ability to play local four-player splitscreen is gone, which is madness. The game brings you into the Halo: Reach engine to play the six included classic multiplayer maps: Battle Canyon (Beaver Creak) High Noon (Hang 'Em High) Penance (Damnation) Solitary (Prisoner) Ridgeline (Timberland) Breakneck (Headlong) Each map can be played in a state close to its original design, or updated to fit in with the other Reach maps. You can also enjoy the classical loadouts and playlists to replicate the original experience."
+   },
+   "evidences": [
+    {
+     "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+     "source_title": "halocombatevolvedanniver",
+     "supported": true,
+     "sentence": "The game brings you into the Halo: Reach engine to play the six included classic multiplayer maps: Battle Canyon (Beaver Creak) High Noon (Hang 'Em High) Penance (Damnation) Solitary (Prisoner) Ridgeline (Timberland) Breakneck (Headlong) Each map can be played in a state close to its original design, or updated to fit in with the other Reach maps.",
+     "page": 1,
+     "snippet": "The game brings you into the Halo:",
+     "cosine": 0.898,
+     "reason": "The passage states that the ability to play local four-player splitscreen is gone, which aligns with the claim's criticism of this feature's absence.",
+     "window": "You can play the entire game through in co-op with another person over Xbox Live, which is amazing, but the ability to play local four-player splitscreen is gone, which is madness. The game brings you into the Halo: Reach engine to play the six included classic multiplayer maps: Battle Canyon (Beaver Creak) High Noon (Hang 'Em High) Penance (Damnation) Solitary (Prisoner) Ridgeline (Timberland) Breakneck (Headlong) Each map can be played in a state close to its original design, or updated to fit in with the other Reach maps. You can also enjoy the classical loadouts and playlists to replicate the original experience."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the ability to play local four-player splitscreen is gone, which aligns with the claim's criticism of this feature's absence.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Ben Kuchera of \"Ars Technica\" enjoyed the improvements of the \"Halo\" maps in \"Anniversary\"'s multiplayer mode",
+      "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+      "source_title": "halocombatevolvedanniver",
+      "sentence": "For fans of the original, however, this is a great way to revisit a game that remains fun to play, and it adds some great new content to your multiplayer rotation.",
+      "page": 1,
+      "snippet": "For fans of the original, however, this"
+     },
+     {
+      "component": "criticized the inability to play said mode via four-person local split screen as in the original game",
+      "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+      "source_title": "halocombatevolvedanniver",
+      "sentence": "You can play the entire game through in co-op with another person over Xbox Live, which is amazing, but the ability to play local four-player splitscreen is gone, which is madness.",
+      "page": 1,
+      "snippet": "You can play the entire game through"
+     },
+     {
+      "component": "Kuchera of Ars Technica",
+      "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+      "source_title": "halocombatevolvedanniver",
+      "sentence": "Subscribe Now Log In # Opposable Thumbs / Gaming & Entertainment # Halo: Combat Evolved Anniversary awkward but ultimately fulfilling for fans ## This $40 remake of Halo: Combat Evolved brings updated graphics, sound, and \u2026 by Ben Kuchera - Nov 14, 2011 7:53 pm UTC Halo: Combat Evolved Anniversary shows how far we've come in a decade\u2014and it's not always a pretty picture.",
+      "page": 1,
+      "snippet": "Subscribe Now Log In # Opposable Thumbs",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+      "source_title": "halocombatevolvedanniver",
+      "text": "Subscribe Now Log In # Opposable Thumbs / Gaming & Entertainment # Halo: Combat Evolved Anniversary awkward but ultimately fulfilling for fans ## This $40 remake of Halo: Combat Evolved brings updated graphics, sound, and \u2026 by Ben Kuchera - Nov 14, 2011 7:53 pm UTC Halo: Combat Evolved Anniversary shows how far we've come in a decade\u2014and it's not always a pretty picture. [\u2026] You can play the entire game through in co-op with another person over Xbox Live, which is amazing, but the ability to play local four-player splitscreen is gone, which is madness. The game brings you into the Halo: Reach engine to play the six included classic multiplayer maps: Battle Canyon (Beaver Creak) High Noon (Hang 'Em High) Penance (Damnation) Solitary (Prisoner) Ridgeline (Timberland) Breakneck (Headlong) Each map can be played in a state close to its original design, or updated to fit in with the other Reach maps. You can also enjoy the classical loadouts and playlists to replicate the original experience. There's also a brand new firefight mission and, if you don't care about the single-player game, all this content can be purchased separately as a Reach map pack for 1,200 Microsoft Points ($15). New copies of the game come with a voucher that provides the map pack free of charge. (As a side-note, on Twitter I'll be giving away all the codes that came with the game, so follow @BenKuchera if you want a chance for some free Halo content.) To be absolutely clear: if you don't like Halo, you will still not like it now that it's prettier. For fans of the original, however, this is a great way to revisit a game that remains fun to play, and it adds some great new content to your multiplayer rotation.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t16",
+   "text": "This resulted in later ill-feeling from the scientific community towards Lawrence and other members of his laboratory.",
+   "markers": [
+    "oppenheimersecurityheari"
+   ],
+   "paper_ids": [
+    "9d2d54c12a82f35f7d7eb32ddba6d3d438619285"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8899,
+   "evidence": {
+    "paper_id": "9d2d54c12a82f35f7d7eb32ddba6d3d438619285",
+    "source_title": "oppenheimersecurityheari",
+    "supported": true,
+    "sentence": "Despite his great success in executing his big scientific ideas, Lawrence failed at managing his lab in this one way: he could not keep politics out.",
+    "page": 1,
+    "snippet": "Despite his great success in executing his",
+    "cosine": 0.8899,
+    "reason": "The passage states that 'obloquy fell on [him] and his colleagues at the Rad Lab,' which directly supports the claim of ill-feeling from the scientific community.",
+    "window": "As Hiltzik writes, \"A great deal of obloquy fell on [him] and his colleagues at the Rad Lab, who had stood united, and virtually alone, against Oppenheimer.\" Despite his great success in executing his big scientific ideas, Lawrence failed at managing his lab in this one way: he could not keep politics out."
+   },
+   "evidences": [
+    {
+     "paper_id": "9d2d54c12a82f35f7d7eb32ddba6d3d438619285",
+     "source_title": "oppenheimersecurityheari",
+     "supported": true,
+     "sentence": "Despite his great success in executing his big scientific ideas, Lawrence failed at managing his lab in this one way: he could not keep politics out.",
+     "page": 1,
+     "snippet": "Despite his great success in executing his",
+     "cosine": 0.8899,
+     "reason": "The passage states that 'obloquy fell on [him] and his colleagues at the Rad Lab,' which directly supports the claim of ill-feeling from the scientific community.",
+     "window": "As Hiltzik writes, \"A great deal of obloquy fell on [him] and his colleagues at the Rad Lab, who had stood united, and virtually alone, against Oppenheimer.\" Despite his great success in executing his big scientific ideas, Lawrence failed at managing his lab in this one way: he could not keep politics out."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that 'obloquy fell on [him] and his colleagues at the Rad Lab,' which directly supports the claim of ill-feeling from the scientific community.",
+   "covering": {
+    "covered": [
+     {
+      "component": "ill-feeling from the scientific community towards Lawrence and other members of his laboratory",
+      "paper_id": "9d2d54c12a82f35f7d7eb32ddba6d3d438619285",
+      "source_title": "oppenheimersecurityheari",
+      "sentence": "Lawrence's reputation and that of his laboratory never fully recovered from his involvement in Oppenheimer's persecution, despite Lawrence's considerable contributions to nuclear physics and his status as a Nobel laureate.",
+      "page": 1,
+      "snippet": "Lawrence's reputation and that of his laboratory"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "9d2d54c12a82f35f7d7eb32ddba6d3d438619285",
+      "source_title": "oppenheimersecurityheari",
+      "text": "Lawrence's reputation and that of his laboratory never fully recovered from his involvement in Oppenheimer's persecution, despite Lawrence's considerable contributions to nuclear physics and his status as a Nobel laureate.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t17",
+   "text": "He was appointed as the Minister for Housing and Works for the second time.",
+   "markers": [
+    "akramkhandurrani"
+   ],
+   "paper_ids": [
+    "09ea7668200b444fc386cee3b2482a6e4d7fed58"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "09ea7668200b444fc386cee3b2482a6e4d7fed58",
+    "source_title": "akramkhandurrani",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Sheikh Aftab and Akram Durrani also retained their ministries of parliamentary affairs and housing, respectively.",
+    "page": 1,
+    "snippet": "Sheikh Aftab and Akram Durrani also retained",
+    "reason": "The passage does not state that he was appointed for the second time.",
+    "votes": "2-0",
+    "window": "Sheikh Aftab and Akram Durrani also retained their ministries of parliamentary affairs and housing, respectively."
+   },
+   "evidences": [
+    {
+     "paper_id": "09ea7668200b444fc386cee3b2482a6e4d7fed58",
+     "source_title": "akramkhandurrani",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Sheikh Aftab and Akram Durrani also retained their ministries of parliamentary affairs and housing, respectively.",
+     "page": 1,
+     "snippet": "Sheikh Aftab and Akram Durrani also retained",
+     "reason": "The passage does not state that he was appointed for the second time.",
+     "votes": "2-0",
+     "window": "Sheikh Aftab and Akram Durrani also retained their ministries of parliamentary affairs and housing, respectively."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that he was appointed for the second time.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was appointed as the Minister for Housing and Works for the second time.",
+    "reason": "The passage directly states a fact about the subject's appointment. The citation is expected to prove this factual assertion.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that this was his second appointment to the ministry",
+    "rewrite_suggestion": "He retained his ministry of housing in the new cabinet.",
+    "proofs": [
+     "Akram Khan Durrani is the Housing Minister.",
+     "Sheikh Aftab and Akram Durrani also retained their ministries of parliamentary affairs and housing, respectively."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence and source confirm that Akram Khan Durrani is the Housing Minister and that he retained that portfolio, but nowhere does the source state that this is his 'second time' in the role. Since that component is not provable from the provided text, the author must either add a citation that explicitly says it is his second appointment or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Rowney made his NHL debut on January 31, 2017, in Pittsburgh's game against the Nashville Predators.",
+   "markers": [
+    "carterrowney"
+   ],
+   "paper_ids": [
+    "0e2c2f904577296fe9c59399d21741982b291d18"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+    "source_title": "carterrowney",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "After being returned to NEPA and helping the Pens to wins over Utica and Binghamton last week, Rowney was recalled again by Pittsburgh on Monday, and suited up for the club in its 4-2 win over the Nashville Predators on Tuesday.",
+    "page": 1,
+    "snippet": "After being returned to NEPA and helping",
+    "reason": "",
+    "votes": "2-0",
+    "window": "After being returned to NEPA and helping the Pens to wins over Utica and Binghamton last week, Rowney was recalled again by Pittsburgh on Monday, and suited up for the club in its 4-2 win over the Nashville Predators on Tuesday. Photo by Joe Sargent/NHLI via Getty Images CONGRATS CARTER \u2013 The piece of news that Wilkes-Barre/Scranton fans will be happiest about is the NHL debut of Carter Rowney. Here's a rundown of the big ticket items from Tuesday, January 31."
+   },
+   "evidences": [
+    {
+     "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+     "source_title": "carterrowney",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "After being returned to NEPA and helping the Pens to wins over Utica and Binghamton last week, Rowney was recalled again by Pittsburgh on Monday, and suited up for the club in its 4-2 win over the Nashville Predators on Tuesday.",
+     "page": 1,
+     "snippet": "After being returned to NEPA and helping",
+     "reason": "",
+     "votes": "2-0",
+     "window": "After being returned to NEPA and helping the Pens to wins over Utica and Binghamton last week, Rowney was recalled again by Pittsburgh on Monday, and suited up for the club in its 4-2 win over the Nashville Predators on Tuesday. Photo by Joe Sargent/NHLI via Getty Images CONGRATS CARTER \u2013 The piece of news that Wilkes-Barre/Scranton fans will be happiest about is the NHL debut of Carter Rowney. Here's a rundown of the big ticket items from Tuesday, January 31."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Rowney made his NHL debut",
+      "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+      "source_title": "carterrowney",
+      "sentence": "Photo by Joe Sargent/NHLI via Getty Images CONGRATS CARTER \u2013 The piece of news that Wilkes-Barre/Scranton fans will be happiest about is the NHL debut of Carter Rowney.",
+      "page": 1,
+      "snippet": "Photo by Joe Sargent/NHLI via Getty Images"
+     },
+     {
+      "component": "debut on January 31, 2017",
+      "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+      "source_title": "carterrowney",
+      "sentence": "Here's a rundown of the big ticket items from Tuesday, January 31.",
+      "page": 1,
+      "snippet": "Here's a rundown of the big ticket"
+     },
+     {
+      "component": "in Pittsburgh's game against the Nashville Predators",
+      "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+      "source_title": "carterrowney",
+      "sentence": "After being returned to NEPA and helping the Pens to wins over Utica and Binghamton last week, Rowney was recalled again by Pittsburgh on Monday, and suited up for the club in its 4-2 win over the Nashville Predators on Tuesday.",
+      "page": 1,
+      "snippet": "After being returned to NEPA and helping"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+      "source_title": "carterrowney",
+      "text": "Here's a rundown of the big ticket items from Tuesday, January 31. Photo by Joe Sargent/NHLI via Getty Images CONGRATS CARTER \u2013 The piece of news that Wilkes-Barre/Scranton fans will be happiest about is the NHL debut of Carter Rowney. The undrafted fourth-year pro was originally recalled by Pittsburgh last week when Evgeni Malkin was sidelined due to injury, but he didn't crack the lineup in his first stay with the team. After being returned to NEPA and helping the Pens to wins over Utica and Binghamton last week, Rowney was recalled again by Pittsburgh on Monday, and suited up for the club in its 4-2 win over the Nashville Predators on Tuesday.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t19",
+   "text": "The mission was led by the friars Juan de Salas and Juan de Ortega, with Ortega remaining for six months.",
+   "markers": [
+    "sanangelotexas"
+   ],
+   "paper_ids": [
+    "aa878f601e4eb36036aef06cdb4ce4ad67f94060"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "aa878f601e4eb36036aef06cdb4ce4ad67f94060",
+    "source_title": "sanangelotexas",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "In 1632 Salas again set out for the Jumano country, this time with Father Juan de Ortega and a few soldiers.",
+    "page": 1,
+    "snippet": "In 1632 Salas again set out for",
+    "reason": "The passage explicitly states that the mission was led by Juan de Salas and Juan de Ortega, and that Ortega remained for six months.",
+    "votes": "2-0",
+    "window": "In 1632 Salas again set out for the Jumano country, this time with Father Juan de Ortega and a few soldiers. He probably penetrated as far as the site of present San Angelo, Texas, then returned to Santa Fe, leaving Ortega, who worked in the area for six months before also returning."
+   },
+   "evidences": [
+    {
+     "paper_id": "aa878f601e4eb36036aef06cdb4ce4ad67f94060",
+     "source_title": "sanangelotexas",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "In 1632 Salas again set out for the Jumano country, this time with Father Juan de Ortega and a few soldiers.",
+     "page": 1,
+     "snippet": "In 1632 Salas again set out for",
+     "reason": "The passage explicitly states that the mission was led by Juan de Salas and Juan de Ortega, and that Ortega remained for six months.",
+     "votes": "2-0",
+     "window": "In 1632 Salas again set out for the Jumano country, this time with Father Juan de Ortega and a few soldiers. He probably penetrated as far as the site of present San Angelo, Texas, then returned to Santa Fe, leaving Ortega, who worked in the area for six months before also returning."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the mission was led by Juan de Salas and Juan de Ortega, and that Ortega remained for six months.",
+   "covering": {
+    "covered": [
+     {
+      "component": "mission led by friars Juan de Salas and Juan de Ortega",
+      "paper_id": "aa878f601e4eb36036aef06cdb4ce4ad67f94060",
+      "source_title": "sanangelotexas",
+      "sentence": "In 1632 Salas again set out for the Jumano country, this time with Father Juan de Ortega and a few soldiers.",
+      "page": 1,
+      "snippet": "In 1632 Salas again set out for"
+     },
+     {
+      "component": "Ortega remaining for six months",
+      "paper_id": "aa878f601e4eb36036aef06cdb4ce4ad67f94060",
+      "source_title": "sanangelotexas",
+      "sentence": "He probably penetrated as far as the site of present San Angelo, Texas, then returned to Santa Fe, leaving Ortega, who worked in the area for six months before also returning.",
+      "page": 1,
+      "snippet": "He probably penetrated as far as the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "aa878f601e4eb36036aef06cdb4ce4ad67f94060",
+      "source_title": "sanangelotexas",
+      "text": "In 1632 Salas again set out for the Jumano country, this time with Father Juan de Ortega and a few soldiers. He probably penetrated as far as the site of present San Angelo, Texas, then returned to Santa Fe, leaving Ortega, who worked in the area for six months before also returning.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t20",
+   "text": "Jackson began suffering from severe depression and anxiety, leading her to chronicle the experience in her sixth album, \"The Velvet Rope,\" released October 1997.",
+   "markers": [
+    "janetjackson"
+   ],
+   "paper_ids": [
+    "421f25cf353ff11e6c6a052f4407153051f0bb90"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8961,
+   "evidence": {
+    "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+    "source_title": "janetjackson",
+    "supported": true,
+    "sentence": "Jackson tells \"Newsweek\" that the depression began building in her childhood, and stems not from her family but rather from humiliating experiences with her teachers.",
+    "page": 1,
+    "snippet": "Jackson tells \"Newsweek\" that the depression began",
+    "cosine": 0.8961,
+    "reason": "The passage states that Jackson experienced depression so severe during the recording of \"Velvet Rope\" that she cried in the studio, which supports the claim that she suffered from depression leading to the album's creation.",
+    "window": "There were times when I felt very hopeless and helpless, and I felt like walls were kind of closing in on me.\" Jackson tells \"Newsweek\" that the depression began building in her childhood, and stems not from her family but rather from humiliating experiences with her teachers. She goes on to say that the depression was so bad during the recording of \"Velvet Rope\" that she occasionally broke down into tears in the studio, bringing recording to a halt."
+   },
+   "evidences": [
+    {
+     "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+     "source_title": "janetjackson",
+     "supported": true,
+     "sentence": "Jackson tells \"Newsweek\" that the depression began building in her childhood, and stems not from her family but rather from humiliating experiences with her teachers.",
+     "page": 1,
+     "snippet": "Jackson tells \"Newsweek\" that the depression began",
+     "cosine": 0.8961,
+     "reason": "The passage states that Jackson experienced depression so severe during the recording of \"Velvet Rope\" that she cried in the studio, which supports the claim that she suffered from depression leading to the album's creation.",
+     "window": "There were times when I felt very hopeless and helpless, and I felt like walls were kind of closing in on me.\" Jackson tells \"Newsweek\" that the depression began building in her childhood, and stems not from her family but rather from humiliating experiences with her teachers. She goes on to say that the depression was so bad during the recording of \"Velvet Rope\" that she occasionally broke down into tears in the studio, bringing recording to a halt."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Jackson experienced depression so severe during the recording of \"Velvet Rope\" that she cried in the studio, which supports the claim that she suffered from depression leading to the album's creation.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Jackson began suffering from severe depression",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "Jackson tells \"Newsweek\" that the depression began building in her childhood, and stems not from her family but rather from humiliating experiences with her teachers.",
+      "page": 1,
+      "snippet": "Jackson tells \"Newsweek\" that the depression began"
+     },
+     {
+      "component": "Jackson began suffering from severe depression",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "Very down,\" Janet tells \"Newsweek\" of the two year bout of depression that nearly stalled production of her \"Velvet Rope\" album.",
+      "page": 1,
+      "snippet": "Very down,\" Janet tells \"Newsweek\" of the"
+     },
+     {
+      "component": "Jackson began suffering from severe depression",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "\"I was very, very sad.",
+      "page": 1,
+      "snippet": "\"I was very, very sad."
+     },
+     {
+      "component": "Jackson began suffering from severe depression",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "\"(I) couldn't get up sometimes.",
+      "page": 1,
+      "snippet": "\"(I) couldn't get up sometimes."
+     },
+     {
+      "component": "Jackson began suffering from severe depression",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "There were times when I felt very hopeless and helpless, and I felt like walls were kind of closing in on me.\"",
+      "page": 1,
+      "snippet": "There were times when I felt very"
+     },
+     {
+      "component": "leading her to chronicle the experience in her sixth album, \"The Velvet Rope\"",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "Very down,\" Janet tells \"Newsweek\" of the two year bout of depression that nearly stalled production of her \"Velvet Rope\" album.",
+      "page": 1,
+      "snippet": "Very down,\" Janet tells \"Newsweek\" of the"
+     },
+     {
+      "component": "leading her to chronicle the experience in her sixth album, \"The Velvet Rope\"",
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "sentence": "She goes on to say that the depression was so bad during the recording of \"Velvet Rope\" that she occasionally broke down into tears in the studio, bringing recording to a halt.",
+      "page": 1,
+      "snippet": "She goes on to say that the"
+     }
+    ],
+    "uncovered": [
+     "and anxiety",
+     "released October 1997",
+     "release date of \"The Velvet Rope\"",
+     "Jackson's anxiety"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+      "source_title": "janetjackson",
+      "text": "\"I was very, very sad. Very down,\" Janet tells \"Newsweek\" of the two year bout of depression that nearly stalled production of her \"Velvet Rope\" album. \"(I) couldn't get up sometimes. There were times when I felt very hopeless and helpless, and I felt like walls were kind of closing in on me.\" Jackson tells \"Newsweek\" that the depression began building in her childhood, and stems not from her family but rather from humiliating experiences with her teachers. She goes on to say that the depression was so bad during the recording of \"Velvet Rope\" that she occasionally broke down into tears in the studio, bringing recording to a halt.",
+      "n_used": 6
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not state that the depression and anxiety were severe",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the depression and anxiety were severe",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "anxiety, the claim that the album chronicles her depression experience, and the release date October 1997",
+    "rewrite_suggestion": "Jackson suffered from severe depression that stalled production of her sixth album 'The Velvet Rope'.",
+    "proofs": [
+     "\"I was very, very sad. Very down,\" Janet tells \"Newsweek\" of the two year bout of depression that nearly stalled production of her \"Velvet Rope\" album.",
+     "She goes on to say that the depression was so bad during the recording of \"Velvet Rope\" that she occasionally broke down into tears in the studio, bringing recording to a halt."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text supports that Jackson suffered from severe depression and that this depression affected the recording of her album 'The Velvet Rope', but it does not mention anxiety, nor does it state that she chronicled her experience in the album, nor does it provide the release date of October 1997. These components are unsourced, so the author must either add citations or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "The following day, prior to the start of the ALPB season, his contract was purchased by the Seattle Mariners.",
+   "markers": [
+    "christianbergman"
+   ],
+   "paper_ids": [
+    "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8181,
+   "evidence": {
+    "paper_id": "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00",
+    "source_title": "christianbergman",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Seattle Mariners Purchase Contract of RHP Christian Bergman (meta data) PUBLISHED DATETIME: Apr 16 2019 Skip to content Game Schedule Constellation Field Clubs & Activities Email Updates Advertise With Us # News 16, 2019 # Seattle Mariners Purchase Contract of RHP Christian Bergman The Sugar Land Skeeters today announced that the contract of right-hander Christian Bergman has been purchased by the Seattle Mariners.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Seattle Mariners Purchase Contract",
+    "cosine": 0.8181,
+    "reason": "The passage states that the Seattle Mariners purchased the contract of RHP Christian Bergman on April 16, 2019, which directly supports the claim.",
+    "window": "(meta data) TITLE: Seattle Mariners Purchase Contract of RHP Christian Bergman (meta data) PUBLISHED DATETIME: Apr 16 2019 Skip to content Game Schedule Constellation Field Clubs & Activities Email Updates Advertise With Us # News 16, 2019 # Seattle Mariners Purchase Contract of RHP Christian Bergman The Sugar Land Skeeters today announced that the contract of right-hander Christian Bergman has been purchased by the Seattle Mariners. Bergman is the first member of the Skeeters' 2019 roster to have his contract purchased by an outside professional baseball organization."
+   },
+   "evidences": [
+    {
+     "paper_id": "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00",
+     "source_title": "christianbergman",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Seattle Mariners Purchase Contract of RHP Christian Bergman (meta data) PUBLISHED DATETIME: Apr 16 2019 Skip to content Game Schedule Constellation Field Clubs & Activities Email Updates Advertise With Us # News 16, 2019 # Seattle Mariners Purchase Contract of RHP Christian Bergman The Sugar Land Skeeters today announced that the contract of right-hander Christian Bergman has been purchased by the Seattle Mariners.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Seattle Mariners Purchase Contract",
+     "cosine": 0.8181,
+     "reason": "The passage states that the Seattle Mariners purchased the contract of RHP Christian Bergman on April 16, 2019, which directly supports the claim.",
+     "window": "(meta data) TITLE: Seattle Mariners Purchase Contract of RHP Christian Bergman (meta data) PUBLISHED DATETIME: Apr 16 2019 Skip to content Game Schedule Constellation Field Clubs & Activities Email Updates Advertise With Us # News 16, 2019 # Seattle Mariners Purchase Contract of RHP Christian Bergman The Sugar Land Skeeters today announced that the contract of right-hander Christian Bergman has been purchased by the Seattle Mariners. Bergman is the first member of the Skeeters' 2019 roster to have his contract purchased by an outside professional baseball organization."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the Seattle Mariners purchased the contract of RHP Christian Bergman on April 16, 2019, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "The following day, prior to the start of the ALPB season, his contract was purchased by the Seattle Mariners.",
+      "paper_id": "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00",
+      "source_title": "christianbergman",
+      "sentence": "(meta data) TITLE: Seattle Mariners Purchase Contract of RHP Christian Bergman (meta data) PUBLISHED DATETIME: Apr 16 2019 Skip to content Game Schedule Constellation Field Clubs & Activities Email Updates Advertise With Us # News 16, 2019 # Seattle Mariners Purchase Contract of RHP Christian Bergman The Sugar Land Skeeters today announced that the contract of right-hander Christian Bergman has been purchased by the Seattle Mariners.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Seattle Mariners Purchase Contract"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00",
+      "source_title": "christianbergman",
+      "text": "(meta data) TITLE: Seattle Mariners Purchase Contract of RHP Christian Bergman (meta data) PUBLISHED DATETIME: Apr 16 2019 Skip to content Game Schedule Constellation Field Clubs & Activities Email Updates Advertise With Us # News 16, 2019 # Seattle Mariners Purchase Contract of RHP Christian Bergman The Sugar Land Skeeters today announced that the contract of right-hander Christian Bergman has been purchased by the Seattle Mariners.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t22",
+   "text": "He later became the first commander of a Field Training Detachment (FTD 523) back at Nellis AFB, which was a similar kind of unit, except that the students traveled to him.",
+   "markers": [
+    "michaelcollinsastronaut"
+   ],
+   "paper_ids": [
+    "ec4277a456742c9cf03bcf453910d82419cd1b7d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+    "source_title": "michaelcollinsastronaut",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "For two years, Captain Collins commanded a Mobile Training Detachment, and later, a Field Training Detachment at Chanute and Nellis Air Force Bases.",
+    "page": 1,
+    "snippet": "For two years, Captain Collins commanded a",
+    "reason": "The passage does not state that the students traveled to him, nor does it mention the specific unit designation FTD 523.",
+    "votes": "2-0",
+    "window": "For two years, Captain Collins commanded a Mobile Training Detachment, and later, a Field Training Detachment at Chanute and Nellis Air Force Bases."
+   },
+   "evidences": [
+    {
+     "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+     "source_title": "michaelcollinsastronaut",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "For two years, Captain Collins commanded a Mobile Training Detachment, and later, a Field Training Detachment at Chanute and Nellis Air Force Bases.",
+     "page": 1,
+     "snippet": "For two years, Captain Collins commanded a",
+     "reason": "The passage does not state that the students traveled to him, nor does it mention the specific unit designation FTD 523.",
+     "votes": "2-0",
+     "window": "For two years, Captain Collins commanded a Mobile Training Detachment, and later, a Field Training Detachment at Chanute and Nellis Air Force Bases."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the students traveled to him, nor does it mention the specific unit designation FTD 523.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual statement about the cited individual's career progression. There is no indication that the citation is used for methods, concepts, or related work; it is presented as a direct piece of information about the subject.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts he was the first commander of FTD 523 at Nellis AFB, that the unit was similar to a Mobile Training Detachment, and that students traveled to him. None of these details are found in the source text.",
+    "rewrite_suggestion": "He later commanded a Field Training Detachment, which served at both Chanute and Nellis Air Force Bases.",
+    "proofs": [
+     "For two years, Captain Collins commanded a Mobile Training Detachment, and later, a Field Training Detachment at Chanute and Nellis Air Force Bases."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes several components (first commander of FTD 523, location back at Nellis, similarity to Mobile Training Detachment, students traveling to him) that are not mentioned anywhere in the provided source text. The shown sentence only confirms he commanded a Field Training Detachment at Chanute and Nellis, which is insufficient to prove the specific details. Therefore, the author must either add a citation for those components or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "In May 2010, accounts were released showing the holding company of the club to be \u00a3350m in debt (due to leveraged takeover) with losses of \u00a355m, causing auditor KPMG to qualify its audit opinion.",
+   "markers": [
+    "liverpoolfc"
+   ],
+   "paper_ids": [
+    "45186cd800ea12cd604f12bb07ab7a6a026a64fc"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+    "source_title": "liverpoolfc",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt.",
+    "page": 1,
+    "snippet": "The parlous financial position at Liverpool was",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt. The club's auditors, KPMG, summed up that Liverpool are now \"dependent on short-term [bank loan] facility extensions\" until investment arrives and for the second year running raised a stark warning about the club's financial health. The figures covered the year to 30 July 2009, so included Liverpool's relative success last season, yet still the club recorded the biggest loss in its history, \u00a355m, having paid \u00a340m in interest on its loans. The bulk of the loans, owed to Royal Bank of Scotland and Wachovia, are the borrowings originally made by the two United States owners, Tom Hicks and George Gillett, to buy Liverpool in the first place, which they then imposed on the club to pay off."
+   },
+   "evidences": [
+    {
+     "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+     "source_title": "liverpoolfc",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt.",
+     "page": 1,
+     "snippet": "The parlous financial position at Liverpool was",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt. The club's auditors, KPMG, summed up that Liverpool are now \"dependent on short-term [bank loan] facility extensions\" until investment arrives and for the second year running raised a stark warning about the club's financial health. The figures covered the year to 30 July 2009, so included Liverpool's relative success last season, yet still the club recorded the biggest loss in its history, \u00a355m, having paid \u00a340m in interest on its loans. The bulk of the loans, owed to Royal Bank of Scotland and Wachovia, are the borrowings originally made by the two United States owners, Tom Hicks and George Gillett, to buy Liverpool in the first place, which they then imposed on the club to pay off."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "holding company of the club to be \u00a3350m in debt",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt.",
+      "page": 1,
+      "snippet": "The parlous financial position at Liverpool was"
+     },
+     {
+      "component": "holding company of the club to be \u00a3350m in debt",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "\u2022 Accounts show debt has increased to \u00a3350m",
+      "page": 1,
+      "snippet": "\u2022 Accounts show debt has increased to"
+     },
+     {
+      "component": "holding company of the club to be \u00a3350m in debt",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "Liverpool do not need to sell Fernando Torres despite the club being \u00a3350m in debt.",
+      "page": 1,
+      "snippet": "Liverpool do not need to sell Fernando"
+     },
+     {
+      "component": "losses of \u00a355m",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "The figures covered the year to 30 July 2009, so included Liverpool's relative success last season, yet still the club recorded the biggest loss in its history, \u00a355m, having paid \u00a340m in interest on its loans.",
+      "page": 1,
+      "snippet": "The figures covered the year to 30"
+     },
+     {
+      "component": "auditor KPMG to qualify its audit opinion",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "The club's auditors, KPMG, summed up that Liverpool are now \"dependent on short-term [bank loan] facility extensions\" until investment arrives and for the second year running raised a stark warning about the club's financial health.",
+      "page": 1,
+      "snippet": "The club's auditors, KPMG, summed up that"
+     },
+     {
+      "component": "accounts released in May 2010",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt.",
+      "page": 1,
+      "snippet": "The parlous financial position at Liverpool was",
+      "via": "escalation"
+     },
+     {
+      "component": "due to leveraged takeover",
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "sentence": "The bulk of the loans, owed to Royal Bank of Scotland and Wachovia, are the borrowings originally made by the two United States owners, Tom Hicks and George Gillett, to buy Liverpool in the first place, which they then imposed on the club to pay off.",
+      "page": 1,
+      "snippet": "The bulk of the loans, owed to",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+      "source_title": "liverpoolfc",
+      "text": "\u2022 Accounts show debt has increased to \u00a3350m \u2022 Chairman says 'no reason to sell' best players David Conn Fri 7 May 2010 14.34 EDT First published on Fri 7 May 2010 14.34 EDT Liverpool do not need to sell Fernando Torres despite the club being \u00a3350m in debt. Photograph: Barry Coombs/Empics. The parlous financial position at Liverpool was underlined today when accounts were released showing the club \u00a3350m in debt. The figures covered the year to 30 July 2009, so included Liverpool's relative success last season, yet still the club recorded the biggest loss in its history, \u00a355m, having paid \u00a340m in interest on its loans. The bulk of the loans, owed to Royal Bank of Scotland and Wachovia, are the borrowings originally made by the two United States owners, Tom Hicks and George Gillett, to buy Liverpool in the first place, which they then imposed on the club to pay off. The accounts detail how impatient the banks have been for the debts to be reduced; Liverpool were formally due to repay the \u00a3250m owed on 24 January this year and the banks extended that loan by only six weeks, to 3 March. Since then, following further negotiations with the banks, Hicks and Gillett agreed to sell the club, and a chairman, Martin Broughton, was appointed to get a sale agreed. The banks extended their loans \u2013 which the club says stand now at \u00a3237m \u2013 until the sale, which Broughton said today will be \"a matter of months\". The club's auditors, KPMG, summed up that Liverpool are now \"dependent on short-term [bank loan] facility extensions\" until investment arrives and for the second year running raised a stark warning about the club's financial health.",
+      "n_used": 6
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t24",
+   "text": "By 2016, as sanctions against Iran were being lifted after the nuclear deal, Indian investment plans had risen to USD 500 million.",
+   "markers": [
+    "chabahar"
+   ],
+   "paper_ids": [
+    "4ea334fd2bb1d3ab34149054430b3120f7269ce5"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.829,
+   "evidence": {
+    "paper_id": "4ea334fd2bb1d3ab34149054430b3120f7269ce5",
+    "source_title": "chabahar",
+    "supported": true,
+    "sentence": "(meta data) TITLE: India's $500 Million Bet on Iran \u2013 Foreign Policy (meta data) AUTHOR: Keith Johnson (meta data) PUBLISHED DATETIME: 2016-05-31 Foreign Policy Magazine Report: India's $500 Million Bet on Iran India's $500 Million Bet on Iran... ### Report # India's $500 Million Bet on Iran ## New Delhi hopes a giant new Iranian port will help meet its energy needs \u2014 and outflank Pakistan.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: India's $500 Million Bet",
+    "cosine": 0.829,
+    "reason": "The passage title and article date directly support the claim that Indian investment plans had risen to USD 500 million by 2016.",
+    "window": "(meta data) TITLE: India's $500 Million Bet on Iran \u2013 Foreign Policy (meta data) AUTHOR: Keith Johnson (meta data) PUBLISHED DATETIME: 2016-05-31 Foreign Policy Magazine Report: India's $500 Million Bet on Iran India's $500 Million Bet on Iran... ### Report # India's $500 Million Bet on Iran ## New Delhi hopes a giant new Iranian port will help meet its energy needs \u2014 and outflank Pakistan. Keith Johnson May 31, 2016, 7:30 AM Keith Johnson is a senior staff writer at Foreign Policy."
+   },
+   "evidences": [
+    {
+     "paper_id": "4ea334fd2bb1d3ab34149054430b3120f7269ce5",
+     "source_title": "chabahar",
+     "supported": true,
+     "sentence": "(meta data) TITLE: India's $500 Million Bet on Iran \u2013 Foreign Policy (meta data) AUTHOR: Keith Johnson (meta data) PUBLISHED DATETIME: 2016-05-31 Foreign Policy Magazine Report: India's $500 Million Bet on Iran India's $500 Million Bet on Iran... ### Report # India's $500 Million Bet on Iran ## New Delhi hopes a giant new Iranian port will help meet its energy needs \u2014 and outflank Pakistan.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: India's $500 Million Bet",
+     "cosine": 0.829,
+     "reason": "The passage title and article date directly support the claim that Indian investment plans had risen to USD 500 million by 2016.",
+     "window": "(meta data) TITLE: India's $500 Million Bet on Iran \u2013 Foreign Policy (meta data) AUTHOR: Keith Johnson (meta data) PUBLISHED DATETIME: 2016-05-31 Foreign Policy Magazine Report: India's $500 Million Bet on Iran India's $500 Million Bet on Iran... ### Report # India's $500 Million Bet on Iran ## New Delhi hopes a giant new Iranian port will help meet its energy needs \u2014 and outflank Pakistan. Keith Johnson May 31, 2016, 7:30 AM Keith Johnson is a senior staff writer at Foreign Policy."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage title and article date directly support the claim that Indian investment plans had risen to USD 500 million by 2016.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Indian investment plans had risen to USD 500 million by 2016",
+      "paper_id": "4ea334fd2bb1d3ab34149054430b3120f7269ce5",
+      "source_title": "chabahar",
+      "sentence": "(meta data) TITLE: India's $500 Million Bet on Iran \u2013 Foreign Policy (meta data) AUTHOR: Keith Johnson (meta data) PUBLISHED DATETIME: 2016-05-31 Foreign Policy Magazine Report: India's $500 Million Bet on Iran India's $500 Million Bet on Iran... ### Report # India's $500 Million Bet on Iran ## New Delhi hopes a giant new Iranian port will help meet its energy needs \u2014 and outflank Pakistan.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: India's $500 Million Bet"
+     }
+    ],
+    "uncovered": [
+     "sanctions against Iran were being lifted after the nuclear deal"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4ea334fd2bb1d3ab34149054430b3120f7269ce5",
+      "source_title": "chabahar",
+      "text": "(meta data) TITLE: India's $500 Million Bet on Iran \u2013 Foreign Policy (meta data) AUTHOR: Keith Johnson (meta data) PUBLISHED DATETIME: 2016-05-31 Foreign Policy Magazine Report: India's $500 Million Bet on Iran India's $500 Million Bet on Iran... ### Report # India's $500 Million Bet on Iran ## New Delhi hopes a giant new Iranian port will help meet its energy needs \u2014 and outflank Pakistan.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not mention sanctions against Iran being lifted or the timing of Indian investment plans in relation to them.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "sanctions against Iran being lifted or the timing of Indian investment plans in relation to them",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that by 2016, as sanctions against Iran were being lifted after the nuclear deal, Indian investment plans had risen to USD 500 million is not supported by the source. The source only mentions a $500 million bet on Iran without any context of sanctions, nuclear deal, or a rise in investment plans.",
+    "rewrite_suggestion": "By 2016, India had placed a $500 million bet on Iran's Chabahar port, according to Foreign Policy.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim contains three components: a specific timeframe ('By 2016'), a causal context ('as sanctions against Iran were being lifted after the nuclear deal'), and a specific financial figure and action ('Indian investment plans had risen to USD 500 million'). None of these components are proven by the shown sentences, which only give a title and subtitle about a $500 million bet. The provided source text also does not contain any statement about sanctions, the nuclear deal, or a rise in investment plans to that amount. Therefore the author must either add a citation for these missing subclaims or rewrite the claim to reflect what the source actually states."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "The village was left largely untouched by Russian influences.",
+   "markers": [
+    "kapuvr"
+   ],
+   "paper_ids": [
+    "4af78d0a4925307ecdbd1f8848723ebb1a77c887"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8547,
+   "evidence": {
+    "paper_id": "4af78d0a4925307ecdbd1f8848723ebb1a77c887",
+    "source_title": "kapuvr",
+    "supported": false,
+    "sentence": "Sz\u00e9chenyi Castle, Nagycenk: The most important attraction of the village is the Sz\u00e9chenyi Castle.",
+    "page": 1,
+    "snippet": "Sz\u00e9chenyi Castle, Nagycenk: The most important attraction",
+    "cosine": 0.8547,
+    "reason": "The passage describes attractions in the village but makes no mention of Russian influences or their absence.",
+    "window": "The permanent exhibition can be visited in the former residency of Haydn, which is located in one of the most beautiful baroque buildings, in the House of Music. Sz\u00e9chenyi Castle, Nagycenk: The most important attraction of the village is the Sz\u00e9chenyi Castle. The building is home to Istv\u00e1n Sz\u00e9chenyi Commemorative Museum, a hotel, a caf\u00e9, a stud and a horse-riding school."
+   },
+   "evidences": [
+    {
+     "paper_id": "4af78d0a4925307ecdbd1f8848723ebb1a77c887",
+     "source_title": "kapuvr",
+     "supported": false,
+     "sentence": "Sz\u00e9chenyi Castle, Nagycenk: The most important attraction of the village is the Sz\u00e9chenyi Castle.",
+     "page": 1,
+     "snippet": "Sz\u00e9chenyi Castle, Nagycenk: The most important attraction",
+     "cosine": 0.8547,
+     "reason": "The passage describes attractions in the village but makes no mention of Russian influences or their absence.",
+     "window": "The permanent exhibition can be visited in the former residency of Haydn, which is located in one of the most beautiful baroque buildings, in the House of Music. Sz\u00e9chenyi Castle, Nagycenk: The most important attraction of the village is the Sz\u00e9chenyi Castle. The building is home to Istv\u00e1n Sz\u00e9chenyi Commemorative Museum, a hotel, a caf\u00e9, a stud and a horse-riding school."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual claim about the village's history and its lack of Russian influence. The citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the village was untouched by Russian influences is not mentioned or supported anywhere in the provided source text",
+    "rewrite_suggestion": "The village is described as having traditional and architectural characteristics, but no information about Russian influences is given.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that a village was left largely untouched by Russian influences, but the cited source \u2014 a tourism page about Kapuv\u00e1r and its surroundings \u2014 makes no mention of Russian influences, historical or otherwise. The supporting sentence shown (about Sz\u00e9chenyi Castle) is entirely unrelated. Since no component of the claim can be proven from the source, the author must either supply a different citation that supports the claim or rewrite the claim to reflect what the source actually says."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "It was also confirmed that the website would have \u201ctwo permanent paid part time student journalists\u201d appointed for yearly terms and that the new website would be integrated into the current University of Sydney Union website.",
+   "markers": [
+    "pulpstudentpublication"
+   ],
+   "paper_ids": [
+    "011dd9aedd067e9738875bb5ea8a46525ae1803f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "011dd9aedd067e9738875bb5ea8a46525ae1803f",
+    "source_title": "pulpstudentpublication",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "A new section of the Union's website will be devoted to multimedia news and campus culture coverage, with two part-time editors being paid an hourly rate in line with the applicable workplace award agreement.",
+    "page": 1,
+    "snippet": "A new section of the Union's website",
+    "reason": "the passage does not state that the student journalists would be appointed for yearly terms or that the new website would be integrated into the current University of Sydney Union website.",
+    "votes": "2-0",
+    "window": "A new section of the Union's website will be devoted to multimedia news and campus culture coverage, with two part-time editors being paid an hourly rate in line with the applicable workplace award agreement."
+   },
+   "evidences": [
+    {
+     "paper_id": "011dd9aedd067e9738875bb5ea8a46525ae1803f",
+     "source_title": "pulpstudentpublication",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "A new section of the Union's website will be devoted to multimedia news and campus culture coverage, with two part-time editors being paid an hourly rate in line with the applicable workplace award agreement.",
+     "page": 1,
+     "snippet": "A new section of the Union's website",
+     "reason": "the passage does not state that the student journalists would be appointed for yearly terms or that the new website would be integrated into the current University of Sydney Union website.",
+     "votes": "2-0",
+     "window": "A new section of the Union's website will be devoted to multimedia news and campus culture coverage, with two part-time editors being paid an hourly rate in line with the applicable workplace award agreement."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the student journalists would be appointed for yearly terms or that the new website would be integrated into the current University of Sydney Union website.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The website would have two permanent paid part time student journalists appointed for yearly terms and would be integrated into the current University of Sydney Union website.",
+    "reason": "The passage directly states facts and details about the website's structure and integration, which are expected to be proven by the cited source. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the assertions that the two student journalists are 'permanent' and 'appointed for yearly terms'",
+    "rewrite_suggestion": "It was also confirmed that the website would have two part-time editors paid an hourly rate, and that the new website would be integrated into the current University of Sydney Union website.",
+    "proofs": [
+     "A new section of the Union's website will be devoted to multimedia news and campus culture coverage, with two part-time editors being paid an hourly rate in line with the applicable workplace award agreement."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the existence of two part-time editors and a new section of the Union's website (implying integration), but it does not mention the journalists being 'permanent' or 'appointed for yearly terms'. No other sentence in the source provides those details. Therefore, the author must either add a citation for the missing components or rewrite the claim to match the source."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "e402cbb07689a97b335c27a2db41970d42907f91": {
+    "title": "jackmcquesten",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "38481c0b77722005a7f1da34ba3d1bd97ae74c64": {
+    "title": "2019globalt20canada",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "55abe6668dac255a75b7a51f4d86d61c3786d265": {
+    "title": "popeleoix",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "011dd9aedd067e9738875bb5ea8a46525ae1803f": {
+    "title": "pulpstudentpublication",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "171412590697921eb26490e9eec384a777ad1f86": {
+    "title": "antipolicesentiment",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "421f25cf353ff11e6c6a052f4407153051f0bb90": {
+    "title": "janetjackson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "09ea7668200b444fc386cee3b2482a6e4d7fed58": {
+    "title": "akramkhandurrani",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "aa878f601e4eb36036aef06cdb4ce4ad67f94060": {
+    "title": "sanangelotexas",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "446d05aea919f6204b6b9a97b4f4964701d85260": {
+    "title": "declarationoftherightsof",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0e2c2f904577296fe9c59399d21741982b291d18": {
+    "title": "carterrowney",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b0caa9ed8e7bac78fe6414c815fc42aeb9650add": {
+    "title": "historyofgmail",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c": {
+    "title": "clearbodyclearmind",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "20ffb7bd208526a6de2768dd600a8d13b728c21c": {
+    "title": "johnccalhoun",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d348c4b67d1b750714742309d1f77544086ae8a9": {
+    "title": "71stprimetimeemmyawards",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "dad910a9cac3e23e8e16a96c291745b533a52a9c": {
+    "title": "aarondford2",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "45186cd800ea12cd604f12bb07ab7a6a026a64fc": {
+    "title": "liverpoolfc",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "c4e3f949eabb7f400807539c94130bace819ce9d": {
+    "title": "halocombatevolvedanniver",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ec4277a456742c9cf03bcf453910d82419cd1b7d": {
+    "title": "michaelcollinsastronaut",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a52db556248fdead7458ed11682db466ae44bed4": {
+    "title": "aarondford",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4ea334fd2bb1d3ab34149054430b3120f7269ce5": {
+    "title": "chabahar",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "8d297e5c954bd6d8ae226fc2726a6c3db48c9269": {
+    "title": "royhilton",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9d2d54c12a82f35f7d7eb32ddba6d3d438619285": {
+    "title": "oppenheimersecurityheari",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4af78d0a4925307ecdbd1f8848723ebb1a77c887": {
+    "title": "kapuvr",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c58ee134b0acd1d55b82d765953d2235292083d2": {
+    "title": "philippastroudbaronessst",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "01971da606777a4caa21cb5ed2823db328f9bec6": {
+    "title": "naladamayanthi2003film",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00": {
+    "title": "christianbergman",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 14,
+   "unsupported": 12,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:51:13",
+  "marker_errors": [],
+  "processing_time_seconds": 553.5,
+  "source_hashes": {
+   "71stprimetimeemmyawards.txt": "32030c53b7f5000c420064689e697432a2bec427",
+   "jackmcquesten.txt": "661a6dda768f8229167d60c0443b96ab1a995a33",
+   "2019globalt20canada.txt": "954b98bbad734f8f3fcedb9a7aa8149ecf30c168",
+   "clearbodyclearmind.txt": "516bbe9d49f5513952eeedde05ff824a3bede4d5",
+   "aarondford.txt": "09341d85df2378a4b4bafd0b7749f7bea178db8d",
+   "johnccalhoun.txt": "889f1fd50d10e911ae2c4a25a4f5f236a61182da",
+   "popeleoix.txt": "98c56ad89a3254f44851eb5898f0132223852566",
+   "antipolicesentiment.txt": "96bf7c28203092e4a677a274406ea9450c1d0e5c",
+   "naladamayanthi2003film.txt": "90169f4631a4200bdd1c27c3db0fd5ccca66425e",
+   "philippastroudbaronessst.txt": "0bbf2601fb88c3e7932ea51c600161d981f5d970",
+   "declarationoftherightsof.txt": "fd6b84f6660b48840b7c4ecd225f2128b095764b",
+   "historyofgmail.txt": "8cdbce04b5dca57c2eb896a12421fe1e48241edb",
+   "aarondford2.txt": "a746965d280044dee27a8484031a5875e026fc55",
+   "royhilton.txt": "8d229c161110db688579e10ecc9d3731d7100ff2",
+   "halocombatevolvedanniver.txt": "70cfc48d22450b5ac5dffe358baade0694de701a",
+   "oppenheimersecurityheari.txt": "9cd35db0c92449d9064f4ada01ed4c5b4a7f2f88",
+   "akramkhandurrani.txt": "fb4b04eb264364081a9de905736628a114c6920a",
+   "carterrowney.txt": "6e69122b1a55b65eaae793fcf75aa985211a4796",
+   "sanangelotexas.txt": "fe9b4371b17a6d56fb8ec32637b00f88ed997b35",
+   "janetjackson.txt": "8192f6f2ee5a5aae877fee069be59c5887db1ce8",
+   "christianbergman.txt": "2b6bb7e55b8376ec838c7b0d77d1244145da923b",
+   "michaelcollinsastronaut.txt": "c081e9d456b7b50e814f607b2a206c8802599b4f",
+   "liverpoolfc.txt": "e384bde7914016b7e30b1913b0511e410920240a",
+   "chabahar.txt": "cf0307e76209d25f7e9888c9ddbf08e2ae5cb30c",
+   "kapuvr.txt": "9c0274ca0499cb3b5029b4638d93f914cc5e2cf9",
+   "pulpstudentpublication.txt": "291e351a4c64550253146c175874f1173d4a341f"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 416,
+    "prompt_tokens": 420108,
+    "completion_tokens": 20351,
+    "cost_usd": 0.050253
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 29,
+    "prompt_tokens": 86563,
+    "completion_tokens": 75955,
+    "cost_usd": 0.026432
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 14,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 19,
+   "actions": {
+    "add_citation_or_rewrite": 16,
+    "wrong_or_insufficient_evidence": 3
+   },
+   "proof_may_exist": [
+    "t2",
+    "t3",
+    "t11"
+   ],
+   "conflicts": [
+    "t1",
+    "t5",
+    "t6",
+    "t12"
+   ],
+   "rescued": [
+    "t11",
+    "t3"
+   ],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "d348c4b67d1b750714742309d1f77544086ae8a9",
+   "key": "71stprimetimeemmyawards",
+   "filename": "71stprimetimeemmyawards.txt",
+   "title": "71stprimetimeemmyawards",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e402cbb07689a97b335c27a2db41970d42907f91",
+   "key": "jackmcquesten",
+   "filename": "jackmcquesten.txt",
+   "title": "jackmcquesten",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "38481c0b77722005a7f1da34ba3d1bd97ae74c64",
+   "key": "2019globalt20canada",
+   "filename": "2019globalt20canada.txt",
+   "title": "2019globalt20canada",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "80c524f33cf05b4e9f0fddb37bf1a17e3b9fbe0c",
+   "key": "clearbodyclearmind",
+   "filename": "clearbodyclearmind.txt",
+   "title": "clearbodyclearmind",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a52db556248fdead7458ed11682db466ae44bed4",
+   "key": "aarondford",
+   "filename": "aarondford.txt",
+   "title": "aarondford",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "20ffb7bd208526a6de2768dd600a8d13b728c21c",
+   "key": "johnccalhoun",
+   "filename": "johnccalhoun.txt",
+   "title": "johnccalhoun",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "55abe6668dac255a75b7a51f4d86d61c3786d265",
+   "key": "popeleoix",
+   "filename": "popeleoix.txt",
+   "title": "popeleoix",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "171412590697921eb26490e9eec384a777ad1f86",
+   "key": "antipolicesentiment",
+   "filename": "antipolicesentiment.txt",
+   "title": "antipolicesentiment",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "01971da606777a4caa21cb5ed2823db328f9bec6",
+   "key": "naladamayanthi2003film",
+   "filename": "naladamayanthi2003film.txt",
+   "title": "naladamayanthi2003film",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c58ee134b0acd1d55b82d765953d2235292083d2",
+   "key": "philippastroudbaronessst",
+   "filename": "philippastroudbaronessst.txt",
+   "title": "philippastroudbaronessst",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "446d05aea919f6204b6b9a97b4f4964701d85260",
+   "key": "declarationoftherightsof",
+   "filename": "declarationoftherightsof.txt",
+   "title": "declarationoftherightsof",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b0caa9ed8e7bac78fe6414c815fc42aeb9650add",
+   "key": "historyofgmail",
+   "filename": "historyofgmail.txt",
+   "title": "historyofgmail",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "dad910a9cac3e23e8e16a96c291745b533a52a9c",
+   "key": "aarondford2",
+   "filename": "aarondford2.txt",
+   "title": "aarondford2",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8d297e5c954bd6d8ae226fc2726a6c3db48c9269",
+   "key": "royhilton",
+   "filename": "royhilton.txt",
+   "title": "royhilton",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c4e3f949eabb7f400807539c94130bace819ce9d",
+   "key": "halocombatevolvedanniver",
+   "filename": "halocombatevolvedanniver.txt",
+   "title": "halocombatevolvedanniver",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9d2d54c12a82f35f7d7eb32ddba6d3d438619285",
+   "key": "oppenheimersecurityheari",
+   "filename": "oppenheimersecurityheari.txt",
+   "title": "oppenheimersecurityheari",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "09ea7668200b444fc386cee3b2482a6e4d7fed58",
+   "key": "akramkhandurrani",
+   "filename": "akramkhandurrani.txt",
+   "title": "akramkhandurrani",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0e2c2f904577296fe9c59399d21741982b291d18",
+   "key": "carterrowney",
+   "filename": "carterrowney.txt",
+   "title": "carterrowney",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "aa878f601e4eb36036aef06cdb4ce4ad67f94060",
+   "key": "sanangelotexas",
+   "filename": "sanangelotexas.txt",
+   "title": "sanangelotexas",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "421f25cf353ff11e6c6a052f4407153051f0bb90",
+   "key": "janetjackson",
+   "filename": "janetjackson.txt",
+   "title": "janetjackson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e77e8dea8c558ab2b89cf9a346b2de08e0cf4d00",
+   "key": "christianbergman",
+   "filename": "christianbergman.txt",
+   "title": "christianbergman",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ec4277a456742c9cf03bcf453910d82419cd1b7d",
+   "key": "michaelcollinsastronaut",
+   "filename": "michaelcollinsastronaut.txt",
+   "title": "michaelcollinsastronaut",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "45186cd800ea12cd604f12bb07ab7a6a026a64fc",
+   "key": "liverpoolfc",
+   "filename": "liverpoolfc.txt",
+   "title": "liverpoolfc",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4ea334fd2bb1d3ab34149054430b3120f7269ce5",
+   "key": "chabahar",
+   "filename": "chabahar.txt",
+   "title": "chabahar",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4af78d0a4925307ecdbd1f8848723ebb1a77c887",
+   "key": "kapuvr",
+   "filename": "kapuvr.txt",
+   "title": "kapuvr",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "011dd9aedd067e9738875bb5ea8a46525ae1803f",
+   "key": "pulpstudentpublication",
+   "filename": "pulpstudentpublication.txt",
+   "title": "pulpstudentpublication",
+   "num_claims": 0
+  }
+ ]
+}

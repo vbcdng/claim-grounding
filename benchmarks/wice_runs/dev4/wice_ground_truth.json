@@ -1,0 +1,727 @@
+{
+ "split": "dev",
+ "batch": 4,
+ "seed": 7,
+ "claims": {
+  "theadventuresoftintin": {
+   "wice_id": "dev02858",
+   "split_index": 65,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     35
+    ]
+   ],
+   "n_source_sentences": 43
+  },
+  "jameschenactor": {
+   "wice_id": "dev01323",
+   "split_index": 264,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     20
+    ],
+    [
+     18,
+     20
+    ]
+   ],
+   "n_source_sentences": 169
+  },
+  "sanjosesanfranciscooakla": {
+   "wice_id": "dev03910",
+   "split_index": 75,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     223,
+     224
+    ],
+    [
+     223,
+     224,
+     225
+    ],
+    [
+     11,
+     223,
+     224
+    ],
+    [
+     222,
+     223,
+     224
+    ],
+    [
+     11,
+     223,
+     224,
+     225
+    ],
+    [
+     222,
+     223,
+     224,
+     225
+    ]
+   ],
+   "n_source_sentences": 235
+  },
+  "supremecourtofmyanmar": {
+   "wice_id": "dev02544",
+   "split_index": 342,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 72
+  },
+  "ladyandthetramp2019film": {
+   "wice_id": "dev03225",
+   "split_index": 148,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     16,
+     23
+    ],
+    [
+     17,
+     21,
+     23
+    ],
+    [
+     16,
+     17,
+     23
+    ],
+    [
+     2,
+     21,
+     23
+    ]
+   ],
+   "n_source_sentences": 90
+  },
+  "krispykremeoperationsbyc": {
+   "wice_id": "dev03078",
+   "split_index": 72,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     1,
+     14
+    ],
+    [
+     1,
+     12,
+     14
+    ],
+    [
+     1,
+     8,
+     14
+    ],
+    [
+     9,
+     12,
+     14
+    ],
+    [
+     1,
+     9,
+     13,
+     14
+    ],
+    [
+     1,
+     8,
+     12,
+     14
+    ],
+    [
+     9,
+     12,
+     13,
+     14
+    ],
+    [
+     8,
+     9,
+     13,
+     14
+    ],
+    [
+     1,
+     9,
+     12,
+     14
+    ],
+    [
+     8,
+     9,
+     12,
+     14
+    ],
+    [
+     8,
+     9,
+     12,
+     13,
+     14
+    ],
+    [
+     1,
+     9,
+     12,
+     13,
+     14
+    ]
+   ],
+   "n_source_sentences": 47
+  },
+  "adrianpartington": {
+   "wice_id": "dev03312",
+   "split_index": 272,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 106
+  },
+  "africancemeteryno2lexing": {
+   "wice_id": "dev03649",
+   "split_index": 23,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     34
+    ],
+    [
+     34,
+     39
+    ],
+    [
+     34,
+     48
+    ],
+    [
+     34,
+     38,
+     39
+    ],
+    [
+     34,
+     38,
+     39,
+     48
+    ],
+    [
+     28,
+     30,
+     31,
+     34
+    ],
+    [
+     28,
+     30,
+     31,
+     34,
+     39
+    ],
+    [
+     28,
+     30,
+     31,
+     34,
+     48
+    ],
+    [
+     28,
+     30,
+     31,
+     34,
+     38,
+     39
+    ],
+    [
+     28,
+     30,
+     31,
+     34,
+     38,
+     39,
+     48
+    ]
+   ],
+   "n_source_sentences": 63
+  },
+  "richardjevans": {
+   "wice_id": "dev03529",
+   "split_index": 110,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     14,
+     16,
+     18,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "aliceinchains": {
+   "wice_id": "dev02191",
+   "split_index": 341,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     17,
+     18,
+     29,
+     30,
+     32,
+     34
+    ]
+   ],
+   "n_source_sentences": 101
+  },
+  "georgewashingtonsteeth": {
+   "wice_id": "dev03793",
+   "split_index": 343,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 48
+  },
+  "joshuareynolds": {
+   "wice_id": "dev01841",
+   "split_index": 298,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     11
+    ]
+   ],
+   "n_source_sentences": 60
+  },
+  "scottwalkerpolitician": {
+   "wice_id": "dev02271",
+   "split_index": 280,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7
+    ]
+   ],
+   "n_source_sentences": 66
+  },
+  "theslants": {
+   "wice_id": "dev03839",
+   "split_index": 309,
+   "label": "not_supported",
+   "supporting_sentences": [
+    []
+   ],
+   "n_source_sentences": 93
+  },
+  "bodakyellow": {
+   "wice_id": "dev03281",
+   "split_index": 329,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     0,
+     16
+    ]
+   ],
+   "n_source_sentences": 45
+  },
+  "buckinghampalace": {
+   "wice_id": "dev01611",
+   "split_index": 111,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     8
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "n_source_sentences": 151
+  },
+  "pkfilm": {
+   "wice_id": "dev03646",
+   "split_index": 68,
+   "label": "not_supported",
+   "supporting_sentences": [
+    [],
+    [
+     46
+    ]
+   ],
+   "n_source_sentences": 132
+  },
+  "mercuryseven": {
+   "wice_id": "dev04292",
+   "split_index": 275,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     28,
+     30
+    ]
+   ],
+   "n_source_sentences": 92
+  },
+  "capitalpunishmentintheun": {
+   "wice_id": "dev03450",
+   "split_index": 31,
+   "label": "partially_supported",
+   "supporting_sentences": [
+    [
+     0
+    ],
+    [
+     14
+    ],
+    [
+     0,
+     14
+    ]
+   ],
+   "n_source_sentences": 51
+  },
+  "megadeth": {
+   "wice_id": "dev03830",
+   "split_index": 268,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     7,
+     9
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     5,
+     7,
+     9
+    ]
+   ],
+   "n_source_sentences": 53
+  },
+  "timhetherington": {
+   "wice_id": "dev03329",
+   "split_index": 51,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     82,
+     85
+    ],
+    [
+     24,
+     37,
+     82
+    ],
+    [
+     82,
+     85,
+     91
+    ],
+    [
+     37,
+     82,
+     85
+    ],
+    [
+     37,
+     82,
+     85,
+     91
+    ],
+    [
+     24,
+     37,
+     82,
+     85
+    ],
+    [
+     29,
+     30,
+     31,
+     37,
+     82
+    ],
+    [
+     29,
+     30,
+     31,
+     37,
+     82,
+     85
+    ]
+   ],
+   "n_source_sentences": 154
+  },
+  "daybed": {
+   "wice_id": "dev01445",
+   "split_index": 117,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     19
+    ]
+   ],
+   "n_source_sentences": 56
+  },
+  "houseofbeaufort": {
+   "wice_id": "dev02875",
+   "split_index": 210,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     17,
+     18
+    ],
+    [
+     15,
+     17,
+     18
+    ],
+    [
+     17,
+     18,
+     101
+    ],
+    [
+     17,
+     41,
+     42
+    ],
+    [
+     17,
+     18,
+     90
+    ],
+    [
+     15,
+     17,
+     18,
+     90
+    ],
+    [
+     15,
+     17,
+     41,
+     42
+    ],
+    [
+     17,
+     18,
+     90,
+     101
+    ],
+    [
+     17,
+     41,
+     42,
+     90
+    ],
+    [
+     17,
+     18,
+     41,
+     42
+    ],
+    [
+     17,
+     18,
+     41,
+     42
+    ],
+    [
+     15,
+     17,
+     41,
+     42,
+     90
+    ],
+    [
+     17,
+     18,
+     41,
+     42,
+     101
+    ],
+    [
+     15,
+     17,
+     18,
+     41,
+     42
+    ],
+    [
+     17,
+     18,
+     41,
+     42,
+     90,
+     101
+    ]
+   ],
+   "n_source_sentences": 136
+  },
+  "wbrentpowell": {
+   "wice_id": "dev02968",
+   "split_index": 20,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     10,
+     11
+    ],
+    [
+     7,
+     10,
+     11
+    ],
+    [
+     10,
+     11,
+     13
+    ],
+    [
+     7,
+     10,
+     11,
+     13
+    ]
+   ],
+   "n_source_sentences": 29
+  },
+  "katewinslet": {
+   "wice_id": "dev00116",
+   "split_index": 283,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     38,
+     39
+    ],
+    [
+     34,
+     38,
+     39
+    ],
+    [
+     29,
+     38,
+     39
+    ],
+    [
+     29,
+     34,
+     38
+    ],
+    [
+     29,
+     33,
+     34,
+     38
+    ],
+    [
+     33,
+     34,
+     38,
+     39
+    ],
+    [
+     29,
+     34,
+     38,
+     39
+    ],
+    [
+     29,
+     33,
+     34,
+     38,
+     39
+    ]
+   ],
+   "n_source_sentences": 59
+  },
+  "styletaylorswiftsong": {
+   "wice_id": "dev00405",
+   "split_index": 185,
+   "label": "supported",
+   "supporting_sentences": [
+    [
+     11,
+     26
+    ],
+    [
+     11,
+     26,
+     27
+    ],
+    [
+     0,
+     11,
+     26
+    ],
+    [
+     11,
+     25,
+     26
+    ],
+    [
+     0,
+     11,
+     26,
+     27
+    ],
+    [
+     11,
+     25,
+     26,
+     27
+    ],
+    [
+     0,
+     11,
+     25,
+     26
+    ],
+    [
+     0,
+     11,
+     26,
+     27
+    ],
+    [
+     0,
+     11,
+     25,
+     26,
+     27
+    ]
+   ],
+   "n_source_sentences": 77
+  }
+ }
+}

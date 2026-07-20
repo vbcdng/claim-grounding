@@ -1,0 +1,122 @@
+{
+  "paper_analysis": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "comment": "Model and settings for analyzing individual papers within paper_synthesis.py"
+  },
+  "final_synthesis": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "comment": "Model and settings for generating the final synthesis text within paper_synthesis.py"
+  },
+  "keyword_generation": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "comment": "Settings for generating_keywords_from_text.py (Thinking budget null means use model default)"
+  },
+  "paper_ranking": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "comment": "Settings for dynamic_prompt_ranking.py"
+  },
+  "claim_validation": {
+    "model_name": "gemini-2.5-flash-lite",
+    "thinking_budget": 8024,
+    "max_output_tokens": 8000,
+    "temperature": 0.1,
+    "comment": "Default model for verify_my_text.py (via llm_client). flash-lite: ~6x cheaper output than flash, 0-FP judge on the paper1 bench; changed from gemini-2.5-flash 2026-07-04 so bare runs match the recommended model."
+  },
+  "synthesis_repair": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "comment": "Settings for synthesis_repair.py"
+  },
+  "llm_claim_evaluation": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 2048,
+    "max_output_tokens": 1200,
+    "temperature": 0.1,
+    "comment": "Settings for LLM-based claim evaluation using llm_claim_evaluator.py"
+  },
+  "text_processing_gemini": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 2048,
+    "temperature": 0.1,
+    "token_limits": {
+      "doi_extraction": 200,
+      "citation_detection": 2000,
+      "content_classification": 8000,
+      "everything_else": 4000,
+      "validation": 1000
+    },
+    "comment": "Settings for claims_prep_01B_gemini_text_processing.py with dynamic token allocation"
+  },
+  "citation_extraction": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 2048,
+    "temperature": 0.1,
+    "max_output_tokens": 4000,
+    "max_tokens_per_chunk": 3000,
+    "overlap_tokens": 300,
+    "max_retries": 3,
+    "retry_delay": 2.0,
+    "quality_threshold": 0.7,
+    "comment": "Settings for gemini_citation_extractor.py - reduced token limits for stability"
+  },
+  "doi_extraction": {
+    "model_name": "gemini-2.5-flash",
+    "thinking_budget": 2048,
+    "temperature": 0.05,
+    "max_output_tokens": 1500,
+    "timeout": 30,
+    "max_retries": 3,
+    "retry_delay": 1.0,
+    "response_validation": {
+      "min_response_length": 50,
+      "require_complete_json": true,
+      "max_reasoning_length": 100
+    },
+    "safety_settings": {
+      "HARM_CATEGORY_HARASSMENT": "BLOCK_MEDIUM_AND_ABOVE",
+      "HARM_CATEGORY_HATE_SPEECH": "BLOCK_MEDIUM_AND_ABOVE",
+      "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_MEDIUM_AND_ABOVE",
+      "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_ONLY_HIGH"
+    },
+    "text_truncation": {
+      "max_chars": 4000,
+      "early_content_ratio": 0.8,
+      "copyright_keywords": [
+        "copyright",
+        "\u00a9",
+        "doi:",
+        "journal",
+        "published",
+        "volume",
+        "issn"
+      ]
+    },
+    "confidence_thresholds": {
+      "high": 0.8,
+      "medium": 0.6,
+      "low": 0.4
+    },
+    "parallel_processing": {
+      "default_workers": 2,
+      "max_workers": 4
+    },
+    "content_sanitization": {
+      "enabled": true,
+      "high_risk_terms": {
+        "radioactive": "isotopic",
+        "nuclear": "atomic",
+        "toxic": "harmful",
+        "contaminated": "affected",
+        "hazardous": "potentially harmful",
+        "disaster": "incident"
+      },
+      "remove_control_chars": true,
+      "clean_corrupted_text": true
+    },
+    "comment": "Settings for gemini_doi_extractor.py - LLM-based DOI extraction with academic-friendly safety settings"
+  }
+}

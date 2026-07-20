@@ -1,0 +1,2795 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 3 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section of the text and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Belladonna returned to Anthrax the following year, making his first appearance at June's \"big four\" show and re-recording vocals on the album \"Worship Music\".",
+   "markers": [
+    "listofanthraxmembers"
+   ],
+   "paper_ids": [
+    "b426f05dffb75363f78de25e5c18618a9bce0d32"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+    "source_title": "listofanthraxmembers",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In his once and current capacity, Belladonna will make his first appearance with ANTHRAX this summer when the band joins METALLICA, SLAYER, and MEGADETH \u2014 the \"Big Four\" founding bands of the thrash genre \u2014 to co-headline a series of Sonisphere Festivals in ten European cities, as well as playing a handful of ANTHRAX-headlined shows (itinerary is below).",
+    "page": 1,
+    "snippet": "In his once and current capacity, Belladonna",
+    "reason": "the passage does not mention Belladonna re-recording vocals on the album \"Worship Music\"",
+    "votes": "2-0",
+    "window": "In his once and current capacity, Belladonna will make his first appearance with ANTHRAX this summer when the band joins METALLICA, SLAYER, and MEGADETH \u2014 the \"Big Four\" founding bands of the thrash genre \u2014 to co-headline a series of Sonisphere Festivals in ten European cities, as well as playing a handful of ANTHRAX-headlined shows (itinerary is below). Added Benante, \"There are five or six songs from a year ago that we don't want to change, we love them the way they are, other than having Joey making them his own with his vocals. \"We're going to do these summer shows and gel as a band,\" explained Charlie Benante, \"get comfortable playing with each other again, and the energy from that should go right into making new music.\" To have Joey with us playing these shows with METALLICA, SLAYER and MEGADETH is the way it should be \u2014 as ANTHRAX's vocalist from '85 to '92, he was part of the 'Big Four.'\" Immediately following the final Sonisphere festival in early August, the band will fly back to the U.S. and begin writing and rehearsing for a new album that's expected to be out in early 2011."
+   },
+   "evidences": [
+    {
+     "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+     "source_title": "listofanthraxmembers",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In his once and current capacity, Belladonna will make his first appearance with ANTHRAX this summer when the band joins METALLICA, SLAYER, and MEGADETH \u2014 the \"Big Four\" founding bands of the thrash genre \u2014 to co-headline a series of Sonisphere Festivals in ten European cities, as well as playing a handful of ANTHRAX-headlined shows (itinerary is below).",
+     "page": 1,
+     "snippet": "In his once and current capacity, Belladonna",
+     "reason": "the passage does not mention Belladonna re-recording vocals on the album \"Worship Music\"",
+     "votes": "2-0",
+     "window": "In his once and current capacity, Belladonna will make his first appearance with ANTHRAX this summer when the band joins METALLICA, SLAYER, and MEGADETH \u2014 the \"Big Four\" founding bands of the thrash genre \u2014 to co-headline a series of Sonisphere Festivals in ten European cities, as well as playing a handful of ANTHRAX-headlined shows (itinerary is below). Added Benante, \"There are five or six songs from a year ago that we don't want to change, we love them the way they are, other than having Joey making them his own with his vocals. \"We're going to do these summer shows and gel as a band,\" explained Charlie Benante, \"get comfortable playing with each other again, and the energy from that should go right into making new music.\" To have Joey with us playing these shows with METALLICA, SLAYER and MEGADETH is the way it should be \u2014 as ANTHRAX's vocalist from '85 to '92, he was part of the 'Big Four.'\" Immediately following the final Sonisphere festival in early August, the band will fly back to the U.S. and begin writing and rehearsing for a new album that's expected to be out in early 2011."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention Belladonna re-recording vocals on the album \"Worship Music\"",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Belladonna returned to Anthrax the following year, making his first appearance at June's \"big four\" show and re-recording vocals on the album \"Worship Music\".",
+    "reason": "The passage directly states facts about Belladonna's return to Anthrax and his activities, which are directly attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is presenting information that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that Belladonna re-recorded vocals on the album 'Worship Music', which is never named in the source, and it says he returned 'the following year' without a clear reference year that matches the source (the source announces his return in 2010).",
+    "rewrite_suggestion": "Belladonna rejoined Anthrax in 2010, making his first appearance that summer at a 'Big Four' show, and later contributed vocals to a new album expected in early 2011.",
+    "proofs": [
+     "In his once and current capacity, Belladonna will make his first appearance with ANTHRAX this summer when the band joins METALLICA, SLAYER, and MEGADETH \u2014 the \"Big Four\" founding bands of the thrash genre \u2014 to co-headline a series of Sonisphere Festivals in ten European cities, as well as playing a handful of ANTHRAX-headlined shows (itinerary is below)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the component about Belladonna's first appearance at a 'Big Four' show, but the claim also includes that he 'returned the following year' (ambiguous timing not in the source) and that he 're-recorded vocals on the album Worship Music' \u2014 the source never mentions that album title. Since these substantive components are entirely absent from the source, the author must either add a citation for them or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "The dangerous grade crossing at Main Street would be closed and replaced with a pedestrian overpass with two elevators.",
+   "markers": [
+    "mineolastationlirr"
+   ],
+   "paper_ids": [
+    "c43f018a2d45def902745f5d48f64d0be2a14d47"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8515,
+   "evidence": {
+    "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+    "source_title": "mineolastationlirr",
+    "supported": true,
+    "sentence": "A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street.",
+    "page": 1,
+    "snippet": "A pedestrian bridge with elevators will be",
+    "cosine": 0.8515,
+    "reason": "The passage states that vehicular traffic across the LIRR tracks is being permanently closed and replaced with a pedestrian bridge with elevators, which directly supports the claim.",
+    "window": "In consultation with the Village of Mineola, vehicular traffic across the LIRR tracks is being permanently closed. A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street. This reconstructed grade crossing was designed in conjunction with the Village of Mineola and will enhance safety and provide for a quieter and more livable community along the railroad."
+   },
+   "evidences": [
+    {
+     "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+     "source_title": "mineolastationlirr",
+     "supported": true,
+     "sentence": "A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street.",
+     "page": 1,
+     "snippet": "A pedestrian bridge with elevators will be",
+     "cosine": 0.8515,
+     "reason": "The passage states that vehicular traffic across the LIRR tracks is being permanently closed and replaced with a pedestrian bridge with elevators, which directly supports the claim.",
+     "window": "In consultation with the Village of Mineola, vehicular traffic across the LIRR tracks is being permanently closed. A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street. This reconstructed grade crossing was designed in conjunction with the Village of Mineola and will enhance safety and provide for a quieter and more livable community along the railroad."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that vehicular traffic across the LIRR tracks is being permanently closed and replaced with a pedestrian bridge with elevators, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Main Street grade crossing would be closed",
+      "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+      "source_title": "mineolastationlirr",
+      "sentence": "In consultation with the Village of Mineola, vehicular traffic across the LIRR tracks is being permanently closed.",
+      "page": 1,
+      "snippet": "In consultation with the Village of Mineola,"
+     },
+     {
+      "component": "replaced with a pedestrian overpass",
+      "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+      "source_title": "mineolastationlirr",
+      "sentence": "A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street.",
+      "page": 1,
+      "snippet": "A pedestrian bridge with elevators will be"
+     },
+     {
+      "component": "with two elevators",
+      "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+      "source_title": "mineolastationlirr",
+      "sentence": "A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street.",
+      "page": 1,
+      "snippet": "A pedestrian bridge with elevators will be"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+      "source_title": "mineolastationlirr",
+      "text": "In consultation with the Village of Mineola, vehicular traffic across the LIRR tracks is being permanently closed. A pedestrian bridge with elevators will be constructed over the tracks, and vehicular traffic is being diverted to Mineola Boulevard or Willis Avenue, both within a quarter-mile from Main Street.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t3",
+   "text": "She also played one of the three leads in black comedy drama \"Avengers Social Club\", which drew high ratings.",
+   "markers": [
+    "ramiran"
+   ],
+   "paper_ids": [
+    "338dd23442d2cad8e6a483280e3f421a486a8a41"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "338dd23442d2cad8e6a483280e3f421a486a8a41",
+    "source_title": "ramiran",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"Avengers Social Club,\" airing on Wednesdays and Thursdays , stars three actresses Lee Yo-won, Ra Mi-ran and Myung Se-bin, playing three women from different walks of life _ a street fish vendor, a housewife of a professor and a chaebol owner's daughter _ who join forces to carry out their individual revenge.",
+    "page": 1,
+    "snippet": "\"Avengers Social Club,\" airing on Wednesdays and",
+    "reason": "The passage does not state that the drama drew high ratings, only that viewership soared to over 5 percent after three episodes.",
+    "votes": "2-0",
+    "window": "\"Avengers Social Club,\" airing on Wednesdays and Thursdays , stars three actresses Lee Yo-won, Ra Mi-ran and Myung Se-bin, playing three women from different walks of life _ a street fish vendor, a housewife of a professor and a chaebol owner's daughter _ who join forces to carry out their individual revenge. With no romance plot, the drama debuted on Oct. 11 with 2.9 percent viewership, but it soared to over 5 percent just after three episodes."
+   },
+   "evidences": [
+    {
+     "paper_id": "338dd23442d2cad8e6a483280e3f421a486a8a41",
+     "source_title": "ramiran",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"Avengers Social Club,\" airing on Wednesdays and Thursdays , stars three actresses Lee Yo-won, Ra Mi-ran and Myung Se-bin, playing three women from different walks of life _ a street fish vendor, a housewife of a professor and a chaebol owner's daughter _ who join forces to carry out their individual revenge.",
+     "page": 1,
+     "snippet": "\"Avengers Social Club,\" airing on Wednesdays and",
+     "reason": "The passage does not state that the drama drew high ratings, only that viewership soared to over 5 percent after three episodes.",
+     "votes": "2-0",
+     "window": "\"Avengers Social Club,\" airing on Wednesdays and Thursdays , stars three actresses Lee Yo-won, Ra Mi-ran and Myung Se-bin, playing three women from different walks of life _ a street fish vendor, a housewife of a professor and a chaebol owner's daughter _ who join forces to carry out their individual revenge. With no romance plot, the drama debuted on Oct. 11 with 2.9 percent viewership, but it soared to over 5 percent just after three episodes."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the drama drew high ratings, only that viewership soared to over 5 percent after three episodes.",
+   "component_check": {
+    "found": [
+     "She played one of the three leads in \"Avengers Social Club\".",
+     "\"Avengers Social Club\" drew high ratings."
+    ],
+    "missing": [
+     "\"Avengers Social Club\" was a black comedy drama."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "She played one of the three leads in \"Avengers Social Club\".",
+      "paper_id": "338dd23442d2cad8e6a483280e3f421a486a8a41",
+      "source_title": "ramiran",
+      "sentence": "\"Avengers Social Club,\" airing on Wednesdays and Thursdays , stars three actresses Lee Yo-won, Ra Mi-ran and Myung Se-bin, playing three women from different walks of life _ a street fish vendor, a housewife of a professor and a chaebol owner's daughter _ who join forces to carry out their individual revenge.",
+      "page": 1
+     },
+     {
+      "component": "\"Avengers Social Club\" drew high ratings.",
+      "paper_id": "338dd23442d2cad8e6a483280e3f421a486a8a41",
+      "source_title": "ramiran",
+      "sentence": "On the contrary, tvN's webtoon-based drama \"Avengers Social Club,\" \"Witch's Court\" and \"Mad Dog\" on KBS _ where there is no apparent romantic storytelling _ have been gaining popularity.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a fact about the drawing of high ratings for the drama \"Avengers Social Club\". This fact is directly attributed to the cited source and is expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The drama is described as a 'black comedy'",
+    "rewrite_suggestion": "She also played one of the three leads in the revenge drama 'Avengers Social Club', which drew high ratings.",
+    "proofs": [
+     "\"Avengers Social Club,\" airing on Wednesdays and Thursdays , stars three actresses Lee Yo-won, Ra Mi-ran and Myung Se-bin, playing three women from different walks of life _ a street fish vendor, a housewife of a professor and a chaebol owner's daughter _ who join forces to carry out their individual revenge.",
+     "the drama debuted on Oct. 11 with 2.9 percent viewership, but it soared to over 5 percent just after three episodes."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence verifies that the subject (Ra Mi-ran) is one of the three leads, but does not support the 'black comedy' descriptor. The source text never calls the drama a black comedy, and the claim's 'high ratings' component is provable from the source (viewership soared to over 5%) but is not in the shown sentence. Since the 'black comedy' part is not present in the source at all, it is an author error, dominating the outcome."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "The American edition of the album was included in \"A Basic Record Library\" of 1950s and 1960s recordings, published in \"Christgau's Record Guide: Rock Albums of the Seventies\" (1981).",
+   "markers": [
+    "mygenerationalbum"
+   ],
+   "paper_ids": [
+    "8f395d0ddb64d7f4f7eaa42a91bedeb76aeb217a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8342,
+   "evidence": {
+    "paper_id": "8f395d0ddb64d7f4f7eaa42a91bedeb76aeb217a",
+    "source_title": "mygenerationalbum",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Robert Christgau: CG 70s: A Basic Record Library: The Fifties and Sixties Consumer Guide: User's Guide Grades 1990- Grades 1969-89 Expert Witness Books: Book Reports Is It Still Good to Ya?",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Robert Christgau: CG 70s:",
+    "cosine": 0.8342,
+    "reason": "The passage mentions 'A Basic Record Library: The Fifties and Sixties' but does not specify that the American edition of the album was included in it, nor does it mention 'Christgau's Record Guide: Rock Albums of the Seventies' (1981).",
+    "window": "(meta data) TITLE: Robert Christgau: CG 70s: A Basic Record Library: The Fifties and Sixties Consumer Guide: User's Guide Grades 1990- Grades 1969-89 Expert Witness Books: Book Reports Is It Still Good to Ya? Going Into the City Consumer Guide: 90s Grown Up All Wrong Consumer Guide: 80s Consumer Guide: 70s Any Old Way You Choose It Don't Stop 'til You Get Enough Xgau Sez Writings: CG Columns Rock&Roll& [new] Rock&Roll& [old] Music Essays Music Reviews Book Reviews NAJP Blog Rolling Stone Video Reviews Pazz & Jop Web Site: Site Map What's New?"
+   },
+   "evidences": [
+    {
+     "paper_id": "8f395d0ddb64d7f4f7eaa42a91bedeb76aeb217a",
+     "source_title": "mygenerationalbum",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Robert Christgau: CG 70s: A Basic Record Library: The Fifties and Sixties Consumer Guide: User's Guide Grades 1990- Grades 1969-89 Expert Witness Books: Book Reports Is It Still Good to Ya?",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Robert Christgau: CG 70s:",
+     "cosine": 0.8342,
+     "reason": "The passage mentions 'A Basic Record Library: The Fifties and Sixties' but does not specify that the American edition of the album was included in it, nor does it mention 'Christgau's Record Guide: Rock Albums of the Seventies' (1981).",
+     "window": "(meta data) TITLE: Robert Christgau: CG 70s: A Basic Record Library: The Fifties and Sixties Consumer Guide: User's Guide Grades 1990- Grades 1969-89 Expert Witness Books: Book Reports Is It Still Good to Ya? Going Into the City Consumer Guide: 90s Grown Up All Wrong Consumer Guide: 80s Consumer Guide: 70s Any Old Way You Choose It Don't Stop 'til You Get Enough Xgau Sez Writings: CG Columns Rock&Roll& [new] Rock&Roll& [old] Music Essays Music Reviews Book Reviews NAJP Blog Rolling Stone Video Reviews Pazz & Jop Web Site: Site Map What's New?"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "component_check": {
+    "found": [
+     "\"A Basic Record Library\" was of 1950s and 1960s recordings"
+    ],
+    "missing": [
+     "The American edition of the album was included in \"A Basic Record Library\"",
+     "\"A Basic Record Library\" was published in \"Christgau's Record Guide: Rock Albums of the Seventies\"",
+     "\"Christgau's Record Guide: Rock Albums of the Seventies\" was published in 1981"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "\"A Basic Record Library\" was of 1950s and 1960s recordings",
+      "paper_id": "8f395d0ddb64d7f4f7eaa42a91bedeb76aeb217a",
+      "source_title": "mygenerationalbum",
+      "sentence": "Certain faves (More Chuck Berry, Aretha's I Never Loved a Man) have been passed over to avoid duplication with best-ofs There are twenty-five LPs from the '50s and seventy-five from the '60s because those round numbers are about where the quality begins to tail off.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The American edition of the album was included in \"A Basic Record Library\" of 1950s and 1960s recordings.",
+    "reason": "The passage directly attributes the inclusion of the album in a specific record library to the cited source. This is a factual claim that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific album title and its American edition, and the correct publication year (source indicates 1980, not 1981)",
+    "rewrite_suggestion": "The American edition of [album title] was included in 'A Basic Record Library' of 1950s and 1960s recordings, published in Christgau's Record Guide: Rock Albums of the Seventies (1980).",
+    "proofs": [
+     "A Basic Record Library:The Fifties and Sixties",
+     "Christgau's Record Guide: Rock Albums of the '70s, 1980 '70s and 1980"
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Christgau's Record Guide: Rock Albums of the '70s, 1980 '70s and 1980",
+     "why": "The claim states the guide was published in 1981, but the source text indicates a 1980 publication."
+    },
+    "why": "The claim cannot be verified from the source because it does not specify which album is being referred to, nor does it mention any 'American edition'. Additionally, the publication year is contradicted by the source (1980 vs. 1981). The shown sentence is only a metadata title and provides no proof. Since key components are unprovable from the source and one is contradicted, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "In 2013, Mozgovaya started working at the Voice of America, hosting the daily \"Current time\" TV show.",
+   "markers": [
+    "natashamozgovaya"
+   ],
+   "paper_ids": [
+    "d40e45d0191ccfd8c75bdac5b29fe726d3b499a7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d40e45d0191ccfd8c75bdac5b29fe726d3b499a7",
+    "source_title": "natashamozgovaya",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "VOA host Natasha Mozgovaya shares duties with a network of reporters in the Russian-speaking region and in Prague, New York, and Washington \u2013 all brought together by Operations for a technically complex daily, 30-minute program offering viewers bordering Russia a balanced alternative to Moscow's disinformation.",
+    "page": 1,
+    "snippet": "VOA host Natasha Mozgovaya shares duties with",
+    "reason": "The passage does not state that Mozgovaya started working at the Voice of America in 2013 or that she hosted the daily \"Current time\" TV show.",
+    "votes": "2-0",
+    "window": "VOA host Natasha Mozgovaya shares duties with a network of reporters in the Russian-speaking region and in Prague, New York, and Washington \u2013 all brought together by Operations for a technically complex daily, 30-minute program offering viewers bordering Russia a balanced alternative to Moscow's disinformation."
+   },
+   "evidences": [
+    {
+     "paper_id": "d40e45d0191ccfd8c75bdac5b29fe726d3b499a7",
+     "source_title": "natashamozgovaya",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "VOA host Natasha Mozgovaya shares duties with a network of reporters in the Russian-speaking region and in Prague, New York, and Washington \u2013 all brought together by Operations for a technically complex daily, 30-minute program offering viewers bordering Russia a balanced alternative to Moscow's disinformation.",
+     "page": 1,
+     "snippet": "VOA host Natasha Mozgovaya shares duties with",
+     "reason": "The passage does not state that Mozgovaya started working at the Voice of America in 2013 or that she hosted the daily \"Current time\" TV show.",
+     "votes": "2-0",
+     "window": "VOA host Natasha Mozgovaya shares duties with a network of reporters in the Russian-speaking region and in Prague, New York, and Washington \u2013 all brought together by Operations for a technically complex daily, 30-minute program offering viewers bordering Russia a balanced alternative to Moscow's disinformation."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Mozgovaya started working at the Voice of America in 2013 or that she hosted the daily \"Current time\" TV show.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a specific fact (Mozgovaya's employment and role in 2013) that is directly attributed to the cited source. The attribution test applies here, indicating 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the year 2013 when Mozgovaya started working at VOA",
+    "rewrite_suggestion": "Mozgovaya works at Voice of America, hosting the daily 'Current Time' TV show.",
+    "proofs": [
+     "Nowhere has Operations played a bigger role than in helping get off the ground our ambitious co-production with RFE/RL \u2013 Current Time.",
+     "VOA host Natasha Mozgovaya shares duties with a network of reporters in the Russian-speaking region and in Prague, New York, and Washington \u2013 all brought together by Operations for a technically complex daily, 30-minute program offering viewers bordering Russia a balanced alternative to Moscow's disinformation."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the unsourced year 2013, which the source text does not mention at all; that component cannot be proven from the source. The hosting component is provable from the source (the sentences naming 'Current Time' and describing Mozgovaya as host), but the tool did not show those sentences in full (they are present in the source but not all in the shown sentence). Since the author added an unsourced specific year, the author must either add a citation for that year or remove it; the hosting part can be fixed by showing the correct proof sentences."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "On May 25th 2019, the weekend of the 2019 Indianapolis 500, SCCA announced they will be returning to Indianapolis Motor Speedway in 2021.",
+   "markers": [
+    "sportscarclubofamerica"
+   ],
+   "paper_ids": [
+    "c20cb9e2f5f27a947d5ac127e0b5dac893a98775"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9079,
+   "evidence": {
+    "paper_id": "c20cb9e2f5f27a947d5ac127e0b5dac893a98775",
+    "source_title": "sportscarclubofamerica",
+    "supported": true,
+    "sentence": "Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event.",
+    "page": 1,
+    "snippet": "Indianapolis Motor Speedway (IMS) and Sports Car",
+    "cosine": 0.9079,
+    "reason": "The passage states that on May 25, 2019, the SCCA announced the return of the SCCA National Championship Runoffs to Indianapolis Motor Speedway in 2021.",
+    "window": "INDIANAPOLIS (May 25, 2019) \u2013 Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event. Mike Cobb, SCCA President/CEO, said this will be only the second time in Runoffs history that the event has been staged at IMS."
+   },
+   "evidences": [
+    {
+     "paper_id": "c20cb9e2f5f27a947d5ac127e0b5dac893a98775",
+     "source_title": "sportscarclubofamerica",
+     "supported": true,
+     "sentence": "Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event.",
+     "page": 1,
+     "snippet": "Indianapolis Motor Speedway (IMS) and Sports Car",
+     "cosine": 0.9079,
+     "reason": "The passage states that on May 25, 2019, the SCCA announced the return of the SCCA National Championship Runoffs to Indianapolis Motor Speedway in 2021.",
+     "window": "INDIANAPOLIS (May 25, 2019) \u2013 Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event. Mike Cobb, SCCA President/CEO, said this will be only the second time in Runoffs history that the event has been staged at IMS."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that on May 25, 2019, the SCCA announced the return of the SCCA National Championship Runoffs to Indianapolis Motor Speedway in 2021.",
+   "covering": {
+    "covered": [
+     {
+      "component": "SCCA announced return to Indianapolis Motor Speedway in 2021",
+      "paper_id": "c20cb9e2f5f27a947d5ac127e0b5dac893a98775",
+      "source_title": "sportscarclubofamerica",
+      "sentence": "Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event.",
+      "page": 1,
+      "snippet": "Indianapolis Motor Speedway (IMS) and Sports Car"
+     },
+     {
+      "component": "Announcement date: May 25th 2019",
+      "paper_id": "c20cb9e2f5f27a947d5ac127e0b5dac893a98775",
+      "source_title": "sportscarclubofamerica",
+      "sentence": "May 25, 2019 08:05",
+      "page": 1,
+      "snippet": "May 25, 2019 08:05",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Announcement occurred during the weekend of the 2019 Indianapolis 500"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c20cb9e2f5f27a947d5ac127e0b5dac893a98775",
+      "source_title": "sportscarclubofamerica",
+      "text": "May 25, 2019 08:05 Road Racing, Runoffs, ClubRacing, Super Tour 7 Comments (Note: Watch video of announcement at SCCA Inc. Facebook page) INDIANAPOLIS (May 25, 2019) \u2013 Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that May 25, 2019 was the weekend of the 2019 Indianapolis 500",
+    "rewrite_suggestion": "On May 25, 2019, SCCA announced they will be returning to Indianapolis Motor Speedway in 2021.",
+    "proofs": [
+     "INDIANAPOLIS (May 25, 2019) \u2013 Indianapolis Motor Speedway (IMS) and Sports Car Club of America\u00ae (SCCA\u00ae) announced today that the annual SCCA National Championship Runoffs\u00ae will return to the road course at IMS Sept. 25-Oct. 3, 2021, for the 58th running of the unique championship motorsport event."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences prove the announcement date (May 25, 2019), that SCCA made the announcement, and that SCCA will return to IMS in 2021. However, the claim's additional component stating that May 25, 2019 was 'the weekend of the 2019 Indianapolis 500' is not stated anywhere in the source text. This is an unsourced aside that the author must either support with a separate citation or remove from the claim to match the cited source."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "At the end of the season, the new owners changed the name of the FireAntz to the Fayetteville Marksmen.",
+   "markers": [
+    "fayettevillemarksmen"
+   ],
+   "paper_ids": [
+    "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48",
+    "source_title": "fayettevillemarksmen",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Fireantz Rebrand, Become the Fayetteville Marksmen \u2013 Fayetteville Marksmen Skip to content (910) 321 0123 1960 Coliseum Dr. Fayetteville, NC 28306 # Fireantz Rebrand, Become the Fayetteville Marksmen Fayetteville Marksmen > Blog > News > Fireantz Rebrand, Become the Fayetteville Marksmen May 12, 2017 Fayetteville, N.C- The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Fireantz Rebrand, Become the",
+    "reason": "The passage explicitly states that the Fayetteville Fireantz changed their name to the Fayetteville Marksmen, and the source metadata indicates this happened as a rebrand.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Fireantz Rebrand, Become the Fayetteville Marksmen \u2013 Fayetteville Marksmen Skip to content (910) 321 0123 1960 Coliseum Dr. Fayetteville, NC 28306 # Fireantz Rebrand, Become the Fayetteville Marksmen Fayetteville Marksmen > Blog > News > Fireantz Rebrand, Become the Fayetteville Marksmen May 12, 2017 Fayetteville, N.C- The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen."
+   },
+   "evidences": [
+    {
+     "paper_id": "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48",
+     "source_title": "fayettevillemarksmen",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Fireantz Rebrand, Become the Fayetteville Marksmen \u2013 Fayetteville Marksmen Skip to content (910) 321 0123 1960 Coliseum Dr. Fayetteville, NC 28306 # Fireantz Rebrand, Become the Fayetteville Marksmen Fayetteville Marksmen > Blog > News > Fireantz Rebrand, Become the Fayetteville Marksmen May 12, 2017 Fayetteville, N.C- The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Fireantz Rebrand, Become the",
+     "reason": "The passage explicitly states that the Fayetteville Fireantz changed their name to the Fayetteville Marksmen, and the source metadata indicates this happened as a rebrand.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Fireantz Rebrand, Become the Fayetteville Marksmen \u2013 Fayetteville Marksmen Skip to content (910) 321 0123 1960 Coliseum Dr. Fayetteville, NC 28306 # Fireantz Rebrand, Become the Fayetteville Marksmen Fayetteville Marksmen > Blog > News > Fireantz Rebrand, Become the Fayetteville Marksmen May 12, 2017 Fayetteville, N.C- The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the Fayetteville Fireantz changed their name to the Fayetteville Marksmen, and the source metadata indicates this happened as a rebrand.",
+   "covering": {
+    "covered": [
+     {
+      "component": "new owners changed the name of the FireAntz to the Fayetteville Marksmen",
+      "paper_id": "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48",
+      "source_title": "fayettevillemarksmen",
+      "sentence": "(meta data) TITLE: Fireantz Rebrand, Become the Fayetteville Marksmen \u2013 Fayetteville Marksmen Skip to content (910) 321 0123 1960 Coliseum Dr. Fayetteville, NC 28306 # Fireantz Rebrand, Become the Fayetteville Marksmen Fayetteville Marksmen > Blog > News > Fireantz Rebrand, Become the Fayetteville Marksmen May 12, 2017 Fayetteville, N.C- The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Fireantz Rebrand, Become the"
+     }
+    ],
+    "uncovered": [
+     "At the end of the season"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48",
+      "source_title": "fayettevillemarksmen",
+      "text": "(meta data) TITLE: Fireantz Rebrand, Become the Fayetteville Marksmen \u2013 Fayetteville Marksmen Skip to content (910) 321 0123 1960 Coliseum Dr. Fayetteville, NC 28306 # Fireantz Rebrand, Become the Fayetteville Marksmen Fayetteville Marksmen > Blog > News > Fireantz Rebrand, Become the Fayetteville Marksmen May 12, 2017 Fayetteville, N.C- The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that the name change occurred at the end of the season.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the name change occurred at the end of the season",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the timing 'at the end of the season' and the characterization 'new owners'",
+    "rewrite_suggestion": "The Fayetteville FireAntz changed their name to the Fayetteville Marksmen, effective immediately, as announced on May 12, 2017.",
+    "proofs": [
+     "The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The Fayetteville Fireantz have announced that, effective immediately, their name will change to the Fayetteville Marksmen.",
+     "why": "The source states the change is effective immediately, which contradicts the claim that it happened 'at the end of the season'."
+    },
+    "why": "The shown sentence supports the name change component, but the claim includes two additional components\u2014'at the end of the season' and 'the new owners'\u2014neither of which is present in the source. Moreover, the source contradicts the timing by saying 'effective immediately'. Since substantive components are unprovable from the source, the author must add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "At the Australian Open in January, Herbert and doubles partner Mahut earned the Career Grand Slam in men's doubles after defeating Henri Kontinen and John Peers in the final, 6\u20134, 7\u20136.",
+   "markers": [
+    "pierrehuguesherbert"
+   ],
+   "paper_ids": [
+    "bc8e04a6685f5f1a63843903951999955d2d5a8d"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+    "source_title": "pierrehuguesherbert",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "# Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy.",
+    "page": 1,
+    "snippet": "# Mahut/Herbert Complete Career Grand Slam With",
+    "reason": "The passage explicitly states that Herbert and Mahut completed the Career Grand Slam at the Australian Open by defeating Kontinen and Peers 6-4, 7-6(1) in the final.",
+    "votes": "2-0",
+    "window": "# Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy. The fifth-seeded Frenchmen defeated No. 12 seeds and 2017 champions Kontinen and Peers 6-4, 7-6(1) in one hour and 38 minutes to add to their 2015 US Open, 2016 Wimbledon and 2018 Roland Garros titles."
+   },
+   "evidences": [
+    {
+     "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+     "source_title": "pierrehuguesherbert",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "# Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy.",
+     "page": 1,
+     "snippet": "# Mahut/Herbert Complete Career Grand Slam With",
+     "reason": "The passage explicitly states that Herbert and Mahut completed the Career Grand Slam at the Australian Open by defeating Kontinen and Peers 6-4, 7-6(1) in the final.",
+     "votes": "2-0",
+     "window": "# Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy. The fifth-seeded Frenchmen defeated No. 12 seeds and 2017 champions Kontinen and Peers 6-4, 7-6(1) in one hour and 38 minutes to add to their 2015 US Open, 2016 Wimbledon and 2018 Roland Garros titles."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Herbert and Mahut completed the Career Grand Slam at the Australian Open by defeating Kontinen and Peers 6-4, 7-6(1) in the final.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Herbert and doubles partner Mahut earned the Career Grand Slam in men's doubles",
+      "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+      "source_title": "pierrehuguesherbert",
+      "sentence": "# Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy.",
+      "page": 1,
+      "snippet": "# Mahut/Herbert Complete Career Grand Slam With"
+     },
+     {
+      "component": "Herbert and doubles partner Mahut earned the Career Grand Slam in men's doubles",
+      "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+      "source_title": "pierrehuguesherbert",
+      "sentence": "Nicolas Mahut and Pierre-Hugues Herbert have become the eighth men's doubles team to complete the Career Grand Slam.",
+      "page": 1,
+      "snippet": "Nicolas Mahut and Pierre-Hugues Herbert have become"
+     },
+     {
+      "component": "At the Australian Open in January",
+      "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+      "source_title": "pierrehuguesherbert",
+      "sentence": "# Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy.",
+      "page": 1,
+      "snippet": "# Mahut/Herbert Complete Career Grand Slam With"
+     },
+     {
+      "component": "after defeating Henri Kontinen and John Peers in the final",
+      "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+      "source_title": "pierrehuguesherbert",
+      "sentence": "The fifth-seeded Frenchmen defeated No. 12 seeds and 2017 champions Kontinen and Peers 6-4, 7-6(1) in one hour and 38 minutes to add to their 2015 US Open, 2016 Wimbledon and 2018 Roland Garros titles.",
+      "page": 1,
+      "snippet": "The fifth-seeded Frenchmen defeated No. 12 seeds"
+     },
+     {
+      "component": "6\u20134, 7\u20136",
+      "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+      "source_title": "pierrehuguesherbert",
+      "sentence": "The fifth-seeded Frenchmen defeated No. 12 seeds and 2017 champions Kontinen and Peers 6-4, 7-6(1) in one hour and 38 minutes to add to their 2015 US Open, 2016 Wimbledon and 2018 Roland Garros titles.",
+      "page": 1,
+      "snippet": "The fifth-seeded Frenchmen defeated No. 12 seeds"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+      "source_title": "pierrehuguesherbert",
+      "text": "Nicolas Mahut and Pierre-Hugues Herbert have become the eighth men's doubles team to complete the Career Grand Slam. # Mahut/Herbert Complete Career Grand Slam With Australian Open Title ATP Staff This article contains: Australian Open Match Report Story of the Season ATP Heritage Pierre-Hugues Herbert Nicolas Mahut First team to win all four majors since the Bryan brothers in 2006 Nicolas Mahut and Pierre-Hugues Herbert became the eighth men's doubles team in the sport's history to complete the Career Grand Slam of all four major championship crowns on Sunday afternoon by clinching their first Australian Open trophy. The fifth-seeded Frenchmen defeated No. 12 seeds and 2017 champions Kontinen and Peers 6-4, 7-6(1) in one hour and 38 minutes to add to their 2015 US Open, 2016 Wimbledon and 2018 Roland Garros titles.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t9",
+   "text": "In 1993, Missoni started her own label, but in 1997, she took over from her mother as creative director of the family brand.",
+   "markers": [
+    "angelamissoni"
+   ],
+   "paper_ids": [
+    "5956ee5c7cab021acd45ba07d384c87b04d2f386"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9571,
+   "evidence": {
+    "paper_id": "5956ee5c7cab021acd45ba07d384c87b04d2f386",
+    "source_title": "angelamissoni",
+    "supported": true,
+    "sentence": "At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997.",
+    "page": 1,
+    "snippet": "At this time, she launched her own",
+    "cosine": 0.9571,
+    "reason": "The passage states that Angela Missoni launched her own label and then took over as creative director of Missoni in 1997, which supports the claim's assertions about these events.",
+    "window": "Missoni began her professional life running a children's nursery and did not enter the fashion industry until her children were school age. At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997. Her designs and attitudes reinvigorated the label and placed it back in the fashion zeitgeist, marking the start of a period of commercial success lasting well over a decade."
+   },
+   "evidences": [
+    {
+     "paper_id": "5956ee5c7cab021acd45ba07d384c87b04d2f386",
+     "source_title": "angelamissoni",
+     "supported": true,
+     "sentence": "At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997.",
+     "page": 1,
+     "snippet": "At this time, she launched her own",
+     "cosine": 0.9571,
+     "reason": "The passage states that Angela Missoni launched her own label and then took over as creative director of Missoni in 1997, which supports the claim's assertions about these events.",
+     "window": "Missoni began her professional life running a children's nursery and did not enter the fashion industry until her children were school age. At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997. Her designs and attitudes reinvigorated the label and placed it back in the fashion zeitgeist, marking the start of a period of commercial success lasting well over a decade."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Angela Missoni launched her own label and then took over as creative director of Missoni in 1997, which supports the claim's assertions about these events.",
+   "covering": {
+    "covered": [
+     {
+      "component": "in 1997, she took over from her mother as creative director of the family brand",
+      "paper_id": "5956ee5c7cab021acd45ba07d384c87b04d2f386",
+      "source_title": "angelamissoni",
+      "sentence": "At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997.",
+      "page": 1,
+      "snippet": "At this time, she launched her own"
+     },
+     {
+      "component": "Missoni started her own label",
+      "paper_id": "5956ee5c7cab021acd45ba07d384c87b04d2f386",
+      "source_title": "angelamissoni",
+      "sentence": "At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997.",
+      "page": 1,
+      "snippet": "At this time, she launched her own",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "1993"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5956ee5c7cab021acd45ba07d384c87b04d2f386",
+      "source_title": "angelamissoni",
+      "text": "At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not state that Missoni started her own label in 1993.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Missoni started her own label in 1993",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts that Missoni started her own label in 1993 and that she took over as creative director in 1997. The source gives no year for the label launch, and while it mentions debuting her first line in 1997, it does not explicitly state that the takeover occurred in that year.",
+    "rewrite_suggestion": "After her children were school age, Missoni launched her own label; she later took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997.",
+    "proofs": [
+     "At this time, she launched her own label and, after a few seasons at her label, she took over from her mother as creative director of Missoni, debuting her first line for the brand in 1997."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not contain the year 1993 for the label launch, nor does it explicitly state that the takeover as creative director happened in 1997 (only the debut of her first line is dated to 1997). The shown sentence, while covering the takeover and the 1997 debut, lacks these specific year attributions. Therefore, the claim as written is not supported by the source."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "A very well-known trench magazine in the 21st century is the Wipers Times, the periodical of the British Sherwood Foresters.",
+   "markers": [
+    "trenchmagazine"
+   ],
+   "paper_ids": [
+    "d6431058f1a3287fd57d5df66630516bb63ea1c2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d6431058f1a3287fd57d5df66630516bb63ea1c2",
+    "source_title": "trenchmagazine",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "A good example of this is 'The Wipers Times', one of the finest of many trench publications produced on the Western Front during the First World War (1914-18).",
+    "page": 1,
+    "snippet": "A good example of this is 'The",
+    "reason": "The passage does not state that the Wipers Times is a 'very well-known trench magazine in the 21st century' or that it is the 'periodical of the British Sherwood Foresters'.",
+    "votes": "2-0",
+    "window": "A good example of this is 'The Wipers Times', one of the finest of many trench publications produced on the Western Front during the First World War (1914-18)."
+   },
+   "evidences": [
+    {
+     "paper_id": "d6431058f1a3287fd57d5df66630516bb63ea1c2",
+     "source_title": "trenchmagazine",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "A good example of this is 'The Wipers Times', one of the finest of many trench publications produced on the Western Front during the First World War (1914-18).",
+     "page": 1,
+     "snippet": "A good example of this is 'The",
+     "reason": "The passage does not state that the Wipers Times is a 'very well-known trench magazine in the 21st century' or that it is the 'periodical of the British Sherwood Foresters'.",
+     "votes": "2-0",
+     "window": "A good example of this is 'The Wipers Times', one of the finest of many trench publications produced on the Western Front during the First World War (1914-18)."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the Wipers Times is a 'very well-known trench magazine in the 21st century' or that it is the 'periodical of the British Sherwood Foresters'.",
+   "subject_guard": {
+    "subject": "Sherwood Foresters",
+    "missing_from": [
+     "d6431058f1a3287fd57d5df66630516bb63ea1c2"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Wipers Times is a very well-known trench magazine in the 21st century.",
+    "reason": "The passage directly states a fact about the Wipers Times and implies the citation would support this assertion. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claims that the Wipers Times is a 21st-century magazine, that it is 'very well-known' (source only says 'one of the finest'), and that it was the periodical of the British Sherwood Foresters.",
+    "rewrite_suggestion": "The Wipers Times was one of the finest trench magazines produced on the Western Front during the First World War (1914-18).",
+    "proofs": [
+     "A good example of this is 'The Wipers Times', one of the finest of many trench publications produced on the Western Front during the First World War (1914-18)."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "A good example of this is 'The Wipers Times', one of the finest of many trench publications produced on the Western Front during the First World War (1914-18).",
+     "why": "This sentence states the magazine existed during the First World War (1914-18), which is the 20th century, contradicting the claim that it was a 21st-century magazine."
+    },
+    "why": "The claim asserts that the Wipers Times is a 'very well-known trench magazine in the 21st century' and 'the periodical of the British Sherwood Foresters,' but the source only describes it as a trench publication from the First World War (1914-18) and never mentions the 21st century or the Sherwood Foresters. The shown sentence supports only that it is a trench publication from WWI, leaving multiple substantive components unprovable and one directly contradicted."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "A 193 million dollar contract for Trophy was awarded to Leonardo DRS, Rafael's American partner, in June 2018, in order to equip a significant number of Abrams M1A1/A2 MBT's with Trophy.",
+   "markers": [
+    "trophycountermeasure"
+   ],
+   "paper_ids": [
+    "ab85ba956da819457d54d35a3399f53f6d824182"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+    "source_title": "trophycountermeasure",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "The Trophy system was developed by an Israeli firm \u2014 Rafael Advanced Defense Systems Ltd. \u2014 and their long-standing partner, Leonardo DRS.",
+    "page": 1,
+    "snippet": "The Trophy system was developed by an",
+    "reason": "",
+    "votes": "2-0",
+    "window": "The Trophy system was developed by an Israeli firm \u2014 Rafael Advanced Defense Systems Ltd. \u2014 and their long-standing partner, Leonardo DRS. Taking steps in that direction, the Army has awarded a $193 million contract to Leonardo DRS for the Trophy Active Protection System in support of the M1 Abrams main battle tank's \"immediate operational requirements,\" according to a June 26 news release. Under the terms of the contract, Leonardo DRS will provide the Army with the Trophy systems, countermeasures and maintenance kits."
+   },
+   "evidences": [
+    {
+     "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+     "source_title": "trophycountermeasure",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "The Trophy system was developed by an Israeli firm \u2014 Rafael Advanced Defense Systems Ltd. \u2014 and their long-standing partner, Leonardo DRS.",
+     "page": 1,
+     "snippet": "The Trophy system was developed by an",
+     "reason": "",
+     "votes": "2-0",
+     "window": "The Trophy system was developed by an Israeli firm \u2014 Rafael Advanced Defense Systems Ltd. \u2014 and their long-standing partner, Leonardo DRS. Taking steps in that direction, the Army has awarded a $193 million contract to Leonardo DRS for the Trophy Active Protection System in support of the M1 Abrams main battle tank's \"immediate operational requirements,\" according to a June 26 news release. Under the terms of the contract, Leonardo DRS will provide the Army with the Trophy systems, countermeasures and maintenance kits."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "contract awarded to Leonardo DRS for Trophy",
+      "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+      "source_title": "trophycountermeasure",
+      "sentence": "Taking steps in that direction, the Army has awarded a $193 million contract to Leonardo DRS for the Trophy Active Protection System in support of the M1 Abrams main battle tank's \"immediate operational requirements,\" according to a June 26 news release.",
+      "page": 1,
+      "snippet": "Taking steps in that direction, the Army"
+     },
+     {
+      "component": "contract value of 193 million dollars",
+      "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+      "source_title": "trophycountermeasure",
+      "sentence": "Taking steps in that direction, the Army has awarded a $193 million contract to Leonardo DRS for the Trophy Active Protection System in support of the M1 Abrams main battle tank's \"immediate operational requirements,\" according to a June 26 news release.",
+      "page": 1,
+      "snippet": "Taking steps in that direction, the Army"
+     },
+     {
+      "component": "award date of June 2018",
+      "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+      "source_title": "trophycountermeasure",
+      "sentence": "The contract was first announced by the Pentagon on June 15, but lobbying for this type of active protection system began much earlier.",
+      "page": 1,
+      "snippet": "The contract was first announced by the"
+     },
+     {
+      "component": "purpose to equip Abrams MBTs with Trophy",
+      "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+      "source_title": "trophycountermeasure",
+      "sentence": "Taking steps in that direction, the Army has awarded a $193 million contract to Leonardo DRS for the Trophy Active Protection System in support of the M1 Abrams main battle tank's \"immediate operational requirements,\" according to a June 26 news release.",
+      "page": 1,
+      "snippet": "Taking steps in that direction, the Army"
+     },
+     {
+      "component": "Leonardo DRS is Rafael's American partner",
+      "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+      "source_title": "trophycountermeasure",
+      "sentence": "The Trophy system was developed by an Israeli firm \u2014 Rafael Advanced Defense Systems Ltd. \u2014 and their long-standing partner, Leonardo DRS.",
+      "page": 1,
+      "snippet": "The Trophy system was developed by an"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+      "source_title": "trophycountermeasure",
+      "text": "Taking steps in that direction, the Army has awarded a $193 million contract to Leonardo DRS for the Trophy Active Protection System in support of the M1 Abrams main battle tank's \"immediate operational requirements,\" according to a June 26 news release. The Trophy system was developed by an Israeli firm \u2014 Rafael Advanced Defense Systems Ltd. \u2014 and their long-standing partner, Leonardo DRS. Rafael currently fields \"some 1,000 systems to all major Israeli ground combat platforms,\" according to the release. Trophy is possibly the only combat-proven active protection system on the market. Variants of the system have been filmed intercepting shots fired on Israeli armored vehicles on the Gaza strip dating back to 2014. Trophy's active protection system works by using a radar to detect and classify incoming rounds. The system tracks the threat, computes parameters necessary to intercept it, and transmits the alert to the tank's crew. If the incoming round poses a danger, the system launches countermeasures to intercept it before it strikes the tank. The contract was first announced by the Pentagon on June 15, but lobbying for this type of active protection system began much earlier.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t12",
+   "text": "In Week 12, Watt recorded nine tackles, 1.5 sacks and a forced fumble in a 34-17 win over the Tennessee Titans, earning him AFC Defensive Player of the Week.",
+   "markers": [
+    "jjwatt"
+   ],
+   "paper_ids": [
+    "fc886923259fe0e386faf44c175ef22d3f22d216"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+    "source_title": "jjwatt",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans.",
+    "page": 1,
+    "snippet": "Houston Texans defensive end J.J. Watt was",
+    "reason": "The passage does not mention the number of tackles or the forced fumble.",
+    "votes": "2-0",
+    "window": "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans. Watt was responsible for 1.5 of Houston's six sacks, but he also helped spring Christian Covington, who had a career-high 2.5 QB takedowns."
+   },
+   "evidences": [
+    {
+     "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+     "source_title": "jjwatt",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans.",
+     "page": 1,
+     "snippet": "Houston Texans defensive end J.J. Watt was",
+     "reason": "The passage does not mention the number of tackles or the forced fumble.",
+     "votes": "2-0",
+     "window": "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans. Watt was responsible for 1.5 of Houston's six sacks, but he also helped spring Christian Covington, who had a career-high 2.5 QB takedowns."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the number of tackles or the forced fumble.",
+   "component_check": {
+    "found": [
+     "The game was a 34-17 win over the Tennessee Titans",
+     "Watt earned AFC Defensive Player of the Week"
+    ],
+    "missing": [
+     "In Week 12, Watt recorded nine tackles, 1.5 sacks and a forced fumble"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The game was a 34-17 win over the Tennessee Titans",
+      "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+      "source_title": "jjwatt",
+      "sentence": "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans.",
+      "page": 1
+     },
+     {
+      "component": "Watt earned AFC Defensive Player of the Week",
+      "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+      "source_title": "jjwatt",
+      "sentence": "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Watt recorded nine tackles, 1.5 sacks and a forced fumble in a 34-17 win over the Tennessee Titans, earning him AFC Defensive Player of the Week.",
+    "reason": "The passage directly attributes specific game statistics and an award to the cited source, indicating the source is expected to prove these facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "nine tackles and a forced fumble",
+    "rewrite_suggestion": "In Week 12, Watt recorded 1.5 sacks in a 34-17 win over the Tennessee Titans, earning him AFC Defensive Player of the Week.",
+    "proofs": [
+     "Week 12 of the 2018 NFL season witnessed one quarterback break a single-game record with 25 consecutive completions.",
+     "Houston Texans defensive end J.J. Watt was named the AFC Defensive Player of the Week following his big game in a 34-17 win over the Tennessee Titans.",
+     "Watt was responsible for 1.5 of Houston's six sacks, but he also helped spring Christian Covington, who had a career-high 2.5 QB takedowns."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes 'nine tackles' and 'a forced fumble' which are not mentioned anywhere in the cited source. The source only confirms 1.5 sacks, the win, and the Player of the Week award. Therefore, the author must either add a citation for those statistics or rewrite the claim to remove them."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "In its fourth week, the album remained at number one for a second week, moving 56,000 album-equivalent units with 749 in traditional album sales, making it the lowest-selling number-one album since \"Billboard\" began using Nielsen SoundScan to track unit sales, bringing its four-week total to 262,000 album-equivalent units.",
+   "markers": [
+    "hoodieszn"
+   ],
+   "paper_ids": [
+    "05713c5c0ff36ee7fbc6f0012eb73cf190270f53"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "05713c5c0ff36ee7fbc6f0012eb73cf190270f53",
+    "source_title": "hoodieszn",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "With no major new releases to compete with, A Boogie Wit Da Hoodie's \"Hoodie SZN\" holds the top spot for a second week with the equivalent of 56,000 sales in the United States, down 4 percent from last week, according to Nielsen.",
+    "page": 1,
+    "snippet": "With no major new releases to compete",
+    "reason": "The passage does not state the album's four-week total or that it was the lowest-selling number-one album since Nielsen SoundScan began tracking unit sales.",
+    "votes": "2-0",
+    "window": "With no major new releases to compete with, A Boogie Wit Da Hoodie's \"Hoodie SZN\" holds the top spot for a second week with the equivalent of 56,000 sales in the United States, down 4 percent from last week, according to Nielsen. The breakdown of that number is also almost identical to that of last week, with 81 million streams and fewer than 1,000 copies sold as a complete album."
+   },
+   "evidences": [
+    {
+     "paper_id": "05713c5c0ff36ee7fbc6f0012eb73cf190270f53",
+     "source_title": "hoodieszn",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "With no major new releases to compete with, A Boogie Wit Da Hoodie's \"Hoodie SZN\" holds the top spot for a second week with the equivalent of 56,000 sales in the United States, down 4 percent from last week, according to Nielsen.",
+     "page": 1,
+     "snippet": "With no major new releases to compete",
+     "reason": "The passage does not state the album's four-week total or that it was the lowest-selling number-one album since Nielsen SoundScan began tracking unit sales.",
+     "votes": "2-0",
+     "window": "With no major new releases to compete with, A Boogie Wit Da Hoodie's \"Hoodie SZN\" holds the top spot for a second week with the equivalent of 56,000 sales in the United States, down 4 percent from last week, according to Nielsen. The breakdown of that number is also almost identical to that of last week, with 81 million streams and fewer than 1,000 copies sold as a complete album."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the album's four-week total or that it was the lowest-selling number-one album since Nielsen SoundScan began tracking unit sales.",
+   "component_check": {
+    "found": [
+     "The album moved 56,000 album-equivalent units."
+    ],
+    "missing": [
+     "In its fourth week, the album remained at number one for a second week.",
+     "The album had 749 in traditional album sales.",
+     "This made it the lowest-selling number-one album since \"Billboard\" began using Nielsen SoundScan to track unit sales."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The album moved 56,000 album-equivalent units.",
+      "paper_id": "05713c5c0ff36ee7fbc6f0012eb73cf190270f53",
+      "source_title": "hoodieszn",
+      "sentence": "With no major new releases to compete with, A Boogie Wit Da Hoodie's \"Hoodie SZN\" holds the top spot for a second week with the equivalent of 56,000 sales in the United States, down 4 percent from last week, according to Nielsen.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In its fourth week, the album remained at number one for a second week, moving 56,000 album-equivalent units with 749 in traditional album sales, making it the lowest-selling number-one album since \"Billboard\" began using Nielsen SoundScan to track unit sales, bringing its four-week total to 262,000 album-equivalent units.",
+    "reason": "The passage asserts specific facts and figures (album sales, chart position, unit tracking) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as these are presented as findings from the tracking data.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes unsupported specifics: that it's the album's fourth week, that traditional sales were exactly 749, that it's the lowest-selling number-one since Nielson SoundScan, and a four-week total of 262,000 units. None of these appear in the source.",
+    "rewrite_suggestion": "In its second week at number one, the album moved 56,000 album-equivalent units with fewer than 1,000 traditional album sales, according to the source.",
+    "proofs": [
+     "With no major new releases to compete with, A Boogie Wit Da Hoodie's \"Hoodie SZN\" holds the top spot for a second week with the equivalent of 56,000 sales in the United States, down 4 percent from last week, according to Nielsen.",
+     "The breakdown of that number is also almost identical to that of last week, with 81 million streams and fewer than 1,000 copies sold as a complete album."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the second week at #1 and 56,000 units. The claim adds several details not found in the source: 'fourth week', exact 749 sales, 'lowest-selling' superlative, and a four-week total. Since these are not provable from the provided source, the author must either cite a different source or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "Minogue released a greatest hits compilation \"Step Back in Time: The Definitive Collection\" on 28 June 2019, featuring \"New York City\" as the lead single.",
+   "markers": [
+    "kylieminogue"
+   ],
+   "paper_ids": [
+    "db28443127d5b11b4bfbe564bf6e6feb69cd688f"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9097,
+   "evidence": {
+    "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+    "source_title": "kylieminogue",
+    "supported": true,
+    "sentence": "Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3).",
+    "page": 1,
+    "snippet": "Step Back In Time: The Definitive Collection",
+    "cosine": 0.9097,
+    "reason": "The passage directly states that the album 'Step Back In Time: The Definitive Collection' was released on June 28 and features the new single 'New York City'.",
+    "window": "By Jack White Kylie Minogue has announced a new greatest hits album. Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3). The hits collection (available to pre-order now) features 42 of Kylie's signature songs, the tracklist including her seven UK Number 1s including the million-selling Can't Get You Out Of My Head, and a further 23 tracks that hit the Official Singles Chart Top 10."
+   },
+   "evidences": [
+    {
+     "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+     "source_title": "kylieminogue",
+     "supported": true,
+     "sentence": "Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3).",
+     "page": 1,
+     "snippet": "Step Back In Time: The Definitive Collection",
+     "cosine": 0.9097,
+     "reason": "The passage directly states that the album 'Step Back In Time: The Definitive Collection' was released on June 28 and features the new single 'New York City'.",
+     "window": "By Jack White Kylie Minogue has announced a new greatest hits album. Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3). The hits collection (available to pre-order now) features 42 of Kylie's signature songs, the tracklist including her seven UK Number 1s including the million-selling Can't Get You Out Of My Head, and a further 23 tracks that hit the Official Singles Chart Top 10."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the album 'Step Back In Time: The Definitive Collection' was released on June 28 and features the new single 'New York City'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Minogue released a greatest hits compilation \"Step Back in Time: The Definitive Collection\"",
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "sentence": "Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3).",
+      "page": 1,
+      "snippet": "Step Back In Time: The Definitive Collection"
+     },
+     {
+      "component": "Minogue released a greatest hits compilation \"Step Back in Time: The Definitive Collection\"",
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "sentence": "By Jack White Kylie Minogue has announced a new greatest hits album.",
+      "page": 1,
+      "snippet": "By Jack White Kylie Minogue has announced"
+     },
+     {
+      "component": "Minogue released a greatest hits compilation \"Step Back in Time: The Definitive Collection\"",
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "sentence": "(meta data) TITLE: Kylie Minogue announces new greatest hits album New Releases New Releases 02 May 2019 # Kylie Minogue announces greatest hits album Step Back In Time: The Definitive Collection ## The album is being released on vinyl, cassette, CD, and digital download.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kylie Minogue announces new"
+     },
+     {
+      "component": "on 28 June 2019",
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "sentence": "Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3).",
+      "page": 1,
+      "snippet": "Step Back In Time: The Definitive Collection"
+     },
+     {
+      "component": "on 28 June 2019",
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "sentence": "(meta data) TITLE: Kylie Minogue announces new greatest hits album New Releases New Releases 02 May 2019 # Kylie Minogue announces greatest hits album Step Back In Time: The Definitive Collection ## The album is being released on vinyl, cassette, CD, and digital download.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kylie Minogue announces new"
+     },
+     {
+      "component": "featuring \"New York City\" as the lead single",
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "sentence": "Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3).",
+      "page": 1,
+      "snippet": "Step Back In Time: The Definitive Collection"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+      "source_title": "kylieminogue",
+      "text": "(meta data) TITLE: Kylie Minogue announces new greatest hits album New Releases New Releases 02 May 2019 # Kylie Minogue announces greatest hits album Step Back In Time: The Definitive Collection ## The album is being released on vinyl, cassette, CD, and digital download. By Jack White Kylie Minogue has announced a new greatest hits album. Step Back In Time: The Definitive Collection is released on Friday June 28 and features her new single New York City, released tomorrow (May 3).",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t15",
+   "text": "While fighting in northwest-Pakistan between the Pakistani Armed Forces and the Pakistani Taliban may have been one reason, Sunni Shia sectarian strife was also suggested as a possible driver for their flight.",
+   "markers": [
+    "pakistanisinafghanistan"
+   ],
+   "paper_ids": [
+    "a55efd02f212cff955913c7a3e0ed92a09146fe4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8393,
+   "evidence": {
+    "paper_id": "a55efd02f212cff955913c7a3e0ed92a09146fe4",
+    "source_title": "pakistanisinafghanistan",
+    "supported": true,
+    "sentence": "It is the first time so many people have crossed this way as for years it was Afghans fleeing fighting.",
+    "page": 1,
+    "snippet": "It is the first time so many",
+    "cosine": 0.8393,
+    "reason": "The passage directly states that clashes between Pakistan's Shia and Sunni groups have forced people to flee, supporting the claim that sectarian strife was a suggested driver for their flight.",
+    "window": "The UN refugee agency says clashes between Pakistan's Shia and Sunni groups have forced people to flee. It is the first time so many people have crossed this way as for years it was Afghans fleeing fighting. It's the first time that we see this in very large numbers Salvatore Lombardo, UNHCR The refugees have been crossing the border between Pakistan's tribal areas and south-eastern Afghan provinces."
+   },
+   "evidences": [
+    {
+     "paper_id": "a55efd02f212cff955913c7a3e0ed92a09146fe4",
+     "source_title": "pakistanisinafghanistan",
+     "supported": true,
+     "sentence": "It is the first time so many people have crossed this way as for years it was Afghans fleeing fighting.",
+     "page": 1,
+     "snippet": "It is the first time so many",
+     "cosine": 0.8393,
+     "reason": "The passage directly states that clashes between Pakistan's Shia and Sunni groups have forced people to flee, supporting the claim that sectarian strife was a suggested driver for their flight.",
+     "window": "The UN refugee agency says clashes between Pakistan's Shia and Sunni groups have forced people to flee. It is the first time so many people have crossed this way as for years it was Afghans fleeing fighting. It's the first time that we see this in very large numbers Salvatore Lombardo, UNHCR The refugees have been crossing the border between Pakistan's tribal areas and south-eastern Afghan provinces."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that clashes between Pakistan's Shia and Sunni groups have forced people to flee, supporting the claim that sectarian strife was a suggested driver for their flight.",
+   "covering": {
+    "covered": [
+     {
+      "component": "fighting in northwest-Pakistan between the Pakistani Armed Forces and the Pakistani Taliban may have been one reason for flight",
+      "paper_id": "a55efd02f212cff955913c7a3e0ed92a09146fe4",
+      "source_title": "pakistanisinafghanistan",
+      "sentence": "Thousands of Pakistanis have fled into Afghanistan with the security situation deteriorating in Pakistan's tribal regions over the past week.",
+      "page": 1,
+      "snippet": "Thousands of Pakistanis have fled into Afghanistan"
+     },
+     {
+      "component": "Sunni Shia sectarian strife was also suggested as a possible driver for their flight",
+      "paper_id": "a55efd02f212cff955913c7a3e0ed92a09146fe4",
+      "source_title": "pakistanisinafghanistan",
+      "sentence": "The UN refugee agency says clashes between Pakistan's Shia and Sunni groups have forced people to flee.",
+      "page": 1,
+      "snippet": "The UN refugee agency says clashes between"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a55efd02f212cff955913c7a3e0ed92a09146fe4",
+      "source_title": "pakistanisinafghanistan",
+      "text": "Thousands of Pakistanis have fled into Afghanistan with the security situation deteriorating in Pakistan's tribal regions over the past week. Hundreds of families, comprising some 6,000 mainly women and children, have been crossing the border. The UN refugee agency says clashes between Pakistan's Shia and Sunni groups have forced people to flee.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t16",
+   "text": "released on November 6 along with a music video.",
+   "markers": [
+    "keyentertainer"
+   ],
+   "paper_ids": [
+    "690d257b70cea82a89fb7f6736b548e440418b12"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "690d257b70cea82a89fb7f6736b548e440418b12",
+    "source_title": "keyentertainer",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Released on Tuesday, the track opens with airy strings and Soyou's breathy voice before morphing into a rhythmic pop song that incorporates tropical house synths and R&B melodies as Key professes his dedication.",
+    "page": 1,
+    "snippet": "Released on Tuesday, the track opens with",
+    "reason": "The release date of November 6 is not mentioned in the passage.",
+    "votes": "2-0",
+    "window": "Released on Tuesday, the track opens with airy strings and Soyou's breathy voice before morphing into a rhythmic pop song that incorporates tropical house synths and R&B melodies as Key professes his dedication. The song was released through a throwback music video that sees Key as a car mechanic who takes an interstellar trip in his suped-up, flying Mustang."
+   },
+   "evidences": [
+    {
+     "paper_id": "690d257b70cea82a89fb7f6736b548e440418b12",
+     "source_title": "keyentertainer",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Released on Tuesday, the track opens with airy strings and Soyou's breathy voice before morphing into a rhythmic pop song that incorporates tropical house synths and R&B melodies as Key professes his dedication.",
+     "page": 1,
+     "snippet": "Released on Tuesday, the track opens with",
+     "reason": "The release date of November 6 is not mentioned in the passage.",
+     "votes": "2-0",
+     "window": "Released on Tuesday, the track opens with airy strings and Soyou's breathy voice before morphing into a rhythmic pop song that incorporates tropical house synths and R&B melodies as Key professes his dedication. The song was released through a throwback music video that sees Key as a car mechanic who takes an interstellar trip in his suped-up, flying Mustang."
+    }
+   ],
+   "votes": null,
+   "reason": "The release date of November 6 is not mentioned in the passage.",
+   "component_check": {
+    "found": [
+     "along with a music video"
+    ],
+    "missing": [
+     "released on November 6"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "along with a music video",
+      "paper_id": "690d257b70cea82a89fb7f6736b548e440418b12",
+      "source_title": "keyentertainer",
+      "sentence": "The song was released through a throwback music video that sees Key as a car mechanic who takes an interstellar trip in his suped-up, flying Mustang.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific date and event, which is a factual claim that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "released on November 6",
+    "rewrite_suggestion": "The track was released on Tuesday along with a music video.",
+    "proofs": [
+     "The song was released through a throwback music video that sees Key as a car mechanic who takes an interstellar trip in his suped-up, flying Mustang."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim specifies a release date of November 6, but the source only says 'Released on Tuesday' and never mentions that date. The 'along with a music video' part is present in the source but was not shown; the shown sentence only describes the track's musical style. Therefore, the author must either add a different citation for the date or rewrite the claim to match what the source provides."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "On July 31, 2014, Park made her debut as solo artist under the pseudonym HA:TFELT (an amalgamation of the words \"hot\" and \"heartfelt;\" the British pronunciation of \u201cheartfelt\") with debut mini album \"Me?\".",
+   "markers": [
+    "parkyeeun"
+   ],
+   "paper_ids": [
+    "e78ac916db6e0c8cebc2e93d9d5962e4d9761375"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+    "source_title": "parkyeeun",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Debuting under the stage name \"HA:TFELT,\" Yenny's new seven-track EP is a far cry from a Wonder Girls-type sound, edging more toward a rock approach than K-pop.",
+    "page": 1,
+    "snippet": "Debuting under the stage name \"HA:TFELT,\" Yenny's",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Debuting under the stage name \"HA:TFELT,\" Yenny's new seven-track EP is a far cry from a Wonder Girls-type sound, edging more toward a rock approach than K-pop. Wonder Girls member Ye-eun, also known as Yenny, has stepped out of her girl group shell with the release of her first solo EP \"Me?\""
+   },
+   "evidences": [
+    {
+     "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+     "source_title": "parkyeeun",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Debuting under the stage name \"HA:TFELT,\" Yenny's new seven-track EP is a far cry from a Wonder Girls-type sound, edging more toward a rock approach than K-pop.",
+     "page": 1,
+     "snippet": "Debuting under the stage name \"HA:TFELT,\" Yenny's",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Debuting under the stage name \"HA:TFELT,\" Yenny's new seven-track EP is a far cry from a Wonder Girls-type sound, edging more toward a rock approach than K-pop. Wonder Girls member Ye-eun, also known as Yenny, has stepped out of her girl group shell with the release of her first solo EP \"Me?\""
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Park made her debut as solo artist",
+      "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+      "source_title": "parkyeeun",
+      "sentence": "Wonder Girls' Yenny makes solo debut as HA:TFELT",
+      "page": 1,
+      "snippet": "Wonder Girls' Yenny makes solo debut as"
+     },
+     {
+      "component": "under the pseudonym HA:TFELT",
+      "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+      "source_title": "parkyeeun",
+      "sentence": "Wonder Girls' Yenny makes solo debut as HA:TFELT",
+      "page": 1,
+      "snippet": "Wonder Girls' Yenny makes solo debut as"
+     },
+     {
+      "component": "with debut mini album \"Me?\"",
+      "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+      "source_title": "parkyeeun",
+      "sentence": "Wonder Girls member Ye-eun, also known as Yenny, has stepped out of her girl group shell with the release of her first solo EP \"Me?\"",
+      "page": 1,
+      "snippet": "Wonder Girls member Ye-eun, also known as",
+      "via": "escalation"
+     },
+     {
+      "component": "date of debut",
+      "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+      "source_title": "parkyeeun",
+      "sentence": "Wonder Girls' Yenny makes solo debut as HA:TFELT",
+      "page": 1,
+      "snippet": "Wonder Girls' Yenny makes solo debut as",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "HA:TFELT (an amalgamation of the words \"hot\" and \"heartfelt; the British pronunciation of \u201cheartfelt\")",
+     "On July 31, 2014"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+      "source_title": "parkyeeun",
+      "text": "Wonder Girls' Yenny makes solo debut as HA:TFELT By Korea Herald Published : Jul 31, 2014 - 20:48 Updated : Jul 31, 2014 - 20:48 Wonder Girls member Ye-eun, also known as Yenny, has stepped out of her girl group shell with the release of her first solo EP \"Me?\"",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that HA:TFELT is an amalgamation of the words 'hot' and 'heartfelt' or that it is the British pronunciation of 'heartfelt'.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "HA:TFELT is an amalgamation of the words 'hot' and 'heartfelt",
+      "found_in": [],
+      "searched": 0
+     },
+     {
+      "component": "it is the British pronunciation of 'heartfelt'",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim specifies the debut date as July 31, 2014 (the source indicates a Monday, not July 31) and provides an etymology for HA:TFELT that is not present in the source.",
+    "rewrite_suggestion": "Park made her solo debut as HA:TFELT with the mini album 'Me?'.",
+    "proofs": [
+     "Wonder Girls' Yenny makes solo debut as HA:TFELT",
+     "Debuting under the stage name \"HA:TFELT,\" Yenny's new seven-track EP is a far cry from a Wonder Girls-type sound, edging more toward a rock approach than K-pop.",
+     "Wonder Girls member Ye-eun, also known as Yenny, has stepped out of her girl group shell with the release of her first solo EP \"Me?\" on Monday."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Wonder Girls member Ye-eun, also known as Yenny, has stepped out of her girl group shell with the release of her first solo EP \"Me?\" on Monday.",
+     "why": "The claim states the debut was on July 31, 2014 (a Thursday), but the source says it occurred on a Monday, which contradicts the specific date."
+    },
+    "why": "The claim includes two components not found in the source: the exact date (July 31, 2014) and the etymology of HA:TFELT. The source states the release happened on a Monday, not July 31, and offers no explanation for the stage name. While the solo debut, pseudonym, and album title are supported by the shown sentences, the unsupported components require the author to either add a citation or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "The song was teased after Martin Shkreli was able to acquire the project in 2016 and the song was played on livestream.",
+   "markers": [
+    "thacarterv"
+   ],
+   "paper_ids": [
+    "0b79ba829ce48ae8ae3f6f3a0d97c219fe26deec"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0b79ba829ce48ae8ae3f6f3a0d97c219fe26deec",
+    "source_title": "thacarterv",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "It first came to light in 2017 when Pharmabro Martin Shkreli leaked the song during a live stream.",
+    "page": 1,
+    "snippet": "It first came to light in 2017",
+    "reason": "The claim states the song was acquired in 2016, but the passage only mentions it was leaked in 2017.",
+    "votes": "2-0",
+    "window": "It first came to light in 2017 when Pharmabro Martin Shkreli leaked the song during a live stream."
+   },
+   "evidences": [
+    {
+     "paper_id": "0b79ba829ce48ae8ae3f6f3a0d97c219fe26deec",
+     "source_title": "thacarterv",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "It first came to light in 2017 when Pharmabro Martin Shkreli leaked the song during a live stream.",
+     "page": 1,
+     "snippet": "It first came to light in 2017",
+     "reason": "The claim states the song was acquired in 2016, but the passage only mentions it was leaked in 2017.",
+     "votes": "2-0",
+     "window": "It first came to light in 2017 when Pharmabro Martin Shkreli leaked the song during a live stream."
+    }
+   ],
+   "votes": null,
+   "reason": "The claim states the song was acquired in 2016, but the passage only mentions it was leaked in 2017.",
+   "component_check": {
+    "found": [
+     "The song was played on livestream"
+    ],
+    "missing": [
+     "Martin Shkreli acquired the project in 2016",
+     "The song was teased after the acquisition"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The song was played on livestream",
+      "paper_id": "0b79ba829ce48ae8ae3f6f3a0d97c219fe26deec",
+      "source_title": "thacarterv",
+      "sentence": "It first came to light in 2017 when Pharmabro Martin Shkreli leaked the song during a live stream.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The song was teased after Martin Shkreli was able to acquire the project in 2016 and the song was played on livestream.",
+    "reason": "The passage asserts specific facts about an event (acquisition of a project, song being played on livestream) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the song was teased (source says 'leaked') and that the acquisition occurred in 2016.",
+    "rewrite_suggestion": "The song was leaked by Martin Shkreli during a live stream in 2017.",
+    "proofs": [
+     "It first came to light in 2017 when Pharmabro Martin Shkreli leaked the song during a live stream."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two components not supported by the source: the year 2016 for the acquisition is absent, and the source describes the event as a 'leak' rather than a 'tease'. The shown sentence does verify that the song was played on a livestream in 2017, but the additional details are unsourced. The author must either provide citations for those parts or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "This was the second FA Cup final to feature both sides; the first was won by Arsenal in 2002.",
+   "markers": [
+    "2017facupfinal"
+   ],
+   "paper_ids": [
+    "4f5cda6657ce424ae719795a737ab89db3d452f6"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9141,
+   "evidence": {
+    "paper_id": "4f5cda6657ce424ae719795a737ab89db3d452f6",
+    "source_title": "2017facupfinal",
+    "supported": true,
+    "sentence": "Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners.",
+    "page": 1,
+    "snippet": "Previous slide Next slide 1 of View",
+    "cosine": 0.9141,
+    "reason": "The passage explicitly states that the last time these two clubs met in an FA Cup final was in 2002, and that Arsenal won that match 2-0.",
+    "window": "# Arsenal vs Chelsea 2002 FA Cup finalists - where are they now? Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners. But who else played that day and where are they now?"
+   },
+   "evidences": [
+    {
+     "paper_id": "4f5cda6657ce424ae719795a737ab89db3d452f6",
+     "source_title": "2017facupfinal",
+     "supported": true,
+     "sentence": "Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners.",
+     "page": 1,
+     "snippet": "Previous slide Next slide 1 of View",
+     "cosine": 0.9141,
+     "reason": "The passage explicitly states that the last time these two clubs met in an FA Cup final was in 2002, and that Arsenal won that match 2-0.",
+     "window": "# Arsenal vs Chelsea 2002 FA Cup finalists - where are they now? Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners. But who else played that day and where are they now?"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the last time these two clubs met in an FA Cup final was in 2002, and that Arsenal won that match 2-0.",
+   "covering": {
+    "covered": [
+     {
+      "component": "first FA Cup final between these sides was won by Arsenal",
+      "paper_id": "4f5cda6657ce424ae719795a737ab89db3d452f6",
+      "source_title": "2017facupfinal",
+      "sentence": "Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners.",
+      "page": 1,
+      "snippet": "Previous slide Next slide 1 of View"
+     },
+     {
+      "component": "first FA Cup final was in 2002",
+      "paper_id": "4f5cda6657ce424ae719795a737ab89db3d452f6",
+      "source_title": "2017facupfinal",
+      "sentence": "Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners.",
+      "page": 1,
+      "snippet": "Previous slide Next slide 1 of View"
+     }
+    ],
+    "uncovered": [
+     "second FA Cup final to feature both sides"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4f5cda6657ce424ae719795a737ab89db3d452f6",
+      "source_title": "2017facupfinal",
+      "text": "Previous slide Next slide 1 of View All Skip Ad The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the ordinal claims that this is the second FA Cup final between Arsenal and Chelsea and that the 2002 final was the first",
+    "rewrite_suggestion": "The last time the two London clubs met in an FA Cup final was in 2002, when Arsenal won 2-0.",
+    "proofs": [
+     "The last time the two London clubs met in an FA Cup final was in 2002, when goals from Ray Parlour and Freddie Ljungberg saw the Gunners run out 2-0 winners."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms that Arsenal won the 2002 final, but neither it nor any other sentence in the source states that this (the 2017 final) is the second meeting or that the 2002 final was the first. The ordinals 'second' and 'first' are interpretive claims not supported by the source, so the author must either add a citation that explicitly states them or rewrite the claim to only say what the source provides."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "On 13 June 2013, US government officials said the administration, after days of high-level meetings, had approved providing lethal arms to the Supreme Military Council (SMC).",
+   "markers": [
+    "foreigninvolvementinthes"
+   ],
+   "paper_ids": [
+    "e690888e29dac4e0c53a8321f48090d510e3cfd0"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8976,
+   "evidence": {
+    "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+    "source_title": "foreigninvolvementinthes",
+    "supported": true,
+    "sentence": "ET June 14, 2013CLOSE President Barack Obama has authorized sending weapons to Syrian rebels, after the White House disclosed that the United States has conclusive evidence President Bashar Assad's government used chemical weapons against opposition forces.",
+    "page": 1,
+    "snippet": "ET June 14, 2013CLOSE President Barack Obama",
+    "cosine": 0.8976,
+    "reason": "The passage states that on June 13, 2013, President Obama authorized sending weapons to Syrian rebels, which supports the claim that US government officials said the administration had approved providing lethal arms to the Supreme Military Council (SMC).",
+    "window": "ET June 13, 2013 | Updated 7:10 a.m. ET June 14, 2013CLOSE President Barack Obama has authorized sending weapons to Syrian rebels, after the White House disclosed that the United States has conclusive evidence President Bashar Assad's government used chemical weapons against opposition forces. (June 13)"
+   },
+   "evidences": [
+    {
+     "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+     "source_title": "foreigninvolvementinthes",
+     "supported": true,
+     "sentence": "ET June 14, 2013CLOSE President Barack Obama has authorized sending weapons to Syrian rebels, after the White House disclosed that the United States has conclusive evidence President Bashar Assad's government used chemical weapons against opposition forces.",
+     "page": 1,
+     "snippet": "ET June 14, 2013CLOSE President Barack Obama",
+     "cosine": 0.8976,
+     "reason": "The passage states that on June 13, 2013, President Obama authorized sending weapons to Syrian rebels, which supports the claim that US government officials said the administration had approved providing lethal arms to the Supreme Military Council (SMC).",
+     "window": "ET June 13, 2013 | Updated 7:10 a.m. ET June 14, 2013CLOSE President Barack Obama has authorized sending weapons to Syrian rebels, after the White House disclosed that the United States has conclusive evidence President Bashar Assad's government used chemical weapons against opposition forces. (June 13)"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that on June 13, 2013, President Obama authorized sending weapons to Syrian rebels, which supports the claim that US government officials said the administration had approved providing lethal arms to the Supreme Military Council (SMC).",
+   "covering": {
+    "covered": [
+     {
+      "component": "Date of US government announcement of approved lethal arms to SMC",
+      "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+      "source_title": "foreigninvolvementinthes",
+      "sentence": "ET June 13, 2013 | Updated 7:10 a.m.",
+      "page": 1,
+      "snippet": "ET June 13, 2013 | Updated 7:10"
+     },
+     {
+      "component": "US government officials said the administration approved providing lethal arms",
+      "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+      "source_title": "foreigninvolvementinthes",
+      "sentence": "But a government official knowledgeable about the plans confirmed to USA TODAY that the new assistance would include arming the rebels.",
+      "page": 1,
+      "snippet": "But a government official knowledgeable about the"
+     },
+     {
+      "component": "Lethal arms approved for the Supreme Military Council (SMC)",
+      "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+      "source_title": "foreigninvolvementinthes",
+      "sentence": "White House Deputy National Security Adviser Ben Rhodes said that the president has decided to step up \"military support\" to the main opposition group, the Supreme Military Council, to bolster its effectiveness, but declined to \"inventory\" what equipment would be provided.",
+      "page": 1,
+      "snippet": "White House Deputy National Security Adviser Ben"
+     }
+    ],
+    "uncovered": [
+     "Approval was after days of high-level meetings"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+      "source_title": "foreigninvolvementinthes",
+      "text": "ET June 13, 2013 | Updated 7:10 a.m. ET June 14, 2013CLOSE President Barack Obama has authorized sending weapons to Syrian rebels, after the White House disclosed that the United States has conclusive evidence President Bashar Assad's government used chemical weapons against opposition forces. (June 13) President Obama(Photo: Evan Vucci, AP) ### Story Highlights Announcement comes ahead of next week's G-8 summit in Northern IrelandIntelligence community estimates that 100 to 150 people have died from detected chemical weapons attacks in Syria to dateWhite House stopped short of saying it would arm Syrian rebels WASHINGTON \u2014 The Obama administration announced Thursday that it has determined that the Syrian government has deployed chemical weapons against opposition groups, crossing what President Obama had called a \"red line\" and prompting him to provide direct military aid to the Syrian opposition groups for the first time. White House Deputy National Security Adviser Ben Rhodes said that the president has decided to step up \"military support\" to the main opposition group, the Supreme Military Council, to bolster its effectiveness, but declined to \"inventory\" what equipment would be provided. But a government official knowledgeable about the plans confirmed to USA TODAY that the new assistance would include arming the rebels.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that US government officials said the administration had approved providing lethal arms on June 13, 2013.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "US government officials said the administration had approved providing lethal arms on June 13, 2013",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "after days of high-level meetings",
+    "rewrite_suggestion": "On 13 June 2013, US government officials said the administration had approved providing lethal arms to the Supreme Military Council (SMC).",
+    "proofs": [
+     "WASHINGTON \u2014 The Obama administration announced Thursday that it has determined that the Syrian government has deployed chemical weapons against opposition groups, crossing what President Obama had called a \"red line\" and prompting him to provide direct military aid to the Syrian opposition groups for the first time.",
+     "White House Deputy National Security Adviser Ben Rhodes said that the president has decided to step up \"military support\" to the main opposition group, the Supreme Military Council, to bolster its effectiveness, but declined to \"inventory\" what equipment would be provided.",
+     "But a government official knowledgeable about the plans confirmed to USA TODAY that the new assistance would include arming the rebels."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the component 'after days of high-level meetings,' which is not present anywhere in the provided source text. The other components (date, officials, approved lethal arms, SMC) are provable from the source but not all are shown in the tool's displayed sentences. Since at least one substantive component is unsupported by the source, the author must add a citation or rewrite the claim to remove that unsourced detail."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "In a January 2013 interview at NAMM, which took place at the Anaheim Convention Center in Anaheim, California, Butler stated that \"13\" was not the final title of the album and it would possibly be changed; however, this turned out not to be the case.",
+   "markers": [
+    "13blacksabbathalbum"
+   ],
+   "paper_ids": [
+    "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40",
+    "source_title": "13blacksabbathalbum",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "On BLACK SABBATH's new album title, \"13\": Butler: \"Well, it was sort of a temporary name, that we had something to refer to the album as, and I think it kind of stuck.",
+    "page": 1,
+    "snippet": "On BLACK SABBATH's new album title, \"13\":",
+    "reason": "The passage does not mention the January 2013 interview at NAMM, the Anaheim Convention Center, or the claim that the title '13' would possibly be changed but turned out not to be the case.",
+    "votes": "2-0",
+    "window": "On BLACK SABBATH's new album title, \"13\": Butler: \"Well, it was sort of a temporary name, that we had something to refer to the album as, and I think it kind of stuck. But I don't know if that's gonna be the final title or not."
+   },
+   "evidences": [
+    {
+     "paper_id": "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40",
+     "source_title": "13blacksabbathalbum",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "On BLACK SABBATH's new album title, \"13\": Butler: \"Well, it was sort of a temporary name, that we had something to refer to the album as, and I think it kind of stuck.",
+     "page": 1,
+     "snippet": "On BLACK SABBATH's new album title, \"13\":",
+     "reason": "The passage does not mention the January 2013 interview at NAMM, the Anaheim Convention Center, or the claim that the title '13' would possibly be changed but turned out not to be the case.",
+     "votes": "2-0",
+     "window": "On BLACK SABBATH's new album title, \"13\": Butler: \"Well, it was sort of a temporary name, that we had something to refer to the album as, and I think it kind of stuck. But I don't know if that's gonna be the final title or not."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the January 2013 interview at NAMM, the Anaheim Convention Center, or the claim that the title '13' would possibly be changed but turned out not to be the case.",
+   "component_check": {
+    "found": [
+     "In a January 2013 interview at NAMM, Butler stated that \"13\" was not the final title of the album and it would possibly be changed",
+     "The interview took place at the Anaheim Convention Center in Anaheim, California"
+    ],
+    "missing": [
+     "This turned out not to be the case"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In a January 2013 interview at NAMM, Butler stated that \"13\" was not the final title of the album and it would possibly be changed",
+      "paper_id": "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40",
+      "source_title": "13blacksabbathalbum",
+      "sentence": "On BLACK SABBATH's new album title, \"13\": Butler: \"Well, it was sort of a temporary name, that we had something to refer to the album as, and I think it kind of stuck.",
+      "page": 1
+     },
+     {
+      "component": "The interview took place at the Anaheim Convention Center in Anaheim, California",
+      "paper_id": "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40",
+      "source_title": "13blacksabbathalbum",
+      "sentence": "(meta data) TITLE: Black Sabbath Bassist Talks New Album, Upcoming Tour In Video Interview - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # BLACK SABBATH Bassist Talks New Album, Upcoming Tour In Video Interview January 25, 2013 Frankie DiVita, radio personality at Southern California's 96.7 KCAL Rocks, conducted an interview with BLACK SABBATH bassist Geezer Butler at this year's NAMM (National Association Of Music Merchants) show at the Anaheim Convention Center in Anaheim, California.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Butler stated in a January 2013 interview that \"13\" was not the final title of the album and it would possibly be changed.",
+    "reason": "The passage directly attributes a statement to the cited source (Butler in an interview) regarding the album title. This falls under the 'full' scope as the citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the album was finally titled '13' (that Butler's statement 'turned out not to be the case') is not supported by the cited January 2013 interview; the interview does not discuss the eventual outcome",
+    "rewrite_suggestion": "In a January 2013 interview at NAMM, which took place at the Anaheim Convention Center in Anaheim, California, Butler stated that '13' was not the final title of the album and it would possibly be changed.",
+    "proofs": [
+     "January 25, 2013 Frankie DiVita, radio personality at Southern California's 96.7 KCAL Rocks, conducted an interview with BLACK SABBATH bassist Geezer Butler at this year's NAMM (National Association Of Music Merchants) show at the Anaheim Convention Center in Anaheim, California."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence only says the title was temporary and 'kind of stuck,' but does not cover the interview date, location, or Butler's explicit statement that it might not be final. More critically, the claim includes an assertion about the eventual outcome\u2014'this turned out not to be the case'\u2014which is entirely absent from the source (a pre-release interview). Because a substantive component is not provable from the source at all, the author must either add a citation for that outcome or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Gyllenhaal debuted on Broadway in 2014 in Payne's \"Constellations\" at the Samuel J. Friedman Theatre opposite Ruth Wilson, also in her Broadway debut.",
+   "markers": [
+    "jakegyllenhaal"
+   ],
+   "paper_ids": [
+    "25119881739783c10803888092766c9a917437c8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "25119881739783c10803888092766c9a917437c8",
+    "source_title": "jakegyllenhaal",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Hollywood actor, who has previously performed off-Broadway as well as in London, will step up to the Samuel J. Friedman Theater in December",
+    "page": 1,
+    "snippet": "The Hollywood actor, who has previously performed",
+    "reason": "The passage does not mention Ruth Wilson or state that her appearance was also a Broadway debut.",
+    "votes": "2-0",
+    "window": "The Hollywood actor, who has previously performed off-Broadway as well as in London, will step up to the Samuel J. Friedman Theater in December Photograph: Michael N Todaro/WireImage Jake Gyllenhaal, the Oscar-nominated actor known for powerful roles in Brokeback Mountain and Donnie Darko as well as a host of action and romcom appearances, will make his Broadway debut in December. He will star in the American premiere of Constellations by Nick Payne, which was warmly received when it was performed in London in 2012 with Sally Hawkins and Rafe Spall."
+   },
+   "evidences": [
+    {
+     "paper_id": "25119881739783c10803888092766c9a917437c8",
+     "source_title": "jakegyllenhaal",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Hollywood actor, who has previously performed off-Broadway as well as in London, will step up to the Samuel J. Friedman Theater in December",
+     "page": 1,
+     "snippet": "The Hollywood actor, who has previously performed",
+     "reason": "The passage does not mention Ruth Wilson or state that her appearance was also a Broadway debut.",
+     "votes": "2-0",
+     "window": "The Hollywood actor, who has previously performed off-Broadway as well as in London, will step up to the Samuel J. Friedman Theater in December Photograph: Michael N Todaro/WireImage Jake Gyllenhaal, the Oscar-nominated actor known for powerful roles in Brokeback Mountain and Donnie Darko as well as a host of action and romcom appearances, will make his Broadway debut in December. He will star in the American premiere of Constellations by Nick Payne, which was warmly received when it was performed in London in 2012 with Sally Hawkins and Rafe Spall."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Ruth Wilson or state that her appearance was also a Broadway debut.",
+   "subject_guard": {
+    "subject": "Ruth Wilson",
+    "missing_from": [
+     "25119881739783c10803888092766c9a917437c8"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Gyllenhaal debuted on Broadway in 2014 in Payne's \"Constellations\" at the Samuel J. Friedman Theatre opposite Ruth Wilson, also in her Broadway debut.",
+    "reason": "The passage asserts specific facts (debut year, play, theatre, co-star) that are directly attributed to the cited source. The attribution test is met as the passage presents these as facts from the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "opposite Ruth Wilson, also in her Broadway debut",
+    "rewrite_suggestion": "Gyllenhaal debuted on Broadway in 2014 in Payne's 'Constellations' at the Samuel J. Friedman Theatre.",
+    "proofs": [
+     "Jake Gyllenhaal, the Oscar-nominated actor known for powerful roles in Brokeback Mountain and Donnie Darko as well as a host of action and romcom appearances, will make his Broadway debut in December.",
+     "He will star in the American premiere of Constellations by Nick Payne, which was warmly received when it was performed in London in 2012 with Sally Hawkins and Rafe Spall.",
+     "The Hollywood actor, who has previously performed off-Broadway as well as in London, will step up to the Samuel J. Friedman Theater in December"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes that Gyllenhaal performed opposite Ruth Wilson (who was also making her Broadway debut) in 'Constellations', but the cited source does not mention Ruth Wilson at all. All other components (2014 debut, play name, theater) are present in the source text, but the shown sentence only covers the theater location. The unsourced component about Ruth Wilson requires either a new citation or removal from the claim."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "Singleton graduated with a B.S. in Finance from Fairfield University Dolan School of Business in 1993 and an MBA from Thunderbird School of Global Management in 1999.",
+   "markers": [
+    "philsingleton"
+   ],
+   "paper_ids": [
+    "01864410216c8e32ca2b19bb501e283b0b9f01be"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "01864410216c8e32ca2b19bb501e283b0b9f01be",
+    "source_title": "philsingleton",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "in Finance from Fairfield University, as well as an MBA from Thunderbird, The Graduate School of International Management in Phoenix, Arizona.",
+    "page": 1,
+    "snippet": "in Finance from Fairfield University, as well",
+    "reason": "the year of graduation for either degree is not mentioned",
+    "votes": "2-0",
+    "window": "in Finance from Fairfield University, as well as an MBA from Thunderbird, The Graduate School of International Management in Phoenix, Arizona."
+   },
+   "evidences": [
+    {
+     "paper_id": "01864410216c8e32ca2b19bb501e283b0b9f01be",
+     "source_title": "philsingleton",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "in Finance from Fairfield University, as well as an MBA from Thunderbird, The Graduate School of International Management in Phoenix, Arizona.",
+     "page": 1,
+     "snippet": "in Finance from Fairfield University, as well",
+     "reason": "the year of graduation for either degree is not mentioned",
+     "votes": "2-0",
+     "window": "in Finance from Fairfield University, as well as an MBA from Thunderbird, The Graduate School of International Management in Phoenix, Arizona."
+    }
+   ],
+   "votes": null,
+   "reason": "the year of graduation for either degree is not mentioned",
+   "tail_rescue": {
+    "supported": false,
+    "tried": [
+     1
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Singleton graduated with a B.S. in Finance from Fairfield University Dolan School of Business in 1993 and an MBA from Thunderbird School of Global Management in 1999.",
+    "reason": "The passage asserts specific facts (graduation dates and degrees) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here, as the passage is stating information about Singleton's educational background, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "graduation years (1993, 1999) and specific school names (Dolan School of Business, Thunderbird School of Global Management)",
+    "rewrite_suggestion": "Singleton holds a B.S. in Finance from Fairfield University and an MBA from Thunderbird, The Graduate School of International Management.",
+    "proofs": [
+     "He is a Duct Tape Marketing Certified Consultant and holds a B.S. in Finance from Fairfield University, as well as an MBA from Thunderbird, The Graduate School of International Management in Phoenix, Arizona."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source confirms the B.S. in Finance from Fairfield University and MBA from Thunderbird, but it never mentions graduation years (1993, 1999) or the specific school names 'Dolan School of Business' and 'Thunderbird School of Global Management'. The shown sentence also omits these details. Since these components are not provable from the provided source, the author must either add a citation or remove them."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "Markos Papadatos, writing for Digital Journal, stated that the song proves that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+   "markers": [
+    "cityofangelssong"
+   ],
+   "paper_ids": [
+    "3d4b00db205dcd4a65a6912de4cea4607bdf1654"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.796,
+   "evidence": {
+    "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+    "source_title": "cityofangelssong",
+    "supported": true,
+    "sentence": "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+    "page": 1,
+    "snippet": "The Verdict The song \"City of Angels\"",
+    "cosine": 0.796,
+    "reason": "The passage directly states that the song 'City of Angels' is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+    "window": "The lyric video has been well-received by fans, thus generating over 1.3 million views, in less than two months. The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music. Jared ranks in my Top 3 favorites, along with Myles Kennedy from Alter Bridge and Chris Cornell from Soundgarden."
+   },
+   "evidences": [
+    {
+     "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+     "source_title": "cityofangelssong",
+     "supported": true,
+     "sentence": "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+     "page": 1,
+     "snippet": "The Verdict The song \"City of Angels\"",
+     "cosine": 0.796,
+     "reason": "The passage directly states that the song 'City of Angels' is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+     "window": "The lyric video has been well-received by fans, thus generating over 1.3 million views, in less than two months. The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music. Jared ranks in my Top 3 favorites, along with Myles Kennedy from Alter Bridge and Chris Cornell from Soundgarden."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the song 'City of Angels' is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Markos Papadatos stated that the song proves that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+      "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+      "source_title": "cityofangelssong",
+      "sentence": "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+      "page": 1,
+      "snippet": "The Verdict The song \"City of Angels\""
+     },
+     {
+      "component": "Jared Leto is one of the finest vocalists in the modern rock genre of music.",
+      "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+      "source_title": "cityofangelssong",
+      "sentence": "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+      "page": 1,
+      "snippet": "The Verdict The song \"City of Angels\""
+     },
+     {
+      "component": "Jared Leto is one of the finest songwriters in the modern rock genre of music.",
+      "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+      "source_title": "cityofangelssong",
+      "sentence": "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+      "page": 1,
+      "snippet": "The Verdict The song \"City of Angels\""
+     },
+     {
+      "component": "Jared Leto is one of the finest songwriters in the modern rock genre of music.",
+      "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+      "source_title": "cityofangelssong",
+      "sentence": "\"City of Angels\" was written by Jared Leto, the lead singer and bassist of the rock band Thirty Seconds To Mars.",
+      "page": 1,
+      "snippet": "\"City of Angels\" was written by Jared"
+     }
+    ],
+    "uncovered": [
+     "Digital Journal"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+      "source_title": "cityofangelssong",
+      "text": "\"City of Angels\" was written by Jared Leto, the lead singer and bassist of the rock band Thirty Seconds To Mars. In the song's lyric video, which takes place in Los Angeles, California, Jared Leto is seen singing the words, in a dynamic and moving performance, where he showcases his incredible range. It is certainly one of the best tracks on the album, and it deserves to be higher on the charts. The lyric video has been well-received by fans, thus generating over 1.3 million views, in less than two months. The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music.",
+      "n_used": 2
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music."
+     ],
+     "why": "The shown sentence from the source (the verdict) explicitly contains the exact statement attributed to Markos Papadatos. It covers the entire claim \u2014 both the attribution and the substantive assertion about the song proving Leto is among the finest vocalists and songwriters. No component is missing or unproven from the shown sentences."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The Verdict The song \"City of Angels\" is proof that Jared Leto is one of the finest vocalists and songwriters in the modern rock genre of music."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence from the source (the verdict) explicitly contains the exact statement attributed to Markos Papadatos. It covers the entire claim \u2014 both the attribution and the substantive assertion about the song proving Leto is among the finest vocalists and songwriters. No component is missing or unproven from the shown sentences."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "However, historian William W. Freehling calls him \"the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today\".",
+   "markers": [
+    "williamhenryharrison"
+   ],
+   "paper_ids": [
+    "040022f6d41dfb1ed68c5a9c221f343f3a524f80"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9622,
+   "evidence": {
+    "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+    "source_title": "williamhenryharrison",
+    "supported": true,
+    "sentence": "He is remembered as the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today.",
+    "page": 1,
+    "snippet": "He is remembered as the most dominant",
+    "cosine": 0.9622,
+    "reason": "The passage directly quotes historian William W. Freehling calling William Henry Harrison \"the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today\".",
+    "window": "William Henry Harrison, of course, is a much more prominent player in the history of America than in the history of its presidency. He is remembered as the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today. As both soldier and statesman, Harrison spent virtually his entire adult life championing this region."
+   },
+   "evidences": [
+    {
+     "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+     "source_title": "williamhenryharrison",
+     "supported": true,
+     "sentence": "He is remembered as the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today.",
+     "page": 1,
+     "snippet": "He is remembered as the most dominant",
+     "cosine": 0.9622,
+     "reason": "The passage directly quotes historian William W. Freehling calling William Henry Harrison \"the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today\".",
+     "window": "William Henry Harrison, of course, is a much more prominent player in the history of America than in the history of its presidency. He is remembered as the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today. As both soldier and statesman, Harrison spent virtually his entire adult life championing this region."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes historian William W. Freehling calling William Henry Harrison \"the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today\".",
+   "covering": {
+    "covered": [
+     {
+      "component": "historian William W. Freehling calls him \"the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today\"",
+      "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+      "source_title": "williamhenryharrison",
+      "sentence": "He is remembered as the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today.",
+      "page": 1,
+      "snippet": "He is remembered as the most dominant"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+      "source_title": "williamhenryharrison",
+      "text": "He is remembered as the most dominant figure in the evolution of the Northwest territories into the Upper Midwest today.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t26",
+   "text": "Current and archived issues of the magazine are available on the magazine's website, and the organisation also distributes news and alerts to subscribers by email.",
+   "markers": [
+    "aijac"
+   ],
+   "paper_ids": [
+    "ac2a8d487df10b6890a614f2235ffff2bbfac2c9"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.843,
+   "evidence": {
+    "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+    "source_title": "aijac",
+    "supported": false,
+    "sentence": "Should they heed Trump's call to \"apologise\" to the people of Israel?",
+    "page": 1,
+    "snippet": "Should they heed Trump's call to \"apologise\"",
+    "cosine": 0.843,
+    "reason": "The passage discusses a news item about Israel's water pipeline to Gaza and does not mention the availability of magazine issues online or email distribution to subscribers.",
+    "window": "Are these four individuals antisemitic? Should they heed Trump's call to \"apologise\" to the people of Israel? ### Behind the News \u2013 August 2019 Australia/Israel Review August 2, 2019 Israel has begun constructing a new water pipeline which will increase the amount of water it supplies to the Gaza Strip by 200%."
+   },
+   "evidences": [
+    {
+     "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+     "source_title": "aijac",
+     "supported": false,
+     "sentence": "Should they heed Trump's call to \"apologise\" to the people of Israel?",
+     "page": 1,
+     "snippet": "Should they heed Trump's call to \"apologise\"",
+     "cosine": 0.843,
+     "reason": "The passage discusses a news item about Israel's water pipeline to Gaza and does not mention the availability of magazine issues online or email distribution to subscribers.",
+     "window": "Are these four individuals antisemitic? Should they heed Trump's call to \"apologise\" to the people of Israel? ### Behind the News \u2013 August 2019 Australia/Israel Review August 2, 2019 Israel has begun constructing a new water pipeline which will increase the amount of water it supplies to the Gaza Strip by 200%."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "current",
+    "missing_from": [
+     "ac2a8d487df10b6890a614f2235ffff2bbfac2c9"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes the availability of magazine issues and email distribution, which are factual statements expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that current and archived issues are available on the magazine's website and that the organisation distributes news and alerts by email is entirely unsupported by the provided source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text is simply a list of article titles from the Australia/Israel Review archive; it contains no statement about website availability of issues or email distribution of news and alerts. Therefore, every substantive component of the claim is unprovable from the cited source, requiring the author to either add a citation that supports these assertions or rewrite the claim to match what the source actually says."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "a55efd02f212cff955913c7a3e0ed92a09146fe4": {
+    "title": "pakistanisinafghanistan",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "690d257b70cea82a89fb7f6736b548e440418b12": {
+    "title": "keyentertainer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ab85ba956da819457d54d35a3399f53f6d824182": {
+    "title": "trophycountermeasure",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "0b79ba829ce48ae8ae3f6f3a0d97c219fe26deec": {
+    "title": "thacarterv",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40": {
+    "title": "13blacksabbathalbum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3d4b00db205dcd4a65a6912de4cea4607bdf1654": {
+    "title": "cityofangelssong",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "01864410216c8e32ca2b19bb501e283b0b9f01be": {
+    "title": "philsingleton",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d6431058f1a3287fd57d5df66630516bb63ea1c2": {
+    "title": "trenchmagazine",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ac2a8d487df10b6890a614f2235ffff2bbfac2c9": {
+    "title": "aijac",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c20cb9e2f5f27a947d5ac127e0b5dac893a98775": {
+    "title": "sportscarclubofamerica",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fc886923259fe0e386faf44c175ef22d3f22d216": {
+    "title": "jjwatt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4f5cda6657ce424ae719795a737ab89db3d452f6": {
+    "title": "2017facupfinal",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "e78ac916db6e0c8cebc2e93d9d5962e4d9761375": {
+    "title": "parkyeeun",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d40e45d0191ccfd8c75bdac5b29fe726d3b499a7": {
+    "title": "natashamozgovaya",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b426f05dffb75363f78de25e5c18618a9bce0d32": {
+    "title": "listofanthraxmembers",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "5956ee5c7cab021acd45ba07d384c87b04d2f386": {
+    "title": "angelamissoni",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "05713c5c0ff36ee7fbc6f0012eb73cf190270f53": {
+    "title": "hoodieszn",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c43f018a2d45def902745f5d48f64d0be2a14d47": {
+    "title": "mineolastationlirr",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "040022f6d41dfb1ed68c5a9c221f343f3a524f80": {
+    "title": "williamhenryharrison",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "25119881739783c10803888092766c9a917437c8": {
+    "title": "jakegyllenhaal",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "338dd23442d2cad8e6a483280e3f421a486a8a41": {
+    "title": "ramiran",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48": {
+    "title": "fayettevillemarksmen",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "bc8e04a6685f5f1a63843903951999955d2d5a8d": {
+    "title": "pierrehuguesherbert",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "db28443127d5b11b4bfbe564bf6e6feb69cd688f": {
+    "title": "kylieminogue",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "8f395d0ddb64d7f4f7eaa42a91bedeb76aeb217a": {
+    "title": "mygenerationalbum",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e690888e29dac4e0c53a8321f48090d510e3cfd0": {
+    "title": "foreigninvolvementinthes",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 13,
+   "unsupported": 13,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:41:57",
+  "marker_errors": [],
+  "processing_time_seconds": 422.3,
+  "source_hashes": {
+   "listofanthraxmembers.txt": "fdbbd6139c6ea46a0ec3fce9e08ed74e3bba9327",
+   "mineolastationlirr.txt": "d86ed711b84ee47e5a293cc975ae326c0f395f72",
+   "ramiran.txt": "5fa6d56e8bbe3526b635fa86ff80a63dfe8d4bd8",
+   "mygenerationalbum.txt": "45c5860f5ab038ef424e27a8d35ce5a6d5bdf947",
+   "natashamozgovaya.txt": "637cf562a9ed0feefdcb3f7380d4dfdb82865708",
+   "sportscarclubofamerica.txt": "35283a0f49008d84275d7904a71ca106d2e2cabb",
+   "fayettevillemarksmen.txt": "c5369edf348a5be6cfa5fbd41e45a73832f00164",
+   "pierrehuguesherbert.txt": "10d08a892679bd7992832371e855c076cf2a08aa",
+   "angelamissoni.txt": "6de6a533264b6e2d2e04fb4fd8f5413e6f0ee773",
+   "trenchmagazine.txt": "27f5e92ce83dc652113d08e547a7c49de0cfeec8",
+   "trophycountermeasure.txt": "dcbdd6d8f831750192db727c9c1f00870e180b7c",
+   "jjwatt.txt": "8190c8a89f28577985f1de9e9937dab2689efef3",
+   "hoodieszn.txt": "5491ecbef298cfa46c0f2133739b65ad928fabe6",
+   "kylieminogue.txt": "74126c4bb883f31984adb3683a189010a889e0bb",
+   "pakistanisinafghanistan.txt": "012329ca06d982ad08deb234fe6f0895dd5d4697",
+   "keyentertainer.txt": "9b69cb652853fafd4604118bc1f110ac264bce35",
+   "parkyeeun.txt": "51291ef95a09cbef4b73763aeb07524fd32a8900",
+   "thacarterv.txt": "6bea582ef9062924d71a8bd2188823a0f8336bbf",
+   "2017facupfinal.txt": "cd10e363c414ace64d0c1860146ef4e7a8037672",
+   "foreigninvolvementinthes.txt": "6e74b18c814656bfde911ddeb5192526909ce6f1",
+   "13blacksabbathalbum.txt": "3de95420373aa00a0bddf70a8fba8fe7aade3fd7",
+   "jakegyllenhaal.txt": "6d4181caab6f2f870b3a798397e3f5e5a586f319",
+   "philsingleton.txt": "f5456df9641289dde60df64cf27d2d018bf1a859",
+   "cityofangelssong.txt": "432dc574b51df3f87dab43a43796704afc30b7e7",
+   "williamhenryharrison.txt": "41bea17348d8a5fe432e497acd8c33f24001b2f8",
+   "aijac.txt": "6191121411085a3aaceac37e9d71dad661c9e08b"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 375,
+    "prompt_tokens": 358532,
+    "completion_tokens": 20084,
+    "cost_usd": 0.043948
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 28,
+    "prompt_tokens": 67475,
+    "completion_tokens": 70019,
+    "cost_usd": 0.023432
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 13,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 20,
+   "actions": {
+    "add_citation_or_rewrite": 19,
+    "supported": 1
+   },
+   "proof_may_exist": [],
+   "conflicts": [
+    "t4",
+    "t7",
+    "t10",
+    "t17"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t24"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+   "key": "listofanthraxmembers",
+   "filename": "listofanthraxmembers.txt",
+   "title": "listofanthraxmembers",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c43f018a2d45def902745f5d48f64d0be2a14d47",
+   "key": "mineolastationlirr",
+   "filename": "mineolastationlirr.txt",
+   "title": "mineolastationlirr",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "338dd23442d2cad8e6a483280e3f421a486a8a41",
+   "key": "ramiran",
+   "filename": "ramiran.txt",
+   "title": "ramiran",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8f395d0ddb64d7f4f7eaa42a91bedeb76aeb217a",
+   "key": "mygenerationalbum",
+   "filename": "mygenerationalbum.txt",
+   "title": "mygenerationalbum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d40e45d0191ccfd8c75bdac5b29fe726d3b499a7",
+   "key": "natashamozgovaya",
+   "filename": "natashamozgovaya.txt",
+   "title": "natashamozgovaya",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c20cb9e2f5f27a947d5ac127e0b5dac893a98775",
+   "key": "sportscarclubofamerica",
+   "filename": "sportscarclubofamerica.txt",
+   "title": "sportscarclubofamerica",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "da6d8b9e6ce2958c78a48bde28aa0527a53f4c48",
+   "key": "fayettevillemarksmen",
+   "filename": "fayettevillemarksmen.txt",
+   "title": "fayettevillemarksmen",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bc8e04a6685f5f1a63843903951999955d2d5a8d",
+   "key": "pierrehuguesherbert",
+   "filename": "pierrehuguesherbert.txt",
+   "title": "pierrehuguesherbert",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5956ee5c7cab021acd45ba07d384c87b04d2f386",
+   "key": "angelamissoni",
+   "filename": "angelamissoni.txt",
+   "title": "angelamissoni",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d6431058f1a3287fd57d5df66630516bb63ea1c2",
+   "key": "trenchmagazine",
+   "filename": "trenchmagazine.txt",
+   "title": "trenchmagazine",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ab85ba956da819457d54d35a3399f53f6d824182",
+   "key": "trophycountermeasure",
+   "filename": "trophycountermeasure.txt",
+   "title": "trophycountermeasure",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+   "key": "jjwatt",
+   "filename": "jjwatt.txt",
+   "title": "jjwatt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "05713c5c0ff36ee7fbc6f0012eb73cf190270f53",
+   "key": "hoodieszn",
+   "filename": "hoodieszn.txt",
+   "title": "hoodieszn",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "db28443127d5b11b4bfbe564bf6e6feb69cd688f",
+   "key": "kylieminogue",
+   "filename": "kylieminogue.txt",
+   "title": "kylieminogue",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a55efd02f212cff955913c7a3e0ed92a09146fe4",
+   "key": "pakistanisinafghanistan",
+   "filename": "pakistanisinafghanistan.txt",
+   "title": "pakistanisinafghanistan",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "690d257b70cea82a89fb7f6736b548e440418b12",
+   "key": "keyentertainer",
+   "filename": "keyentertainer.txt",
+   "title": "keyentertainer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e78ac916db6e0c8cebc2e93d9d5962e4d9761375",
+   "key": "parkyeeun",
+   "filename": "parkyeeun.txt",
+   "title": "parkyeeun",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0b79ba829ce48ae8ae3f6f3a0d97c219fe26deec",
+   "key": "thacarterv",
+   "filename": "thacarterv.txt",
+   "title": "thacarterv",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4f5cda6657ce424ae719795a737ab89db3d452f6",
+   "key": "2017facupfinal",
+   "filename": "2017facupfinal.txt",
+   "title": "2017facupfinal",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e690888e29dac4e0c53a8321f48090d510e3cfd0",
+   "key": "foreigninvolvementinthes",
+   "filename": "foreigninvolvementinthes.txt",
+   "title": "foreigninvolvementinthes",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ef38fc853c8f3a6ce9f1e18f48f995b1fcbf8d40",
+   "key": "13blacksabbathalbum",
+   "filename": "13blacksabbathalbum.txt",
+   "title": "13blacksabbathalbum",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "25119881739783c10803888092766c9a917437c8",
+   "key": "jakegyllenhaal",
+   "filename": "jakegyllenhaal.txt",
+   "title": "jakegyllenhaal",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "01864410216c8e32ca2b19bb501e283b0b9f01be",
+   "key": "philsingleton",
+   "filename": "philsingleton.txt",
+   "title": "philsingleton",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3d4b00db205dcd4a65a6912de4cea4607bdf1654",
+   "key": "cityofangelssong",
+   "filename": "cityofangelssong.txt",
+   "title": "cityofangelssong",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "040022f6d41dfb1ed68c5a9c221f343f3a524f80",
+   "key": "williamhenryharrison",
+   "filename": "williamhenryharrison.txt",
+   "title": "williamhenryharrison",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ac2a8d487df10b6890a614f2235ffff2bbfac2c9",
+   "key": "aijac",
+   "filename": "aijac.txt",
+   "title": "aijac",
+   "num_claims": 0
+  }
+ ]
+}

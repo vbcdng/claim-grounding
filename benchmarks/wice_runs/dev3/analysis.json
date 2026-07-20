@@ -1,0 +1,2771 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE dev batch 3",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "The collapse has been seen in other alt-right groups, and has been attributed to widespread public backlash against neo-Nazism and white supremacy since the 2017 Charlottesville rally.",
+   "markers": [
+    "identityevropa"
+   ],
+   "paper_ids": [
+    "ab0c943194106eca22927c7984cfa75971e5c30c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+    "source_title": "identityevropa",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The incident followed a series of developments among the self-styled \"alt-right\" in the US, a euphemism for a new breed of white supremacists who shocked the world when a rally in Charlottesville, Virginia, last summer, featured Nazi-style salutes and chanting and turned extremely violent, leading to the death of an anti-racism activist, Heather Heyer.",
+    "page": 1,
+    "snippet": "The incident followed a series of developments",
+    "reason": "The passage does not state that the collapse has been seen in other alt-right groups or attribute it to widespread public backlash against neo-Nazism and white supremacy.",
+    "votes": "2-0",
+    "window": "The incident followed a series of developments among the self-styled \"alt-right\" in the US, a euphemism for a new breed of white supremacists who shocked the world when a rally in Charlottesville, Virginia, last summer, featured Nazi-style salutes and chanting and turned extremely violent, leading to the death of an anti-racism activist, Heather Heyer. \"What we are seeing is a sort of falling apart, or a fraying, of the movement, which really began with Charlottesville, where the so-called Unite the Right rally put them under the harsh light of public scrutiny,\" he said. Far-right groups such as Identity Evropa and Vanguard America became widely known after Charlottesville, where groupie James Fields is accused of murdering Heyer."
+   },
+   "evidences": [
+    {
+     "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+     "source_title": "identityevropa",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The incident followed a series of developments among the self-styled \"alt-right\" in the US, a euphemism for a new breed of white supremacists who shocked the world when a rally in Charlottesville, Virginia, last summer, featured Nazi-style salutes and chanting and turned extremely violent, leading to the death of an anti-racism activist, Heather Heyer.",
+     "page": 1,
+     "snippet": "The incident followed a series of developments",
+     "reason": "The passage does not state that the collapse has been seen in other alt-right groups or attribute it to widespread public backlash against neo-Nazism and white supremacy.",
+     "votes": "2-0",
+     "window": "The incident followed a series of developments among the self-styled \"alt-right\" in the US, a euphemism for a new breed of white supremacists who shocked the world when a rally in Charlottesville, Virginia, last summer, featured Nazi-style salutes and chanting and turned extremely violent, leading to the death of an anti-racism activist, Heather Heyer. \"What we are seeing is a sort of falling apart, or a fraying, of the movement, which really began with Charlottesville, where the so-called Unite the Right rally put them under the harsh light of public scrutiny,\" he said. Far-right groups such as Identity Evropa and Vanguard America became widely known after Charlottesville, where groupie James Fields is accused of murdering Heyer."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the collapse has been seen in other alt-right groups or attribute it to widespread public backlash against neo-Nazism and white supremacy.",
+   "component_check": {
+    "found": [
+     "This backlash occurred since the 2017 Charlottesville rally."
+    ],
+    "missing": [
+     "The collapse has been seen in other alt-right groups.",
+     "This collapse has been attributed to widespread public backlash against neo-Nazism and white supremacy."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "This backlash occurred since the 2017 Charlottesville rally.",
+      "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+      "source_title": "identityevropa",
+      "sentence": "\"What we are seeing is a sort of falling apart, or a fraying, of the movement, which really began with Charlottesville, where the so-called Unite the Right rally put them under the harsh light of public scrutiny,\" he said.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The collapse has been attributed to widespread public backlash against neo-Nazism and white supremacy since the 2017 Charlottesville rally.",
+    "reason": "The passage directly attributes the cause of the collapse to public backlash, implying that the cited source is expected to provide evidence for this claim. This fits the definition of 'full' scope where the citation is expected to prove stated facts or findings.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "And the SPLC reported that its team monitoring far-right hate groups had seen recent signs on extremist chat boards that members of the racist US group Identity Evropa have been leaving in significant numbers.",
+     "\"What we are seeing is a sort of falling apart, or a fraying, of the movement, which really began with Charlottesville, where the so-called Unite the Right rally put them under the harsh light of public scrutiny,\" he said."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only describes the Charlottesville rally and does not mention any collapse or attribution. The source text, however, contains proof for both components: a sentence about Identity Evropa members leaving in significant numbers (supporting collapse in another alt-right group) and a quote from Ryan Lenz attributing the fraying to the public scrutiny after Charlottesville. Since these proof sentences exist in the source but were not shown by the tool, the correct outcome is 'wrong_or_insufficient_evidence'.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t2",
+   "text": "The series was renewed for a fifth season on July 28, 2018, just prior to the airing of the fourth season.",
+   "markers": [
+    "bettercallsaul"
+   ],
+   "paper_ids": [
+    "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8798,
+   "evidence": {
+    "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+    "source_title": "bettercallsaul",
+    "supported": true,
+    "sentence": "\"Better Call Saul's\" renewal comes ahead of the Season 4 premiere on Aug. 6.",
+    "page": 1,
+    "snippet": "\"Better Call Saul's\" renewal comes ahead of",
+    "cosine": 0.8798,
+    "reason": "The passage states that 'Better Call Saul' was renewed for a fifth season and that this renewal came ahead of the Season 4 premiere on August 6th, which supports the claim's assertion about the timing of the renewal relative to the fourth season's airing.",
+    "window": "Both \"Better Call Saul\" and \"Fear the Walking Dead\" have been renewed for fifth seasons while \"McMafia\" has been renewed for a second season. \"Better Call Saul's\" renewal comes ahead of the Season 4 premiere on Aug. 6. The series stars Bob Odenkirk, Jonathan Banks, Rhea Seehorn, Patrick Fabian, Michael Mando and Giancarlo Esposito."
+   },
+   "evidences": [
+    {
+     "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+     "source_title": "bettercallsaul",
+     "supported": true,
+     "sentence": "\"Better Call Saul's\" renewal comes ahead of the Season 4 premiere on Aug. 6.",
+     "page": 1,
+     "snippet": "\"Better Call Saul's\" renewal comes ahead of",
+     "cosine": 0.8798,
+     "reason": "The passage states that 'Better Call Saul' was renewed for a fifth season and that this renewal came ahead of the Season 4 premiere on August 6th, which supports the claim's assertion about the timing of the renewal relative to the fourth season's airing.",
+     "window": "Both \"Better Call Saul\" and \"Fear the Walking Dead\" have been renewed for fifth seasons while \"McMafia\" has been renewed for a second season. \"Better Call Saul's\" renewal comes ahead of the Season 4 premiere on Aug. 6. The series stars Bob Odenkirk, Jonathan Banks, Rhea Seehorn, Patrick Fabian, Michael Mando and Giancarlo Esposito."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that 'Better Call Saul' was renewed for a fifth season and that this renewal came ahead of the Season 4 premiere on August 6th, which supports the claim's assertion about the timing of the renewal relative to the fourth season's airing.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "series renewed for fifth season",
+      "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+      "source_title": "bettercallsaul",
+      "sentence": "Both \"Better Call Saul\" and \"Fear the Walking Dead\" have been renewed for fifth seasons while \"McMafia\" has been renewed for a second season.",
+      "page": 1,
+      "snippet": "Both \"Better Call Saul\" and \"Fear the"
+     },
+     {
+      "component": "renewal date",
+      "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+      "source_title": "bettercallsaul",
+      "sentence": "(meta data) TITLE: 'Better Call Saul,' 'Fear the Walking Dead,' 'McMafia' Renewed at AMC – Variety (meta data) AUTHOR: Joe Otterson (meta data) PUBLISHED DATETIME: 2018-07-28T22:15:40+00:00 Read Next: BBC Studios to Explore 'The Edge of Science' for YouTube Originals Subscribe Today!",
+      "page": 1,
+      "snippet": "(meta data) TITLE: 'Better Call Saul,' 'Fear"
+     },
+     {
+      "component": "renewal timing relative to fourth season airing",
+      "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+      "source_title": "bettercallsaul",
+      "sentence": "\"Better Call Saul's\" renewal comes ahead of the Season 4 premiere on Aug. 6.",
+      "page": 1,
+      "snippet": "\"Better Call Saul's\" renewal comes ahead of"
+     },
+     {
+      "component": "July",
+      "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+      "source_title": "bettercallsaul",
+      "sentence": "Variety Intelligence Platform July 28, 2018 3:15PM PT # 'Better Call Saul,' 'Fear the Walking Dead,' 'McMafia' Renewed at AMC AMC has renewed the drama series \"Better Call Saul,\" \"Fear the Walking Dead,\" and \"McMafia.\"",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform July 28, 2018 3:15PM",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+      "source_title": "bettercallsaul",
+      "text": "(meta data) TITLE: 'Better Call Saul,' 'Fear the Walking Dead,' 'McMafia' Renewed at AMC – Variety (meta data) AUTHOR: Joe Otterson (meta data) PUBLISHED DATETIME: 2018-07-28T22:15:40+00:00 Read Next: BBC Studios to Explore 'The Edge of Science' for YouTube Originals Subscribe Today! Variety Intelligence Platform July 28, 2018 3:15PM PT # 'Better Call Saul,' 'Fear the Walking Dead,' 'McMafia' Renewed at AMC AMC has renewed the drama series \"Better Call Saul,\" \"Fear the Walking Dead,\" and \"McMafia.\" The announcement was made Saturday at the TCA summer press tour. Both \"Better Call Saul\" and \"Fear the Walking Dead\" have been renewed for fifth seasons while \"McMafia\" has been renewed for a second season. \"Better Call Saul's\" renewal comes ahead of the Season 4 premiere on Aug. 6.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t3",
+   "text": "He attended the Skowhegan School of Painting and Sculpture in Skowhegan, Maine in 1966 and the New York Studio School in New York, where he studied primarily with Milton Resnick as well as Mercedes Matter and Esteban Vicente while on a Rockefeller Foundation Fellowship in 1967.",
+   "markers": [
+    "davidreedartist"
+   ],
+   "paper_ids": [
+    "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529",
+    "source_title": "davidreedartist",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "I studied with Mercedes Matter, Charles Cajori, Esteban Vicente, and especially Milton Resnick, among others.",
+    "page": 1,
+    "snippet": "I studied with Mercedes Matter, Charles Cajori,",
+    "reason": "The passage does not mention the Skowhegan School of Painting and Sculpture or the year 1966.",
+    "votes": "2-0",
+    "window": "I studied with Mercedes Matter, Charles Cajori, Esteban Vicente, and especially Milton Resnick, among others. —PHILIP GUSTON I was a student at the New York Studio School during the fall of 1966 and spring of 1967. But because I was still enrolled at Reed College in Portland, Oregon, and came to New York on a Rockefeller Foundation Fellowship, I was safe."
+   },
+   "evidences": [
+    {
+     "paper_id": "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529",
+     "source_title": "davidreedartist",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "I studied with Mercedes Matter, Charles Cajori, Esteban Vicente, and especially Milton Resnick, among others.",
+     "page": 1,
+     "snippet": "I studied with Mercedes Matter, Charles Cajori,",
+     "reason": "The passage does not mention the Skowhegan School of Painting and Sculpture or the year 1966.",
+     "votes": "2-0",
+     "window": "I studied with Mercedes Matter, Charles Cajori, Esteban Vicente, and especially Milton Resnick, among others. —PHILIP GUSTON I was a student at the New York Studio School during the fall of 1966 and spring of 1967. But because I was still enrolled at Reed College in Portland, Oregon, and came to New York on a Rockefeller Foundation Fellowship, I was safe."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the Skowhegan School of Painting and Sculpture or the year 1966.",
+   "component_check": {
+    "found": [
+     "He attended the New York Studio School in New York in 1967.",
+     "He studied with Mercedes Matter at the New York Studio School."
+    ],
+    "missing": [
+     "He attended the Skowhegan School of Painting and Sculpture in Skowhegan, Maine in 1966.",
+     "He studied primarily with Milton Resnick at the New York Studio School."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He attended the New York Studio School in New York in 1967.",
+      "paper_id": "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529",
+      "source_title": "davidreedartist",
+      "sentence": "—PHILIP GUSTON I was a student at the New York Studio School during the fall of 1966 and spring of 1967.",
+      "page": 1
+     },
+     {
+      "component": "He studied with Mercedes Matter at the New York Studio School.",
+      "paper_id": "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529",
+      "source_title": "davidreedartist",
+      "sentence": "I studied with Mercedes Matter, Charles Cajori, Esteban Vicente, and especially Milton Resnick, among others.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He attended the Skowhegan School of Painting and Sculpture in Skowhegan, Maine in 1966 and the New York Studio School in New York, where he studied primarily with Milton Resnick as well as Mercedes Matter and Esteban Vicente while on a Rockefeller Foundation Fellowship in 1967.",
+    "reason": "The passage asserts specific facts about the subject's education and affiliations, which are directly attributed to the cited source. The citation is expected to prove these biographical details.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "attended the Skowhegan School of Painting and Sculpture in Skowhegan, Maine in 1966; also the specific year 1967 for the Rockefeller Foundation Fellowship is not explicitly stated in the source",
+    "rewrite_suggestion": "He attended the New York Studio School in New York during the fall of 1966 and spring of 1967, where he studied primarily with Milton Resnick as well as Mercedes Matter and Esteban Vicente while on a Rockefeller Foundation Fellowship.",
+    "proofs": [
+     "I was a student at the New York Studio School during the fall of 1966 and spring of 1967.",
+     "I studied with Mercedes Matter, Charles Cajori, Esteban Vicente, and especially Milton Resnick, among others.",
+     "But because I was still enrolled at Reed College in Portland, Oregon, and came to New York on a Rockefeller Foundation Fellowship, I was safe."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes attendance at the Skowhegan School in 1966, which is not mentioned anywhere in the provided source text. Additionally, the source does not explicitly state that the Rockefeller Foundation Fellowship occurred in 1967, though it is implied by the context of the author's studies. The shown sentence only covers the teachers he studied with, missing the school and fellowship details. Therefore the author must either add a citation for the Skowhegan component or remove it, and adjust the fellowship year to match the source's timeline."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "In 2011, Michaels contributed to the Bush Theatre's 24-hour performance of \"Sixty-Six Books\" to mark the 400th anniversary of the King James Bible, providing 66 playwrights, poets, songwriters, and novelists - of all faiths and none, from over a dozen countries and across five continents - the opportunity to respond to some of the oldest stories ever told.",
+   "markers": [
+    "annemichaels"
+   ],
+   "paper_ids": [
+    "29b2aa114583c82a360940615cb67aa57f89a7c4"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9429,
+   "evidence": {
+    "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+    "source_title": "annemichaels",
+    "supported": true,
+    "sentence": "In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents.",
+    "page": 1,
+    "snippet": "In 2011, the 400th anniversary year of",
+    "cosine": 0.9429,
+    "reason": "The passage confirms that in 2011, sixty-six writers from diverse backgrounds responded to old stories for the 400th anniversary of the King James Bible, with the event being part of the Bush Theatre's \"Sixty-Six Books\" project.",
+    "window": "From Jeanette Winterson to Jack Thorne, Carol Ann Duffy to the Archbishop of Canterbury, Billy Bragg to Wole Soyinka, sixty-six writers from a huge range of backgrounds and disciplines have made a contemporary response to some of the oldest stories ever told. In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents. Curated by Artistic Director Josie Rourke in collaboration with Associate Director Christopher Haydon, Sixty-Six Books brings together a team of the country's most exciting emerging and established directors, designers, performers and artists to create an immersive experience that inaugurates the Bush's new home before spreading to a host of other venues across London including a twelve hour vigil at Westminster Abbey on 21st October."
+   },
+   "evidences": [
+    {
+     "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+     "source_title": "annemichaels",
+     "supported": true,
+     "sentence": "In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents.",
+     "page": 1,
+     "snippet": "In 2011, the 400th anniversary year of",
+     "cosine": 0.9429,
+     "reason": "The passage confirms that in 2011, sixty-six writers from diverse backgrounds responded to old stories for the 400th anniversary of the King James Bible, with the event being part of the Bush Theatre's \"Sixty-Six Books\" project.",
+     "window": "From Jeanette Winterson to Jack Thorne, Carol Ann Duffy to the Archbishop of Canterbury, Billy Bragg to Wole Soyinka, sixty-six writers from a huge range of backgrounds and disciplines have made a contemporary response to some of the oldest stories ever told. In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents. Curated by Artistic Director Josie Rourke in collaboration with Associate Director Christopher Haydon, Sixty-Six Books brings together a team of the country's most exciting emerging and established directors, designers, performers and artists to create an immersive experience that inaugurates the Bush's new home before spreading to a host of other venues across London including a twelve hour vigil at Westminster Abbey on 21st October."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage confirms that in 2011, sixty-six writers from diverse backgrounds responded to old stories for the 400th anniversary of the King James Bible, with the event being part of the Bush Theatre's \"Sixty-Six Books\" project.",
+   "covering": {
+    "covered": [
+     {
+      "component": "performance marked the 400th anniversary of the King James Bible",
+      "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+      "source_title": "annemichaels",
+      "sentence": "In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents.",
+      "page": 1,
+      "snippet": "In 2011, the 400th anniversary year of"
+     },
+     {
+      "component": "performance provided 66 playwrights, poets, songwriters, and novelists the opportunity to respond to some of the oldest stories ever told",
+      "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+      "source_title": "annemichaels",
+      "sentence": "From Jeanette Winterson to Jack Thorne, Carol Ann Duffy to the Archbishop of Canterbury, Billy Bragg to Wole Soyinka, sixty-six writers from a huge range of backgrounds and disciplines have made a contemporary response to some of the oldest stories ever told.",
+      "page": 1,
+      "snippet": "From Jeanette Winterson to Jack Thorne, Carol"
+     },
+     {
+      "component": "playwrights, poets, songwriters, and novelists were of all faiths and none",
+      "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+      "source_title": "annemichaels",
+      "sentence": "In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents.",
+      "page": 1,
+      "snippet": "In 2011, the 400th anniversary year of"
+     },
+     {
+      "component": "playwrights, poets, songwriters, and novelists were from over a dozen countries and across five continents",
+      "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+      "source_title": "annemichaels",
+      "sentence": "In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents.",
+      "page": 1,
+      "snippet": "In 2011, the 400th anniversary year of"
+     },
+     {
+      "component": "performance was a 24-hour performance",
+      "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+      "source_title": "annemichaels",
+      "sentence": "Sixty-Six Books will begin and end with two exhilarating 24-hour performances during which you can experience all 66 responses with a 24 Hour Pass.",
+      "page": 1,
+      "snippet": "Sixty-Six Books will begin and end with"
+     }
+    ],
+    "uncovered": [
+     "Michaels contributed to the Bush Theatre's 24-hour performance of \"Sixty-Six Books\""
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+      "source_title": "annemichaels",
+      "text": "From Jeanette Winterson to Jack Thorne, Carol Ann Duffy to the Archbishop of Canterbury, Billy Bragg to Wole Soyinka, sixty-six writers from a huge range of backgrounds and disciplines have made a contemporary response to some of the oldest stories ever told. In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents. Curated by Artistic Director Josie Rourke in collaboration with Associate Director Christopher Haydon, Sixty-Six Books brings together a team of the country's most exciting emerging and established directors, designers, performers and artists to create an immersive experience that inaugurates the Bush's new home before spreading to a host of other venues across London including a twelve hour vigil at Westminster Abbey on 21st October. Click here to see the sixty-six writers involved. Sixty-Six Books will begin and end with two exhilarating 24-hour performances during which you can experience all 66 responses with a 24 Hour Pass.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "In 2011, the 400th anniversary year of the publication of the King James Bible, each book of this great English work is spoken to by a remarkable range of playwrights, poets, songwriters and novelists from all faiths and none, from over a dozen countries and across five continents.",
+     "From Jeanette Winterson to Jack Thorne, Carol Ann Duffy to the Archbishop of Canterbury, Billy Bragg to Wole Soyinka, sixty-six writers from a huge range of backgrounds and disciplines have made a contemporary response to some of the oldest stories ever told.",
+     "Sixty-Six Books will begin and end with two exhilarating 24-hour performances during which you can experience all 66 responses with a 24 Hour Pass.",
+     "This October, the Bush Theatre will open the doors to its new home with Sixty-Six Books, an epic performance cycle featuring over 100 artists from across the globe."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes that Anne Michaels contributed to the Bush Theatre's 24-hour performance. The shown sentences describe the event generally and mention the 24-hour performances, but do not mention Michaels by name nor explicitly attribute the performance to the Bush Theatre. However, the source text does contain both pieces of evidence: the list of writers includes 'Anne Michaels (Exodus)', and the opening sentence states 'This October, the Bush Theatre will open the doors... with Sixty-Six Books'. Since these proofs exist in the source but were not among the shown sentences, the tool's evidence is insufficient, making this a 'wrong_or_insufficient_evidence' case."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "A keen tennis player, he lives in Leicestershire with his wife and two children.",
+   "markers": [
+    "alejandroarmellini"
+   ],
+   "paper_ids": [
+    "d6efd8ba5c64fb10f815f7440fea7408aeb5af70"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9303,
+   "evidence": {
+    "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+    "source_title": "alejandroarmellini",
+    "supported": true,
+    "sentence": "I am a keen tennis player.",
+    "page": 1,
+    "snippet": "I am a keen tennis player.",
+    "cosine": 0.9303,
+    "reason": "The passage directly states that the individual is a keen tennis player and lives in Leicestershire with his wife and two children.",
+    "window": "I live in Leicestershire with my wife and two children. I am a keen tennis player. My current role is Dean of Learning and Teaching and Director of the Institute of Learning and Teaching in Higher Education, University of Northampton."
+   },
+   "evidences": [
+    {
+     "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+     "source_title": "alejandroarmellini",
+     "supported": true,
+     "sentence": "I am a keen tennis player.",
+     "page": 1,
+     "snippet": "I am a keen tennis player.",
+     "cosine": 0.9303,
+     "reason": "The passage directly states that the individual is a keen tennis player and lives in Leicestershire with his wife and two children.",
+     "window": "I live in Leicestershire with my wife and two children. I am a keen tennis player. My current role is Dean of Learning and Teaching and Director of the Institute of Learning and Teaching in Higher Education, University of Northampton."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the individual is a keen tennis player and lives in Leicestershire with his wife and two children.",
+   "covering": {
+    "covered": [
+     {
+      "component": "keen tennis player",
+      "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+      "source_title": "alejandroarmellini",
+      "sentence": "I am a keen tennis player.",
+      "page": 1,
+      "snippet": "I am a keen tennis player."
+     },
+     {
+      "component": "lives in Leicestershire",
+      "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+      "source_title": "alejandroarmellini",
+      "sentence": "I live in Leicestershire with my wife and two children.",
+      "page": 1,
+      "snippet": "I live in Leicestershire with my wife"
+     },
+     {
+      "component": "has wife and two children",
+      "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+      "source_title": "alejandroarmellini",
+      "sentence": "I live in Leicestershire with my wife and two children.",
+      "page": 1,
+      "snippet": "I live in Leicestershire with my wife"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+      "source_title": "alejandroarmellini",
+      "text": "I live in Leicestershire with my wife and two children. I am a keen tennis player.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t6",
+   "text": "Mars also performed a shortened version of the song as part of his Super Bowl XLVIII halftime show, with a reference to The Isley Brothers' \"Shout\" and the James Brown-inspired choreography.",
+   "markers": [
+    "runawaybaby"
+   ],
+   "paper_ids": [
+    "92d11ed400c8238a6691450cbaa6255bf4563cad"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "92d11ed400c8238a6691450cbaa6255bf4563cad",
+    "source_title": "runawaybaby",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "into Runaway Baby before breaking into a dance routine borrowed directly from Brown, then introducing the Red Hot Chili Peppers and Give It Away.",
+    "page": 1,
+    "snippet": "into Runaway Baby before breaking into a",
+    "reason": "The passage does not mention a shortened version of the song, a Super Bowl XLVIII halftime show, or a reference to The Isley Brothers' \"Shout\".",
+    "votes": "2-0",
+    "window": "into Runaway Baby before breaking into a dance routine borrowed directly from Brown, then introducing the Red Hot Chili Peppers and Give It Away."
+   },
+   "evidences": [
+    {
+     "paper_id": "92d11ed400c8238a6691450cbaa6255bf4563cad",
+     "source_title": "runawaybaby",
+     "sentence": "Mars' eight-piece band is modeled after the R&B revue style of James Brown and the old Motown Records tour, a setup perfectly suited for a halftime show that requires musicians to shift suddenly in a punched-up medley of shortened songs.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "92d11ed400c8238a6691450cbaa6255bf4563cad",
+     "source_title": "runawaybaby",
+     "sentence": "Mars paid tribute to the bands of that era, inserting a few bars of the Isley Brothers' Shout! into Runaway Baby before breaking into a dance routine borrowed directly from Brown",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Mars performed a medley of shortened songs, included a reference to The Isley Brothers' \"Shout!\" within \"Runaway Baby,\" and incorporated a dance routine borrowed from James Brown. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "The performance included James Brown-inspired choreography"
+    ],
+    "missing": [
+     "Mars performed a shortened version of the song as part of his Super Bowl XLVIII halftime show",
+     "The performance included a reference to The Isley Brothers' \"Shout\""
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The performance included James Brown-inspired choreography",
+      "paper_id": "92d11ed400c8238a6691450cbaa6255bf4563cad",
+      "source_title": "runawaybaby",
+      "sentence": "into Runaway Baby before breaking into a dance routine borrowed directly from Brown, then introducing the Red Hot Chili Peppers and Give It Away.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Mars' eight-piece band is modeled after the R&B revue style of James Brown and the old Motown Records tour, a setup perfectly suited for a halftime show that requires musicians to shift suddenly in a punched-up medley of shortened songs.",
+     "Mars paid tribute to the bands of that era, inserting a few bars of the Isley Brothers' Shout! into Runaway Baby before breaking into a dance routine borrowed directly from Brown"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the James Brown-inspired dance routine, but it omits the reference to the Isley Brothers' 'Shout' and the fact that the song was a shortened version as part of a medley. Both missing components are present elsewhere in the source text (the 'shortened songs' description and the explicit mention of inserting 'Shout!'), so the tool should display those sentences instead. The claim is fully provable from the source, but the shown evidence is incomplete.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t7",
+   "text": "Young faced Kedzie again in a five-round title rematch at Jackson's MMA Series 4 on April 9, 2011 in Albuquerque, New Mexico.",
+   "markers": [
+    "kaitlinyoung"
+   ],
+   "paper_ids": [
+    "d39c278076d73029c2805d3db96c6bfafbd06233"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9132,
+   "evidence": {
+    "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+    "source_title": "kaitlinyoung",
+    "supported": true,
+    "sentence": "The bout between Young and Kedzie, which MMARising.com confirmed with a source close to the negotiations today, is expected to be formally announced on or before March 8th.",
+    "page": 1,
+    "snippet": "The bout between Young and Kedzie, which",
+    "cosine": 0.9132,
+    "reason": "The passage confirms the fight between Young and Kedzie at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico, and states it will be contested over five rounds.",
+    "window": "Jackson's MMA Series 4 takes place on April 9th at the Hard Rock Hotel and Casino in Albuqerque, New Mexico. The bout between Young and Kedzie, which MMARising.com confirmed with a source close to the negotiations today, is expected to be formally announced on or before March 8th. It will be contested over five, five-minute rounds at 135 pounds."
+   },
+   "evidences": [
+    {
+     "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+     "source_title": "kaitlinyoung",
+     "supported": true,
+     "sentence": "The bout between Young and Kedzie, which MMARising.com confirmed with a source close to the negotiations today, is expected to be formally announced on or before March 8th.",
+     "page": 1,
+     "snippet": "The bout between Young and Kedzie, which",
+     "cosine": 0.9132,
+     "reason": "The passage confirms the fight between Young and Kedzie at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico, and states it will be contested over five rounds.",
+     "window": "Jackson's MMA Series 4 takes place on April 9th at the Hard Rock Hotel and Casino in Albuqerque, New Mexico. The bout between Young and Kedzie, which MMARising.com confirmed with a source close to the negotiations today, is expected to be formally announced on or before March 8th. It will be contested over five, five-minute rounds at 135 pounds."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage confirms the fight between Young and Kedzie at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico, and states it will be contested over five rounds.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Young faced Kedzie again",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "(meta data) TITLE: Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series | MMARising.com (meta data) AUTHOR: MMARising.com (meta data) PUBLISHER: MMARising.com ## Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series By Robert Sargent on February 22, 2011 Two of MMA's top 135-pound female fighters will collide in a five-round title fight at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kaitlin Young vs Julie"
+     },
+     {
+      "component": "in a five-round title rematch",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "(meta data) TITLE: Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series | MMARising.com (meta data) AUTHOR: MMARising.com (meta data) PUBLISHER: MMARising.com ## Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series By Robert Sargent on February 22, 2011 Two of MMA's top 135-pound female fighters will collide in a five-round title fight at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kaitlin Young vs Julie"
+     },
+     {
+      "component": "in a five-round title rematch",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "The bout between Young and Kedzie will determine the first Jackson's MMA Series Women's Champion.",
+      "page": 1,
+      "snippet": "The bout between Young and Kedzie will"
+     },
+     {
+      "component": "at Jackson's MMA Series 4",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "(meta data) TITLE: Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series | MMARising.com (meta data) AUTHOR: MMARising.com (meta data) PUBLISHER: MMARising.com ## Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series By Robert Sargent on February 22, 2011 Two of MMA's top 135-pound female fighters will collide in a five-round title fight at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kaitlin Young vs Julie"
+     },
+     {
+      "component": "at Jackson's MMA Series 4",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "Jackson's MMA Series 4 takes place on April 9th at the Hard Rock Hotel and Casino in Albuqerque, New Mexico.",
+      "page": 1,
+      "snippet": "Jackson's MMA Series 4 takes place on"
+     },
+     {
+      "component": "on April 9, 2011",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "(meta data) TITLE: Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series | MMARising.com (meta data) AUTHOR: MMARising.com (meta data) PUBLISHER: MMARising.com ## Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series By Robert Sargent on February 22, 2011 Two of MMA's top 135-pound female fighters will collide in a five-round title fight at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kaitlin Young vs Julie"
+     },
+     {
+      "component": "on April 9, 2011",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "Jackson's MMA Series 4 takes place on April 9th at the Hard Rock Hotel and Casino in Albuqerque, New Mexico.",
+      "page": 1,
+      "snippet": "Jackson's MMA Series 4 takes place on"
+     },
+     {
+      "component": "in Albuquerque, New Mexico",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "(meta data) TITLE: Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series | MMARising.com (meta data) AUTHOR: MMARising.com (meta data) PUBLISHER: MMARising.com ## Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series By Robert Sargent on February 22, 2011 Two of MMA's top 135-pound female fighters will collide in a five-round title fight at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kaitlin Young vs Julie"
+     },
+     {
+      "component": "in Albuquerque, New Mexico",
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "sentence": "Jackson's MMA Series 4 takes place on April 9th at the Hard Rock Hotel and Casino in Albuqerque, New Mexico.",
+      "page": 1,
+      "snippet": "Jackson's MMA Series 4 takes place on"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+      "source_title": "kaitlinyoung",
+      "text": "(meta data) TITLE: Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series | MMARising.com (meta data) AUTHOR: MMARising.com (meta data) PUBLISHER: MMARising.com ## Kaitlin Young vs Julie Kedzie Set For Jackson's MMA Series By Robert Sargent on February 22, 2011 Two of MMA's top 135-pound female fighters will collide in a five-round title fight at Jackson's MMA Series 4 on April 9th in Albuquerque, New Mexico. 2007 HOOKnSHOOT Women's Grand Prix Champion Kaitlin Young will face well-rounded veteran Julie \"Fireball\" Kedzie in a featured bout on the card. Both fighters recently took part in the ill-fated Ultimate Women Challenge reality show competition last year, though results from the fights that took place during filming have yet to be released. The bout between Young and Kedzie will determine the first Jackson's MMA Series Women's Champion. […] Jackson's MMA Series 4 takes place on April 9th at the Hard Rock Hotel and Casino in Albuqerque, New Mexico.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t8",
+   "text": "It has been a part of the university's Founders' Celebration every November since 2011, when it was created to replace its predecessor, FallFest.",
+   "markers": [
+    "hullabaloofestival"
+   ],
+   "paper_ids": [
+    "36cdc81decabf1c1b888255c5b694d6080c5654c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "36cdc81decabf1c1b888255c5b694d6080c5654c",
+    "source_title": "hullabaloofestival",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In comparison, over 5,600 students turned out last year for FallFest, UCSD's traditional Fall Quarter event that Hullabaloo has since replaced.",
+    "page": 1,
+    "snippet": "In comparison, over 5,600 students turned out",
+    "reason": "The passage does not state that the event has been part of the university's Founders' Celebration every November since 2011.",
+    "votes": "2-0",
+    "window": "In comparison, over 5,600 students turned out last year for FallFest, UCSD's traditional Fall Quarter event that Hullabaloo has since replaced. Due to budget cuts, A.S. Council cut the FallFest budget from $135,000 to $62,500. ASCE then decided to rename and rebrand the event so students would not be disappointed by a financially restricted FallFest. Unlike FallFest, which centered around music performers, Hullabaloo focused on creating a carnival atmosphere with rides and food trucks."
+   },
+   "evidences": [
+    {
+     "paper_id": "36cdc81decabf1c1b888255c5b694d6080c5654c",
+     "source_title": "hullabaloofestival",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In comparison, over 5,600 students turned out last year for FallFest, UCSD's traditional Fall Quarter event that Hullabaloo has since replaced.",
+     "page": 1,
+     "snippet": "In comparison, over 5,600 students turned out",
+     "reason": "The passage does not state that the event has been part of the university's Founders' Celebration every November since 2011.",
+     "votes": "2-0",
+     "window": "In comparison, over 5,600 students turned out last year for FallFest, UCSD's traditional Fall Quarter event that Hullabaloo has since replaced. Due to budget cuts, A.S. Council cut the FallFest budget from $135,000 to $62,500. ASCE then decided to rename and rebrand the event so students would not be disappointed by a financially restricted FallFest. Unlike FallFest, which centered around music performers, Hullabaloo focused on creating a carnival atmosphere with rides and food trucks."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the event has been part of the university's Founders' Celebration every November since 2011.",
+   "component_check": {
+    "found": [
+     "It was created to replace its predecessor, FallFest."
+    ],
+    "missing": [
+     "It has been a part of the university's Founders' Celebration every November since 2011."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "It was created to replace its predecessor, FallFest.",
+      "paper_id": "36cdc81decabf1c1b888255c5b694d6080c5654c",
+      "source_title": "hullabaloofestival",
+      "sentence": "In comparison, over 5,600 students turned out last year for FallFest, UCSD's traditional Fall Quarter event that Hullabaloo has since replaced.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "It has been a part of the university's Founders' Celebration every November since 2011, when it was created to replace its predecessor, FallFest.",
+    "reason": "The passage asserts specific facts (dates, events) that the cited source is expected to prove. There is no indication that the citation is only for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that Hullabaloo has been part of the university's Founders' Celebration every November since 2011",
+    "rewrite_suggestion": "Hullabaloo replaced its predecessor, FallFest.",
+    "proofs": [
+     "In comparison, over 5,600 students turned out last year for FallFest, UCSD's traditional Fall Quarter event that Hullabaloo has since replaced.",
+     "ASCE then decided to rename and rebrand the event so students would not be disappointed by a financially restricted FallFest."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two components: (1) that Hullabaloo replaced FallFest, which is supported by the shown sentence and another sentence in the source; (2) that Hullabaloo is part of the Founders' Celebration every November since 2011, which is not mentioned anywhere in the source text. Since the second component is entirely unsourced, the author must either add a citation for that information or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "Winslet teamed with Lancôme and the National Literacy Trust in 2018 to launch a programme that aims to educate underprivileged women in the UK.",
+   "markers": [
+    "katewinslet"
+   ],
+   "paper_ids": [
+    "b6ecd25f174315cedbe9fea728e18aff2a5e3a69"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+    "source_title": "katewinslet",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Kate Winslet and Lancôme",
+    "reason": "",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills. This project is part of Lancôme's global campaign Write Her Future, which hopes to tackle the literacy crisis that affects 76 million young women around the world. Related Story Literary experts offer advice on how to stand out The Words for Work: Women in Leadership partnership hopes to change this by helping young women from disadvantaged communities with their literacy and communication skills, building their confidence, and helping them to employment. Kate Winslet, Lancôme Ambassadress, said: \"It has played a huge role in my life, as an actress in my job and a mother, educating and raising my own children.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+     "source_title": "katewinslet",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Kate Winslet and Lancôme",
+     "reason": "",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills. This project is part of Lancôme's global campaign Write Her Future, which hopes to tackle the literacy crisis that affects 76 million young women around the world. Related Story Literary experts offer advice on how to stand out The Words for Work: Women in Leadership partnership hopes to change this by helping young women from disadvantaged communities with their literacy and communication skills, building their confidence, and helping them to employment. Kate Winslet, Lancôme Ambassadress, said: \"It has played a huge role in my life, as an actress in my job and a mother, educating and raising my own children.\""
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Winslet teamed with Lancôme and the National Literacy Trust",
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "sentence": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kate Winslet and Lancôme"
+     },
+     {
+      "component": "in 2018 to launch a programme",
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "sentence": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kate Winslet and Lancôme"
+     },
+     {
+      "component": "that aims to educate underprivileged women in the UK",
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "sentence": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Kate Winslet and Lancôme"
+     },
+     {
+      "component": "that aims to educate underprivileged women in the UK",
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "sentence": "Related Story Literary experts offer advice on how to stand out The Words for Work: Women in Leadership partnership hopes to change this by helping young women from disadvantaged communities with their literacy and communication skills, building their confidence, and helping them to employment.",
+      "page": 1,
+      "snippet": "Related Story Literary experts offer advice on"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+      "source_title": "katewinslet",
+      "text": "(meta data) TITLE: Kate Winslet and Lancôme launch UK literacy programme (meta data) PUBLISHER: https://www.facebook.com/harpersbazaaruk (meta data) PUBLISHED DATETIME: 2018-09-10T14:19:07.763897Z Editions: Type keyword(s) to search # Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018 Getty Images Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills. In England, 9 per cent of 16-24 year old women are affected by illiteracy, with 1 in 7 lacking basic skills, which is closely linked with low pay and risk of unemployment. The problem starts at a younger age; 1 in 8 children don't even own a book. While many might argue that the internet has opened more windows of opportunity, the digital age has actually increased the inequality of education around the world; those without it are even more isolated than before. Despite economical, technological and social growth, illiteracy rates have stayed the same. Related Story Literary experts offer advice on how to stand out The Words for Work: Women in Leadership partnership hopes to change this by helping young women from disadvantaged communities with their literacy and communication skills, building their confidence, and helping them to employment.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage states the program aims to educate disadvantaged young women, not specifically underprivileged women.",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "# Kate Winslet and Lancôme launch UK literacy programme It's the first of its kind Jessica Davis Sep 10, 2018",
+     "Lancôme and The National Literacy Trust have partnered to launch a global programme to help disadvantaged young women in the UK develop their literacy skills."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim requires showing that Winslet teamed with Lancôme and the National Literacy Trust in 2018 to launch a programme for underprivileged women in the UK. The shown sentences cover the programme's aim and the partnership between Lancôme and the National Literacy Trust, but omit any mention of Winslet's involvement and the year 2018. However, the full source text contains both: the title line includes 'Kate Winslet and Lancôme launch UK literacy programme' and a date, and another sentence names the partnership. Since proof exists but was not among the shown sentences, the tool failed to display adequate support."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In 2014 Starbucks was scheduled to open a store in Azerbaijan, in the Port Baku Mall.",
+   "markers": [
+    "starbucks"
+   ],
+   "paper_ids": [
+    "5b470e1e1e818b7e9f438167cf60e83eca8602ed"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+    "source_title": "starbucks",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Starbucks coffee shop chain will be opened in Azerbaijani capital of Baku by late 2014, an informed source in the retail market told Trend on April 21.",
+    "page": 1,
+    "snippet": "Starbucks coffee shop chain will be opened",
+    "reason": "The passage states Starbucks was scheduled to open in Baku, not specifically in the Port Baku Mall.",
+    "votes": "2-0",
+    "window": "Starbucks coffee shop chain will be opened in Azerbaijani capital of Baku by late 2014, an informed source in the retail market told Trend on April 21. I am sure that Starbucks coffeehouses will be opened in the city this year,\" he said. \"I can say the talks on bringing this brand to Azerbaijan have been completed successfully."
+   },
+   "evidences": [
+    {
+     "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+     "source_title": "starbucks",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Starbucks coffee shop chain will be opened in Azerbaijani capital of Baku by late 2014, an informed source in the retail market told Trend on April 21.",
+     "page": 1,
+     "snippet": "Starbucks coffee shop chain will be opened",
+     "reason": "The passage states Starbucks was scheduled to open in Baku, not specifically in the Port Baku Mall.",
+     "votes": "2-0",
+     "window": "Starbucks coffee shop chain will be opened in Azerbaijani capital of Baku by late 2014, an informed source in the retail market told Trend on April 21. I am sure that Starbucks coffeehouses will be opened in the city this year,\" he said. \"I can say the talks on bringing this brand to Azerbaijan have been completed successfully."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Starbucks was scheduled to open in Baku, not specifically in the Port Baku Mall.",
+   "component_check": {
+    "found": [
+     "In 2014 Starbucks was scheduled to open a store in Azerbaijan"
+    ],
+    "missing": [
+     "the store was to be located in the Port Baku Mall"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 2014 Starbucks was scheduled to open a store in Azerbaijan",
+      "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+      "source_title": "starbucks",
+      "sentence": "Starbucks coffee shop chain will be opened in Azerbaijani capital of Baku by late 2014, an informed source in the retail market told Trend on April 21.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific fact (Starbucks opening a store in 2014) that the citation is expected to prove. This falls under the default 'full' scope as it's a factual claim attributed to the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Port Baku Mall",
+    "rewrite_suggestion": "In 2014 Starbucks was scheduled to open a store in Baku, Azerbaijan.",
+    "proofs": [
+     "Starbucks coffee shop chain will be opened in Azerbaijani capital of Baku by late 2014, an informed source in the retail market told Trend on April 21."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim specifies 'Port Baku Mall' as the location, but the source text does not mention this mall. In fact, the source states that the location was not disclosed ('did not say anything about their location'). Therefore, the component 'Port Baku Mall' is unsourced and cannot be proven from the given source. The remaining components (year 2014, Starbucks scheduled to open in Azerbaijan/Baku) are supported by the shown sentence. Since a substantive component is missing from the source entirely, the author must either add a citation for the mall location or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Collingwood retired from first-class and List A cricket in September 2018.",
+   "markers": [
+    "paulcollingwood"
+   ],
+   "paper_ids": [
+    "4d347ad980e2f43615d676b397e43d90c79644ff"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4d347ad980e2f43615d676b397e43d90c79644ff",
+    "source_title": "paulcollingwood",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 13 Sep 18 # Former England captain Paul Collingwood announces retirement ### England news ShareURL Copied Paul Collingwood has announced that his 22-year professional career will draw to a close at the end of this season.",
+    "page": 1,
+    "snippet": "About ICC Hall of Fame ICC on",
+    "reason": "The passage does not specify that Collingwood retired from first-class and List A cricket, nor does it mention the month of September.",
+    "votes": "2-0",
+    "window": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 13 Sep 18 # Former England captain Paul Collingwood announces retirement ### England news ShareURL Copied Paul Collingwood has announced that his 22-year professional career will draw to a close at the end of this season."
+   },
+   "evidences": [
+    {
+     "paper_id": "4d347ad980e2f43615d676b397e43d90c79644ff",
+     "source_title": "paulcollingwood",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 13 Sep 18 # Former England captain Paul Collingwood announces retirement ### England news ShareURL Copied Paul Collingwood has announced that his 22-year professional career will draw to a close at the end of this season.",
+     "page": 1,
+     "snippet": "About ICC Hall of Fame ICC on",
+     "reason": "The passage does not specify that Collingwood retired from first-class and List A cricket, nor does it mention the month of September.",
+     "votes": "2-0",
+     "window": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 13 Sep 18 # Former England captain Paul Collingwood announces retirement ### England news ShareURL Copied Paul Collingwood has announced that his 22-year professional career will draw to a close at the end of this season."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not specify that Collingwood retired from first-class and List A cricket, nor does it mention the month of September.",
+   "component_check": {
+    "found": [
+     "in September 2018"
+    ],
+    "missing": [
+     "Collingwood retired from first-class and List A cricket"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "in September 2018",
+      "paper_id": "4d347ad980e2f43615d676b397e43d90c79644ff",
+      "source_title": "paulcollingwood",
+      "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 13 Sep 18 # Former England captain Paul Collingwood announces retirement ### England news ShareURL Copied Paul Collingwood has announced that his 22-year professional career will draw to a close at the end of this season.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Collingwood retired from first-class and List A cricket in September 2018.",
+    "reason": "The passage asserts a specific fact (retirement date) that is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "13 Sep 18 # Former England captain Paul Collingwood announces retirement",
+     "Paul Collingwood has announced that his 22-year professional career will draw to a close at the end of this season."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences include the date '13 Sep 18' and the explicit statement that Collingwood's professional career will end at the end of that season. Retiring from a professional cricket career necessarily includes retirement from first-class and List A cricket, as those are core components of professional cricket in England. No component of the claim is missing or contradicted."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "Gill has won 21 awards from 44 nominations.",
+   "markers": [
+    "vincegill"
+   ],
+   "paper_ids": [
+    "3ce59eea65d9645524e8b510255c5ac7e04bcac7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8865,
+   "evidence": {
+    "paper_id": "3ce59eea65d9645524e8b510255c5ac7e04bcac7",
+    "source_title": "vincegill",
+    "supported": false,
+    "sentence": "Best Country Album These Days Album Of The Year These Days",
+    "page": 1,
+    "snippet": "Best Country Album These Days Album Of",
+    "cosine": 0.8865,
+    "reason": "The passage only lists awards for 'These Days' and does not provide the total number of awards or nominations.",
+    "window": "See All Awards for This Year Best Country Album These Days Album Of The Year These Days See All Awards for This Year"
+   },
+   "evidences": [
+    {
+     "paper_id": "3ce59eea65d9645524e8b510255c5ac7e04bcac7",
+     "source_title": "vincegill",
+     "supported": false,
+     "sentence": "Best Country Album These Days Album Of The Year These Days",
+     "page": 1,
+     "snippet": "Best Country Album These Days Album Of",
+     "cosine": 0.8865,
+     "reason": "The passage only lists awards for 'These Days' and does not provide the total number of awards or nominations.",
+     "window": "See All Awards for This Year Best Country Album These Days Album Of The Year These Days See All Awards for This Year"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Gill has won 21 awards from 44 nominations.",
+    "reason": "The passage directly states a factual claim about the number of awards and nominations received by Gill. This is a statement of fact that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific counts of 21 wins and 44 nominations",
+    "rewrite_suggestion": "Gill has won multiple Grammy awards throughout his career.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states exact numbers of awards and nominations (21 wins from 44 nominations), but the provided source text from Grammy.com lists individual award results without any summary of total wins or nominations. No sentence in the source gives these figures, so the numeric component is unsupported. The tool's shown sentence is also not a verbatim source sentence and does not address the claim. The author must either add a citation that contains these totals or rewrite the claim to remove the specific numbers."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "The company existed for eight years; on 12 February 2009, Ericsson announced it would be merged with the mobile platform company of STMicroelectronics, ST-NXP Wireless, to create a 50/50 joint venture owned by Ericsson and STMicroelectronics.",
+   "markers": [
+    "ericsson"
+   ],
+   "paper_ids": [
+    "4e9aba9d795a82bc319a7a76da7751d47a28e142"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4e9aba9d795a82bc319a7a76da7751d47a28e142",
+    "source_title": "ericsson",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "ST-Ericsson was established as a 50/50 joint venture by STMicroelectronics and Ericsson in February 2009, with headquarters in Geneva, Switzerland.",
+    "page": 1,
+    "snippet": "ST-Ericsson was established as a 50/50 joint",
+    "reason": "the passage does not state the company existed for eight years",
+    "votes": "2-0",
+    "window": "ST-Ericsson was established as a 50/50 joint venture by STMicroelectronics and Ericsson in February 2009, with headquarters in Geneva, Switzerland."
+   },
+   "evidences": [
+    {
+     "paper_id": "4e9aba9d795a82bc319a7a76da7751d47a28e142",
+     "source_title": "ericsson",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "ST-Ericsson was established as a 50/50 joint venture by STMicroelectronics and Ericsson in February 2009, with headquarters in Geneva, Switzerland.",
+     "page": 1,
+     "snippet": "ST-Ericsson was established as a 50/50 joint",
+     "reason": "the passage does not state the company existed for eight years",
+     "votes": "2-0",
+     "window": "ST-Ericsson was established as a 50/50 joint venture by STMicroelectronics and Ericsson in February 2009, with headquarters in Geneva, Switzerland."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state the company existed for eight years",
+   "component_check": {
+    "found": [
+     "on 12 February 2009, Ericsson announced it would be merged with the mobile platform company of STMicroelectronics, ST-NXP Wireless",
+     "to create a 50/50 joint venture owned by Ericsson and STMicroelectronics"
+    ],
+    "missing": [
+     "The company existed for eight years"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "on 12 February 2009, Ericsson announced it would be merged with the mobile platform company of STMicroelectronics, ST-NXP Wireless",
+      "paper_id": "4e9aba9d795a82bc319a7a76da7751d47a28e142",
+      "source_title": "ericsson",
+      "sentence": "(meta data) TITLE: ST-Ericsson born as wireless-semiconductor industry leader - Ericsson Your location is listed as Change location Select location Press releases ST-Ericsson born as wireless-s... # ST-Ericsson born as wireless-semiconductor industry leader Press release Feb 12, 2009 08:00 (GMT +00:00) Innovation plays key role in 50/50 joint venture between STMicroelectronics and Ericsson The 50/50 joint venture that united the wireless semiconductor division of STMicroelectronics (NYSE:STM) and the mobile platform division of Ericsson (NASDAQ:ERIC) will move forward as ST-Ericsson.",
+      "page": 1
+     },
+     {
+      "component": "to create a 50/50 joint venture owned by Ericsson and STMicroelectronics",
+      "paper_id": "4e9aba9d795a82bc319a7a76da7751d47a28e142",
+      "source_title": "ericsson",
+      "sentence": "(meta data) TITLE: ST-Ericsson born as wireless-semiconductor industry leader - Ericsson Your location is listed as Change location Select location Press releases ST-Ericsson born as wireless-s... # ST-Ericsson born as wireless-semiconductor industry leader Press release Feb 12, 2009 08:00 (GMT +00:00) Innovation plays key role in 50/50 joint venture between STMicroelectronics and Ericsson The 50/50 joint venture that united the wireless semiconductor division of STMicroelectronics (NYSE:STM) and the mobile platform division of Ericsson (NASDAQ:ERIC) will move forward as ST-Ericsson.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The company existed for eight years; on 12 February 2009, Ericsson announced it would be merged with the mobile platform company of STMicroelectronics, ST-NXP Wireless, to create a 50/50 joint venture owned by Ericsson and STMicroelectronics.",
+    "reason": "The passage asserts specific facts and a date directly tied to the cited source. The attribution test is met as the passage presents information that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The company existed for eight years",
+    "rewrite_suggestion": "On 12 February 2009, Ericsson announced the merger of Ericsson Mobile Platforms with ST-NXP Wireless to create a 50/50 joint venture owned by Ericsson and STMicroelectronics.",
+    "proofs": [
+     "Press release Feb 12, 2009 08:00 (GMT +00:00)",
+     "The 50/50 joint venture that united the wireless semiconductor division of STMicroelectronics and the mobile platform division of Ericsson will move forward as ST-Ericsson.",
+     "This announcement follows the recent closing of the agreement announced in August 2008, between the parent companies, to merge Ericsson Mobile Platforms and ST-NXP Wireless.",
+     "ST-Ericsson was established as a 50/50 joint venture by STMicroelectronics and Ericsson in February 2009, with headquarters in Geneva, Switzerland."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes an unsourced component 'The company existed for eight years' which is not present in the source text at all. The other components (the date, announcement, merger, and joint venture) are provable from the source but are not fully covered by the shown sentence. Because one substantive component cannot be proven from the cited source, the author must either add a citation for that claim or rewrite the claim to exclude it."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "He was recalled by the Wizards a week later.",
+   "markers": [
+    "sheldonmac"
+   ],
+   "paper_ids": [
+    "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e",
+    "source_title": "sheldonmac",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League.",
+    "page": 1,
+    "snippet": "## Wizards Recall McClellan from Rio Grande",
+    "reason": "The passage explicitly states that Sheldon McClellan was recalled by the Washington Wizards on April 11, 2017, from the Rio Grande Valley Vipers. The claim states he was recalled a week later, which is not supported by the passage.",
+    "votes": "2-0",
+    "window": "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League."
+   },
+   "evidences": [
+    {
+     "paper_id": "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e",
+     "source_title": "sheldonmac",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League.",
+     "page": 1,
+     "snippet": "## Wizards Recall McClellan from Rio Grande",
+     "reason": "The passage explicitly states that Sheldon McClellan was recalled by the Washington Wizards on April 11, 2017, from the Rio Grande Valley Vipers. The claim states he was recalled a week later, which is not supported by the passage.",
+     "votes": "2-0",
+     "window": "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Sheldon McClellan was recalled by the Washington Wizards on April 11, 2017, from the Rio Grande Valley Vipers. The claim states he was recalled a week later, which is not supported by the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He was recalled by the Wizards",
+      "paper_id": "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e",
+      "source_title": "sheldonmac",
+      "sentence": "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League.",
+      "page": 1,
+      "snippet": "## Wizards Recall McClellan from Rio Grande"
+     }
+    ],
+    "uncovered": [
+     "a week later"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e",
+      "source_title": "sheldonmac",
+      "text": "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "a week later",
+    "rewrite_suggestion": "He was recalled by the Wizards on April 11, 2017.",
+    "proofs": [
+     "## Wizards Recall McClellan from Rio Grande Valley April 11, 2017 WASHINGTON, D.C. – Washington Wizards President Ernie Grunfeld announced today that rookie guard Sheldon McClellan has been recalled from the Rio Grande Valley Vipers of the NBA Development League."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the temporal component 'a week later,' which is unsupported by the cited source. The source only states the recall occurred on April 11, 2017, with no mention of any prior event or a one-week interval. Therefore, the author must either add a citation for that timing or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "On October 6, 1995, the band released the studio version of the song to radio via satellite uplink to stem excessive spread of taped copies of the song.",
+   "markers": [
+    "aliceinchains"
+   ],
+   "paper_ids": [
+    "4cbe90c6bcb52641e334c939df67ff95715cba88"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+    "source_title": "aliceinchains",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In 1995, Alice in Chains released the first track from their self-titled album, Grind, to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely.",
+    "page": 1,
+    "snippet": "In 1995, Alice in Chains released the",
+    "reason": "The passage does not mention the specific date of October 6, 1995.",
+    "votes": "2-0",
+    "window": "In 1995, Alice in Chains released the first track from their self-titled album, Grind, to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely."
+   },
+   "evidences": [
+    {
+     "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+     "source_title": "aliceinchains",
+     "sentence": "Why October 6th Matters in Rock History",
+     "supported": true,
+     "via": "arbiter_rescue"
+    },
+    {
+     "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+     "source_title": "aliceinchains",
+     "sentence": "In 1995, Alice in Chains released the first track from their self-titled album, Grind, to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Alice in Chains released the first track from their self-titled album to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely, and the claim specifies the date as October 6, 1995, which is supported by the title of the source 'Why October 6th Matters in Rock History'. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "The release was via satellite uplink",
+     "The purpose was to stem excessive spread of taped copies of the song"
+    ],
+    "missing": [
+     "On October 6, 1995, the band released the studio version of the song to radio"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The release was via satellite uplink",
+      "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+      "source_title": "aliceinchains",
+      "sentence": "In 1995, Alice in Chains released the first track from their self-titled album, Grind, to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely.",
+      "page": 1
+     },
+     {
+      "component": "The purpose was to stem excessive spread of taped copies of the song",
+      "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+      "source_title": "aliceinchains",
+      "sentence": "In 1995, Alice in Chains released the first track from their self-titled album, Grind, to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Why October 6th Matters in Rock History",
+     "In 1995, Alice in Chains released the first track from their self-titled album, Grind, to radio stations via satellite uplink to prevent the spread of taped copies of the song after it had been leaked to radio prematurely."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not include the specific date 'October 6, 1995', which is a key component of the claim. However, this date is provable from the source text's title and list context. Since the proof exists in the source but was not presented among the shown sentences, the tool must fix by including the heading or full context that establishes the date. All other components are covered by the shown sentence.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t16",
+   "text": "In March 2006, Tom Bromley joined the band, assuming the role of lead guitarist, later followed by Gareth David Paisey – who became the band's principal lyricist – on lead vocals and glockenspiel, Harriet Coleman on violin and keyboard, and finally Aleksandra Berditchevskaia on vocals, keyboards and melodica.",
+   "markers": [
+    "loscampesinos"
+   ],
+   "paper_ids": [
+    "3f39dcfc8789e6c30674c8f2c3c7040a1218597f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "3f39dcfc8789e6c30674c8f2c3c7040a1218597f",
+    "source_title": "loscampesinos",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "## Members Aleksandra: vocals, melody horn Ellen: bass, vocals Gareth: vocals, glockenspiel, guitar Harriet: violin, keyboards, vocals Neil: guitar, vocals Ollie: drums, vocals Tom: guitar, vocals The music itself is an inventive, more charming British indie sound recognisable in a post-Libertines world with the saving grace of genuine intellect and humour.",
+    "page": 1,
+    "snippet": "## Members Aleksandra: vocals, melody horn Ellen:",
+    "reason": "The passage does not state that Tom Bromley joined the band in March 2006 or that he assumed the role of lead guitarist.",
+    "votes": "2-0",
+    "window": "## Members Aleksandra: vocals, melody horn Ellen: bass, vocals Gareth: vocals, glockenspiel, guitar Harriet: violin, keyboards, vocals Neil: guitar, vocals Ollie: drums, vocals Tom: guitar, vocals The music itself is an inventive, more charming British indie sound recognisable in a post-Libertines world with the saving grace of genuine intellect and humour. Gareth Paisey: I'm Gareth from Los Campesinos! On 2 June 2009, a blog post by the band gave the news that founder member Aleks was to leave the band after an American tour, in order to pursue her studies. Neil Turner: Hello, I'm Neil from Los Campesinos! Alex Berditchevskaia: I'm Alex from Los Campesinos! Oliver Briggs: I'm Ollie from Los Campesinos!"
+   },
+   "evidences": [
+    {
+     "paper_id": "3f39dcfc8789e6c30674c8f2c3c7040a1218597f",
+     "source_title": "loscampesinos",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "## Members Aleksandra: vocals, melody horn Ellen: bass, vocals Gareth: vocals, glockenspiel, guitar Harriet: violin, keyboards, vocals Neil: guitar, vocals Ollie: drums, vocals Tom: guitar, vocals The music itself is an inventive, more charming British indie sound recognisable in a post-Libertines world with the saving grace of genuine intellect and humour.",
+     "page": 1,
+     "snippet": "## Members Aleksandra: vocals, melody horn Ellen:",
+     "reason": "The passage does not state that Tom Bromley joined the band in March 2006 or that he assumed the role of lead guitarist.",
+     "votes": "2-0",
+     "window": "## Members Aleksandra: vocals, melody horn Ellen: bass, vocals Gareth: vocals, glockenspiel, guitar Harriet: violin, keyboards, vocals Neil: guitar, vocals Ollie: drums, vocals Tom: guitar, vocals The music itself is an inventive, more charming British indie sound recognisable in a post-Libertines world with the saving grace of genuine intellect and humour. Gareth Paisey: I'm Gareth from Los Campesinos! On 2 June 2009, a blog post by the band gave the news that founder member Aleks was to leave the band after an American tour, in order to pursue her studies. Neil Turner: Hello, I'm Neil from Los Campesinos! Alex Berditchevskaia: I'm Alex from Los Campesinos! Oliver Briggs: I'm Ollie from Los Campesinos!"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Tom Bromley joined the band in March 2006 or that he assumed the role of lead guitarist.",
+   "component_check": {
+    "found": [
+     "Gareth David Paisey later joined on lead vocals and glockenspiel."
+    ],
+    "missing": [
+     "In March 2006, Tom Bromley joined the band as lead guitarist.",
+     "Gareth David Paisey became the band's principal lyricist.",
+     "Harriet Coleman joined on violin and keyboard."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Gareth David Paisey later joined on lead vocals and glockenspiel.",
+      "paper_id": "3f39dcfc8789e6c30674c8f2c3c7040a1218597f",
+      "source_title": "loscampesinos",
+      "sentence": "## Members Aleksandra: vocals, melody horn Ellen: bass, vocals Gareth: vocals, glockenspiel, guitar Harriet: violin, keyboards, vocals Neil: guitar, vocals Ollie: drums, vocals Tom: guitar, vocals The music itself is an inventive, more charming British indie sound recognisable in a post-Libertines world with the saving grace of genuine intellect and humour.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In March 2006, Tom Bromley joined the band, assuming the role of lead guitarist, later followed by Gareth David Paisey – who became the band's principal lyricist – on lead vocals and glockenspiel, Harriet Coleman on violin and keyboard, and finally Aleksandra Berditchevskaia on vocals, keyboards and melodica.",
+    "reason": "The passage directly states facts about the band's lineup and when members joined. The citation is expected to prove these specific factual claims about the band's history.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The date 'March 2006', the order of joining, the full names 'Gareth David Paisey', 'Harriet Coleman', and 'Aleksandra Berditchevskaia', the roles 'lead guitarist' and 'principal lyricist', and the instrument 'melodica' (source says 'melody horn') are not found in the cited source.",
+    "rewrite_suggestion": "Members of Los Campesinos! as of 2008 include Tom Bromley on guitar, Gareth on vocals and glockenspiel, Harriet on violin and keyboards, and Aleksandra on vocals and keyboards; no joining dates are given.",
+    "proofs": [
+     "I'm Gareth from Los Campesinos! and I sing.",
+     "There's normally Harriet as well, but she's not here because she's ill. She normally plays violin.",
+     "I'm Alex from Los Campesinos! and I sing and play keyboards.",
+     "## Members Aleksandra: vocals, melody horn Ellen: bass, vocals Gareth: vocals, glockenspiel, guitar Harriet: violin, keyboards, vocals Neil: guitar, vocals Ollie: drums, vocals Tom: guitar, vocals"
+    ],
+    "quotes_dropped": 1,
+    "conflict": {
+     "sentence": "## Members Aleksandra: vocals, melody horn",
+     "why": "The claim states Aleksandra plays 'melodica', but the source lists her instrument as 'melody horn', indicating a different instrument."
+    },
+    "why": "The claim contains numerous details that are not present in the provided source text: a specific date (March 2006), a timeline of joining, full names (David Paisey, Coleman, Berditchevskaia), specific roles (lead guitarist, principal lyricist), and the instrument 'melodica' (source has 'melody horn'). The shown sentences only list members and instruments without dates or order, so the claim is unsupported. The author must add citations for these missing subclaims or rewrite to match what the source actually says."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Also, resource mobilization applies because of the fact that the people who founded the organization knew how to utilize the resources available, which implies that anyone who uses the website to sign a petition or start a petition are rational social actors who act as utility maximizers, who weigh the costs and benefits before deciding to be a part of a social movement.",
+   "markers": [
+    "resourcemobilization"
+   ],
+   "paper_ids": [
+    "cc6f53a9ece4cd75edcbdefe0d6b2708ccf406d7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cc6f53a9ece4cd75edcbdefe0d6b2708ccf406d7",
+    "source_title": "resourcemobilization",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "definition and meaning - BusinessDictionary.com # utility maximization Popular Terms Economics concept that, when making a purchase decision, a consumer attempts to get the greatest value possible from expenditure of least amount of money.",
+    "page": 1,
+    "snippet": "definition and meaning - BusinessDictionary.com # utility",
+    "reason": "The passage does not state that people who use the website to sign or start a petition are rational social actors who act as utility maximizers, weighing costs and benefits before joining a social movement.",
+    "votes": "2-0",
+    "window": "definition and meaning - BusinessDictionary.com # utility maximization Popular Terms Economics concept that, when making a purchase decision, a consumer attempts to get the greatest value possible from expenditure of least amount of money. His or her objective is to maximize the total value derived from the available money."
+   },
+   "evidences": [
+    {
+     "paper_id": "cc6f53a9ece4cd75edcbdefe0d6b2708ccf406d7",
+     "source_title": "resourcemobilization",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "definition and meaning - BusinessDictionary.com # utility maximization Popular Terms Economics concept that, when making a purchase decision, a consumer attempts to get the greatest value possible from expenditure of least amount of money.",
+     "page": 1,
+     "snippet": "definition and meaning - BusinessDictionary.com # utility",
+     "reason": "The passage does not state that people who use the website to sign or start a petition are rational social actors who act as utility maximizers, weighing costs and benefits before joining a social movement.",
+     "votes": "2-0",
+     "window": "definition and meaning - BusinessDictionary.com # utility maximization Popular Terms Economics concept that, when making a purchase decision, a consumer attempts to get the greatest value possible from expenditure of least amount of money. His or her objective is to maximize the total value derived from the available money."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that people who use the website to sign or start a petition are rational social actors who act as utility maximizers, weighing costs and benefits before joining a social movement.",
+   "citation_scope": {
+    "scope": "concept",
+    "scoped_assertion": "resource mobilization applies",
+    "reason": "The passage uses 'resource mobilization' as a theoretical concept to frame the authors' argument about why people participate in social movements. The citation is expected to back the definition or applicability of this concept, not specific findings or methods of the authors' study.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that resource mobilization theory applies to the organization's founders and that website users are utility maximizers",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "when making a purchase decision, a consumer attempts to get the greatest value possible from expenditure of least amount of money.",
+     "why": "The source limits utility maximization to consumer purchase decisions, contradicting the claim that it applies to signing or starting petitions in a social movement context."
+    },
+    "why": "The shown sentence defines utility maximization only for consumer purchase decisions, and the source text contains no reference to resource mobilization, the organization's founders, or social movement participation. None of the claim's components are present in the source, and the source's specific context directly conflicts with the claim's application. Therefore the author must either provide a new citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "In 1890, Dr. Alexander Bondurant, later the dean of the Ole Miss Graduate School, rallied Ole Miss students to help form an athletic department to encompass the sports of football, baseball and tennis.",
+   "markers": [
+    "historyofolemissrebelsfo"
+   ],
+   "paper_ids": [
+    "ffb0989471968909c5fba20b2d5385b06e6655f8"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ffb0989471968909c5fba20b2d5385b06e6655f8",
+    "source_title": "historyofolemissrebelsfo",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "He established the first football team and served as its first coach in 1893.",
+    "page": 1,
+    "snippet": "He established the first football team and",
+    "reason": "The passage does not mention Dr. Alexander Bondurant rallying students in 1890 to form an athletic department for football, baseball, and tennis.",
+    "votes": "2-0",
+    "window": "He established the first football team and served as its first coach in 1893. He was also the first Dean of the Graduate School from 1927 to 1936 and served as Acting Chancellor briefly in 1921."
+   },
+   "evidences": [
+    {
+     "paper_id": "ffb0989471968909c5fba20b2d5385b06e6655f8",
+     "source_title": "historyofolemissrebelsfo",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "He established the first football team and served as its first coach in 1893.",
+     "page": 1,
+     "snippet": "He established the first football team and",
+     "reason": "The passage does not mention Dr. Alexander Bondurant rallying students in 1890 to form an athletic department for football, baseball, and tennis.",
+     "votes": "2-0",
+     "window": "He established the first football team and served as its first coach in 1893. He was also the first Dean of the Graduate School from 1927 to 1936 and served as Acting Chancellor briefly in 1921."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Dr. Alexander Bondurant rallying students in 1890 to form an athletic department for football, baseball, and tennis.",
+   "component_check": {
+    "found": [
+     "Dr. Alexander Bondurant was later the dean of the Ole Miss Graduate School."
+    ],
+    "missing": [
+     "In 1890, Dr. Alexander Bondurant rallied Ole Miss students.",
+     "The students helped form an athletic department.",
+     "The athletic department encompassed football, baseball, and tennis."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Dr. Alexander Bondurant was later the dean of the Ole Miss Graduate School.",
+      "paper_id": "ffb0989471968909c5fba20b2d5385b06e6655f8",
+      "source_title": "historyofolemissrebelsfo",
+      "sentence": "He was also the first Dean of the Graduate School from 1927 to 1936 and served as Acting Chancellor briefly in 1921.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1890, Dr. Alexander Bondurant rallied Ole Miss students to help form an athletic department to encompass the sports of football, baseball and tennis.",
+    "reason": "The passage asserts a historical fact attributed to the cited source, which is expected to prove this statement. The ATTRIBUTION TEST applies here as the passage is presenting information that the source is meant to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that in 1890 Bondurant rallied students to help form an athletic department covering football, baseball, and tennis",
+    "rewrite_suggestion": "Dr. Alexander Bondurant, later the dean of the Ole Miss Graduate School, established the first football team and served as its first coach in 1893.",
+    "proofs": [
+     "He was also the first Dean of the Graduate School from 1927 to 1936 and served as Acting Chancellor briefly in 1921.",
+     "He established the first football team and served as its first coach in 1893."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers establishing a football team in 1893, but the claim includes a specific year (1890), a rallying effort to form an athletic department, and the sports baseball and tennis. None of these components appear in the source text, which only supports Bondurant's role as first Dean of the Graduate School and his creation of the football team in 1893. Since multiple substantive components are unprovable from the source, the author must either add a citation for those elements or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "However, in October 2018, the solidarity fees and bonus payments for group winners were increased by 50%, while the bonuses for the teams appearing in the Nations League Finals also increased, resulting in a total of €112.875 million in prize money.",
+   "markers": [
+    "201819uefanationsleague"
+   ],
+   "paper_ids": [
+    "40405811e66b16216f8ad06dacca54832b8fb3d0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "40405811e66b16216f8ad06dacca54832b8fb3d0",
+    "source_title": "201819uefanationsleague",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Group stage -solidarity fees League A €1.5m €750,000 €2.25m League B €1m €500,000 €1.5m League C €750,000 €375,000 €1.125m League D €500,000 €250,000 €750,000 The group stage winners in Leagues A, B, C and D also all stand to benefit, with every country finishing top of their pool receiving a 50% increase in bonus payments.",
+    "page": 1,
+    "snippet": "Group stage -solidarity fees League A €1.5m",
+    "reason": "the passage does not state the total prize money was €112.875 million",
+    "votes": "2-0",
+    "window": "Group stage -solidarity fees League A €1.5m €750,000 €2.25m League B €1m €500,000 €1.5m League C €750,000 €375,000 €1.125m League D €500,000 €250,000 €750,000 The group stage winners in Leagues A, B, C and D also all stand to benefit, with every country finishing top of their pool receiving a 50% increase in bonus payments. The following increases in solidarity fees for these four teams will be set aside: €4.5m €1.5m €6m Runners-up €3.5m €1m €4.5m Third place €2.5m €1m €3.5m Fourth place €1.5m €1m €2.5m This means the overall winner of the UEFA Nations league, following the finals tournament, will receive €10.5m. This will see a 50% rise in solidarity fees given to all 55 national associations who are taking part in the competition."
+   },
+   "evidences": [
+    {
+     "paper_id": "40405811e66b16216f8ad06dacca54832b8fb3d0",
+     "source_title": "201819uefanationsleague",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Group stage -solidarity fees League A €1.5m €750,000 €2.25m League B €1m €500,000 €1.5m League C €750,000 €375,000 €1.125m League D €500,000 €250,000 €750,000 The group stage winners in Leagues A, B, C and D also all stand to benefit, with every country finishing top of their pool receiving a 50% increase in bonus payments.",
+     "page": 1,
+     "snippet": "Group stage -solidarity fees League A €1.5m",
+     "reason": "the passage does not state the total prize money was €112.875 million",
+     "votes": "2-0",
+     "window": "Group stage -solidarity fees League A €1.5m €750,000 €2.25m League B €1m €500,000 €1.5m League C €750,000 €375,000 €1.125m League D €500,000 €250,000 €750,000 The group stage winners in Leagues A, B, C and D also all stand to benefit, with every country finishing top of their pool receiving a 50% increase in bonus payments. The following increases in solidarity fees for these four teams will be set aside: €4.5m €1.5m €6m Runners-up €3.5m €1m €4.5m Third place €2.5m €1m €3.5m Fourth place €1.5m €1m €2.5m This means the overall winner of the UEFA Nations league, following the finals tournament, will receive €10.5m. This will see a 50% rise in solidarity fees given to all 55 national associations who are taking part in the competition."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state the total prize money was €112.875 million",
+   "component_check": {
+    "found": [
+     "In October 2018, solidarity fees and bonus payments for group winners were increased by 50%."
+    ],
+    "missing": [
+     "Bonuses for teams appearing in the Nations League Finals also increased.",
+     "This resulted in a total of €112.875 million in prize money."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In October 2018, solidarity fees and bonus payments for group winners were increased by 50%.",
+      "paper_id": "40405811e66b16216f8ad06dacca54832b8fb3d0",
+      "source_title": "201819uefanationsleague",
+      "sentence": "Group stage -solidarity fees League A €1.5m €750,000 €2.25m League B €1m €500,000 €1.5m League C €750,000 €375,000 €1.125m League D €500,000 €250,000 €750,000 The group stage winners in Leagues A, B, C and D also all stand to benefit, with every country finishing top of their pool receiving a 50% increase in bonus payments.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states specific financial figures and dates related to prize money increases, which are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that bonuses for teams in the Nations League Finals increased, but the source only mentions increases in solidarity fees for those teams; also the total prize money of €112.875 million is not found in the source.",
+    "rewrite_suggestion": "In October 2018, solidarity fees for all teams and bonus payments for group winners were increased by 50%, and solidarity fees for teams appearing in the Nations League Finals were also increased.",
+    "proofs": [
+     "Increased UEFA Nations League solidarity and bonus fees Wednesday 10 October 2018",
+     "This will see a 50% rise in solidarity fees given to all 55 national associations who are taking part in the competition.",
+     "The group stage winners in Leagues A, B, C and D also all stand to benefit, with every country finishing top of their pool receiving a 50% increase in bonus payments."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only covers the 50% increase in bonus payments for group winners, but the claim includes additional components: the date (October 2018), a 50% increase in solidarity fees for group winners, an increase in bonuses for Nations League Finals teams, and a specific total prize money amount. The date and solidarity fee increase are present in the source text but not in the shown sentences, while the finals-team increase (source says solidarity fees, not bonuses) and the total amount are entirely absent from the source. Therefore the author must either add citations for those unsupported subclaims or rewrite the claim to match what the source actually supports."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "Annie Zaleski of \"The A.V. Club\" deemed it a standout on Adams's \"1989\", praising the cover as a \"yearning, '80s college rock fever dream with snarling punk stabs\".",
+   "markers": [
+    "styletaylorswiftsong"
+   ],
+   "paper_ids": [
+    "5c962ae70b522b5bede9f13929a95d611598bc60"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+    "source_title": "styletaylorswiftsong",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth.",
+    "page": 1,
+    "snippet": "And another highlight, the raucous \"Style,\" is",
+    "reason": "",
+    "votes": "2-0",
+    "window": "And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth."
+   },
+   "evidences": [
+    {
+     "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+     "source_title": "styletaylorswiftsong",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth.",
+     "page": 1,
+     "snippet": "And another highlight, the raucous \"Style,\" is",
+     "reason": "",
+     "votes": "2-0",
+     "window": "And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "byline_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "praising the cover as a \"yearning, '80s college rock fever dream with snarling punk stabs\"",
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "sentence": "And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth.",
+      "page": 1,
+      "snippet": "And another highlight, the raucous \"Style,\" is"
+     },
+     {
+      "component": "The A.V. Club",
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "sentence": "The Wayback Machine - https://web.archive.org/web/20180212033205/https://music.avclub.com/ryan-adams-transforms-taylor-swift-s-1989-into-a-melanc-1798184927",
+      "page": 1,
+      "snippet": "The Wayback Machine - https://web.archive.org/web/20180212033205/https://music.avclub.com/ryan-adams-transforms-taylor-swift-s-1989-into-a-melanc-1798184927",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Annie Zaleski of \"The A.V. Club\" deemed it a standout on Adams's \"1989\""
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+      "source_title": "styletaylorswiftsong",
+      "text": "The Wayback Machine - https://web.archive.org/web/20180212033205/https://music.avclub.com/ryan-adams-transforms-taylor-swift-s-1989-into-a-melanc-1798184927 […] And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Ryan Adams transforms Taylor Swift's 1989 into a melancholy masterpiece Annie Zaleski9/21/15 12:17pmFiled to: Music",
+     "And another highlight, the raucous \"Style,\" is a yearning, '80s college rock fever dream with snarling punk stabs à la Sonic Youth."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences include the quote and the A.V. Club URL, but they do not explicitly show the author's name 'Annie Zaleski'. That proof exists in the source text (the byline) but was not among the displayed sentences, so the tool failed to show the necessary attribution. All other components are properly proven by the shown sentences."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "Paterson died on November 10, 2018, at the age of 78.",
+   "markers": [
+    "lizjpatterson"
+   ],
+   "paper_ids": [
+    "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8589,
+   "evidence": {
+    "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+    "source_title": "lizjpatterson",
+    "supported": true,
+    "sentence": "Olin D. Johnston, died Saturday.",
+    "page": 1,
+    "snippet": "Olin D. Johnston, died Saturday.",
+    "cosine": 0.8589,
+    "reason": "The passage explicitly states that Liz Patterson died on Saturday, November 10, 2018, at the age of 78.",
+    "window": "(meta data) TITLE: Former Congresswoman Liz Patterson dies at 78 - News - GoUpstate - Spartanburg, SC (meta data) AUTHOR: Chris Lavender Subscribe Now # Former Congresswoman Liz Patterson dies at 78 Chris Lavender Staff Writer @LavenderSHJJason Spencer Staff Writer @jasontspencer ### Saturday Nov 10, 2018 at 4:14 PM Nov 10, 2018 at 8:26 PM Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov. Olin D. Johnston, died Saturday. She was 78."
+   },
+   "evidences": [
+    {
+     "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+     "source_title": "lizjpatterson",
+     "supported": true,
+     "sentence": "Olin D. Johnston, died Saturday.",
+     "page": 1,
+     "snippet": "Olin D. Johnston, died Saturday.",
+     "cosine": 0.8589,
+     "reason": "The passage explicitly states that Liz Patterson died on Saturday, November 10, 2018, at the age of 78.",
+     "window": "(meta data) TITLE: Former Congresswoman Liz Patterson dies at 78 - News - GoUpstate - Spartanburg, SC (meta data) AUTHOR: Chris Lavender Subscribe Now # Former Congresswoman Liz Patterson dies at 78 Chris Lavender Staff Writer @LavenderSHJJason Spencer Staff Writer @jasontspencer ### Saturday Nov 10, 2018 at 4:14 PM Nov 10, 2018 at 8:26 PM Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov. Olin D. Johnston, died Saturday. She was 78."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Liz Patterson died on Saturday, November 10, 2018, at the age of 78.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Paterson died on November 10, 2018",
+      "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+      "source_title": "lizjpatterson",
+      "sentence": "(meta data) TITLE: Former Congresswoman Liz Patterson dies at 78 - News - GoUpstate - Spartanburg, SC (meta data) AUTHOR: Chris Lavender Subscribe Now # Former Congresswoman Liz Patterson dies at 78 Chris Lavender Staff Writer @LavenderSHJJason Spencer Staff Writer @jasontspencer ### Saturday Nov 10, 2018 at 4:14 PM Nov 10, 2018 at 8:26 PM Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Former Congresswoman Liz Patterson"
+     },
+     {
+      "component": "Paterson died at the age of 78",
+      "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+      "source_title": "lizjpatterson",
+      "sentence": "She was 78.",
+      "page": 1,
+      "snippet": "She was 78."
+     },
+     {
+      "component": "Paterson died at the age of 78",
+      "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+      "source_title": "lizjpatterson",
+      "sentence": "(meta data) TITLE: Former Congresswoman Liz Patterson dies at 78 - News - GoUpstate - Spartanburg, SC (meta data) AUTHOR: Chris Lavender Subscribe Now # Former Congresswoman Liz Patterson dies at 78 Chris Lavender Staff Writer @LavenderSHJJason Spencer Staff Writer @jasontspencer ### Saturday Nov 10, 2018 at 4:14 PM Nov 10, 2018 at 8:26 PM Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Former Congresswoman Liz Patterson"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+      "source_title": "lizjpatterson",
+      "text": "(meta data) TITLE: Former Congresswoman Liz Patterson dies at 78 - News - GoUpstate - Spartanburg, SC (meta data) AUTHOR: Chris Lavender Subscribe Now # Former Congresswoman Liz Patterson dies at 78 Chris Lavender Staff Writer @LavenderSHJJason Spencer Staff Writer @jasontspencer ### Saturday Nov 10, 2018 at 4:14 PM Nov 10, 2018 at 8:26 PM Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov. Olin D. Johnston, died Saturday. She was 78.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "the passage does not state the date of death as November 10, 2018",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the date of death as November 10, 2018",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim uses the name 'Paterson' but the source only refers to 'Patterson'. The source does not contain any instance of 'Paterson'.",
+    "rewrite_suggestion": "Patterson died on November 10, 2018, at the age of 78.",
+    "proofs": [
+     "Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov. Olin D. Johnston, died Saturday.",
+     "Saturday Nov 10, 2018 at 4:14 PM"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The claim misspells the name as 'Paterson', while the cited source consistently uses 'Patterson'. No sentence in the source supports the spelling 'Paterson', so this component is unsupported. The date and age are fully supported by the shown sentences (metadata for Nov 10, 2018, and the explicit 'She was 78'). The remedy is for the author to correct the name to match the source."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "Also in 2006, the band recorded a cover version of Metallica's \"Master of Puppets\" for the \"Kerrang!\" release \"Remastered: Metallica's Master of Puppets Revisited\".",
+   "markers": [
+    "listofsongsrecordedbytri"
+   ],
+   "paper_ids": [
+    "08f09b603007d833146b9b689f8a0c66315c02cd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "08f09b603007d833146b9b689f8a0c66315c02cd",
+    "source_title": "listofsongsrecordedbytri",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Machine Head, Trivium, Mastodon Pay Tribute To Metallica On 'Remastered' Cd - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # MACHINE HEAD, TRIVIUM, MASTODON Pay Tribute to METALLICA On 'Remastered' CD March 21, 2006 Eight of rock's hottest bands have contributed to a special re-recording of METALLICA's \"Master of Puppets\" in celebration of the twentieth anniversary of the classic album's release and the 25th anniversary of the magazine Kerrang!",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Machine Head, Trivium, Mastodon",
+    "reason": "The passage does not state that the band recorded a cover version of Metallica's \"Master of Puppets\".",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Machine Head, Trivium, Mastodon Pay Tribute To Metallica On 'Remastered' Cd - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # MACHINE HEAD, TRIVIUM, MASTODON Pay Tribute to METALLICA On 'Remastered' CD March 21, 2006 Eight of rock's hottest bands have contributed to a special re-recording of METALLICA's \"Master of Puppets\" in celebration of the twentieth anniversary of the classic album's release and the 25th anniversary of the magazine Kerrang! \"Remastered\" features exclusive recordings by BULLET FOR MY VALENTINE, TRIVIUM, FIGHTSTAR, MACHINE HEAD, FUNERAL FOR A FRIEND, CHIMAIRA, MASTODON and MENDEED, with the sleeve notes for the album written by none other than Lars Ulrich. \"Remastered\" track listing: MACHINE HEAD - \"Battery\" TRIVIUM - \"Master Of Puppets\" MENDEED - \"The Thing That Should Not Be\" BULLET FOR MY VALENTINE - \"Welcome Home (Sanitarium)\" CHIMAIRA - \"Disposable Heroes\" FIGHTSTAR - \"Leper Messiah\" MASTODON - \"Orion\" FUNERAL FOR A FRIEND - \"Damage, Inc.\" Check out the \"Remastered\" cover artwork at this location."
+   },
+   "evidences": [
+    {
+     "paper_id": "08f09b603007d833146b9b689f8a0c66315c02cd",
+     "source_title": "listofsongsrecordedbytri",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Machine Head, Trivium, Mastodon Pay Tribute To Metallica On 'Remastered' Cd - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # MACHINE HEAD, TRIVIUM, MASTODON Pay Tribute to METALLICA On 'Remastered' CD March 21, 2006 Eight of rock's hottest bands have contributed to a special re-recording of METALLICA's \"Master of Puppets\" in celebration of the twentieth anniversary of the classic album's release and the 25th anniversary of the magazine Kerrang!",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Machine Head, Trivium, Mastodon",
+     "reason": "The passage does not state that the band recorded a cover version of Metallica's \"Master of Puppets\".",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Machine Head, Trivium, Mastodon Pay Tribute To Metallica On 'Remastered' Cd - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # MACHINE HEAD, TRIVIUM, MASTODON Pay Tribute to METALLICA On 'Remastered' CD March 21, 2006 Eight of rock's hottest bands have contributed to a special re-recording of METALLICA's \"Master of Puppets\" in celebration of the twentieth anniversary of the classic album's release and the 25th anniversary of the magazine Kerrang! \"Remastered\" features exclusive recordings by BULLET FOR MY VALENTINE, TRIVIUM, FIGHTSTAR, MACHINE HEAD, FUNERAL FOR A FRIEND, CHIMAIRA, MASTODON and MENDEED, with the sleeve notes for the album written by none other than Lars Ulrich. \"Remastered\" track listing: MACHINE HEAD - \"Battery\" TRIVIUM - \"Master Of Puppets\" MENDEED - \"The Thing That Should Not Be\" BULLET FOR MY VALENTINE - \"Welcome Home (Sanitarium)\" CHIMAIRA - \"Disposable Heroes\" FIGHTSTAR - \"Leper Messiah\" MASTODON - \"Orion\" FUNERAL FOR A FRIEND - \"Damage, Inc.\" Check out the \"Remastered\" cover artwork at this location."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the band recorded a cover version of Metallica's \"Master of Puppets\".",
+   "tail_rescue": {
+    "supported": false,
+    "tried": [
+     1
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific fact about the band's recording activity in 2006, directly attributing this action to the cited source. The citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The exact release title 'Remastered: Metallica's Master of Puppets Revisited' is not found in the source; the source only refers to the release as 'Remastered'.",
+    "rewrite_suggestion": "Also in 2006, the band recorded a cover version of Metallica's 'Master of Puppets' for the Kerrang! tribute release 'Remastered'.",
+    "proofs": [
+     "MACHINE HEAD, TRIVIUM, MASTODON Pay Tribute to METALLICA On 'Remastered' CD March 21, 2006",
+     "TRIVIUM - 'Master Of Puppets'",
+     "The CD will be given away free with Kerrang! issue 1102, which goes on sale April 5."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions that eight bands contributed to a re-recording of 'Master of Puppets' for Kerrang!'s anniversary, but does not identify which band recorded the cover or the exact release title. The source does contain evidence that Trivium recorded the track for a Kerrang!-affiliated release called 'Remastered', but the full title 'Remastered: Metallica's Master of Puppets Revisited' is absent, so the author must either add a citation for that title or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "The Office identified eight priority countries: Bosnia and Herzegovina; Central African Republic (CAR); Colombia; Cote d’Ivoire; Democratic Republic of Congo (DRC); Liberia; South Sudan and Sudan.",
+   "markers": [
+    "internationalframeworkof"
+   ],
+   "paper_ids": [
+    "eb1a50179f993d3afe8de18e4e287bc744e8d2e2"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.872,
+   "evidence": {
+    "paper_id": "eb1a50179f993d3afe8de18e4e287bc744e8d2e2",
+    "source_title": "internationalframeworkof",
+    "supported": false,
+    "sentence": "The TOE is composed of specialists from the Department of Peace Operations (DPO), the Office of the High Commissioner for Human Rights (OHCHR), and the United Nations Development Programme (UNDP).",
+    "page": 1,
+    "snippet": "The TOE is composed of specialists from",
+    "cosine": 0.872,
+    "reason": "The passage does not list the eight priority countries mentioned in the claim.",
+    "window": "To address these concerns, the United Nations Team of Experts on the Rule of Law and Sexual Violence in Conflict (TOE), established under Security Council resolution (SCR) 1888 and situated in the OSRSG-SVC, works closely with Governments and United Nations missions and Country Teams to support the investigation, prosecution of perpetrators and adjudication of crimes under civilian and military systems, legislative reform, the protection of victims and witnesses. The TOE is composed of specialists from the Department of Peace Operations (DPO), the Office of the High Commissioner for Human Rights (OHCHR), and the United Nations Development Programme (UNDP). More information can be found here."
+   },
+   "evidences": [
+    {
+     "paper_id": "eb1a50179f993d3afe8de18e4e287bc744e8d2e2",
+     "source_title": "internationalframeworkof",
+     "supported": false,
+     "sentence": "The TOE is composed of specialists from the Department of Peace Operations (DPO), the Office of the High Commissioner for Human Rights (OHCHR), and the United Nations Development Programme (UNDP).",
+     "page": 1,
+     "snippet": "The TOE is composed of specialists from",
+     "cosine": 0.872,
+     "reason": "The passage does not list the eight priority countries mentioned in the claim.",
+     "window": "To address these concerns, the United Nations Team of Experts on the Rule of Law and Sexual Violence in Conflict (TOE), established under Security Council resolution (SCR) 1888 and situated in the OSRSG-SVC, works closely with Governments and United Nations missions and Country Teams to support the investigation, prosecution of perpetrators and adjudication of crimes under civilian and military systems, legislative reform, the protection of victims and witnesses. The TOE is composed of specialists from the Department of Peace Operations (DPO), the Office of the High Commissioner for Human Rights (OHCHR), and the United Nations Development Programme (UNDP). More information can be found here."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Office identified eight priority countries: Bosnia and Herzegovina; Central African Republic (CAR); Colombia; Cote d’Ivoire; Democratic Republic of Congo (DRC); Liberia; South Sudan and Sudan.",
+    "reason": "The passage directly states a finding or fact attributed to 'The Office' and lists specific countries. This is a direct assertion of information that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire assertion that the Office identified eight priority countries, along with the specific list of countries, is absent from the source text.",
+    "rewrite_suggestion": "The Office's Annual Report on Conflict-Related Sexual Violence focuses on countries for which credible information is available, but does not define a fixed set of eight priority countries.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence discusses the composition of the Team of Experts and is entirely irrelevant. The source text never mentions 'priority countries' or any of the eight listed countries. Since no part of the claim can be proven from the provided source, the author must either add a citation that contains this information or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "Since the 1983 edition, the event has been a Formula Three race after organiser Barry Bland updated the regulations.",
+   "markers": [
+    "2001macaugrandprix"
+   ],
+   "paper_ids": [
+    "b6c9c41b3f4cec4acadc7fac20cdfbbbb85dd635"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8355,
+   "evidence": {
+    "paper_id": "b6c9c41b3f4cec4acadc7fac20cdfbbbb85dd635",
+    "source_title": "2001macaugrandprix",
+    "supported": false,
+    "sentence": "Carlos Sainz signs to join Colin McRae at Subaru for '94 following Lancia's withdrawal.",
+    "page": 1,
+    "snippet": "Carlos Sainz signs to join Colin McRae",
+    "cosine": 0.8355,
+    "reason": "The passage discusses rally racing events and driver transfers, not Formula Three races or changes to regulations by Barry Bland.",
+    "window": "Page 31, December 2003 ### This month in... Juha Kankkunen scores a record-breaking 20th WRC victory in his Toyota Celica on the RAC Rally. Carlos Sainz signs to join Colin McRae at Subaru for '94 following Lancia's withdrawal. German..."
+   },
+   "evidences": [
+    {
+     "paper_id": "b6c9c41b3f4cec4acadc7fac20cdfbbbb85dd635",
+     "source_title": "2001macaugrandprix",
+     "supported": false,
+     "sentence": "Carlos Sainz signs to join Colin McRae at Subaru for '94 following Lancia's withdrawal.",
+     "page": 1,
+     "snippet": "Carlos Sainz signs to join Colin McRae",
+     "cosine": 0.8355,
+     "reason": "The passage discusses rally racing events and driver transfers, not Formula Three races or changes to regulations by Barry Bland.",
+     "window": "Page 31, December 2003 ### This month in... Juha Kankkunen scores a record-breaking 20th WRC victory in his Toyota Celica on the RAC Rally. Carlos Sainz signs to join Colin McRae at Subaru for '94 following Lancia's withdrawal. German..."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Since the 1983 edition, the event has been a Formula Three race after organiser Barry Bland updated the regulations.",
+    "reason": "The passage directly states a fact about the event's history and its change to a Formula Three race, which is directly attributable to the cited source. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim — 'Since the 1983 edition, the event has been a Formula Three race after organiser Barry Bland updated the regulations' — is unsupported; none of its components appear in the provided source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The tool showed an unrelated sentence about Carlos Sainz, but the source text (a Motor Sport Magazine archive page) contains no reference to the 1983 edition, Formula Three, Barry Bland, or regulation changes. Every component of the claim is absent from the source, so the author must either add a citation for these facts or rewrite the claim to remove them."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "In 1985, ICADV and its sister organization, the Illinois Coalition Against Sexual Assault, worked together to advocate for the passage of the Illinois Sexual Assault Act in 1985, which broadened the definition of sexual assault, made it gender neutral, and imposed harsher punishments for offenders.",
+   "markers": [
+    "illinoiscoalitionagainst"
+   ],
+   "paper_ids": [
+    "a1f4ea06e4dc91e0306c046b4f90f03631ff8fff"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9059,
+   "evidence": {
+    "paper_id": "a1f4ea06e4dc91e0306c046b4f90f03631ff8fff",
+    "source_title": "illinoiscoalitionagainst",
+    "supported": false,
+    "sentence": "##### Illinois Coalition Against Domestic Violence (ICADV) The Illinois Coalition Against Domestic Violence (ICADV) is a not for profit, membership organization that works to eliminate violence against women and their children by promoting the eradication of domestic violence throughout Illinois; ensuring the safety of survivors, their access to services, and their freedom of choice; holding abusers accountable for the violence they perpetrate; and encouraging the development of victim-sensitive laws, policies and procedures across all systems that impact survivors.",
+    "page": 1,
+    "snippet": "##### Illinois Coalition Against Domestic Violence (ICADV)",
+    "cosine": 0.9059,
+    "reason": "The passage mentions the Illinois Coalition Against Domestic Violence (ICADV) and its general mission but does not contain any information about its work in 1985, its collaboration with the Illinois Coalition Against Sexual Assault, or the passage of the Illinois Sexual Assault Act.",
+    "window": "This assistance will be achieved through funding appropriate grant projects that directly enhance the identity of DePaul University as a Catholic, Vincentian and urban university with special attention to the Catholic and Vincentian aspects of this identity. ##### Illinois Coalition Against Domestic Violence (ICADV) The Illinois Coalition Against Domestic Violence (ICADV) is a not for profit, membership organization that works to eliminate violence against women and their children by promoting the eradication of domestic violence throughout Illinois; ensuring the safety of survivors, their access to services, and their freedom of choice; holding abusers accountable for the violence they perpetrate; and encouraging the development of victim-sensitive laws, policies and procedures across all systems that impact survivors. ### IV."
+   },
+   "evidences": [
+    {
+     "paper_id": "a1f4ea06e4dc91e0306c046b4f90f03631ff8fff",
+     "source_title": "illinoiscoalitionagainst",
+     "supported": false,
+     "sentence": "##### Illinois Coalition Against Domestic Violence (ICADV) The Illinois Coalition Against Domestic Violence (ICADV) is a not for profit, membership organization that works to eliminate violence against women and their children by promoting the eradication of domestic violence throughout Illinois; ensuring the safety of survivors, their access to services, and their freedom of choice; holding abusers accountable for the violence they perpetrate; and encouraging the development of victim-sensitive laws, policies and procedures across all systems that impact survivors.",
+     "page": 1,
+     "snippet": "##### Illinois Coalition Against Domestic Violence (ICADV)",
+     "cosine": 0.9059,
+     "reason": "The passage mentions the Illinois Coalition Against Domestic Violence (ICADV) and its general mission but does not contain any information about its work in 1985, its collaboration with the Illinois Coalition Against Sexual Assault, or the passage of the Illinois Sexual Assault Act.",
+     "window": "This assistance will be achieved through funding appropriate grant projects that directly enhance the identity of DePaul University as a Catholic, Vincentian and urban university with special attention to the Catholic and Vincentian aspects of this identity. ##### Illinois Coalition Against Domestic Violence (ICADV) The Illinois Coalition Against Domestic Violence (ICADV) is a not for profit, membership organization that works to eliminate violence against women and their children by promoting the eradication of domestic violence throughout Illinois; ensuring the safety of survivors, their access to services, and their freedom of choice; holding abusers accountable for the violence they perpetrate; and encouraging the development of victim-sensitive laws, policies and procedures across all systems that impact survivors. ### IV."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1985, ICADV and its sister organization, the Illinois Coalition Against Sexual Assault, worked together to advocate for the passage of the Illinois Sexual Assault Act in 1985, which broadened the definition of sexual assault, made it gender neutral, and imposed harsher punishments for offenders.",
+    "reason": "The passage directly attributes the actions and outcomes of the Illinois Sexual Assault Act in 1985 to the cited organizations. This is a factual claim that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about ICADV and the Illinois Coalition Against Sexual Assault collaborating in 1985 to advocate for the Illinois Sexual Assault Act and its specific provisions (broadened definition, gender neutrality, harsher punishments).",
+    "rewrite_suggestion": "The Illinois Coalition Against Domestic Violence (ICADV) is a membership organization that works to eliminate violence against women and their children.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only describes ICADV's mission and does not mention the Illinois Sexual Assault Act, the Illinois Coalition Against Sexual Assault, the year 1985, or any specific legal provisions. The source text itself contains no information about these topics, so no proof exists anywhere in the provided source. Therefore, the claim is entirely unsupported, requiring the author to add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "He made his MLS debut on August 4, 2018, starting in a 2-1 loss to Real Salt Lake, making 8 saves and allowing 2 goals.",
+   "markers": [
+    "stefancleveland"
+   ],
+   "paper_ids": [
+    "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+    "source_title": "stefancleveland",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+    "page": 1,
+    "snippet": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+    "reason": "",
+    "votes": "2-0",
+    "window": "8/04/2018CHI @ RSLL 1-2Started9002108000"
+   },
+   "evidences": [
+    {
+     "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+     "source_title": "stefancleveland",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+     "page": 1,
+     "snippet": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+     "reason": "",
+     "votes": "2-0",
+     "window": "8/04/2018CHI @ RSLL 1-2Started9002108000"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "MLS debut on August 4, 2018",
+      "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+      "source_title": "stefancleveland",
+      "sentence": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+      "page": 1,
+      "snippet": "8/04/2018CHI @ RSLL 1-2Started9002108000"
+     },
+     {
+      "component": "starting in a 2-1 loss to Real Salt Lake",
+      "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+      "source_title": "stefancleveland",
+      "sentence": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+      "page": 1,
+      "snippet": "8/04/2018CHI @ RSLL 1-2Started9002108000"
+     },
+     {
+      "component": "making 8 saves",
+      "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+      "source_title": "stefancleveland",
+      "sentence": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+      "page": 1,
+      "snippet": "8/04/2018CHI @ RSLL 1-2Started9002108000"
+     },
+     {
+      "component": "allowing 2 goals",
+      "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+      "source_title": "stefancleveland",
+      "sentence": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+      "page": 1,
+      "snippet": "8/04/2018CHI @ RSLL 1-2Started9002108000"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+      "source_title": "stefancleveland",
+      "text": "8/04/2018CHI @ RSLL 1-2Started9002108000",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage does not state that he made 8 saves or allowed 2 goals in his debut.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "he made 8 saves or allowed 2 goals in his debut",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "making 8 saves",
+    "rewrite_suggestion": "He made his MLS debut on August 4, 2018, starting in a 2-1 loss to Real Salt Lake, allowing 2 goals.",
+    "proofs": [
+     "8/04/2018CHI @ RSLL 1-2Started9002108000",
+     "2017Chicago Fire00000000000"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves the date, opponent, starting status, and score (implying 2 goals allowed), but does not prove the claim that he made 8 saves. The source text contains no explicit mention of 8 saves for that match; the cryptic string '9002108000' cannot be reliably parsed as save and goal counts without a key. Additionally, the 'MLS debut' component is provable from the source (by showing no prior appearances) but was not demonstrated by the shown sentence alone. Since the '8 saves' component is entirely unsourced, the author must add a citation or rewrite the claim to remove that unsupported detail."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "92d11ed400c8238a6691450cbaa6255bf4563cad": {
+    "title": "runawaybaby",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135": {
+    "title": "lizjpatterson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4e9aba9d795a82bc319a7a76da7751d47a28e142": {
+    "title": "ericsson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d39c278076d73029c2805d3db96c6bfafbd06233": {
+    "title": "kaitlinyoung",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "cc6f53a9ece4cd75edcbdefe0d6b2708ccf406d7": {
+    "title": "resourcemobilization",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4cbe90c6bcb52641e334c939df67ff95715cba88": {
+    "title": "aliceinchains",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b6ecd25f174315cedbe9fea728e18aff2a5e3a69": {
+    "title": "katewinslet",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a1f4ea06e4dc91e0306c046b4f90f03631ff8fff": {
+    "title": "illinoiscoalitionagainst",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3f39dcfc8789e6c30674c8f2c3c7040a1218597f": {
+    "title": "loscampesinos",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "29b2aa114583c82a360940615cb67aa57f89a7c4": {
+    "title": "annemichaels",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529": {
+    "title": "davidreedartist",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d6efd8ba5c64fb10f815f7440fea7408aeb5af70": {
+    "title": "alejandroarmellini",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "36cdc81decabf1c1b888255c5b694d6080c5654c": {
+    "title": "hullabaloofestival",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ab0c943194106eca22927c7984cfa75971e5c30c": {
+    "title": "identityevropa",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "eb1a50179f993d3afe8de18e4e287bc744e8d2e2": {
+    "title": "internationalframeworkof",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b": {
+    "title": "stefancleveland",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5c962ae70b522b5bede9f13929a95d611598bc60": {
+    "title": "styletaylorswiftsong",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc": {
+    "title": "bettercallsaul",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5b470e1e1e818b7e9f438167cf60e83eca8602ed": {
+    "title": "starbucks",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "08f09b603007d833146b9b689f8a0c66315c02cd": {
+    "title": "listofsongsrecordedbytri",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "40405811e66b16216f8ad06dacca54832b8fb3d0": {
+    "title": "201819uefanationsleague",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3ce59eea65d9645524e8b510255c5ac7e04bcac7": {
+    "title": "vincegill",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b6c9c41b3f4cec4acadc7fac20cdfbbbb85dd635": {
+    "title": "2001macaugrandprix",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4d347ad980e2f43615d676b397e43d90c79644ff": {
+    "title": "paulcollingwood",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e": {
+    "title": "sheldonmac",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "ffb0989471968909c5fba20b2d5385b06e6655f8": {
+    "title": "historyofolemissrebelsfo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 11,
+   "unsupported": 15,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-12 21:12:14",
+  "marker_errors": [],
+  "processing_time_seconds": 389.8,
+  "source_hashes": {
+   "identityevropa.txt": "aafed9b9fb955872b3df50c38c2270c90acdd331",
+   "bettercallsaul.txt": "11e100465a95f9b186e08c4d25acadd41e49ca46",
+   "davidreedartist.txt": "80e1ec3c27e25b3e9710870a9bd0784ef58e8718",
+   "annemichaels.txt": "2f682a503d6a0be2f5aa72821ca4786e3b84c18b",
+   "alejandroarmellini.txt": "fcd4cf69b37c9d2bc600522550ee3a671b49cb5f",
+   "runawaybaby.txt": "b43204eda4b865596a048dc47ec1ac3739dcd129",
+   "kaitlinyoung.txt": "71439df745408b8204fd56c17e31687617f2fcd2",
+   "hullabaloofestival.txt": "981a293ae5e1e8a8f19ef1bac78abf677e0c1c59",
+   "katewinslet.txt": "6b55a848165fe2901175baea9b7cca069d665d46",
+   "starbucks.txt": "33ac508649b86da12996fd270b32cb0ddb2985cd",
+   "paulcollingwood.txt": "c1ecd4bf025bc3f6f857b08d395eb6c58e5de4f0",
+   "vincegill.txt": "b1b6ce20fd76a9c99a90a617c085bb9d1925328b",
+   "ericsson.txt": "9d7c622e454c5b7c3eab167d2d482bc865e252aa",
+   "sheldonmac.txt": "5a365a8aefcf58921e641a4345bb13b5f1cc149f",
+   "aliceinchains.txt": "fbe0c9587b4226c003233ed1ab8827c115f3bab1",
+   "loscampesinos.txt": "dc62ed88b516bbfe417e791b6a3b701dc5e32652",
+   "resourcemobilization.txt": "11a4a176d75401d0c66ccfb73c27ae8ca70f2989",
+   "historyofolemissrebelsfo.txt": "2e34e82fe13c100a63cc32c770bfe58de40e273f",
+   "201819uefanationsleague.txt": "da3c269678a700d301f96aad2e5c00817b0e161a",
+   "styletaylorswiftsong.txt": "9abc9a9a0e6bc80754a5e194af83e0619956e79c",
+   "lizjpatterson.txt": "7cb06ea99c4adf538aefc7276e3396fed61f69ef",
+   "listofsongsrecordedbytri.txt": "7bc3065f9091c58c3d879512a05b72e552943834",
+   "internationalframeworkof.txt": "54665c4dfb8d8c2e1760c4467cd05666ca2283e2",
+   "2001macaugrandprix.txt": "97f9eefb8f87d0b9f64c2ab4c88d5f914d502aba",
+   "illinoiscoalitionagainst.txt": "e976083b04e93291516af2ad6d8c9ed055416dbf",
+   "stefancleveland.txt": "8c1e74bafa7e3bdd50e38ee02d906f4b4e973d9e"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 428,
+    "prompt_tokens": 458565,
+    "completion_tokens": 20103,
+    "cost_usd": 0.05402
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 34,
+    "prompt_tokens": 105271,
+    "completion_tokens": 98054,
+    "cost_usd": 0.033553
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 16,
+    "methods": 0,
+    "concept": 1,
+    "related": 0
+   },
+   "scoped_ids": [
+    "t17"
+   ]
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 23,
+   "actions": {
+    "wrong_or_insufficient_evidence": 6,
+    "add_citation_or_rewrite": 16,
+    "supported": 1
+   },
+   "proof_may_exist": [
+    "t1",
+    "t6",
+    "t15"
+   ],
+   "conflicts": [
+    "t16",
+    "t17"
+   ],
+   "rescued": [
+    "t15",
+    "t6"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "ab0c943194106eca22927c7984cfa75971e5c30c",
+   "key": "identityevropa",
+   "filename": "identityevropa.txt",
+   "title": "identityevropa",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a56effd40b34bd34e9dfb2a4b8adab3214fa49cc",
+   "key": "bettercallsaul",
+   "filename": "bettercallsaul.txt",
+   "title": "bettercallsaul",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "250f5a6ff7dfbc53c1069e8b2e263a35d1a71529",
+   "key": "davidreedartist",
+   "filename": "davidreedartist.txt",
+   "title": "davidreedartist",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "29b2aa114583c82a360940615cb67aa57f89a7c4",
+   "key": "annemichaels",
+   "filename": "annemichaels.txt",
+   "title": "annemichaels",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d6efd8ba5c64fb10f815f7440fea7408aeb5af70",
+   "key": "alejandroarmellini",
+   "filename": "alejandroarmellini.txt",
+   "title": "alejandroarmellini",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "92d11ed400c8238a6691450cbaa6255bf4563cad",
+   "key": "runawaybaby",
+   "filename": "runawaybaby.txt",
+   "title": "runawaybaby",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d39c278076d73029c2805d3db96c6bfafbd06233",
+   "key": "kaitlinyoung",
+   "filename": "kaitlinyoung.txt",
+   "title": "kaitlinyoung",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "36cdc81decabf1c1b888255c5b694d6080c5654c",
+   "key": "hullabaloofestival",
+   "filename": "hullabaloofestival.txt",
+   "title": "hullabaloofestival",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b6ecd25f174315cedbe9fea728e18aff2a5e3a69",
+   "key": "katewinslet",
+   "filename": "katewinslet.txt",
+   "title": "katewinslet",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5b470e1e1e818b7e9f438167cf60e83eca8602ed",
+   "key": "starbucks",
+   "filename": "starbucks.txt",
+   "title": "starbucks",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4d347ad980e2f43615d676b397e43d90c79644ff",
+   "key": "paulcollingwood",
+   "filename": "paulcollingwood.txt",
+   "title": "paulcollingwood",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3ce59eea65d9645524e8b510255c5ac7e04bcac7",
+   "key": "vincegill",
+   "filename": "vincegill.txt",
+   "title": "vincegill",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4e9aba9d795a82bc319a7a76da7751d47a28e142",
+   "key": "ericsson",
+   "filename": "ericsson.txt",
+   "title": "ericsson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fd8f7f7f27bb42db004943f5ce3a71d5990e2a9e",
+   "key": "sheldonmac",
+   "filename": "sheldonmac.txt",
+   "title": "sheldonmac",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4cbe90c6bcb52641e334c939df67ff95715cba88",
+   "key": "aliceinchains",
+   "filename": "aliceinchains.txt",
+   "title": "aliceinchains",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3f39dcfc8789e6c30674c8f2c3c7040a1218597f",
+   "key": "loscampesinos",
+   "filename": "loscampesinos.txt",
+   "title": "loscampesinos",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cc6f53a9ece4cd75edcbdefe0d6b2708ccf406d7",
+   "key": "resourcemobilization",
+   "filename": "resourcemobilization.txt",
+   "title": "resourcemobilization",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ffb0989471968909c5fba20b2d5385b06e6655f8",
+   "key": "historyofolemissrebelsfo",
+   "filename": "historyofolemissrebelsfo.txt",
+   "title": "historyofolemissrebelsfo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "40405811e66b16216f8ad06dacca54832b8fb3d0",
+   "key": "201819uefanationsleague",
+   "filename": "201819uefanationsleague.txt",
+   "title": "201819uefanationsleague",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5c962ae70b522b5bede9f13929a95d611598bc60",
+   "key": "styletaylorswiftsong",
+   "filename": "styletaylorswiftsong.txt",
+   "title": "styletaylorswiftsong",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f7dde51a87f3eaaa89cc5d6e8be4fb6f86df4135",
+   "key": "lizjpatterson",
+   "filename": "lizjpatterson.txt",
+   "title": "lizjpatterson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "08f09b603007d833146b9b689f8a0c66315c02cd",
+   "key": "listofsongsrecordedbytri",
+   "filename": "listofsongsrecordedbytri.txt",
+   "title": "listofsongsrecordedbytri",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "eb1a50179f993d3afe8de18e4e287bc744e8d2e2",
+   "key": "internationalframeworkof",
+   "filename": "internationalframeworkof.txt",
+   "title": "internationalframeworkof",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b6c9c41b3f4cec4acadc7fac20cdfbbbb85dd635",
+   "key": "2001macaugrandprix",
+   "filename": "2001macaugrandprix.txt",
+   "title": "2001macaugrandprix",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a1f4ea06e4dc91e0306c046b4f90f03631ff8fff",
+   "key": "illinoiscoalitionagainst",
+   "filename": "illinoiscoalitionagainst.txt",
+   "title": "illinoiscoalitionagainst",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "336d4ffa676f19132ef2e1b98fe4df2abcfb3d3b",
+   "key": "stefancleveland",
+   "filename": "stefancleveland.txt",
+   "title": "stefancleveland",
+   "num_claims": 0
+  }
+ ]
+}

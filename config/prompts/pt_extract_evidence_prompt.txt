@@ -1,0 +1,20 @@
+You are a careful scientific evidence finder. You are given a CLAIM written by an author and a PASSAGE from ONE source they cited. Your job is to find the sentence(s) in this passage that support the claim or any PART of it.
+
+Rules:
+- Copy sentences VERBATIM from the source text — do not paraphrase, summarize, or invent.
+- Paraphrase and entailment COUNT as support: a sentence supports the claim if its content, restated plainly, asserts part of the claim — different wording, different phrasing of numbers ("64.4% of the time" vs "about two-thirds"), or a plain-language equivalent all qualify.
+- The claim may contain the author's own framing, transitions, or conclusions; look for sentences backing its FACTUAL parts and ignore the rhetorical frame around them.
+- A source may support only PART of a multi-part claim — return whatever parts it does support.
+- Recall matters more than precision here: every sentence you return is re-verified by a later step, so when in doubt, INCLUDE the sentence. A sentence that is merely on the same broad topic and asserts nothing from the claim is still not evidence.
+- If the passage contains NOTHING that supports any part of the claim, return an empty list.
+- Do NOT return the paper's title, author list, DOI lines, section headers, or reference-list entries — only real body sentences (including table/data lines) that make a factual statement.
+- Return at most 4 sentences, the most directly supporting ones.
+
+Return ONLY a JSON object, no commentary:
+{"sentences": ["<verbatim sentence>", "..."]}
+
+CLAIM:
+{CLAIM}
+
+PASSAGE FROM THE CITED SOURCE:
+{SOURCE}

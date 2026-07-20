@@ -1,0 +1,2730 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 1 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Irene Hervey (born Beulah Irene Herwick; July 11, 1909 \u2013 December 20, 1998) was an American film, stage, and television actress who appeared in over fifty films and numerous television series spanning her five-decade career.",
+   "markers": [
+    "irenehervey"
+   ],
+   "paper_ids": [
+    "495dcd50b90bdfa8f815bc3594b7fac3a720606f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "495dcd50b90bdfa8f815bc3594b7fac3a720606f",
+    "source_title": "irenehervey",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Irene Hervey - Hollywood Star Walk - Los Angeles Times Hollywood Star Walk # Irene Hervey ### Stars Film: South side of the 6300 block of Hollywood Boulevard July 11, 1909 in Los Angeles, CA Dec. 20, 1998 in Motion Picture and Television Country House, CA Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\"",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Irene Hervey - Hollywood",
+    "reason": "The passage does not state the number of films Irene Hervey appeared in or the duration of her career in decades.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: Irene Hervey - Hollywood Star Walk - Los Angeles Times Hollywood Star Walk # Irene Hervey ### Stars Film: South side of the 6300 block of Hollywood Boulevard July 11, 1909 in Los Angeles, CA Dec. 20, 1998 in Motion Picture and Television Country House, CA Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\" She appeared in such films as \"The Count of Monte Cristo\" in 1934, \"Charlie Chan in Shanghai\" in 1935 and \"The Boys From Syracuse\" in 1940. Hervey appeared regularly as Aunt Meg on the 1965-66 detective series \"Honey West,\" starring Anne Francis."
+   },
+   "evidences": [
+    {
+     "paper_id": "495dcd50b90bdfa8f815bc3594b7fac3a720606f",
+     "source_title": "irenehervey",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Irene Hervey - Hollywood Star Walk - Los Angeles Times Hollywood Star Walk # Irene Hervey ### Stars Film: South side of the 6300 block of Hollywood Boulevard July 11, 1909 in Los Angeles, CA Dec. 20, 1998 in Motion Picture and Television Country House, CA Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\"",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Irene Hervey - Hollywood",
+     "reason": "The passage does not state the number of films Irene Hervey appeared in or the duration of her career in decades.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: Irene Hervey - Hollywood Star Walk - Los Angeles Times Hollywood Star Walk # Irene Hervey ### Stars Film: South side of the 6300 block of Hollywood Boulevard July 11, 1909 in Los Angeles, CA Dec. 20, 1998 in Motion Picture and Television Country House, CA Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\" She appeared in such films as \"The Count of Monte Cristo\" in 1934, \"Charlie Chan in Shanghai\" in 1935 and \"The Boys From Syracuse\" in 1940. Hervey appeared regularly as Aunt Meg on the 1965-66 detective series \"Honey West,\" starring Anne Francis."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state the number of films Irene Hervey appeared in or the duration of her career in decades.",
+   "component_check": {
+    "found": [
+     "Irene Hervey died on December 20, 1998.",
+     "Irene Hervey was an American film, stage, and television actress."
+    ],
+    "missing": [
+     "Irene Hervey was born Beulah Irene Herwick on July 11, 1909.",
+     "She appeared in over fifty films."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Irene Hervey died on December 20, 1998.",
+      "paper_id": "495dcd50b90bdfa8f815bc3594b7fac3a720606f",
+      "source_title": "irenehervey",
+      "sentence": "(meta data) TITLE: Irene Hervey - Hollywood Star Walk - Los Angeles Times Hollywood Star Walk # Irene Hervey ### Stars Film: South side of the 6300 block of Hollywood Boulevard July 11, 1909 in Los Angeles, CA Dec. 20, 1998 in Motion Picture and Television Country House, CA Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\"",
+      "page": 1
+     },
+     {
+      "component": "Irene Hervey was an American film, stage, and television actress.",
+      "paper_id": "495dcd50b90bdfa8f815bc3594b7fac3a720606f",
+      "source_title": "irenehervey",
+      "sentence": "(meta data) TITLE: Irene Hervey - Hollywood Star Walk - Los Angeles Times Hollywood Star Walk # Irene Hervey ### Stars Film: South side of the 6300 block of Hollywood Boulevard July 11, 1909 in Los Angeles, CA Dec. 20, 1998 in Motion Picture and Television Country House, CA Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\"",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Irene Hervey was an American film, stage, and television actress who appeared in over fifty films and numerous television series spanning her five-decade career.",
+    "reason": "The passage directly states facts about Irene Hervey's career, which the citation is expected to prove. This falls under the 'full' scope as it attributes specific information to the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The birth name 'Beulah Irene Herwick', the claim of 'over fifty films', the phrase 'numerous television series' (not explicitly stated), the nationality 'American', and the claim of a 'five-decade career' are not supported by the cited source.",
+    "rewrite_suggestion": "Irene Hervey (July 11, 1909 \u2013 December 20, 1998) was a film, stage, and television actress with credits from the 1930s to the 1970s, appearing in films such as 'Destry Rides Again' and 'Play Misty for Me', and also worked on stage and television.",
+    "proofs": [
+     "July 11, 1909 in Los Angeles, CA",
+     "Dec. 20, 1998 in Motion Picture and Television Country House, CA",
+     "Irene Hervey was known for her beauty and for credits ranging from \"Destry Rides Again\" to \"Play Misty for Me.\"",
+     "Hervey started acting in plays at Venice High School and soon had a contract with MGM."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence provides only the name, birth and death dates, and a film-credit reference, but omits stage and television work, and does not support the birth name, the specific count of 'over fifty films', the claim of 'numerous television series', the nationality 'American', or the 'five-decade career' span. While the source text contains evidence for stage and television acting, several substantive components are entirely absent from the source, making this an author-side problem that requires adding a citation or rewriting the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Having over 3,000 animals of nearly 400 different species, the zoo has slowly increased its visitors and now ranks as the number one outdoor tourist attraction in the state.",
+   "markers": [
+    "sedgwickcountyzoo"
+   ],
+   "paper_ids": [
+    "0b49abd20c342583d7c8df6617272c47dd9af251"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0b49abd20c342583d7c8df6617272c47dd9af251",
+    "source_title": "sedgwickcountyzoo",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The Sedgwick County Zoo is home to 3,000 individual animals of nearly 400 species.",
+    "page": 1,
+    "snippet": "The Sedgwick County Zoo is home to",
+    "reason": "the passage does not mention visitor numbers or the zoo's ranking as a tourist attraction",
+    "votes": "2-0",
+    "window": "The Sedgwick County Zoo is home to 3,000 individual animals of nearly 400 species."
+   },
+   "evidences": [
+    {
+     "paper_id": "0b49abd20c342583d7c8df6617272c47dd9af251",
+     "source_title": "sedgwickcountyzoo",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The Sedgwick County Zoo is home to 3,000 individual animals of nearly 400 species.",
+     "page": 1,
+     "snippet": "The Sedgwick County Zoo is home to",
+     "reason": "the passage does not mention visitor numbers or the zoo's ranking as a tourist attraction",
+     "votes": "2-0",
+     "window": "The Sedgwick County Zoo is home to 3,000 individual animals of nearly 400 species."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention visitor numbers or the zoo's ranking as a tourist attraction",
+   "subject_guard": {
+    "subject": "having",
+    "missing_from": [
+     "0b49abd20c342583d7c8df6617272c47dd9af251"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The zoo has over 3,000 animals of nearly 400 different species and has slowly increased its visitors to rank as the number one outdoor tourist attraction in the state.",
+    "reason": "The passage directly states facts and figures about the zoo (number of animals, species, visitor increase, ranking) that are expected to be supported by the cited source. There is no indication that the citation is only for methods, a concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The components 'slowly increased its visitors' and 'now ranks as the number one outdoor tourist attraction in the state' are not found in the cited source.",
+    "rewrite_suggestion": "The Sedgwick County Zoo is home to over 3,000 animals of nearly 400 species.",
+    "proofs": [
+     "The Sedgwick County Zoo is home to 3,000 individual animals of nearly 400 species."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the component about animal count and species, matching the source. However, the claim also includes unsubstantiated assertions about visitor increases and ranking as the number one outdoor tourist attraction, neither of which appears anywhere in the provided source text. These missing subclaims require the author to either add a citation or rewrite the claim to only include what the source actually states."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "Winner of the Guess Watches Timeless Beauty International Model Search 2004 title, Amber Chia became the world's first Asian model to triumph at global model searches; and the first Asian model to campaign for Guess Watches worldwide.",
+   "markers": [
+    "amberchia"
+   ],
+   "paper_ids": [
+    "34c1d85c8d138a41cba224620a53d74cee1fbc54"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8842,
+   "evidence": {
+    "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+    "source_title": "amberchia",
+    "supported": true,
+    "sentence": "This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally.",
+    "page": 1,
+    "snippet": "This made her become the first Asian",
+    "cosine": 0.8842,
+    "reason": "The passage directly states that Amber Chia was the first Asian model to triumph at global model searches and the first Asian model to campaign for Guess Watches globally, after winning the 2004 Guess Watches Timeless Beauty Contest.",
+    "window": "Her career started to bloom after she won the 2004 Guess Watches Timeless Beauty Contest. This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally. Image Credit: Amber Chia Facebook page Amber started her modeling career at 17, and her winning has gained her international exposure as she was then approached by companies to do magazine shoots, runways, movies and TV shooting."
+   },
+   "evidences": [
+    {
+     "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+     "source_title": "amberchia",
+     "supported": true,
+     "sentence": "This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally.",
+     "page": 1,
+     "snippet": "This made her become the first Asian",
+     "cosine": 0.8842,
+     "reason": "The passage directly states that Amber Chia was the first Asian model to triumph at global model searches and the first Asian model to campaign for Guess Watches globally, after winning the 2004 Guess Watches Timeless Beauty Contest.",
+     "window": "Her career started to bloom after she won the 2004 Guess Watches Timeless Beauty Contest. This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally. Image Credit: Amber Chia Facebook page Amber started her modeling career at 17, and her winning has gained her international exposure as she was then approached by companies to do magazine shoots, runways, movies and TV shooting."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Amber Chia was the first Asian model to triumph at global model searches and the first Asian model to campaign for Guess Watches globally, after winning the 2004 Guess Watches Timeless Beauty Contest.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Winner of the Guess Watches Timeless Beauty International Model Search 2004 title, Amber Chia",
+      "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+      "source_title": "amberchia",
+      "sentence": "Her career started to bloom after she won the 2004 Guess Watches Timeless Beauty Contest.",
+      "page": 1,
+      "snippet": "Her career started to bloom after she"
+     },
+     {
+      "component": "became the world's first Asian model to triumph at global model searches",
+      "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+      "source_title": "amberchia",
+      "sentence": "This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally.",
+      "page": 1,
+      "snippet": "This made her become the first Asian"
+     },
+     {
+      "component": "and the first Asian model to campaign for Guess Watches worldwide",
+      "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+      "source_title": "amberchia",
+      "sentence": "This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally.",
+      "page": 1,
+      "snippet": "This made her become the first Asian"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+      "source_title": "amberchia",
+      "text": "Her career started to bloom after she won the 2004 Guess Watches Timeless Beauty Contest. This made her become the first Asian model to triumph at global model searches as well as the first Asian model to campaign for Guess Watches globally.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t4",
+   "text": "He attended Buena Vista High School in Buena Vista, Colorado, where he played tight end for the Buena Vista Demons high school football team.",
+   "markers": [
+    "natesolder"
+   ],
+   "paper_ids": [
+    "567e8218a5b26ebf086ea69278ad9a728a3b2362"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "567e8218a5b26ebf086ea69278ad9a728a3b2362",
+    "source_title": "natesolder",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Nate Solder, T, New England PatriotsA one-time high school tight end, Solder (the 17th overall pick in the 2011 NFL Draft) has put in a lot of effort to add core strength.",
+    "page": 1,
+    "snippet": "Nate Solder, T, New England PatriotsA one-time",
+    "reason": "The passage does not mention the name of the high school or the football team.",
+    "votes": "2-0",
+    "window": "Nate Solder, T, New England PatriotsA one-time high school tight end, Solder (the 17th overall pick in the 2011 NFL Draft) has put in a lot of effort to add core strength."
+   },
+   "evidences": [
+    {
+     "paper_id": "567e8218a5b26ebf086ea69278ad9a728a3b2362",
+     "source_title": "natesolder",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Nate Solder, T, New England PatriotsA one-time high school tight end, Solder (the 17th overall pick in the 2011 NFL Draft) has put in a lot of effort to add core strength.",
+     "page": 1,
+     "snippet": "Nate Solder, T, New England PatriotsA one-time",
+     "reason": "The passage does not mention the name of the high school or the football team.",
+     "votes": "2-0",
+     "window": "Nate Solder, T, New England PatriotsA one-time high school tight end, Solder (the 17th overall pick in the 2011 NFL Draft) has put in a lot of effort to add core strength."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the name of the high school or the football team.",
+   "subject_guard": {
+    "subject": "Buena Vista; Buena Vista Demons",
+    "missing_from": [
+     "567e8218a5b26ebf086ea69278ad9a728a3b2362"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states facts about the subject's personal history, which are expected to be proven by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific high school name (Buena Vista High School), location (Buena Vista, Colorado), and team name (Buena Vista Demons)",
+    "rewrite_suggestion": "He played tight end in high school.",
+    "proofs": [
+     "A one-time high school tight end, Solder (the 17th overall pick in the 2011 NFL Draft) has put in a lot of effort to add core strength."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only describes Nate Solder as a 'one-time high school tight end' but contains no mention of Buena Vista High School, Buena Vista, Colorado, or the Buena Vista Demons. Therefore, the specific school, location, and team name in the claim have no support in the cited source, and the author must either supply a citation for those details or rewrite the claim to match the general statement in the source."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "However, the department gave up control of the station in the 2000's, and it has been a student organization since.",
+   "markers": [
+    "wlur"
+   ],
+   "paper_ids": [
+    "44a459c167e3c7dffd26b1256129a2bd13934c9a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8198,
+   "evidence": {
+    "paper_id": "44a459c167e3c7dffd26b1256129a2bd13934c9a",
+    "source_title": "wlur",
+    "supported": true,
+    "sentence": "## 1980s Throughout the decade, the station's music collection and the size of its staff continues to grow.",
+    "page": 1,
+    "snippet": "## 1980s Throughout the decade, the station's",
+    "cosine": 0.8198,
+    "reason": "The passage states that the station moved out of the department in 2001, which supports the claim that control was given up in the 2000s.",
+    "window": "Journalism professor Bob de Maria becomes station manager in 1977, serving in this position until WLUR moves out of the department in 2001. ## 1980s Throughout the decade, the station's music collection and the size of its staff continues to grow. By the mid-'80s, it has evolved into one of the largest extracurricular activities on campus."
+   },
+   "evidences": [
+    {
+     "paper_id": "44a459c167e3c7dffd26b1256129a2bd13934c9a",
+     "source_title": "wlur",
+     "supported": true,
+     "sentence": "## 1980s Throughout the decade, the station's music collection and the size of its staff continues to grow.",
+     "page": 1,
+     "snippet": "## 1980s Throughout the decade, the station's",
+     "cosine": 0.8198,
+     "reason": "The passage states that the station moved out of the department in 2001, which supports the claim that control was given up in the 2000s.",
+     "window": "Journalism professor Bob de Maria becomes station manager in 1977, serving in this position until WLUR moves out of the department in 2001. ## 1980s Throughout the decade, the station's music collection and the size of its staff continues to grow. By the mid-'80s, it has evolved into one of the largest extracurricular activities on campus."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the station moved out of the department in 2001, which supports the claim that control was given up in the 2000s.",
+   "covering": {
+    "covered": [
+     {
+      "component": "department gave up control of the station in the 2000's",
+      "paper_id": "44a459c167e3c7dffd26b1256129a2bd13934c9a",
+      "source_title": "wlur",
+      "sentence": "Journalism professor Bob de Maria becomes station manager in 1977, serving in this position until WLUR moves out of the department in 2001.",
+      "page": 1,
+      "snippet": "Journalism professor Bob de Maria becomes station"
+     }
+    ],
+    "uncovered": [
+     "it has been a student organization since"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "44a459c167e3c7dffd26b1256129a2bd13934c9a",
+      "source_title": "wlur",
+      "text": "Journalism professor Bob de Maria becomes station manager in 1977, serving in this position until WLUR moves out of the department in 2001.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not state that the station has been a student organization since the 2000s",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the station has been a student organization since the 2000s",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the assertion that WLUR has been a student organization since the department gave up control",
+    "rewrite_suggestion": "However, the department gave up control of the station in 2001, when WLUR moved out of the journalism department, and it has been operated under the Office of Communications and Public Affairs since.",
+    "proofs": [
+     "Journalism professor Bob de Maria becomes station manager in 1977, serving in this position until WLUR moves out of the department in 2001."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that WLUR moved out of the department in 2001, supporting the first component. However, the source never states that WLUR became or has been a student organization; the closest mention is an extracurricular activity from the 1990s, and after 2001 direction was transferred to an administrative office. That component is entirely unsourced, so the author must either add a citation that states WLUR became a student organization or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "From year 2013 a member of the International Council of Museums, and from 2018 a member of the POLIN Museum Council and the director of the Warsaw Ghetto Museum.",
+   "markers": [
+    "albertstankowski"
+   ],
+   "paper_ids": [
+    "9bd2037a6dd4f039ef2b1ddf158d7e7b95ced724"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9549,
+   "evidence": {
+    "paper_id": "9bd2037a6dd4f039ef2b1ddf158d7e7b95ced724",
+    "source_title": "albertstankowski",
+    "supported": false,
+    "sentence": "Our mission and mandate are clearly presented in the public domain via the website of the Warsaw Ghetto Museum, and the museum is supported by the major Jewish organizations in Poland.",
+    "page": 1,
+    "snippet": "Our mission and mandate are clearly presented",
+    "cosine": 0.9549,
+    "reason": "The passage does not contain any information about the claimed memberships or directorships.",
+    "window": "Warsaw, June 1, 1942Bundesarchiv Unsubstantiated statements, sensationalized by the media, should not be the criteria for an assessment of any project or institution. Our mission and mandate are clearly presented in the public domain via the website of the Warsaw Ghetto Museum, and the museum is supported by the major Jewish organizations in Poland. Yad Vashem and Israeli historians associated with Yad Vashem were the first to be invited by the Warsaw Ghetto Museum to participate in the creation of this important project, and to be involved in defining the image and message of the core exhibition and associated projects."
+   },
+   "evidences": [
+    {
+     "paper_id": "9bd2037a6dd4f039ef2b1ddf158d7e7b95ced724",
+     "source_title": "albertstankowski",
+     "supported": false,
+     "sentence": "Our mission and mandate are clearly presented in the public domain via the website of the Warsaw Ghetto Museum, and the museum is supported by the major Jewish organizations in Poland.",
+     "page": 1,
+     "snippet": "Our mission and mandate are clearly presented",
+     "cosine": 0.9549,
+     "reason": "The passage does not contain any information about the claimed memberships or directorships.",
+     "window": "Warsaw, June 1, 1942Bundesarchiv Unsubstantiated statements, sensationalized by the media, should not be the criteria for an assessment of any project or institution. Our mission and mandate are clearly presented in the public domain via the website of the Warsaw Ghetto Museum, and the museum is supported by the major Jewish organizations in Poland. Yad Vashem and Israeli historians associated with Yad Vashem were the first to be invited by the Warsaw Ghetto Museum to participate in the creation of this important project, and to be involved in defining the image and message of the core exhibition and associated projects."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "From year 2013 a member of the International Council of Museums, and from 2018 a member of the POLIN Museum Council and the director of the Warsaw Ghetto Museum.",
+    "reason": "The passage asserts specific factual information about the individual's affiliations and roles, which the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "From year 2013 a member of the International Council of Museums, and from 2018 a member of the POLIN Museum Council",
+    "rewrite_suggestion": "Director of the Warsaw Ghetto Museum (as of 2019).",
+    "proofs": [
+     "Albert Stankowski is the Director of the Warsaw Ghetto Museum",
+     "Albert Stankowski, Director of the Warsaw Ghetto Museum, with Dr. Hanna W\u0119grzynek, Deputy Director (Research and Exhibitions) with Prof. Daniel Blatman, Chief Historian of the Museum."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not support any component; the source text only proves that Albert Stankowski is the director of the Warsaw Ghetto Museum (via two explicit statements). The claim also asserts memberships in ICOM from 2013 and POLIN Museum Council from 2018, but the provided source text contains no mention of these organizations or dates. Therefore the author must either provide a citation for those subclaims or rewrite the claim to only include the supported directorship."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "He graduated in 1985 from William Fremd High School and 1989 from Beloit College in Wisconsin with a major in fine arts and minors in music and psychology with a specific concentration on Abnormal Psychology and Cognitive Psychology as well as Lateral Thinking and Creative Thinking.",
+   "markers": [
+    "chrisfleming"
+   ],
+   "paper_ids": [
+    "e183fd6c2e5f221ce9568e036dac5ff0bbba7691"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+    "source_title": "chrisfleming",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music.",
+    "page": 1,
+    "snippet": "Chris holds a degree from Beloit College",
+    "reason": "The passage does not mention his graduation year from Beloit College, his major in fine arts, his minors in music and psychology, or his specific concentrations in Abnormal Psychology, Cognitive Psychology, Lateral Thinking, and Creative Thinking.",
+    "votes": "2-0",
+    "window": "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music."
+   },
+   "evidences": [
+    {
+     "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+     "source_title": "chrisfleming",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music.",
+     "page": 1,
+     "snippet": "Chris holds a degree from Beloit College",
+     "reason": "The passage does not mention his graduation year from Beloit College, his major in fine arts, his minors in music and psychology, or his specific concentrations in Abnormal Psychology, Cognitive Psychology, Lateral Thinking, and Creative Thinking.",
+     "votes": "2-0",
+     "window": "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention his graduation year from Beloit College, his major in fine arts, his minors in music and psychology, or his specific concentrations in Abnormal Psychology, Cognitive Psychology, Lateral Thinking, and Creative Thinking.",
+   "component_check": {
+    "found": [
+     "He majored in fine arts at Beloit College.",
+     "He minored in music and psychology at Beloit College."
+    ],
+    "missing": [
+     "He graduated in 1985 from William Fremd High School.",
+     "He graduated in 1989 from Beloit College in Wisconsin."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He majored in fine arts at Beloit College.",
+      "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+      "source_title": "chrisfleming",
+      "sentence": "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music.",
+      "page": 1
+     },
+     {
+      "component": "He minored in music and psychology at Beloit College.",
+      "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+      "source_title": "chrisfleming",
+      "sentence": "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He graduated in 1985 from William Fremd High School and 1989 from Beloit College in Wisconsin with a major in fine arts and minors in music and psychology with a specific concentration on Abnormal Psychology and Cognitive Psychology as well as Lateral Thinking and Creative Thinking.",
+    "reason": "The passage asserts specific factual details about an individual's education and academic concentrations. The citation is expected to prove these facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "graduation years (1985 and 1989), high school (William Fremd High School), college location (Wisconsin), the specific concentrations (Abnormal Psychology, Cognitive Psychology, Lateral Thinking, Creative Thinking), and the plural 'minors' (source states 'a minor')",
+    "rewrite_suggestion": "He holds a degree from Beloit College in fine arts, with a minor in psychology and music.",
+    "proofs": [
+     "Chris holds a degree from Beloit College in fine arts, with a minor in psychology and music."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text only confirms that Chris holds a degree from Beloit College in fine arts with a minor in psychology and music. It contains no mention of William Fremd High School, graduation years (1985 or 1989), the state of Wisconsin, or specific concentrations such as Abnormal Psychology, Cognitive Psychology, Lateral Thinking, or Creative Thinking. The claim also asserts 'minors' (plural) whereas the source says 'a minor', so even that component is unsupported. Therefore, the author must either add citations for the missing details or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "It was in the central \"Milestones of Flight\" exhibition hall in front of the Jefferson Drive entrance, sharing the main hall with other pioneering flight vehicles such as the \"Wright Flyer\", \"Spirit of St. Louis\", Bell X-1, North American X-15 and \"Friendship 7\".",
+   "markers": [
+    "apollo11"
+   ],
+   "paper_ids": [
+    "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+    "source_title": "apollo11",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "They entered the building through the Milestones of Flight gallery, where they found the icons of the age of flight, from the Wright Flyer, the world's first airplane, to Charles Lindbergh's Spirit of St. Louis and the Bell X-1 that carried Captain Chuck Yeager through the speed of sound for the first time, to the Mercury Friendship 7 spacecraft that astronaut John Glenn rode into orbit, and the Apollo 11 Command Module, Columbia, that brought Michael Collins, Neil Armstrong and Edwin \"Buzz\" Aldrin home from the Moon.",
+    "page": 1,
+    "snippet": "They entered the building through the Milestones",
+    "reason": "The passage does not mention the Jefferson Drive entrance or that the Apollo 11 Command Module was sharing the main hall with the other vehicles.",
+    "votes": "2-0",
+    "window": "They entered the building through the Milestones of Flight gallery, where they found the icons of the age of flight, from the Wright Flyer, the world's first airplane, to Charles Lindbergh's Spirit of St. Louis and the Bell X-1 that carried Captain Chuck Yeager through the speed of sound for the first time, to the Mercury Friendship 7 spacecraft that astronaut John Glenn rode into orbit, and the Apollo 11 Command Module, Columbia, that brought Michael Collins, Neil Armstrong and Edwin \"Buzz\" Aldrin home from the Moon."
+   },
+   "evidences": [
+    {
+     "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+     "source_title": "apollo11",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "They entered the building through the Milestones of Flight gallery, where they found the icons of the age of flight, from the Wright Flyer, the world's first airplane, to Charles Lindbergh's Spirit of St. Louis and the Bell X-1 that carried Captain Chuck Yeager through the speed of sound for the first time, to the Mercury Friendship 7 spacecraft that astronaut John Glenn rode into orbit, and the Apollo 11 Command Module, Columbia, that brought Michael Collins, Neil Armstrong and Edwin \"Buzz\" Aldrin home from the Moon.",
+     "page": 1,
+     "snippet": "They entered the building through the Milestones",
+     "reason": "The passage does not mention the Jefferson Drive entrance or that the Apollo 11 Command Module was sharing the main hall with the other vehicles.",
+     "votes": "2-0",
+     "window": "They entered the building through the Milestones of Flight gallery, where they found the icons of the age of flight, from the Wright Flyer, the world's first airplane, to Charles Lindbergh's Spirit of St. Louis and the Bell X-1 that carried Captain Chuck Yeager through the speed of sound for the first time, to the Mercury Friendship 7 spacecraft that astronaut John Glenn rode into orbit, and the Apollo 11 Command Module, Columbia, that brought Michael Collins, Neil Armstrong and Edwin \"Buzz\" Aldrin home from the Moon."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the Jefferson Drive entrance or that the Apollo 11 Command Module was sharing the main hall with the other vehicles.",
+   "subject_guard": {
+    "subject": "Jefferson Drive",
+    "missing_from": [
+     "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage describes the location of the Apollo 11 exhibit within the \"Milestones of Flight\" exhibition hall, sharing the space with other pioneering flight vehicles.",
+    "reason": "The passage asserts specific facts about the location and context of the Apollo 11 exhibit. The citation is expected to prove these factual details about the exhibition's placement and its neighboring displays.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes 'North American X-15', 'in front of the Jefferson Drive entrance', and the descriptor 'central' for the Milestones of Flight gallery \u2014 none of these appear in the cited source text.",
+    "rewrite_suggestion": "It was in the Milestones of Flight gallery, sharing the gallery with other pioneering flight vehicles such as the Wright Flyer, Spirit of St. Louis, Bell X-1, and Friendship 7.",
+    "proofs": [
+     "They entered the building through the Milestones of Flight gallery, where they found the icons of the age of flight, from the Wright Flyer, the world's first airplane, to Charles Lindbergh's Spirit of St. Louis and the Bell X-1 that carried Captain Chuck Yeager through the speed of sound for the first time, to the Mercury Friendship 7 spacecraft that astronaut John Glenn rode into orbit, and the Apollo 11 Command Module, Columbia, that brought Michael Collins, Neil Armstrong and Edwin \"Buzz\" Aldrin home from the Moon."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source provides a sentence showing the Milestones of Flight gallery contains the Wright Flyer, Spirit of St. Louis, Bell X-1, Friendship 7, and Apollo 11 Command Module, but it does not mention the North American X-15, a 'Jefferson Drive entrance', or describe the gallery as 'central'. Since the claim includes these unsourced components, the author must either add a citation for them or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "He has held visiting professorships at the University of Colorado (1971), Yale (1972\u20131973), and Masaryk University.",
+   "markers": [
+    "frankhole"
+   ],
+   "paper_ids": [
+    "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+    "source_title": "frankhole",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Fall 1972-1973 Visiting Professor of Anthropology, Yale University",
+    "page": 1,
+    "snippet": "Fall 1972-1973 Visiting Professor of Anthropology, Yale",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Fall 1972-1973 Visiting Professor of Anthropology, Yale University Vernon, Iowa, 1953 ## Positions 2010-present Editorial Board, Iranian Journal of Archaeological Studies 2009-2011 Visiting Professor of Archaeology, Masaryk University, Brno, Czech 2005-present Senior Research Scientist, Yale University 2005-present Emeritus C.J. 1971 Visiting Professor, Summer Institute in Anthropology, University of Colorado"
+   },
+   "evidences": [
+    {
+     "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+     "source_title": "frankhole",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Fall 1972-1973 Visiting Professor of Anthropology, Yale University",
+     "page": 1,
+     "snippet": "Fall 1972-1973 Visiting Professor of Anthropology, Yale",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Fall 1972-1973 Visiting Professor of Anthropology, Yale University Vernon, Iowa, 1953 ## Positions 2010-present Editorial Board, Iranian Journal of Archaeological Studies 2009-2011 Visiting Professor of Archaeology, Masaryk University, Brno, Czech 2005-present Senior Research Scientist, Yale University 2005-present Emeritus C.J. 1971 Visiting Professor, Summer Institute in Anthropology, University of Colorado"
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "held visiting professorships at the University of Colorado",
+      "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+      "source_title": "frankhole",
+      "sentence": "1971 Visiting Professor, Summer Institute in Anthropology, University of Colorado",
+      "page": 1,
+      "snippet": "1971 Visiting Professor, Summer Institute in Anthropology,"
+     },
+     {
+      "component": "held visiting professorships at Yale",
+      "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+      "source_title": "frankhole",
+      "sentence": "Fall 1972-1973 Visiting Professor of Anthropology, Yale University",
+      "page": 1,
+      "snippet": "Fall 1972-1973 Visiting Professor of Anthropology, Yale"
+     },
+     {
+      "component": "held visiting professorships at Masaryk University",
+      "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+      "source_title": "frankhole",
+      "sentence": "Vernon, Iowa, 1953 ## Positions 2010-present Editorial Board, Iranian Journal of Archaeological Studies 2009-2011 Visiting Professor of Archaeology, Masaryk University, Brno, Czech 2005-present Senior Research Scientist, Yale University 2005-present Emeritus C.J.",
+      "page": 1,
+      "snippet": "Vernon, Iowa, 1953 ## Positions 2010-present Editorial"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+      "source_title": "frankhole",
+      "text": "Vernon, Iowa, 1953 ## Positions 2010-present Editorial Board, Iranian Journal of Archaeological Studies 2009-2011 Visiting Professor of Archaeology, Masaryk University, Brno, Czech 2005-present Senior Research Scientist, Yale University 2005-present Emeritus C.J. [\u2026] Fall 1972-1973 Visiting Professor of Anthropology, Yale University 1971 Visiting Professor, Summer Institute in Anthropology, University of Colorado",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t10",
+   "text": "Ravi has been working as a humanitarian since 1999, when he had the idea of taking the concept of langar aka Sikh community kitchen to regions of the world that needed it the most with the hope that it will help to rekindle people\u2019s trust in humanity.",
+   "markers": [
+    "ravisinghhumanitarian"
+   ],
+   "paper_ids": [
+    "fe955a778013e1f44048ba91d1cc722320f6e1c5"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8835,
+   "evidence": {
+    "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+    "source_title": "ravisinghhumanitarian",
+    "supported": true,
+    "sentence": "The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom.",
+    "page": 1,
+    "snippet": "The idea of taking the concept of",
+    "cosine": 0.8835,
+    "reason": "The passage states that the idea of taking the langar concept to regions that needed it the most gave birth to Khalsa Aid in 1999, which aligns with the claim's assertion about Ravi's humanitarian work starting in 1999 with this idea and its purpose.",
+    "window": "Through Khalsa Aid, he has been reaching out to various corners of the earth helping those in need and in turn rekindling people's trust in humanity. The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom. Singh recalls the moment vividly as it was the during that time that a vicious civil war was taking place in Kosovo, a disputed territory and partially recognized state in Southeast Europe."
+   },
+   "evidences": [
+    {
+     "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+     "source_title": "ravisinghhumanitarian",
+     "supported": true,
+     "sentence": "The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom.",
+     "page": 1,
+     "snippet": "The idea of taking the concept of",
+     "cosine": 0.8835,
+     "reason": "The passage states that the idea of taking the langar concept to regions that needed it the most gave birth to Khalsa Aid in 1999, which aligns with the claim's assertion about Ravi's humanitarian work starting in 1999 with this idea and its purpose.",
+     "window": "Through Khalsa Aid, he has been reaching out to various corners of the earth helping those in need and in turn rekindling people's trust in humanity. The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom. Singh recalls the moment vividly as it was the during that time that a vicious civil war was taking place in Kosovo, a disputed territory and partially recognized state in Southeast Europe."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that the idea of taking the langar concept to regions that needed it the most gave birth to Khalsa Aid in 1999, which aligns with the claim's assertion about Ravi's humanitarian work starting in 1999 with this idea and its purpose.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Ravi has been working as a humanitarian since 1999",
+      "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+      "source_title": "ravisinghhumanitarian",
+      "sentence": "The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom.",
+      "page": 1,
+      "snippet": "The idea of taking the concept of"
+     },
+     {
+      "component": "idea of taking the concept of langar aka Sikh community kitchen to regions of the world that needed it the most",
+      "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+      "source_title": "ravisinghhumanitarian",
+      "sentence": "The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom.",
+      "page": 1,
+      "snippet": "The idea of taking the concept of"
+     },
+     {
+      "component": "idea of taking the concept of langar aka Sikh community kitchen to regions of the world that needed it the most",
+      "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+      "source_title": "ravisinghhumanitarian",
+      "sentence": "The fact that there wasn't any method of taking langar to where it is needed most disturbed him immensely.",
+      "page": 1,
+      "snippet": "The fact that there wasn't any method"
+     },
+     {
+      "component": "hope that it will help to rekindle people\u2019s trust in humanity",
+      "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+      "source_title": "ravisinghhumanitarian",
+      "sentence": "Through Khalsa Aid, he has been reaching out to various corners of the earth helping those in need and in turn rekindling people's trust in humanity.",
+      "page": 1,
+      "snippet": "Through Khalsa Aid, he has been reaching"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+      "source_title": "ravisinghhumanitarian",
+      "text": "Through Khalsa Aid, he has been reaching out to various corners of the earth helping those in need and in turn rekindling people's trust in humanity. In today's intolerant world where judgements are made based on one's race, religion and beliefs, the crucial need of the hour is the promotion of love and revivement of our faith in mankind. Though this change in attitude cannot happen overnight, even simple acts of kindness can go a long way in attaining a world that believes in equality and charity. Ravi Singh, founder and CEO of Khalsa Aid, an international non-profit aid and relief organization, has taken it upon himself to achieve this world vision. Through Khalsa Aid, he has been reaching out to various corners of the earth helping those in need and in turn rekindling people's trust in humanity. The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom. Singh recalls the moment vividly as it was the during that time that a vicious civil war was taking place in Kosovo, a disputed territory and partially recognized state in Southeast Europe. Thousands of Kosovo residents, who fled the war zone to take refuge in neighbouring states, were homeless and without basic necessities such as food and water. Rohingya Muslim Refugees .. Our response ! To DONATE to this project: https://www.justgiving.com/campaigns/charity/khalsaaid/refugees Posted by Khalsa Aid International on Wednesday, 13 September 2017 \"In April 1999 so many refugees in the border were fighting for a piece of bread. That year Sikhs were celebrating 200 years of the Khalsa as an identity,\" adds Singh who began questioning himself and the community on the concept of langar and its purpose. The fact that there wasn't any method of taking langar to where it is needed most disturbed him immensely.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_support": {
+    "reason": "The passage does not state that Ravi has been working as a humanitarian since 1999, only that the idea for Khalsa Aid was born in 1999.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "Ravi has been working as a humanitarian since 1999, only that the idea for Khalsa Aid was born in 1999",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "The idea of taking the concept of langar aka Sikh community kitchen to people or regions that needed it the most gave birth to Khalsa Aid organization in 1999 in London, United Kingdom.",
+     "Through Khalsa Aid, he has been reaching out to various corners of the earth helping those in need and in turn rekindling people's trust in humanity."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences together cover all components of the claim: they explicitly state the idea of langar to needed regions in 1999 (founding Khalsa Aid), and they directly state that through Khalsa Aid he rekindles trust in humanity, establishing his ongoing humanitarian work from 1999 onward."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "The album debuted at No. 18 on the US \"Billboard\" 200, with 21,000 album-equivalent units, which included 13,000 pure album sales.",
+   "markers": [
+    "dedicatedcarlyraejepsena"
+   ],
+   "paper_ids": [
+    "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8886,
+   "evidence": {
+    "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+    "source_title": "dedicatedcarlyraejepsena",
+    "supported": true,
+    "sentence": "According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period.",
+    "page": 1,
+    "snippet": "According to Hits Daily Double and BuzzAngle,",
+    "cosine": 0.8886,
+    "reason": "The passage directly states the album sold 13,000 pure US copies and generated 21,000 in total first-week consumption.",
+    "window": "Brian Cantor May 24, 2019, 5:07 pm Carly Rae on Corden | Terence Patrick/CBS Opening week US sales and consumption numbers are now available for Carly Rae Jepsen's \"Dedicated.\" According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period. With units from track sales and streams included, it generated 21K in total first-week consumption."
+   },
+   "evidences": [
+    {
+     "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+     "source_title": "dedicatedcarlyraejepsena",
+     "supported": true,
+     "sentence": "According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period.",
+     "page": 1,
+     "snippet": "According to Hits Daily Double and BuzzAngle,",
+     "cosine": 0.8886,
+     "reason": "The passage directly states the album sold 13,000 pure US copies and generated 21,000 in total first-week consumption.",
+     "window": "Brian Cantor May 24, 2019, 5:07 pm Carly Rae on Corden | Terence Patrick/CBS Opening week US sales and consumption numbers are now available for Carly Rae Jepsen's \"Dedicated.\" According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period. With units from track sales and streams included, it generated 21K in total first-week consumption."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states the album sold 13,000 pure US copies and generated 21,000 in total first-week consumption.",
+   "covering": {
+    "covered": [
+     {
+      "component": "21,000 album-equivalent units",
+      "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+      "source_title": "dedicatedcarlyraejepsena",
+      "sentence": "With units from track sales and streams included, it generated 21K in total first-week consumption.",
+      "page": 1,
+      "snippet": "With units from track sales and streams"
+     },
+     {
+      "component": "13,000 pure album sales",
+      "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+      "source_title": "dedicatedcarlyraejepsena",
+      "sentence": "According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period.",
+      "page": 1,
+      "snippet": "According to Hits Daily Double and BuzzAngle,"
+     },
+     {
+      "component": "13,000 pure album sales",
+      "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+      "source_title": "dedicatedcarlyraejepsena",
+      "sentence": "(meta data) TITLE: Report: Carly Rae Jepsen's \"Dedicated\" Debuts With 13K US Sales, 21K Total US Units (meta data) PUBLISHED DATETIME: 2019-05-24T17:07:53 Search for: in Album Sales, Music News, New Music # Report: Carly Rae Jepsen's \"Dedicated\" Debuts With 13K US Sales, 21K Total US Units ## How well did \"Dedicated\" sell during its first week of release?",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Report: Carly Rae Jepsen's"
+     },
+     {
+      "component": "US Billboard",
+      "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+      "source_title": "dedicatedcarlyraejepsena",
+      "sentence": "Billboard's numbers, which are due next week, should be in the same ballpark.",
+      "page": 1,
+      "snippet": "Billboard's numbers, which are due next week,",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "album debuted at No. 18 on the US \"Billboard\" 200"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+      "source_title": "dedicatedcarlyraejepsena",
+      "text": "(meta data) TITLE: Report: Carly Rae Jepsen's \"Dedicated\" Debuts With 13K US Sales, 21K Total US Units (meta data) PUBLISHED DATETIME: 2019-05-24T17:07:53 Search for: in Album Sales, Music News, New Music # Report: Carly Rae Jepsen's \"Dedicated\" Debuts With 13K US Sales, 21K Total US Units ## How well did \"Dedicated\" sell during its first week of release? Brian Cantor May 24, 2019, 5:07 pm Carly Rae on Corden | Terence Patrick/CBS Opening week US sales and consumption numbers are now available for Carly Rae Jepsen's \"Dedicated.\" According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period. With units from track sales and streams included, it generated 21K in total first-week consumption. Billboard's numbers, which are due next week, should be in the same ballpark.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the album's debut position on the US \"Billboard\" 200 is stated as #16, not #18",
+    "votes": "3-0",
+    "escalated": true
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes a debut chart position of No. 18 on the US Billboard 200, which is not stated or implied anywhere in the source text.",
+    "rewrite_suggestion": "The album sold 21,000 album-equivalent units in its first week, including 13,000 pure album sales.",
+    "proofs": [
+     "According to Hits Daily Double and BuzzAngle, the album sold about 13K pure US copies during the May 17-23 tracking period.",
+     "With units from track sales and streams included, it generated 21K in total first-week consumption."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source provides exactly the sales and consumption figures (13K pure sales, 21K total units) but makes no mention of a Billboard 200 chart position, let alone No. 18. The claim's debut position is an unsourced addition that cannot be verified from the cited article. Therefore the author must either supply a citation for that chart position or remove it from the claim."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "Hess was represented by Ovsey Gallery in Los Angeles (1985-1994), Hackett-Freedman Gallery in San Francisco (1998-2009), Hirschl & Adler Modern in New York (2010-2013), and has been represented by Koplin Del Rio Gallery in Culver City since 2010.",
+   "markers": [
+    "fscotthess"
+   ],
+   "paper_ids": [
+    "feeafaec5d471ee3d070b1556889be306331d394"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "feeafaec5d471ee3d070b1556889be306331d394",
+    "source_title": "fscotthess",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Koplin Del Rio is pleased to announce an exhibition of new works by Los Angeles painter F. Scott Hess.",
+    "page": 1,
+    "snippet": "Koplin Del Rio is pleased to announce",
+    "reason": "The passage does not mention Hess being represented by Ovsey Gallery, Hackett-Freedman Gallery, or Hirschl & Adler Modern, nor does it provide the dates of representation for any of these galleries.",
+    "votes": "2-0",
+    "window": "Koplin Del Rio is pleased to announce an exhibition of new works by Los Angeles painter F. Scott Hess. This will be the artist's second solo show at Koplin Del Rio."
+   },
+   "evidences": [
+    {
+     "paper_id": "feeafaec5d471ee3d070b1556889be306331d394",
+     "source_title": "fscotthess",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Koplin Del Rio is pleased to announce an exhibition of new works by Los Angeles painter F. Scott Hess.",
+     "page": 1,
+     "snippet": "Koplin Del Rio is pleased to announce",
+     "reason": "The passage does not mention Hess being represented by Ovsey Gallery, Hackett-Freedman Gallery, or Hirschl & Adler Modern, nor does it provide the dates of representation for any of these galleries.",
+     "votes": "2-0",
+     "window": "Koplin Del Rio is pleased to announce an exhibition of new works by Los Angeles painter F. Scott Hess. This will be the artist's second solo show at Koplin Del Rio."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Hess being represented by Ovsey Gallery, Hackett-Freedman Gallery, or Hirschl & Adler Modern, nor does it provide the dates of representation for any of these galleries.",
+   "subject_guard": {
+    "subject": "Adler Modern; Culver City",
+    "missing_from": [
+     "feeafaec5d471ee3d070b1556889be306331d394"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Hess was represented by Ovsey Gallery in Los Angeles (1985-1994), Hackett-Freedman Gallery in San Francisco (1998-2009), Hirschl & Adler Modern in New York (2010-2013), and has been represented by Koplin Del Rio Gallery in Culver City since 2010.",
+    "reason": "The passage directly states factual information about the representation of Hess by galleries, including specific dates and locations. This information is expected to be proven by the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "All specific gallery representations and dates (Ovsey Gallery 1985\u20131994, Hackett-Freedman 1998\u20132009, Hirschl & Adler 2010\u20132013, and Koplin Del Rio since 2010) are absent from the cited source.",
+    "rewrite_suggestion": "Hess has exhibited at Koplin Del Rio Gallery in Culver City (as of a 2014 exhibition), but the source does not provide details on past gallery representations or specific dates.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only announces an exhibition at Koplin Del Rio; it does not state that Hess was represented by any gallery, nor does it mention the other three galleries or any years. The full source text likewise contains no information about Ovsey, Hackett-Freedman, Hirschl & Adler, or a representation start date of 2010 for Koplin Del Rio. Therefore every component of the claim is unsupported by the source, and the author must add citations or rewrite the claim to reflect only what the source actually provides."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "One of his tasks was to prepare the ground for the reintroduction of compulsory national service; the new scheme was enacted in 1951 and remained in force until 1959.",
+   "markers": [
+    "regpollardgeneral"
+   ],
+   "paper_ids": [
+    "5b4b76438ff802a7323cc52695a3da47e870a0cd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5b4b76438ff802a7323cc52695a3da47e870a0cd",
+    "source_title": "regpollardgeneral",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "On 24 November 1959 Cabinet decided that National Service call-ups should be terminated and that arrangements for the January 1960 intake would be cancelled.",
+    "page": 1,
+    "snippet": "On 24 November 1959 Cabinet decided that",
+    "reason": "The passage does not state that one of his tasks was to prepare the ground for the reintroduction of compulsory national service.",
+    "votes": "2-0",
+    "window": "On 24 November 1959 Cabinet decided that National Service call-ups should be terminated and that arrangements for the January 1960 intake would be cancelled. The legislation provided for the compulsory call-up of males turning 18 on or after 1 November 1950, for service training of 176 days. In the context of the intensification of the Cold War in Europe, Communist insurgency and success in South-East Asia, and the declaration of war in Korea, the Menzies government sponsored the National Service Act 1951."
+   },
+   "evidences": [
+    {
+     "paper_id": "5b4b76438ff802a7323cc52695a3da47e870a0cd",
+     "source_title": "regpollardgeneral",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "On 24 November 1959 Cabinet decided that National Service call-ups should be terminated and that arrangements for the January 1960 intake would be cancelled.",
+     "page": 1,
+     "snippet": "On 24 November 1959 Cabinet decided that",
+     "reason": "The passage does not state that one of his tasks was to prepare the ground for the reintroduction of compulsory national service.",
+     "votes": "2-0",
+     "window": "On 24 November 1959 Cabinet decided that National Service call-ups should be terminated and that arrangements for the January 1960 intake would be cancelled. The legislation provided for the compulsory call-up of males turning 18 on or after 1 November 1950, for service training of 176 days. In the context of the intensification of the Cold War in Europe, Communist insurgency and success in South-East Asia, and the declaration of war in Korea, the Menzies government sponsored the National Service Act 1951."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that one of his tasks was to prepare the ground for the reintroduction of compulsory national service.",
+   "component_check": {
+    "found": [
+     "the new scheme was enacted in 1951"
+    ],
+    "missing": [
+     "One of his tasks was to prepare the ground for the reintroduction of compulsory national service",
+     "the new scheme remained in force until 1959"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "the new scheme was enacted in 1951",
+      "paper_id": "5b4b76438ff802a7323cc52695a3da47e870a0cd",
+      "source_title": "regpollardgeneral",
+      "sentence": "In the context of the intensification of the Cold War in Europe, Communist insurgency and success in South-East Asia, and the declaration of war in Korea, the Menzies government sponsored the National Service Act 1951.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "the new scheme was enacted in 1951 and remained in force until 1959",
+    "reason": "The passage asserts specific facts (enactment and duration dates) that are directly attributed to the cited source and are expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "One of his tasks was to prepare the ground for the reintroduction of compulsory national service",
+    "rewrite_suggestion": "The compulsory national service scheme was enacted in 1951 and remained in force until 1959.",
+    "proofs": [
+     "In the context of the intensification of the Cold War in Europe, Communist insurgency and success in South-East Asia, and the declaration of war in Korea, the Menzies government sponsored the National Service Act 1951.",
+     "Between 1951 and 1959 over 500,000 men registered, 52 intakes were organised and some 227,000 men were trained.",
+     "On 24 November 1959 Cabinet decided that National Service call-ups should be terminated and that arrangements for the January 1960 intake would be cancelled."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes a specific task\u2014preparing ground for reintroduction\u2014to an individual ('his tasks'), but the cited source (a fact sheet about National Service) contains no mention of any individual's role or such preparation. The source does confirm that the National Service Act 1951 was enacted and that the scheme ended in 1959, but the unsupported personal attribution is a substantive component not provable from the source. Since at least one component is unprovable from the source, the author must either add a citation for that part or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "The session was unproductive, due in part to Stefani's self-consciousness and writer's block, and she at one stage broke down in tears in the studio.",
+   "markers": [
+    "whatyouwaitingfor"
+   ],
+   "paper_ids": [
+    "71d926e763c41751290745995e83eb687b439ba3"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8737,
+   "evidence": {
+    "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+    "source_title": "whatyouwaitingfor",
+    "supported": true,
+    "sentence": "But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\"",
+    "page": 1,
+    "snippet": "But those darned insecurities crept up on",
+    "cosine": 0.8737,
+    "reason": "The passage directly states that Stefani cried in the studio due to insecurities, which supports the claim of her being self-conscious and breaking down in tears.",
+    "window": "Write a shitty song and waste a day of your life?\" But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\" The chemistry between the two was so string, however, that it dissipated the confusion."
+   },
+   "evidences": [
+    {
+     "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+     "source_title": "whatyouwaitingfor",
+     "supported": true,
+     "sentence": "But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\"",
+     "page": 1,
+     "snippet": "But those darned insecurities crept up on",
+     "cosine": 0.8737,
+     "reason": "The passage directly states that Stefani cried in the studio due to insecurities, which supports the claim of her being self-conscious and breaking down in tears.",
+     "window": "Write a shitty song and waste a day of your life?\" But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\" The chemistry between the two was so string, however, that it dissipated the confusion."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Stefani cried in the studio due to insecurities, which supports the claim of her being self-conscious and breaking down in tears.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Stefani's self-consciousness",
+      "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+      "source_title": "whatyouwaitingfor",
+      "sentence": "But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\"",
+      "page": 1,
+      "snippet": "But those darned insecurities crept up on"
+     },
+     {
+      "component": "Stefani's writer's block",
+      "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+      "source_title": "whatyouwaitingfor",
+      "sentence": "Stefani would go into another room to try to write some lyrics, and when she came back, Perry would already have the whole song nailed.",
+      "page": 1,
+      "snippet": "Stefani would go into another room to"
+     },
+     {
+      "component": "broke down in tears in the studio",
+      "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+      "source_title": "whatyouwaitingfor",
+      "sentence": "But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\"",
+      "page": 1,
+      "snippet": "But those darned insecurities crept up on"
+     },
+     {
+      "component": "broke down in tears in the studio",
+      "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+      "source_title": "whatyouwaitingfor",
+      "sentence": "Page 3 Dr. Dre rolls his eyes at Gwen, but then 50 Cent talks her down ... Browse Bands by Name Or enter a band name below to search: Bands Main \u2014 by Jennifer Vineyard, interview by Billy Rainey When Gwen Stefani got the call that Linda Perry was ready to write with her, the first thing she did was bury her face in a pillow and cry.",
+      "page": 1,
+      "snippet": "Page 3 Dr. Dre rolls his eyes"
+     }
+    ],
+    "uncovered": [
+     "session was unproductive"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+      "source_title": "whatyouwaitingfor",
+      "text": "Page 3 Dr. Dre rolls his eyes at Gwen, but then 50 Cent talks her down ... Browse Bands by Name Or enter a band name below to search: Bands Main \u2014 by Jennifer Vineyard, interview by Billy Rainey When Gwen Stefani got the call that Linda Perry was ready to write with her, the first thing she did was bury her face in a pillow and cry. All she wanted to do was sleep. And now she was going to have to get up and get creative. When she arrived at Perry's house, nothing she did seemed fast enough. Stefani would go into another room to try to write some lyrics, and when she came back, Perry would already have the whole song nailed. [\u2026] But those darned insecurities crept up on her, drawing tears \u2013 \"I went in the studio the first day and cried.\"",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not mention writer's block or that the session was unproductive.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "writer's block",
+      "found_in": [],
+      "searched": 0
+     },
+     {
+      "component": "the session was unproductive",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the session was unproductive",
+    "rewrite_suggestion": "The session was marked by Stefani's self-consciousness and writer's block, and she at one stage broke down in tears in the studio.",
+    "proofs": [
+     "But those darned insecurities crept up on her, drawing tears \u2013 'I went in the studio the first day and cried.'",
+     "Stefani would go into another room to try to write some lyrics, and when she came back, Perry would already have the whole song nailed."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the component that 'the session was unproductive', which is not stated or directly implied in any sentence of the provided source text. The source does describe insecurities, difficulty writing, and tears, but never asserts that the session itself was unproductive. Therefore the author must either add a citation for that subclaim or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "After the penetration of Azeri forces inside the line, he brought his wounded comrade machine-gunner Andranik Zohrabyan into the trench cell, which was located at a distance of 30 meters (98 feet).",
+   "markers": [
+    "robertabajyan"
+   ],
+   "paper_ids": [
+    "46a00689c614ec234d741995f80601df2c1d073d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "46a00689c614ec234d741995f80601df2c1d073d",
+    "source_title": "robertabajyan",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "He brings his seriously wounded comrade in the trench cell, which was located at a distance of 30m, there he contacts with the battalion commander, provides important information on the operational situation.",
+    "page": 1,
+    "snippet": "He brings his seriously wounded comrade in",
+    "reason": "The passage does not mention the name of the wounded comrade, Andranik Zohrabyan, or that he was a machine-gunner.",
+    "votes": "2-0",
+    "window": "He brings his seriously wounded comrade in the trench cell, which was located at a distance of 30m, there he contacts with the battalion commander, provides important information on the operational situation."
+   },
+   "evidences": [
+    {
+     "paper_id": "46a00689c614ec234d741995f80601df2c1d073d",
+     "source_title": "robertabajyan",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "He brings his seriously wounded comrade in the trench cell, which was located at a distance of 30m, there he contacts with the battalion commander, provides important information on the operational situation.",
+     "page": 1,
+     "snippet": "He brings his seriously wounded comrade in",
+     "reason": "The passage does not mention the name of the wounded comrade, Andranik Zohrabyan, or that he was a machine-gunner.",
+     "votes": "2-0",
+     "window": "He brings his seriously wounded comrade in the trench cell, which was located at a distance of 30m, there he contacts with the battalion commander, provides important information on the operational situation."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the name of the wounded comrade, Andranik Zohrabyan, or that he was a machine-gunner.",
+   "subject_guard": {
+    "subject": "Andranik Zohrabyan",
+    "missing_from": [
+     "46a00689c614ec234d741995f80601df2c1d073d"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "he brought his wounded comrade machine-gunner Andranik Zohrabyan into the trench cell, which was located at a distance of 30 meters (98 feet).",
+    "reason": "The passage asserts specific facts and details about an event, including a distance, which are directly attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is presenting information as if it were stated or reported by the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim includes two unsourced components: (1) the event occurring 'after the penetration of Azeri forces inside the line', which is not mentioned in the source; (2) the wounded comrade being specifically 'machine-gunner Andranik Zohrabyan', a name and role not found in the source text.",
+    "rewrite_suggestion": "He brought his seriously wounded comrade into the trench cell, which was located at a distance of 30 meters.",
+    "proofs": [
+     "He brings his seriously wounded comrade in the trench cell, which was located at a distance of 30m, there he contacts with the battalion commander, provides important information on the operational situation."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that the subject brought a seriously wounded comrade into a trench cell 30 meters away, but the claim adds two unsupported components: the event occurring specifically 'after the penetration of Azeri forces' and the wounded comrade being named 'Andranik Zohrabyan' with the role 'machine-gunner'. Neither of these appears anywhere in the source text, so the author must either add a citation for them or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "The same year, he had a supporting role as a drag queen emcee in the film \"A Star Is Born\", alongside Lady Gaga, Bradley Cooper, and Willam Belli.",
+   "markers": [
+    "shangela"
+   ],
+   "paper_ids": [
+    "f11d40d5273d19d7c6146e50a758b68f8555231a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f11d40d5273d19d7c6146e50a758b68f8555231a",
+    "source_title": "shangela",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "\"Shangela\" Pierce, as well as a ditzy blonde queen named Emerald (Willam Belli).",
+    "page": 1,
+    "snippet": "\"Shangela\" Pierce, as well as a ditzy",
+    "reason": "the passage does not mention the film \"A Star Is Born\" or Bradley Cooper",
+    "votes": "2-0",
+    "window": "\"Shangela\" Pierce, as well as a ditzy blonde queen named Emerald (Willam Belli). It's a glittering and gay way to open a movie, and one would expect nothing less from a Lady Gaga-headlining version of this Hollywood classic."
+   },
+   "evidences": [
+    {
+     "paper_id": "f11d40d5273d19d7c6146e50a758b68f8555231a",
+     "source_title": "shangela",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "\"Shangela\" Pierce, as well as a ditzy blonde queen named Emerald (Willam Belli).",
+     "page": 1,
+     "snippet": "\"Shangela\" Pierce, as well as a ditzy",
+     "reason": "the passage does not mention the film \"A Star Is Born\" or Bradley Cooper",
+     "votes": "2-0",
+     "window": "\"Shangela\" Pierce, as well as a ditzy blonde queen named Emerald (Willam Belli). It's a glittering and gay way to open a movie, and one would expect nothing less from a Lady Gaga-headlining version of this Hollywood classic."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention the film \"A Star Is Born\" or Bradley Cooper",
+   "component_check": {
+    "found": [
+     "He starred alongside Lady Gaga, Bradley Cooper, and Willam Belli."
+    ],
+    "missing": [
+     "He had a supporting role as a drag queen emcee in the film \"A Star Is Born\".",
+     "The film was released the same year."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He starred alongside Lady Gaga, Bradley Cooper, and Willam Belli.",
+      "paper_id": "f11d40d5273d19d7c6146e50a758b68f8555231a",
+      "source_title": "shangela",
+      "sentence": "When famed country rocker Jackson Maine (Bradley Cooper), fresh out of whiskey, rolls into the nearest bar for a drink, he becomes immediately enamored with Ally (Lady Gaga), whose killer pipes earned her a coveted spot on the drag show line-up.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts that the cited source states he had a supporting role as a drag queen emcee in the film \"A Star Is Born\", alongside Lady Gaga, Bradley Cooper, and Willam Belli.",
+    "reason": "The passage directly states facts about the film and the role, which are expected to be proven by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the same year (the claim asserts a specific year without providing it in the source text)",
+    "rewrite_suggestion": "He had a supporting role as a drag queen emcee in the film 'A Star Is Born', alongside Lady Gaga, Bradley Cooper, and Willam Belli.",
+    "proofs": [
+     "Overseen by a charismatic emcee, played by \"RuPaul's Drag Race\" favorite D.J. \"Shangela\" Pierce, as well as a ditzy blonde queen named Emerald (Willam Belli).",
+     "When famed country rocker Jackson Maine (Bradley Cooper), fresh out of whiskey, rolls into the nearest bar for a drink, he becomes immediately enamored with Ally (Lady Gaga), whose killer pipes earned her a coveted spot on the drag show line-up."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only mentions Shangela and Willam Belli, omitting the year and the co-stars Lady Gaga and Bradley Cooper. The source text does not state any year, so the claim's 'the same year' component is unprovable; the other components are provable from the source but not shown. Since a substantive component (the year) is entirely unsourced, the author must either add a citation or remove that part."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Schumer performed as opening act for Madonna on three New York City dates of the singer's Rebel Heart Tour in September 2015.",
+   "markers": [
+    "amyschumer"
+   ],
+   "paper_ids": [
+    "b7e83b642909549a7093cbe505fe20f68e014aa5"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8681,
+   "evidence": {
+    "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+    "source_title": "amyschumer",
+    "supported": true,
+    "sentence": "The comedian and actress tweeted that she will perform on three September dates of Madonna's Rebel Heart tour",
+    "page": 1,
+    "snippet": "The comedian and actress tweeted that she",
+    "cosine": 0.8681,
+    "reason": "The passage states that Amy Schumer tweeted she would perform on three September dates of Madonna's Rebel Heart tour.",
+    "window": "This article is more than 4 years old The comedian and actress tweeted that she will perform on three September dates of Madonna's Rebel Heart tour Tshepo Mokoena @tnm___"
+   },
+   "evidences": [
+    {
+     "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+     "source_title": "amyschumer",
+     "supported": true,
+     "sentence": "The comedian and actress tweeted that she will perform on three September dates of Madonna's Rebel Heart tour",
+     "page": 1,
+     "snippet": "The comedian and actress tweeted that she",
+     "cosine": 0.8681,
+     "reason": "The passage states that Amy Schumer tweeted she would perform on three September dates of Madonna's Rebel Heart tour.",
+     "window": "This article is more than 4 years old The comedian and actress tweeted that she will perform on three September dates of Madonna's Rebel Heart tour Tshepo Mokoena @tnm___"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Amy Schumer tweeted she would perform on three September dates of Madonna's Rebel Heart tour.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Schumer performed as opening act for Madonna",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "Bringing humour to Madonna's Rebel Heart tour \u2026 Amy Schumer.",
+      "page": 1,
+      "snippet": "Bringing humour to Madonna's Rebel Heart tour"
+     },
+     {
+      "component": "Schumer performed as opening act for Madonna",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "# Amy Schumer to open for Madonna on Rebel Heart tour in New York",
+      "page": 1,
+      "snippet": "# Amy Schumer to open for Madonna"
+     },
+     {
+      "component": "Schumer performed as opening act for Madonna",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "Amy Schumer, of Comedy Central sketch show Inside Amy Schumer, has announced on Twitter that she is due to open for Madonna, on 16 September and 17 September at Madison Square Garden, and on 19 September at Brooklyn's Barclays Centre.",
+      "page": 1,
+      "snippet": "Amy Schumer, of Comedy Central sketch show"
+     },
+     {
+      "component": "on three New York City dates",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "Amy Schumer, of Comedy Central sketch show Inside Amy Schumer, has announced on Twitter that she is due to open for Madonna, on 16 September and 17 September at Madison Square Garden, and on 19 September at Brooklyn's Barclays Centre.",
+      "page": 1,
+      "snippet": "Amy Schumer, of Comedy Central sketch show"
+     },
+     {
+      "component": "of the singer's Rebel Heart Tour",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "The comedian and actress tweeted that she will perform on three September dates of Madonna's Rebel Heart tour",
+      "page": 1,
+      "snippet": "The comedian and actress tweeted that she"
+     },
+     {
+      "component": "of the singer's Rebel Heart Tour",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "Bringing humour to Madonna's Rebel Heart tour \u2026 Amy Schumer.",
+      "page": 1,
+      "snippet": "Bringing humour to Madonna's Rebel Heart tour"
+     },
+     {
+      "component": "of the singer's Rebel Heart Tour",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "# Amy Schumer to open for Madonna on Rebel Heart tour in New York",
+      "page": 1,
+      "snippet": "# Amy Schumer to open for Madonna"
+     },
+     {
+      "component": "of the singer's Rebel Heart Tour",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "Amy Schumer, of Comedy Central sketch show Inside Amy Schumer, has announced on Twitter that she is due to open for Madonna, on 16 September and 17 September at Madison Square Garden, and on 19 September at Brooklyn's Barclays Centre.",
+      "page": 1,
+      "snippet": "Amy Schumer, of Comedy Central sketch show"
+     },
+     {
+      "component": "in September 2015",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "Photograph: Mike Coppola/Getty Images Madonna may have made her spoof-like standup comedy debut in April on the Tonight Show starring Jimmy Kimmel, but she could be leaving the jokes to a professional during the New York leg of her Rebel Heart tour in September.",
+      "page": 1,
+      "snippet": "Photograph: Mike Coppola/Getty Images Madonna may have"
+     },
+     {
+      "component": "in September 2015",
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "sentence": "See you in NYC on Sept 16, 17 and 19. pic.twitter.com/llHgsOommL June 18, 2015 Schumer was recently awarded a Peabody award for Inside Amy Schumer in May, and stars in Judd Apatow film Trainwreck, due out in the US and Australia in July, and in August in the UK.",
+      "page": 1,
+      "snippet": "See you in NYC on Sept 16,"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+      "source_title": "amyschumer",
+      "text": "# Amy Schumer to open for Madonna on Rebel Heart tour in New York This article is more than 4 years old The comedian and actress tweeted that she will perform on three September dates of Madonna's Rebel Heart tour Tshepo Mokoena @tnm___ Fri 19 Jun 2015 03.28 EDT Last modified on Wed 31 May 2017 11.58 EDT Bringing humour to Madonna's Rebel Heart tour \u2026 Amy Schumer. Photograph: Mike Coppola/Getty Images Madonna may have made her spoof-like standup comedy debut in April on the Tonight Show starring Jimmy Kimmel, but she could be leaving the jokes to a professional during the New York leg of her Rebel Heart tour in September. Amy Schumer, of Comedy Central sketch show Inside Amy Schumer, has announced on Twitter that she is due to open for Madonna, on 16 September and 17 September at Madison Square Garden, and on 19 September at Brooklyn's Barclays Centre. \"Guess who auditioned for @Madonna and got the part?\" she wrote, on 18 June. \"See you in NYC on Sept 16, 17 and 19.\" Schumer posted the tweet with a snippet of what looks like a home video, in which she sings along to Madonna's Like A Virgin as a young girl. Amy Schumer (@amyschumer) Guess who auditioned for @Madonna and got the part? See you in NYC on Sept 16, 17 and 19. pic.twitter.com/llHgsOommL June 18, 2015 Schumer was recently awarded a Peabody award for Inside Amy Schumer in May, and stars in Judd Apatow film Trainwreck, due out in the US and Australia in July, and in August in the UK.",
+      "n_used": 6
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t18",
+   "text": "He suffered an MCL sprain in Week 15 and was placed on injured reserve on December 28, 2018.",
+   "markers": [
+    "tylerboydamericanfootbal"
+   ],
+   "paper_ids": [
+    "8e800f57b5e2f24e282f0907a301bff5e23fe1ac"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "8e800f57b5e2f24e282f0907a301bff5e23fe1ac",
+    "source_title": "tylerboydamericanfootbal",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Kirkpatrick, a seventh-year player who has started 13 games this season, suffered a shoulder injury last week at Cleveland.",
+    "page": 1,
+    "snippet": "Kirkpatrick, a seventh-year player who has started",
+    "reason": "The passage does not mention an MCL sprain or the date December 28, 2018, in relation to the player's injury.",
+    "votes": "2-0",
+    "window": "Kirkpatrick, a seventh-year player who has started 13 games this season, suffered a shoulder injury last week at Cleveland. (meta data) TITLE: Bengals Make Player Moves Before Week 17 Skip to main content ## Advertising ## Primary nav GAME PASS ## Action related nav GAME PASS News Home Hobson's Choice Roster News Week In Review ## Advertising ## Bengals News Presented by Friday, Dec 28, 2018 12:34 PM # Bengals Make Player Moves Before Week 17 The Bengals today placed WR Tyler Boyd, CB Dre Kirkpatrick and LB Jordan Evans on the Reserve/Injured list. Boyd, a third-year player, started the team's first 14 games this season before suffering a knee injury in Game 14 vs. Oakland. He suffered an ankle injury in Game 14 vs. Oakland."
+   },
+   "evidences": [
+    {
+     "paper_id": "8e800f57b5e2f24e282f0907a301bff5e23fe1ac",
+     "source_title": "tylerboydamericanfootbal",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Kirkpatrick, a seventh-year player who has started 13 games this season, suffered a shoulder injury last week at Cleveland.",
+     "page": 1,
+     "snippet": "Kirkpatrick, a seventh-year player who has started",
+     "reason": "The passage does not mention an MCL sprain or the date December 28, 2018, in relation to the player's injury.",
+     "votes": "2-0",
+     "window": "Kirkpatrick, a seventh-year player who has started 13 games this season, suffered a shoulder injury last week at Cleveland. (meta data) TITLE: Bengals Make Player Moves Before Week 17 Skip to main content ## Advertising ## Primary nav GAME PASS ## Action related nav GAME PASS News Home Hobson's Choice Roster News Week In Review ## Advertising ## Bengals News Presented by Friday, Dec 28, 2018 12:34 PM # Bengals Make Player Moves Before Week 17 The Bengals today placed WR Tyler Boyd, CB Dre Kirkpatrick and LB Jordan Evans on the Reserve/Injured list. Boyd, a third-year player, started the team's first 14 games this season before suffering a knee injury in Game 14 vs. Oakland. He suffered an ankle injury in Game 14 vs. Oakland."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention an MCL sprain or the date December 28, 2018, in relation to the player's injury.",
+   "component_check": {
+    "found": [
+     "He was placed on injured reserve on December 28, 2018"
+    ],
+    "missing": [
+     "He suffered an MCL sprain in Week 15"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He was placed on injured reserve on December 28, 2018",
+      "paper_id": "8e800f57b5e2f24e282f0907a301bff5e23fe1ac",
+      "source_title": "tylerboydamericanfootbal",
+      "sentence": "(meta data) TITLE: Bengals Make Player Moves Before Week 17 Skip to main content ## Advertising ## Primary nav GAME PASS ## Action related nav GAME PASS News Home Hobson's Choice Roster News Week In Review ## Advertising ## Bengals News Presented by Friday, Dec 28, 2018 12:34 PM # Bengals Make Player Moves Before Week 17 The Bengals today placed WR Tyler Boyd, CB Dre Kirkpatrick and LB Jordan Evans on the Reserve/Injured list.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He suffered an MCL sprain in Week 15 and was placed on injured reserve on December 28, 2018.",
+    "reason": "The passage asserts specific facts (injury, date) that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "MCL sprain in Week 15",
+    "rewrite_suggestion": "He suffered a knee injury in Game 14 and was placed on injured reserve on December 28, 2018.",
+    "proofs": [
+     "The Bengals today placed WR Tyler Boyd, CB Dre Kirkpatrick and LB Jordan Evans on the Reserve/Injured list."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Boyd, a third-year player, started the team's first 14 games this season before suffering a knee injury in Game 14 vs. Oakland.",
+     "why": "The claim states the injury occurred in Week 15, but the source states it was Game 14, which is a different week."
+    },
+    "why": "The claim includes specific details (MCL sprain and Week 15) that are not present in the source text; the source only mentions a knee injury in Game 14 and confirms the IR placement on December 28, 2018. Additionally, the shown sentence from the tool is irrelevant (about Kirkpatrick's shoulder), so the support is missing entirely. The author must either add a citation for the MCL sprain and Week 15 or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "El Difraoui is also one of the founders of the Candid Foundation in Berlin, an independent think tank which attempts to promote intercultural understanding and creative approaches in international development, focussing especially on the Middle East, Africa, Asia and the Mediterranean.",
+   "markers": [
+    "asiemeldifraoui"
+   ],
+   "paper_ids": [
+    "293888a28f99db7ecaafa4a00cdcc8fdf54fc44c"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "293888a28f99db7ecaafa4a00cdcc8fdf54fc44c",
+    "source_title": "asiemeldifraoui",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "### Asiem El Difraoui Dr Asiem El Difraoui is a political scientist, economist and documentary film director.",
+    "page": 1,
+    "snippet": "### Asiem El Difraoui Dr Asiem El",
+    "reason": "The passage does not mention the Candid Foundation or its aims.",
+    "votes": "2-0",
+    "window": "### Asiem El Difraoui Dr Asiem El Difraoui is a political scientist, economist and documentary film director. On September 1st, Katja passed away and will be remembered as a dear friend, devoted colleague and fellow co-founder."
+   },
+   "evidences": [
+    {
+     "paper_id": "293888a28f99db7ecaafa4a00cdcc8fdf54fc44c",
+     "source_title": "asiemeldifraoui",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "### Asiem El Difraoui Dr Asiem El Difraoui is a political scientist, economist and documentary film director.",
+     "page": 1,
+     "snippet": "### Asiem El Difraoui Dr Asiem El",
+     "reason": "The passage does not mention the Candid Foundation or its aims.",
+     "votes": "2-0",
+     "window": "### Asiem El Difraoui Dr Asiem El Difraoui is a political scientist, economist and documentary film director. On September 1st, Katja passed away and will be remembered as a dear friend, devoted colleague and fellow co-founder."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the Candid Foundation or its aims.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "El Difraoui is one of the founders of the Candid Foundation in Berlin.",
+    "reason": "The passage directly states a fact about the cited individual and their affiliation, which the citation is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the description of the Candid Foundation as an independent think tank based in Berlin with a mission to promote intercultural understanding and creative approaches in international development, focusing on Middle East, Africa, Asia and the Mediterranean",
+    "rewrite_suggestion": "El Difraoui is one of the founders of the Candid Foundation.",
+    "proofs": [
+     "Our Founders \u2014 The CANDID Foundation"
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentence only identifies El Difraoui as a political scientist, economist and documentary film director, not as a founder of the Candid Foundation. The source text confirms he is a founder via the 'Our Founders' heading and his listing, but it contains no information about the foundation's location, status as an independent think tank, its mission, or its geographic focus. Those additional components are not provable from the source, so the author must either add citations for them or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The oldest player for the tournament was South African player, Imran Tahir who was forty years old while the youngest was Afghan spinner Mujeeb Ur Rahman who is eighteen years old.",
+   "markers": [
+    "2019cricketworldcup"
+   ],
+   "paper_ids": [
+    "735e7299e408be383b4926091d507474af3ead96"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+    "source_title": "2019cricketworldcup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Imran Tahir (SA)-40 years 64 days Imran Tahir's age will be 40 years 64 days on May 30, 2019, i.e. on the first day of the World Cup 2019.",
+    "page": 1,
+    "snippet": "Imran Tahir (SA)-40 years 64 days Imran",
+    "reason": "the passage does not mention the youngest player or their age",
+    "votes": "2-0",
+    "window": "Imran Tahir (SA)-40 years 64 days Imran Tahir's age will be 40 years 64 days on May 30, 2019, i.e. on the first day of the World Cup 2019. And that makes him the oldest player in the World Cup 2019."
+   },
+   "evidences": [
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Imran Tahir (SA)-40 years 64 days Imran Tahir's age will be 40 years 64 days on May 30, 2019, i.e. on the first day of the World Cup 2019.",
+     "page": 1,
+     "snippet": "Imran Tahir (SA)-40 years 64 days Imran",
+     "reason": "the passage does not mention the youngest player or their age",
+     "votes": "2-0",
+     "window": "Imran Tahir (SA)-40 years 64 days Imran Tahir's age will be 40 years 64 days on May 30, 2019, i.e. on the first day of the World Cup 2019. And that makes him the oldest player in the World Cup 2019."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not mention the youngest player or their age",
+   "subject_guard": {
+    "subject": "Mujeeb Ur Rahman",
+    "missing_from": [
+     "735e7299e408be383b4926091d507474af3ead96"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The oldest player for the tournament was South African player, Imran Tahir who was forty years old while the youngest was Afghan spinner Mujeeb Ur Rahman who is eighteen years old.",
+    "reason": "The passage asserts specific facts (ages of players) that are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the youngest player was Afghan spinner Mujeeb Ur Rahman, age 18",
+    "rewrite_suggestion": "The oldest player in the tournament was South African Imran Tahir, who was 40 years old.",
+    "proofs": [
+     "Imran Tahir (SA)-40 years 64 days Imran Tahir's age will be 40 years 64 days on May 30, 2019, i.e. on the first day of the World Cup 2019.",
+     "And that makes him the oldest player in the World Cup 2019."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the claim about Imran Tahir being the oldest player at age 40, but the claim also includes a separate component that Mujeeb Ur Rahman was the youngest player at age 18. The provided source text only discusses the oldest players in the tournament; it contains no information about the youngest player or Mujeeb Ur Rahman. Therefore, that component is not provable from the source at all, requiring the author to either provide a citation for it or remove it from the claim."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "Third-place finisher Bernie Sanders received the highest write-in draft campaign percentage for a statewide presidential candidate in history.",
+   "markers": [
+    "2016unitedstatespresiden"
+   ],
+   "paper_ids": [
+    "25278f32d72635717c91db6257d1f50efab3d38e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8751,
+   "evidence": {
+    "paper_id": "25278f32d72635717c91db6257d1f50efab3d38e",
+    "source_title": "2016unitedstatespresiden",
+    "supported": false,
+    "sentence": "So who has managed to garner write-in votes despite not actually appearing on the ballot?",
+    "page": 1,
+    "snippet": "So who has managed to garner write-in",
+    "cosine": 0.8751,
+    "reason": "The passage discusses write-in votes in general and mentions a surge in Google searches, but it does not provide any information about Bernie Sanders' write-in campaign percentage or compare it to historical data.",
+    "window": "According to CNN, Google searches for \"write in\" skyrocketed last week by more than 2,800 percent \u2014 the highest it's been since George W. Bush ran against John Kerry in 2004. So who has managed to garner write-in votes despite not actually appearing on the ballot? Unfortunately, there's no way to tell for sure; as the Federal Election Committee points out, some states don't disclose the names of the write-in candidates."
+   },
+   "evidences": [
+    {
+     "paper_id": "25278f32d72635717c91db6257d1f50efab3d38e",
+     "source_title": "2016unitedstatespresiden",
+     "supported": false,
+     "sentence": "So who has managed to garner write-in votes despite not actually appearing on the ballot?",
+     "page": 1,
+     "snippet": "So who has managed to garner write-in",
+     "cosine": 0.8751,
+     "reason": "The passage discusses write-in votes in general and mentions a surge in Google searches, but it does not provide any information about Bernie Sanders' write-in campaign percentage or compare it to historical data.",
+     "window": "According to CNN, Google searches for \"write in\" skyrocketed last week by more than 2,800 percent \u2014 the highest it's been since George W. Bush ran against John Kerry in 2004. So who has managed to garner write-in votes despite not actually appearing on the ballot? Unfortunately, there's no way to tell for sure; as the Federal Election Committee points out, some states don't disclose the names of the write-in candidates."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Bernie Sanders; third-place",
+    "missing_from": [
+     "25278f32d72635717c91db6257d1f50efab3d38e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Bernie Sanders received the highest write-in draft campaign percentage for a statewide presidential candidate in history.",
+    "reason": "The passage directly states a factual claim about Bernie Sanders' performance, implying the cited source is expected to provide evidence for this specific historical fact.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim about Bernie Sanders having the highest write-in draft campaign percentage is not present in the source; the source instead identifies Ralph Nader as the most likely candidate with the most write-in votes.",
+    "rewrite_suggestion": "Ralph Nader likely received the most write-in votes for president in history during the 1996 election.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "However, the most likely answer probably won't surprise you: In all probability, it's famous independent politician Ralph Nader during the 1996 election.",
+     "why": "This statement identifies Ralph Nader as the likely record-holder for write-in votes, contradicting the claim that Bernie Sanders holds that record."
+    },
+    "why": "The source text does not mention Bernie Sanders or any write-in draft campaign percentage. It instead discusses Ralph Nader as the probable candidate with the most write-in votes, which directly conflicts with the claim. Since none of the claim's components can be proven from the provided source, the author must either add a citation supporting the specific Sanders statistic or rewrite the claim to align with the source's content."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "The University of the Philippines Diliman had noted interest on Ry\u016bdai since 2007 due to its research on underwater cultural landscapes.",
+   "markers": [
+    "universityoftheryukyus"
+   ],
+   "paper_ids": [
+    "61e258b1511c3959f5228864e7458ed966f8ef85"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7503,
+   "evidence": {
+    "paper_id": "61e258b1511c3959f5228864e7458ed966f8ef85",
+    "source_title": "universityoftheryukyus",
+    "supported": false,
+    "sentence": "On August 31, 2011, an exchange program started between the Mokpo National University Institute for Marine and Island Cultures and the International Institute for Okinawan Studies at the University of the Ryukyus.",
+    "page": 1,
+    "snippet": "On August 31, 2011, an exchange program",
+    "cosine": 0.7503,
+    "reason": "The passage mentions an exchange program between the University of the Ryukyus and Mokpo National University in 2011, but it does not mention the University of the Philippines Diliman or any interest in underwater cultural landscapes.",
+    "window": "The two universities have interacted in the past. On August 31, 2011, an exchange program started between the Mokpo National University Institute for Marine and Island Cultures and the International Institute for Okinawan Studies at the University of the Ryukyus. They will seek to promote cooperation for further academic research."
+   },
+   "evidences": [
+    {
+     "paper_id": "61e258b1511c3959f5228864e7458ed966f8ef85",
+     "source_title": "universityoftheryukyus",
+     "supported": false,
+     "sentence": "On August 31, 2011, an exchange program started between the Mokpo National University Institute for Marine and Island Cultures and the International Institute for Okinawan Studies at the University of the Ryukyus.",
+     "page": 1,
+     "snippet": "On August 31, 2011, an exchange program",
+     "cosine": 0.7503,
+     "reason": "The passage mentions an exchange program between the University of the Ryukyus and Mokpo National University in 2011, but it does not mention the University of the Philippines Diliman or any interest in underwater cultural landscapes.",
+     "window": "The two universities have interacted in the past. On August 31, 2011, an exchange program started between the Mokpo National University Institute for Marine and Island Cultures and the International Institute for Okinawan Studies at the University of the Ryukyus. They will seek to promote cooperation for further academic research."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The University of the Philippines Diliman had noted interest on Ry\u016bdai since 2007 due to its research on underwater cultural landscapes.",
+    "reason": "The passage directly states a fact attributed to the University of the Philippines Diliman regarding their interest in Ry\u016bdai and the reason for it. This implies the citation is expected to prove this specific statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim is unsupported: the source does not mention the University of the Philippines Diliman, interest in Ry\u016bdai, a date of 2007, or research on underwater cultural landscapes.",
+    "rewrite_suggestion": "The University of the Ryukyus signed an exchange agreement with Mokpo National University in 2013, building on a prior exchange program started in 2011 between their institutes for marine and island cultures.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only describes a 2011 exchange between Korean and Okinawan institutes, which has no relation to the University of the Philippines Diliman or the claim's other components. The source text as a whole contains no mention of the University of the Philippines Diliman, interest in Ry\u016bdai since 2007, or underwater cultural landscapes, so none of the claim's components are provable from this source."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "Some doctors do not have the required accreditation and pose a hazard to the general public by prescribing the wrong medication or performing unsuccessful surgeries resulting in unnecessary deaths.",
+   "markers": [
+    "healthcareinalbania"
+   ],
+   "paper_ids": [
+    "d82de4e104c135ad3bb00fe0daa4b425bc87fa49"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d82de4e104c135ad3bb00fe0daa4b425bc87fa49",
+    "source_title": "healthcareinalbania",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Doctors and nurses are often cut off from new techniques and developments in medicine; the system is subsequently finding it hard to cope with modern day health issues like drug abuse, AIDS and sexually transmitted diseases.",
+    "page": 1,
+    "snippet": "Doctors and nurses are often cut off",
+    "reason": "The passage does not state that some doctors lack accreditation or that they prescribe the wrong medication or perform unsuccessful surgeries resulting in unnecessary deaths.",
+    "votes": "2-0",
+    "window": "Doctors and nurses are often cut off from new techniques and developments in medicine; the system is subsequently finding it hard to cope with modern day health issues like drug abuse, AIDS and sexually transmitted diseases. This has resulted in patients' lack of confidence in the skills of GPs and very often patients will bypass GPs and go directly to a specialist. Unfortunately, most of the GPs in the country lack a proper level of training."
+   },
+   "evidences": [
+    {
+     "paper_id": "d82de4e104c135ad3bb00fe0daa4b425bc87fa49",
+     "source_title": "healthcareinalbania",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Doctors and nurses are often cut off from new techniques and developments in medicine; the system is subsequently finding it hard to cope with modern day health issues like drug abuse, AIDS and sexually transmitted diseases.",
+     "page": 1,
+     "snippet": "Doctors and nurses are often cut off",
+     "reason": "The passage does not state that some doctors lack accreditation or that they prescribe the wrong medication or perform unsuccessful surgeries resulting in unnecessary deaths.",
+     "votes": "2-0",
+     "window": "Doctors and nurses are often cut off from new techniques and developments in medicine; the system is subsequently finding it hard to cope with modern day health issues like drug abuse, AIDS and sexually transmitted diseases. This has resulted in patients' lack of confidence in the skills of GPs and very often patients will bypass GPs and go directly to a specialist. Unfortunately, most of the GPs in the country lack a proper level of training."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that some doctors lack accreditation or that they prescribe the wrong medication or perform unsuccessful surgeries resulting in unnecessary deaths.",
+   "component_check": {
+    "found": [
+     "Some doctors do not have the required accreditation."
+    ],
+    "missing": [
+     "Doctors without accreditation pose a hazard to the general public.",
+     "They prescribe the wrong medication.",
+     "They perform unsuccessful surgeries."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Some doctors do not have the required accreditation.",
+      "paper_id": "d82de4e104c135ad3bb00fe0daa4b425bc87fa49",
+      "source_title": "healthcareinalbania",
+      "sentence": "Unfortunately, most of the GPs in the country lack a proper level of training.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Some doctors do not have the required accreditation and pose a hazard to the general public by prescribing the wrong medication or performing unsuccessful surgeries resulting in unnecessary deaths.",
+    "reason": "The passage directly asserts facts about doctors' accreditation and the consequences of their actions, which the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim attributes specific hazards (wrong medication, unsuccessful surgeries, unnecessary deaths) and lack of accreditation to doctors, none of which appear in the source text.",
+    "rewrite_suggestion": "Some general practitioners in Albania lack a proper level of training, which contributes to patients' lack of confidence in their skills.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not mention accreditation, wrongful prescribing, unsuccessful surgeries, or unnecessary deaths. The shown sentence discusses doctors being cut off from new techniques, but does not support any component of the claim. Since these substantive components are entirely absent from the cited source, the author must add a proper citation or rewrite the claim to reflect what the source actually says."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "The fans consider themselves fiercely left-wing, and frequently the fans cultivate the club's Jewish traditions as well as actions against antisemitism, racism and homophobia.",
+   "markers": [
+    "tennisborussiaberlin"
+   ],
+   "paper_ids": [
+    "dd22269fd77759b3664590a778b0e6cc9f9199b5"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "dd22269fd77759b3664590a778b0e6cc9f9199b5",
+    "source_title": "tennisborussiaberlin",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Also part of the TeBe spirit is the continued appreciation of Jewish traditions and active opposition to anti-Semitism, racism and homophoby, and in this area the fans are fully supported by the club.",
+    "page": 1,
+    "snippet": "Also part of the TeBe spirit is",
+    "reason": "The passage does not state that the fans consider themselves fiercely left-wing.",
+    "votes": "2-0",
+    "window": "Also part of the TeBe spirit is the continued appreciation of Jewish traditions and active opposition to anti-Semitism, racism and homophoby, and in this area the fans are fully supported by the club. Since right-wing radicals are still active in certain areas of Berlin, TeBe fans are proud of their stance in opposition to such groups. In 2001, the fans suggested the addition of anti-discrimination paragraph to the club's Articles of Association, which was subsequently added without a single dissenting voice."
+   },
+   "evidences": [
+    {
+     "paper_id": "dd22269fd77759b3664590a778b0e6cc9f9199b5",
+     "source_title": "tennisborussiaberlin",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Also part of the TeBe spirit is the continued appreciation of Jewish traditions and active opposition to anti-Semitism, racism and homophoby, and in this area the fans are fully supported by the club.",
+     "page": 1,
+     "snippet": "Also part of the TeBe spirit is",
+     "reason": "The passage does not state that the fans consider themselves fiercely left-wing.",
+     "votes": "2-0",
+     "window": "Also part of the TeBe spirit is the continued appreciation of Jewish traditions and active opposition to anti-Semitism, racism and homophoby, and in this area the fans are fully supported by the club. Since right-wing radicals are still active in certain areas of Berlin, TeBe fans are proud of their stance in opposition to such groups. In 2001, the fans suggested the addition of anti-discrimination paragraph to the club's Articles of Association, which was subsequently added without a single dissenting voice."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the fans consider themselves fiercely left-wing.",
+   "component_check": {
+    "found": [
+     "The fans frequently engage in actions against antisemitism."
+    ],
+    "missing": [
+     "The fans consider themselves fiercely left-wing.",
+     "The fans frequently cultivate the club's Jewish traditions.",
+     "The fans frequently engage in actions against racism."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The fans frequently engage in actions against antisemitism.",
+      "paper_id": "dd22269fd77759b3664590a778b0e6cc9f9199b5",
+      "source_title": "tennisborussiaberlin",
+      "sentence": "Also part of the TeBe spirit is the continued appreciation of Jewish traditions and active opposition to anti-Semitism, racism and homophoby, and in this area the fans are fully supported by the club.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the fans' political leanings, traditions, and actions against discrimination. The citation is expected to prove these statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the fans consider themselves fiercely left-wing",
+    "rewrite_suggestion": "The fans appreciate Jewish traditions and actively oppose antisemitism, racism and homophobia, as part of the TeBe spirit.",
+    "proofs": [
+     "Also part of the TeBe spirit is the continued appreciation of Jewish traditions and active opposition to anti-Semitism, racism and homophoby, and in this area the fans are fully supported by the club."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the component that fans consider themselves fiercely left-wing, but the source text does not mention any political self-identification of the fans. The other components\u2014cultivating Jewish traditions and opposing discrimination\u2014are supported by the shown sentence. Since one substantive component is entirely absent from the source, the author must either add a citation for that component or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "Cleveland EMS is the primary provider of Advanced Life Support and ambulance transport within the city of Cleveland, while Cleveland Fire assists by providing fire response medical care.",
+   "markers": [
+    "cleveland"
+   ],
+   "paper_ids": [
+    "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+    "source_title": "cleveland",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland.",
+    "page": 1,
+    "snippet": "E- mail history@care1975.com Cleveland EMS Today 911",
+    "reason": "The passage explicitly states that Cleveland EMS is the primary provider of Advanced Life Support (ALS) ambulances within the City of Cleveland and that Cleveland Fire firefighters are trained to at least the EMT-Basic level and will be dual-dispatched on high-priority calls to assist in patient care.",
+    "votes": "2-0",
+    "window": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland. accomplished via 21-25 Paramedic-staffed Advanced Life Support (ALS) ambulances Cleveland Fire \"First Responder\": All Cleveland firefighters are also trained to at least the EMT-Basic level On high-priority calls, such as calls where a patient is unconsious, a fire apparatus will be dual-dispatched with a CEMS paramedic ambulance to assist in patient care."
+   },
+   "evidences": [
+    {
+     "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+     "source_title": "cleveland",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland.",
+     "page": 1,
+     "snippet": "E- mail history@care1975.com Cleveland EMS Today 911",
+     "reason": "The passage explicitly states that Cleveland EMS is the primary provider of Advanced Life Support (ALS) ambulances within the City of Cleveland and that Cleveland Fire firefighters are trained to at least the EMT-Basic level and will be dual-dispatched on high-priority calls to assist in patient care.",
+     "votes": "2-0",
+     "window": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland. accomplished via 21-25 Paramedic-staffed Advanced Life Support (ALS) ambulances Cleveland Fire \"First Responder\": All Cleveland firefighters are also trained to at least the EMT-Basic level On high-priority calls, such as calls where a patient is unconsious, a fire apparatus will be dual-dispatched with a CEMS paramedic ambulance to assist in patient care."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Cleveland EMS is the primary provider of Advanced Life Support (ALS) ambulances within the City of Cleveland and that Cleveland Fire firefighters are trained to at least the EMT-Basic level and will be dual-dispatched on high-priority calls to assist in patient care.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Cleveland EMS is the primary provider of Advanced Life Support",
+      "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+      "source_title": "cleveland",
+      "sentence": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland.",
+      "page": 1,
+      "snippet": "E- mail history@care1975.com Cleveland EMS Today 911"
+     },
+     {
+      "component": "Cleveland EMS is the primary provider of Advanced Life Support",
+      "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+      "source_title": "cleveland",
+      "sentence": "accomplished via 21-25 Paramedic-staffed Advanced Life Support (ALS) ambulances",
+      "page": 1,
+      "snippet": "accomplished via 21-25 Paramedic-staffed Advanced Life Support"
+     },
+     {
+      "component": "Cleveland EMS is the primary provider of ambulance transport",
+      "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+      "source_title": "cleveland",
+      "sentence": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland.",
+      "page": 1,
+      "snippet": "E- mail history@care1975.com Cleveland EMS Today 911"
+     },
+     {
+      "component": "Cleveland Fire assists by providing fire response medical care",
+      "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+      "source_title": "cleveland",
+      "sentence": "Cleveland Fire \"First Responder\": All Cleveland firefighters are also trained to at least the EMT-Basic level On high-priority calls, such as calls where a patient is unconsious, a fire apparatus will be dual-dispatched with a CEMS paramedic ambulance to assist in patient care.",
+      "page": 1,
+      "snippet": "Cleveland Fire \"First Responder\": All Cleveland firefighters"
+     },
+     {
+      "component": "Cleveland Fire assists by providing ambulance transport",
+      "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+      "source_title": "cleveland",
+      "sentence": "When faced with a critical patient, the firefighters will drive the ambulance to the hospital, while both EMS personnel provide patient care.",
+      "page": 1,
+      "snippet": "When faced with a critical patient, the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+      "source_title": "cleveland",
+      "text": "E- mail history@care1975.com Cleveland EMS Today 911 Response: The primary duty of Cleveland EMS (CEMS) is to respond to 911 calls for medical assistance within the City of Cleveland. This is accomplished via 21-25 Paramedic-staffed Advanced Life Support (ALS) ambulances CEMS paramedics are the lead prehospital providers for patients that experience asthma attacks, car accidents, alcohol and drug overdoses, gunshot wounds, heart attacks, strokes, seizures, sudden cardiac arrest, and a host of other medical emergencies CEMS also dispatches an ambulance to every structure fire within the city and works with the Cleveland Police Department (CPD) to mitigate mental health emergencies Today, the approximatly 300 paramedics and EMTs of Cleveland EMS respond to over 100,000 emergency calls each year. Cleveland Fire \"First Responder\": All Cleveland firefighters are also trained to at least the EMT-Basic level On high-priority calls, such as calls where a patient is unconsious, a fire apparatus will be dual-dispatched with a CEMS paramedic ambulance to assist in patient care. 35-40% of EMS calls in Cleveland qualify for such a dual response. The majority of the time, once CEMS arrives and assumes care, the fire unit will go back into service. When faced with a critical patient, the firefighters will drive the ambulance to the hospital, while both EMS personnel provide patient care.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t26",
+   "text": "On October 17, 2018, one year after Downie's death, a previously unreleased studio recording of the song \"Wait So Long\" was played on K-Rock, a radio station in the band's hometown of Kingston.",
+   "markers": [
+    "thetragicallyhip"
+   ],
+   "paper_ids": [
+    "e302001d4ef1672aa40348cd1033a08255a76792"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.86,
+   "evidence": {
+    "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+    "source_title": "thetragicallyhip",
+    "supported": true,
+    "sentence": "(meta data) TITLE: Hear Previously Unreleased Tragically Hip Song 'Wait So Long' - K-ROCK 105.7 Listen Live On Air: Recent Songs # Hear Previously Unreleased Tragically Hip Song 'Wait So Long' by brooklyn.vangelder on October 21, 2018, 12:10pm.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Hear Previously Unreleased Tragically",
+    "cosine": 0.86,
+    "reason": "The passage confirms that a previously unreleased studio recording of 'Wait So Long' was played on K-Rock on October 17, 2018, one year after Gord Downie's passing.",
+    "window": "(meta data) TITLE: Hear Previously Unreleased Tragically Hip Song 'Wait So Long' - K-ROCK 105.7 Listen Live On Air: Recent Songs # Hear Previously Unreleased Tragically Hip Song 'Wait So Long' by brooklyn.vangelder on October 21, 2018, 12:10pm. EDT On Wednesday, October 17, 2018, as the country remembered Gord Downie following the one year anniversary of his passing, we played a song from a special package that was delivered earlier in the month."
+   },
+   "evidences": [
+    {
+     "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+     "source_title": "thetragicallyhip",
+     "supported": true,
+     "sentence": "(meta data) TITLE: Hear Previously Unreleased Tragically Hip Song 'Wait So Long' - K-ROCK 105.7 Listen Live On Air: Recent Songs # Hear Previously Unreleased Tragically Hip Song 'Wait So Long' by brooklyn.vangelder on October 21, 2018, 12:10pm.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Hear Previously Unreleased Tragically",
+     "cosine": 0.86,
+     "reason": "The passage confirms that a previously unreleased studio recording of 'Wait So Long' was played on K-Rock on October 17, 2018, one year after Gord Downie's passing.",
+     "window": "(meta data) TITLE: Hear Previously Unreleased Tragically Hip Song 'Wait So Long' - K-ROCK 105.7 Listen Live On Air: Recent Songs # Hear Previously Unreleased Tragically Hip Song 'Wait So Long' by brooklyn.vangelder on October 21, 2018, 12:10pm. EDT On Wednesday, October 17, 2018, as the country remembered Gord Downie following the one year anniversary of his passing, we played a song from a special package that was delivered earlier in the month."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage confirms that a previously unreleased studio recording of 'Wait So Long' was played on K-Rock on October 17, 2018, one year after Gord Downie's passing.",
+   "covering": {
+    "covered": [
+     {
+      "component": "On October 17, 2018, a previously unreleased studio recording of the song \"Wait So Long\" was played",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "EDT On Wednesday, October 17, 2018, as the country remembered Gord Downie following the one year anniversary of his passing, we played a song from a special package that was delivered earlier in the month.",
+      "page": 1,
+      "snippet": "EDT On Wednesday, October 17, 2018, as"
+     },
+     {
+      "component": "On October 17, 2018, a previously unreleased studio recording of the song \"Wait So Long\" was played",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "We played the song 'Wait So Long' a couple of times on the 17th as a part of Gord FM.",
+      "page": 1,
+      "snippet": "We played the song 'Wait So Long'"
+     },
+     {
+      "component": "one year after Downie's death",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "EDT On Wednesday, October 17, 2018, as the country remembered Gord Downie following the one year anniversary of his passing, we played a song from a special package that was delivered earlier in the month.",
+      "page": 1,
+      "snippet": "EDT On Wednesday, October 17, 2018, as"
+     },
+     {
+      "component": "on K-Rock, a radio station in the band's hometown of Kingston",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "(meta data) TITLE: Hear Previously Unreleased Tragically Hip Song 'Wait So Long' - K-ROCK 105.7 Listen Live On Air: Recent Songs # Hear Previously Unreleased Tragically Hip Song 'Wait So Long' by brooklyn.vangelder on October 21, 2018, 12:10pm.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Hear Previously Unreleased Tragically"
+     },
+     {
+      "component": "on K-Rock, a radio station in the band's hometown of Kingston",
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "sentence": "{* #legalAcceptancePostLoginForm_radio *} {* name *} {* email *} {* postalCode *} {* gender *} {* birthdate_required *} Subscribe to K-ROCK 105.7 newsletters ### ROCK Mail Daily Daily updates for Weather ,News, Sports, Entertainment.",
+      "page": 1,
+      "snippet": "{* #legalAcceptancePostLoginForm_radio *} {* name *} {*"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+      "source_title": "thetragicallyhip",
+      "text": "(meta data) TITLE: Hear Previously Unreleased Tragically Hip Song 'Wait So Long' - K-ROCK 105.7 Listen Live On Air: Recent Songs # Hear Previously Unreleased Tragically Hip Song 'Wait So Long' by brooklyn.vangelder on October 21, 2018, 12:10pm. EDT On Wednesday, October 17, 2018, as the country remembered Gord Downie following the one year anniversary of his passing, we played a song from a special package that was delivered earlier in the month. Sideshow had received a package with no sender information and really no information outside of a note and CD saying it contained never-before-heard Tragically Hip Material. We played the song 'Wait So Long' a couple of times on the 17th as a part of Gord FM. [\u2026] {* #legalAcceptancePostLoginForm_radio *} {* name *} {* email *} {* postalCode *} {* gender *} {* birthdate_required *} Subscribe to K-ROCK 105.7 newsletters ### ROCK Mail Daily Daily updates for Weather ,News, Sports, Entertainment.",
+      "n_used": 4
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "9bd2037a6dd4f039ef2b1ddf158d7e7b95ced724": {
+    "title": "albertstankowski",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "61e258b1511c3959f5228864e7458ed966f8ef85": {
+    "title": "universityoftheryukyus",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e302001d4ef1672aa40348cd1033a08255a76792": {
+    "title": "thetragicallyhip",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "25278f32d72635717c91db6257d1f50efab3d38e": {
+    "title": "2016unitedstatespresiden",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e183fd6c2e5f221ce9568e036dac5ff0bbba7691": {
+    "title": "chrisfleming",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e": {
+    "title": "frankhole",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fe955a778013e1f44048ba91d1cc722320f6e1c5": {
+    "title": "ravisinghhumanitarian",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5b4b76438ff802a7323cc52695a3da47e870a0cd": {
+    "title": "regpollardgeneral",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "46a00689c614ec234d741995f80601df2c1d073d": {
+    "title": "robertabajyan",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "71d926e763c41751290745995e83eb687b439ba3": {
+    "title": "whatyouwaitingfor",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "44a459c167e3c7dffd26b1256129a2bd13934c9a": {
+    "title": "wlur",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "495dcd50b90bdfa8f815bc3594b7fac3a720606f": {
+    "title": "irenehervey",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824": {
+    "title": "apollo11",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c": {
+    "title": "cleveland",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "f11d40d5273d19d7c6146e50a758b68f8555231a": {
+    "title": "shangela",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "293888a28f99db7ecaafa4a00cdcc8fdf54fc44c": {
+    "title": "asiemeldifraoui",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "34c1d85c8d138a41cba224620a53d74cee1fbc54": {
+    "title": "amberchia",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "8e800f57b5e2f24e282f0907a301bff5e23fe1ac": {
+    "title": "tylerboydamericanfootbal",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "dd22269fd77759b3664590a778b0e6cc9f9199b5": {
+    "title": "tennisborussiaberlin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21": {
+    "title": "dedicatedcarlyraejepsena",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "567e8218a5b26ebf086ea69278ad9a728a3b2362": {
+    "title": "natesolder",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "d82de4e104c135ad3bb00fe0daa4b425bc87fa49": {
+    "title": "healthcareinalbania",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "feeafaec5d471ee3d070b1556889be306331d394": {
+    "title": "fscotthess",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0b49abd20c342583d7c8df6617272c47dd9af251": {
+    "title": "sedgwickcountyzoo",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "735e7299e408be383b4926091d507474af3ead96": {
+    "title": "2019cricketworldcup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b7e83b642909549a7093cbe505fe20f68e014aa5": {
+    "title": "amyschumer",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 9,
+   "unsupported": 17,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:27:27",
+  "marker_errors": [],
+  "processing_time_seconds": 447.5,
+  "source_hashes": {
+   "irenehervey.txt": "f3cfcda897993f88ab4e7c1a331ce7ec9ff6d087",
+   "sedgwickcountyzoo.txt": "f43a10701284fec4c38393f06f63f3295fa8d70f",
+   "amberchia.txt": "c572ecd5c05a144b07e7574dd3fe5e5ceb020f85",
+   "natesolder.txt": "dc686035c01e21c432feefb4c7d09864b175c811",
+   "wlur.txt": "39d04c0b638b7c6766d33a25cda9a9c2149a6c2f",
+   "albertstankowski.txt": "9e244fcd295050cedb0ddfb55a79cdabe5eaf3cf",
+   "chrisfleming.txt": "0b9f594e2ea5b300449f4739211c0ec9941ed7c0",
+   "apollo11.txt": "213bfccef5b02efbe326ba24dfa7ac434d27dfd7",
+   "frankhole.txt": "f5927243c37a72e2a3528a2abc6790601a96d128",
+   "ravisinghhumanitarian.txt": "54fde0858262c5301b0ff26c616cb56775b0b3c6",
+   "dedicatedcarlyraejepsena.txt": "bb401065bb4139ba6e2d23018236aa51d0b0c9fd",
+   "fscotthess.txt": "58ecb397db2a6808ec90c2d3200e44b331d71122",
+   "regpollardgeneral.txt": "778496b089a9471b24578d96b21ab8d6b983e490",
+   "whatyouwaitingfor.txt": "60ba7041ee73d58ec29278ab2aa6ecb9e9d80778",
+   "robertabajyan.txt": "3e1de88325941501772ef99e07ef7c95e4f0c359",
+   "shangela.txt": "5f474b103717525d2e51238a66aa410a6d3a59eb",
+   "amyschumer.txt": "6538c550bbf1ad080f6470feabfdce66ca408180",
+   "tylerboydamericanfootbal.txt": "14b3d5f90e26c05b5264efcaa195ae0350984461",
+   "asiemeldifraoui.txt": "6f32ba05a553f48b6fa3fc294bbd8f0fc3d9b870",
+   "2019cricketworldcup.txt": "2e7129d917f92174b466b3261677796be10199a2",
+   "2016unitedstatespresiden.txt": "eb4724867e8632e71e6ba1f3a6bd22fa4b02004b",
+   "universityoftheryukyus.txt": "798a07196596e6fb0f233cd046622305ada62df9",
+   "healthcareinalbania.txt": "d65fa394f9f7bc45b1a5996b3529e6ab54bc68e1",
+   "tennisborussiaberlin.txt": "5de2dd0c8d5c011d637c0aac172fde7f55dc7ae8",
+   "cleveland.txt": "085c5f7645905ea556a061ce6507cfb5d6c5adfa",
+   "thetragicallyhip.txt": "e799cda67154344542972c89ade28f51c5ee6a43"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 356,
+    "prompt_tokens": 351214,
+    "completion_tokens": 17407,
+    "cost_usd": 0.042186
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 27,
+    "prompt_tokens": 80345,
+    "completion_tokens": 65764,
+    "cost_usd": 0.024025
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 17,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 21,
+   "actions": {
+    "add_citation_or_rewrite": 20,
+    "supported": 1
+   },
+   "proof_may_exist": [],
+   "conflicts": [
+    "t18",
+    "t21"
+   ],
+   "rescued": [],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "495dcd50b90bdfa8f815bc3594b7fac3a720606f",
+   "key": "irenehervey",
+   "filename": "irenehervey.txt",
+   "title": "irenehervey",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0b49abd20c342583d7c8df6617272c47dd9af251",
+   "key": "sedgwickcountyzoo",
+   "filename": "sedgwickcountyzoo.txt",
+   "title": "sedgwickcountyzoo",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "34c1d85c8d138a41cba224620a53d74cee1fbc54",
+   "key": "amberchia",
+   "filename": "amberchia.txt",
+   "title": "amberchia",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "567e8218a5b26ebf086ea69278ad9a728a3b2362",
+   "key": "natesolder",
+   "filename": "natesolder.txt",
+   "title": "natesolder",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "44a459c167e3c7dffd26b1256129a2bd13934c9a",
+   "key": "wlur",
+   "filename": "wlur.txt",
+   "title": "wlur",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9bd2037a6dd4f039ef2b1ddf158d7e7b95ced724",
+   "key": "albertstankowski",
+   "filename": "albertstankowski.txt",
+   "title": "albertstankowski",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e183fd6c2e5f221ce9568e036dac5ff0bbba7691",
+   "key": "chrisfleming",
+   "filename": "chrisfleming.txt",
+   "title": "chrisfleming",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+   "key": "apollo11",
+   "filename": "apollo11.txt",
+   "title": "apollo11",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f88cb9bf1f30c86deee5862b1ac3b037762a5c8e",
+   "key": "frankhole",
+   "filename": "frankhole.txt",
+   "title": "frankhole",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fe955a778013e1f44048ba91d1cc722320f6e1c5",
+   "key": "ravisinghhumanitarian",
+   "filename": "ravisinghhumanitarian.txt",
+   "title": "ravisinghhumanitarian",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3f8c02fffc36ff228cd205d67ed9303e1c5b2a21",
+   "key": "dedicatedcarlyraejepsena",
+   "filename": "dedicatedcarlyraejepsena.txt",
+   "title": "dedicatedcarlyraejepsena",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "feeafaec5d471ee3d070b1556889be306331d394",
+   "key": "fscotthess",
+   "filename": "fscotthess.txt",
+   "title": "fscotthess",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5b4b76438ff802a7323cc52695a3da47e870a0cd",
+   "key": "regpollardgeneral",
+   "filename": "regpollardgeneral.txt",
+   "title": "regpollardgeneral",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "71d926e763c41751290745995e83eb687b439ba3",
+   "key": "whatyouwaitingfor",
+   "filename": "whatyouwaitingfor.txt",
+   "title": "whatyouwaitingfor",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46a00689c614ec234d741995f80601df2c1d073d",
+   "key": "robertabajyan",
+   "filename": "robertabajyan.txt",
+   "title": "robertabajyan",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f11d40d5273d19d7c6146e50a758b68f8555231a",
+   "key": "shangela",
+   "filename": "shangela.txt",
+   "title": "shangela",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b7e83b642909549a7093cbe505fe20f68e014aa5",
+   "key": "amyschumer",
+   "filename": "amyschumer.txt",
+   "title": "amyschumer",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8e800f57b5e2f24e282f0907a301bff5e23fe1ac",
+   "key": "tylerboydamericanfootbal",
+   "filename": "tylerboydamericanfootbal.txt",
+   "title": "tylerboydamericanfootbal",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "293888a28f99db7ecaafa4a00cdcc8fdf54fc44c",
+   "key": "asiemeldifraoui",
+   "filename": "asiemeldifraoui.txt",
+   "title": "asiemeldifraoui",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+   "key": "2019cricketworldcup",
+   "filename": "2019cricketworldcup.txt",
+   "title": "2019cricketworldcup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "25278f32d72635717c91db6257d1f50efab3d38e",
+   "key": "2016unitedstatespresiden",
+   "filename": "2016unitedstatespresiden.txt",
+   "title": "2016unitedstatespresiden",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "61e258b1511c3959f5228864e7458ed966f8ef85",
+   "key": "universityoftheryukyus",
+   "filename": "universityoftheryukyus.txt",
+   "title": "universityoftheryukyus",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d82de4e104c135ad3bb00fe0daa4b425bc87fa49",
+   "key": "healthcareinalbania",
+   "filename": "healthcareinalbania.txt",
+   "title": "healthcareinalbania",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "dd22269fd77759b3664590a778b0e6cc9f9199b5",
+   "key": "tennisborussiaberlin",
+   "filename": "tennisborussiaberlin.txt",
+   "title": "tennisborussiaberlin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a7fbf332b2bd266c4f2a37835c2dfb94fbfa245c",
+   "key": "cleveland",
+   "filename": "cleveland.txt",
+   "title": "cleveland",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e302001d4ef1672aa40348cd1033a08255a76792",
+   "key": "thetragicallyhip",
+   "filename": "thetragicallyhip.txt",
+   "title": "thetragicallyhip",
+   "num_claims": 0
+  }
+ ]
+}

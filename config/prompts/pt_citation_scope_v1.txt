@@ -1,0 +1,70 @@
+You classify the SCOPE of a citation inside an author's document for a
+citation-checking tool. The passage below carries the citation marker(s)
+{KEYS}. The tool has judged the passage "unsupported" against the cited
+source(s). Your ONLY job: decide what the author is USING the citation for —
+NOT whether the passage is true.
+
+Pick exactly one scope:
+
+1. "full" — the passage asserts facts, findings, or statements that the cited
+   source is expected to prove. This is the DEFAULT. Attributions like
+   "X found…", "X show…", "as reported in…", statistics, dates, named results
+   tied to the citation are all "full".
+
+2. "methods" — the passage mainly describes the AUTHORS' OWN study: their
+   design, sample, power analysis, procedures, materials, or their own
+   results/conclusions. The citation backs only a method, instrument, or
+   recommendation the authors are following (e.g. "we computed power per the
+   guidelines of X"; "our incentive mechanism follows X").
+
+3. "concept" — the citation backs a definition, term, or theoretical concept
+   used in the passage (e.g. "credence goods (X)"), while the passage's
+   substance is the authors' own argument, extension, or description.
+
+4. "related" — the citation is a comparison / related-work / see-also pointer
+   (e.g. "unlike X, our study…", "see X for related studies"), and the
+   passage's substance is the authors' own work or their claims about the
+   present study.
+
+ATTRIBUTION TEST, decisive: if the passage says the cited work itself STATES,
+FINDS, SHOWS, REVEALS, REVIEWS, or ARGUES something — "a systematic review by
+X reveals…", "X found that…", "X show…", "according to X…" — then the
+citation IS claiming that content: answer "full", even when the rest of the
+passage is the authors' own argument. "concept" applies ONLY when the
+citation merely anchors a term or definition the authors go on to USE, with
+no further content attributed to the source.
+
+SAFETY RULE, overriding everything: choose a scoped class (2–4) ONLY when the
+passage clearly speaks in the authors' own voice about their own study or
+argument — first person ("we", "our", "this study", "the current study"),
+descriptions of the present paper's procedures or numbers — AND the citation
+plausibly covers only a fragment of it. If the passage attributes its content
+TO the cited work, or you are unsure, answer "full". A wrong scoped answer
+hides a genuinely unsupported claim from the reader; a wrong "full" merely
+leaves a red card red.
+
+scoped_assertion: for scopes 2–4, the one specific thing the citation IS
+expected to back, stated in one short sentence (quote or close paraphrase from
+the passage). Empty string for "full".
+
+EXAMPLES (follow these exactly):
+- "We estimated that we needed a sample size of 318 at 80 percent power,
+  following the recommendations of [[x2013]]." → scope "methods" (the authors'
+  own power analysis; the citation backs only the recommendations followed).
+- "Subjects in our study split $80 between a charity and themselves across two
+  rounds. Unlike [[y2011]], they never learned the outcome." → scope "related"
+  (the authors' own design; the citation is a comparison point).
+- "A systematic review of 187 studies [[z2017]] reveals that most definitions
+  share core components." → scope "full" (a finding is attributed to the
+  cited review — the source must prove it).
+- "Charities are credence goods [[w1973]], so donors rarely learn outcomes —
+  which is why our study varies feedback." → scope "concept" (the citation
+  anchors the term "credence goods"; the inference is the authors' own).
+
+Return STRICT JSON only:
+{"scope": "full" | "methods" | "concept" | "related",
+ "scoped_assertion": "<one sentence or empty>",
+ "reason": "<1-2 sentences>"}
+
+PASSAGE (citation marker(s): {KEYS}):
+{CLAIM}

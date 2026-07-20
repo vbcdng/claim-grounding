@@ -1,0 +1,2727 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 13 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section or a specific batch of data.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "Several of H\u00f8nneland\u2019s books have appeared in new editions and translations, including to Chinese and Russian.",
+   "markers": [
+    "geirhnneland"
+   ],
+   "paper_ids": [
+    "de2da5158ac9d3157492e268d5f528f8f1bb5e69"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "de2da5158ac9d3157492e268d5f528f8f1bb5e69",
+    "source_title": "geirhnneland",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Both books are written by FNI's Director, Geir H\u00f8nneland, who attended the book launch at Tongji University in Shanghai earlier this week.",
+    "page": 1,
+    "snippet": "Both books are written by FNI's Director,",
+    "reason": "The passage does not mention new editions or translations to Russian.",
+    "votes": "2-0",
+    "window": "Both books are written by FNI's Director, Geir H\u00f8nneland, who attended the book launch at Tongji University in Shanghai earlier this week. Photo: Iselin P. Stensdal, FNI Two FNI books on Arctic politics have been translated and are now available for the Chinese market. But it was picked up by the global academic publisher Palgrave Macmillan and was published in a revised edition for an international readership in 2014 under the title 'Arctic Politics, the Law of the Sea and Russian Identity'. The first book started its journey in Norwegian language in 2013, under the title 'Hvordan skal Putin ta Barentshavet tilbake?'"
+   },
+   "evidences": [
+    {
+     "paper_id": "de2da5158ac9d3157492e268d5f528f8f1bb5e69",
+     "source_title": "geirhnneland",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Both books are written by FNI's Director, Geir H\u00f8nneland, who attended the book launch at Tongji University in Shanghai earlier this week.",
+     "page": 1,
+     "snippet": "Both books are written by FNI's Director,",
+     "reason": "The passage does not mention new editions or translations to Russian.",
+     "votes": "2-0",
+     "window": "Both books are written by FNI's Director, Geir H\u00f8nneland, who attended the book launch at Tongji University in Shanghai earlier this week. Photo: Iselin P. Stensdal, FNI Two FNI books on Arctic politics have been translated and are now available for the Chinese market. But it was picked up by the global academic publisher Palgrave Macmillan and was published in a revised edition for an international readership in 2014 under the title 'Arctic Politics, the Law of the Sea and Russian Identity'. The first book started its journey in Norwegian language in 2013, under the title 'Hvordan skal Putin ta Barentshavet tilbake?'"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention new editions or translations to Russian.",
+   "component_check": {
+    "found": [
+     "Several of H\u00f8nneland\u2019s books have appeared in translations",
+     "translations include Chinese",
+     "translations include Russian"
+    ],
+    "missing": [
+     "Several of H\u00f8nneland\u2019s books have appeared in new editions"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Several of H\u00f8nneland\u2019s books have appeared in translations",
+      "paper_id": "de2da5158ac9d3157492e268d5f528f8f1bb5e69",
+      "source_title": "geirhnneland",
+      "sentence": "Photo: Iselin P. Stensdal, FNI Two FNI books on Arctic politics have been translated and are now available for the Chinese market.",
+      "page": 1
+     },
+     {
+      "component": "translations include Chinese",
+      "paper_id": "de2da5158ac9d3157492e268d5f528f8f1bb5e69",
+      "source_title": "geirhnneland",
+      "sentence": "Photo: Iselin P. Stensdal, FNI Two FNI books on Arctic politics have been translated and are now available for the Chinese market.",
+      "page": 1
+     },
+     {
+      "component": "translations include Russian",
+      "paper_id": "de2da5158ac9d3157492e268d5f528f8f1bb5e69",
+      "source_title": "geirhnneland",
+      "sentence": "\"I wrote the book to put the Russian reactions to the delimitation agreement in a cultural context,\" says H\u00f8nneland, \"but I never expected it to attract much interest outside our own backyard, so to speak.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Several of H\u00f8nneland\u2019s books have appeared in new editions and translations, including to Chinese and Russian.",
+    "reason": "The passage directly states facts about the cited author's books (new editions and translations) which the citation is expected to prove. This falls under the 'full' scope as it attributes specific information to the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that H\u00f8nneland's books have been translated into Russian",
+    "rewrite_suggestion": "Several of H\u00f8nneland\u2019s books have appeared in new editions and translations, including to Chinese.",
+    "proofs": [
+     "Two FNI books on Arctic politics have been translated and are now available for the Chinese market.",
+     "Both books are written by FNI's Director, Geir H\u00f8nneland, who attended the book launch at Tongji University in Shanghai earlier this week."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The source text confirms that two of H\u00f8nneland's books have been translated into Chinese and that one of them appeared in a revised English edition, but it contains no mention of any Russian translation. Since the claim includes a Russian translation as a supported component, and that component is entirely absent from the source, the author must either add a citation for that assertion or remove it from the claim."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Martin Newland was editor of the \"Daily Telegraph\" from 2003 to 2005, and he took with him many former \"Telegraph\" employees, most notably Colin Randall (former \"Telegraph\" executive news editor), Sue Ryan (former managing editor) and senior photographer Stephen Lock (who covered domestic and foreign news and the international fashion circuit during 20 years on \"The Daily Telegraph\").",
+   "markers": [
+    "thenationalabudhabi"
+   ],
+   "paper_ids": [
+    "dec4b832d3e76e6550ebe7222e680c53a07405dc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "dec4b832d3e76e6550ebe7222e680c53a07405dc",
+    "source_title": "thenationalabudhabi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director.",
+    "page": 1,
+    "snippet": "Former Daily Telegraph managing editor Sue Ryan,",
+    "reason": "The passage does not state that Martin Newland was editor of the 'Daily Telegraph' from 2003 to 2005, nor does it state that he took many former 'Telegraph' employees with him.",
+    "votes": "2-0",
+    "window": "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director. Photographer Stephen Lock, who covered domestic and foreign news and the international fashion circuit during 20 years on the Daily Telegraph, has arrived in Abu Dhabi as a senior photographer. They join executive editor Colin Randall, formerly the Daily Telegraph's chief reporter and Paris correspondent. Newland, the newspaper's editor in chief, said Yaqoob's fluency in Urdu and Punjabi and her deep knowledge of Muslim society would be \"invaluable\"."
+   },
+   "evidences": [
+    {
+     "paper_id": "dec4b832d3e76e6550ebe7222e680c53a07405dc",
+     "source_title": "thenationalabudhabi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director.",
+     "page": 1,
+     "snippet": "Former Daily Telegraph managing editor Sue Ryan,",
+     "reason": "The passage does not state that Martin Newland was editor of the 'Daily Telegraph' from 2003 to 2005, nor does it state that he took many former 'Telegraph' employees with him.",
+     "votes": "2-0",
+     "window": "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director. Photographer Stephen Lock, who covered domestic and foreign news and the international fashion circuit during 20 years on the Daily Telegraph, has arrived in Abu Dhabi as a senior photographer. They join executive editor Colin Randall, formerly the Daily Telegraph's chief reporter and Paris correspondent. Newland, the newspaper's editor in chief, said Yaqoob's fluency in Urdu and Punjabi and her deep knowledge of Muslim society would be \"invaluable\"."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Martin Newland was editor of the 'Daily Telegraph' from 2003 to 2005, nor does it state that he took many former 'Telegraph' employees with him.",
+   "component_check": {
+    "found": [
+     "He took many former \"Telegraph\" employees with him.",
+     "Sue Ryan was a former managing editor."
+    ],
+    "missing": [
+     "Martin Newland was editor of the \"Daily Telegraph\" from 2003 to 2005.",
+     "Colin Randall was a former \"Telegraph\" executive news editor."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He took many former \"Telegraph\" employees with him.",
+      "paper_id": "dec4b832d3e76e6550ebe7222e680c53a07405dc",
+      "source_title": "thenationalabudhabi",
+      "sentence": "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director.",
+      "page": 1
+     },
+     {
+      "component": "Sue Ryan was a former managing editor.",
+      "paper_id": "dec4b832d3e76e6550ebe7222e680c53a07405dc",
+      "source_title": "thenationalabudhabi",
+      "sentence": "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about Martin Newland's editorship and the employees he took with him, which are directly attributed to the cited source. The citation is expected to prove these specific details.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Newland's specific tenure from 2003 to 2005 is absent from the source; Colin Randall is described as 'formerly the Daily Telegraph's chief reporter and Paris correspondent', not as 'executive news editor'.",
+    "rewrite_suggestion": "Martin Newland, a former Daily Telegraph editor, recruited many former Telegraph employees, including Colin Randall (former chief reporter and Paris correspondent), Sue Ryan (former managing editor), and Stephen Lock (senior photographer who covered domestic and foreign news and the international fashion circuit for 20 years).",
+    "proofs": [
+     "Newland, a former Daily Telegraph editor.",
+     "Former Daily Telegraph managing editor Sue Ryan, a consultant on the new paper, has appointed Julia Robson, previously the Telegraph's deputy fashion editor, as London-based fashion director.",
+     "Photographer Stephen Lock, who covered domestic and foreign news and the international fashion circuit during 20 years on the Daily Telegraph, has arrived in Abu Dhabi as a senior photographer.",
+     "They join executive editor Colin Randall, formerly the Daily Telegraph's chief reporter and Paris correspondent."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "They join executive editor Colin Randall, formerly the Daily Telegraph's chief reporter and Paris correspondent.",
+     "why": "The source describes Randall as chief reporter and Paris correspondent, not as 'executive news editor' as stated in the claim."
+    },
+    "why": "The claim includes unsupported details (Newland's specific years as editor, Randall's title as executive news editor) not found in the source. Additionally, the shown sentence only mentions Sue Ryan and does not cover the other components. The source does contain evidence for most of the claim except those missing subclaims, so the author must either add citations or rewrite to match the source."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "Land has a son Kai (b. 2001) with former wife Sharon Leal.",
+   "markers": [
+    "daniaramirez"
+   ],
+   "paper_ids": [
+    "b645953087c34e962fe1271be4f6b8ba40fd41f2"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "b645953087c34e962fe1271be4f6b8ba40fd41f2",
+    "source_title": "daniaramirez",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "5.11.04 - Michael Rapaport and wife Nichole are going their separate ways after four years of marriage.",
+    "page": 1,
+    "snippet": "5.11.04 - Michael Rapaport and wife Nichole",
+    "reason": "The passage states that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th, and that they have two children. This supports the claim that Land has a son Kai with former wife Sharon Leal.",
+    "votes": "2-0",
+    "window": "5.11.04 - Michael Rapaport and wife Nichole are going their separate ways after four years of marriage. 10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th. They have two children."
+   },
+   "evidences": [
+    {
+     "paper_id": "b645953087c34e962fe1271be4f6b8ba40fd41f2",
+     "source_title": "daniaramirez",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "5.11.04 - Michael Rapaport and wife Nichole are going their separate ways after four years of marriage.",
+     "page": 1,
+     "snippet": "5.11.04 - Michael Rapaport and wife Nichole",
+     "reason": "The passage states that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th, and that they have two children. This supports the claim that Land has a son Kai with former wife Sharon Leal.",
+     "votes": "2-0",
+     "window": "5.11.04 - Michael Rapaport and wife Nichole are going their separate ways after four years of marriage. 10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th. They have two children."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th, and that they have two children. This supports the claim that Land has a son Kai with former wife Sharon Leal.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Land has a son Kai",
+      "paper_id": "b645953087c34e962fe1271be4f6b8ba40fd41f2",
+      "source_title": "daniaramirez",
+      "sentence": "10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th.",
+      "page": 1,
+      "snippet": "10.30.10 - The November 6th issue of"
+     },
+     {
+      "component": "with former wife Sharon Leal",
+      "paper_id": "b645953087c34e962fe1271be4f6b8ba40fd41f2",
+      "source_title": "daniaramirez",
+      "sentence": "10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th.",
+      "page": 1,
+      "snippet": "10.30.10 - The November 6th issue of"
+     }
+    ],
+    "uncovered": [
+     "Kai b. 2001"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b645953087c34e962fe1271be4f6b8ba40fd41f2",
+      "source_title": "daniaramirez",
+      "text": "10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The birth year (2001) and the relationship status 'former wife' are not supported; the source indicates the child was born in 2010 and that Leal was Land's fianc\u00e9e, not his former wife.",
+    "rewrite_suggestion": "Land has a son Kai (b. 2010) with then-fianc\u00e9e Sharon Leal.",
+    "proofs": [
+     "10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "10.30.10 - The November 6th issue of Soap Opera Digest reports that Sharon Leal and fianc\u00e9 Bev Land welcomed their first child, Kai Miles Land, into the world on September 13th.",
+     "why": "The source says 'fianc\u00e9' not 'former wife', and the entry date '10.30.10' indicates the birth occurred in 2010, contradicting the claim's birth year of 2001."
+    },
+    "why": "The shown sentence proves that Land and Leal have a son named Kai, but it does not support the claimed birth year of 2001 (the source implies 2010) nor the relationship status 'former wife' (the source says 'fianc\u00e9'). Both missing components are not provable from the source and are contradicted by it, so the author must add a citation for those subclaims or rewrite the claim."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "He was bullied in school for being short.",
+   "markers": [
+    "andrewnikou"
+   ],
+   "paper_ids": [
+    "b1773315efced0b8c238713349ffc90b0a2951f2"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8837,
+   "evidence": {
+    "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+    "source_title": "andrewnikou",
+    "supported": true,
+    "sentence": "The family didn't have a lot of money, and Nikou was the target of harsh bullying in elementary and middle school.",
+    "page": 1,
+    "snippet": "The family didn't have a lot of",
+    "cosine": 0.8837,
+    "reason": "The passage directly states that Nikou was the target of harsh bullying in elementary and middle school and that he was shorter than most of the guys, which aligns with the claim.",
+    "window": "Things weren't easy. The family didn't have a lot of money, and Nikou was the target of harsh bullying in elementary and middle school. \"I was shorter than most of the guys,\" Nikou told Entrepreneur, \"And that bullying had a traumatic effect on me.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+     "source_title": "andrewnikou",
+     "supported": true,
+     "sentence": "The family didn't have a lot of money, and Nikou was the target of harsh bullying in elementary and middle school.",
+     "page": 1,
+     "snippet": "The family didn't have a lot of",
+     "cosine": 0.8837,
+     "reason": "The passage directly states that Nikou was the target of harsh bullying in elementary and middle school and that he was shorter than most of the guys, which aligns with the claim.",
+     "window": "Things weren't easy. The family didn't have a lot of money, and Nikou was the target of harsh bullying in elementary and middle school. \"I was shorter than most of the guys,\" Nikou told Entrepreneur, \"And that bullying had a traumatic effect on me.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that Nikou was the target of harsh bullying in elementary and middle school and that he was shorter than most of the guys, which aligns with the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He was bullied in school for being short.",
+      "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+      "source_title": "andrewnikou",
+      "sentence": "\"I was shorter than most of the guys,\" Nikou told Entrepreneur, \"And that bullying had a traumatic effect on me.\"",
+      "page": 1,
+      "snippet": "\"I was shorter than most of the"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+      "source_title": "andrewnikou",
+      "text": "\"I was shorter than most of the guys,\" Nikou told Entrepreneur, \"And that bullying had a traumatic effect on me.\"",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t5",
+   "text": "The boys held the first concert of the tour in Seoul on the 8th and 9th in front of 25,000 fans.",
+   "markers": [
+    "shineeworldiii"
+   ],
+   "paper_ids": [
+    "6e64d397adcb3294bf38d3d45dfd75c71d289985"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "6e64d397adcb3294bf38d3d45dfd75c71d289985",
+    "source_title": "shineeworldiii",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "At the concerts, the members performed in front of a combined audience of approximately 20,000 local and international fans.",
+    "page": 1,
+    "snippet": "At the concerts, the members performed in",
+    "reason": "The passage states the concerts were in front of approximately 20,000 fans, not 25,000.",
+    "votes": "2-0",
+    "window": "At the concerts, the members performed in front of a combined audience of approximately 20,000 local and international fans. During the final Seoul show on Sunday the members of SHINee electrified the group's largely teenaged female fans with 29 songs and more than two hours of onstage choreography and playful antics. The idol stars kicked off this leg of their third world tour with two live concerts in Olympic Gymnastics Stadium over the weekend."
+   },
+   "evidences": [
+    {
+     "paper_id": "6e64d397adcb3294bf38d3d45dfd75c71d289985",
+     "source_title": "shineeworldiii",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "At the concerts, the members performed in front of a combined audience of approximately 20,000 local and international fans.",
+     "page": 1,
+     "snippet": "At the concerts, the members performed in",
+     "reason": "The passage states the concerts were in front of approximately 20,000 fans, not 25,000.",
+     "votes": "2-0",
+     "window": "At the concerts, the members performed in front of a combined audience of approximately 20,000 local and international fans. During the final Seoul show on Sunday the members of SHINee electrified the group's largely teenaged female fans with 29 songs and more than two hours of onstage choreography and playful antics. The idol stars kicked off this leg of their third world tour with two live concerts in Olympic Gymnastics Stadium over the weekend."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states the concerts were in front of approximately 20,000 fans, not 25,000.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The boys held the first concert of the tour in Seoul on the 8th and 9th in front of 25,000 fans.",
+    "reason": "The passage asserts specific facts (date, location, attendance) that the citation is expected to prove. There is no indication that the citation is only for methods, a concept, or a related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific dates (March 8 and 9) and the fan count of 25,000 are not stated in the source; the source says 'over the weekend' and 'approximately 20,000'.",
+    "rewrite_suggestion": "The boys held the first concerts of the tour in Seoul over the weekend in front of approximately 20,000 fans.",
+    "proofs": [
+     "The idol stars kicked off this leg of their third world tour with two live concerts in Olympic Gymnastics Stadium over the weekend.",
+     "At the concerts, the members performed in front of a combined audience of approximately 20,000 local and international fans."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "At the concerts, the members performed in front of a combined audience of approximately 20,000 local and international fans.",
+     "why": "The claim states 25,000 fans, but the source says approximately 20,000, which contradicts the claim's figure."
+    },
+    "why": "The claim includes specific dates (8th and 9th) and a fan count (25,000) that are not supported by the source text. The source mentions 'over the weekend' and 'approximately 20,000', so the author must either add a citation for those details or rewrite the claim to match the source. Additionally, the source directly contradicts the fan count."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "He was wounded in the face by rifle fire and was left in critical condition, but ultimately survived his injuries.",
+   "markers": [
+    "philippelanon"
+   ],
+   "paper_ids": [
+    "bcf04e96d0fcb8f245192492ee093cc113b834c1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bcf04e96d0fcb8f245192492ee093cc113b834c1",
+    "source_title": "philippelanon",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "He is now in intensive care at a Paris hospital, where he is listed in critical but stable condition.",
+    "page": 1,
+    "snippet": "He is now in intensive care at",
+    "reason": "the passage does not state he was wounded in the face by rifle fire or that he ultimately survived his injuries",
+    "votes": "2-0",
+    "window": "He is now in intensive care at a Paris hospital, where he is listed in critical but stable condition. ### Main menu Skip to primary content Skip to secondary content ### Post navigation \u2190 Previous Next # Philippe Lan\u00e7on, PLAS Visting Fellow for AY15, Injured in the Paris Terrorist Attack Posted on January 8, 2015 by Eneida Toner Philippe Lan\u00e7on, a journalist specializing in Cuba and Latin America who is on staff at Lib\u00e9ration, was gravely injured yesterday during the terrorist attack at Charlie Hebdo in Paris."
+   },
+   "evidences": [
+    {
+     "paper_id": "bcf04e96d0fcb8f245192492ee093cc113b834c1",
+     "source_title": "philippelanon",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "He is now in intensive care at a Paris hospital, where he is listed in critical but stable condition.",
+     "page": 1,
+     "snippet": "He is now in intensive care at",
+     "reason": "the passage does not state he was wounded in the face by rifle fire or that he ultimately survived his injuries",
+     "votes": "2-0",
+     "window": "He is now in intensive care at a Paris hospital, where he is listed in critical but stable condition. ### Main menu Skip to primary content Skip to secondary content ### Post navigation \u2190 Previous Next # Philippe Lan\u00e7on, PLAS Visting Fellow for AY15, Injured in the Paris Terrorist Attack Posted on January 8, 2015 by Eneida Toner Philippe Lan\u00e7on, a journalist specializing in Cuba and Latin America who is on staff at Lib\u00e9ration, was gravely injured yesterday during the terrorist attack at Charlie Hebdo in Paris."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state he was wounded in the face by rifle fire or that he ultimately survived his injuries",
+   "component_check": {
+    "found": [
+     "He was left in critical condition"
+    ],
+    "missing": [
+     "He was wounded in the face by rifle fire",
+     "He ultimately survived his injuries"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "He was left in critical condition",
+      "paper_id": "bcf04e96d0fcb8f245192492ee093cc113b834c1",
+      "source_title": "philippelanon",
+      "sentence": "He is now in intensive care at a Paris hospital, where he is listed in critical but stable condition.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "He was wounded in the face by rifle fire and was left in critical condition, but ultimately survived his injuries.",
+    "reason": "The passage directly states facts about an individual's injuries and survival, which are directly attributable to the cited source. There is no indication that the citation is for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific details that he was wounded in the face by rifle fire and that he ultimately survived (i.e., fully recovered from his injuries) are not supported by the source.",
+    "rewrite_suggestion": "He was gravely injured in the Paris terrorist attack and left in critical condition at a hospital.",
+    "proofs": [
+     "He is now in intensive care at a Paris hospital, where he is listed in critical but stable condition."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The source states he was gravely injured and in critical but stable condition, but it does not mention a facial wound, specify the weapon as a rifle, or confirm that he ultimately survived (the article was written while he was still in intensive care). The shown sentence only partially supports the 'critical condition' component; the other components are absent from the source entirely."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "In 1971, it was transferred to the Smithsonian Institution, and was displayed at the National Air and Space Museum (NASM) in Washington, DC.",
+   "markers": [
+    "apollo11"
+   ],
+   "paper_ids": [
+    "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+    "source_title": "apollo11",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "It was physically transferred to the Smithsonian in 1971 following a NASA-sponsored tour of American cities.",
+    "page": 1,
+    "snippet": "It was physically transferred to the Smithsonian",
+    "reason": "",
+    "votes": "2-0",
+    "window": "It was physically transferred to the Smithsonian in 1971 following a NASA-sponsored tour of American cities. Michael Collins, CMP Excerpt from After Sputnik: 50 Years of the Space Age #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display at the National Air and Space Museum in Washington, DC. The Apollo CM Columbia has been designated a \"Milestone of Flight\" by the Museum. #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display in the Boeing Milestones of Flight Hall at the National Air and Space Museum in Washington, DC."
+   },
+   "evidences": [
+    {
+     "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+     "source_title": "apollo11",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "It was physically transferred to the Smithsonian in 1971 following a NASA-sponsored tour of American cities.",
+     "page": 1,
+     "snippet": "It was physically transferred to the Smithsonian",
+     "reason": "",
+     "votes": "2-0",
+     "window": "It was physically transferred to the Smithsonian in 1971 following a NASA-sponsored tour of American cities. Michael Collins, CMP Excerpt from After Sputnik: 50 Years of the Space Age #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display at the National Air and Space Museum in Washington, DC. The Apollo CM Columbia has been designated a \"Milestone of Flight\" by the Museum. #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display in the Boeing Milestones of Flight Hall at the National Air and Space Museum in Washington, DC."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "transferred to the Smithsonian Institution in 1971",
+      "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+      "source_title": "apollo11",
+      "sentence": "It was physically transferred to the Smithsonian in 1971 following a NASA-sponsored tour of American cities.",
+      "page": 1,
+      "snippet": "It was physically transferred to the Smithsonian"
+     },
+     {
+      "component": "displayed at the National Air and Space Museum (NASM) in Washington, DC",
+      "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+      "source_title": "apollo11",
+      "sentence": "Michael Collins, CMP Excerpt from After Sputnik: 50 Years of the Space Age #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display at the National Air and Space Museum in Washington, DC.",
+      "page": 1,
+      "snippet": "Michael Collins, CMP Excerpt from After Sputnik:"
+     },
+     {
+      "component": "displayed at the National Air and Space Museum (NASM) in Washington, DC",
+      "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+      "source_title": "apollo11",
+      "sentence": "#### Apollo 11 Command Module Columbia The Apollo 11 command module Columbia is displayed at the National Air and Space Museum in Washington, DC.",
+      "page": 1,
+      "snippet": "#### Apollo 11 Command Module Columbia The"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+      "source_title": "apollo11",
+      "text": "Michael Collins, CMP Excerpt from After Sputnik: 50 Years of the Space Age #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display at the National Air and Space Museum in Washington, DC. #### Apollo 11 Command Module Columbia The Apollo 11 Command Module Columbia on display in the Boeing Milestones of Flight Hall at the National Air and Space Museum in Washington, DC. #### Apollo 11 Launch On 16 July 1969, American astronauts Neil Armstrong, Edwin \"Buzz\" Aldrin, and Michael Collins lifted off from Cape Canaveral, Fla., in the mammoth-sized Saturn V rocket on their way to the moon during the Apollo 11 mission. Cmdr. Armstrong and pilot Aldrin landed the spacecraft, Eagle, on the moon's Sea of Tranquillity. Apollo 11 booster stages were tested at Stennis Space Center. #### Apollo 11 Command Module Columbia The Apollo 11 command module Columbia is displayed at the National Air and Space Museum in Washington, DC. [\u2026] It was physically transferred to the Smithsonian in 1971 following a NASA-sponsored tour of American cities.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t8",
+   "text": "Lower activity of CYP1A2 in South Asians appears to be due to cooking these vegetables in curries using ingredients such as cumin and turmeric, ingredients known to inhibit the enzyme.",
+   "markers": [
+    "cyp1a2"
+   ],
+   "paper_ids": [
+    "25de345d81f56609f151cccd1c3505b95cec13ed"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9374,
+   "evidence": {
+    "paper_id": "25de345d81f56609f151cccd1c3505b95cec13ed",
+    "source_title": "cyp1a2",
+    "supported": true,
+    "sentence": "The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained.",
+    "page": 1,
+    "snippet": "The lower levels of CYP1A2 in South",
+    "cosine": 0.9374,
+    "reason": "The passage directly states that lower levels of CYP1A2 in South Asians appear to be due to cooking vegetables in curries with ingredients like cumin and turmeric, which are known enzyme inhibitors.",
+    "window": "\"Vegetables such as cabbages, cauliflower and broccoli are known to increase levels of CYP1A2, as was demonstrated in this study and previous studies in people of European background. The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained. Mr Perera has just been declared the NSW winner of the AusBiotech/GlaxoSmithKline Student Excellence Awards as a result of his research."
+   },
+   "evidences": [
+    {
+     "paper_id": "25de345d81f56609f151cccd1c3505b95cec13ed",
+     "source_title": "cyp1a2",
+     "supported": true,
+     "sentence": "The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained.",
+     "page": 1,
+     "snippet": "The lower levels of CYP1A2 in South",
+     "cosine": 0.9374,
+     "reason": "The passage directly states that lower levels of CYP1A2 in South Asians appear to be due to cooking vegetables in curries with ingredients like cumin and turmeric, which are known enzyme inhibitors.",
+     "window": "\"Vegetables such as cabbages, cauliflower and broccoli are known to increase levels of CYP1A2, as was demonstrated in this study and previous studies in people of European background. The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained. Mr Perera has just been declared the NSW winner of the AusBiotech/GlaxoSmithKline Student Excellence Awards as a result of his research."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that lower levels of CYP1A2 in South Asians appear to be due to cooking vegetables in curries with ingredients like cumin and turmeric, which are known enzyme inhibitors.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Lower activity of CYP1A2 in South Asians appears to be due to cooking these vegetables in curries using ingredients such as cumin and turmeric",
+      "paper_id": "25de345d81f56609f151cccd1c3505b95cec13ed",
+      "source_title": "cyp1a2",
+      "sentence": "The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained.",
+      "page": 1,
+      "snippet": "The lower levels of CYP1A2 in South"
+     },
+     {
+      "component": "cumin and turmeric are ingredients known to inhibit the enzyme",
+      "paper_id": "25de345d81f56609f151cccd1c3505b95cec13ed",
+      "source_title": "cyp1a2",
+      "sentence": "The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained.",
+      "page": 1,
+      "snippet": "The lower levels of CYP1A2 in South"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "25de345d81f56609f151cccd1c3505b95cec13ed",
+      "source_title": "cyp1a2",
+      "text": "The lower levels of CYP1A2 in South Asians, however, appears to be due to the common practice of cooking these vegetables in curries using ingredients such as cumin and tumeric, ingredients known to inhibit the enzyme, overriding the effect of the vegetables,\" Mr Perera explained.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t9",
+   "text": "It is currently on display at Clear Lake High School in Houston, which was attended by Onizuka's children.",
+   "markers": [
+    "spaceshuttlechallengerdi"
+   ],
+   "paper_ids": [
+    "d555edff361aaf6c56f505773df7535f4226f054"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "d555edff361aaf6c56f505773df7535f4226f054",
+    "source_title": "spaceshuttlechallengerdi",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In a November ceremony, she dedicated it back to Clear Lake High School, where it once again rests in a display case -- this time all its own -- and is passed by thousands of students per day, including Ellison's grandchildren.",
+    "page": 1,
+    "snippet": "In a November ceremony, she dedicated it",
+    "reason": "the passage does not state that Onizuka's children attended Clear Lake High School",
+    "votes": "2-0",
+    "window": "In a November ceremony, she dedicated it back to Clear Lake High School, where it once again rests in a display case -- this time all its own -- and is passed by thousands of students per day, including Ellison's grandchildren. She cried as she presented the ball back to Clear Lake High School, displaying it proudly during a ceremony that was supposed to have been led by her father. There were updates to the building, new technology was on display and children replaced their parents as the student body -- but it was still the place where the astronauts' kids went to school. NASA Clear Lake High School is perhaps the only place in the country where it's not all that strange to be the child of an astronaut. Its campus is just 4 miles from Johnson Space Center in Houston, and many of the Falcons have at least one parent whose paycheck comes from NASA. Mike Bollacke Clear Lake High School in 2016 wasn't all that different from what it was when Janelle walked its halls in 1986. Janelle's sophomore year at Clear Lake wound to a close."
+   },
+   "evidences": [
+    {
+     "paper_id": "d555edff361aaf6c56f505773df7535f4226f054",
+     "source_title": "spaceshuttlechallengerdi",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In a November ceremony, she dedicated it back to Clear Lake High School, where it once again rests in a display case -- this time all its own -- and is passed by thousands of students per day, including Ellison's grandchildren.",
+     "page": 1,
+     "snippet": "In a November ceremony, she dedicated it",
+     "reason": "the passage does not state that Onizuka's children attended Clear Lake High School",
+     "votes": "2-0",
+     "window": "In a November ceremony, she dedicated it back to Clear Lake High School, where it once again rests in a display case -- this time all its own -- and is passed by thousands of students per day, including Ellison's grandchildren. She cried as she presented the ball back to Clear Lake High School, displaying it proudly during a ceremony that was supposed to have been led by her father. There were updates to the building, new technology was on display and children replaced their parents as the student body -- but it was still the place where the astronauts' kids went to school. NASA Clear Lake High School is perhaps the only place in the country where it's not all that strange to be the child of an astronaut. Its campus is just 4 miles from Johnson Space Center in Houston, and many of the Falcons have at least one parent whose paycheck comes from NASA. Mike Bollacke Clear Lake High School in 2016 wasn't all that different from what it was when Janelle walked its halls in 1986. Janelle's sophomore year at Clear Lake wound to a close."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that Onizuka's children attended Clear Lake High School",
+   "component_check": {
+    "found": [
+     "It is currently on display at Clear Lake High School in Houston."
+    ],
+    "missing": [
+     "Clear Lake High School in Houston was attended by Onizuka's children."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "It is currently on display at Clear Lake High School in Houston.",
+      "paper_id": "d555edff361aaf6c56f505773df7535f4226f054",
+      "source_title": "spaceshuttlechallengerdi",
+      "sentence": "In a November ceremony, she dedicated it back to Clear Lake High School, where it once again rests in a display case -- this time all its own -- and is passed by thousands of students per day, including Ellison's grandchildren.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Space Shuttle Challenger is currently on display at Clear Lake High School in Houston.",
+    "reason": "The passage asserts a factual statement about the location of the Space Shuttle Challenger, which is directly attributable to the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "In a November ceremony, she dedicated it back to Clear Lake High School, where it once again rests in a display case -- this time all its own -- and is passed by thousands of students per day, including Ellison's grandchildren.",
+     "In January 1986, 'Rocky IV' was in theaters, gas was 93 cents per gallon and Janelle Onizuka was sitting through her sophomore classes at Clear Lake"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves the ball is on display at Clear Lake High School, but it does not show that Onizuka's children attended the school. A separate sentence in the source explicitly states that Janelle Onizuka was a sophomore at Clear Lake, which would prove that component. Since the proof exists in the source but was not shown to the reader, the tool's evidence is insufficient.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t10",
+   "text": "In 1641, Pym was elected Member of Parliament for Bere Alston in the Long Parliament after the previous member was expelled.",
+   "markers": [
+    "sircharlespym1stbaronet"
+   ],
+   "paper_ids": [
+    "406863909fe16b4854dbef49ce71fbc1166267d7"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "406863909fe16b4854dbef49ce71fbc1166267d7",
+    "source_title": "sircharlespym1stbaronet",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Henning, 1983Available from Boydell and Brewer ## Biography Detail Family & Education Offices Held End Notes ## Related Resources 1660-1690 Members 1660-1690 Constituencies 1660-1690 Parliaments 1660-1690 Surveys ### Constituency ### Dates BERE ALSTON19 Dec. 1641MINEHEAD1660 ### Family and Education b. c.1615, 2nd s. of John Pym\u2020 of Brymore and Holborn, Mdx.",
+    "page": 1,
+    "snippet": "Henning, 1983Available from Boydell and Brewer ##",
+    "reason": "The passage does not state that Pym was elected Member of Parliament for Bere Alston in 1641, nor does it mention the expulsion of a previous member.",
+    "votes": "2-0",
+    "window": "Henning, 1983Available from Boydell and Brewer ## Biography Detail Family & Education Offices Held End Notes ## Related Resources 1660-1690 Members 1660-1690 Constituencies 1660-1690 Parliaments 1660-1690 Surveys ### Constituency ### Dates BERE ALSTON19 Dec. 1641MINEHEAD1660 ### Family and Education b. c.1615, 2nd s. of John Pym\u2020 of Brymore and Holborn, Mdx."
+   },
+   "evidences": [
+    {
+     "paper_id": "406863909fe16b4854dbef49ce71fbc1166267d7",
+     "source_title": "sircharlespym1stbaronet",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Henning, 1983Available from Boydell and Brewer ## Biography Detail Family & Education Offices Held End Notes ## Related Resources 1660-1690 Members 1660-1690 Constituencies 1660-1690 Parliaments 1660-1690 Surveys ### Constituency ### Dates BERE ALSTON19 Dec. 1641MINEHEAD1660 ### Family and Education b. c.1615, 2nd s. of John Pym\u2020 of Brymore and Holborn, Mdx.",
+     "page": 1,
+     "snippet": "Henning, 1983Available from Boydell and Brewer ##",
+     "reason": "The passage does not state that Pym was elected Member of Parliament for Bere Alston in 1641, nor does it mention the expulsion of a previous member.",
+     "votes": "2-0",
+     "window": "Henning, 1983Available from Boydell and Brewer ## Biography Detail Family & Education Offices Held End Notes ## Related Resources 1660-1690 Members 1660-1690 Constituencies 1660-1690 Parliaments 1660-1690 Surveys ### Constituency ### Dates BERE ALSTON19 Dec. 1641MINEHEAD1660 ### Family and Education b. c.1615, 2nd s. of John Pym\u2020 of Brymore and Holborn, Mdx."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Pym was elected Member of Parliament for Bere Alston in 1641, nor does it mention the expulsion of a previous member.",
+   "component_check": {
+    "found": [
+     "In 1641, Pym was elected Member of Parliament for Bere Alston."
+    ],
+    "missing": [
+     "This occurred in the Long Parliament.",
+     "The previous member was expelled."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 1641, Pym was elected Member of Parliament for Bere Alston.",
+      "paper_id": "406863909fe16b4854dbef49ce71fbc1166267d7",
+      "source_title": "sircharlespym1stbaronet",
+      "sentence": "Henning, 1983Available from Boydell and Brewer ## Biography Detail Family & Education Offices Held End Notes ## Related Resources 1660-1690 Members 1660-1690 Constituencies 1660-1690 Parliaments 1660-1690 Surveys ### Constituency ### Dates BERE ALSTON19 Dec. 1641MINEHEAD1660 ### Family and Education b. c.1615, 2nd s. of John Pym\u2020 of Brymore and Holborn, Mdx.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 1641, Pym was elected Member of Parliament for Bere Alston in the Long Parliament after the previous member was expelled.",
+    "reason": "The passage asserts a specific historical fact (election date and constituency) that the cited source is expected to prove. This falls under the default 'full' scope as it's a direct statement of information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "after the previous member was expelled (not mentioned in source); also missing explicit statement that he was 'elected' and that the parliament was the 'Long Parliament'",
+    "rewrite_suggestion": "Charles Pym was the MP for Bere Alston from 19 December 1641.",
+    "proofs": [
+     "PYM, Charles (c.1615-71), of Broad Sanctuary, Westminster and Brymore, Som.",
+     "### Constituency ### Dates BERE ALSTON19 Dec. 1641MINEHEAD1660"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source lists Charles Pym as the member for Bere Alston from 19 December 1641, but it does not state that he was 'elected', that it was the Long Parliament, or that he replaced an expelled member. The component about the previous member's expulsion is entirely absent, and the terms 'elected' and 'Long Parliament' are not explicitly in the source. Therefore, the claim as written is not fully supported by the cited source; the author must either add a citation for the missing details or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Surah Ya Sin (the 'Heart of the Quran') is inscribed across the top of the tile work and was commissioned in the 16th century by Suleiman the Magnificent.",
+   "markers": [
+    "domeoftherock"
+   ],
+   "paper_ids": [
+    "fcc37693adc68b1bb1efcc61c23a408c27bc84e4"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+    "source_title": "domeoftherock",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent.",
+    "page": 1,
+    "snippet": "Interior of the Dome of the Rock",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent. With the incomparable skills of Persian master ceramicists, 40,000 tiles were fired and put into place, crowned by the inscription of Surah Yasin, the 36th chapter and regarded as the heart of the Quran."
+   },
+   "evidences": [
+    {
+     "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+     "source_title": "domeoftherock",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent.",
+     "page": 1,
+     "snippet": "Interior of the Dome of the Rock",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent. With the incomparable skills of Persian master ceramicists, 40,000 tiles were fired and put into place, crowned by the inscription of Surah Yasin, the 36th chapter and regarded as the heart of the Quran."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Surah Ya Sin is inscribed across the top of the tile work",
+      "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+      "source_title": "domeoftherock",
+      "sentence": "With the incomparable skills of Persian master ceramicists, 40,000 tiles were fired and put into place, crowned by the inscription of Surah Yasin, the 36th chapter and regarded as the heart of the Quran.",
+      "page": 1,
+      "snippet": "With the incomparable skills of Persian master"
+     },
+     {
+      "component": "Surah Ya Sin is the 'Heart of the Quran'",
+      "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+      "source_title": "domeoftherock",
+      "sentence": "With the incomparable skills of Persian master ceramicists, 40,000 tiles were fired and put into place, crowned by the inscription of Surah Yasin, the 36th chapter and regarded as the heart of the Quran.",
+      "page": 1,
+      "snippet": "With the incomparable skills of Persian master"
+     },
+     {
+      "component": "commissioned in the 16th century",
+      "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+      "source_title": "domeoftherock",
+      "sentence": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent.",
+      "page": 1,
+      "snippet": "Interior of the Dome of the Rock"
+     },
+     {
+      "component": "commissioned by Suleiman the Magnificent",
+      "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+      "source_title": "domeoftherock",
+      "sentence": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent.",
+      "page": 1,
+      "snippet": "Interior of the Dome of the Rock"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+      "source_title": "domeoftherock",
+      "text": "Interior of the Dome of the Rock \u2013 Photo:Y.Isap The beautiful external tile work which can be seen today was commissioned by Sulayman II Qanuni (the Lawgiver), known throughout Europe as Sulayman the Magnificent. With the incomparable skills of Persian master ceramicists, 40,000 tiles were fired and put into place, crowned by the inscription of Surah Yasin, the 36th chapter and regarded as the heart of the Quran.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t12",
+   "text": "In Game Three, Lehner stopped 25 of 26 shots helping the Islanders win 4\u20131.",
+   "markers": [
+    "2019stanleycupplayoffs"
+   ],
+   "paper_ids": [
+    "d33c70a84710e879734238cd1b73217844eb179c"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9599,
+   "evidence": {
+    "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+    "source_title": "2019stanleycupplayoffs",
+    "supported": true,
+    "sentence": "# Islanders shut down Penguins in Game 3, one win from sweep",
+    "page": 1,
+    "snippet": "# Islanders shut down Penguins in Game",
+    "cosine": 0.9599,
+    "reason": "The passage states Lehner made 25 saves and the Islanders won Game 3, which directly supports the claim.",
+    "window": "game recap # Islanders shut down Penguins in Game 3, one win from sweep ## Lehner makes 25 saves; Eberle scores for third consecutive game"
+   },
+   "evidences": [
+    {
+     "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+     "source_title": "2019stanleycupplayoffs",
+     "supported": true,
+     "sentence": "# Islanders shut down Penguins in Game 3, one win from sweep",
+     "page": 1,
+     "snippet": "# Islanders shut down Penguins in Game",
+     "cosine": 0.9599,
+     "reason": "The passage states Lehner made 25 saves and the Islanders won Game 3, which directly supports the claim.",
+     "window": "game recap # Islanders shut down Penguins in Game 3, one win from sweep ## Lehner makes 25 saves; Eberle scores for third consecutive game"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states Lehner made 25 saves and the Islanders won Game 3, which directly supports the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Game Three",
+      "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+      "source_title": "2019stanleycupplayoffs",
+      "sentence": "The New York Islanders moved within one victory of eliminating the Pittsburgh Penguins from the Stanley Cup Playoffs with a 4-1 victory in Game 3 of the Eastern Conference First Round at PPG Paints Arena on Sunday.",
+      "page": 1,
+      "snippet": "The New York Islanders moved within one"
+     },
+     {
+      "component": "Lehner stopped 25 of 26 shots",
+      "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+      "source_title": "2019stanleycupplayoffs",
+      "sentence": "Robin Lehner made 25 saves for New York, which leads the best-of-7 series 3-0 and can complete its first series sweep since defeating the Edmonton Oilers in the 1983 Stanley Cup Final by winning Game 4 here on Tuesday (7:30 p.m.",
+      "page": 1,
+      "snippet": "Robin Lehner made 25 saves for New"
+     },
+     {
+      "component": "Islanders win 4-1",
+      "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+      "source_title": "2019stanleycupplayoffs",
+      "sentence": "The New York Islanders moved within one victory of eliminating the Pittsburgh Penguins from the Stanley Cup Playoffs with a 4-1 victory in Game 3 of the Eastern Conference First Round at PPG Paints Arena on Sunday.",
+      "page": 1,
+      "snippet": "The New York Islanders moved within one"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+      "source_title": "2019stanleycupplayoffs",
+      "text": "The New York Islanders moved within one victory of eliminating the Pittsburgh Penguins from the Stanley Cup Playoffs with a 4-1 victory in Game 3 of the Eastern Conference First Round at PPG Paints Arena on Sunday. Robin Lehner made 25 saves for New York, which leads the best-of-7 series 3-0 and can complete its first series sweep since defeating the Edmonton Oilers in the 1983 Stanley Cup Final by winning Game 4 here on Tuesday (7:30 p.m.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t13",
+   "text": "Jabba the Hutt's musical theme throughout the film, composed by John Williams, is played on a tuba.",
+   "markers": [
+    "jabbathehutt"
+   ],
+   "paper_ids": [
+    "7faf9fccfee41f1e3d08b47418fcf35f3222d070"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "7faf9fccfee41f1e3d08b47418fcf35f3222d070",
+    "source_title": "jabbathehutt",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Among the new thematic ideas are Jabba the Hutt's surprisingly jovial tuba piece (playing along the politically incorrect lines of belching tubas representing fatness), an equally cute and percussively creative theme for the Ewoks, an identity for Luke and Leia's changing familial understanding, and finally a demonic male-choral idea for the Emperor.",
+    "page": 1,
+    "snippet": "Among the new thematic ideas are Jabba",
+    "reason": "The passage does not state that John Williams composed Jabba the Hutt's musical theme.",
+    "votes": "2-0",
+    "window": "Among the new thematic ideas are Jabba the Hutt's surprisingly jovial tuba piece (playing along the politically incorrect lines of belching tubas representing fatness), an equally cute and percussively creative theme for the Ewoks, an identity for Luke and Leia's changing familial understanding, and finally a demonic male-choral idea for the Emperor. Expand >>Faleel - September 11, 2012, at 4:37 p.m. 3 comments (2703 views)Newest: July 7, 2015, at 9:14 p.m. by Mr. Big Using tubas to represent fatness Expand >>Lawrence Yang - October 6, 2011, at 7:50 a.m. 2 comments (2926 views)Newest: April 8, 2012, at 2:50 p.m. by cs^tbl Unknown track Expand >>sam - May 6, 2007, at 3:26 p.m. 3 comments (5777 views)Newest: October 12, 2008, at 6:53 p.m. by avcastner Although not as good as other SW scores,still worthy to listen Expand >>Sheridan - August 20, 2006, at 4:56 a.m. 1 comment (3700 views) RCA Victor re-packaging?"
+   },
+   "evidences": [
+    {
+     "paper_id": "7faf9fccfee41f1e3d08b47418fcf35f3222d070",
+     "source_title": "jabbathehutt",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Among the new thematic ideas are Jabba the Hutt's surprisingly jovial tuba piece (playing along the politically incorrect lines of belching tubas representing fatness), an equally cute and percussively creative theme for the Ewoks, an identity for Luke and Leia's changing familial understanding, and finally a demonic male-choral idea for the Emperor.",
+     "page": 1,
+     "snippet": "Among the new thematic ideas are Jabba",
+     "reason": "The passage does not state that John Williams composed Jabba the Hutt's musical theme.",
+     "votes": "2-0",
+     "window": "Among the new thematic ideas are Jabba the Hutt's surprisingly jovial tuba piece (playing along the politically incorrect lines of belching tubas representing fatness), an equally cute and percussively creative theme for the Ewoks, an identity for Luke and Leia's changing familial understanding, and finally a demonic male-choral idea for the Emperor. Expand >>Faleel - September 11, 2012, at 4:37 p.m. 3 comments (2703 views)Newest: July 7, 2015, at 9:14 p.m. by Mr. Big Using tubas to represent fatness Expand >>Lawrence Yang - October 6, 2011, at 7:50 a.m. 2 comments (2926 views)Newest: April 8, 2012, at 2:50 p.m. by cs^tbl Unknown track Expand >>sam - May 6, 2007, at 3:26 p.m. 3 comments (5777 views)Newest: October 12, 2008, at 6:53 p.m. by avcastner Although not as good as other SW scores,still worthy to listen Expand >>Sheridan - August 20, 2006, at 4:56 a.m. 1 comment (3700 views) RCA Victor re-packaging?"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that John Williams composed Jabba the Hutt's musical theme.",
+   "component_check": {
+    "found": [
+     "Jabba the Hutt's musical theme is played on a tuba.",
+     "The musical theme was composed by John Williams."
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Jabba the Hutt's musical theme is played on a tuba.",
+      "paper_id": "7faf9fccfee41f1e3d08b47418fcf35f3222d070",
+      "source_title": "jabbathehutt",
+      "sentence": "Among the new thematic ideas are Jabba the Hutt's surprisingly jovial tuba piece (playing along the politically incorrect lines of belching tubas representing fatness), an equally cute and percussively creative theme for the Ewoks, an identity for Luke and Leia's changing familial understanding, and finally a demonic male-choral idea for the Emperor.",
+      "page": 1
+     },
+     {
+      "component": "The musical theme was composed by John Williams.",
+      "paper_id": "7faf9fccfee41f1e3d08b47418fcf35f3222d070",
+      "source_title": "jabbathehutt",
+      "sentence": "Set Composed, Conducted, and Co-Produced by: John Williams Co- Produced by: George Lucas Orchestrated by: Herbert W. Spencer Performed by: The London Symphony Orchestra 1993, 1997, and 2004 Albums Produced by: Nick Redman 1997 and 2004 Albums Produced by: Michael Matessino RCA Re-Recording Produced and Conducted by: Charles Gerhardt RCA Re-Recording Performed by: The National Philharmonic Orchestra LABELS & RELEASE DATES Polydor/Polygram (1986) RCA Victor (Gerhardt)(1989)20th Century Fox (Anthology)(November 9th, 1993)RCA Victor (Special Edition)(January 14th, 1997)RCA Victor (S.E.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Jabba the Hutt's musical theme throughout the film, composed by John Williams, is played on a tuba.",
+    "reason": "The passage asserts a specific fact about the musical theme and its instrumentation, directly attributing this information to the cited source. This falls under the 'full' scope as the citation is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the assertion that the theme appears 'throughout the film'",
+    "rewrite_suggestion": "Jabba the Hutt's musical theme, composed by John Williams, is played on a tuba.",
+    "proofs": [
+     "Among the new thematic ideas are Jabba the Hutt's surprisingly jovial tuba piece (playing along the politically incorrect lines of belching tubas representing fatness)",
+     "Composed, Conducted, and Co-Produced by: John Williams"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence proves that Jabba the Hutt has a tuba-based theme and that it is part of John Williams' score, but it does not state that the theme appears 'throughout the film.' The source text nowhere claims the theme is used throughout the film; it only identifies it as a new thematic idea. Since this component is not provable from the source at all, the author must either add a citation or rewrite the claim to remove the unsupported phrase."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "He then served as auxiliary bishop of the Roman Catholic Diocese of Butuan, Philippines and as titular bishop of \"Arba\" from 11 June 2003 until his death.",
+   "markers": [
+    "zachariasjimenez"
+   ],
+   "paper_ids": [
+    "c8baa6024a3a93ab7e17591a73ef078fa14bd509"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9112,
+   "evidence": {
+    "paper_id": "c8baa6024a3a93ab7e17591a73ef078fa14bd509",
+    "source_title": "zachariasjimenez",
+    "supported": true,
+    "sentence": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+    "page": 1,
+    "snippet": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013",
+    "cosine": 0.9112,
+    "reason": "The passage directly states that he served as Auxiliary Bishop of Butuan and Titular Bishop of Arba from the specified dates, aligning with the claim.",
+    "window": "Bishop of Pagadian (Philippines) (1994.12.02 \u2013 2003.06.11) Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07) Titular Bishop of Arba (2003.06.11 \u2013 2018.04.19)"
+   },
+   "evidences": [
+    {
+     "paper_id": "c8baa6024a3a93ab7e17591a73ef078fa14bd509",
+     "source_title": "zachariasjimenez",
+     "supported": true,
+     "sentence": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+     "page": 1,
+     "snippet": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013",
+     "cosine": 0.9112,
+     "reason": "The passage directly states that he served as Auxiliary Bishop of Butuan and Titular Bishop of Arba from the specified dates, aligning with the claim.",
+     "window": "Bishop of Pagadian (Philippines) (1994.12.02 \u2013 2003.06.11) Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07) Titular Bishop of Arba (2003.06.11 \u2013 2018.04.19)"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that he served as Auxiliary Bishop of Butuan and Titular Bishop of Arba from the specified dates, aligning with the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "served as auxiliary bishop of the Roman Catholic Diocese of Butuan, Philippines",
+      "paper_id": "c8baa6024a3a93ab7e17591a73ef078fa14bd509",
+      "source_title": "zachariasjimenez",
+      "sentence": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+      "page": 1,
+      "snippet": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013"
+     },
+     {
+      "component": "from 11 June 2003 until his death",
+      "paper_id": "c8baa6024a3a93ab7e17591a73ef078fa14bd509",
+      "source_title": "zachariasjimenez",
+      "sentence": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+      "page": 1,
+      "snippet": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013"
+     }
+    ],
+    "uncovered": [
+     "served as titular bishop of \"Arba\""
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "c8baa6024a3a93ab7e17591a73ef078fa14bd509",
+      "source_title": "zachariasjimenez",
+      "text": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that he served as auxiliary bishop of Butuan until his death (source shows it ended in 2009, not at his death)",
+    "rewrite_suggestion": "He then served as auxiliary bishop of the Roman Catholic Diocese of Butuan, Philippines from 11 June 2003 to 7 May 2009, and as titular bishop of 'Arba' from 11 June 2003 until his death on 19 April 2018.",
+    "proofs": [
+     "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+     "Titular Bishop of Arba (2003.06.11 \u2013 2018.04.19)"
+    ],
+    "quotes_dropped": 1,
+    "conflict": {
+     "sentence": "Auxiliary Bishop of Butuan (Philippines) (2003.06.11 \u2013 2009.05.07)",
+     "why": "This shows the auxiliary bishop role ended in 2009, contradicting the claim that it continued until his death."
+    },
+    "why": "The claim states that he served as auxiliary bishop of Butuan until his death, but the source shows that role ended in 2009, before his death in 2018. Additionally, the tool did not show the sentences proving the titular bishop role and its continuation until death (both of which are present in the source). The author must correct the inaccuracy regarding the duration of the auxiliary bishop appointment."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "The host along with the top eight teams in the world ranking received automatic berths into the Olympics, while all other teams have an opportunity to qualify for the remaining three spots in the Olympics.",
+   "markers": [
+    "icehockeyatthe2022winter"
+   ],
+   "paper_ids": [
+    "84310a964bfa6c470e3c3d6f3eb060c724f55654"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "84310a964bfa6c470e3c3d6f3eb060c724f55654",
+    "source_title": "icehockeyatthe2022winter",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "(meta data) TITLE: IIHF - Olympic international ice hockey federation Olympic Winter Games ### Recent Olympics Click here for the ice hockey websites of the most recent Olympic Winter Games: PyeongChang 2018 Sochi 2014 ### Groups & Qualification Men For the 2022 Olympic men's ice hockey tournament the top-8 nations of the 2019 IIHF Men's World Ranking will be automatically qualified and together with host China and the three qualifiers be seeded according to the 2020 IIHF Men's World Ranking.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: IIHF - Olympic international",
+    "reason": "The passage does not mention the host receiving an automatic berth, only that the top eight teams and host China will be seeded.",
+    "votes": "2-0",
+    "window": "(meta data) TITLE: IIHF - Olympic international ice hockey federation Olympic Winter Games ### Recent Olympics Click here for the ice hockey websites of the most recent Olympic Winter Games: PyeongChang 2018 Sochi 2014 ### Groups & Qualification Men For the 2022 Olympic men's ice hockey tournament the top-8 nations of the 2019 IIHF Men's World Ranking will be automatically qualified and together with host China and the three qualifiers be seeded according to the 2020 IIHF Men's World Ranking. The tournament will include the top-8 nations according to the 2019 IIHF Men's World Ranking (Canada, Russia, Finland, Sweden, Czech Republic, USA, Germany, Switzerland), host China and three qualifiers. The three qualifiers will be determined in four stages of the Olympic Qualification starting in the 2019/2020 season according to the schematic below."
+   },
+   "evidences": [
+    {
+     "paper_id": "84310a964bfa6c470e3c3d6f3eb060c724f55654",
+     "source_title": "icehockeyatthe2022winter",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "(meta data) TITLE: IIHF - Olympic international ice hockey federation Olympic Winter Games ### Recent Olympics Click here for the ice hockey websites of the most recent Olympic Winter Games: PyeongChang 2018 Sochi 2014 ### Groups & Qualification Men For the 2022 Olympic men's ice hockey tournament the top-8 nations of the 2019 IIHF Men's World Ranking will be automatically qualified and together with host China and the three qualifiers be seeded according to the 2020 IIHF Men's World Ranking.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: IIHF - Olympic international",
+     "reason": "The passage does not mention the host receiving an automatic berth, only that the top eight teams and host China will be seeded.",
+     "votes": "2-0",
+     "window": "(meta data) TITLE: IIHF - Olympic international ice hockey federation Olympic Winter Games ### Recent Olympics Click here for the ice hockey websites of the most recent Olympic Winter Games: PyeongChang 2018 Sochi 2014 ### Groups & Qualification Men For the 2022 Olympic men's ice hockey tournament the top-8 nations of the 2019 IIHF Men's World Ranking will be automatically qualified and together with host China and the three qualifiers be seeded according to the 2020 IIHF Men's World Ranking. The tournament will include the top-8 nations according to the 2019 IIHF Men's World Ranking (Canada, Russia, Finland, Sweden, Czech Republic, USA, Germany, Switzerland), host China and three qualifiers. The three qualifiers will be determined in four stages of the Olympic Qualification starting in the 2019/2020 season according to the schematic below."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the host receiving an automatic berth, only that the top eight teams and host China will be seeded.",
+   "component_check": {
+    "found": [
+     "The top eight teams in the world ranking received automatic berths into the Olympics."
+    ],
+    "missing": [
+     "The host received an automatic berth into the Olympics.",
+     "All other teams have an opportunity to qualify for the remaining three spots in the Olympics."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The top eight teams in the world ranking received automatic berths into the Olympics.",
+      "paper_id": "84310a964bfa6c470e3c3d6f3eb060c724f55654",
+      "source_title": "icehockeyatthe2022winter",
+      "sentence": "(meta data) TITLE: IIHF - Olympic international ice hockey federation Olympic Winter Games ### Recent Olympics Click here for the ice hockey websites of the most recent Olympic Winter Games: PyeongChang 2018 Sochi 2014 ### Groups & Qualification Men For the 2022 Olympic men's ice hockey tournament the top-8 nations of the 2019 IIHF Men's World Ranking will be automatically qualified and together with host China and the three qualifiers be seeded according to the 2020 IIHF Men's World Ranking.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The host along with the top eight teams in the world ranking received automatic berths into the Olympics, while all other teams have an opportunity to qualify for the remaining three spots in the Olympics.",
+    "reason": "The passage directly states facts about Olympic qualification criteria, which are expected to be supported by the cited source. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that all other teams have an opportunity to qualify for the remaining three spots is not supported by the source text.",
+    "rewrite_suggestion": "The host along with the top eight teams in the world ranking received automatic berths into the Olympics, while three additional spots are determined through a qualification process.",
+    "proofs": [
+     "For the 2022 Olympic men's ice hockey tournament the top-8 nations of the 2019 IIHF Men's World Ranking will be automatically qualified and together with host China and the three qualifiers be seeded according to the 2020 IIHF Men's World Ranking."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence explicitly supports the host and top-eight automatic berths, but the additional component 'all other teams have an opportunity to qualify' is not stated in the source. The source only mentions that three qualifiers will be determined in stages, without guaranteeing opportunity for every other team. Therefore, the author needs to rewrite the claim to match the source or provide a new citation."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "The Eblana Theatre, originally intended as a newsreel venue, in the basement of the building was used as a theatre venue from 1959 to 1995.",
+   "markers": [
+    "busras"
+   ],
+   "paper_ids": [
+    "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3",
+    "source_title": "busras",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "In fact, the Eblana was originally designed as a news cinema.",
+    "page": 1,
+    "snippet": "In fact, the Eblana was originally designed",
+    "reason": "the passage does not state the Eblana Theatre was used as a theatre venue from 1959 to 1995",
+    "votes": "2-0",
+    "window": "In fact, the Eblana was originally designed as a news cinema. It went on to become a well-attended, well-respected little theatre, in the days before the Project or Andrew's Lane. Gemini moved out of the Eblana in the mid-1980s. Gemini's last production as a company was in the early 1990s."
+   },
+   "evidences": [
+    {
+     "paper_id": "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3",
+     "source_title": "busras",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "In fact, the Eblana was originally designed as a news cinema.",
+     "page": 1,
+     "snippet": "In fact, the Eblana was originally designed",
+     "reason": "the passage does not state the Eblana Theatre was used as a theatre venue from 1959 to 1995",
+     "votes": "2-0",
+     "window": "In fact, the Eblana was originally designed as a news cinema. It went on to become a well-attended, well-respected little theatre, in the days before the Project or Andrew's Lane. Gemini moved out of the Eblana in the mid-1980s. Gemini's last production as a company was in the early 1990s."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state the Eblana Theatre was used as a theatre venue from 1959 to 1995",
+   "component_check": {
+    "found": [
+     "The Eblana Theatre was originally intended as a newsreel venue.",
+     "The Eblana Theatre was located in the basement of the building."
+    ],
+    "missing": [
+     "The Eblana Theatre was used as a theatre venue from 1959 to 1995."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Eblana Theatre was originally intended as a newsreel venue.",
+      "paper_id": "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3",
+      "source_title": "busras",
+      "sentence": "In fact, the Eblana was originally designed as a news cinema.",
+      "page": 1
+     },
+     {
+      "component": "The Eblana Theatre was located in the basement of the building.",
+      "paper_id": "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3",
+      "source_title": "busras",
+      "sentence": "Gemini's base for many years was the Eblana Theatre, underneath Busaras.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Eblana Theatre was used as a theatre venue from 1959 to 1995.",
+    "reason": "The passage asserts facts about the Eblana Theatre's usage dates, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date range 'from 1959 to 1995' and the location description 'in the basement of the building' (the source says 'underneath Busaras') are not supported by the cited source.",
+    "rewrite_suggestion": "The Eblana Theatre, originally intended as a news cinema, was located underneath Busaras and served as a theatre venue for many years until the mid-1980s.",
+    "proofs": [
+     "In fact, the Eblana was originally designed as a news cinema.",
+     "Gemini's base for many years was the Eblana Theatre, underneath Busaras.",
+     "It went on to become a well-attended, well-respected little theatre"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves the original intent as a news cinema. The location component 'in the basement' is not explicitly stated (source says 'underneath Busaras'), and the date range '1959 to 1995' is absent from the source, which only mentions Gemini forming in 1958 and moving out in the mid-1980s. Thus the claim contains unsupported subclaims that require either a new citation or a rewrite to match the source."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Currently, SriLankan operates an all-Airbus fleet with the exception of its discontinued Air-Taxi services.",
+   "markers": [
+    "srilankanairlines"
+   ],
+   "paper_ids": [
+    "6cc1921f0c92c80c1855d3998a219486cd631141"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "6cc1921f0c92c80c1855d3998a219486cd631141",
+    "source_title": "srilankanairlines",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The purchase of vehicles pales into insignificance when compared to irregularities in the re-fleeting exercise and a fiasco involving the launch of an air taxi service which was eventually abandoned causing millions of dollars in losses to SriLankan Airlines.",
+    "page": 1,
+    "snippet": "The purchase of vehicles pales into insignificance",
+    "reason": "The passage does not state that SriLankan currently operates an all-Airbus fleet.",
+    "votes": "2-0",
+    "window": "The purchase of vehicles pales into insignificance when compared to irregularities in the re-fleeting exercise and a fiasco involving the launch of an air taxi service which was eventually abandoned causing millions of dollars in losses to SriLankan Airlines."
+   },
+   "evidences": [
+    {
+     "paper_id": "6cc1921f0c92c80c1855d3998a219486cd631141",
+     "source_title": "srilankanairlines",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The purchase of vehicles pales into insignificance when compared to irregularities in the re-fleeting exercise and a fiasco involving the launch of an air taxi service which was eventually abandoned causing millions of dollars in losses to SriLankan Airlines.",
+     "page": 1,
+     "snippet": "The purchase of vehicles pales into insignificance",
+     "reason": "The passage does not state that SriLankan currently operates an all-Airbus fleet.",
+     "votes": "2-0",
+     "window": "The purchase of vehicles pales into insignificance when compared to irregularities in the re-fleeting exercise and a fiasco involving the launch of an air taxi service which was eventually abandoned causing millions of dollars in losses to SriLankan Airlines."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that SriLankan currently operates an all-Airbus fleet.",
+   "subject_guard": {
+    "subject": "currently",
+    "missing_from": [
+     "6cc1921f0c92c80c1855d3998a219486cd631141"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "SriLankan operates an all-Airbus fleet with the exception of its discontinued Air-Taxi services.",
+    "reason": "The passage directly states a fact about SriLankan Airlines' fleet, which the citation is expected to support. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "SriLankan operates an all-Airbus fleet",
+    "rewrite_suggestion": "SriLankan Airlines launched an air taxi service that was eventually abandoned, according to the Weliamuna report.",
+    "proofs": [
+     "The purchase of vehicles pales into insignificance when compared to irregularities in the re-fleeting exercise and a fiasco involving the launch of an air taxi service which was eventually abandoned causing millions of dollars in losses to SriLankan Airlines."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that SriLankan currently operates an all-Airbus fleet, but the provided source text does not mention the composition of the airline's fleet at all. The only reference to an air taxi service is that it was launched and eventually abandoned, but there is no statement linking it to the fleet or stating it as an exception. Therefore, the claim contains a substantive component (the all-Airbus fleet) that is not provable from the cited source, requiring the author to add a citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "The founders' initial attempt at dealing with their constrained exhibition space was to create the Virtual Museum Of Bad Art, a CD-ROM with a cast of 95 people that presented the MOBA art collection in a fictional imaginary museum.",
+   "markers": [
+    "museumofbadart"
+   ],
+   "paper_ids": [
+    "3b53dd658d9c95a45af874f8186df1ef954e5670"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "3b53dd658d9c95a45af874f8186df1ef954e5670",
+    "source_title": "museumofbadart",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen.",
+    "page": 1,
+    "snippet": "But that little technicality certainly won't stop",
+    "reason": "The passage does not mention the founders' initial attempt at dealing with constrained exhibition space or a cast of 95 people.",
+    "votes": "2-0",
+    "window": "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen. The art is definitely real--plucked from various trash heaps over the years by curator Scott Wilson and director Jerry Reilly and usually on display in Reilly's basement--and hung temporarily in various Boston locations to be photographed along with visitors and staff played by the \"Friends of MOBA\"."
+   },
+   "evidences": [
+    {
+     "paper_id": "3b53dd658d9c95a45af874f8186df1ef954e5670",
+     "source_title": "museumofbadart",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen.",
+     "page": 1,
+     "snippet": "But that little technicality certainly won't stop",
+     "reason": "The passage does not mention the founders' initial attempt at dealing with constrained exhibition space or a cast of 95 people.",
+     "votes": "2-0",
+     "window": "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen. The art is definitely real--plucked from various trash heaps over the years by curator Scott Wilson and director Jerry Reilly and usually on display in Reilly's basement--and hung temporarily in various Boston locations to be photographed along with visitors and staff played by the \"Friends of MOBA\"."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the founders' initial attempt at dealing with constrained exhibition space or a cast of 95 people.",
+   "component_check": {
+    "found": [
+     "The Virtual Museum Of Bad Art was a CD-ROM.",
+     "The CD-ROM presented the MOBA art collection in a fictional imaginary museum."
+    ],
+    "missing": [
+     "The founders' initial attempt at dealing with their constrained exhibition space was to create the Virtual Museum Of Bad Art.",
+     "The CD-ROM had a cast of 95 people."
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The Virtual Museum Of Bad Art was a CD-ROM.",
+      "paper_id": "3b53dd658d9c95a45af874f8186df1ef954e5670",
+      "source_title": "museumofbadart",
+      "sentence": "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen.",
+      "page": 1
+     },
+     {
+      "component": "The CD-ROM presented the MOBA art collection in a fictional imaginary museum.",
+      "paper_id": "3b53dd658d9c95a45af874f8186df1ef954e5670",
+      "source_title": "museumofbadart",
+      "sentence": "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The Virtual Museum Of Bad Art was a CD-ROM with a cast of 95 people that presented the MOBA art collection in a fictional imaginary museum.",
+    "reason": "The passage describes a specific creation and its contents, which is directly attributed to the cited source. This falls under the default 'full' scope as the citation is expected to prove these factual details.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the founders' initial attempt at dealing with their constrained exhibition space; a cast of 95 people",
+    "rewrite_suggestion": "The Virtual Museum of Bad Art is a CD-ROM that presents the MOBA art collection in a fictional imaginary museum.",
+    "proofs": [
+     "You've probably never set foot inside the Museum of Bad Art, possibly because it doesn't exist.",
+     "But that little technicality certainly won't stop you from enjoying the Virtual Museum of Bad Art (MOBA), the funniest CD-ROM satire I've ever seen.",
+     "The art is definitely real--plucked from various trash heaps over the years by curator Scott Wilson and director Jerry Reilly and usually on display in Reilly's basement--and hung temporarily in various Boston locations to be photographed along with visitors and staff played by the \"Friends of MOBA\"."
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "You've probably never set foot inside the Museum of Bad Art, possibly because it doesn't exist.",
+     "why": "The claim implies a constrained exhibition space existed, but the source states the museum does not exist, contradicting that premise."
+    },
+    "why": "The claim includes several components not found in the source text: the founders' initial attempt, constrained exhibition space, and a cast of 95 people. The source does not mention any of these, and it even contradicts the idea of a physical exhibition space by stating the Museum of Bad Art does not exist. While the existence of the Virtual Museum of Bad Art as a CD-ROM and its presentation of the collection in a fictional museum are supported, the missing/contradicted components require the author to either add a citation or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "On May 1, 2019, Harris was named to the 23 player roster for the 2019 Women's World Cup.",
+   "markers": [
+    "ashlynharris"
+   ],
+   "paper_ids": [
+    "be35d05f5b15dc531c2434c2e296cc680fcbe2dc"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+    "source_title": "ashlynharris",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Harris was part of the team that won the 2002 FIFA U-19 Women's World Cup in Canada.",
+    "page": 1,
+    "snippet": "Harris was part of the team that",
+    "reason": "The passage does not state that Harris was named to the 23-player roster for the 2019 Women's World Cup on May 1, 2019.",
+    "votes": "2-0",
+    "window": "Harris was part of the team that won the 2002 FIFA U-19 Women's World Cup in Canada. Adrianna Franch* (Portland Thorns FC), Ashlyn Harris** (Orlando Pride), U.S. SoccerMay 1 2019 U.S. Women's National Team head coach Jill Ellis has named the 23 players who will represent the United States in France this summer"
+   },
+   "evidences": [
+    {
+     "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+     "source_title": "ashlynharris",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Harris was part of the team that won the 2002 FIFA U-19 Women's World Cup in Canada.",
+     "page": 1,
+     "snippet": "Harris was part of the team that",
+     "reason": "The passage does not state that Harris was named to the 23-player roster for the 2019 Women's World Cup on May 1, 2019.",
+     "votes": "2-0",
+     "window": "Harris was part of the team that won the 2002 FIFA U-19 Women's World Cup in Canada. Adrianna Franch* (Portland Thorns FC), Ashlyn Harris** (Orlando Pride), U.S. SoccerMay 1 2019 U.S. Women's National Team head coach Jill Ellis has named the 23 players who will represent the United States in France this summer"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Harris was named to the 23-player roster for the 2019 Women's World Cup on May 1, 2019.",
+   "component_check": {
+    "found": [
+     "On May 1, 2019, Harris was named to the 23 player roster",
+     "for the 2019 Women's World Cup"
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "On May 1, 2019, Harris was named to the 23 player roster",
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "sentence": "SoccerMay 1 2019 U.S. Women's National Team head coach Jill Ellis has named the 23 players who will represent the United States in France this summer \"Selecting a World Cup team is a long process, and I want to thank the players \u2013 the ones that made the final team and the ones that didn't \u2013 for all of their hard work over the past two and a half years,\" said Ellis.",
+      "page": 1
+     },
+     {
+      "component": "for the 2019 Women's World Cup",
+      "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+      "source_title": "ashlynharris",
+      "sentence": "#### USA KICKS OFF GROUP F ON JUNE 11 This summer, the USA will face Thailand, Chile and Sweden in Group F at the 2019 FIFA Women's World Cup.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On May 1, 2019, Harris was named to the 23 player roster for the 2019 Women's World Cup.",
+    "reason": "The passage asserts a specific fact (Harris's roster selection and date) that the citation is expected to prove. This falls under the 'full' scope as it's a direct statement of a finding or event.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "U.S. Soccer May 1 2019 U.S. Women's National Team head coach Jill Ellis has named the 23 players who will represent the United States in France this summer",
+     "GOALKEEPERS (3): Adrianna Franch* (Portland Thorns FC), Ashlyn Harris** (Orlando Pride), Alyssa Naeher** (Chicago Red Stars)"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence about the 2002 U-19 World Cup is irrelevant to the claim. The source clearly states on May 1, 2019 that the 23-player roster for the 2019 Women's World Cup was named, and lists Ashlyn Harris among the goalkeepers. Since the proof exists in the source but was not shown, the tool must correct its displayed evidence.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t20",
+   "text": "The ICC announced their team of the tournament on 15 July 2019 with Kane Williamson being named as player of the tournament and captain of the team.",
+   "markers": [
+    "2019cricketworldcup"
+   ],
+   "paper_ids": [
+    "735e7299e408be383b4926091d507474af3ead96"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+    "source_title": "2019cricketworldcup",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Here are eleven of the best, making our star-studded team of the tournament, led by Kane Williamson, the New Zealand skipper Rohit Sharma (India) Ranked second in the MRF Tyres ICC ODI Batting Rankings, Rohit Sharma had a record-breaking World Cup, showing why he's one of the most feared batsman in limited-overs cricket.",
+    "page": 1,
+    "snippet": "Here are eleven of the best, making",
+    "reason": "The passage does not state that the ICC announced their team of the tournament on 15 July 2019.",
+    "votes": "2-0",
+    "window": "Here are eleven of the best, making our star-studded team of the tournament, led by Kane Williamson, the New Zealand skipper Rohit Sharma (India) Ranked second in the MRF Tyres ICC ODI Batting Rankings, Rohit Sharma had a record-breaking World Cup, showing why he's one of the most feared batsman in limited-overs cricket. The New Zealand captain completes the formidable top order in this XI, with his solidity and reliability, and also leads the team of the tournament. About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 15 Jul 19 # CWC19: Team of the Tournament ### CWC19 feature ShareURL Copied The twelfth edition of the ICC Men's Cricket World Cup had some remarkably consistent performers over seven weeks. Williamson scored 578 runs at an impressive average of 82.57 and emerged as the Player of the Tournament."
+   },
+   "evidences": [
+    {
+     "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+     "source_title": "2019cricketworldcup",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Here are eleven of the best, making our star-studded team of the tournament, led by Kane Williamson, the New Zealand skipper Rohit Sharma (India) Ranked second in the MRF Tyres ICC ODI Batting Rankings, Rohit Sharma had a record-breaking World Cup, showing why he's one of the most feared batsman in limited-overs cricket.",
+     "page": 1,
+     "snippet": "Here are eleven of the best, making",
+     "reason": "The passage does not state that the ICC announced their team of the tournament on 15 July 2019.",
+     "votes": "2-0",
+     "window": "Here are eleven of the best, making our star-studded team of the tournament, led by Kane Williamson, the New Zealand skipper Rohit Sharma (India) Ranked second in the MRF Tyres ICC ODI Batting Rankings, Rohit Sharma had a record-breaking World Cup, showing why he's one of the most feared batsman in limited-overs cricket. The New Zealand captain completes the formidable top order in this XI, with his solidity and reliability, and also leads the team of the tournament. About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 15 Jul 19 # CWC19: Team of the Tournament ### CWC19 feature ShareURL Copied The twelfth edition of the ICC Men's Cricket World Cup had some remarkably consistent performers over seven weeks. Williamson scored 578 runs at an impressive average of 82.57 and emerged as the Player of the Tournament."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the ICC announced their team of the tournament on 15 July 2019.",
+   "component_check": {
+    "found": [
+     "The ICC announced their team of the tournament on 15 July 2019",
+     "Kane Williamson was named player of the tournament",
+     "Kane Williamson was named captain of the team"
+    ],
+    "missing": [],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "The ICC announced their team of the tournament on 15 July 2019",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "About ICC Hall of Fame ICC on Social Media Releases Cricket for Good Mobile App Commercial Opportunities CWC19 Store 15 Jul 19 # CWC19: Team of the Tournament ### CWC19 feature ShareURL Copied The twelfth edition of the ICC Men's Cricket World Cup had some remarkably consistent performers over seven weeks.",
+      "page": 1
+     },
+     {
+      "component": "Kane Williamson was named player of the tournament",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "14 Jul 19 CWC19: Jason Roy \u2013 The unstoppable opener Kane Williamson (c) (New Zealand) The bedrock of New Zealand's batting right through the tournament, Williamson was an immovable object at the crease and an astute captain, who impressed with his tactical nous.",
+      "page": 1
+     },
+     {
+      "component": "Kane Williamson was named captain of the team",
+      "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+      "source_title": "2019cricketworldcup",
+      "sentence": "Williamson scored 578 runs at an impressive average of 82.57 and emerged as the Player of the Tournament.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (announcement date, player of the tournament, captain) that are directly attributed to the cited source. The citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "15 Jul 19 # CWC19: Team of the Tournament",
+     "Here are eleven of the best, making our star-studded team of the tournament, led by Kane Williamson, the New Zealand skipper",
+     "Williamson scored 578 runs at an impressive average of 82.57 and emerged as the Player of the Tournament."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only proves that Kane Williamson was captain (led by/ skipper) but fails to include the date (15 July 2019) and the fact that he was named Player of the Tournament. Both missing components exist in the source text\u2014the date appears in the article metadata, and the Player of the Tournament statement appears in the Williamson paragraph\u2014but were not shown. Therefore, the tool's evidence is insufficient; the correct sentences must be displayed.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t21",
+   "text": "One of the main focuses of the project was to improve the underground storm drain system of stormwater collected from eight northwest communities, including Silver Springs and Varsity.",
+   "markers": [
+    "dalehodgespark"
+   ],
+   "paper_ids": [
+    "ea8cfe2a5a172cb734b043713b4078c6c11ab310"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "ea8cfe2a5a172cb734b043713b4078c6c11ab310",
+    "source_title": "dalehodgespark",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "An additional primary focus was the treatment of stormwater prior to entering into the river.",
+    "page": 1,
+    "snippet": "An additional primary focus was the treatment",
+    "reason": "The passage does not mention improving an underground storm drain system or eight northwest communities, including Silver Springs and Varsity.",
+    "votes": "2-0",
+    "window": "An additional primary focus was the treatment of stormwater prior to entering into the river. Structured around a series of designed aquatic and upland habitats, the flow of water within the park begins in the upstream residential communities where runoff travels through pipes before daylighting in the park. (meta data) TITLE: Dale Hodges Park \u2014 O2 Planning + Design O2 Planning + Design Landscape Architecture Urban Design Development Approvals GIS + Geodesign About/TeamAwardsNews # Dale Hodges Park About/TeamAwardsNews ### Dale Hodges Park Client The City of Calgary Location Calgary | Alberta | Canada The riparian, floodplain and upland ecosystems of the Bow River Valley are among the most important natural features in Calgary."
+   },
+   "evidences": [
+    {
+     "paper_id": "ea8cfe2a5a172cb734b043713b4078c6c11ab310",
+     "source_title": "dalehodgespark",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "An additional primary focus was the treatment of stormwater prior to entering into the river.",
+     "page": 1,
+     "snippet": "An additional primary focus was the treatment",
+     "reason": "The passage does not mention improving an underground storm drain system or eight northwest communities, including Silver Springs and Varsity.",
+     "votes": "2-0",
+     "window": "An additional primary focus was the treatment of stormwater prior to entering into the river. Structured around a series of designed aquatic and upland habitats, the flow of water within the park begins in the upstream residential communities where runoff travels through pipes before daylighting in the park. (meta data) TITLE: Dale Hodges Park \u2014 O2 Planning + Design O2 Planning + Design Landscape Architecture Urban Design Development Approvals GIS + Geodesign About/TeamAwardsNews # Dale Hodges Park About/TeamAwardsNews ### Dale Hodges Park Client The City of Calgary Location Calgary | Alberta | Canada The riparian, floodplain and upland ecosystems of the Bow River Valley are among the most important natural features in Calgary."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention improving an underground storm drain system or eight northwest communities, including Silver Springs and Varsity.",
+   "subject_guard": {
+    "subject": "Silver Springs",
+    "missing_from": [
+     "ea8cfe2a5a172cb734b043713b4078c6c11ab310"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes a focus of the project, implying that the cited source is expected to contain information about this focus. There is no explicit attribution to the source, but the passage asserts a fact about the project's aims that the citation is likely intended to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the project focused on improving the underground storm drain system for stormwater collected from eight northwest communities including Silver Springs and Varsity is not supported by the cited source. The source mentions treatment of stormwater prior to entering the river but does not refer to any specific underground storm drain system improvement, nor to a number of communities or the named communities.",
+    "rewrite_suggestion": "One of the main focuses of the project was the treatment of stormwater prior to entering into the river.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains no mention of an underground storm drain system, eight northwest communities, or the communities Silver Springs and Varsity. The shown sentence about stormwater treatment does not cover these components. Since the claim adds specific unsourced details, the author must either provide a citation for those details or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "According to the CDC, rapid diagnostic tests have a sensitivity of 50\u201375% and specificity of 90\u201395% when compared with viral culture.",
+   "markers": [
+    "influenza"
+   ],
+   "paper_ids": [
+    "a449ebcccadbe3bf9cc1a57e884d51734dc6a390"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "a449ebcccadbe3bf9cc1a57e884d51734dc6a390",
+    "source_title": "influenza",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Product insert information and research publications indicate that: Sensitivities are approximately 50-70% Specificities are approximately 90-95% Specimens to be used with RIDTs generally should be collected as close as is possible to the start of symptoms (e.g., less than 4 days after illness onset).",
+    "page": 1,
+    "snippet": "Product insert information and research publications indicate",
+    "reason": "The passage does not mention the CDC or viral culture as a comparison point.",
+    "votes": "2-0",
+    "window": "Product insert information and research publications indicate that: Sensitivities are approximately 50-70% Specificities are approximately 90-95% Specimens to be used with RIDTs generally should be collected as close as is possible to the start of symptoms (e.g., less than 4 days after illness onset)."
+   },
+   "evidences": [
+    {
+     "paper_id": "a449ebcccadbe3bf9cc1a57e884d51734dc6a390",
+     "source_title": "influenza",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Product insert information and research publications indicate that: Sensitivities are approximately 50-70% Specificities are approximately 90-95% Specimens to be used with RIDTs generally should be collected as close as is possible to the start of symptoms (e.g., less than 4 days after illness onset).",
+     "page": 1,
+     "snippet": "Product insert information and research publications indicate",
+     "reason": "The passage does not mention the CDC or viral culture as a comparison point.",
+     "votes": "2-0",
+     "window": "Product insert information and research publications indicate that: Sensitivities are approximately 50-70% Specificities are approximately 90-95% Specimens to be used with RIDTs generally should be collected as close as is possible to the start of symptoms (e.g., less than 4 days after illness onset)."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the CDC or viral culture as a comparison point.",
+   "component_check": {
+    "found": [
+     "rapid diagnostic tests have a specificity of 90\u201395%",
+     "when compared with viral culture"
+    ],
+    "missing": [
+     "rapid diagnostic tests have a sensitivity of 50\u201375%",
+     "According to the CDC"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "rapid diagnostic tests have a specificity of 90\u201395%",
+      "paper_id": "a449ebcccadbe3bf9cc1a57e884d51734dc6a390",
+      "source_title": "influenza",
+      "sentence": "Product insert information and research publications indicate that: Sensitivities are approximately 50-70% Specificities are approximately 90-95% Specimens to be used with RIDTs generally should be collected as close as is possible to the start of symptoms (e.g., less than 4 days after illness onset).",
+      "page": 1
+     },
+     {
+      "component": "when compared with viral culture",
+      "paper_id": "a449ebcccadbe3bf9cc1a57e884d51734dc6a390",
+      "source_title": "influenza",
+      "sentence": "RIDTs vary in terms of sensitivity and specificity when compared with viral culture or RT-PCR.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "rapid diagnostic tests have a sensitivity of 50\u201375% and specificity of 90\u201395% when compared with viral culture",
+    "reason": "The passage explicitly attributes the stated facts about sensitivity and specificity to the CDC, indicating that the citation is expected to prove these specific findings.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the upper bound of sensitivity (75%) is not supported; source states approximately 50-70%",
+    "rewrite_suggestion": "According to the CDC, rapid diagnostic tests have a sensitivity of approximately 50-70% and specificity of approximately 90-95% when compared with viral culture or RT-PCR.",
+    "proofs": [
+     "RIDTs vary in terms of sensitivity and specificity when compared with viral culture or RT-PCR.",
+     "Product insert information and research publications indicate that: Sensitivities are approximately 50-70% Specificities are approximately 90-95%"
+    ],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "Sensitivities are approximately 50-70%",
+     "why": "The source states sensitivity up to 70%, while the claim states up to 75%, a direct contradiction."
+    },
+    "why": "The claim includes a sensitivity range of 50\u201375%, but the source text consistently states sensitivities are approximately 50-70%. This upper bound of 75% is not found in the source and is contradicted by the explicit 50-70% figure. The specificity range and attribution to the CDC are correct, but the sensitivity error makes the claim unsupported. The author must either correct the number or provide a separate citation for the 50-75% range."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "The school's original Anglo Saxon motto, \"Nyle ye drede\", means \"fear nothing\" and is adopted by the school as a whole.",
+   "markers": [
+    "sydenhamhighschool"
+   ],
+   "paper_ids": [
+    "2862bd5d38ac048376ba372f5bc5ad19e79dc7af"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9838,
+   "evidence": {
+    "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+    "source_title": "sydenhamhighschool",
+    "supported": true,
+    "sentence": "The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do.",
+    "page": 1,
+    "snippet": "The school's original Anglo Saxon motto, 'Nyle",
+    "cosine": 0.9838,
+    "reason": "The passage directly states that the motto 'Nyle ye Drede' means 'Fear nothing' and that it underpins all that the school does, supporting the claim that it is adopted by the school as a whole.",
+    "window": "Everyone remarks on the warm, friendly, and ambitious feel to the Senior School and the genuine sense of community and belonging. The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do. Sydenham High is selective but diverse, welcoming girls with wide-ranging talents and backgrounds into a close community that is large enough to offer choice and flexibility but compact enough to ensure that no girl is overlooked."
+   },
+   "evidences": [
+    {
+     "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+     "source_title": "sydenhamhighschool",
+     "supported": true,
+     "sentence": "The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do.",
+     "page": 1,
+     "snippet": "The school's original Anglo Saxon motto, 'Nyle",
+     "cosine": 0.9838,
+     "reason": "The passage directly states that the motto 'Nyle ye Drede' means 'Fear nothing' and that it underpins all that the school does, supporting the claim that it is adopted by the school as a whole.",
+     "window": "Everyone remarks on the warm, friendly, and ambitious feel to the Senior School and the genuine sense of community and belonging. The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do. Sydenham High is selective but diverse, welcoming girls with wide-ranging talents and backgrounds into a close community that is large enough to offer choice and flexibility but compact enough to ensure that no girl is overlooked."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the motto 'Nyle ye Drede' means 'Fear nothing' and that it underpins all that the school does, supporting the claim that it is adopted by the school as a whole.",
+   "covering": {
+    "covered": [
+     {
+      "component": "original Anglo Saxon motto is 'Nyle ye drede'",
+      "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+      "source_title": "sydenhamhighschool",
+      "sentence": "The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do.",
+      "page": 1,
+      "snippet": "The school's original Anglo Saxon motto, 'Nyle"
+     },
+     {
+      "component": "motto means 'fear nothing'",
+      "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+      "source_title": "sydenhamhighschool",
+      "sentence": "The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do.",
+      "page": 1,
+      "snippet": "The school's original Anglo Saxon motto, 'Nyle"
+     },
+     {
+      "component": "motto is adopted by the school as a whole",
+      "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+      "source_title": "sydenhamhighschool",
+      "sentence": "The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do.",
+      "page": 1,
+      "snippet": "The school's original Anglo Saxon motto, 'Nyle"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+      "source_title": "sydenhamhighschool",
+      "text": "The school's original Anglo Saxon motto, 'Nyle ye Drede', means 'Fear nothing' and underpins all that we do.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t24",
+   "text": "In 1943, Sir John gave the house and grounds to the National Trust, on condition that he and his descendants could continue living in the house.",
+   "markers": [
+    "westwycombepark"
+   ],
+   "paper_ids": [
+    "71a50e594f7e6b8c689f7721a398e7e6854ae49c"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "71a50e594f7e6b8c689f7721a398e7e6854ae49c",
+    "source_title": "westwycombepark",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house.",
+    "page": 1,
+    "snippet": "In 1925, he gave West Wycombe hill",
+    "reason": "The passage explicitly states that in 1943, West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house, which supports the claim that Sir John gave the house and grounds to the National Trust on the condition that he and his descendants could continue living there.",
+    "votes": "2-0",
+    "window": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house. In 1929, Sir John sold the entire village of West Wycombe to the Royal Society of Arts which handed it over to the National Trust in 1934."
+   },
+   "evidences": [
+    {
+     "paper_id": "71a50e594f7e6b8c689f7721a398e7e6854ae49c",
+     "source_title": "westwycombepark",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house.",
+     "page": 1,
+     "snippet": "In 1925, he gave West Wycombe hill",
+     "reason": "The passage explicitly states that in 1943, West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house, which supports the claim that Sir John gave the house and grounds to the National Trust on the condition that he and his descendants could continue living there.",
+     "votes": "2-0",
+     "window": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house. In 1929, Sir John sold the entire village of West Wycombe to the Royal Society of Arts which handed it over to the National Trust in 1934."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that in 1943, West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house, which supports the claim that Sir John gave the house and grounds to the National Trust on the condition that he and his descendants could continue living there.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Sir John gave the house and grounds to the National Trust in 1943",
+      "paper_id": "71a50e594f7e6b8c689f7721a398e7e6854ae49c",
+      "source_title": "westwycombepark",
+      "sentence": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house.",
+      "page": 1,
+      "snippet": "In 1925, he gave West Wycombe hill"
+     },
+     {
+      "component": "on condition that he and his descendants could continue living in the house",
+      "paper_id": "71a50e594f7e6b8c689f7721a398e7e6854ae49c",
+      "source_title": "westwycombepark",
+      "sentence": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house.",
+      "page": 1,
+      "snippet": "In 1925, he gave West Wycombe hill"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "71a50e594f7e6b8c689f7721a398e7e6854ae49c",
+      "source_title": "westwycombepark",
+      "text": "In 1925, he gave West Wycombe hill (excluding the mausoleum) to the National Trust and in September 1943 West Wycombe Park was accepted by the National Trust on the condition that the family could remain living in the house.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t25",
+   "text": "It has educated many players who have become regulars in the Bundesliga and Germany.",
+   "markers": [
+    "fcbayernmunichjuniorteam"
+   ],
+   "paper_ids": [
+    "04b74e392e17565af15e4c0a3101f8d967f31854"
+   ],
+   "verdict": "supported",
+   "method": "arbiter_rescue",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "04b74e392e17565af15e4c0a3101f8d967f31854",
+    "source_title": "fcbayernmunichjuniorteam",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The approach is certainly working at Germany's premier football club.",
+    "page": 1,
+    "snippet": "The approach is certainly working at Germany's",
+    "reason": "The passage does not state that the club has educated many players who have become regulars in the Bundesliga and Germany.",
+    "votes": "2-0",
+    "window": "The approach is certainly working at Germany's premier football club. A club that has produced the likes of Bastian Schweinsteiger, Markus Babbel, Holger Badstuber, Dietmar Hamann, Philipp Lahm, Mats Hummels, Toni Kroos, Thomas M\u00fcller, Emre Can and David Alaba champions its cause to be the most successful club domestically whilst providing the bulk of the talent in the national side ranks at every age group. A player who falls short of being able to excel in his development will likely not succeed at Bayern, however that player will be successful elsewhere, which is a success for the club, too."
+   },
+   "evidences": [
+    {
+     "paper_id": "04b74e392e17565af15e4c0a3101f8d967f31854",
+     "source_title": "fcbayernmunichjuniorteam",
+     "sentence": "A club that has produced the likes of Bastian Schweinsteiger, Markus Babbel, Holger Badstuber, Dietmar Hamann, Philipp Lahm, Mats Hummels, Toni Kroos, Thomas M\u00fcller, Emre Can and David Alaba champions its cause to be the most successful club domestically whilst providing the bulk of the talent in the national side ranks at every age group.",
+     "supported": true,
+     "via": "arbiter_rescue"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly lists several players who developed at the academy and became prominent in German football, directly supporting the claim. (evidence located by the arbiter, verified verbatim against the source, re-judged by the primary judge 3-0)",
+   "component_check": {
+    "found": [
+     "many players educated"
+    ],
+    "missing": [
+     "players became regulars in the Bundesliga",
+     "players became regulars in Germany"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "many players educated",
+      "paper_id": "04b74e392e17565af15e4c0a3101f8d967f31854",
+      "source_title": "fcbayernmunichjuniorteam",
+      "sentence": "Players have access to the senior team's training session and see how the players under Pep Guardiola's tutelage operate and carry themselves.",
+      "page": 1
+     }
+    ]
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "A club that has produced the likes of Bastian Schweinsteiger, Markus Babbel, Holger Badstuber, Dietmar Hamann, Philipp Lahm, Mats Hummels, Toni Kroos, Thomas M\u00fcller, Emre Can and David Alaba champions its cause to be the most successful club domestically whilst providing the bulk of the talent in the national side ranks at every age group."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence ('The approach is certainly working...') does not mention educating players or their becoming regulars. However, the source contains a sentence that directly lists the players produced by the academy and states that the club provides the bulk of talent to the national side, proving both components. Therefore, the tool's displayed evidence was insufficient; the correct proof sentences exist in the source and are quoted above.",
+    "rescued": true
+   }
+  },
+  {
+   "id": "t26",
+   "text": "The next day, the ZDF issued a statement saying that it was not a coup d'\u00e9tat and that President Robert Mugabe was safe, although the situation would return to normal only after the ZDF had dealt with the \"criminals\" around Mugabe responsible for the socio-economic problems of Zimbabwe.",
+   "markers": [
+    "2018bulawayobombing"
+   ],
+   "paper_ids": [
+    "329974785dc3a58a6f233b1e153381f92e546691"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+    "source_title": "2018bulawayobombing",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "## Zimbabwe army denies coup against Mugabe as it takes control of Harare \u2013 live Read more A military spokesman, Maj Gen SB Moyo made an announcement on state television early on Wednesday saying Mugabe and his family were \"safe and sound and their security is guaranteed\".",
+    "page": 1,
+    "snippet": "## Zimbabwe army denies coup against Mugabe",
+    "reason": "The passage explicitly states that the ZDF (military) denied it was a coup, that President Mugabe was safe, and that the situation would return to normal after dealing with 'criminals around' Mugabe responsible for socio-economic problems.",
+    "votes": "2-0",
+    "window": "## Zimbabwe army denies coup against Mugabe as it takes control of Harare \u2013 live Read more A military spokesman, Maj Gen SB Moyo made an announcement on state television early on Wednesday saying Mugabe and his family were \"safe and sound and their security is guaranteed\". Moyo said the army was targeting \"criminals around\" Mugabe, who were \"committing crimes that are causing social and economic suffering in order to bring them to justice\". Photograph: Tsvangirayi Mukwazhi/AP Insisting it was not a coup, Moyo said \"as soon as [the armed forces] are done the situation will come to normalcy\". In its statement the military said they continued to recognise the president as commander in chief of the armed forces."
+   },
+   "evidences": [
+    {
+     "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+     "source_title": "2018bulawayobombing",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "## Zimbabwe army denies coup against Mugabe as it takes control of Harare \u2013 live Read more A military spokesman, Maj Gen SB Moyo made an announcement on state television early on Wednesday saying Mugabe and his family were \"safe and sound and their security is guaranteed\".",
+     "page": 1,
+     "snippet": "## Zimbabwe army denies coup against Mugabe",
+     "reason": "The passage explicitly states that the ZDF (military) denied it was a coup, that President Mugabe was safe, and that the situation would return to normal after dealing with 'criminals around' Mugabe responsible for socio-economic problems.",
+     "votes": "2-0",
+     "window": "## Zimbabwe army denies coup against Mugabe as it takes control of Harare \u2013 live Read more A military spokesman, Maj Gen SB Moyo made an announcement on state television early on Wednesday saying Mugabe and his family were \"safe and sound and their security is guaranteed\". Moyo said the army was targeting \"criminals around\" Mugabe, who were \"committing crimes that are causing social and economic suffering in order to bring them to justice\". Photograph: Tsvangirayi Mukwazhi/AP Insisting it was not a coup, Moyo said \"as soon as [the armed forces] are done the situation will come to normalcy\". In its statement the military said they continued to recognise the president as commander in chief of the armed forces."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that the ZDF (military) denied it was a coup, that President Mugabe was safe, and that the situation would return to normal after dealing with 'criminals around' Mugabe responsible for socio-economic problems.",
+   "covering": {
+    "covered": [
+     {
+      "component": "ZDF statement: President Robert Mugabe was safe",
+      "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+      "source_title": "2018bulawayobombing",
+      "sentence": "## Zimbabwe army denies coup against Mugabe as it takes control of Harare \u2013 live Read more A military spokesman, Maj Gen SB Moyo made an announcement on state television early on Wednesday saying Mugabe and his family were \"safe and sound and their security is guaranteed\".",
+      "page": 1,
+      "snippet": "## Zimbabwe army denies coup against Mugabe"
+     },
+     {
+      "component": "ZDF statement: situation would return to normal only after ZDF dealt with 'criminals' around Mugabe",
+      "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+      "source_title": "2018bulawayobombing",
+      "sentence": "Moyo said the army was targeting \"criminals around\" Mugabe, who were \"committing crimes that are causing social and economic suffering in order to bring them to justice\".",
+      "page": 1,
+      "snippet": "Moyo said the army was targeting \"criminals"
+     },
+     {
+      "component": "ZDF statement: 'criminals' around Mugabe responsible for socio-economic problems",
+      "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+      "source_title": "2018bulawayobombing",
+      "sentence": "Moyo said the army was targeting \"criminals around\" Mugabe, who were \"committing crimes that are causing social and economic suffering in order to bring them to justice\".",
+      "page": 1,
+      "snippet": "Moyo said the army was targeting \"criminals"
+     },
+     {
+      "component": "ZDF statement: not a coup d'\u00e9tat",
+      "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+      "source_title": "2018bulawayobombing",
+      "sentence": "Photograph: Tsvangirayi Mukwazhi/AP Insisting it was not a coup, Moyo said \"as soon as [the armed forces] are done the situation will come to normalcy\".",
+      "page": 1,
+      "snippet": "Photograph: Tsvangirayi Mukwazhi/AP Insisting it was not",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+      "source_title": "2018bulawayobombing",
+      "text": "## Zimbabwe army denies coup against Mugabe as it takes control of Harare \u2013 live Read more A military spokesman, Maj Gen SB Moyo made an announcement on state television early on Wednesday saying Mugabe and his family were \"safe and sound and their security is guaranteed\". Troops had seized the network's offices late on Tuesday night. Moyo said the army was targeting \"criminals around\" Mugabe, who were \"committing crimes that are causing social and economic suffering in order to bring them to justice\". [\u2026] Photograph: Tsvangirayi Mukwazhi/AP Insisting it was not a coup, Moyo said \"as soon as [the armed forces] are done the situation will come to normalcy\".",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "3b53dd658d9c95a45af874f8186df1ef954e5670": {
+    "title": "museumofbadart",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "de2da5158ac9d3157492e268d5f528f8f1bb5e69": {
+    "title": "geirhnneland",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bcf04e96d0fcb8f245192492ee093cc113b834c1": {
+    "title": "philippelanon",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3": {
+    "title": "busras",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "6cc1921f0c92c80c1855d3998a219486cd631141": {
+    "title": "srilankanairlines",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7faf9fccfee41f1e3d08b47418fcf35f3222d070": {
+    "title": "jabbathehutt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "dec4b832d3e76e6550ebe7222e680c53a07405dc": {
+    "title": "thenationalabudhabi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "6e64d397adcb3294bf38d3d45dfd75c71d289985": {
+    "title": "shineeworldiii",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "25de345d81f56609f151cccd1c3505b95cec13ed": {
+    "title": "cyp1a2",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "735e7299e408be383b4926091d507474af3ead96": {
+    "title": "2019cricketworldcup",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "406863909fe16b4854dbef49ce71fbc1166267d7": {
+    "title": "sircharlespym1stbaronet",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b1773315efced0b8c238713349ffc90b0a2951f2": {
+    "title": "andrewnikou",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824": {
+    "title": "apollo11",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d555edff361aaf6c56f505773df7535f4226f054": {
+    "title": "spaceshuttlechallengerdi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ea8cfe2a5a172cb734b043713b4078c6c11ab310": {
+    "title": "dalehodgespark",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c8baa6024a3a93ab7e17591a73ef078fa14bd509": {
+    "title": "zachariasjimenez",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fcc37693adc68b1bb1efcc61c23a408c27bc84e4": {
+    "title": "domeoftherock",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "be35d05f5b15dc531c2434c2e296cc680fcbe2dc": {
+    "title": "ashlynharris",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "84310a964bfa6c470e3c3d6f3eb060c724f55654": {
+    "title": "icehockeyatthe2022winter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2862bd5d38ac048376ba372f5bc5ad19e79dc7af": {
+    "title": "sydenhamhighschool",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "04b74e392e17565af15e4c0a3101f8d967f31854": {
+    "title": "fcbayernmunichjuniorteam",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "329974785dc3a58a6f233b1e153381f92e546691": {
+    "title": "2018bulawayobombing",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a449ebcccadbe3bf9cc1a57e884d51734dc6a390": {
+    "title": "influenza",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "71a50e594f7e6b8c689f7721a398e7e6854ae49c": {
+    "title": "westwycombepark",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b645953087c34e962fe1271be4f6b8ba40fd41f2": {
+    "title": "daniaramirez",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "d33c70a84710e879734238cd1b73217844eb179c": {
+    "title": "2019stanleycupplayoffs",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 11,
+   "unsupported": 15,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 15:05:09",
+  "marker_errors": [],
+  "processing_time_seconds": 442.9,
+  "source_hashes": {
+   "geirhnneland.txt": "726cb935e860cd4f004ac34a53d0c673532a1f5a",
+   "thenationalabudhabi.txt": "c793155d9525a3e2d055c1740745b7e579fa28b5",
+   "daniaramirez.txt": "cd21a2eb008790f5faa44fd9481d7dbd00dd8c2a",
+   "andrewnikou.txt": "2cb8174040a4201bf636bd980f9173246f1e9e56",
+   "shineeworldiii.txt": "33e500836aeb649641596a401efc705e294d7e0b",
+   "philippelanon.txt": "91b6c774d3992ca233bc17eceea3469bf403103b",
+   "apollo11.txt": "09ff17924f5979405970b1ab0042ec93bb896264",
+   "cyp1a2.txt": "2d9f4232208abb4f068ef40694fc354830bb3db2",
+   "spaceshuttlechallengerdi.txt": "edcb3766e16d3d9b9af1036af5877c70348ec57a",
+   "sircharlespym1stbaronet.txt": "3d5d066691516270076a383ec3a69df0156c4b62",
+   "domeoftherock.txt": "f1e2f52b28ea056458e7b68204a927beab2f27f3",
+   "2019stanleycupplayoffs.txt": "df1b86efd0fbc6762dd42466714055fc6bc3e25e",
+   "jabbathehutt.txt": "dc4a673efa203590fa5e6af176acc835bbdedf23",
+   "zachariasjimenez.txt": "3491f3b25c3ab6ff65e5c933c5cae6dfd66e84d4",
+   "icehockeyatthe2022winter.txt": "7c204149ad0ab7034f680c6ebcb76893e2a9c0c6",
+   "busras.txt": "cceebdd788914afccb9a94de2a157f43b3842222",
+   "srilankanairlines.txt": "09f1de5c92368a63a9dda3b50f80bf8f86b02439",
+   "museumofbadart.txt": "91125cff548c0ac1367cf6154675dee389b3fe86",
+   "ashlynharris.txt": "a7828a97b3664c904999eb670790ca841dc594b3",
+   "2019cricketworldcup.txt": "d828bedb3bd9e0fe29dc56aac67e9ac74f654dc1",
+   "dalehodgespark.txt": "07139ef58850189f8b6496c6138acd183178bd67",
+   "influenza.txt": "839646a70f01dd5dff9f24a281c435094b34f41c",
+   "sydenhamhighschool.txt": "f234a079cfb1268eb766d1917d6d0e56e83302f6",
+   "westwycombepark.txt": "015541af941a7e3ca8af8cca55746dd9afe6453d",
+   "fcbayernmunichjuniorteam.txt": "b10dcadb5ee20075587cc67e6fd3a190a8d62fe2",
+   "2018bulawayobombing.txt": "bbe5c33b4f6e7d98437ffb74053bc0d5dbf3a0d4"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 429,
+    "prompt_tokens": 443301,
+    "completion_tokens": 20809,
+    "cost_usd": 0.052654
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 25,
+    "prompt_tokens": 98213,
+    "completion_tokens": 61541,
+    "cost_usd": 0.024027
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 16,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 18,
+   "actions": {
+    "add_citation_or_rewrite": 14,
+    "wrong_or_insufficient_evidence": 4
+   },
+   "proof_may_exist": [
+    "t9",
+    "t19",
+    "t20",
+    "t25"
+   ],
+   "conflicts": [
+    "t2",
+    "t3",
+    "t5",
+    "t14",
+    "t18",
+    "t22"
+   ],
+   "rescued": [
+    "t25"
+   ],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "de2da5158ac9d3157492e268d5f528f8f1bb5e69",
+   "key": "geirhnneland",
+   "filename": "geirhnneland.txt",
+   "title": "geirhnneland",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "dec4b832d3e76e6550ebe7222e680c53a07405dc",
+   "key": "thenationalabudhabi",
+   "filename": "thenationalabudhabi.txt",
+   "title": "thenationalabudhabi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b645953087c34e962fe1271be4f6b8ba40fd41f2",
+   "key": "daniaramirez",
+   "filename": "daniaramirez.txt",
+   "title": "daniaramirez",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b1773315efced0b8c238713349ffc90b0a2951f2",
+   "key": "andrewnikou",
+   "filename": "andrewnikou.txt",
+   "title": "andrewnikou",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6e64d397adcb3294bf38d3d45dfd75c71d289985",
+   "key": "shineeworldiii",
+   "filename": "shineeworldiii.txt",
+   "title": "shineeworldiii",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bcf04e96d0fcb8f245192492ee093cc113b834c1",
+   "key": "philippelanon",
+   "filename": "philippelanon.txt",
+   "title": "philippelanon",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "cf4ff02745ff11c8d138d12fc1e79bb3a0d2e824",
+   "key": "apollo11",
+   "filename": "apollo11.txt",
+   "title": "apollo11",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "25de345d81f56609f151cccd1c3505b95cec13ed",
+   "key": "cyp1a2",
+   "filename": "cyp1a2.txt",
+   "title": "cyp1a2",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d555edff361aaf6c56f505773df7535f4226f054",
+   "key": "spaceshuttlechallengerdi",
+   "filename": "spaceshuttlechallengerdi.txt",
+   "title": "spaceshuttlechallengerdi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "406863909fe16b4854dbef49ce71fbc1166267d7",
+   "key": "sircharlespym1stbaronet",
+   "filename": "sircharlespym1stbaronet.txt",
+   "title": "sircharlespym1stbaronet",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fcc37693adc68b1bb1efcc61c23a408c27bc84e4",
+   "key": "domeoftherock",
+   "filename": "domeoftherock.txt",
+   "title": "domeoftherock",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "d33c70a84710e879734238cd1b73217844eb179c",
+   "key": "2019stanleycupplayoffs",
+   "filename": "2019stanleycupplayoffs.txt",
+   "title": "2019stanleycupplayoffs",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7faf9fccfee41f1e3d08b47418fcf35f3222d070",
+   "key": "jabbathehutt",
+   "filename": "jabbathehutt.txt",
+   "title": "jabbathehutt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c8baa6024a3a93ab7e17591a73ef078fa14bd509",
+   "key": "zachariasjimenez",
+   "filename": "zachariasjimenez.txt",
+   "title": "zachariasjimenez",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "84310a964bfa6c470e3c3d6f3eb060c724f55654",
+   "key": "icehockeyatthe2022winter",
+   "filename": "icehockeyatthe2022winter.txt",
+   "title": "icehockeyatthe2022winter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "659c3436f78dc51b9bbfb1eaf32df3f6fd9a9dd3",
+   "key": "busras",
+   "filename": "busras.txt",
+   "title": "busras",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "6cc1921f0c92c80c1855d3998a219486cd631141",
+   "key": "srilankanairlines",
+   "filename": "srilankanairlines.txt",
+   "title": "srilankanairlines",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3b53dd658d9c95a45af874f8186df1ef954e5670",
+   "key": "museumofbadart",
+   "filename": "museumofbadart.txt",
+   "title": "museumofbadart",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "be35d05f5b15dc531c2434c2e296cc680fcbe2dc",
+   "key": "ashlynharris",
+   "filename": "ashlynharris.txt",
+   "title": "ashlynharris",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "735e7299e408be383b4926091d507474af3ead96",
+   "key": "2019cricketworldcup",
+   "filename": "2019cricketworldcup.txt",
+   "title": "2019cricketworldcup",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ea8cfe2a5a172cb734b043713b4078c6c11ab310",
+   "key": "dalehodgespark",
+   "filename": "dalehodgespark.txt",
+   "title": "dalehodgespark",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a449ebcccadbe3bf9cc1a57e884d51734dc6a390",
+   "key": "influenza",
+   "filename": "influenza.txt",
+   "title": "influenza",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2862bd5d38ac048376ba372f5bc5ad19e79dc7af",
+   "key": "sydenhamhighschool",
+   "filename": "sydenhamhighschool.txt",
+   "title": "sydenhamhighschool",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "71a50e594f7e6b8c689f7721a398e7e6854ae49c",
+   "key": "westwycombepark",
+   "filename": "westwycombepark.txt",
+   "title": "westwycombepark",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "04b74e392e17565af15e4c0a3101f8d967f31854",
+   "key": "fcbayernmunichjuniorteam",
+   "filename": "fcbayernmunichjuniorteam.txt",
+   "title": "fcbayernmunichjuniorteam",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "329974785dc3a58a6f233b1e153381f92e546691",
+   "key": "2018bulawayobombing",
+   "filename": "2018bulawayobombing.txt",
+   "title": "2018bulawayobombing",
+   "num_claims": 0
+  }
+ ]
+}

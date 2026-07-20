@@ -1,0 +1,2715 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE test heldout batch 6 (test)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section or a specific batch of data.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "In late 2012, Nintendo released a version of the North American black edition, including \"Wii Sports\" and \"Wii Sports Resort\" games on a single disc instead of the \"New Super Mario Bros. Wii\" game and the \"Super Mario Galaxy\" soundtrack.",
+   "markers": [
+    "wii"
+   ],
+   "paper_ids": [
+    "f3cc5bd405d74e216379fa32349cd797b9fec4c2"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8564,
+   "evidence": {
+    "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+    "source_title": "wii",
+    "supported": true,
+    "sentence": "This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console.",
+    "page": 1,
+    "snippet": "This high-value configuration includes a black Wii",
+    "cosine": 0.8564,
+    "reason": "The passage states that a new configuration of the black Wii console, including 'Wii Sports' and 'Wii Sports Resort' on a single disc, began arriving in stores in late October 2012 and replaces the current black Wii that comes with 'New Super Mario Bros. Wii'.",
+    "window": "The new configuration is beginning to arrive in stores now, and will be broadly available in the U.S. by Oct. 28. This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console. This configuration replaces the current black Wii that comes with New Super Mario Bros. Wii."
+   },
+   "evidences": [
+    {
+     "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+     "source_title": "wii",
+     "supported": true,
+     "sentence": "This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console.",
+     "page": 1,
+     "snippet": "This high-value configuration includes a black Wii",
+     "cosine": 0.8564,
+     "reason": "The passage states that a new configuration of the black Wii console, including 'Wii Sports' and 'Wii Sports Resort' on a single disc, began arriving in stores in late October 2012 and replaces the current black Wii that comes with 'New Super Mario Bros. Wii'.",
+     "window": "The new configuration is beginning to arrive in stores now, and will be broadly available in the U.S. by Oct. 28. This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console. This configuration replaces the current black Wii that comes with New Super Mario Bros. Wii."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that a new configuration of the black Wii console, including 'Wii Sports' and 'Wii Sports Resort' on a single disc, began arriving in stores in late October 2012 and replaces the current black Wii that comes with 'New Super Mario Bros. Wii'.",
+   "date_inferred": true,
+   "covering": {
+    "covered": [
+     {
+      "component": "Nintendo released a version of the North American black edition in late 2012",
+      "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+      "source_title": "wii",
+      "sentence": "(meta data) TITLE: Nintendo Wii now bundled with Wii Sports, price slashed to just $129 (meta data) PUBLISHED DATETIME: 2012-10-16T01:53:48.000Z Presidents LeadDear MenVideos # Nintendo Wii now bundled with Wii Sports, price slashed to just $129 Dan GrazianoBGR NewsOctober 16, 2012Nintendo Wii now bundled with Wii Sports, price slashed to just $129 Nintendo (NTDOY) on Monday announced that it plans to cut the price of its Wii gaming console to $129.99 prior to the holiday shopping season.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: Nintendo Wii now bundled"
+     },
+     {
+      "component": "Nintendo released a version of the North American black edition in late 2012",
+      "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+      "source_title": "wii",
+      "sentence": "Nintendo Drops Price of Wii to $129.99, Includes Both Wii Sports and Wii Sports Resort Value Package Comes with Black Wii and Two Classic Games on One Disc REDMOND, Wash.\u2013(BUSINESS WIRE)\u2013Nintendo is dropping the Wii console to a suggested retail price of $129.99 U.S. in advance of the busy holiday shopping season.",
+      "page": 1,
+      "snippet": "Nintendo Drops Price of Wii to $129.99,"
+     },
+     {
+      "component": "this version included \"Wii Sports\" and \"Wii Sports Resort\" games on a single disc",
+      "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+      "source_title": "wii",
+      "sentence": "This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console.",
+      "page": 1,
+      "snippet": "This high-value configuration includes a black Wii"
+     },
+     {
+      "component": "this version included \"Wii Sports\" and \"Wii Sports Resort\" games on a single disc",
+      "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+      "source_title": "wii",
+      "sentence": "For the first time, both games are included on a single game disc.",
+      "page": 1,
+      "snippet": "For the first time, both games are"
+     },
+     {
+      "component": "this version did NOT include \"New Super Mario Bros. Wii\"",
+      "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+      "source_title": "wii",
+      "sentence": "This configuration replaces the current black Wii that comes with New Super Mario Bros. Wii.",
+      "page": 1,
+      "snippet": "This configuration replaces the current black Wii"
+     }
+    ],
+    "uncovered": [
+     "this version did NOT include the \"Super Mario Galaxy\" soundtrack"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+      "source_title": "wii",
+      "text": "(meta data) TITLE: Nintendo Wii now bundled with Wii Sports, price slashed to just $129 (meta data) PUBLISHED DATETIME: 2012-10-16T01:53:48.000Z Presidents LeadDear MenVideos # Nintendo Wii now bundled with Wii Sports, price slashed to just $129 Dan GrazianoBGR NewsOctober 16, 2012Nintendo Wii now bundled with Wii Sports, price slashed to just $129 Nintendo (NTDOY) on Monday announced that it plans to cut the price of its Wii gaming console to $129.99 prior to the holiday shopping season. The Japanese gaming company also revealed that Wii Sports and Wii Sports Resorts will now be bundled with the discounted console. Scott Moffitt, Nintendo of America's executive vice president of sales and marketing noted that \"nearly six years after it launched, people are still attracted to the pure, inclusive fun of the Wii console\" and suggested that a \"new\u2026 retail price and the inclusion of two great games make it an easy choice for families looking for a great value this holiday season.\" Nintendo expects the discounted Wii packages to arrive in U.S. stores by October 28th. The company's press release follows below. Nintendo Drops Price of Wii to $129.99, Includes Both Wii Sports and Wii Sports Resort Value Package Comes with Black Wii and Two Classic Games on One Disc REDMOND, Wash.\u2013(BUSINESS WIRE)\u2013Nintendo is dropping the Wii console to a suggested retail price of $129.99 U.S. in advance of the busy holiday shopping season. The new configuration is beginning to arrive in stores now, and will be broadly available in the U.S. by Oct. 28. This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console. This configuration replaces the current black Wii that comes with New Super Mario Bros. Wii. \"Nearly six years after it launched, people are still attracted to the pure, inclusive fun of the Wii console,\" said Scott Moffitt, Nintendo of America's executive vice president of Sales & Marketing. \"A new suggested retail price and the inclusion of two great games make it an easy choice for families looking for a great value this holiday season.\" Wii Sports and Wii Sports Resort represent two iconic games that helped pioneer the industry move toward motion-controlled video games. The games include a wide variety of sports that use the controllers in unique ways. Players can try their hand at sports like bowling, tennis, baseball, archery, table tennis and basketball, all while simulating real-life motions using the Wii Remote Plus controller. For the first time, both games are included on a single game disc.",
+      "n_used": 5
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not mention the 'Super Mario Galaxy' soundtrack or state that it was replaced.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the 'Super Mario Galaxy' soundtrack or state that it was replaced",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the previous bundle included a 'Super Mario Galaxy' soundtrack",
+    "rewrite_suggestion": "In late 2012, Nintendo released a version of the North American black edition, including 'Wii Sports' and 'Wii Sports Resort' on a single disc instead of the 'New Super Mario Bros. Wii' game.",
+    "proofs": [
+     "The new configuration is beginning to arrive in stores now, and will be broadly available in the U.S. by Oct. 28.",
+     "This high-value configuration includes a black Wii console and both Wii Sports and Wii Sports Resort on a single game disc, as well as a Wii Remote Plus and a Nunchuk controller \u2013 both black to match the console.",
+     "This configuration replaces the current black Wii that comes with New Super Mario Bros. Wii.",
+     "For the first time, both games are included on a single game disc."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentences from the source support the release of a black Wii bundle in late 2012 with Wii Sports and Wii Sports Resort on one disc, replacing the previous bundle that included New Super Mario Bros. Wii. However, the claim also states that the previous bundle contained a 'Super Mario Galaxy' soundtrack, a detail absent from the provided source text. Since this component cannot be verified from the cited source, the author must either add a citation for it or remove it from the claim."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "Phillip Liu previously worked at Facebook for four years as a software architect and Karthik Rau worked at Delphix and VMware.",
+   "markers": [
+    "signalfx"
+   ],
+   "paper_ids": [
+    "72b802c8400176ff3487c281b62a38c9e243db43"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "72b802c8400176ff3487c281b62a38c9e243db43",
+    "source_title": "signalfx",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "And my co-founder had been at Facebook for several years and he built monitoring systems at Facebook which was very state of the art different approach to solving monitoring compared to the monitoring solutions that had been on the market for twenty or thirty years.",
+    "page": 1,
+    "snippet": "And my co-founder had been at Facebook",
+    "reason": "The passage does not state that Phillip Liu worked at Facebook for four years or that Karthik Rau worked at Delphix and VMware.",
+    "votes": "2-0",
+    "window": "And my co-founder had been at Facebook for several years and he built monitoring systems at Facebook which was very state of the art different approach to solving monitoring compared to the monitoring solutions that had been on the market for twenty or thirty years. Then, I went to another startup called Delphix for a few years but I always wanted to start my own company. I think, because we've both been in the Valley for a long time and Phil had a lot of credibility around the technology because he built a similar kind of solution at Facebook, we were able to raise money right away before we hired our team. And then I went to VMware and I was there for a long time."
+   },
+   "evidences": [
+    {
+     "paper_id": "72b802c8400176ff3487c281b62a38c9e243db43",
+     "source_title": "signalfx",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "And my co-founder had been at Facebook for several years and he built monitoring systems at Facebook which was very state of the art different approach to solving monitoring compared to the monitoring solutions that had been on the market for twenty or thirty years.",
+     "page": 1,
+     "snippet": "And my co-founder had been at Facebook",
+     "reason": "The passage does not state that Phillip Liu worked at Facebook for four years or that Karthik Rau worked at Delphix and VMware.",
+     "votes": "2-0",
+     "window": "And my co-founder had been at Facebook for several years and he built monitoring systems at Facebook which was very state of the art different approach to solving monitoring compared to the monitoring solutions that had been on the market for twenty or thirty years. Then, I went to another startup called Delphix for a few years but I always wanted to start my own company. I think, because we've both been in the Valley for a long time and Phil had a lot of credibility around the technology because he built a similar kind of solution at Facebook, we were able to raise money right away before we hired our team. And then I went to VMware and I was there for a long time."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Phillip Liu worked at Facebook for four years or that Karthik Rau worked at Delphix and VMware.",
+   "subject_guard": {
+    "subject": "phillip liu",
+    "missing_from": [
+     "72b802c8400176ff3487c281b62a38c9e243db43"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states factual information about the past employment of individuals. This information is directly attributed to the cited source and is expected to be proven by it.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific claims that Phillip Liu was at Facebook for exactly four years and that his role was software architect are not supported by the source text, which only states he was there for 'several years' and built monitoring systems without specifying a title.",
+    "rewrite_suggestion": "Phillip Liu previously worked at Facebook for several years building monitoring systems, and Karthik Rau worked at Delphix and VMware.",
+    "proofs": [
+     "And my co-founder had been at Facebook for several years and he built monitoring systems at Facebook which was very state of the art different approach to solving monitoring compared to the monitoring solutions that had been on the market for twenty or thirty years.",
+     "And then I went to VMware and I was there for a long time.",
+     "Then, I went to another startup called Delphix for a few years."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim contains two components. The first component, about Phillip Liu's tenure and title, is not provable from the source: the source mentions 'several years' and 'built monitoring systems' but not 'four years' or 'software architect'. The second component, about Karthik Rau's work at Delphix and VMware, is present in the source but was not included in the shown sentences. Since the author has an unsupported subclaim, the author must add a citation or rewrite the claim to match the source. The proof sentences for the parts that can be supported are provided."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "The Government of Alberta announced a plan to airlift approximately 8,000 of 25,000 people who had evacuated to oil sands work camps north of Fort McMurray, with assistance from a Royal Canadian Air Force Hercules aircraft, and other planes owned by energy companies operating in the oil sands.",
+   "markers": [
+    "2016fortmcmurraywildfire"
+   ],
+   "paper_ids": [
+    "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+    "source_title": "2016fortmcmurraywildfire",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton.",
+    "page": 1,
+    "snippet": "About 25,000 remained in oilfield work camps",
+    "reason": "The passage explicitly states that approximately 8,000 of the 25,000 people in oilfield work camps would be moved by air, with a C-130J Hercules aircraft moved to a nearby military airfield, and that the Canadian Forces were on standby with transport aircraft.",
+    "votes": "2-0",
+    "window": "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton. At one point Tuesday night when it didn't look like a large-scale evacuation of the city would be possible, the air force was on standby with transport aircraft to go in, Eyre said from Edmonton during a conference call. The school also has room for at least 80 horses, dogs, and other animals if need be, and potentially more if there's a large demand ### 11:25 a.m. Wednesday The Canadian Forces have sent four search and rescue helicopters from Edmonton and Cold Lake, which can be used to tactical support and rescues. Scott Long with Alberta Emergency Management said the agency would move out the most vulnerable \u2014 about 8,000 or so \u2014 by air. Additionally, a C-130J Hercules has been moved to the nearby military airfield in Cold Lake, while a second Hercules and a C-17 Globemaster heavy-lift transport on standby at the country's largest military airbase in Trenton, Ont., to aid in the movement of firefighters and equipment. The government said it would begin to move out the evacuees in the camps so that they could get more social support in the south. \"Right now the ask is for helicopters to help with the evacuation,\" said Brigadier-General Wayne Eyre, Commander of the Joint Task Force West. The municipality asked for help from the Canadian military."
+   },
+   "evidences": [
+    {
+     "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+     "source_title": "2016fortmcmurraywildfire",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton.",
+     "page": 1,
+     "snippet": "About 25,000 remained in oilfield work camps",
+     "reason": "The passage explicitly states that approximately 8,000 of the 25,000 people in oilfield work camps would be moved by air, with a C-130J Hercules aircraft moved to a nearby military airfield, and that the Canadian Forces were on standby with transport aircraft.",
+     "votes": "2-0",
+     "window": "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton. At one point Tuesday night when it didn't look like a large-scale evacuation of the city would be possible, the air force was on standby with transport aircraft to go in, Eyre said from Edmonton during a conference call. The school also has room for at least 80 horses, dogs, and other animals if need be, and potentially more if there's a large demand ### 11:25 a.m. Wednesday The Canadian Forces have sent four search and rescue helicopters from Edmonton and Cold Lake, which can be used to tactical support and rescues. Scott Long with Alberta Emergency Management said the agency would move out the most vulnerable \u2014 about 8,000 or so \u2014 by air. Additionally, a C-130J Hercules has been moved to the nearby military airfield in Cold Lake, while a second Hercules and a C-17 Globemaster heavy-lift transport on standby at the country's largest military airbase in Trenton, Ont., to aid in the movement of firefighters and equipment. The government said it would begin to move out the evacuees in the camps so that they could get more social support in the south. \"Right now the ask is for helicopters to help with the evacuation,\" said Brigadier-General Wayne Eyre, Commander of the Joint Task Force West. The municipality asked for help from the Canadian military."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that approximately 8,000 of the 25,000 people in oilfield work camps would be moved by air, with a C-130J Hercules aircraft moved to a nearby military airfield, and that the Canadian Forces were on standby with transport aircraft.",
+   "covering": {
+    "covered": [
+     {
+      "component": "25,000 people had evacuated to oil sands work camps north of Fort McMurray",
+      "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+      "source_title": "2016fortmcmurraywildfire",
+      "sentence": "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton.",
+      "page": 1,
+      "snippet": "About 25,000 remained in oilfield work camps"
+     },
+     {
+      "component": "Government of Alberta announced a plan to airlift approximately 8,000 people",
+      "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+      "source_title": "2016fortmcmurraywildfire",
+      "sentence": "Scott Long with Alberta Emergency Management said the agency would move out the most vulnerable \u2014 about 8,000 or so \u2014 by air.",
+      "page": 1,
+      "snippet": "Scott Long with Alberta Emergency Management said",
+      "via": "escalation"
+     },
+     {
+      "component": "assistance from a Royal Canadian Air Force Hercules aircraft",
+      "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+      "source_title": "2016fortmcmurraywildfire",
+      "sentence": "Additionally, a C-130J Hercules has been moved to the nearby military airfield in Cold Lake, while a second Hercules and a C-17 Globemaster heavy-lift transport on standby at the country's largest military airbase in Trenton, Ont., to aid in the movement of firefighters and equipment.",
+      "page": 1,
+      "snippet": "Additionally, a C-130J Hercules has been moved",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "other planes owned by energy companies operating in the oil sands"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+      "source_title": "2016fortmcmurraywildfire",
+      "text": "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton. The government said it would begin to move out the evacuees in the camps so that they could get more social support in the south. Highway 63 is the only road through the city and those in the north were cut off when it was barricaded. Scott Long with Alberta Emergency Management said the agency would move out the most vulnerable \u2014 about 8,000 or so \u2014 by air. [\u2026] Additionally, a C-130J Hercules has been moved to the nearby military airfield in Cold Lake, while a second Hercules and a C-17 Globemaster heavy-lift transport on standby at the country's largest military airbase in Trenton, Ont., to aid in the movement of firefighters and equipment.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state that the Government of Alberta announced a plan to airlift approximately 8,000 people, nor does it mention other planes owned by energy companies.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the Government of Alberta announced a plan to airlift approximately 8,000 people",
+      "found_in": [],
+      "searched": 0
+     },
+     {
+      "component": "does it mention other planes owned by energy companies",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "with assistance from a Royal Canadian Air Force Hercules aircraft (the source mentions a Hercules but for firefighting support, not for airlifting evacuees) and other planes owned by energy companies (no mention in source).",
+    "rewrite_suggestion": "The Government of Alberta, through Scott Long of Alberta Emergency Management, announced a plan to airlift approximately 8,000 of 25,000 people who had evacuated to oil sands work camps north of Fort McMurray.",
+    "proofs": [
+     "About 25,000 remained in oilfield work camps north of the city, while the rest had moved south to stay in hotels, in campgrounds, with friends or in designated centres that included Edmonton.",
+     "Scott Long with Alberta Emergency Management said the agency would move out the most vulnerable \u2014 about 8,000 or so \u2014 by air."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes two components not provable from the cited source: that a Royal Canadian Air Force Hercules aircraft assisted in the airlift of evacuees (the source only mentions a Hercules for moving firefighters and equipment), and that planes owned by energy companies were used (no mention in the source). The shown sentences adequately cover the main factual core (25,000 in camps, plan to airlift 8,000), but the unsourced additions require the author to either add a citation or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "However, unlike many other derbies, it is not rare for families in the city to contain supporters of both clubs.",
+   "markers": [
+    "liverpool"
+   ],
+   "paper_ids": [
+    "a5d0d12347e7a0d9710698057bc886d6ff2b1999"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7138,
+   "evidence": {
+    "paper_id": "a5d0d12347e7a0d9710698057bc886d6ff2b1999",
+    "source_title": "liverpool",
+    "supported": true,
+    "sentence": "It's for example not very rare to have reds as well as blues in the same family.",
+    "page": 1,
+    "snippet": "It's for example not very rare to",
+    "cosine": 0.7138,
+    "reason": "The passage states that it is not rare to have 'reds as well as blues in the same family', which directly supports the claim that families in the city contain supporters of both clubs.",
+    "window": "(meta data) TITLE: Everton vs. Liverpool FC Free bets BratislavaInter PalmasLazio RomaLegia WarsawLensLevski SofiaLilleLiverpool FCLKS FCMohun BaganNAC BredaNacional MontevideoNEC CitySturm GrazSunderland AFCSwansea CitySydney FCTenerifeThe StrongestTokyo # EVERTON - LIVERPOOL FC THE MERSEYSIDE DERBY The Merseyside derby is being played since 1894 and sometimes this match is also referred to as 'The Friendly Derby'. It's for example not very rare to have reds as well as blues in the same family. # Everton"
+   },
+   "evidences": [
+    {
+     "paper_id": "a5d0d12347e7a0d9710698057bc886d6ff2b1999",
+     "source_title": "liverpool",
+     "supported": true,
+     "sentence": "It's for example not very rare to have reds as well as blues in the same family.",
+     "page": 1,
+     "snippet": "It's for example not very rare to",
+     "cosine": 0.7138,
+     "reason": "The passage states that it is not rare to have 'reds as well as blues in the same family', which directly supports the claim that families in the city contain supporters of both clubs.",
+     "window": "(meta data) TITLE: Everton vs. Liverpool FC Free bets BratislavaInter PalmasLazio RomaLegia WarsawLensLevski SofiaLilleLiverpool FCLKS FCMohun BaganNAC BredaNacional MontevideoNEC CitySturm GrazSunderland AFCSwansea CitySydney FCTenerifeThe StrongestTokyo # EVERTON - LIVERPOOL FC THE MERSEYSIDE DERBY The Merseyside derby is being played since 1894 and sometimes this match is also referred to as 'The Friendly Derby'. It's for example not very rare to have reds as well as blues in the same family. # Everton"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that it is not rare to have 'reds as well as blues in the same family', which directly supports the claim that families in the city contain supporters of both clubs.",
+   "covering": {
+    "covered": [
+     {
+      "component": "families in the city contain supporters of both clubs",
+      "paper_id": "a5d0d12347e7a0d9710698057bc886d6ff2b1999",
+      "source_title": "liverpool",
+      "sentence": "It's for example not very rare to have reds as well as blues in the same family.",
+      "page": 1,
+      "snippet": "It's for example not very rare to"
+     }
+    ],
+    "uncovered": [
+     "unlike many other derbies"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a5d0d12347e7a0d9710698057bc886d6ff2b1999",
+      "source_title": "liverpool",
+      "text": "It's for example not very rare to have reds as well as blues in the same family.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the comparative statement 'unlike many other derbies'",
+    "rewrite_suggestion": "It is not rare for families in the city to contain supporters of both clubs.",
+    "proofs": [
+     "It's for example not very rare to have reds as well as blues in the same family."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the claim that it is not rare for families to contain supporters of both clubs, but the claim also includes an unsourced comparative statement 'unlike many other derbies' which is not found anywhere in the provided source text. That component is not provable from the source, so the author must either add a citation for that comparison or remove it to match the source."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "He said the project would bring \"colossal\" benefits and \"turbo-charge the economy\".",
+   "markers": [
+    "premiershipofborisjohnso"
+   ],
+   "paper_ids": [
+    "84e94c3d037493fea1a32a301d238823f4f8a525"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.853,
+   "evidence": {
+    "paper_id": "84e94c3d037493fea1a32a301d238823f4f8a525",
+    "source_title": "premiershipofborisjohnso",
+    "supported": true,
+    "sentence": "In a speech in Manchester he gave his backing to the trans-Pennine transport link to \"turbo-charge the economy\".",
+    "page": 1,
+    "snippet": "In a speech in Manchester he gave",
+    "cosine": 0.853,
+    "reason": "The passage directly quotes Boris Johnson making the exact claims about 'colossal' benefits and 'turbo-charge the economy'.",
+    "window": "Prime Minister Boris Johnson has promised a faster rail route between Leeds and Manchester, claiming the benefits would be \"colossal\". In a speech in Manchester he gave his backing to the trans-Pennine transport link to \"turbo-charge the economy\". Standing in front of Stephenson's Rocket he said mass transport systems enabled people to prosper."
+   },
+   "evidences": [
+    {
+     "paper_id": "84e94c3d037493fea1a32a301d238823f4f8a525",
+     "source_title": "premiershipofborisjohnso",
+     "supported": true,
+     "sentence": "In a speech in Manchester he gave his backing to the trans-Pennine transport link to \"turbo-charge the economy\".",
+     "page": 1,
+     "snippet": "In a speech in Manchester he gave",
+     "cosine": 0.853,
+     "reason": "The passage directly quotes Boris Johnson making the exact claims about 'colossal' benefits and 'turbo-charge the economy'.",
+     "window": "Prime Minister Boris Johnson has promised a faster rail route between Leeds and Manchester, claiming the benefits would be \"colossal\". In a speech in Manchester he gave his backing to the trans-Pennine transport link to \"turbo-charge the economy\". Standing in front of Stephenson's Rocket he said mass transport systems enabled people to prosper."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly quotes Boris Johnson making the exact claims about 'colossal' benefits and 'turbo-charge the economy'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "He said the project would bring \"colossal\" benefits",
+      "paper_id": "84e94c3d037493fea1a32a301d238823f4f8a525",
+      "source_title": "premiershipofborisjohnso",
+      "sentence": "Prime Minister Boris Johnson has promised a faster rail route between Leeds and Manchester, claiming the benefits would be \"colossal\".",
+      "page": 1,
+      "snippet": "Prime Minister Boris Johnson has promised a"
+     },
+     {
+      "component": "He said the project would \"turbo-charge the economy\"",
+      "paper_id": "84e94c3d037493fea1a32a301d238823f4f8a525",
+      "source_title": "premiershipofborisjohnso",
+      "sentence": "In a speech in Manchester he gave his backing to the trans-Pennine transport link to \"turbo-charge the economy\".",
+      "page": 1,
+      "snippet": "In a speech in Manchester he gave"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "84e94c3d037493fea1a32a301d238823f4f8a525",
+      "source_title": "premiershipofborisjohnso",
+      "text": "Prime Minister Boris Johnson has promised a faster rail route between Leeds and Manchester, claiming the benefits would be \"colossal\". In a speech in Manchester he gave his backing to the trans-Pennine transport link to \"turbo-charge the economy\".",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t6",
+   "text": "Efron has been cast to voice Fred Jones in Warner Bros.' 2020 \"Scooby-Doo\" animated film.",
+   "markers": [
+    "zacefron"
+   ],
+   "paper_ids": [
+    "49ac46ddb26bc510d7aa6739a67df77c83a1e215"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+    "source_title": "zacefron",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\"",
+    "page": 1,
+    "snippet": "Variety Intelligence Platform March 22, 2019 3:23PM",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\" \"Scoob\" will open on May 15, 2020."
+   },
+   "evidences": [
+    {
+     "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+     "source_title": "zacefron",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\"",
+     "page": 1,
+     "snippet": "Variety Intelligence Platform March 22, 2019 3:23PM",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\" \"Scoob\" will open on May 15, 2020."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "Efron cast to voice Fred Jones",
+      "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+      "source_title": "zacefron",
+      "sentence": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\"",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform March 22, 2019 3:23PM"
+     },
+     {
+      "component": "in Warner Bros.' animated \"Scooby-Doo\" film",
+      "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+      "source_title": "zacefron",
+      "sentence": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\"",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform March 22, 2019 3:23PM"
+     },
+     {
+      "component": "film released in 2020",
+      "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+      "source_title": "zacefron",
+      "sentence": "\"Scoob\" will open on May 15, 2020.",
+      "page": 1,
+      "snippet": "\"Scoob\" will open on May 15, 2020.",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+      "source_title": "zacefron",
+      "text": "Variety Intelligence Platform March 22, 2019 3:23PM PT # Zac Efron, Amanda Seyfried Join Animated Scooby-Doo Film as Fred and Daphne CREDIT: Shutterstock Zac Efron has signed on to voice Fred Jones while Amanda Seyfried will voice Daphne Blake in Warner Bros.' animated Scooby-Doo feature film \"Scoob.\" [\u2026] \"Scoob\" will open on May 15, 2020.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t7",
+   "text": "Jeffrey John Wolf won the title after defeating Mikael Torpegaard 6\u20137, 6\u20133, 6\u20134 in the final.",
+   "markers": [
+    "2019columbuschallengersi"
+   ],
+   "paper_ids": [
+    "1de17f655d94bfbafb83a58458c0e37be9930bc1"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8668,
+   "evidence": {
+    "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+    "source_title": "2019columbuschallengersi",
+    "supported": true,
+    "sentence": "Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University.",
+    "page": 1,
+    "snippet": "Wolf, 20, beat Mikael Torpegaard of Denmark",
+    "cosine": 0.8668,
+    "reason": "The passage states that JJ Wolf won the men's singles champion title after beating Mikael Torpegaard in the final of the Columbus Challenger tournament.",
+    "window": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio \u2014 Cincinnati native JJ Wolf took the men's singles champion title at an international tennis tournament in Columbus Sunday. Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University. The Cincinnati Country Day grad is currently a junior at OSU."
+   },
+   "evidences": [
+    {
+     "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+     "source_title": "2019columbuschallengersi",
+     "supported": true,
+     "sentence": "Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University.",
+     "page": 1,
+     "snippet": "Wolf, 20, beat Mikael Torpegaard of Denmark",
+     "cosine": 0.8668,
+     "reason": "The passage states that JJ Wolf won the men's singles champion title after beating Mikael Torpegaard in the final of the Columbus Challenger tournament.",
+     "window": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio \u2014 Cincinnati native JJ Wolf took the men's singles champion title at an international tennis tournament in Columbus Sunday. Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University. The Cincinnati Country Day grad is currently a junior at OSU."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that JJ Wolf won the men's singles champion title after beating Mikael Torpegaard in the final of the Columbus Challenger tournament.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Winner of the final",
+      "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+      "source_title": "2019columbuschallengersi",
+      "sentence": "Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University.",
+      "page": 1,
+      "snippet": "Wolf, 20, beat Mikael Torpegaard of Denmark"
+     },
+     {
+      "component": "Winner of the final",
+      "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+      "source_title": "2019columbuschallengersi",
+      "sentence": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio \u2014 Cincinnati native JJ Wolf took the men's singles champion title at an international tennis tournament in Columbus Sunday.",
+      "page": 1,
+      "snippet": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio"
+     },
+     {
+      "component": "Loser of the final",
+      "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+      "source_title": "2019columbuschallengersi",
+      "sentence": "Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University.",
+      "page": 1,
+      "snippet": "Wolf, 20, beat Mikael Torpegaard of Denmark"
+     },
+     {
+      "component": "John Wolf",
+      "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+      "source_title": "2019columbuschallengersi",
+      "sentence": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio \u2014 Cincinnati native JJ Wolf took the men's singles champion title at an international tennis tournament in Columbus Sunday.",
+      "page": 1,
+      "snippet": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio",
+      "via": "escalation"
+     }
+    ],
+    "uncovered": [
+     "Score of the final"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+      "source_title": "2019columbuschallengersi",
+      "text": "(Photo by Jordan Mansfield/Getty Images) COLUMBUS, Ohio \u2014 Cincinnati native JJ Wolf took the men's singles champion title at an international tennis tournament in Columbus Sunday. Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "The passage does not state the final score of the match.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the final score of the match",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific set scores '6\u20137, 6\u20133, 6\u20134'",
+    "rewrite_suggestion": "Jeffrey John Wolf won the title after defeating Mikael Torpegaard in the final of the Columbus Challenger tournament.",
+    "proofs": [
+     "Cincinnati native JJ Wolf took the men's singles champion title at an international tennis tournament in Columbus Sunday.",
+     "Wolf, 20, beat Mikael Torpegaard of Denmark in the final of the Columbus Challenger tournament, which is held at Ohio State University."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes a precise set score (6\u20137, 6\u20133, 6\u20134) that is not mentioned anywhere in the provided source text. The source confirms that Wolf won the title and beat Torpegaard in the final, but lacks the score. Therefore, the score component is unsourced, requiring the author to add a citation or rewrite the claim to omit that detail."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "It was announced in April 2005 that Belladonna, Spitz and Bello would return to Anthrax for a reunion tour and potentially new recordings.",
+   "markers": [
+    "listofanthraxmembers"
+   ],
+   "paper_ids": [
+    "b426f05dffb75363f78de25e5c18618a9bce0d32"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9069,
+   "evidence": {
+    "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+    "source_title": "listofanthraxmembers",
+    "supported": true,
+    "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+    "page": 1,
+    "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among",
+    "cosine": 0.9069,
+    "reason": "The passage confirms that Joey Belladonna, Frank Bello, and Dan Spitz were part of the 'Among The Living' lineup of Anthrax reuniting, with plans to discuss new music releases.",
+    "window": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion. This history-making ANTHRAX global press conference and luncheon will take place on April 1, 2005 at 2:00 p.m. EST/11:00 a.m. PST at Sirius Satellite Radio in New York City."
+   },
+   "evidences": [
+    {
+     "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+     "source_title": "listofanthraxmembers",
+     "supported": true,
+     "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+     "page": 1,
+     "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among",
+     "cosine": 0.9069,
+     "reason": "The passage confirms that Joey Belladonna, Frank Bello, and Dan Spitz were part of the 'Among The Living' lineup of Anthrax reuniting, with plans to discuss new music releases.",
+     "window": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion. This history-making ANTHRAX global press conference and luncheon will take place on April 1, 2005 at 2:00 p.m. EST/11:00 a.m. PST at Sirius Satellite Radio in New York City."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage confirms that Joey Belladonna, Frank Bello, and Dan Spitz were part of the 'Among The Living' lineup of Anthrax reuniting, with plans to discuss new music releases.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Announcement date",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "This history-making ANTHRAX global press conference and luncheon will take place on April 1, 2005 at 2:00 p.m. EST/11:00 a.m. PST at Sirius Satellite Radio in New York City.",
+      "page": 1,
+      "snippet": "This history-making ANTHRAX global press conference and"
+     },
+     {
+      "component": "Belladonna returning",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among"
+     },
+     {
+      "component": "Spitz returning",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among"
+     },
+     {
+      "component": "Bello returning",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among"
+     },
+     {
+      "component": "Reunion tour planned",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among"
+     },
+     {
+      "component": "Potential new recordings",
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "sentence": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: It's Official: Anthrax's 'Among"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+      "source_title": "listofanthraxmembers",
+      "text": "(meta data) TITLE: It's Official: Anthrax's 'Among The Living' Lineup To Reunite - Blabbermouth.net (meta data) AUTHOR: Blabbermouth # Blabbermouth.net - # It's Official: ANTHRAX's 'Among The Living' Lineup To Reunite March 24, 2005 For the first time in 13 years, the entire \"Among the Living\" lineup of ANTHRAX \u2014 Joey Belladonna (vocals), Frank Bello (bass), Charlie Benante (drums), Scott Ian (guitar) and Dan Spitz (guitar) \u2014 will gather together in one room to discuss new music releases, as well as the future plans for this monumental ANTHRAX reunion. This history-making ANTHRAX global press conference and luncheon will take place on April 1, 2005 at 2:00 p.m. EST/11:00 a.m. PST at Sirius Satellite Radio in New York City.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t9",
+   "text": "On 18 July 2019, Harness joined League One rivals Portsmouth on a three-year deal for an undisclosed fee.",
+   "markers": [
+    "marcusharness"
+   ],
+   "paper_ids": [
+    "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4",
+    "source_title": "marcusharness",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee.",
+    "page": 1,
+    "snippet": "Portsmouth have signed winger Marcus Harness from",
+    "reason": "The date of the transfer is not mentioned in the provided sources.",
+    "votes": "2-0",
+    "window": "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee. Marcus Harness joined Burton as a teenager and went on to have loan stints with Ilkeston, Aldershot and Port Vale before establishing himself as a first-team player with the Brewers"
+   },
+   "evidences": [
+    {
+     "paper_id": "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4",
+     "source_title": "marcusharness",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee.",
+     "page": 1,
+     "snippet": "Portsmouth have signed winger Marcus Harness from",
+     "reason": "The date of the transfer is not mentioned in the provided sources.",
+     "votes": "2-0",
+     "window": "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee. Marcus Harness joined Burton as a teenager and went on to have loan stints with Ilkeston, Aldershot and Port Vale before establishing himself as a first-team player with the Brewers"
+    }
+   ],
+   "votes": null,
+   "reason": "The date of the transfer is not mentioned in the provided sources.",
+   "component_check": {
+    "found": [
+     "Harness joined League One rivals Portsmouth",
+     "on a three-year deal",
+     "for an undisclosed fee"
+    ],
+    "missing": [
+     "on 18 July 2019"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Harness joined League One rivals Portsmouth",
+      "paper_id": "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4",
+      "source_title": "marcusharness",
+      "sentence": "Marcus Harness joined Burton as a teenager and went on to have loan stints with Ilkeston, Aldershot and Port Vale before establishing himself as a first-team player with the Brewers",
+      "page": 1
+     },
+     {
+      "component": "on a three-year deal",
+      "paper_id": "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4",
+      "source_title": "marcusharness",
+      "sentence": "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee.",
+      "page": 1
+     },
+     {
+      "component": "for an undisclosed fee",
+      "paper_id": "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4",
+      "source_title": "marcusharness",
+      "sentence": "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On 18 July 2019, Harness joined League One rivals Portsmouth on a three-year deal for an undisclosed fee.",
+    "reason": "The passage asserts specific facts (date, club, contract length, fee) that are directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove these factual statements.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date '18 July 2019' (the year 2019 is not stated in the source) and the characterization 'League One rivals' (the source does not describe Portsmouth or Burton as League One rivals).",
+    "rewrite_suggestion": "On 18 July, Harness joined Portsmouth on a three-year deal for an undisclosed fee.",
+    "proofs": [
+     "18 Jul From the section Portsmouth",
+     "Portsmouth have signed winger Marcus Harness from Burton Albion on a three-year deal for an undisclosed fee."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence covers the transfer details (player, team, three-year deal, undisclosed fee) but lacks the date and the descriptor 'League One rivals'. The source contains the date '18 Jul' but not the year 2019, and it never states that the clubs are League One rivals. Therefore the claim includes unsourced components that require either a new citation or a rewrite to match what the source supports."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "Mason played on with Souths for 3 more years, but was not a member of the 1955 premiership winning side which defeated Newtown 12-11.",
+   "markers": [
+    "raymason"
+   ],
+   "paper_ids": [
+    "3fbda1786a6f7f4dd5a728b5c15a25eb854aa734"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8461,
+   "evidence": {
+    "paper_id": "3fbda1786a6f7f4dd5a728b5c15a25eb854aa734",
+    "source_title": "raymason",
+    "supported": false,
+    "sentence": "However after spending their first four seasons firmly anchored to the bottom of the ladder (finishing ninth and eighth twice out of ten teams), Manly were well and truly in the mix come 1951, finishing an impressive second \u2013 albeit a whopping 11 points behind South Sydney, a Club that had already won 12 Premierships by that point.",
+    "page": 1,
+    "snippet": "However after spending their first four seasons",
+    "cosine": 0.8461,
+    "reason": "The passage does not mention Mason's playing career with Souths after 1951 or the 1955 premiership winning side.",
+    "window": "As the competition's newcomers, Manly weren't expected to cause any real damage in their first few years of battle \u2013 the side having entered the top flight competition in 1947. However after spending their first four seasons firmly anchored to the bottom of the ladder (finishing ninth and eighth twice out of ten teams), Manly were well and truly in the mix come 1951, finishing an impressive second \u2013 albeit a whopping 11 points behind South Sydney, a Club that had already won 12 Premierships by that point. The men in red and green had returned to Premiership supremacy in 1950, defeating Wests in the Grand Final of that year, ending a drought of 18 years."
+   },
+   "evidences": [
+    {
+     "paper_id": "3fbda1786a6f7f4dd5a728b5c15a25eb854aa734",
+     "source_title": "raymason",
+     "supported": false,
+     "sentence": "However after spending their first four seasons firmly anchored to the bottom of the ladder (finishing ninth and eighth twice out of ten teams), Manly were well and truly in the mix come 1951, finishing an impressive second \u2013 albeit a whopping 11 points behind South Sydney, a Club that had already won 12 Premierships by that point.",
+     "page": 1,
+     "snippet": "However after spending their first four seasons",
+     "cosine": 0.8461,
+     "reason": "The passage does not mention Mason's playing career with Souths after 1951 or the 1955 premiership winning side.",
+     "window": "As the competition's newcomers, Manly weren't expected to cause any real damage in their first few years of battle \u2013 the side having entered the top flight competition in 1947. However after spending their first four seasons firmly anchored to the bottom of the ladder (finishing ninth and eighth twice out of ten teams), Manly were well and truly in the mix come 1951, finishing an impressive second \u2013 albeit a whopping 11 points behind South Sydney, a Club that had already won 12 Premierships by that point. The men in red and green had returned to Premiership supremacy in 1950, defeating Wests in the Grand Final of that year, ending a drought of 18 years."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "mason",
+    "missing_from": [
+     "3fbda1786a6f7f4dd5a728b5c15a25eb854aa734"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Mason played on with Souths for 3 more years, but was not a member of the 1955 premiership winning side which defeated Newtown 12-11.",
+    "reason": "The passage asserts specific facts about Mason's career, including his tenure with Souths and his non-participation in the 1955 premiership winning side. These are factual claims that the cited source would be expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "All components of the claim \u2014 Mason playing on with Souths for 3 more years, not being in the 1955 premiership side, and that side defeating Newtown 12-11 \u2014 are absent from the cited source.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text focuses on the 1951 season and the rivalry between South Sydney and Manly; it contains no mention of any player named Mason, the year 1955, or a premiership win over Newtown. Therefore every component of the claim is unsupported by the cited source, requiring the author to either add a correct citation or rewrite the claim."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "Initially, the battalion was based at the Fort Osborne Barracks, now the location of the Rady Jewish Community Centre.",
+   "markers": [
+    "winnipeg"
+   ],
+   "paper_ids": [
+    "059ae20cff3b0d3687e9f240792c8bc1f443b91b"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+    "source_title": "winnipeg",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "In 1919 the army took over the entire complex, renaming it Fort Osborne Barracks.",
+    "page": 1,
+    "snippet": "In 1919 the army took over the",
+    "reason": "The passage states that in 1919 the army took over the complex and renamed it Fort Osborne Barracks, and that in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, which is now the Rady Jewish Community Centre.",
+    "votes": "2-0",
+    "window": "In 1919 the army took over the entire complex, renaming it Fort Osborne Barracks. It remained the primary army base in Manitoba until 1968, when new barracks were constructed farther south. The property was again sold, and in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, returning to its educational roots."
+   },
+   "evidences": [
+    {
+     "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+     "source_title": "winnipeg",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "In 1919 the army took over the entire complex, renaming it Fort Osborne Barracks.",
+     "page": 1,
+     "snippet": "In 1919 the army took over the",
+     "reason": "The passage states that in 1919 the army took over the complex and renamed it Fort Osborne Barracks, and that in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, which is now the Rady Jewish Community Centre.",
+     "votes": "2-0",
+     "window": "In 1919 the army took over the entire complex, renaming it Fort Osborne Barracks. It remained the primary army base in Manitoba until 1968, when new barracks were constructed farther south. The property was again sold, and in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, returning to its educational roots."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that in 1919 the army took over the complex and renamed it Fort Osborne Barracks, and that in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, which is now the Rady Jewish Community Centre.",
+   "covering": {
+    "covered": [
+     {
+      "component": "the battalion was based at the Fort Osborne Barracks",
+      "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+      "source_title": "winnipeg",
+      "sentence": "In 1919 the army took over the entire complex, renaming it Fort Osborne Barracks.",
+      "page": 1,
+      "snippet": "In 1919 the army took over the"
+     },
+     {
+      "component": "Fort Osborne Barracks is now the location of the Rady Jewish Community Centre",
+      "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+      "source_title": "winnipeg",
+      "sentence": "The property was again sold, and in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, returning to its educational roots.",
+      "page": 1,
+      "snippet": "The property was again sold, and in"
+     },
+     {
+      "component": "Fort Osborne Barracks is now the location of the Rady Jewish Community Centre",
+      "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+      "source_title": "winnipeg",
+      "sentence": "Present Owner: The Jewish Community Campus of Winnipeg Inc.",
+      "page": 1,
+      "snippet": "Present Owner: The Jewish Community Campus of"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+      "source_title": "winnipeg",
+      "text": "Present Owner: The Jewish Community Campus of Winnipeg Inc. Here, in 1906, the Provincial Government established the Manitoba Agricultural College to educate students in the practices of farming. It was the first college of its kind in Western Canada, and only the third in the country. Samuel Hooper, the first Provincial Architect, designed the original College buildings, setting them in a formal Edwardian plan, in which the buildings were arrayed around a long oval drive. By 1913 the College had outgrown this campus. It was relocated to a new Fort Garry site, which later became the campus of the University of Manitoba. From 1914 until 1917 this site was used by the Manitoba School for the Deaf, the first such institution in Western Canada. In 1917 it was transformed into a military convalescent hospital for wounded soldiers returning from Europe. In 1919 the army took over the entire complex, renaming it Fort Osborne Barracks. It remained the primary army base in Manitoba until 1968, when new barracks were constructed farther south. The Province re acquired the property and converted a number of buildings to house government departments. The property was again sold, and in 1997 the site was redeveloped as the Asper Jewish Community Campus of Winnipeg, returning to its educational roots.",
+      "n_used": 3
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t12",
+   "text": "In 2016, he was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC) which is organized by the World Bank Group.",
+   "markers": [
+    "feikesijbesma"
+   ],
+   "paper_ids": [
+    "11553594f194c6cabb6145d7a0e284d6380cea65"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "11553594f194c6cabb6145d7a0e284d6380cea65",
+    "source_title": "feikesijbesma",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France, and Feike Sijbesma, CEO of Royal DSM, co-chaired the Assembly.",
+    "page": 1,
+    "snippet": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France,",
+    "reason": "The passage does not state that the individual was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC) in 2016, nor does it mention the World Bank Group organizing it.",
+    "votes": "2-0",
+    "window": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France, and Feike Sijbesma, CEO of Royal DSM, co-chaired the Assembly."
+   },
+   "evidences": [
+    {
+     "paper_id": "11553594f194c6cabb6145d7a0e284d6380cea65",
+     "source_title": "feikesijbesma",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France, and Feike Sijbesma, CEO of Royal DSM, co-chaired the Assembly.",
+     "page": 1,
+     "snippet": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France,",
+     "reason": "The passage does not state that the individual was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC) in 2016, nor does it mention the World Bank Group organizing it.",
+     "votes": "2-0",
+     "window": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France, and Feike Sijbesma, CEO of Royal DSM, co-chaired the Assembly."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the individual was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC) in 2016, nor does it mention the World Bank Group organizing it.",
+   "component_check": {
+    "found": [
+     "In 2016, he was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC)"
+    ],
+    "missing": [
+     "The Carbon Pricing Leadership Coalition (CPLC) is organized by the World Bank Group"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In 2016, he was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC)",
+      "paper_id": "11553594f194c6cabb6145d7a0e284d6380cea65",
+      "source_title": "feikesijbesma",
+      "sentence": "S\u00e9gol\u00e8ne Royal, Minster of Environment for France, and Feike Sijbesma, CEO of Royal DSM, co-chaired the Assembly.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In 2016, he was named Co-Chair of the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC) which is organized by the World Bank Group.",
+    "reason": "The passage states a specific fact (an appointment and the organizing body) that is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the CPLC is 'organized by the World Bank Group' is not supported by the source; the source does not state that the World Bank Group organizes the CPLC.",
+    "rewrite_suggestion": "In 2016, he co-chaired the High Level Assembly of the Carbon Pricing Leadership Coalition (CPLC).",
+    "proofs": [
+     "On Friday, April 15, the CPLC held its first ever High-Level Assembly, a governance meeting bringing together leading diplomats, heads of government, and executive representation of all Coalition partners.",
+     "S\u00e9gol\u00e8ne Royal, Minster of Environment for France, and Feike Sijbesma, CEO of Royal DSM, co-chaired the Assembly."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence ('S\u00e9gol\u00e8ne Royal... co-chaired the Assembly') supports that Feike Sijbesma co-chaired the High-Level Assembly, but it does not mention the year 2016 nor the claim that the CPLC is organized by the World Bank Group. The year is provable from the source (the article dates the assembly as April 15, 2016), but the 'organized by the World Bank Group' component is not present anywhere in the source text. Since at least one substantive component is unprovable from the source, the author must add a citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "Watt received the AP NFL Defensive Player of the Year Award three times in his first five seasons.",
+   "markers": [
+    "jjwatt"
+   ],
+   "paper_ids": [
+    "fc886923259fe0e386faf44c175ef22d3f22d216"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+    "source_title": "jjwatt",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Watt was announced Saturday as the Defensive Player of the Year for the second time in three seasons at NFL Honors.",
+    "page": 1,
+    "snippet": "Watt was announced Saturday as the Defensive",
+    "reason": "The passage only states Watt received the award twice in three seasons, not three times in five seasons.",
+    "votes": "2-0",
+    "window": "Watt was announced Saturday as the Defensive Player of the Year for the second time in three seasons at NFL Honors. On Saturday, Watt earned the hardware to prove it."
+   },
+   "evidences": [
+    {
+     "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+     "source_title": "jjwatt",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Watt was announced Saturday as the Defensive Player of the Year for the second time in three seasons at NFL Honors.",
+     "page": 1,
+     "snippet": "Watt was announced Saturday as the Defensive",
+     "reason": "The passage only states Watt received the award twice in three seasons, not three times in five seasons.",
+     "votes": "2-0",
+     "window": "Watt was announced Saturday as the Defensive Player of the Year for the second time in three seasons at NFL Honors. On Saturday, Watt earned the hardware to prove it."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage only states Watt received the award twice in three seasons, not three times in five seasons.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Watt received the AP NFL Defensive Player of the Year Award three times in his first five seasons.",
+    "reason": "The passage directly states a factual claim about J.J. Watt's awards, which is expected to be supported by the cited source. This falls under the default 'full' scope as it's a statement of fact attributed to the cited work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts Watt won the award three times, but the cited source only documents two wins (2012 and 2014) and never mentions a third award. The phrase \"in his first five seasons\" is also not stated or inferable from the source text.",
+    "rewrite_suggestion": "Watt received the AP NFL Defensive Player of the Year Award twice, winning his second in the 2014 season and becoming a two-time winner.",
+    "proofs": [
+     "Watt was announced Saturday as the Defensive Player of the Year for the second time in three seasons at NFL Honors.",
+     "Only 25 years old, Watt joins only five other players in NFL history as two-time winners of the award."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence correctly establishes that Watt won the Defensive Player of the Year award for the second time, but the claim requires proof of three wins. The source text contains no mention of a third award, and the phrase 'three times' is not present or implied. Additionally, the qualifier 'in his first five seasons' is not supported by any statement in the source. Therefore, the author must either add a citation for the third win and the timing or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "US Rights for the film were acquired by Kino Lorber, which started a limited theatrical run beginning in December 2015.",
+   "markers": [
+    "themessenger2015canadian"
+   ],
+   "paper_ids": [
+    "4aa5ccad9b83b2043d57eff3d4995dace1bd75de"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+    "source_title": "themessenger2015canadian",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December.",
+    "page": 1,
+    "snippet": "Variety Intelligence Platform October 13, 2015 3:56PM",
+    "reason": "All components of the claim are explicitly stated in the passage.",
+    "votes": "2-0",
+    "window": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December. The film will open in New York at Cinema Village on Dec. 4 and in Los Angeles at Laemmle Monica on Dec. 11, followed by a release in over 30 markets nationwide and a subsequent DVD and digital release next year."
+   },
+   "evidences": [
+    {
+     "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+     "source_title": "themessenger2015canadian",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December.",
+     "page": 1,
+     "snippet": "Variety Intelligence Platform October 13, 2015 3:56PM",
+     "reason": "All components of the claim are explicitly stated in the passage.",
+     "votes": "2-0",
+     "window": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December. The film will open in New York at Cinema Village on Dec. 4 and in Los Angeles at Laemmle Monica on Dec. 11, followed by a release in over 30 markets nationwide and a subsequent DVD and digital release next year."
+    }
+   ],
+   "votes": null,
+   "reason": "All components of the claim are explicitly stated in the passage.",
+   "covering": {
+    "covered": [
+     {
+      "component": "US Rights acquired by Kino Lorber",
+      "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+      "source_title": "themessenger2015canadian",
+      "sentence": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform October 13, 2015 3:56PM"
+     },
+     {
+      "component": "Film title is 'The Messenger'",
+      "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+      "source_title": "themessenger2015canadian",
+      "sentence": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform October 13, 2015 3:56PM"
+     },
+     {
+      "component": "Limited theatrical run beginning in December 2015",
+      "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+      "source_title": "themessenger2015canadian",
+      "sentence": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December.",
+      "page": 1,
+      "snippet": "Variety Intelligence Platform October 13, 2015 3:56PM"
+     },
+     {
+      "component": "Limited theatrical run beginning in December 2015",
+      "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+      "source_title": "themessenger2015canadian",
+      "sentence": "The film will open in New York at Cinema Village on Dec. 4 and in Los Angeles at Laemmle Monica on Dec. 11, followed by a release in over 30 markets nationwide and a subsequent DVD and digital release next year.",
+      "page": 1,
+      "snippet": "The film will open in New York"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+      "source_title": "themessenger2015canadian",
+      "text": "Variety Intelligence Platform October 13, 2015 3:56PM PT # Songbird Documentary 'The Messenger' Gets U.S. Release CREDIT: SongbirdSOS Productions Kino Lorber has acquired all U.S. rights to Su Rynard's songbird documentary \"The Messenger\" and will begin releasing the film in December. \"The Messenger\" chronicles the struggle of songbirds worldwide to survive in turbulent environmental conditions brought about by humans as populations of hundreds of species have declined. The film contends that their demise will signify the crash of the global ecosystem along with the disappearance of honey bees and the melting of the glaciers. The film will open in New York at Cinema Village on Dec. 4 and in Los Angeles at Laemmle Monica on Dec. 11, followed by a release in over 30 markets nationwide and a subsequent DVD and digital release next year.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t15",
+   "text": "Set between the 17th and 21st centuries, the novel is a \"philosophical rumination on modern-day travel\".",
+   "markers": [
+    "flightsnovel"
+   ],
+   "paper_ids": [
+    "30e03efac7304b51be06c7620d49ab7502a9e9c5"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.7737,
+   "evidence": {
+    "paper_id": "30e03efac7304b51be06c7620d49ab7502a9e9c5",
+    "source_title": "flightsnovel",
+    "supported": true,
+    "sentence": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado May 22, 2018 LONDON \u2014 \"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night.",
+    "page": 1,
+    "snippet": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado",
+    "cosine": 0.7737,
+    "reason": "The passage directly states that the novel is a \"philosophical rumination on modern-day travel\" and attributes this description to the author.",
+    "window": "(meta data) TITLE: Olga Tokarczuk of Poland Wins Man Booker International Prize - The New York Times (meta data) PUBLISHED DATETIME: 2017-06-16T17:16:36-04:00 Skip to contentSkip to site indexBooksLog InToday's PaperBooks|Olga Tokarczuk of Poland Wins Man Booker International Prize Supported by # Olga Tokarczuk of Poland Wins Man Booker International Prize ImageThe prize of 50,000 British pounds is shared by the novel's author, Olga Tokarczuk, left, and its English-language translator, Jennifer Croft. CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado May 22, 2018 LONDON \u2014 \"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night. Ms. Tokarczuk shared the prize of 50,000 British pounds, around $67,000, with the book's English-language translator, Jennifer Croft."
+   },
+   "evidences": [
+    {
+     "paper_id": "30e03efac7304b51be06c7620d49ab7502a9e9c5",
+     "source_title": "flightsnovel",
+     "supported": true,
+     "sentence": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado May 22, 2018 LONDON \u2014 \"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night.",
+     "page": 1,
+     "snippet": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado",
+     "cosine": 0.7737,
+     "reason": "The passage directly states that the novel is a \"philosophical rumination on modern-day travel\" and attributes this description to the author.",
+     "window": "(meta data) TITLE: Olga Tokarczuk of Poland Wins Man Booker International Prize - The New York Times (meta data) PUBLISHED DATETIME: 2017-06-16T17:16:36-04:00 Skip to contentSkip to site indexBooksLog InToday's PaperBooks|Olga Tokarczuk of Poland Wins Man Booker International Prize Supported by # Olga Tokarczuk of Poland Wins Man Booker International Prize ImageThe prize of 50,000 British pounds is shared by the novel's author, Olga Tokarczuk, left, and its English-language translator, Jennifer Croft. CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado May 22, 2018 LONDON \u2014 \"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night. Ms. Tokarczuk shared the prize of 50,000 British pounds, around $67,000, with the book's English-language translator, Jennifer Croft."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the novel is a \"philosophical rumination on modern-day travel\" and attributes this description to the author.",
+   "covering": {
+    "covered": [
+     {
+      "component": "novel is a philosophical rumination on modern-day travel",
+      "paper_id": "30e03efac7304b51be06c7620d49ab7502a9e9c5",
+      "source_title": "flightsnovel",
+      "sentence": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado May 22, 2018 LONDON \u2014 \"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night.",
+      "page": 1,
+      "snippet": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado"
+     }
+    ],
+    "uncovered": [
+     "novel set between the 17th and 21st centuries"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "30e03efac7304b51be06c7620d49ab7502a9e9c5",
+      "source_title": "flightsnovel",
+      "text": "CreditCreditJanie Airey/Man Booker Prize By Anna Codrea-Rado May 22, 2018 LONDON \u2014 \"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_support": {
+    "reason": "the passage does not specify the time period of the novel.",
+    "votes": "3-0",
+    "escalated": true,
+    "component_hunt": [
+     {
+      "component": "the time period of the novel",
+      "found_in": [],
+      "searched": 0
+     }
+    ]
+   },
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "partial_support",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Set between the 17th and 21st centuries",
+    "rewrite_suggestion": "The novel is a 'philosophical rumination on modern-day travel'.",
+    "proofs": [
+     "\"Flights,\" a philosophical rumination on modern-day travel by the Polish author Olga Tokarczuk, won the Man Booker International Prize for works of translated fiction on Tuesday night."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence supports the 'philosophical rumination' component, but the claim also asserts that the novel is 'set between the 17th and 21st centuries', which is not mentioned anywhere in the source text. Therefore, the author must either add a citation for that temporal claim or rewrite the claim to exclude it."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "They currently live in Washington, D.C., and Jaffrey, New Hampshire, and are ordained members of the United Church of Christ.",
+   "markers": [
+    "bobabernethy"
+   ],
+   "paper_ids": [
+    "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9379,
+   "evidence": {
+    "paper_id": "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9",
+    "source_title": "bobabernethy",
+    "supported": true,
+    "sentence": "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+    "page": 1,
+    "snippet": "He lives in Washington, D.C. and Jaffrey,",
+    "cosine": 0.9379,
+    "reason": "The passage directly states that the subject lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+    "window": "Abernethy is married to the former Marie Cheremeteff Grove and has two daughters, one stepdaughter and three stepsons. He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ. ### CONNECT WITH US Learn More Providing Support for pbs.org #### What's New"
+   },
+   "evidences": [
+    {
+     "paper_id": "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9",
+     "source_title": "bobabernethy",
+     "supported": true,
+     "sentence": "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+     "page": 1,
+     "snippet": "He lives in Washington, D.C. and Jaffrey,",
+     "cosine": 0.9379,
+     "reason": "The passage directly states that the subject lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+     "window": "Abernethy is married to the former Marie Cheremeteff Grove and has two daughters, one stepdaughter and three stepsons. He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ. ### CONNECT WITH US Learn More Providing Support for pbs.org #### What's New"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage directly states that the subject lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+   "covering": {
+    "covered": [
+     {
+      "component": "They currently live in Washington, D.C.",
+      "paper_id": "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9",
+      "source_title": "bobabernethy",
+      "sentence": "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+      "page": 1,
+      "snippet": "He lives in Washington, D.C. and Jaffrey,"
+     },
+     {
+      "component": "and Jaffrey, New Hampshire",
+      "paper_id": "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9",
+      "source_title": "bobabernethy",
+      "sentence": "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+      "page": 1,
+      "snippet": "He lives in Washington, D.C. and Jaffrey,"
+     }
+    ],
+    "uncovered": [
+     "and are ordained members of the United Church of Christ"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9",
+      "source_title": "bobabernethy",
+      "text": "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that the subjects are 'ordained members' of the United Church of Christ and uses the plural 'they', but the source only refers to one person (Bob Abernethy) and says he is a member (not ordained), without mentioning any other individuals.",
+    "rewrite_suggestion": "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ.",
+    "proofs": [
+     "He lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence confirms that Bob Abernethy lives in Washington, D.C. and Jaffrey, New Hampshire, and is a member of the United Church of Christ. However, the claim adds two unsupported components: the plural subject 'they' (the source describes one person) and the specification 'ordained' (the source only says 'member'). These are not found in the cited source, so the author must either add a citation or rewrite the claim to match what the source supports."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "Bidwells LLP is an independent property consultancy currently managing over \u00a35.2 billion in property assets and employing 550 people in England and Scotland.",
+   "markers": [
+    "bidwells"
+   ],
+   "paper_ids": [
+    "01693c04a7c4ab09c9f016eb4b47476fe6b5db89"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "01693c04a7c4ab09c9f016eb4b47476fe6b5db89",
+    "source_title": "bidwells",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "We help clients who own historic buildings to preserve these unique assets and also explore their long-term value.",
+    "page": 1,
+    "snippet": "We help clients who own historic buildings",
+    "reason": "The passage does not mention the amount of property assets managed by Bidwells LLP, the number of people they employ, or their geographical locations in England and Scotland.",
+    "votes": "2-0",
+    "window": "We help clients who own historic buildings to preserve these unique assets and also explore their long-term value. Bidwells agents are proud to work with clients including the National Trust, the Imperial War Museum and Cambridge University colleges. We continue to be inspired by the most beautiful universities in the UK and provide expertise on historical properties in the OxBridge region and beyond. Bidwells clients appreciate our respect for, and understanding of, the UK's architectural heritage."
+   },
+   "evidences": [
+    {
+     "paper_id": "01693c04a7c4ab09c9f016eb4b47476fe6b5db89",
+     "source_title": "bidwells",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "We help clients who own historic buildings to preserve these unique assets and also explore their long-term value.",
+     "page": 1,
+     "snippet": "We help clients who own historic buildings",
+     "reason": "The passage does not mention the amount of property assets managed by Bidwells LLP, the number of people they employ, or their geographical locations in England and Scotland.",
+     "votes": "2-0",
+     "window": "We help clients who own historic buildings to preserve these unique assets and also explore their long-term value. Bidwells agents are proud to work with clients including the National Trust, the Imperial War Museum and Cambridge University colleges. We continue to be inspired by the most beautiful universities in the UK and provide expertise on historical properties in the OxBridge region and beyond. Bidwells clients appreciate our respect for, and understanding of, the UK's architectural heritage."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the amount of property assets managed by Bidwells LLP, the number of people they employ, or their geographical locations in England and Scotland.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Bidwells LLP is an independent property consultancy currently managing over \u00a35.2 billion in property assets and employing 550 people in England and Scotland.",
+    "reason": "The passage asserts facts and figures about Bidwells LLP that the citation is expected to prove. There is no indication that the citation is being used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific figures (\u00a35.2 billion assets, 550 employees), the claim of independence, the legal form 'LLP', and the geographic scope 'England and Scotland' are entirely absent from the cited source text",
+    "rewrite_suggestion": "Bidwells is a property consultancy that works with historic buildings (as described in the source); the source provides no information about assets under management, employee count, or geographic scope of employment.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not address any component of the claim. The source text (a blog post about beautiful universities) contains no mention of Bidwells' asset management, employee count, independence, or specific geographic operations in England and Scotland. Every substantive component of the claim is unsourced and cannot be found in the provided text. Therefore the author must either add a citation for these details or rewrite the claim to only include what the source actually states."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "The five ads were timed to air during the commercial break following the scene where the song was featured; NBC's advertising chief Dan Lovinger considered the ads to be a way to \"enhance the excitement\" of the presentation for families.",
+   "markers": [
+    "thesoundofmusiclive"
+   ],
+   "paper_ids": [
+    "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.8578,
+   "evidence": {
+    "paper_id": "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a",
+    "source_title": "thesoundofmusiclive",
+    "supported": true,
+    "sentence": "NBC hopes the show will bring families together and \"kind of wanted this to enhance the excitement,\" said Dan Lovinger, exec veep of entertainment ad sales at NBCU.",
+    "page": 1,
+    "snippet": "NBC hopes the show will bring families",
+    "cosine": 0.8578,
+    "reason": "The passage states that five thirty-second ads were timed to run just after the featured song was sung and quotes Dan Lovinger saying NBC wanted the show to 'enhance the excitement'.",
+    "window": "Indeed, Walmart will air five thirty-second ads in all, each timed to run just after the song being featured in each spot has been sung in the show. NBC hopes the show will bring families together and \"kind of wanted this to enhance the excitement,\" said Dan Lovinger, exec veep of entertainment ad sales at NBCU. \"The idea is to create these customized vignettes around this real-life family that correspond to and mirror what is going on in the show.\""
+   },
+   "evidences": [
+    {
+     "paper_id": "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a",
+     "source_title": "thesoundofmusiclive",
+     "supported": true,
+     "sentence": "NBC hopes the show will bring families together and \"kind of wanted this to enhance the excitement,\" said Dan Lovinger, exec veep of entertainment ad sales at NBCU.",
+     "page": 1,
+     "snippet": "NBC hopes the show will bring families",
+     "cosine": 0.8578,
+     "reason": "The passage states that five thirty-second ads were timed to run just after the featured song was sung and quotes Dan Lovinger saying NBC wanted the show to 'enhance the excitement'.",
+     "window": "Indeed, Walmart will air five thirty-second ads in all, each timed to run just after the song being featured in each spot has been sung in the show. NBC hopes the show will bring families together and \"kind of wanted this to enhance the excitement,\" said Dan Lovinger, exec veep of entertainment ad sales at NBCU. \"The idea is to create these customized vignettes around this real-life family that correspond to and mirror what is going on in the show.\""
+    }
+   ],
+   "votes": null,
+   "reason": "The passage states that five thirty-second ads were timed to run just after the featured song was sung and quotes Dan Lovinger saying NBC wanted the show to 'enhance the excitement'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "five ads were timed to air during the commercial break following the scene where the song was featured",
+      "paper_id": "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a",
+      "source_title": "thesoundofmusiclive",
+      "sentence": "Indeed, Walmart will air five thirty-second ads in all, each timed to run just after the song being featured in each spot has been sung in the show.",
+      "page": 1,
+      "snippet": "Indeed, Walmart will air five thirty-second ads"
+     },
+     {
+      "component": "NBC's advertising chief Dan Lovinger considered the ads to be a way to \"enhance the excitement\" of the presentation for families",
+      "paper_id": "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a",
+      "source_title": "thesoundofmusiclive",
+      "sentence": "NBC hopes the show will bring families together and \"kind of wanted this to enhance the excitement,\" said Dan Lovinger, exec veep of entertainment ad sales at NBCU.",
+      "page": 1,
+      "snippet": "NBC hopes the show will bring families"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a",
+      "source_title": "thesoundofmusiclive",
+      "text": "Indeed, Walmart will air five thirty-second ads in all, each timed to run just after the song being featured in each spot has been sung in the show. NBC hopes the show will bring families together and \"kind of wanted this to enhance the excitement,\" said Dan Lovinger, exec veep of entertainment ad sales at NBCU.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t19",
+   "text": "He was waived three days later.",
+   "markers": [
+    "rashadvaughn"
+   ],
+   "paper_ids": [
+    "117d3c7897d075aa4f58ac3cd040ead60e810a12"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "117d3c7897d075aa4f58ac3cd040ead60e810a12",
+    "source_title": "rashadvaughn",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Three days after signing them, the Mavericks have waived Rashad Vaughn and Donte Ingram, both of whom were on non-guaranteed contracts.",
+    "page": 1,
+    "snippet": "Three days after signing them, the Mavericks",
+    "reason": "",
+    "votes": "2-0",
+    "window": "Three days after signing them, the Mavericks have waived Rashad Vaughn and Donte Ingram, both of whom were on non-guaranteed contracts."
+   },
+   "evidences": [
+    {
+     "paper_id": "117d3c7897d075aa4f58ac3cd040ead60e810a12",
+     "source_title": "rashadvaughn",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Three days after signing them, the Mavericks have waived Rashad Vaughn and Donte Ingram, both of whom were on non-guaranteed contracts.",
+     "page": 1,
+     "snippet": "Three days after signing them, the Mavericks",
+     "reason": "",
+     "votes": "2-0",
+     "window": "Three days after signing them, the Mavericks have waived Rashad Vaughn and Donte Ingram, both of whom were on non-guaranteed contracts."
+    }
+   ],
+   "votes": null,
+   "reason": "",
+   "covering": {
+    "covered": [
+     {
+      "component": "He was waived three days later",
+      "paper_id": "117d3c7897d075aa4f58ac3cd040ead60e810a12",
+      "source_title": "rashadvaughn",
+      "sentence": "Three days after signing them, the Mavericks have waived Rashad Vaughn and Donte Ingram, both of whom were on non-guaranteed contracts.",
+      "page": 1,
+      "snippet": "Three days after signing them, the Mavericks"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "117d3c7897d075aa4f58ac3cd040ead60e810a12",
+      "source_title": "rashadvaughn",
+      "text": "Three days after signing them, the Mavericks have waived Rashad Vaughn and Donte Ingram, both of whom were on non-guaranteed contracts.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t20",
+   "text": "This victory earned him a two-year World Snooker Tour card.",
+   "markers": [
+    "xusi"
+   ],
+   "paper_ids": [
+    "8b9591a6c53458d59541e2cba740687e354a98b2"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.9729,
+   "evidence": {
+    "paper_id": "8b9591a6c53458d59541e2cba740687e354a98b2",
+    "source_title": "xusi",
+    "supported": true,
+    "sentence": "The victory secured him a two-year card on the World Snooker Tour.",
+    "page": 1,
+    "snippet": "The victory secured him a two-year card",
+    "cosine": 0.9729,
+    "reason": "near-verbatim match (cosine 0.9729 \u2265 0.97)",
+    "window": "Xu became World Under 21 Champion in 2016, beating Switzerland's Alexander Ursenbacher in the final. The victory secured him a two-year card on the World Snooker Tour. 2017/18 Results"
+   },
+   "evidences": [
+    {
+     "paper_id": "8b9591a6c53458d59541e2cba740687e354a98b2",
+     "source_title": "xusi",
+     "supported": true,
+     "sentence": "The victory secured him a two-year card on the World Snooker Tour.",
+     "page": 1,
+     "snippet": "The victory secured him a two-year card",
+     "cosine": 0.9729,
+     "reason": "near-verbatim match (cosine 0.9729 \u2265 0.97)",
+     "window": "Xu became World Under 21 Champion in 2016, beating Switzerland's Alexander Ursenbacher in the final. The victory secured him a two-year card on the World Snooker Tour. 2017/18 Results"
+    }
+   ],
+   "votes": null,
+   "reason": "near-verbatim match (cosine 0.9729 \u2265 0.97)",
+   "covering": {
+    "covered": [
+     {
+      "component": "victory earned a two-year World Snooker Tour card",
+      "paper_id": "8b9591a6c53458d59541e2cba740687e354a98b2",
+      "source_title": "xusi",
+      "sentence": "The victory secured him a two-year card on the World Snooker Tour.",
+      "page": 1,
+      "snippet": "The victory secured him a two-year card"
+     }
+    ],
+    "uncovered": [],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "8b9591a6c53458d59541e2cba740687e354a98b2",
+      "source_title": "xusi",
+      "text": "The victory secured him a two-year card on the World Snooker Tour.",
+      "n_used": 1
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "full",
+   "partial_checked": true
+  },
+  {
+   "id": "t21",
+   "text": "Wagner asked Grant if he could help him write the \"Tarzan\" comic he was working on; so began the Wagner/Grant writing partnership.",
+   "markers": [
+    "alangrantwriter"
+   ],
+   "paper_ids": [
+    "5dbaa5964fd2bdd8f0b580dcf66795c6cd16312d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "5dbaa5964fd2bdd8f0b580dcf66795c6cd16312d",
+    "source_title": "alangrantwriter",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "And as fortune - or ill-fortune - would have it, at the time John Wagner was suffering from some kind of illness, and he wasn't able to maintain his obligations to write for 2000AD, so he asked if I could help him out We were sharing a house, so we were sitting around at night talking about the stories anyway.",
+    "page": 1,
+    "snippet": "And as fortune - or ill-fortune -",
+    "reason": "The passage does not mention the 'Tarzan' comic.",
+    "votes": "2-0",
+    "window": "And as fortune - or ill-fortune - would have it, at the time John Wagner was suffering from some kind of illness, and he wasn't able to maintain his obligations to write for 2000AD, so he asked if I could help him out We were sharing a house, so we were sitting around at night talking about the stories anyway. It made sense to formalise it and that was it, we started writing together."
+   },
+   "evidences": [
+    {
+     "paper_id": "5dbaa5964fd2bdd8f0b580dcf66795c6cd16312d",
+     "source_title": "alangrantwriter",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "And as fortune - or ill-fortune - would have it, at the time John Wagner was suffering from some kind of illness, and he wasn't able to maintain his obligations to write for 2000AD, so he asked if I could help him out We were sharing a house, so we were sitting around at night talking about the stories anyway.",
+     "page": 1,
+     "snippet": "And as fortune - or ill-fortune -",
+     "reason": "The passage does not mention the 'Tarzan' comic.",
+     "votes": "2-0",
+     "window": "And as fortune - or ill-fortune - would have it, at the time John Wagner was suffering from some kind of illness, and he wasn't able to maintain his obligations to write for 2000AD, so he asked if I could help him out We were sharing a house, so we were sitting around at night talking about the stories anyway. It made sense to formalise it and that was it, we started writing together."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the 'Tarzan' comic.",
+   "component_check": {
+    "found": [
+     "the Wagner/Grant writing partnership began"
+    ],
+    "missing": [
+     "Wagner asked Grant if he could help him write the \"Tarzan\" comic he was working on"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "the Wagner/Grant writing partnership began",
+      "paper_id": "5dbaa5964fd2bdd8f0b580dcf66795c6cd16312d",
+      "source_title": "alangrantwriter",
+      "sentence": "An amiable but forthright Scot with a wicked sense of humour, he first rose to prominence writing Judge Dredd and Strontium Dog for British weekly 2000AD with his friend John Wagner.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Wagner asked Grant if he could help him write the \"Tarzan\" comic he was working on; so began the Wagner/Grant writing partnership.",
+    "reason": "The passage directly states a historical event and the beginning of a partnership, which is directly attributed to the cited source. This falls under the 'full' scope as the citation is expected to prove this factual statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "that Wagner was working on a 'Tarzan' comic",
+    "rewrite_suggestion": "Wagner asked Grant if he could help him write the 2000AD stories he was working on; so began the Wagner/Grant writing partnership.",
+    "proofs": [
+     "And as fortune - or ill-fortune - would have it, at the time John Wagner was suffering from some kind of illness, and he wasn't able to maintain his obligations to write for 2000AD, so he asked if I could help him out We were sharing a house, so we were sitting around at night talking about the stories anyway.",
+     "It made sense to formalise it and that was it, we started writing together."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes an unsourced detail that Wagner was working on a 'Tarzan' comic; the cited source never mentions Tarzan, only that Wagner needed help with his 2000AD obligations. The partnership's beginning is provable from the source (the two shown sentences combined with the later formalization sentence), but the shown sentence alone does not fully prove the start. Since a substantive component (Tarzan) is absent from the source entirely, the author must either add a citation or rewrite the claim to remove the unsupported detail."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "As of February 2019 the song has sold 132,000 units in the United Kingdom making it Marina's 4th best selling single in the United Kingdom as of February 2019.",
+   "markers": [
+    "iamnotarobot"
+   ],
+   "paper_ids": [
+    "05523cf6af99a557a4d78fa9f741f930c03ab24b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "05523cf6af99a557a4d78fa9f741f930c03ab24b",
+    "source_title": "iamnotarobot",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "The single became her second Top 40 single at 26 and has shifted 132,000 combined sales.",
+    "page": 1,
+    "snippet": "The single became her second Top 40",
+    "reason": "the passage does not state that the song is Marina's 4th best selling single in the United Kingdom as of February 2019",
+    "votes": "2-0",
+    "window": "The single became her second Top 40 single at 26 and has shifted 132,000 combined sales. since Janice in Friends , Hollywood is quintessential Marina and is one of her best performing singles, peaking at 12 and with combined sales to date of 211,000. It's her third biggest single with 207,000 combined sales, powered by 16 million streams. It narrowly missed the Top 10 (just 545 sales away on its first week!)"
+   },
+   "evidences": [
+    {
+     "paper_id": "05523cf6af99a557a4d78fa9f741f930c03ab24b",
+     "source_title": "iamnotarobot",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "The single became her second Top 40 single at 26 and has shifted 132,000 combined sales.",
+     "page": 1,
+     "snippet": "The single became her second Top 40",
+     "reason": "the passage does not state that the song is Marina's 4th best selling single in the United Kingdom as of February 2019",
+     "votes": "2-0",
+     "window": "The single became her second Top 40 single at 26 and has shifted 132,000 combined sales. since Janice in Friends , Hollywood is quintessential Marina and is one of her best performing singles, peaking at 12 and with combined sales to date of 211,000. It's her third biggest single with 207,000 combined sales, powered by 16 million streams. It narrowly missed the Top 10 (just 545 sales away on its first week!)"
+    }
+   ],
+   "votes": null,
+   "reason": "the passage does not state that the song is Marina's 4th best selling single in the United Kingdom as of February 2019",
+   "subject_guard": {
+    "subject": "United Kingdom",
+    "missing_from": [
+     "05523cf6af99a557a4d78fa9f741f930c03ab24b"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "As of February 2019 the song has sold 132,000 units in the United Kingdom making it Marina's 4th best selling single in the United Kingdom as of February 2019.",
+    "reason": "The passage asserts specific facts and figures (sales numbers, chart position) that are directly attributed to the cited source. The ATTRIBUTION TEST applies here as the passage is presenting information that the source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "New Releases 05 February 2019",
+     "#### 4. I Am Not A Robot A fan favourite from her debut album Family Jewels, I Am Not A Robot is Marina at her quirkiest but also her most vulnerable. At the time, she said the song was \"me singing to myself. It's me saying, stop being so ridiculous, you can't let having a fear of failing hold you back and you're just one person.\" The single became her second Top 40 single at 26 and has shifted 132,000 combined sales."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence provides the sales figure (132,000 combined sales) but does not include the ranking (4th best selling). The ranking is present in the source text as the heading '#### 4. I Am Not A Robot' and the top-5 list, which proves the claim's ranking component. Since the proof exists in the source but was not shown, this is a tool error requiring the correct sentences to be displayed.",
+    "rescued": false
+   }
+  },
+  {
+   "id": "t23",
+   "text": "Modie's brother, Arthur Spiegel, was the great-grandfather of Spike Jonez.",
+   "markers": [
+    "gabrielcowan"
+   ],
+   "paper_ids": [
+    "87823826cb9daf5bd9152182d8d07b21b4cd58e0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9076,
+   "evidence": {
+    "paper_id": "87823826cb9daf5bd9152182d8d07b21b4cd58e0",
+    "source_title": "gabrielcowan",
+    "supported": false,
+    "sentence": "[1] Modie's father, Joseph Spiegel, was a German Jew who, together with his parents and three sisters, immigrated to the United States as an eight-year-old in September 1848.",
+    "page": 1,
+    "snippet": "Modie's father, Joseph Spiegel, was a German",
+    "cosine": 0.9076,
+    "reason": "The passage mentions Modie's father and grandparents but does not mention Arthur Spiegel or Spike Jonez.",
+    "window": "According to family legend, his nickname, which he used officially later in life, came about as the result of the persistent mispronunciation of his birth name by a young niece. [1] Modie's father, Joseph Spiegel, was a German Jew who, together with his parents and three sisters, immigrated to the United States as an eight-year-old in September 1848. The Spiegel family left their home in the small village of Abenheim, near the city of Worms in the Grand Duchy of Hesse, during the violent revolutionary turmoil that engulfed the German states in 1848 and 1849 By the time of their departure, Joseph's parents, the Rabbi Moses Spiegel and his wife Regina (n\u00e9e Greenebaum) had become disillusioned with the political situation in their homeland, and they were particularly concerned about rising anti-Jewish sentiment and government repression."
+   },
+   "evidences": [
+    {
+     "paper_id": "87823826cb9daf5bd9152182d8d07b21b4cd58e0",
+     "source_title": "gabrielcowan",
+     "supported": false,
+     "sentence": "[1] Modie's father, Joseph Spiegel, was a German Jew who, together with his parents and three sisters, immigrated to the United States as an eight-year-old in September 1848.",
+     "page": 1,
+     "snippet": "Modie's father, Joseph Spiegel, was a German",
+     "cosine": 0.9076,
+     "reason": "The passage mentions Modie's father and grandparents but does not mention Arthur Spiegel or Spike Jonez.",
+     "window": "According to family legend, his nickname, which he used officially later in life, came about as the result of the persistent mispronunciation of his birth name by a young niece. [1] Modie's father, Joseph Spiegel, was a German Jew who, together with his parents and three sisters, immigrated to the United States as an eight-year-old in September 1848. The Spiegel family left their home in the small village of Abenheim, near the city of Worms in the Grand Duchy of Hesse, during the violent revolutionary turmoil that engulfed the German states in 1848 and 1849 By the time of their departure, Joseph's parents, the Rabbi Moses Spiegel and his wife Regina (n\u00e9e Greenebaum) had become disillusioned with the political situation in their homeland, and they were particularly concerned about rising anti-Jewish sentiment and government repression."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Spike Jonez",
+    "missing_from": [
+     "87823826cb9daf5bd9152182d8d07b21b4cd58e0"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Modie's brother, Arthur Spiegel, was the great-grandfather of Spike Jonez.",
+    "reason": "The passage asserts a genealogical fact that the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Arthur Spiegel was the great-grandfather of Spike Jonez",
+    "rewrite_suggestion": "Modie's brother, Arthur Spiegel, helped expand the family business into a mail-order company.",
+    "proofs": [
+     "Modie Spiegel, along with his younger brothers Sidney and Arthur, expanded their father's erstwhile Chicago furniture retail business into one of America's leading mail order firms, the Spiegel Company.",
+     "They were joined (somewhat unexpectedly) by a third brother, Arthur, in 1884."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence about Modie's father does not address either component of the claim. The source text confirms that Arthur is Modie's brother, but it contains no mention of Spike Jonez or any great-grandfather relationship. Therefore, the claim includes a substantive element that is entirely unsupported by the cited source, requiring the author to either provide a citation for that relationship or rewrite the claim to omit it."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "He won the Hobey Baker Award as the best collegiate player in America in 1992 while playing for the University of Maine.",
+   "markers": [
+    "scottpellerin"
+   ],
+   "paper_ids": [
+    "2a5be1527b739d4f2c94271dc22dee2e60444142"
+   ],
+   "verdict": "supported",
+   "method": "llm",
+   "cosine": 0.873,
+   "evidence": {
+    "paper_id": "2a5be1527b739d4f2c94271dc22dee2e60444142",
+    "source_title": "scottpellerin",
+    "supported": true,
+    "sentence": "In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament.",
+    "page": 1,
+    "snippet": "In addition to receiving the 1992 Hobey",
+    "cosine": 0.873,
+    "reason": "The passage explicitly states that 'he' received the 1992 Hobey Baker Award and was playing for the University of Maine, which is directly supported by the claim.",
+    "window": "He holds Maine's record for career power play goals with 47, and was the first Division I player in Maine's history to score 100 goals and record 100 assists. In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament. Growing up in Shediac, New Brunswick, he was a member of Team Canada during the 1990 Goodwill Games in Seattle."
+   },
+   "evidences": [
+    {
+     "paper_id": "2a5be1527b739d4f2c94271dc22dee2e60444142",
+     "source_title": "scottpellerin",
+     "supported": true,
+     "sentence": "In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament.",
+     "page": 1,
+     "snippet": "In addition to receiving the 1992 Hobey",
+     "cosine": 0.873,
+     "reason": "The passage explicitly states that 'he' received the 1992 Hobey Baker Award and was playing for the University of Maine, which is directly supported by the claim.",
+     "window": "He holds Maine's record for career power play goals with 47, and was the first Division I player in Maine's history to score 100 goals and record 100 assists. In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament. Growing up in Shediac, New Brunswick, he was a member of Team Canada during the 1990 Goodwill Games in Seattle."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that 'he' received the 1992 Hobey Baker Award and was playing for the University of Maine, which is directly supported by the claim.",
+   "covering": {
+    "covered": [
+     {
+      "component": "won the Hobey Baker Award in 1992",
+      "paper_id": "2a5be1527b739d4f2c94271dc22dee2e60444142",
+      "source_title": "scottpellerin",
+      "sentence": "In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament.",
+      "page": 1,
+      "snippet": "In addition to receiving the 1992 Hobey"
+     },
+     {
+      "component": "while playing for the University of Maine",
+      "paper_id": "2a5be1527b739d4f2c94271dc22dee2e60444142",
+      "source_title": "scottpellerin",
+      "sentence": "(meta data) TITLE: 1992 Winner - SCOTT PELLERIN of University of Maine skip navigation Hobey Baker Memorial Awards ## 1992 Winner - SCOTT PELLERIN of University of Maine With 223 points, Scott Pellerin ranks second as the all-time scorer in Maine history, and is third in career goals with 106, third in career assists with 117, and second in career games with 167.",
+      "page": 1,
+      "snippet": "(meta data) TITLE: 1992 Winner - SCOTT"
+     }
+    ],
+    "uncovered": [
+     "as the best collegiate player in America"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "2a5be1527b739d4f2c94271dc22dee2e60444142",
+      "source_title": "scottpellerin",
+      "text": "(meta data) TITLE: 1992 Winner - SCOTT PELLERIN of University of Maine skip navigation Hobey Baker Memorial Awards ## 1992 Winner - SCOTT PELLERIN of University of Maine With 223 points, Scott Pellerin ranks second as the all-time scorer in Maine history, and is third in career goals with 106, third in career assists with 117, and second in career games with 167. He holds Maine's record for career power play goals with 47, and was the first Division I player in Maine's history to score 100 goals and record 100 assists. In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament.",
+      "n_used": 2
+     }
+    ]
+   },
+   "covering_checked": true,
+   "proof_state": "partial",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "as the best collegiate player in America",
+    "rewrite_suggestion": "He won the Hobey Baker Award in 1992 while playing for the University of Maine.",
+    "proofs": [
+     "In addition to receiving the 1992 Hobey Baker Award, he was named 1992 Hockey East Player of the Year and Most Valuable Player of the Hockey East Championship Tournament.",
+     "1992 Winner - SCOTT PELLERIN of University of Maine"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes the descriptor 'as the best collegiate player in America', which is not stated in the cited source (the Hobey Baker winner page) and is not common knowledge under the strict standard. The source does prove the other components (he won the award in 1992 and was affiliated with the University of Maine), but the unsourced descriptor requires the author to either add a supporting citation or remove it from the claim."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "In July 2018, Barbieri was appointed as an assistant coach of the Melbourne City W-League team.",
+   "markers": [
+    "melissabarbieri"
+   ],
+   "paper_ids": [
+    "4db885a03de9c7314147ed8d40a2b630912cf6e1"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "4db885a03de9c7314147ed8d40a2b630912cf6e1",
+    "source_title": "melissabarbieri",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Rado Vidosic, father of City attacker Dario, joins as the club's technical director and head coach of the W-League team, while Former Matildas captain Melissa Hudson (formerly Barbieri) joins Vidosic as assistant coach of the W-League side.",
+    "page": 1,
+    "snippet": "Rado Vidosic, father of City attacker Dario,",
+    "reason": "the passage states Melissa Hudson (formerly Barbieri) was appointed assistant coach, not Barbieri.",
+    "votes": "2-0",
+    "window": "Rado Vidosic, father of City attacker Dario, joins as the club's technical director and head coach of the W-League team, while Former Matildas captain Melissa Hudson (formerly Barbieri) joins Vidosic as assistant coach of the W-League side."
+   },
+   "evidences": [
+    {
+     "paper_id": "4db885a03de9c7314147ed8d40a2b630912cf6e1",
+     "source_title": "melissabarbieri",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Rado Vidosic, father of City attacker Dario, joins as the club's technical director and head coach of the W-League team, while Former Matildas captain Melissa Hudson (formerly Barbieri) joins Vidosic as assistant coach of the W-League side.",
+     "page": 1,
+     "snippet": "Rado Vidosic, father of City attacker Dario,",
+     "reason": "the passage states Melissa Hudson (formerly Barbieri) was appointed assistant coach, not Barbieri.",
+     "votes": "2-0",
+     "window": "Rado Vidosic, father of City attacker Dario, joins as the club's technical director and head coach of the W-League team, while Former Matildas captain Melissa Hudson (formerly Barbieri) joins Vidosic as assistant coach of the W-League side."
+    }
+   ],
+   "votes": null,
+   "reason": "the passage states Melissa Hudson (formerly Barbieri) was appointed assistant coach, not Barbieri.",
+   "component_check": {
+    "found": [
+     "Barbieri was appointed as an assistant coach of the Melbourne City W-League team"
+    ],
+    "missing": [
+     "July 2018"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "Barbieri was appointed as an assistant coach of the Melbourne City W-League team",
+      "paper_id": "4db885a03de9c7314147ed8d40a2b630912cf6e1",
+      "source_title": "melissabarbieri",
+      "sentence": "Rado Vidosic, father of City attacker Dario, joins as the club's technical director and head coach of the W-League team, while Former Matildas captain Melissa Hudson (formerly Barbieri) joins Vidosic as assistant coach of the W-League side.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Barbieri was appointed as an assistant coach of the Melbourne City W-League team in July 2018.",
+    "reason": "The passage directly states a factual claim about the cited individual's appointment, which the citation is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "In July 2018 \u2014 the source does not mention July; the article is dated June 18, 2018.",
+    "rewrite_suggestion": "Barbieri was appointed as an assistant coach of the Melbourne City W-League team.",
+    "proofs": [
+     "Rado Vidosic, father of City attacker Dario, joins as the club's technical director and head coach of the W-League team, while Former Matildas captain Melissa Hudson (formerly Barbieri) joins Vidosic as assistant coach of the W-League side."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim specifies 'In July 2018', but the provided source text does not mention July at all \u2014 the article is dated June 18, 2018, and no appointment date is given. The other components (Barbieri's identity and her role as assistant coach of Melbourne City's W-League team) are proven by the shown sentence, but the unsupported month component requires the author to either cite a different source for July or rewrite the claim to remove or correct the month."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "In June 2018, the FAA announced an additional review of environmental impacts of passenger airline service, delaying the start of service to between November 2018 and November 2019.",
+   "markers": [
+    "painefield"
+   ],
+   "paper_ids": [
+    "46dfb5fefe6b76d700042186f3de5ccb1e453d72"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "46dfb5fefe6b76d700042186f3de5ccb1e453d72",
+    "source_title": "painefield",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Not so fast Originally published June 1, 2018 at 1:49 pm Updated June 1, 2018 at 3:44 pm In this April 11, 2018 photo, Brett Smith, CEO of Propeller Airports, left, talks with project engineer Todd Raynes, right, inside the privately run commercial U.S. airport terminal Smith's company is building at Paine Field in Everett, Wash. (AP Photo/Ted S. Warren) The start of commercial air service out of Paine Field in Everett may be delayed from this fall into next year, depending on an additional review of the impact on noise and ground traffic by the FAA.",
+    "page": 1,
+    "snippet": "Not so fast Originally published June 1,",
+    "reason": "The passage does not state that the FAA announced the review in June 2018, only that the article was published on June 1, 2018.",
+    "votes": "2-0",
+    "window": "Not so fast Originally published June 1, 2018 at 1:49 pm Updated June 1, 2018 at 3:44 pm In this April 11, 2018 photo, Brett Smith, CEO of Propeller Airports, left, talks with project engineer Todd Raynes, right, inside the privately run commercial U.S. airport terminal Smith's company is building at Paine Field in Everett, Wash. (AP Photo/Ted S. Warren) The start of commercial air service out of Paine Field in Everett may be delayed from this fall into next year, depending on an additional review of the impact on noise and ground traffic by the FAA. Dominic Gates Seattle Times aerospace reporter Commercial air service at Paine Field in Everett may be delayed from its expected start this fall depending on an additional review of noise and ground traffic by the Federal Aviation Administration (FAA). That leaves a wide-open time frame for completing the review somewhere between November 2018 and a year later. Such supplemental reviews, which include a period for public comments, typically take six to 18 months, the FAA said Friday."
+   },
+   "evidences": [
+    {
+     "paper_id": "46dfb5fefe6b76d700042186f3de5ccb1e453d72",
+     "source_title": "painefield",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Not so fast Originally published June 1, 2018 at 1:49 pm Updated June 1, 2018 at 3:44 pm In this April 11, 2018 photo, Brett Smith, CEO of Propeller Airports, left, talks with project engineer Todd Raynes, right, inside the privately run commercial U.S. airport terminal Smith's company is building at Paine Field in Everett, Wash. (AP Photo/Ted S. Warren) The start of commercial air service out of Paine Field in Everett may be delayed from this fall into next year, depending on an additional review of the impact on noise and ground traffic by the FAA.",
+     "page": 1,
+     "snippet": "Not so fast Originally published June 1,",
+     "reason": "The passage does not state that the FAA announced the review in June 2018, only that the article was published on June 1, 2018.",
+     "votes": "2-0",
+     "window": "Not so fast Originally published June 1, 2018 at 1:49 pm Updated June 1, 2018 at 3:44 pm In this April 11, 2018 photo, Brett Smith, CEO of Propeller Airports, left, talks with project engineer Todd Raynes, right, inside the privately run commercial U.S. airport terminal Smith's company is building at Paine Field in Everett, Wash. (AP Photo/Ted S. Warren) The start of commercial air service out of Paine Field in Everett may be delayed from this fall into next year, depending on an additional review of the impact on noise and ground traffic by the FAA. Dominic Gates Seattle Times aerospace reporter Commercial air service at Paine Field in Everett may be delayed from its expected start this fall depending on an additional review of noise and ground traffic by the Federal Aviation Administration (FAA). That leaves a wide-open time frame for completing the review somewhere between November 2018 and a year later. Such supplemental reviews, which include a period for public comments, typically take six to 18 months, the FAA said Friday."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that the FAA announced the review in June 2018, only that the article was published on June 1, 2018.",
+   "component_check": {
+    "found": [
+     "This announcement delayed the start of service to between November 2018 and November 2019"
+    ],
+    "missing": [
+     "In June 2018, the FAA announced an additional review of environmental impacts of passenger airline service"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "This announcement delayed the start of service to between November 2018 and November 2019",
+      "paper_id": "46dfb5fefe6b76d700042186f3de5ccb1e453d72",
+      "source_title": "painefield",
+      "sentence": "That leaves a wide-open time frame for completing the review somewhere between November 2018 and a year later.",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (dates and events) that the cited source is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "wrong_or_insufficient_evidence",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Originally published June 1, 2018 at 1:49 pm",
+     "The FAA is requiring a new review because the flight operations now proposed by Alaska Airlines, Southwest Airlines and United will bring many more passengers than originally approved in a 2012 environmental impact assessment.",
+     "Such supplemental reviews, which include a period for public comments, typically take six to 18 months, the FAA said Friday. That leaves a wide-open time frame for completing the review somewhere between November 2018 and a year later."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text contains all necessary evidence for every component of the claim: the article date establishes June 2018, the FAA's requirement of a new review is explicitly stated, and the timeframe between November 2018 and November 2019 is given. However, the shown sentences\u2014the article's lead and metadata\u2014only mention a vague delay 'from this fall into next year' and the phrase 'depending on an additional review' without stating the FAA's announcement or the precise timeframe. Thus the displayed proof is insufficient; the tool must show the correct supporting sentences.",
+    "rescued": false
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "84e94c3d037493fea1a32a301d238823f4f8a525": {
+    "title": "premiershipofborisjohnso",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "30e03efac7304b51be06c7620d49ab7502a9e9c5": {
+    "title": "flightsnovel",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "4db885a03de9c7314147ed8d40a2b630912cf6e1": {
+    "title": "melissabarbieri",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "05523cf6af99a557a4d78fa9f741f930c03ab24b": {
+    "title": "iamnotarobot",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "87823826cb9daf5bd9152182d8d07b21b4cd58e0": {
+    "title": "gabrielcowan",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e": {
+    "title": "2016fortmcmurraywildfire",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "72b802c8400176ff3487c281b62a38c9e243db43": {
+    "title": "signalfx",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4aa5ccad9b83b2043d57eff3d4995dace1bd75de": {
+    "title": "themessenger2015canadian",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "01693c04a7c4ab09c9f016eb4b47476fe6b5db89": {
+    "title": "bidwells",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9": {
+    "title": "bobabernethy",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "117d3c7897d075aa4f58ac3cd040ead60e810a12": {
+    "title": "rashadvaughn",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "f3cc5bd405d74e216379fa32349cd797b9fec4c2": {
+    "title": "wii",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a5d0d12347e7a0d9710698057bc886d6ff2b1999": {
+    "title": "liverpool",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a": {
+    "title": "thesoundofmusiclive",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "49ac46ddb26bc510d7aa6739a67df77c83a1e215": {
+    "title": "zacefron",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "fc886923259fe0e386faf44c175ef22d3f22d216": {
+    "title": "jjwatt",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2a5be1527b739d4f2c94271dc22dee2e60444142": {
+    "title": "scottpellerin",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "b426f05dffb75363f78de25e5c18618a9bce0d32": {
+    "title": "listofanthraxmembers",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "059ae20cff3b0d3687e9f240792c8bc1f443b91b": {
+    "title": "winnipeg",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "46dfb5fefe6b76d700042186f3de5ccb1e453d72": {
+    "title": "painefield",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1de17f655d94bfbafb83a58458c0e37be9930bc1": {
+    "title": "2019columbuschallengersi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "5dbaa5964fd2bdd8f0b580dcf66795c6cd16312d": {
+    "title": "alangrantwriter",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "11553594f194c6cabb6145d7a0e284d6380cea65": {
+    "title": "feikesijbesma",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "3fbda1786a6f7f4dd5a728b5c15a25eb854aa734": {
+    "title": "raymason",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4": {
+    "title": "marcusharness",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8b9591a6c53458d59541e2cba740687e354a98b2": {
+    "title": "xusi",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 15,
+   "unsupported": 11,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 15:05:09",
+  "marker_errors": [],
+  "processing_time_seconds": 387.2,
+  "source_hashes": {
+   "wii.txt": "e8c704f934468ea93d8449a4ced659d935e6db15",
+   "signalfx.txt": "2e2d313e17d71f63b722d0883f7ad619adc2f1d3",
+   "2016fortmcmurraywildfire.txt": "7d88d3d5e2382a6a3409a690d4a94ef285c43c44",
+   "liverpool.txt": "746cdf105998e95d2831417eaa707ad597f06522",
+   "premiershipofborisjohnso.txt": "0a6ec0c6911efda821cbd8c774e5ee72979128f2",
+   "zacefron.txt": "e1036c3dc6203f8fc3d1334406f2f7aa809b1014",
+   "2019columbuschallengersi.txt": "2964f50a0b337b47b4c5b565515ed347ed020d16",
+   "listofanthraxmembers.txt": "95024b2bcbc7bc3fbebd173d858d26ccb5053021",
+   "marcusharness.txt": "34d9a0053f743f444e1b39a861652d8a824c65b8",
+   "raymason.txt": "3c72f718d57464617de31a50277f02a4447896e4",
+   "winnipeg.txt": "d75ea21a6f1904061752dc703d85b7cf656243a7",
+   "feikesijbesma.txt": "5f814c5d33072a2625082fbeaac92c5164b3aa19",
+   "jjwatt.txt": "650f1281932ab678e5125ad43bc09dee6ec775cb",
+   "themessenger2015canadian.txt": "905cdb28a803f136020beaf39e49bef8a895b40b",
+   "flightsnovel.txt": "b1d06e1ae1aa4d1fde201578ca712101f24371f4",
+   "bobabernethy.txt": "f4994c350c373d6b390e576566d3c46ee145364f",
+   "bidwells.txt": "75581d63ed0992772aa366248c1813918d2da511",
+   "thesoundofmusiclive.txt": "36f6157fd63da72f24ff154504d25627d2b1904f",
+   "rashadvaughn.txt": "78ddb8e3c37ca7c98dffda5ddb9d19fbb363f8de",
+   "xusi.txt": "5f217f767abcce56652a36f7eb1285bfd7fc4abe",
+   "alangrantwriter.txt": "01ac6a01a9707cddfe1f1588696186e5cac7abaf",
+   "iamnotarobot.txt": "c324f55bcedf46e03bca04d6abc707e5b08e382b",
+   "gabrielcowan.txt": "fa36dc95a2d6c5e7a054742c3ca56e4d44698d35",
+   "scottpellerin.txt": "d86991bd5fdfc57bd1a38fa77d62a56d405c7484",
+   "melissabarbieri.txt": "e6b230d3cbdcb9371ccf0f7799e2410f46959d32",
+   "painefield.txt": "9613d29609605d408610e6cedbb46e777a651649"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 380,
+    "prompt_tokens": 429918,
+    "completion_tokens": 18390,
+    "cost_usd": 0.050399
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 21,
+    "prompt_tokens": 98681,
+    "completion_tokens": 48841,
+    "cost_usd": 0.022152
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 11,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 18,
+   "actions": {
+    "add_citation_or_rewrite": 16,
+    "wrong_or_insufficient_evidence": 2
+   },
+   "proof_may_exist": [
+    "t22",
+    "t26"
+   ],
+   "conflicts": [],
+   "rescued": [],
+   "amber_resolved": []
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "f3cc5bd405d74e216379fa32349cd797b9fec4c2",
+   "key": "wii",
+   "filename": "wii.txt",
+   "title": "wii",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "72b802c8400176ff3487c281b62a38c9e243db43",
+   "key": "signalfx",
+   "filename": "signalfx.txt",
+   "title": "signalfx",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4e553ed5e63ff61b79b5e0f9d2931935ccc70e4e",
+   "key": "2016fortmcmurraywildfire",
+   "filename": "2016fortmcmurraywildfire.txt",
+   "title": "2016fortmcmurraywildfire",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a5d0d12347e7a0d9710698057bc886d6ff2b1999",
+   "key": "liverpool",
+   "filename": "liverpool.txt",
+   "title": "liverpool",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "84e94c3d037493fea1a32a301d238823f4f8a525",
+   "key": "premiershipofborisjohnso",
+   "filename": "premiershipofborisjohnso.txt",
+   "title": "premiershipofborisjohnso",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "49ac46ddb26bc510d7aa6739a67df77c83a1e215",
+   "key": "zacefron",
+   "filename": "zacefron.txt",
+   "title": "zacefron",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1de17f655d94bfbafb83a58458c0e37be9930bc1",
+   "key": "2019columbuschallengersi",
+   "filename": "2019columbuschallengersi.txt",
+   "title": "2019columbuschallengersi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b426f05dffb75363f78de25e5c18618a9bce0d32",
+   "key": "listofanthraxmembers",
+   "filename": "listofanthraxmembers.txt",
+   "title": "listofanthraxmembers",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4083e8ab2c99a1d103b34cf2f84bc5d178e0b6e4",
+   "key": "marcusharness",
+   "filename": "marcusharness.txt",
+   "title": "marcusharness",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "3fbda1786a6f7f4dd5a728b5c15a25eb854aa734",
+   "key": "raymason",
+   "filename": "raymason.txt",
+   "title": "raymason",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "059ae20cff3b0d3687e9f240792c8bc1f443b91b",
+   "key": "winnipeg",
+   "filename": "winnipeg.txt",
+   "title": "winnipeg",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "11553594f194c6cabb6145d7a0e284d6380cea65",
+   "key": "feikesijbesma",
+   "filename": "feikesijbesma.txt",
+   "title": "feikesijbesma",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fc886923259fe0e386faf44c175ef22d3f22d216",
+   "key": "jjwatt",
+   "filename": "jjwatt.txt",
+   "title": "jjwatt",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4aa5ccad9b83b2043d57eff3d4995dace1bd75de",
+   "key": "themessenger2015canadian",
+   "filename": "themessenger2015canadian.txt",
+   "title": "themessenger2015canadian",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "30e03efac7304b51be06c7620d49ab7502a9e9c5",
+   "key": "flightsnovel",
+   "filename": "flightsnovel.txt",
+   "title": "flightsnovel",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8d390bc0f7aa33e6d8d9171810e14f9b5af840a9",
+   "key": "bobabernethy",
+   "filename": "bobabernethy.txt",
+   "title": "bobabernethy",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "01693c04a7c4ab09c9f016eb4b47476fe6b5db89",
+   "key": "bidwells",
+   "filename": "bidwells.txt",
+   "title": "bidwells",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a8c4ed3b65f89b9f8ddb230c18a214df93f3e64a",
+   "key": "thesoundofmusiclive",
+   "filename": "thesoundofmusiclive.txt",
+   "title": "thesoundofmusiclive",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "117d3c7897d075aa4f58ac3cd040ead60e810a12",
+   "key": "rashadvaughn",
+   "filename": "rashadvaughn.txt",
+   "title": "rashadvaughn",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8b9591a6c53458d59541e2cba740687e354a98b2",
+   "key": "xusi",
+   "filename": "xusi.txt",
+   "title": "xusi",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "5dbaa5964fd2bdd8f0b580dcf66795c6cd16312d",
+   "key": "alangrantwriter",
+   "filename": "alangrantwriter.txt",
+   "title": "alangrantwriter",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "05523cf6af99a557a4d78fa9f741f930c03ab24b",
+   "key": "iamnotarobot",
+   "filename": "iamnotarobot.txt",
+   "title": "iamnotarobot",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "87823826cb9daf5bd9152182d8d07b21b4cd58e0",
+   "key": "gabrielcowan",
+   "filename": "gabrielcowan.txt",
+   "title": "gabrielcowan",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "2a5be1527b739d4f2c94271dc22dee2e60444142",
+   "key": "scottpellerin",
+   "filename": "scottpellerin.txt",
+   "title": "scottpellerin",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "4db885a03de9c7314147ed8d40a2b630912cf6e1",
+   "key": "melissabarbieri",
+   "filename": "melissabarbieri.txt",
+   "title": "melissabarbieri",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "46dfb5fefe6b76d700042186f3de5ccb1e453d72",
+   "key": "painefield",
+   "filename": "painefield.txt",
+   "title": "painefield",
+   "num_claims": 0
+  }
+ ]
+}

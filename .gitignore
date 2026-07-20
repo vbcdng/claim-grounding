@@ -1,0 +1,18 @@
+venv/
+__pycache__/
+*.pyc
+*.log
+
+# Secret / personal — never commit
+config/google_api_key*.txt
+config/*_api_key*.txt
+config/unpaywall_email.txt
+
+# Regenerable outputs
+data/
+examples/*/output/
+**/source_claims/
+_assets/
+
+# never commit API keys
+config/deepseek_api_key.txt

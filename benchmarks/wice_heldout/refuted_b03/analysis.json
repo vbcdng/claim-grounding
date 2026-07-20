@@ -1,0 +1,2191 @@
+{
+ "text_claims": [
+  {
+   "id": "t0",
+   "text": "# WiCE train heldout batch 3 (refuted)",
+   "markers": [],
+   "paper_ids": [],
+   "verdict": "own",
+   "method": "none",
+   "cosine": null,
+   "evidence": null,
+   "evidences": [],
+   "reason": "no_citation_marker",
+   "own_kind": {
+    "kind": "structural",
+    "reason": "This is a heading that announces a section and does not make an assertion about the world.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "6bd35e6c"
+   }
+  },
+  {
+   "id": "t1",
+   "text": "In May 2019, the second model, the Rocket 3 TFC, was introduced at a motorbike show at Shoreditch, London.",
+   "markers": [
+    "triumphmotorcyclesltd"
+   ],
+   "paper_ids": [
+    "2a358f5df59c2985f074cb68ee05a709164d1dbd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "2a358f5df59c2985f074cb68ee05a709164d1dbd",
+    "source_title": "triumphmotorcyclesltd",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "First published - 23/05/2019 After steadily teasing since January this year, Triumph have finally spilled the beans on their new Rocket III TFC and the bike looks poised to tear up the record books.",
+    "page": 1,
+    "snippet": "First published - 23/05/2019 After steadily teasing",
+    "reason": "The passage does not mention the specific date of introduction (May 2019) or the location (Shoreditch, London) of the Rocket 3 TFC introduction.",
+    "votes": "2-0",
+    "window": "First published - 23/05/2019 After steadily teasing since January this year, Triumph have finally spilled the beans on their new Rocket III TFC and the bike looks poised to tear up the record books."
+   },
+   "evidences": [
+    {
+     "paper_id": "2a358f5df59c2985f074cb68ee05a709164d1dbd",
+     "source_title": "triumphmotorcyclesltd",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "First published - 23/05/2019 After steadily teasing since January this year, Triumph have finally spilled the beans on their new Rocket III TFC and the bike looks poised to tear up the record books.",
+     "page": 1,
+     "snippet": "First published - 23/05/2019 After steadily teasing",
+     "reason": "The passage does not mention the specific date of introduction (May 2019) or the location (Shoreditch, London) of the Rocket 3 TFC introduction.",
+     "votes": "2-0",
+     "window": "First published - 23/05/2019 After steadily teasing since January this year, Triumph have finally spilled the beans on their new Rocket III TFC and the bike looks poised to tear up the record books."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the specific date of introduction (May 2019) or the location (Shoreditch, London) of the Rocket 3 TFC introduction.",
+   "component_check": {
+    "found": [
+     "In May 2019, the second model, the Rocket 3 TFC, was introduced"
+    ],
+    "missing": [
+     "at a motorbike show at Shoreditch, London"
+    ],
+    "rescued": false,
+    "evidence": [
+     {
+      "component": "In May 2019, the second model, the Rocket 3 TFC, was introduced",
+      "paper_id": "2a358f5df59c2985f074cb68ee05a709164d1dbd",
+      "source_title": "triumphmotorcyclesltd",
+      "sentence": "## Triumph Rocket 3 TFC (2019) specs Power: 179.5bhp @ 7000rpm Torque: 165.9ftlb @ 4000rpm Weight: 290kg Price: \u00a325,000 ## Triumph Rocket 3 TFC revealed as firm's most powerful model!",
+      "page": 1
+     }
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "In May 2019, the second model, the Rocket 3 TFC, was introduced at a motorbike show at Shoreditch, London.",
+    "reason": "The passage asserts a specific fact (introduction date and location of a motorcycle model) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the Rocket 3 TFC was introduced at a motorbike show at Shoreditch, London",
+    "rewrite_suggestion": "The Triumph Rocket 3 TFC was announced in May 2019, as reported by Motor Cycle News.",
+    "proofs": [
+     "First published - 23/05/2019 After steadily teasing since January this year, Triumph have finally spilled the beans on their new Rocket III TFC and the bike looks poised to tear up the record books.",
+     "Triumph Rocket 3 TFC revealed as firm's most powerful model!"
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text provides evidence that the Rocket 3 TFC was revealed in May 2019 (via the article's publication date and headline), but it contains no mention of a motorbike show at Shoreditch, London, or any introduction event at that specific location. Therefore, the claim's central assertion about the venue is unsupported by the cited source, requiring the author to either add a citation for that detail or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t2",
+   "text": "In January 2017, Argosy Private Equity and MTN Capital acquired controlling stake in Rita's from Falconhead Capital.",
+   "markers": [
+    "ritasitalianice"
+   ],
+   "paper_ids": [
+    "85435e1dcdf93f008ad607cf3a9ebf7729746339"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.737,
+   "evidence": {
+    "paper_id": "85435e1dcdf93f008ad607cf3a9ebf7729746339",
+    "source_title": "ritasitalianice",
+    "supported": false,
+    "sentence": "Lion's Choice Attacks the Labor Battle Head On",
+    "page": 1,
+    "snippet": "Lion's Choice Attacks the Labor Battle Head",
+    "cosine": 0.737,
+    "reason": "The passage does not contain any information about Argosy Private Equity, MTN Capital, Rita's, or Falconhead Capital, and therefore does not support the claim.",
+    "window": "Guy Fieri's Chicken Joint Gears Up for Growth Lion's Choice Attacks the Labor Battle Head On Fuku's New CEO Forges a Fresh Path for the Chicken Chain"
+   },
+   "evidences": [
+    {
+     "paper_id": "85435e1dcdf93f008ad607cf3a9ebf7729746339",
+     "source_title": "ritasitalianice",
+     "supported": false,
+     "sentence": "Lion's Choice Attacks the Labor Battle Head On",
+     "page": 1,
+     "snippet": "Lion's Choice Attacks the Labor Battle Head",
+     "cosine": 0.737,
+     "reason": "The passage does not contain any information about Argosy Private Equity, MTN Capital, Rita's, or Falconhead Capital, and therefore does not support the claim.",
+     "window": "Guy Fieri's Chicken Joint Gears Up for Growth Lion's Choice Attacks the Labor Battle Head On Fuku's New CEO Forges a Fresh Path for the Chicken Chain"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Argosy Private Equity; Falconhead Capital; MTN Capital",
+    "missing_from": [
+     "85435e1dcdf93f008ad607cf3a9ebf7729746339"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Argosy Private Equity and MTN Capital acquired controlling stake in Rita's from Falconhead Capital in January 2017.",
+    "reason": "The passage directly states a factual event (an acquisition with specific parties and a date) that the citation is expected to prove. This falls under the definition of 'full' scope.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim (specific buyer names, seller, controlling stake) is absent from the source text.",
+    "rewrite_suggestion": "In January 2017, firms purchased Rita's Franchise Company, according to QSR magazine.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text\u2014a QSR magazine page from January 3, 2017\u2014contains only the headline 'Firms Purchase Rita's Franchise Company' and no article body. None of the specific components of the claim (Argosy Private Equity, MTN Capital, controlling stake, Falconhead Capital) appear anywhere in the provided text. Since the source does not support any part of the claim, the author must either add a citation that contains these details or rewrite the claim to only reflect what the source states."
+   }
+  },
+  {
+   "id": "t3",
+   "text": "The \"Ghaznavi\" took its first spaceflight on 26 May 2002, at the height of the military standoff between India and Pakistan.",
+   "markers": [
+    "ghaznavimissile"
+   ],
+   "paper_ids": [
+    "113f6eab0ea700f6f065fa6185fefd6a70343c9a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "113f6eab0ea700f6f065fa6185fefd6a70343c9a",
+    "source_title": "ghaznavimissile",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "Pakistan had test-fired the medium range surface-to-surface missile Ghauri on Saturday The second test came despite international condemnation of the first test.",
+    "page": 1,
+    "snippet": "Pakistan had test-fired the medium range surface-to-surface",
+    "reason": "The passage does not mention the date of the Ghaznavi's first spaceflight or the military standoff between India and Pakistan.",
+    "votes": "2-0",
+    "window": "Pakistan had test-fired the medium range surface-to-surface missile Ghauri on Saturday The second test came despite international condemnation of the first test. Secrets every mother should know Search the Internet ### Pak tests Ghaznavi missile amid world condemnation Pakistan on Sunday test-fired the short range surface-to-surface missile Haft-3 (Ghaznavi), the second missile test in two days."
+   },
+   "evidences": [
+    {
+     "paper_id": "113f6eab0ea700f6f065fa6185fefd6a70343c9a",
+     "source_title": "ghaznavimissile",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "Pakistan had test-fired the medium range surface-to-surface missile Ghauri on Saturday The second test came despite international condemnation of the first test.",
+     "page": 1,
+     "snippet": "Pakistan had test-fired the medium range surface-to-surface",
+     "reason": "The passage does not mention the date of the Ghaznavi's first spaceflight or the military standoff between India and Pakistan.",
+     "votes": "2-0",
+     "window": "Pakistan had test-fired the medium range surface-to-surface missile Ghauri on Saturday The second test came despite international condemnation of the first test. Secrets every mother should know Search the Internet ### Pak tests Ghaznavi missile amid world condemnation Pakistan on Sunday test-fired the short range surface-to-surface missile Haft-3 (Ghaznavi), the second missile test in two days."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the date of the Ghaznavi's first spaceflight or the military standoff between India and Pakistan.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The \"Ghaznavi\" took its first spaceflight on 26 May 2002, at the height of the military standoff between India and Pakistan.",
+    "reason": "The passage directly states a fact (the date of the first spaceflight) and attributes it implicitly to the cited source. This falls under the default 'full' scope as it's a factual claim expected to be proven by the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim asserts it was the first spaceflight and that it occurred at the height of a military standoff; the source only mentions a test launch and general tensions without specifying 'first' or 'height'.",
+    "rewrite_suggestion": "Pakistan test-fired the Ghaznavi missile on 26 May 2002 amid ongoing tensions with India.",
+    "proofs": [
+     "Pakistan on Sunday test-fired the short range surface-to-surface missile Haft-3 (Ghaznavi), the second missile test in two days.",
+     "Bush urged India not to see the recent missile tests as a 'provocation'."
+    ],
+    "quotes_dropped": 1,
+    "conflict": null,
+    "why": "The shown sentences from the tool are about the Ghauri missile, not the Ghaznavi, and omit the date and context. The source text does contain the date (May 26, 2002) and the missile name, but it does not state that this was the missile's 'first spaceflight' nor that it occurred at the 'height of the military standoff' \u2014 those are unsupported characterizations. Therefore the author must either add a citation for those subclaims or rewrite the claim to what the source supports."
+   }
+  },
+  {
+   "id": "t4",
+   "text": "Through its research UNE seeks to assist in the economic, social and cultural advancement of Australia and in the advanced training of undergraduate and postgraduate students.",
+   "markers": [
+    "universityofnewenglandau"
+   ],
+   "paper_ids": [
+    "7f1a8fdd59bbe6cc6b4c7efac6c270344ced9577"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8478,
+   "evidence": {
+    "paper_id": "7f1a8fdd59bbe6cc6b4c7efac6c270344ced9577",
+    "source_title": "universityofnewenglandau",
+    "supported": false,
+    "sentence": "UNE facilitates research with a number of centres, institutes and Collaborative Research Centres",
+    "page": 1,
+    "snippet": "UNE facilitates research with a number of",
+    "cosine": 0.8478,
+    "reason": "The passage mentions UNE facilitates research but does not specify the goals of this research or the training of students.",
+    "window": "## Centres, Institutes, CRCs UNE facilitates research with a number of centres, institutes and Collaborative Research Centres Our research partners ## Palaeoscience Research ### Lightning Claw"
+   },
+   "evidences": [
+    {
+     "paper_id": "7f1a8fdd59bbe6cc6b4c7efac6c270344ced9577",
+     "source_title": "universityofnewenglandau",
+     "supported": false,
+     "sentence": "UNE facilitates research with a number of centres, institutes and Collaborative Research Centres",
+     "page": 1,
+     "snippet": "UNE facilitates research with a number of",
+     "cosine": 0.8478,
+     "reason": "The passage mentions UNE facilitates research but does not specify the goals of this research or the training of students.",
+     "window": "## Centres, Institutes, CRCs UNE facilitates research with a number of centres, institutes and Collaborative Research Centres Our research partners ## Palaeoscience Research ### Lightning Claw"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes the stated goals and mission of the University of New England, which the citation is expected to support. There is no indication that the citation is only backing a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that UNE's research seeks to assist in economic, social and cultural advancement of Australia and in advanced training of undergraduate and postgraduate students is not stated in the source.",
+    "rewrite_suggestion": "Through its research UNE makes real-world contributions and supports higher degree research training for postgraduate students.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text does not contain any sentence stating that UNE's research aims to assist in economic, social and cultural advancement, nor does it mention advanced training of undergraduate and postgraduate students as a goal of research. The shown sentence about centres is irrelevant, and no other source sentence provides the claimed purpose. Therefore the claim's substantive components are unprovable from the cited source, requiring the author to either add a citation or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t5",
+   "text": "With the Dissolution of the Monasteries in 1536, ownership of the town was transferred to Edward North, 1st Baron North, whose son, Roger North, became resident in Mildenhall for a time.",
+   "markers": [
+    "mildenhallsuffolk"
+   ],
+   "paper_ids": [
+    "924e7aa9c8d57478a990bba6ccf6c00493080a34"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "924e7aa9c8d57478a990bba6ccf6c00493080a34",
+    "source_title": "mildenhallsuffolk",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "27 Feb. 1531, 1st s. of Edward North, 1st Lord North, by 1st w. Alice, da.",
+    "page": 1,
+    "snippet": "27 Feb. 1531, 1st s. of Edward",
+    "reason": "The passage does not mention the Dissolution of the Monasteries or the transfer of ownership of the town to Edward North.",
+    "votes": "2-0",
+    "window": "27 Feb. 1531, 1st s. of Edward North, 1st Lord North, by 1st w. Alice, da. as 2nd Lord North 31 Dec. 1564. Flushing June 1586, Utrecht and Harlingen July 1586; PC and treasurer of the Household Aug. 1596.3 ### Biography Roger North was born in the same year that his father became clerk of the Parliaments. He became a member of Elizabeth's Household upon her accession and was created knight of the Bath at her coronation.4 Doubtless his father's prestige and influence procured North's first election to Parliament in 1555 at the age of 24,when he was returned as senior knight of the shire for the county of Cambridge."
+   },
+   "evidences": [
+    {
+     "paper_id": "924e7aa9c8d57478a990bba6ccf6c00493080a34",
+     "source_title": "mildenhallsuffolk",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "27 Feb. 1531, 1st s. of Edward North, 1st Lord North, by 1st w. Alice, da.",
+     "page": 1,
+     "snippet": "27 Feb. 1531, 1st s. of Edward",
+     "reason": "The passage does not mention the Dissolution of the Monasteries or the transfer of ownership of the town to Edward North.",
+     "votes": "2-0",
+     "window": "27 Feb. 1531, 1st s. of Edward North, 1st Lord North, by 1st w. Alice, da. as 2nd Lord North 31 Dec. 1564. Flushing June 1586, Utrecht and Harlingen July 1586; PC and treasurer of the Household Aug. 1596.3 ### Biography Roger North was born in the same year that his father became clerk of the Parliaments. He became a member of Elizabeth's Household upon her accession and was created knight of the Bath at her coronation.4 Doubtless his father's prestige and influence procured North's first election to Parliament in 1555 at the age of 24,when he was returned as senior knight of the shire for the county of Cambridge."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the Dissolution of the Monasteries or the transfer of ownership of the town to Edward North.",
+   "subject_guard": {
+    "subject": "Dissolution of the Monasteries",
+    "missing_from": [
+     "924e7aa9c8d57478a990bba6ccf6c00493080a34"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "ownership of the town was transferred to Edward North, 1st Baron North, whose son, Roger North, became resident in Mildenhall for a time.",
+    "reason": "The passage asserts historical facts about land ownership and residency, directly attributing this information to the cited source. This falls under the 'full' scope as the citation is expected to prove these specific historical claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The Dissolution of the Monasteries in 1536, the transfer of ownership of Mildenhall to Edward North, and Roger North's residence in Mildenhall for a period are not supported by the source.",
+    "rewrite_suggestion": "Roger North (1531-1600), son of Edward North, 1st Lord North, was of Mildenhall, Suffolk.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text, a biography of Roger North, contains no mention of the Dissolution of the Monasteries (1536), no statement that ownership of Mildenhall was transferred to Edward North, and no assertion that Roger North became resident in Mildenhall for a time. The only relevant detail is that Roger North is described as 'of Kirtling, Cambs. and Mildenhall, Suff.' This does not prove the claimed sequence of events. The shown sentence is merely a birth record and does not cover any component of the claim."
+   }
+  },
+  {
+   "id": "t6",
+   "text": "India has an Internet user base of about 460 million as of December 2017.",
+   "markers": [
+    "ecommerce"
+   ],
+   "paper_ids": [
+    "b0b749450f253270208bb4c8afe5a09ed9029582"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8711,
+   "evidence": {
+    "paper_id": "b0b749450f253270208bb4c8afe5a09ed9029582",
+    "source_title": "ecommerce",
+    "supported": false,
+    "sentence": "(meta data) TITLE: Internet usage in India - Statistics & Facts | Statista",
+    "page": 1,
+    "snippet": "(meta data) TITLE: Internet usage in India",
+    "cosine": 0.8711,
+    "reason": "The passage is a metadata snippet and does not contain the claimed statistic about India's internet user base.",
+    "window": "(meta data) TITLE: Internet usage in India - Statistics & Facts | Statista Prices & Access Single Accounts Corporate Solutions Most-viewed Statistics Recent Statistics Popular Statistics"
+   },
+   "evidences": [
+    {
+     "paper_id": "b0b749450f253270208bb4c8afe5a09ed9029582",
+     "source_title": "ecommerce",
+     "supported": false,
+     "sentence": "(meta data) TITLE: Internet usage in India - Statistics & Facts | Statista",
+     "page": 1,
+     "snippet": "(meta data) TITLE: Internet usage in India",
+     "cosine": 0.8711,
+     "reason": "The passage is a metadata snippet and does not contain the claimed statistic about India's internet user base.",
+     "window": "(meta data) TITLE: Internet usage in India - Statistics & Facts | Statista Prices & Access Single Accounts Corporate Solutions Most-viewed Statistics Recent Statistics Popular Statistics"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a specific statistic (Internet user base) attributed to a point in time, which is a factual claim expected to be supported by the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "India has an Internet user base of about 460 million as of December 2017",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence is only metadata (a title) and contains no data. The provided source text is a navigation page with no statistics, dates, or figures. Neither the claim's number (460 million) nor its date (December 2017) appear anywhere in the source text, so the claim is entirely unsupported by this citation. The author must either add a different source that contains the statistic or rewrite the claim to match what the cited source actually states."
+   }
+  },
+  {
+   "id": "t7",
+   "text": "Yash did not want to, and tried to persuade Aditya to do it himself.",
+   "markers": [
+    "dilwaledulhanialejayenge"
+   ],
+   "paper_ids": [
+    "0bdeb8c088a8f9843ba44b0878a2198ceb9dafcd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0bdeb8c088a8f9843ba44b0878a2198ceb9dafcd",
+    "source_title": "dilwaledulhanialejayenge",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "I had to be goaded.",
+    "page": 1,
+    "snippet": "I had to be goaded.",
+    "reason": "The passage does not mention Yash or Aditya, nor does it describe any attempt to persuade someone to do something.",
+    "votes": "2-0",
+    "window": "I had to be goaded. After the apprenticeship, were you ready or did you have to be goaded to direct a film independently? Because I'm lazy, I don't like working. I have to be pushed."
+   },
+   "evidences": [
+    {
+     "paper_id": "0bdeb8c088a8f9843ba44b0878a2198ceb9dafcd",
+     "source_title": "dilwaledulhanialejayenge",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "I had to be goaded.",
+     "page": 1,
+     "snippet": "I had to be goaded.",
+     "reason": "The passage does not mention Yash or Aditya, nor does it describe any attempt to persuade someone to do something.",
+     "votes": "2-0",
+     "window": "I had to be goaded. After the apprenticeship, were you ready or did you have to be goaded to direct a film independently? Because I'm lazy, I don't like working. I have to be pushed."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Yash or Aditya, nor does it describe any attempt to persuade someone to do something.",
+   "subject_guard": {
+    "subject": "yash",
+    "missing_from": [
+     "0bdeb8c088a8f9843ba44b0878a2198ceb9dafcd"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage describes an interaction between characters and does not attribute any specific facts, findings, or statements to the cited source. Therefore, it is considered 'full' as the citation is expected to prove the content of the passage, even if it's narrative.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Yash Chopra did not want to do something and tried to persuade Aditya Chopra to do it himself is entirely absent from the source text.",
+    "rewrite_suggestion": "Aditya Chopra said he had to be goaded to direct DDLJ independently.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim attributes specific actions and motivations to Yash Chopra (reluctance and persuasion of Aditya), but the source text only contains Aditya Chopra's statement that he 'had to be goaded' and later describes Yash's lack of immediate reaction to the story. No mention is made of Yash's desire or attempt to persuade Aditya. Therefore, the claim's components are not supported by the source at all, requiring the author to either add a citation or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t8",
+   "text": "The original photo used in this controversy was stolen from an article on the website ChessBase News, and had the chess board cropped out.",
+   "markers": [
+    "anyacorke"
+   ],
+   "paper_ids": [
+    "e590c6f1efd03e6729264686c68ebe32dd8f232d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8804,
+   "evidence": {
+    "paper_id": "e590c6f1efd03e6729264686c68ebe32dd8f232d",
+    "source_title": "anyacorke",
+    "supported": false,
+    "sentence": "| Photo: Lennart Ootes / Grand Chess Tour More... ## See also # Altibox Norway Chess, Round 9 6/14/2019 \u2013 The 2019 Altibox Norway Chess Tournament is a ten-player single round robin taking place on June 3rd-15th in Stavanger.",
+    "page": 1,
+    "snippet": "| Photo: Lennart Ootes / Grand Chess",
+    "cosine": 0.8804,
+    "reason": "The passage does not mention the origin of the photo, whether it was stolen, or if a chessboard was cropped out.",
+    "window": "Express report. | Photo: Lennart Ootes / Grand Chess Tour More... ## See also # Altibox Norway Chess, Round 9 6/14/2019 \u2013 The 2019 Altibox Norway Chess Tournament is a ten-player single round robin taking place on June 3rd-15th in Stavanger. Every single match will have a winner: if the classical game ends in a draw Armageddon will follow, White has ten minutes, Black seven, but White needs to win."
+   },
+   "evidences": [
+    {
+     "paper_id": "e590c6f1efd03e6729264686c68ebe32dd8f232d",
+     "source_title": "anyacorke",
+     "supported": false,
+     "sentence": "| Photo: Lennart Ootes / Grand Chess Tour More... ## See also # Altibox Norway Chess, Round 9 6/14/2019 \u2013 The 2019 Altibox Norway Chess Tournament is a ten-player single round robin taking place on June 3rd-15th in Stavanger.",
+     "page": 1,
+     "snippet": "| Photo: Lennart Ootes / Grand Chess",
+     "cosine": 0.8804,
+     "reason": "The passage does not mention the origin of the photo, whether it was stolen, or if a chessboard was cropped out.",
+     "window": "Express report. | Photo: Lennart Ootes / Grand Chess Tour More... ## See also # Altibox Norway Chess, Round 9 6/14/2019 \u2013 The 2019 Altibox Norway Chess Tournament is a ten-player single round robin taking place on June 3rd-15th in Stavanger. Every single match will have a winner: if the classical game ends in a draw Armageddon will follow, White has ten minutes, Black seven, but White needs to win."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The original photo used in this controversy was stolen from an article on the website ChessBase News, and had the chess board cropped out.",
+    "reason": "The passage asserts a factual claim about the origin and modification of a photograph, which is directly attributed to the cited source. The attribution test is met as the passage implies the source provides this information.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that a particular photo was stolen from a ChessBase News article and had the chess board cropped out is not supported by the cited source. The source (a 2007 ChessBase article about the Carinthian Chess Festival) does not mention any controversy, theft, or cropping.",
+    "rewrite_suggestion": "The photo shown in the article comes from a ChessBase News report (the cited source itself), but the source does not describe any theft or cropping.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source text is a 2007 ChessBase article about a chess festival. It contains no mention of any controversy, no statement that a photo was stolen, and no reference to cropping out a chess board. The shown sentence is from a 'See also' section about a different event and is irrelevant. Therefore, every component of the claim is absent from the source, making it an author problem requiring either a new citation or a rewrite."
+   }
+  },
+  {
+   "id": "t9",
+   "text": "He also played in an offensive system under then OC Rich Rodriguez in 1997 and 1998.",
+   "markers": [
+    "jajuandawson"
+   ],
+   "paper_ids": [
+    "56699e9028d72edbbcf662bb1aa0d64ce7963a6a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8087,
+   "evidence": {
+    "paper_id": "56699e9028d72edbbcf662bb1aa0d64ce7963a6a",
+    "source_title": "jajuandawson",
+    "supported": false,
+    "sentence": "1997 CUSA 10 (2nd) 1998 CUSA 12 (3rd) 1999 CUSA 8 (9th)",
+    "page": 1,
+    "snippet": "1997 CUSA 10 (2nd) 1998 CUSA 12",
+    "cosine": 0.8087,
+    "reason": "The passage provides statistics for receiving and scrimmage yards/touchdowns but does not mention the offensive system or the offensive coordinator Rich Rodriguez.",
+    "window": "1997 CUSA 16.1 (3rd) Receiving Touchdowns 1997 CUSA 10 (1st) 1998 NCAA 12 (6th) 1998 CUSA 12 (2nd) 1999 CUSA 8 (4th) Career CUSA** 31 (6th) ** Since 1996 Yards From Scrimmage 1997 CUSA 839 (5th) 1998 CUSA 1030 (9th) 1999 CUSA 1054 (8th) Touchdowns From Scrimmage 1997 CUSA 10 (2nd) 1998 CUSA 12 (3rd) 1999 CUSA 8 (9th)"
+   },
+   "evidences": [
+    {
+     "paper_id": "56699e9028d72edbbcf662bb1aa0d64ce7963a6a",
+     "source_title": "jajuandawson",
+     "supported": false,
+     "sentence": "1997 CUSA 10 (2nd) 1998 CUSA 12 (3rd) 1999 CUSA 8 (9th)",
+     "page": 1,
+     "snippet": "1997 CUSA 10 (2nd) 1998 CUSA 12",
+     "cosine": 0.8087,
+     "reason": "The passage provides statistics for receiving and scrimmage yards/touchdowns but does not mention the offensive system or the offensive coordinator Rich Rodriguez.",
+     "window": "1997 CUSA 16.1 (3rd) Receiving Touchdowns 1997 CUSA 10 (1st) 1998 NCAA 12 (6th) 1998 CUSA 12 (2nd) 1999 CUSA 8 (4th) Career CUSA** 31 (6th) ** Since 1996 Yards From Scrimmage 1997 CUSA 839 (5th) 1998 CUSA 1030 (9th) 1999 CUSA 1054 (8th) Touchdowns From Scrimmage 1997 CUSA 10 (2nd) 1998 CUSA 12 (3rd) 1999 CUSA 8 (9th)"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "OC Rich Rodriguez",
+    "missing_from": [
+     "56699e9028d72edbbcf662bb1aa0d64ce7963a6a"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a fact about the player's participation in a specific offensive system under a particular coach during certain years. This is a factual claim that the citation is expected to support.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim states that Rich Rodriguez was the offensive coordinator and that the player played in his system in 1997 and 1998, but the source contains no mention of Rich Rodriguez or any offensive system.",
+    "rewrite_suggestion": "He played at Tulane in 1997 and 1998.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source is a statistical page for JaJuan Dawson that lists his yearly stats but never mentions Rich Rodriguez, an offensive system, or any coaching staff. The component about playing under OC Rich Rodriguez is entirely absent from the source; the years 1997 and 1998 are present in the source (as stat lines) but the shown sentence does not prove they refer to his playing. Since a substantive component is unprovable from the source, the author must either add a citation for the coaching detail or rewrite the claim to remove it."
+   }
+  },
+  {
+   "id": "t10",
+   "text": "The caf\u00e9 service was there a natural extension of the caf\u00e9 streetscape of the Norton Street.",
+   "markers": [
+    "allsoulsanglicanchurchle"
+   ],
+   "paper_ids": [
+    "8231548db8e66324881c3541f3d0467da669b3ec"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8019,
+   "evidence": {
+    "paper_id": "8231548db8e66324881c3541f3d0467da669b3ec",
+    "source_title": "allsoulsanglicanchurchle",
+    "supported": false,
+    "sentence": "Dr Jensen said the diocese had been trying to make church services more attractive to the public by making them less formal and as friendly as possible.",
+    "page": 1,
+    "snippet": "Dr Jensen said the diocese had been",
+    "cosine": 0.8019,
+    "reason": "The passage discusses church attendance and service formality in the Sydney diocese and nationwide, with no mention of Norton Street or caf\u00e9 streetscapes.",
+    "window": "National Church Life Survey statistics show an increase in attendance to churches in the Sydney diocese of 9 per cent between 1996 and 2001, compared with a nationwide decline of 2 per cent in the same period. Dr Jensen said the diocese had been trying to make church services more attractive to the public by making them less formal and as friendly as possible. \"If people's vision of church is a pretty formal, cold sort of thing, that's not the modern church at all,\" he said."
+   },
+   "evidences": [
+    {
+     "paper_id": "8231548db8e66324881c3541f3d0467da669b3ec",
+     "source_title": "allsoulsanglicanchurchle",
+     "supported": false,
+     "sentence": "Dr Jensen said the diocese had been trying to make church services more attractive to the public by making them less formal and as friendly as possible.",
+     "page": 1,
+     "snippet": "Dr Jensen said the diocese had been",
+     "cosine": 0.8019,
+     "reason": "The passage discusses church attendance and service formality in the Sydney diocese and nationwide, with no mention of Norton Street or caf\u00e9 streetscapes.",
+     "window": "National Church Life Survey statistics show an increase in attendance to churches in the Sydney diocese of 9 per cent between 1996 and 2001, compared with a nationwide decline of 2 per cent in the same period. Dr Jensen said the diocese had been trying to make church services more attractive to the public by making them less formal and as friendly as possible. \"If people's vision of church is a pretty formal, cold sort of thing, that's not the modern church at all,\" he said."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The caf\u00e9 service was a natural extension of the caf\u00e9 streetscape of the Norton Street.",
+    "reason": "The passage directly asserts a statement about the caf\u00e9 service and its relation to the streetscape, implying the cited source is expected to support this specific claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claim that the caf\u00e9 service was a natural extension of the caf\u00e9 streetscape of Norton Street",
+    "rewrite_suggestion": "At Leichhardt, All Souls Anglican Church is expanding to include a cafe-style space as part of its mission.",
+    "proofs": [
+     "At Leichhardt, All Souls Anglican Church is expanding to include a cafe-style space in response to the mission, during which it has doubled attendances.",
+     "Archdeacon Deryck Howell said parishioners were keen to make All Souls as well-known to the community as possible and was building a cafe area next to the church where morning tea and supper could be served after church, and where church events, outreach activities and playgroups could be held."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that the caf\u00e9 service was a natural extension of the Norton Street caf\u00e9 streetscape, but the source never mentions Norton Street or any such streetscape. While the source does describe a cafe area at All Souls Anglican Church in Leichhardt, that component is not among the shown sentences, and the key geographic/cultural reference is entirely absent. The author must either add a citation that establishes the Norton Street connection or rewrite the claim to remove that unsourced element."
+   }
+  },
+  {
+   "id": "t11",
+   "text": "M-Cubed was launched as a secondary payload to the Suomi NPP satellite, along with AubieSat-1, DICE-1, DICE-2, Explorer-1 Prime, and RAX-2.",
+   "markers": [
+    "mcubed"
+   ],
+   "paper_ids": [
+    "842a0bc0c41d0d618e2fefaef49bb49ab4c39590"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9048,
+   "evidence": {
+    "paper_id": "842a0bc0c41d0d618e2fefaef49bb49ab4c39590",
+    "source_title": "mcubed",
+    "supported": false,
+    "sentence": "The result has been a significant number of satellite-based research and commercial space endeavors using CubeSats.",
+    "page": 1,
+    "snippet": "The result has been a significant number",
+    "cosine": 0.9048,
+    "reason": "The passage discusses CubeSat missions in general and does not mention the M-Cubed satellite or its launch details.",
+    "window": "In contrast to typical large-satellite missions, CubeSat missions typically reduce cost and development time by using COTS (Commercial-off-the-Shelf ) components and launching with other missions on the same launch vehicle. The result has been a significant number of satellite-based research and commercial space endeavors using CubeSats. However, one of the issues that have limited further reductions in a CubeSat's cost and development-time, as well as flexibility in potential structural frame designs, is the fact that satellites must be manufactured on Earth and then launched into space."
+   },
+   "evidences": [
+    {
+     "paper_id": "842a0bc0c41d0d618e2fefaef49bb49ab4c39590",
+     "source_title": "mcubed",
+     "supported": false,
+     "sentence": "The result has been a significant number of satellite-based research and commercial space endeavors using CubeSats.",
+     "page": 1,
+     "snippet": "The result has been a significant number",
+     "cosine": 0.9048,
+     "reason": "The passage discusses CubeSat missions in general and does not mention the M-Cubed satellite or its launch details.",
+     "window": "In contrast to typical large-satellite missions, CubeSat missions typically reduce cost and development time by using COTS (Commercial-off-the-Shelf ) components and launching with other missions on the same launch vehicle. The result has been a significant number of satellite-based research and commercial space endeavors using CubeSats. However, one of the issues that have limited further reductions in a CubeSat's cost and development-time, as well as flexibility in potential structural frame designs, is the fact that satellites must be manufactured on Earth and then launched into space."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Suomi NPP",
+    "missing_from": [
+     "842a0bc0c41d0d618e2fefaef49bb49ab4c39590"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage states a fact about the launch of M-Cubed as a secondary payload, listing other payloads. This is a factual statement that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim is unsupported: the source discusses MakerSat-0 launched on a Delta-2 with JPSS-1 as primary, and lists different secondary payloads (RadFxSat, EagleSat, MiRaTA, Buccaneer RRM). No mention of Suomi NPP, AubieSat-1, DICE-1, DICE-2, Explorer-1 Prime, or RAX-2.",
+    "rewrite_suggestion": "M-Cubed (MakerSat-0) was launched as a secondary payload to the JPSS-1 satellite on a Delta-2 rocket, along with RadFxSat, EagleSat, MiRaTA, and Buccaneer RRM.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The MakerSat-0 1U CubeSat was launched as a secondary payload on Nov. 18, 2017 on a Delta-2-7920 vehicle of ULA from VAFB, CA. The primary mission was the JPSS-1 spacecraft of NOAA, developed at NASA.",
+     "why": "The source states the primary was JPSS-1 (not Suomi NPP) and lists different secondary payloads (RadFxSat, EagleSat, MakerSat-0, MiRaTA, Buccaneer RRM), contradicting the claim's list of secondary payloads."
+    },
+    "why": "None of the components of the claim are present in the provided source text. The source discusses a different launch (MakerSat-0 on Delta-2 with JPSS-1) and a different set of secondary payloads. The shown sentence is irrelevant. Therefore the author must either add a citation for these specific facts or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t12",
+   "text": "The sanctuary has been built to create an alternative of the ancestral work of the elephants and the Cornac who traditionally were working in the forest and protect the elephants from hard labor tasks.",
+   "markers": [
+    "pakbeng"
+   ],
+   "paper_ids": [
+    "a3e315a6d55cde5d17c66c02901bf085ea6d97ae"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8475,
+   "evidence": {
+    "paper_id": "a3e315a6d55cde5d17c66c02901bf085ea6d97ae",
+    "source_title": "pakbeng",
+    "supported": false,
+    "sentence": "The boat to Sanctuary's Mekong Elephant Park would leave at 10:00 a.m. A distant trumpeting elephant interrupted my morning coffee by the Mekong.",
+    "page": 1,
+    "snippet": "The boat to Sanctuary's Mekong Elephant Park",
+    "cosine": 0.8475,
+    "reason": "The passage mentions an \"Mekong Elephant Park\" but does not provide any information about its purpose, the ancestral work of elephants, or the role of Cornacs.",
+    "window": "After dinner, I joined Ben, the general manager, at the Moonlight restaurant's lounge. The boat to Sanctuary's Mekong Elephant Park would leave at 10:00 a.m. A distant trumpeting elephant interrupted my morning coffee by the Mekong. Attention turned to the pachyderms bathing across the river."
+   },
+   "evidences": [
+    {
+     "paper_id": "a3e315a6d55cde5d17c66c02901bf085ea6d97ae",
+     "source_title": "pakbeng",
+     "supported": false,
+     "sentence": "The boat to Sanctuary's Mekong Elephant Park would leave at 10:00 a.m. A distant trumpeting elephant interrupted my morning coffee by the Mekong.",
+     "page": 1,
+     "snippet": "The boat to Sanctuary's Mekong Elephant Park",
+     "cosine": 0.8475,
+     "reason": "The passage mentions an \"Mekong Elephant Park\" but does not provide any information about its purpose, the ancestral work of elephants, or the role of Cornacs.",
+     "window": "After dinner, I joined Ben, the general manager, at the Moonlight restaurant's lounge. The boat to Sanctuary's Mekong Elephant Park would leave at 10:00 a.m. A distant trumpeting elephant interrupted my morning coffee by the Mekong. Attention turned to the pachyderms bathing across the river."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the purpose and function of the sanctuary, which are directly attributable to the cited source. There is no indication that the citation is only for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that the sanctuary provides an alternative to the ancestral work of elephants and Cornac, that they traditionally worked in the forest, and that the sanctuary protects elephants from hard labor tasks \u2013 none of this is supported by the cited source.",
+    "rewrite_suggestion": "The Sanctuary's Mekong Elephant Park offers visitors the chance to walk with elephants, providing an alternative to traditional elephant riding.",
+    "proofs": [
+     "The boat to Sanctuary's Mekong Elephant Park would leave at 10:00 a.m.",
+     "The boat brought me to Wendy, the park manager, waiting at the sandy bank."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim includes substantive components about the sanctuary's purpose (alternative to ancestral work, protection from hard labor) and the traditional role of elephants and Cornac, none of which appear in the source text. The only provable component is the existence of the sanctuary, but the shown sentences do not even include that. Therefore the author must either add a citation for those claims or rewrite the claim to match what the source actually describes."
+   }
+  },
+  {
+   "id": "t13",
+   "text": "The goal also meant Lukaku had equalled his previous best goal return in a league season, set during his loan spell at West Brom in the 2012\u201313 season.",
+   "markers": [
+    "romelulukaku"
+   ],
+   "paper_ids": [
+    "e4261bf9195278c670351616680f4725d36d9e1a"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8976,
+   "evidence": {
+    "paper_id": "e4261bf9195278c670351616680f4725d36d9e1a",
+    "source_title": "romelulukaku",
+    "supported": false,
+    "sentence": "Romelu LukakuMore Football Betting News ## Match in Focus 14:00 TODAY SKY",
+    "page": 1,
+    "snippet": "Romelu LukakuMore Football Betting News ## Match",
+    "cosine": 0.8976,
+    "reason": "The passage does not contain any information about Romelu Lukaku's goal return in any season.",
+    "window": "close in on Pepe as Toffees target ZahaMan Utd reject \u00a354 million bid for Romelu LukakuMore Football Betting News ## Match in Focus 14:00 TODAY SKY ### Sheff Utd v Crystal Palace"
+   },
+   "evidences": [
+    {
+     "paper_id": "e4261bf9195278c670351616680f4725d36d9e1a",
+     "source_title": "romelulukaku",
+     "supported": false,
+     "sentence": "Romelu LukakuMore Football Betting News ## Match in Focus 14:00 TODAY SKY",
+     "page": 1,
+     "snippet": "Romelu LukakuMore Football Betting News ## Match",
+     "cosine": 0.8976,
+     "reason": "The passage does not contain any information about Romelu Lukaku's goal return in any season.",
+     "window": "close in on Pepe as Toffees target ZahaMan Utd reject \u00a354 million bid for Romelu LukakuMore Football Betting News ## Match in Focus 14:00 TODAY SKY ### Sheff Utd v Crystal Palace"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "West Brom",
+    "missing_from": [
+     "e4261bf9195278c670351616680f4725d36d9e1a"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Lukaku had equalled his previous best goal return in a league season, set during his loan spell at West Brom in the 2012\u201313 season.",
+    "reason": "The passage directly states a fact about Lukaku's goal return and links it to a specific season and loan spell, implying the citation is expected to verify this specific factual claim.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim that Lukaku had equalled his previous best goal return in a league season, set during his loan spell at West Brom in 2012\u201313",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a generic Soccerbase webpage containing only navigation, betting news, and metadata about Romelu Lukaku; it does not include any statistics about his goal returns, previous bests, or his loan spell at West Brom in the 2012\u201313 season. Therefore no component of the claim is supported by the cited source, making this an author-side problem requiring either a new citation or a rewrite."
+   }
+  },
+  {
+   "id": "t14",
+   "text": "For six years, the interdependence he established with the international resort company allowed his performers to attain access to rehearsal space, where he continued to develop the troupe's acrobatic style.",
+   "markers": [
+    "christophercalvinharriso"
+   ],
+   "paper_ids": [
+    "9738dba96baf5161c0d037c0947586a77621832d"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8496,
+   "evidence": {
+    "paper_id": "9738dba96baf5161c0d037c0947586a77621832d",
+    "source_title": "christophercalvinharriso",
+    "supported": false,
+    "sentence": "With 3 National Championship wins to her credit, Jenna has competed in World Championships in 1993, was a member of the 1993 National Tour of Olympic Champions, and was named 1993 Olympic Athlete of the Year for Sports Acrobatics.",
+    "page": 1,
+    "snippet": "With 3 National Championship wins to her",
+    "cosine": 0.8496,
+    "reason": "The passage discusses a gymnast named Jenna and her athletic achievements, but it does not mention any interdependence with an international resort company or the development of an acrobatic style for a troupe.",
+    "window": "Her modeling uses the physique developed through her background as a competitive gymnast in Sports Acrobatics. With 3 National Championship wins to her credit, Jenna has competed in World Championships in 1993, was a member of the 1993 National Tour of Olympic Champions, and was named 1993 Olympic Athlete of the Year for Sports Acrobatics. Growing up an only child in New Orleans, Jenna moved to New York when she was 18 to attended the Fashion Institute of Technology, where she completed a Bachelor of Science Degree in Advertising and Marketing Communications."
+   },
+   "evidences": [
+    {
+     "paper_id": "9738dba96baf5161c0d037c0947586a77621832d",
+     "source_title": "christophercalvinharriso",
+     "supported": false,
+     "sentence": "With 3 National Championship wins to her credit, Jenna has competed in World Championships in 1993, was a member of the 1993 National Tour of Olympic Champions, and was named 1993 Olympic Athlete of the Year for Sports Acrobatics.",
+     "page": 1,
+     "snippet": "With 3 National Championship wins to her",
+     "cosine": 0.8496,
+     "reason": "The passage discusses a gymnast named Jenna and her athletic achievements, but it does not mention any interdependence with an international resort company or the development of an acrobatic style for a troupe.",
+     "window": "Her modeling uses the physique developed through her background as a competitive gymnast in Sports Acrobatics. With 3 National Championship wins to her credit, Jenna has competed in World Championships in 1993, was a member of the 1993 National Tour of Olympic Champions, and was named 1993 Olympic Athlete of the Year for Sports Acrobatics. Growing up an only child in New Orleans, Jenna moved to New York when she was 18 to attended the Fashion Institute of Technology, where she completed a Bachelor of Science Degree in Advertising and Marketing Communications."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the performer's activities and achievements, which are directly attributed to the cited source. The citation is expected to prove these specific claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 a six-year interdependence with an international resort company that provided rehearsal space and allowed the development of a troupe's acrobatic style \u2014 is absent from the cited source, which discusses only Jenna Swain's personal biography and career.",
+    "rewrite_suggestion": "Remove this citation and either locate a source that supports this claim or rewrite the claim to match what the source actually states (which is nothing about any 'he', resort company, rehearsal space, or troupe).",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a biographical profile of gymnast/model Jenna Swain and contains no mention of any male figure, an international resort company, rehearsal spaces, or a six-year period of interdependent development. The supporting sentence shown by the tool is about Jenna's gymnastics championships and is completely irrelevant. Since none of the claim's substantive components can be found in the source at all, the author must either add a different citation or rewrite the claim to reflect what the source actually supports."
+   }
+  },
+  {
+   "id": "t15",
+   "text": "On October 14, 1975, the Braves lost Lee Winfield on waivers to the Kansas City Kings.",
+   "markers": [
+    "197576buffalobravesseaso"
+   ],
+   "paper_ids": [
+    "0cc882d28b806c39d4d091626d2a1dfbc2e68413"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "0cc882d28b806c39d4d091626d2a1dfbc2e68413",
+    "source_title": "197576buffalobravesseaso",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "1975-7628KCKNBAPG229.71.53.0.4850.40.6.6430.40.71.10.90.50.30.63.3",
+    "page": 1,
+    "snippet": "1975-7628KCKNBAPG229.71.53.0.4850.40.6.6430.40.71.10.90.50.30.63.3",
+    "reason": "The passage does not mention Lee Winfield or the Braves losing him on waivers to the Kansas City Kings on October 14, 1975.",
+    "votes": "2-0",
+    "window": "1974-7527BUFNBAPG6818.52.44.6.5260.71.0.7210.71.21.92.00.60.41.65.5 1975-7628KCKNBAPG229.71.53.0.4850.40.6.6430.40.71.10.90.50.30.63.3 4 seasonsSEANBA27719.83.57.3.4721.82.6.6662.32.91.98.7"
+   },
+   "evidences": [
+    {
+     "paper_id": "0cc882d28b806c39d4d091626d2a1dfbc2e68413",
+     "source_title": "197576buffalobravesseaso",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "1975-7628KCKNBAPG229.71.53.0.4850.40.6.6430.40.71.10.90.50.30.63.3",
+     "page": 1,
+     "snippet": "1975-7628KCKNBAPG229.71.53.0.4850.40.6.6430.40.71.10.90.50.30.63.3",
+     "reason": "The passage does not mention Lee Winfield or the Braves losing him on waivers to the Kansas City Kings on October 14, 1975.",
+     "votes": "2-0",
+     "window": "1974-7527BUFNBAPG6818.52.44.6.5260.71.0.7210.71.21.92.00.60.41.65.5 1975-7628KCKNBAPG229.71.53.0.4850.40.6.6430.40.71.10.90.50.30.63.3 4 seasonsSEANBA27719.83.57.3.4721.82.6.6662.32.91.98.7"
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention Lee Winfield or the Braves losing him on waivers to the Kansas City Kings on October 14, 1975.",
+   "subject_guard": {
+    "subject": "Kansas City Kings",
+    "missing_from": [
+     "0cc882d28b806c39d4d091626d2a1dfbc2e68413"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "On October 14, 1975, the Braves lost Lee Winfield on waivers to the Kansas City Kings.",
+    "reason": "The passage directly states a fact (a date and an event) that the citation is expected to prove. This falls under the 'full' scope as it's a direct assertion of information from the cited source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The specific date of October 14, 1975, and the fact that Lee Winfield was lost on waivers to the Kansas City Kings.",
+    "rewrite_suggestion": "Lee Winfield played for the Kansas City Kings in the 1975-76 season.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source (Basketball-Reference page for Lee Winfield) contains no mention of a waiver transaction on October 14, 1975, or any transaction details at all. It only shows that Winfield played for the Kansas City Kings in the 1975-76 season and for the Buffalo Braves in prior seasons. Therefore the claim's specific date and event are entirely unsupported by the source, requiring either a new citation or a rewrite to match what the source actually states."
+   }
+  },
+  {
+   "id": "t16",
+   "text": "This was the great era of castle building and he built an imposing fortress with four corner towers and a wide moat.",
+   "markers": [
+    "eccleshall"
+   ],
+   "paper_ids": [
+    "1e967784e0b739abdf6f2abcdedd50405fe5ad7f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "1e967784e0b739abdf6f2abcdedd50405fe5ad7f",
+    "source_title": "eccleshall",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "He rebuilt the castle in magnificent style, the fortifications of which survive till now, though it was partially destroyed in the Civil War, requiring new residential quarters.",
+    "page": 1,
+    "snippet": "He rebuilt the castle in magnificent style,",
+    "reason": "The passage does not mention the era of castle building, the construction of a fortress with four corner towers, or a wide moat.",
+    "votes": "2-0",
+    "window": "He rebuilt the castle in magnificent style, the fortifications of which survive till now, though it was partially destroyed in the Civil War, requiring new residential quarters."
+   },
+   "evidences": [
+    {
+     "paper_id": "1e967784e0b739abdf6f2abcdedd50405fe5ad7f",
+     "source_title": "eccleshall",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "He rebuilt the castle in magnificent style, the fortifications of which survive till now, though it was partially destroyed in the Civil War, requiring new residential quarters.",
+     "page": 1,
+     "snippet": "He rebuilt the castle in magnificent style,",
+     "reason": "The passage does not mention the era of castle building, the construction of a fortress with four corner towers, or a wide moat.",
+     "votes": "2-0",
+     "window": "He rebuilt the castle in magnificent style, the fortifications of which survive till now, though it was partially destroyed in the Civil War, requiring new residential quarters."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not mention the era of castle building, the construction of a fortress with four corner towers, or a wide moat.",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts that the castle had four corner towers and a wide moat.",
+    "reason": "The passage makes a factual claim about the castle's construction, which the citation is expected to support. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the claims that 'this was the great era of castle building', 'four corner towers', and 'a wide moat'",
+    "rewrite_suggestion": "He rebuilt the castle in magnificent style, and its fortifications survive to this day.",
+    "proofs": [
+     "He rebuilt the castle in magnificent style, the fortifications of which survive till now, though it was partially destroyed in the Civil War, requiring new residential quarters."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence only attests that the bishop rebuilt the castle in magnificent style, but the claim adds unsupported details: a 'great era of castle building', 'four corner towers', and a 'wide moat'. The source text contains no mention of these specifics, so the author must either provide a citation for them or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t17",
+   "text": "It supports various operating systems including macOS and Windows.",
+   "markers": [
+    "makeblock"
+   ],
+   "paper_ids": [
+    "0c7879b74821fe33c81acded749d5be1d62c52cd"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.832,
+   "evidence": {
+    "paper_id": "0c7879b74821fe33c81acded749d5be1d62c52cd",
+    "source_title": "makeblock",
+    "supported": false,
+    "sentence": "More open-source hardware coming soon!",
+    "page": 1,
+    "snippet": "More open-source hardware coming soon!",
+    "cosine": 0.832,
+    "reason": "The passage does not mention support for macOS or Windows operating systems.",
+    "window": "#### mBot Ranger #### micro:bit With mBlock 5, you can add more functions to micro: bit by programming in an easier way. More open-source hardware coming soon! Introduce AI into programming education ## Give your creativity an edge with mBlock 5's cutting-edge technologies mBlock 5 integrates Microsoft cognitive services and Google deep learning into one tool."
+   },
+   "evidences": [
+    {
+     "paper_id": "0c7879b74821fe33c81acded749d5be1d62c52cd",
+     "source_title": "makeblock",
+     "supported": false,
+     "sentence": "More open-source hardware coming soon!",
+     "page": 1,
+     "snippet": "More open-source hardware coming soon!",
+     "cosine": 0.832,
+     "reason": "The passage does not mention support for macOS or Windows operating systems.",
+     "window": "#### mBot Ranger #### micro:bit With mBlock 5, you can add more functions to micro: bit by programming in an easier way. More open-source hardware coming soon! Introduce AI into programming education ## Give your creativity an edge with mBlock 5's cutting-edge technologies mBlock 5 integrates Microsoft cognitive services and Google deep learning into one tool."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts facts about the operating systems supported by the product. The citation is expected to prove these facts.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that mBlock 5 supports macOS and Windows operating systems is not stated in the provided source text.",
+    "rewrite_suggestion": "mBlock 5 is available as a PC version and a mobile version (iOS and Android).",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The source text never mentions macOS or Windows as supported operating systems. The only reference to platform is 'mBlock 5 (PC)' and download links for App Store and Google Play. The claim's specific inclusion of macOS and Windows is entirely unsupported. The shown sentence ('More open-source hardware coming soon!') is irrelevant."
+   }
+  },
+  {
+   "id": "t18",
+   "text": "Yusuf hails from the northern Sool, Sanaag and Cayn (SSC) regions of Somalia.",
+   "markers": [
+    "deeqsulaimanyusuf"
+   ],
+   "paper_ids": [
+    "f4a99e45a75d260971c5835aaa4e949cd3c0fca8"
+   ],
+   "verdict": "supported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "f4a99e45a75d260971c5835aaa4e949cd3c0fca8",
+    "source_title": "deeqsulaimanyusuf",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": true,
+    "sentence": "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions.",
+    "page": 1,
+    "snippet": "Positive Comments have so far being heard",
+    "reason": "The passage explicitly states that Yusuf 'originally comes from SSC regions'.",
+    "votes": "2-0",
+    "window": "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions."
+   },
+   "evidences": [
+    {
+     "paper_id": "f4a99e45a75d260971c5835aaa4e949cd3c0fca8",
+     "source_title": "deeqsulaimanyusuf",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": true,
+     "sentence": "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions.",
+     "page": 1,
+     "snippet": "Positive Comments have so far being heard",
+     "reason": "The passage explicitly states that Yusuf 'originally comes from SSC regions'.",
+     "votes": "2-0",
+     "window": "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage explicitly states that Yusuf 'originally comes from SSC regions'.",
+   "covering": {
+    "covered": [
+     {
+      "component": "Yusuf hails from the northern Sool, Sanaag and Cayn (SSC) regions of Somalia.",
+      "paper_id": "f4a99e45a75d260971c5835aaa4e949cd3c0fca8",
+      "source_title": "deeqsulaimanyusuf",
+      "sentence": "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions.",
+      "page": 1,
+      "snippet": "Positive Comments have so far being heard"
+     }
+    ],
+    "uncovered": [
+     "Cayn SSC"
+    ],
+    "common_knowledge": [],
+    "pick_verified": true,
+    "spans": [
+     {
+      "paper_id": "f4a99e45a75d260971c5835aaa4e949cd3c0fca8",
+      "source_title": "deeqsulaimanyusuf",
+      "text": "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions.",
+      "n_used": 1
+     }
+    ],
+    "arbiter_resolution": {
+     "model": "deepseek/deepseek-v4-flash",
+     "proofs": [
+      "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions."
+     ],
+     "why": "The shown sentence explicitly states that Dr. Deeq (Yusuf) 'originally comes from SSC regions,' which directly proves the claim that he hails from the SSC (Sool, Sanaag, and Cayn) regions. No component of the claim is missing or contradicted."
+    }
+   },
+   "covering_checked": true,
+   "proof_state": "arbiter_resolved",
+   "partial_checked": true,
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "uncovered_components",
+    "action": "supported",
+    "missing_subclaim": "",
+    "rewrite_suggestion": "",
+    "proofs": [
+     "Positive Comments have so far being heard in Puntland regions since Dr Deeq is Competent and originally comes from SSC regions."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence explicitly states that Dr. Deeq (Yusuf) 'originally comes from SSC regions,' which directly proves the claim that he hails from the SSC (Sool, Sanaag, and Cayn) regions. No component of the claim is missing or contradicted."
+   }
+  },
+  {
+   "id": "t19",
+   "text": "The main building, designated as a historical landmark in 2006, was preserved.",
+   "markers": [
+    "bookertwashingtonhighsch"
+   ],
+   "paper_ids": [
+    "ee8c9b30fdc1ea1e038b50c482d301070a3b7b36"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8081,
+   "evidence": {
+    "paper_id": "ee8c9b30fdc1ea1e038b50c482d301070a3b7b36",
+    "source_title": "bookertwashingtonhighsch",
+    "supported": false,
+    "sentence": "\u00a9 Vicky Sambunaris In this context, the building has two charges: to compress and hold the creative energy of the school, while simultaneously connecting to the surrounding community with the production and presentation of new ideas and possibilities.",
+    "page": 1,
+    "snippet": "\u00a9 Vicky Sambunaris In this context, the",
+    "cosine": 0.8081,
+    "reason": "The passage does not mention the building being designated a historical landmark or that it was preserved.",
+    "window": "Save this picture! \u00a9 Vicky Sambunaris In this context, the building has two charges: to compress and hold the creative energy of the school, while simultaneously connecting to the surrounding community with the production and presentation of new ideas and possibilities. The community is invited to share in the life and vitality of the students with glimpses into workshops and studios and through various presentation venues, yet the students feel protected."
+   },
+   "evidences": [
+    {
+     "paper_id": "ee8c9b30fdc1ea1e038b50c482d301070a3b7b36",
+     "source_title": "bookertwashingtonhighsch",
+     "supported": false,
+     "sentence": "\u00a9 Vicky Sambunaris In this context, the building has two charges: to compress and hold the creative energy of the school, while simultaneously connecting to the surrounding community with the production and presentation of new ideas and possibilities.",
+     "page": 1,
+     "snippet": "\u00a9 Vicky Sambunaris In this context, the",
+     "cosine": 0.8081,
+     "reason": "The passage does not mention the building being designated a historical landmark or that it was preserved.",
+     "window": "Save this picture! \u00a9 Vicky Sambunaris In this context, the building has two charges: to compress and hold the creative energy of the school, while simultaneously connecting to the surrounding community with the production and presentation of new ideas and possibilities. The community is invited to share in the life and vitality of the students with glimpses into workshops and studios and through various presentation venues, yet the students feel protected."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The main building was designated as a historical landmark in 2006.",
+    "reason": "The passage asserts a specific fact (the designation of the building as a historical landmark in 2006) that the cited source is expected to prove. There is no indication that the citation is only for a method, concept, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the designation of the main building as a historical landmark in 2006, and an explicit statement that it was preserved",
+    "rewrite_suggestion": "The original 1922 building was retained and integrated into the new expansion.",
+    "proofs": [
+     "New performance spaces are contained throughout the building, inviting the public to share in the energy of the school. These include an experimental 'Black Box' Theater held by the wings of the existing 1922 building, and the 475-seat Montgomery Arts Theater, a full proscenium theater that serves as a dramatic new public gateway from the Arts District."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence does not address any component of the claim. The source text references an 'existing 1922 building' but does not state that the building was designated a historical landmark in 2006, nor does it explicitly confirm that the building was preserved. Since these substantive components are not provable from the provided source, the author must either add a citation or rewrite the claim to remove the unsourced details."
+   }
+  },
+  {
+   "id": "t20",
+   "text": "In 2011, Kashyap shared the Best Story and Best Screenplay Award at the 56th Filmfare Awards with Vikramaditya Motwane for \"Udaan\".",
+   "markers": [
+    "anuragkashyap"
+   ],
+   "paper_ids": [
+    "9e54cb4bd1c982cbb383e13ecfcc215e1075260e"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.9364,
+   "evidence": {
+    "paper_id": "9e54cb4bd1c982cbb383e13ecfcc215e1075260e",
+    "source_title": "anuragkashyap",
+    "supported": false,
+    "sentence": "Sify.comMoviesBollywoodWinners of 56th Filmfare Awards 2011",
+    "page": 1,
+    "snippet": "Sify.comMoviesBollywoodWinners of 56th Filmfare Awards 2011",
+    "cosine": 0.9364,
+    "reason": "The passage states that the 56th Filmfare Awards were held in 2011, but it does not mention Kashyap or Vikramaditya Motwane winning any awards for \"Udaan\".",
+    "window": "The Wayback Machine - https://web.archive.org/web/20150911132242/http://www.sify.com/movies/winners-of-56th-filmfare-awards-2011-news-bollywood-lb4j5zjacfesi.html Sify.comMoviesBollywoodWinners of 56th Filmfare Awards 2011 # Winners of 56th Filmfare Awards 2011"
+   },
+   "evidences": [
+    {
+     "paper_id": "9e54cb4bd1c982cbb383e13ecfcc215e1075260e",
+     "source_title": "anuragkashyap",
+     "supported": false,
+     "sentence": "Sify.comMoviesBollywoodWinners of 56th Filmfare Awards 2011",
+     "page": 1,
+     "snippet": "Sify.comMoviesBollywoodWinners of 56th Filmfare Awards 2011",
+     "cosine": 0.9364,
+     "reason": "The passage states that the 56th Filmfare Awards were held in 2011, but it does not mention Kashyap or Vikramaditya Motwane winning any awards for \"Udaan\".",
+     "window": "The Wayback Machine - https://web.archive.org/web/20150911132242/http://www.sify.com/movies/winners-of-56th-filmfare-awards-2011-news-bollywood-lb4j5zjacfesi.html Sify.comMoviesBollywoodWinners of 56th Filmfare Awards 2011 # Winners of 56th Filmfare Awards 2011"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Vikramaditya Motwane",
+    "missing_from": [
+     "9e54cb4bd1c982cbb383e13ecfcc215e1075260e"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Kashyap shared the Best Story and Best Screenplay Award at the 56th Filmfare Awards with Vikramaditya Motwane for \"Udaan\".",
+    "reason": "The passage directly attributes a specific fact (sharing an award) to the cited source, which is expected to prove this statement.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim is unsupported: the source does not mention any Best Story or Best Screenplay award, nor Anurag Kashyap or Vikramaditya Motwane as winners.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The provided source text is a list of winners from the 56th Filmfare Awards but contains no mention of 'Best Story' or 'Best Screenplay' categories, nor any reference to Anurag Kashyap or Vikramaditya Motwane. Therefore, the claim that Kashyap shared such an award with Motwane for 'Udaan' is completely unsupported by the cited source. The tool's shown sentence is merely a title and does not provide any relevant information."
+   }
+  },
+  {
+   "id": "t21",
+   "text": "\"Tsunami\" was co-written and co-produced by KSHMR, who was uncredited in the track's final release.",
+   "markers": [
+    "tsunamidvbbsandborgeouss"
+   ],
+   "paper_ids": [
+    "1056c82516ea41fa708a24730d0440ee8eefb92b"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8209,
+   "evidence": {
+    "paper_id": "1056c82516ea41fa708a24730d0440ee8eefb92b",
+    "source_title": "tsunamidvbbsandborgeouss",
+    "supported": false,
+    "sentence": "Armin Van Buuren David Guetta Steve Aoki Oliver Heldens Calvin Harris Don Diablo Axwell & Ingrosso Dash Berlin The Chainsmokers Ummet Ozcan DJ Snake Swanky Tunes Nicky Romero Steve Angello DJ Chetas Florian Picasso Jack U Aly & Fila Major Lazer Above & Beyond Yellow Claw Fedde Le Grand",
+    "page": 1,
+    "snippet": "Armin Van Buuren David Guetta Steve Aoki",
+    "cosine": 0.8209,
+    "reason": "The passage lists many artists associated with the track 'Tsunami' but does not mention KSHMR or any co-writing or co-production credits.",
+    "window": "Dimitri Vegas & Like Mike Armin Van Buuren David Guetta Steve Aoki Oliver Heldens Calvin Harris Don Diablo Axwell & Ingrosso Dash Berlin The Chainsmokers Ummet Ozcan DJ Snake Swanky Tunes Nicky Romero Steve Angello DJ Chetas Florian Picasso Jack U Aly & Fila Major Lazer Above & Beyond Yellow Claw Fedde Le Grand Lost Stories Vintage Culture Alan Walker Tom Swoon Diego Miranda Brennan Heart Paul van Dyk Yves V Dillon Francis"
+   },
+   "evidences": [
+    {
+     "paper_id": "1056c82516ea41fa708a24730d0440ee8eefb92b",
+     "source_title": "tsunamidvbbsandborgeouss",
+     "supported": false,
+     "sentence": "Armin Van Buuren David Guetta Steve Aoki Oliver Heldens Calvin Harris Don Diablo Axwell & Ingrosso Dash Berlin The Chainsmokers Ummet Ozcan DJ Snake Swanky Tunes Nicky Romero Steve Angello DJ Chetas Florian Picasso Jack U Aly & Fila Major Lazer Above & Beyond Yellow Claw Fedde Le Grand",
+     "page": 1,
+     "snippet": "Armin Van Buuren David Guetta Steve Aoki",
+     "cosine": 0.8209,
+     "reason": "The passage lists many artists associated with the track 'Tsunami' but does not mention KSHMR or any co-writing or co-production credits.",
+     "window": "Dimitri Vegas & Like Mike Armin Van Buuren David Guetta Steve Aoki Oliver Heldens Calvin Harris Don Diablo Axwell & Ingrosso Dash Berlin The Chainsmokers Ummet Ozcan DJ Snake Swanky Tunes Nicky Romero Steve Angello DJ Chetas Florian Picasso Jack U Aly & Fila Major Lazer Above & Beyond Yellow Claw Fedde Le Grand Lost Stories Vintage Culture Alan Walker Tom Swoon Diego Miranda Brennan Heart Paul van Dyk Yves V Dillon Francis"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "tsunami",
+    "missing_from": [
+     "1056c82516ea41fa708a24730d0440ee8eefb92b"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "The passage asserts that \"Tsunami\" was co-written and co-produced by KSHMR, who was uncredited in the track's final release.",
+    "reason": "The passage directly states a fact about the production of the song \"Tsunami\" and attributes this information implicitly to the cited source. This falls under the default 'full' scope as it's a factual claim expected to be supported by the source.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that KSHMR co-wrote and co-produced the track 'Tsunami' and was uncredited in its final release",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The cited source (DJ Mag poll page for KSHMR) does not mention the track 'Tsunami' or any involvement by KSHMR in writing, producing, or crediting of that track. Every component of the claim is absent from the source text, so the author must either provide a citation that supports the statement or rewrite the claim to match what the source actually says."
+   }
+  },
+  {
+   "id": "t22",
+   "text": "138 House Republicans voted against the version of the act that became law.",
+   "markers": [
+    "violenceagainstwomenact"
+   ],
+   "paper_ids": [
+    "1eff6150227c01ac57c81772fc1cf0c5b641476f"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8875,
+   "evidence": {
+    "paper_id": "1eff6150227c01ac57c81772fc1cf0c5b641476f",
+    "source_title": "violenceagainstwomenact",
+    "supported": false,
+    "sentence": "The U.S. Constitution says that bills should be decided on by the \"yeas and nays\" (Article I, Section 7).",
+    "page": 1,
+    "snippet": "The U.S. Constitution says that bills should",
+    "cosine": 0.8875,
+    "reason": "The passage explains how Congress votes on bills but does not provide any information about specific vote counts for the Violence Against Women Act.",
+    "window": "Congress uses different words in different sorts of votes. The U.S. Constitution says that bills should be decided on by the \"yeas and nays\" (Article I, Section 7). Congress takes this literally and uses \"yea\" and \"nay\" when voting on the final passage of bills."
+   },
+   "evidences": [
+    {
+     "paper_id": "1eff6150227c01ac57c81772fc1cf0c5b641476f",
+     "source_title": "violenceagainstwomenact",
+     "supported": false,
+     "sentence": "The U.S. Constitution says that bills should be decided on by the \"yeas and nays\" (Article I, Section 7).",
+     "page": 1,
+     "snippet": "The U.S. Constitution says that bills should",
+     "cosine": 0.8875,
+     "reason": "The passage explains how Congress votes on bills but does not provide any information about specific vote counts for the Violence Against Women Act.",
+     "window": "Congress uses different words in different sorts of votes. The U.S. Constitution says that bills should be decided on by the \"yeas and nays\" (Article I, Section 7). Congress takes this literally and uses \"yea\" and \"nay\" when voting on the final passage of bills."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "138 House Republicans voted against the version of the act that became law.",
+    "reason": "The passage directly states a factual claim about a vote count related to the cited act. This is a direct assertion of a fact that the cited source is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "the specific number 138 and the party designation 'House Republicans' are not found in the source; the source only shows overall vote percentages without party breakdown.",
+    "rewrite_suggestion": "The House passed the Violence Against Women Reauthorization Act of 2013 with 66% of votes in favor and 32% against.",
+    "proofs": [
+     "Totals All Votes 66% 32% Not Voting 2%",
+     "This was a vote to pass S.47 (113th) in the House."
+    ],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim asserts that 138 House Republicans voted against the bill, but the cited source (GovTrack vote page) provides only overall vote percentages (66% yea, 32% nay) and does not include any breakdown by party or a raw count of 138. The shown sentence is irrelevant to the claim. Therefore, the author must either add a citation that supplies the party breakdown and exact number, or rewrite the claim to match what the source actually supports (e.g., the overall vote percentages)."
+   }
+  },
+  {
+   "id": "t23",
+   "text": "Together with partner Nao Sakuma [ja], he represented the company, inter alia, at the NATO gala in 2000 in Birmingham and the Golden Jubilee of Elizabeth II in 2002.",
+   "markers": [
+    "chicao"
+   ],
+   "paper_ids": [
+    "c12764495878093bf81a059c1b2512789f5a1991"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8429,
+   "evidence": {
+    "paper_id": "c12764495878093bf81a059c1b2512789f5a1991",
+    "source_title": "chicao",
+    "supported": false,
+    "sentence": "AWARDSGold medal, Varna International Ballet Competition, 1998.",
+    "page": 1,
+    "snippet": "AWARDSGold medal, Varna International Ballet Competition, 1998.",
+    "cosine": 0.8429,
+    "reason": "The passage does not mention Nao Sakuma, the NATO gala, or the Golden Jubilee of Elizabeth II.",
+    "window": "CREATED ROLESDavid Bintley: Concert Fantasy (lead role) and The Seasons ('Spring')Oliver Hindle: Bright Young Things AWARDSGold medal, Varna International Ballet Competition, 1998. Header image: Clothing (except for t-shirt) generously supplied by UK dancewear specialists Dans-ez"
+   },
+   "evidences": [
+    {
+     "paper_id": "c12764495878093bf81a059c1b2512789f5a1991",
+     "source_title": "chicao",
+     "supported": false,
+     "sentence": "AWARDSGold medal, Varna International Ballet Competition, 1998.",
+     "page": 1,
+     "snippet": "AWARDSGold medal, Varna International Ballet Competition, 1998.",
+     "cosine": 0.8429,
+     "reason": "The passage does not mention Nao Sakuma, the NATO gala, or the Golden Jubilee of Elizabeth II.",
+     "window": "CREATED ROLESDavid Bintley: Concert Fantasy (lead role) and The Seasons ('Spring')Oliver Hindle: Bright Young Things AWARDSGold medal, Varna International Ballet Competition, 1998. Header image: Clothing (except for t-shirt) generously supplied by UK dancewear specialists Dans-ez"
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "subject_guard": {
+    "subject": "Golden Jubilee of Elizabeth II; Nao Sakuma; together",
+    "missing_from": [
+     "c12764495878093bf81a059c1b2512789f5a1991"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts specific facts (representation at events) that are directly attributed to the individual mentioned, implying the citation is expected to prove these factual claims.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "All details about representing the company at the NATO gala in 2000 and the Golden Jubilee of Elizabeth II in 2002, together with partner Nao Sakuma",
+    "rewrite_suggestion": "The cited source contains no information about NATO gala, Golden Jubilee, or Nao Sakuma; the claim should be removed or supported by a different citation.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "None of the claim's components appear anywhere in the provided source text. The shown sentence about a 1998 ballet award is entirely unrelated. Since every substantive component is absent from the source, the author must either add a citation that covers these events or rewrite the claim to match what the source actually states."
+   }
+  },
+  {
+   "id": "t24",
+   "text": "In many of the countries in which the doll is sold, Fulla is relatively expensive at about $10 for the standard doll.",
+   "markers": [
+    "fulladoll"
+   ],
+   "paper_ids": [
+    "1a05ef2b80b6f6fd9942544211c1ce95a52fba05"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.7812,
+   "evidence": {
+    "paper_id": "1a05ef2b80b6f6fd9942544211c1ce95a52fba05",
+    "source_title": "fulladoll",
+    "supported": false,
+    "sentence": "\"Fulla sells better because it is closer to our Arab values: she never reveals a leg or an arm,\" says Tarek Mohammed, chief salesman at a Toys'R'Us branch in Mohandisseen, one of Cairo's more upmarket neighborhoods.",
+    "page": 1,
+    "snippet": "\"Fulla sells better because it is closer",
+    "cosine": 0.7812,
+    "reason": "The passage states that Fulla is cheaper than its American rival, directly contradicting the claim that it is relatively expensive.",
+    "window": "The dark-eyed and olive-skinned Fulla has replaced her American rival's skimpy skirts with more modest \"outdoor fashion\" and Barbie's luxuriant blonde mane with an Islamic veil. \"Fulla sells better because it is closer to our Arab values: she never reveals a leg or an arm,\" says Tarek Mohammed, chief salesman at a Toys'R'Us branch in Mohandisseen, one of Cairo's more upmarket neighborhoods. The Arab answer to Barbie has been selling like hot cakes for Eid Al Adha, the most important holiday in the Muslim calendar, not least because it is cheaper than its American rival, although both are made in China."
+   },
+   "evidences": [
+    {
+     "paper_id": "1a05ef2b80b6f6fd9942544211c1ce95a52fba05",
+     "source_title": "fulladoll",
+     "supported": false,
+     "sentence": "\"Fulla sells better because it is closer to our Arab values: she never reveals a leg or an arm,\" says Tarek Mohammed, chief salesman at a Toys'R'Us branch in Mohandisseen, one of Cairo's more upmarket neighborhoods.",
+     "page": 1,
+     "snippet": "\"Fulla sells better because it is closer",
+     "cosine": 0.7812,
+     "reason": "The passage states that Fulla is cheaper than its American rival, directly contradicting the claim that it is relatively expensive.",
+     "window": "The dark-eyed and olive-skinned Fulla has replaced her American rival's skimpy skirts with more modest \"outdoor fashion\" and Barbie's luxuriant blonde mane with an Islamic veil. \"Fulla sells better because it is closer to our Arab values: she never reveals a leg or an arm,\" says Tarek Mohammed, chief salesman at a Toys'R'Us branch in Mohandisseen, one of Cairo's more upmarket neighborhoods. The Arab answer to Barbie has been selling like hot cakes for Eid Al Adha, the most important holiday in the Muslim calendar, not least because it is cheaper than its American rival, although both are made in China."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "Fulla is relatively expensive at about $10 for the standard doll in many of the countries in which it is sold.",
+    "reason": "The passage asserts a factual statement about the price of the doll, which the citation is expected to prove.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The claim that Fulla is relatively expensive at about $10 and sold in many countries is entirely unsupported; the source says it is cheaper than Barbie and gives no price.",
+    "rewrite_suggestion": "Fulla is sold in several countries and is cheaper than its American rival Barbie, as noted in the source.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": {
+     "sentence": "The Arab answer to Barbie has been selling like hot cakes for Eid Al Adha, the most important holiday in the Muslim calendar, not least because it is cheaper than its American rival, although both are made in China.",
+     "why": "The source states Fulla is cheaper than Barbie, directly contradicting the claim that Fulla is relatively expensive."
+    },
+    "why": "The shown sentence does not address the claim's components (price, expense level, countries). The source text instead states Fulla is cheaper than Barbie and provides no price in dollars, making the claim unsupported and actually contradicted. Since no component can be proven from the source, the author must either add a citation for the price and relative expense or rewrite the claim to match the source's assertion of lower cost."
+   }
+  },
+  {
+   "id": "t25",
+   "text": "Aerobility are a British charity that trains disabled people to become pilots.",
+   "markers": [
+    "2012summerparalympicsope"
+   ],
+   "paper_ids": [
+    "bbbdca90031659685f173ec7dc7b0c8074a3feb6"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": null,
+   "evidence": {
+    "paper_id": "bbbdca90031659685f173ec7dc7b0c8074a3feb6",
+    "source_title": "2012summerparalympicsope",
+    "cosine": null,
+    "via": "llm_fulltext",
+    "supported": false,
+    "sentence": "She declared the Games open in a short speech on Wednesday in the traditional curtain-raiser to 11 days of sporting action at an event involving over 3,000 performers after a fly-past by a disabled pilot.",
+    "page": 1,
+    "snippet": "She declared the Games open in a",
+    "reason": "The passage does not state that Aerobility is a British charity or that they train disabled people to become pilots.",
+    "votes": "2-0",
+    "window": "She declared the Games open in a short speech on Wednesday in the traditional curtain-raiser to 11 days of sporting action at an event involving over 3,000 performers after a fly-past by a disabled pilot."
+   },
+   "evidences": [
+    {
+     "paper_id": "bbbdca90031659685f173ec7dc7b0c8074a3feb6",
+     "source_title": "2012summerparalympicsope",
+     "cosine": null,
+     "via": "llm_fulltext",
+     "supported": false,
+     "sentence": "She declared the Games open in a short speech on Wednesday in the traditional curtain-raiser to 11 days of sporting action at an event involving over 3,000 performers after a fly-past by a disabled pilot.",
+     "page": 1,
+     "snippet": "She declared the Games open in a",
+     "reason": "The passage does not state that Aerobility is a British charity or that they train disabled people to become pilots.",
+     "votes": "2-0",
+     "window": "She declared the Games open in a short speech on Wednesday in the traditional curtain-raiser to 11 days of sporting action at an event involving over 3,000 performers after a fly-past by a disabled pilot."
+    }
+   ],
+   "votes": null,
+   "reason": "The passage does not state that Aerobility is a British charity or that they train disabled people to become pilots.",
+   "subject_guard": {
+    "subject": "aerobility",
+    "missing_from": [
+     "bbbdca90031659685f173ec7dc7b0c8074a3feb6"
+    ]
+   },
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a fact about Aerobility, and the citation is expected to prove this fact. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "Aerobility is a British charity that trains disabled people to become pilots",
+    "rewrite_suggestion": "A disabled pilot performed a fly-past at the London Paralympics opening ceremony, but the source does not mention Aerobility.",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The claim states that Aerobility is a British charity that trains disabled people to become pilots. The cited source is a news article about the London Paralympics opening ceremony, which mentions a 'fly-past by a disabled pilot' but does not name Aerobility or any charity providing pilot training. Therefore, the claim is entirely unsupported by the source, and the author should either find a citation for Aerobility or rewrite the claim to match the source."
+   }
+  },
+  {
+   "id": "t26",
+   "text": "He eventually tracked down and convinced the other two buyers to allow him to do the same",
+   "markers": [
+    "robeaton"
+   ],
+   "paper_ids": [
+    "fa4e21cd4b8db2c2c0782bf87e10404b374640f0"
+   ],
+   "verdict": "unsupported",
+   "method": "llm_fulltext",
+   "cosine": 0.8101,
+   "evidence": {
+    "paper_id": "fa4e21cd4b8db2c2c0782bf87e10404b374640f0",
+    "source_title": "robeaton",
+    "supported": false,
+    "sentence": "That whole thing never took with me at all.",
+    "page": 1,
+    "snippet": "That whole thing never took with me",
+    "cosine": 0.8101,
+    "reason": "The passage discusses the author's rebellious youth and does not mention any other buyers or a situation where the author convinced them to allow something.",
+    "window": "I was supposed to grow up and marry some rich guy. That whole thing never took with me at all. I was always getting sent to detention study hall in high school, and getting in trouble with the police and everything \u2014 I mean, not getting in trouble with them, but I liked to run away from them when they were trying to catch me."
+   },
+   "evidences": [
+    {
+     "paper_id": "fa4e21cd4b8db2c2c0782bf87e10404b374640f0",
+     "source_title": "robeaton",
+     "supported": false,
+     "sentence": "That whole thing never took with me at all.",
+     "page": 1,
+     "snippet": "That whole thing never took with me",
+     "cosine": 0.8101,
+     "reason": "The passage discusses the author's rebellious youth and does not mention any other buyers or a situation where the author convinced them to allow something.",
+     "window": "I was supposed to grow up and marry some rich guy. That whole thing never took with me at all. I was always getting sent to detention study hall in high school, and getting in trouble with the police and everything \u2014 I mean, not getting in trouble with them, but I liked to run away from them when they were trying to catch me."
+    }
+   ],
+   "votes": null,
+   "reason": "LLM found no sentence in the full source supporting the claim",
+   "citation_scope": {
+    "scope": "full",
+    "scoped_assertion": "",
+    "reason": "The passage asserts a factual claim about the actions of the subject, which the citation is expected to prove. There is no indication that the citation is used for methods, concepts, or related work.",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "prompt_sha": "dc487e4f"
+   },
+   "arbiter": {
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt_sha": "d971121a08ef",
+    "trigger": "unsupported",
+    "action": "add_citation_or_rewrite",
+    "missing_subclaim": "The entire claim \u2014 that a person tracked down and convinced two buyers to allow him to do something \u2014 is absent from the cited source text.",
+    "rewrite_suggestion": "",
+    "proofs": [],
+    "quotes_dropped": 0,
+    "conflict": null,
+    "why": "The shown sentence ('That whole thing never took with me at all.') is irrelevant to the claim. The source text contains no mention of anyone tracking down buyers or convincing them, so every component of the claim is unprovable from the source. This is an author problem: the claim needs a citation or must be rewritten to match what the source actually says."
+   }
+  }
+ ],
+ "omitted": [],
+ "coverage": {
+  "per_source": {
+   "a3e315a6d55cde5d17c66c02901bf085ea6d97ae": {
+    "title": "pakbeng",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1056c82516ea41fa708a24730d0440ee8eefb92b": {
+    "title": "tsunamidvbbsandborgeouss",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "2a358f5df59c2985f074cb68ee05a709164d1dbd": {
+    "title": "triumphmotorcyclesltd",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "8231548db8e66324881c3541f3d0467da669b3ec": {
+    "title": "allsoulsanglicanchurchle",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "b0b749450f253270208bb4c8afe5a09ed9029582": {
+    "title": "ecommerce",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "f4a99e45a75d260971c5835aaa4e949cd3c0fca8": {
+    "title": "deeqsulaimanyusuf",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 1,
+    "supported": 1
+   },
+   "9738dba96baf5161c0d037c0947586a77621832d": {
+    "title": "christophercalvinharriso",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0c7879b74821fe33c81acded749d5be1d62c52cd": {
+    "title": "makeblock",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "924e7aa9c8d57478a990bba6ccf6c00493080a34": {
+    "title": "mildenhallsuffolk",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1eff6150227c01ac57c81772fc1cf0c5b641476f": {
+    "title": "violenceagainstwomenact",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "113f6eab0ea700f6f065fa6185fefd6a70343c9a": {
+    "title": "ghaznavimissile",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "85435e1dcdf93f008ad607cf3a9ebf7729746339": {
+    "title": "ritasitalianice",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "fa4e21cd4b8db2c2c0782bf87e10404b374640f0": {
+    "title": "robeaton",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e590c6f1efd03e6729264686c68ebe32dd8f232d": {
+    "title": "anyacorke",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "56699e9028d72edbbcf662bb1aa0d64ce7963a6a": {
+    "title": "jajuandawson",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "ee8c9b30fdc1ea1e038b50c482d301070a3b7b36": {
+    "title": "bookertwashingtonhighsch",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1a05ef2b80b6f6fd9942544211c1ce95a52fba05": {
+    "title": "fulladoll",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "e4261bf9195278c670351616680f4725d36d9e1a": {
+    "title": "romelulukaku",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0bdeb8c088a8f9843ba44b0878a2198ceb9dafcd": {
+    "title": "dilwaledulhanialejayenge",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "0cc882d28b806c39d4d091626d2a1dfbc2e68413": {
+    "title": "197576buffalobravesseaso",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "7f1a8fdd59bbe6cc6b4c7efac6c270344ced9577": {
+    "title": "universityofnewenglandau",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "842a0bc0c41d0d618e2fefaef49bb49ab4c39590": {
+    "title": "mcubed",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "1e967784e0b739abdf6f2abcdedd50405fe5ad7f": {
+    "title": "eccleshall",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "bbbdca90031659685f173ec7dc7b0c8074a3feb6": {
+    "title": "2012summerparalympicsope",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "9e54cb4bd1c982cbb383e13ecfcc215e1075260e": {
+    "title": "anuragkashyap",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   },
+   "c12764495878093bf81a059c1b2512789f5a1991": {
+    "title": "chicao",
+    "total_source_claims": 0,
+    "used": 0,
+    "cited_by": 1,
+    "citing_supported": 0,
+    "supported": 0
+   }
+  },
+  "totals": {
+   "claims": 27,
+   "supported": 1,
+   "unsupported": 25,
+   "own": 1,
+   "omitted": 0
+  }
+ },
+ "metadata": {
+  "text_file": "<local path, removed>",
+  "sources_dir": "<local path, removed>",
+  "output_dir": "<local path, removed>",
+  "model": "gemini/gemini-2.5-flash-lite",
+  "decompose": false,
+  "timestamp": "2026-07-19 14:41:23",
+  "marker_errors": [],
+  "processing_time_seconds": 377.8,
+  "source_hashes": {
+   "triumphmotorcyclesltd.txt": "5b54d5b273cee4b90ae88cb41396195efe10b6d6",
+   "ritasitalianice.txt": "a43286819dea11a7346c7b580bf6dd35743f4ed7",
+   "ghaznavimissile.txt": "8b4b3021d43729f16b8c2edcd459a71107d0f7cc",
+   "universityofnewenglandau.txt": "eb916a3ab8ef2f0cd338ff6bcca477c5f14b18c4",
+   "mildenhallsuffolk.txt": "ff8efaaf04544f1be75c20430d4aa175a11107f1",
+   "ecommerce.txt": "058695670d4eee87899a5778f8b482b103b7abd1",
+   "dilwaledulhanialejayenge.txt": "dc981993ec7d38558a27a28e61efe69b3b07b780",
+   "anyacorke.txt": "2bddd46146a6d0417a4bed30443c64983663e779",
+   "jajuandawson.txt": "a04fd5b61cd4cc666ce63ea873cc193452c45c0a",
+   "allsoulsanglicanchurchle.txt": "86d61e5b4ce382607246b5684da0ba55ea6a8069",
+   "mcubed.txt": "bfa096fd88ab2568879f5722b4597cfdb224cd26",
+   "pakbeng.txt": "4b04cd0a4a567e8226667fa068c62a5fd07936fc",
+   "romelulukaku.txt": "0aba559449aba733b427815f37eff76ac5ae5a59",
+   "christophercalvinharriso.txt": "869c10bfcaa6ea1adece20366ff493996b59e2aa",
+   "197576buffalobravesseaso.txt": "2f78b8f4aac5e0298a44982a4295dc8619378644",
+   "eccleshall.txt": "4aecddd2d5fb64d5304281d931d46f5c5716f72b",
+   "makeblock.txt": "62ac3016b6f53e079e99d522a3aa9feaae5695f2",
+   "deeqsulaimanyusuf.txt": "40ace185df455d05d86fb1147bd0df81f64da905",
+   "bookertwashingtonhighsch.txt": "ef8f72f7cabb0cc77850e1615ba9258d04bd7212",
+   "anuragkashyap.txt": "8b1e0e86ca6cc6e4cf0b1f9cdaa13eac18a0529f",
+   "tsunamidvbbsandborgeouss.txt": "9360540714742ef7ae43c747df8feccd78686aad",
+   "violenceagainstwomenact.txt": "fdce03e05da1415766753659c657478a39a81d20",
+   "chicao.txt": "ed9fe702eac60406f0df5b6e87baf87a4a8a9ff8",
+   "fulladoll.txt": "2914aee6311dc93529a82b311ef25e9a55dab2b2",
+   "2012summerparalympicsope.txt": "753086672a11e95be4120e83789e7a19e6d4a4b2",
+   "robeaton.txt": "1ee7a003aaedd8422c5f24957834094c9fcbcca7"
+  },
+  "llm_usage": {
+   "gemini/gemini-2.5-flash-lite": {
+    "calls": 294,
+    "prompt_tokens": 315961,
+    "completion_tokens": 8693,
+    "cost_usd": 0.035165
+   },
+   "deepseek/deepseek-v4-flash": {
+    "calls": 28,
+    "prompt_tokens": 88432,
+    "completion_tokens": 48717,
+    "cost_usd": 0.020577
+   }
+  },
+  "own_split": {
+   "counts": {
+    "structural": 1,
+    "opinion": 0,
+    "fact": 0
+   },
+   "fact_ids": []
+  },
+  "citation_scope": {
+   "counts": {
+    "full": 25,
+    "methods": 0,
+    "concept": 0,
+    "related": 0
+   },
+   "scoped_ids": []
+  },
+  "arbiter": {
+   "model": "deepseek/deepseek-v4-flash",
+   "checked": 26,
+   "actions": {
+    "add_citation_or_rewrite": 25,
+    "supported": 1
+   },
+   "proof_may_exist": [],
+   "conflicts": [
+    "t11",
+    "t24"
+   ],
+   "rescued": [],
+   "amber_resolved": [
+    "t18"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "paper_id": "2a358f5df59c2985f074cb68ee05a709164d1dbd",
+   "key": "triumphmotorcyclesltd",
+   "filename": "triumphmotorcyclesltd.txt",
+   "title": "triumphmotorcyclesltd",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "85435e1dcdf93f008ad607cf3a9ebf7729746339",
+   "key": "ritasitalianice",
+   "filename": "ritasitalianice.txt",
+   "title": "ritasitalianice",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "113f6eab0ea700f6f065fa6185fefd6a70343c9a",
+   "key": "ghaznavimissile",
+   "filename": "ghaznavimissile.txt",
+   "title": "ghaznavimissile",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "7f1a8fdd59bbe6cc6b4c7efac6c270344ced9577",
+   "key": "universityofnewenglandau",
+   "filename": "universityofnewenglandau.txt",
+   "title": "universityofnewenglandau",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "924e7aa9c8d57478a990bba6ccf6c00493080a34",
+   "key": "mildenhallsuffolk",
+   "filename": "mildenhallsuffolk.txt",
+   "title": "mildenhallsuffolk",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "b0b749450f253270208bb4c8afe5a09ed9029582",
+   "key": "ecommerce",
+   "filename": "ecommerce.txt",
+   "title": "ecommerce",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0bdeb8c088a8f9843ba44b0878a2198ceb9dafcd",
+   "key": "dilwaledulhanialejayenge",
+   "filename": "dilwaledulhanialejayenge.txt",
+   "title": "dilwaledulhanialejayenge",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e590c6f1efd03e6729264686c68ebe32dd8f232d",
+   "key": "anyacorke",
+   "filename": "anyacorke.txt",
+   "title": "anyacorke",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "56699e9028d72edbbcf662bb1aa0d64ce7963a6a",
+   "key": "jajuandawson",
+   "filename": "jajuandawson.txt",
+   "title": "jajuandawson",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "8231548db8e66324881c3541f3d0467da669b3ec",
+   "key": "allsoulsanglicanchurchle",
+   "filename": "allsoulsanglicanchurchle.txt",
+   "title": "allsoulsanglicanchurchle",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "842a0bc0c41d0d618e2fefaef49bb49ab4c39590",
+   "key": "mcubed",
+   "filename": "mcubed.txt",
+   "title": "mcubed",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "a3e315a6d55cde5d17c66c02901bf085ea6d97ae",
+   "key": "pakbeng",
+   "filename": "pakbeng.txt",
+   "title": "pakbeng",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "e4261bf9195278c670351616680f4725d36d9e1a",
+   "key": "romelulukaku",
+   "filename": "romelulukaku.txt",
+   "title": "romelulukaku",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9738dba96baf5161c0d037c0947586a77621832d",
+   "key": "christophercalvinharriso",
+   "filename": "christophercalvinharriso.txt",
+   "title": "christophercalvinharriso",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0cc882d28b806c39d4d091626d2a1dfbc2e68413",
+   "key": "197576buffalobravesseaso",
+   "filename": "197576buffalobravesseaso.txt",
+   "title": "197576buffalobravesseaso",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1e967784e0b739abdf6f2abcdedd50405fe5ad7f",
+   "key": "eccleshall",
+   "filename": "eccleshall.txt",
+   "title": "eccleshall",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "0c7879b74821fe33c81acded749d5be1d62c52cd",
+   "key": "makeblock",
+   "filename": "makeblock.txt",
+   "title": "makeblock",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "f4a99e45a75d260971c5835aaa4e949cd3c0fca8",
+   "key": "deeqsulaimanyusuf",
+   "filename": "deeqsulaimanyusuf.txt",
+   "title": "deeqsulaimanyusuf",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "ee8c9b30fdc1ea1e038b50c482d301070a3b7b36",
+   "key": "bookertwashingtonhighsch",
+   "filename": "bookertwashingtonhighsch.txt",
+   "title": "bookertwashingtonhighsch",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "9e54cb4bd1c982cbb383e13ecfcc215e1075260e",
+   "key": "anuragkashyap",
+   "filename": "anuragkashyap.txt",
+   "title": "anuragkashyap",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1056c82516ea41fa708a24730d0440ee8eefb92b",
+   "key": "tsunamidvbbsandborgeouss",
+   "filename": "tsunamidvbbsandborgeouss.txt",
+   "title": "tsunamidvbbsandborgeouss",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1eff6150227c01ac57c81772fc1cf0c5b641476f",
+   "key": "violenceagainstwomenact",
+   "filename": "violenceagainstwomenact.txt",
+   "title": "violenceagainstwomenact",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "c12764495878093bf81a059c1b2512789f5a1991",
+   "key": "chicao",
+   "filename": "chicao.txt",
+   "title": "chicao",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "1a05ef2b80b6f6fd9942544211c1ce95a52fba05",
+   "key": "fulladoll",
+   "filename": "fulladoll.txt",
+   "title": "fulladoll",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "bbbdca90031659685f173ec7dc7b0c8074a3feb6",
+   "key": "2012summerparalympicsope",
+   "filename": "2012summerparalympicsope.txt",
+   "title": "2012summerparalympicsope",
+   "num_claims": 0
+  },
+  {
+   "paper_id": "fa4e21cd4b8db2c2c0782bf87e10404b374640f0",
+   "key": "robeaton",
+   "filename": "robeaton.txt",
+   "title": "robeaton",
+   "num_claims": 0
+  }
+ ]
+}
