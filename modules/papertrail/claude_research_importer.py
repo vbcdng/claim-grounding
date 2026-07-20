@@ -298,6 +298,11 @@ def run_import(input_md: str, output_dir: str, bib_path: Optional[str] = None) -
     if not bib_path and meta.get("bibliography"):
         bib_path = os.path.join(os.path.dirname(os.path.abspath(input_md)),
                                 meta["bibliography"])
+    if not bib_path:
+        sibling = os.path.splitext(os.path.abspath(input_md))[0] + ".bib"
+        if os.path.exists(sibling):
+            logger.info(f"Using the sibling bibliography: {sibling}")
+            bib_path = sibling
     bib = {}
     if bib_path and os.path.exists(bib_path):
         bib = load_bibliography(bib_path)
@@ -466,9 +471,15 @@ def merge_sources(input_path: str, project_dir: str, bib_path: Optional[str] = N
         if not bib_path and meta.get("bibliography"):
             bib_path = os.path.join(os.path.dirname(os.path.abspath(input_path)),
                                     meta["bibliography"])
+        if not bib_path:
+            sibling = os.path.splitext(os.path.abspath(input_path))[0] + ".bib"
+            if os.path.exists(sibling):
+                logger.info(f"Using the sibling bibliography: {sibling}")
+                bib_path = sibling
         if not bib_path or not os.path.exists(bib_path):
-            raise ValueError("No bibliography found: pass --bib, or point --input at the "
-                             ".bib itself, or export a report whose frontmatter names one")
+            raise ValueError("No bibliography found: pass --bib, put a <input>.bib next "
+                             "to the input, point --input at the .bib itself, or export "
+                             "a report whose frontmatter names one")
         bib = load_bibliography(bib_path)
         bib_used = bib_path
 

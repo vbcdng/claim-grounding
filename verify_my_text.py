@@ -251,7 +251,7 @@ def main():
                          "conflicting sentence) to a strong model that re-reads them WITH "
                          "large source context. DEFAULT ON since 2026-07-14 with "
                          f"{arbiter.DEFAULT_MODEL} (needs DEEPSEEK_API_KEY or "
-                         "config/deepseek_api_key.txt — silently skipped with a warning "
+                         "config/deepseek_api_key.txt — skipped with a one-line note "
                          "if neither exists); pass a MODEL to override, --no-arbiter to "
                          "turn off. Findings render as chips with verbatim-verified "
                          "quotes — never overriding a verdict. ~1 large call per flagged "
@@ -334,17 +334,19 @@ def main():
     # Arbiter is DEFAULT ON (owner ruling 2026-07-14) on every backend — under
     # claude-code apply_backend already routed the default to claude-code/sonnet
     # ($0). Opt out with --no-arbiter. A missing DeepSeek key downgrades to a
-    # one-line warning + skip, never an error: the tier is additive.
+    # one-line info note + skip, never an error or warning: the tier is additive
+    # and the no-key path is a documented, nominally-correct run (judge F-7).
     arbiter_skipped_no_key = False
     if args.no_arbiter:
         args.arbiter = None
     elif args.arbiter and args.arbiter.startswith("deepseek/") \
             and not os.environ.get("DEEPSEEK_API_KEY") \
             and not os.path.exists(arbiter.DEEPSEEK_KEY_PATH):
-        logger.warning(
-            "Arbiter tier (default-on) skipped: no DeepSeek key found — add "
-            "DEEPSEEK_API_KEY or config/deepseek_api_key.txt, pass --arbiter "
-            "<other-model>, or --no-arbiter to silence this warning.")
+        logger.info(
+            "Note: the optional arbiter re-check is off (no DeepSeek key found); "
+            "the run works fine without it. To enable it, add DEEPSEEK_API_KEY or "
+            "config/deepseek_api_key.txt, or pass --arbiter <other-model>; pass "
+            "--no-arbiter to hide this note.")
         args.arbiter = None
         arbiter_skipped_no_key = True
 

@@ -34,7 +34,8 @@ def main():
     ap = argparse.ArgumentParser(description="Import Claude Science markdown into the claim-grounding input format.")
     ap.add_argument("--input", required=True,
                     help="Claude Science markdown export (.md), or a .bib directly with --merge-into")
-    ap.add_argument("--bib", help="Bibliography file (.bib); default: the one named in the markdown's frontmatter")
+    ap.add_argument("--bib", help="Bibliography file (.bib); default: the one named in the "
+                                  "markdown's frontmatter, else a <input>.bib next to the input")
     group = ap.add_mutually_exclusive_group(required=True)
     group.add_argument("--output-dir", help="Where to write my_text.md, refs, manifest, sources/ (new project)")
     group.add_argument("--merge-into", metavar="PROJECT_DIR",

@@ -166,12 +166,21 @@ def regenerate_viewer(run_dir, analysis, dc_map):
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("run_dir")
-    ap.add_argument("--model", default="claude-code/sonnet")
-    ap.add_argument("--workers", type=int, default=4)
+    ap = argparse.ArgumentParser(
+        description="Testing aid: a stronger model re-reads every judged claim of a "
+                    "finished run WITH source context and writes an independent verdict "
+                    "+ commentary onto each claim card in the viewer. Never changes the "
+                    "run's verdicts (analysis.json untouched). See docs/DEEP_CHECK.md.")
+    ap.add_argument("run_dir",
+                    help="a finished run's output dir (must contain analysis.json)")
+    ap.add_argument("--model", default="claude-code/sonnet",
+                    help="model that re-reads the claims (default: %(default)s — $0 "
+                         "through a logged-in Claude Code install)")
+    ap.add_argument("--workers", type=int, default=4,
+                    help="parallel model calls (default: %(default)s)")
     ap.add_argument("--limit", type=int, default=0, help="only the first N judged claims")
-    ap.add_argument("--no-viewer", action="store_true")
+    ap.add_argument("--no-viewer", action="store_true",
+                    help="write deep_check.json but skip regenerating viewer.html")
     a = ap.parse_args()
 
     analysis = json.load(open(os.path.join(a.run_dir, "analysis.json"), encoding="utf-8"))

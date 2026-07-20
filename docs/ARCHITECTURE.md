@@ -677,7 +677,8 @@ shows a claimed year now honestly rederives partial (test
 Default-on mechanics (2026-07-14): the argparse default IS the arbiter model,
 so bare runs get the tier; `--no-arbiter` disables it (and drops carried
 arbiter results + reverts any previous amber resolution on incremental runs);
-a missing DeepSeek key downgrades to ONE warning + skip
+a missing DeepSeek key downgrades to ONE info-level note + skip (softened from
+a WARNING 2026-07-20, judge F-7 — the no-key Gemini path is a documented run)
 (`arbiter_skipped_no_key` — previous results are kept, the tier wasn't
 declined); under `--backend claude-code` the default routes to
 `claude-code/sonnet` ($0) via `apply_backend` — sonnet-as-arbiter validation
@@ -1106,7 +1107,10 @@ mismatch section — a wrong source silently manufactures false "supported" verd
 Pandoc `[@key]` markdown + `.bib` → project dir. Citations are stripped and
 re-inserted as `[[key]]` **at sentence end** (a mid-sentence marker would truncate
 the claim), with abbreviation/decimal/initial-aware sentence-boundary detection.
-Dependency-free brace-counting BibTeX parser. Extension seams:
+Dependency-free brace-counting BibTeX parser. Bib resolution order: `--bib` →
+the frontmatter `bibliography:` entry → a sibling `<input-stem>.bib` next to
+the input (added 2026-07-20, judge F-8; same default the wizard always had);
+`--merge-into` uses the same order. Extension seams:
 `PandocCitationRecognizer` (add recognizers for other syntaxes) and
 `load_bibliography` (only `.bib` today). Bare `@key` narrative citations are
 deliberately ignored. The export's frontmatter `title:` is preserved as a
