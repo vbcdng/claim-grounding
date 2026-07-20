@@ -95,6 +95,15 @@ def reusable(prev_claim: Dict[str, Any]) -> bool:
     reason = str(prev_claim.get("reason", ""))
     if verdict == "own":
         return True
+    # Never reuse a verdict minted while the model API was failing: an
+    # "unsupported" produced by dead calls is an outage artifact, and reusing
+    # it would make the corruption permanent — the whole point of re-running
+    # is that these get re-judged. judge_error is the flag (matcher, since
+    # 2026-07-20); the reason prefixes cover analyses from older runs.
+    if prev_claim.get("judge_error"):
+        return False
+    if reason.startswith("no LLM response") or reason.startswith("LLM judgment unparseable"):
+        return False
     return (verdict in ("supported", "unsupported")
             and not reason.startswith("source_file_missing")
             and reason != "no_citation_marker")

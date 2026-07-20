@@ -86,8 +86,9 @@ class ClaudeCodeClient(LLMClient):
         self._cwd = tempfile.mkdtemp(prefix="pt-claude-code-")
         logger.info(f"LLM backend: {self.model} (local claude CLI, $0 API spend)")
 
-    def call(self, prompt: str, temperature: float = 0.1,
-             max_output_tokens: int = 8000) -> Optional[str]:
+    # The base class's call() wraps this (it counts failed calls there).
+    def _call_impl(self, prompt: str, temperature: float = 0.1,
+                   max_output_tokens: int = 8000) -> Optional[str]:
         cmd = [self.cli, "-p", "--model", self.cli_model, "--output-format", "text",
                "--strict-mcp-config", "--max-turns", "1"]
         # Two independent budgets: generic failures burn `gen`, throttle bursts burn

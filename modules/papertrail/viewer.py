@@ -574,6 +574,16 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
         chip += (f'<span class="confchip {conf[0]}" title="{_esc(conf[1])}">'
                  f'{conf[0]} confidence</span>')
 
+    # A model call died while this claim was being judged (rate limit / quota /
+    # outage): its "unsupported" may be an artifact of the outage, not the
+    # sources. A plain re-run retries exactly these claims (rerun.reusable).
+    if c.get("judge_error"):
+        chip += ('<span class="jechip" title="the model API stopped responding '
+                 'while this claim was being judged — the verdict may be an '
+                 'artifact of the outage, not the sources. Re-running the same '
+                 'command retries just these claims.">⚠ not fully judged — API '
+                 'failed</span>')
+
     # Second opinion (--second-opinion): a different model re-read the same
     # evidence. Disagreement is a FLAG, never a veto — the verdict stands, the
     # chip + note send the human to the evidence.
@@ -1867,6 +1877,9 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
              border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
   .dcchip.flag {{ color:#374151; border-color:#9ca3af; }}
+  .jechip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
+             background:#fff; color:#374151; border:1px solid #9ca3af; }}
   .dc-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .dc-note.flag {{ color:#374151; }}

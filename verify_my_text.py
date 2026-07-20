@@ -937,6 +937,18 @@ def main():
     if so_summary is not None and (so_summary["fp_flags"] or so_summary["strict_flags"]):
         logger.info(f"Second-opinion flags to review in the viewer: "
                     f"{', '.join(so_summary['fp_flags'] + so_summary['strict_flags'])}")
+    # A verdict minted while model calls were dying is not a finding. Say so
+    # louder than the per-call log lines, and promise the (true, thanks to
+    # rerun.reusable) cheap fix: a plain re-run retries exactly these claims.
+    judge_errs = [c["id"] for c in analysis["text_claims"] if c.get("judge_error")]
+    if judge_errs:
+        print(f"\nWARNING: {len(judge_errs)} claim(s) could not be fully judged — the "
+              f"model API stopped responding during the run (rate limit / quota / "
+              f"outage; see the log above). They are marked 'not fully judged' in "
+              f"the viewer and their 'unsupported' may be an artifact. Re-running "
+              f"the same command retries JUST these claims: "
+              f"{', '.join(judge_errs[:12])}{'…' if len(judge_errs) > 12 else ''}",
+              file=sys.stderr)
 
     if actual_usage:
         for mdl, u in actual_usage.items():

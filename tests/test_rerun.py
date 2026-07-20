@@ -85,6 +85,16 @@ class TestMatchClaims(unittest.TestCase):
         # they upgrade from red 'unsupported' to indigo 'own' (free, no LLM).
         self.assertFalse(rerun.reusable(_prev("t0", "x", verdict="unsupported",
                                               reason="no_citation_marker")))
+        # Verdicts minted while the model API was failing are outage artifacts:
+        # reusing them would make the corruption permanent — a plain re-run must
+        # retry them. Flagged runs carry judge_error; older analyses only the
+        # reason strings.
+        self.assertFalse(rerun.reusable({**_prev("t0", "x", verdict="unsupported"),
+                                         "judge_error": True}))
+        self.assertFalse(rerun.reusable(_prev("t0", "x", verdict="unsupported",
+                                              reason="no LLM response -> treated as unsupported")))
+        self.assertFalse(rerun.reusable(_prev("t0", "x", verdict="unsupported",
+                                              reason="LLM judgment unparseable -> treated as unsupported")))
 
 
 class TestChangedSourceFiles(unittest.TestCase):

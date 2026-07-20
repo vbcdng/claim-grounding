@@ -231,6 +231,12 @@ def _load_judgment_prompt() -> str:
     return _load_prompt("pt_support_judgment_prompt.txt")
 
 
+def _failed_calls(llm) -> int:
+    """LLMClient.failed_calls as an int; 0 for test fakes/mocks without it."""
+    n = getattr(llm, "failed_calls", 0)
+    return n if isinstance(n, int) else 0
+
+
 def _parse_support(raw: str) -> Tuple[bool, str]:
     """
     Robustly read the support judgment, tolerating truncated/fenced JSON.
@@ -1731,6 +1737,13 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
     signal). Pure function of its inputs (thread-safe); the caller owns verdict
     bookkeeping and output shaping. Called once per claim, and again per tail
     suffix when the tail rescue fires."""
+    # Snapshot the client's failure counter: an unsupported verdict minted
+    # while model calls were dying is an outage artifact suspect, not a
+    # finding — it gets judge_error=True (viewer chip, run-end tally, and
+    # rerun.py refuses to reuse it). Under --concurrency another claim's
+    # failure can trip this flag too; during an outage that over-flagging is
+    # honest — "couldn't fully judge" — and a retry re-judges it for free.
+    fails_before = _failed_calls(llm)
     evidences: List[Dict[str, Any]] = []
     for pid in pids:
         src = sources.get(pid)
@@ -1874,6 +1887,8 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
 
     out = {"verdict": verdict, "method": method, "reason": reason,
            "evidences": evidences, "used": used, "votes": combined_votes}
+    if verdict == "unsupported" and _failed_calls(llm) > fails_before:
+        out["judge_error"] = True
     if subj_missing:
         # Consumed by arbiter.rescue: a rescue must never re-buy a positive
         # from a source that does not name the claim's entities.
@@ -2390,6 +2405,8 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
             out["component_check"] = res["component_check"]
         if res.get("subject_guard"):
             out["subject_guard"] = res["subject_guard"]
+        if res.get("judge_error"):
+            out["judge_error"] = True
         # A multi-citation claim where SOME cited files are missing still gets
         # judged on the present ones; carry the absent markers so the viewer can
         # show a "source file missing" row instead of silently dropping them

@@ -141,7 +141,21 @@ class LLMClient:
         # Otherwise rely on the provider's env var (litellm reads it automatically).
         return None
 
+    # Count of call() invocations that ended in None (retries exhausted / empty
+    # content). Consumers snapshot it around a unit of work to tell "the model
+    # said no" apart from "the model never answered" — a failed call must never
+    # be indistinguishable from a genuine negative (rerun.py refuses to reuse
+    # verdicts minted under failures; verify_my_text tallies them at run end).
+    failed_calls = 0
+
     def call(self, prompt: str, temperature: float = 0.1, max_output_tokens: int = 8000) -> Optional[str]:
+        out = self._call_impl(prompt, temperature=temperature,
+                              max_output_tokens=max_output_tokens)
+        if out is None:
+            self.failed_calls += 1
+        return out
+
+    def _call_impl(self, prompt: str, temperature: float = 0.1, max_output_tokens: int = 8000) -> Optional[str]:
         """Call the model; return response text or None. Retries on transient/rate
         errors. The requested cap is clamped to the model's output ceiling, and a
         response cut off at the cap (finish_reason == "length") retries with a

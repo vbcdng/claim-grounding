@@ -423,6 +423,16 @@ repair), and **coverage** per source + totals.
 - Reuse gate in `main()`: same model (a missing `metadata.model` forces full re-run)
   + `reusable(prev)` (only judged supported/unsupported carry) + none of the claim's
   cited files changed (`changed_source_files` on SHA-1 `source_hashes`).
+- **Outage verdicts never reuse (2026-07-20).** `LLMClient.call()` counts calls
+  that ended in None (`failed_calls`); `_evaluate` snapshots the counter and an
+  unsupported verdict minted while calls were dying gets `judge_error: true` —
+  the negative may be an outage artifact, not the sources. `reusable()` refuses
+  those (plus legacy `"no LLM response"`/`"LLM judgment unparseable"` reason
+  prefixes from older runs), so a plain re-run retries exactly the affected
+  claims. Run end prints a WARNING with their ids; both viewers chip the card
+  grey "⚠ not fully judged — API failed" (`jechip`). Under `--concurrency` a
+  neighbor claim's failure can over-flag — accepted: "couldn't fully judge" is
+  honest during an outage and the retry is free.
 - The previous run is archived as `analysis_prev.json`; `--full` disables reuse.
 
 ### 5.7 `claude_code_backend.py` (Stream E, $0 dev backend)

@@ -294,6 +294,15 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
         vis_chips += (f'<span class="confchip {conf[0]}" title="{_esc(conf[1])}">'
                       f'{conf[0]} confidence</span>')
 
+    # Model call died while judging this claim — verdict may be an outage
+    # artifact; a plain re-run retries it (rerun.reusable skips reuse).
+    if c.get("judge_error"):
+        vis_chips += ('<span class="jechip" title="the model API stopped '
+                      'responding while this claim was being judged — the '
+                      'verdict may be an artifact of the outage, not the '
+                      'sources. Re-running the same command retries just these '
+                      'claims.">⚠ not fully judged — API failed</span>')
+
     # ---------- lead-in split (tail_rescue) ----------
     rescue = c.get("tail_rescue") or {}
     if verdict == "supported" and rescue.get("supported"):
@@ -1194,6 +1203,8 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .abchip.conflict {{ color:#374151; border-color:#9ca3af; }}
   .sochip {{ font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; cursor:help; }}
+  .jechip {{ font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px; cursor:help;
+             background:#fff; color:#374151; border:1px solid #9ca3af; }}
   .dcchip {{ font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px; cursor:help;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
   .dcchip.flag {{ color:#374151; border-color:#9ca3af; }}

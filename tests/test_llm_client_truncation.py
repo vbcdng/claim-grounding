@@ -107,5 +107,30 @@ class TestTruncationRetry(unittest.TestCase):
         self.assertEqual(len(calls), 1)
 
 
+class TestFailedCallCounter(unittest.TestCase):
+    """failed_calls lets consumers tell "the model said no" apart from "the
+    model never answered" (judge_error / rerun no-reuse / run-end tally)."""
+
+    def test_successful_call_does_not_count(self):
+        c = _client()
+        c._completion = lambda **kw: _Resp("fine")
+        c.call("p")
+        self.assertEqual(c.failed_calls, 0)
+
+    def test_none_result_counts(self):
+        c = _client()
+
+        def fake(**kwargs):
+            raise RuntimeError("invalid api key")   # non-retryable -> None
+
+        c._completion = fake
+        with self.assertLogs("modules.papertrail.llm_client", level="ERROR"):
+            self.assertIsNone(c.call("p"))
+        self.assertEqual(c.failed_calls, 1)
+        with self.assertLogs("modules.papertrail.llm_client", level="ERROR"):
+            c.call("p")
+        self.assertEqual(c.failed_calls, 2)
+
+
 if __name__ == "__main__":
     unittest.main()
