@@ -1,6 +1,7 @@
 # Printing press — six-judge comparison per claim (2026-07-12)
 
-Same protocol as `docs/EGGS_FIVE_JUDGE_TABLE.md`, on the author's terminal-test
+Same protocol as the eggs five-judge study (internal working notes, not
+included in this repo), on the author's terminal-test
 text (`import_claude_research` of the printing-press/Reformation synthesis,
 8 sources, all fetched incl. iyigun2008 manually). Run artifacts (gitignored):
 `data/loop_rounds/round_printing/` (project + app + columns + table.md).
