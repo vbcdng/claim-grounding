@@ -7,6 +7,15 @@ setup; Test 2 runs the full pipeline for a few cents with your own key;
 Test 3 covers the WiCE benchmarks, which you can re-score offline in
 seconds or re-run end to end for about $1.40.
 
+Two practical notes before you start. First, if you cloned this repo before
+2026-07-20 — or `git pull` complains about diverged histories — re-clone (or
+`git fetch && git reset --hard origin/master`): the history was rewritten
+once that day to remove two paywalled source texts, and will not be
+rewritten again. Second, a pre-deadline self-audit found a handful of rough
+edges we chose to document rather than rush-fix; they are listed with
+workarounds in `docs/KNOWN_ISSUES_2026-07-20.md`, and none affect the
+numbers this page tells you how to reproduce.
+
 ## How the tool works, in plain terms
 
 You give it a text and a folder with the cited sources. Citations in the

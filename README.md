@@ -59,6 +59,11 @@ No API key? The same command works with `--backend claude-code` in place of
 `--open` opens the `file://` viewer directly — no server needed. The first run
 downloads the sentence-similarity model (~440 MB) and computes an embedding for
 every source sentence (cached in `<output-dir>/embeddings/`); re-runs are fast.
+On a machine that has never run the tool, drop the two `..._OFFLINE=1`
+variables from the explicit command — they block that one-time download.
+
+Known issues from the 2026-07-20 self-audit, each with its workaround, are in
+`docs/KNOWN_ISSUES_2026-07-20.md`; fixes land after the competition judging.
 
 See `INPUT_FORMAT.md` for the input contract, `docs/MODEL_OPTIONS.md` for cheaper /
 local model options, `LOCAL_MODELS.md` for the GPU-less setup.
