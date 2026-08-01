@@ -19,6 +19,8 @@ Sizes: **S** = hours, **M** = a day or two, **L** = several days or more.
 |------|--------|
 | 2026-07-20 | First version of the living list. The author picked **precision** as the goal for the next stretch: precision plan on top, then the cheap wins, then everything else explicitly unordered. |
 | 2026-07-20 | Made self-contained (each item carries its own explanation) and published in the public repository. |
+| 2026-07-30 | Step 6 (better benchmark): noted the second public dataset now converted and scoreable. No change to the order — the run waits for the model swap in step 5. |
+| 2026-08-01 | Added a §3 item: purpose-built verifier models as a cheap extra guard (the author's ruling: on the roadmap, not worked on now). |
 
 ---
 
@@ -81,6 +83,17 @@ tool).
    claims). Hard rule: never build labels by running our own tool with
    stronger models — that would bake our blind spots into the answer key.
 
+   Progress (2026-07-30): a second public dataset is now wired up — real
+   citations from published biomedical papers, checked against the full text of
+   the article each one cites, with hand-written labels for *how* a citation
+   goes wrong (contradicted, unsubstantiated, misquoted, oversimplified, and so
+   on). That is a much closer match to what this tool does than the first
+   dataset. It is converted and scored but deliberately not run yet: the judging
+   models are being replaced right now (step 5), and the run should measure the
+   models we are actually going to ship. Its finer labels are known to be noisy,
+   so scoring collapses them to one line — was the passage proven or not — and
+   the disagreements get read by hand before any number is published.
+
 7. **Citation span** (M-L, gate). A citation at the end of a paragraph may be
    meant to back several sentences, not just the one it touches. If the tool
    attaches it to the wrong number of sentences, the claims are wrong before
@@ -135,6 +148,15 @@ Not a priority order; grab whichever fits the moment.
 
 Real and wanted, but waiting; the order below means nothing.
 
+- **Try purpose-built verifier models as a cheap extra guard.** Small open
+  models trained for exactly one question — "is this sentence supported by
+  this document?" (Bespoke-MiniCheck-7B, Patronus Lynx, Atla Selene-Mini) —
+  exist on Ollama and Hugging Face and can run locally for free. They can't
+  replace the main judge (they don't produce the tool's full verdict
+  format), but they could double-check every "supported" verdict and catch
+  the changed-number / reversed-direction errors that general-purpose
+  models sometimes wave through. Parked by the author 2026-08-01: worth a
+  free local experiment on the existing trap set someday, not now.
 - **Automatic spot-check on new kinds of text.** A run on an unfamiliar field
   shouldn't be trusted before a sample is checked. One command that picks a
   sample of claims from a finished run, has a strong model re-read them with
