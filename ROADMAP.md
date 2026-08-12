@@ -21,6 +21,7 @@ Sizes: **S** = hours, **M** = a day or two, **L** = several days or more.
 | 2026-07-20 | Made self-contained (each item carries its own explanation) and published in the public repository. |
 | 2026-07-30 | Step 6 (better benchmark): noted the second public dataset now converted and scoreable. No change to the order — the run waits for the model swap in step 5. |
 | 2026-08-01 | Added a §3 item: purpose-built verifier models as a cheap extra guard (the author's ruling: on the roadmap, not worked on now). |
+| 2026-08-12 | §1 item 1 (partial verdicts) shipped and merged after passing the quality check; item 2 (numbers and cause-vs-effect direction) is now the front of the queue. |
 
 ---
 
@@ -31,7 +32,15 @@ directions — not calling a bad claim "supported" (the dangerous error) and
 not rejecting a good claim (the annoying one that makes people ignore the
 tool).
 
-1. **Partial verdicts for rejected claims** (L, gate). Today a rejected claim
+1. **Partial verdicts for rejected claims** (L, gate). **SHIPPED 2026-08-12.**
+   The judge now returns the missing parts of a rejected claim as a structured
+   list (produced by a follow-up question asked only after the verdict is
+   already decided, so the list can never change a verdict), and the claim's
+   card can show a "partly proven" mark: each proven part with the exact
+   source sentence that proves it, each unproven part named, with a guard so
+   a proven side detail never earns the mark. Validated against the standing
+   quality check before merging. Original item text, for the record:
+   Today a rejected claim
    just says "unsupported", even when half of it IS proven in the source —
    so the author can't tell whether to delete the sentence or fix the wrong
    half. This was the single biggest error class in our audit of 236 hard
