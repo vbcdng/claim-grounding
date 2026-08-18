@@ -22,6 +22,7 @@ Sizes: **S** = hours, **M** = a day or two, **L** = several days or more.
 | 2026-07-30 | Step 6 (better benchmark): noted the second public dataset now converted and scoreable. No change to the order — the run waits for the model swap in step 5. |
 | 2026-08-01 | Added a §3 item: purpose-built verifier models as a cheap extra guard (the author's ruling: on the roadmap, not worked on now). |
 | 2026-08-12 | §1 item 1 (partial verdicts) shipped and merged after passing the quality check; item 2 (numbers and cause-vs-effect direction) is now the front of the queue. |
+| 2026-08-18 | Step 5 (judge-model sweep) rewritten as parked, by the author's decision: no judge-model change now. Instead, every confirmed failure of the current judge is collected into a growing exam list, and a new sweep only starts if a second, separate task hits a judge failure that its agreed workaround cannot fix. This supersedes the 2026-07-30 note that a benchmark run "waits for the model swap" — nothing waits for a swap any more. |
 
 ---
 
@@ -73,15 +74,22 @@ tool).
    search next to the meaning-based one, and compare the current matching
    model against newer alternatives on the stored test sets.
 
-5. **Judge-model sweep** (M, gate). The tool uses the cheapest models that
-   pass its tests; newer cheap models keep appearing. Refresh the model
-   survey, pick 2–3 candidates per job (main judge, second re-check, source
-   handling), and run each through the written qualification battery — cheap
-   tests fail first, nothing ships without passing the hand-checked papers.
-   This already paid off once: the current judge came out of exactly this
-   process, ~6× cheaper than the previous one with zero false "supported" on
-   the audit paper. Deliberately after steps 1–4, so a better model doesn't
-   hide how much the fixes themselves helped.
+5. **Judge-model sweep — parked (author decision, 2026-08-18).** The tool
+   uses the cheapest models that pass its tests, and this step used to plan
+   the next model comparison. The author has now decided not to change the
+   judging model for the time being. Instead, whenever a task runs into a
+   mistake that turns out to be a limit of the judging model itself, the
+   failing test case is added to a growing exam list — a written set of
+   test questions any future candidate model must answer correctly. A new
+   model comparison only starts if a second, separate task hits a judge
+   failure that its agreed workaround also fails to fix, and even then only
+   after three recording fixes land first (counting refused calls honestly,
+   recording exactly which instructions each run used, and measuring
+   whether the same model answers differently depending on which company
+   hosts it) — without those three, no comparison between two models can
+   be trusted. The previous sweep already paid off once: the current judge
+   came out of exactly this process, ~6× cheaper than the one before it
+   with zero false "supported" on the audit paper.
 
 6. **A better benchmark — runs in the background from day one** (L). Every
    "precision went up" claim is only as believable as the measuring stick.
@@ -97,9 +105,12 @@ tool).
    the article each one cites, with hand-written labels for *how* a citation
    goes wrong (contradicted, unsubstantiated, misquoted, oversimplified, and so
    on). That is a much closer match to what this tool does than the first
-   dataset. It is converted and scored but deliberately not run yet: the judging
-   models are being replaced right now (step 5), and the run should measure the
-   models we are actually going to ship. Its finer labels are known to be noisy,
+   dataset. Update 2026-08-18: a first 100-row trial run happened on
+   2026-08-02, and those 100 rows are now used only for diagnosing mistakes,
+   because fixes are being derived from them — a set you fix against can no
+   longer serve as an honest score. The held-back part of the dataset stays
+   unread until those fixes land, and is the only place a quotable number
+   will come from. Its finer labels are known to be noisy,
    so scoring collapses them to one line — was the passage proven or not — and
    the disagreements get read by hand before any number is published.
 
