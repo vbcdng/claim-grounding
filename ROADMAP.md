@@ -23,6 +23,7 @@ Sizes: **S** = hours, **M** = a day or two, **L** = several days or more.
 | 2026-08-01 | Added a §3 item: purpose-built verifier models as a cheap extra guard (the author's ruling: on the roadmap, not worked on now). |
 | 2026-08-12 | §1 item 1 (partial verdicts) shipped and merged after passing the quality check; item 2 (numbers and cause-vs-effect direction) is now the front of the queue. |
 | 2026-08-18 | Step 5 (judge-model sweep) rewritten as parked, by the author's decision: no judge-model change now. Instead, every confirmed failure of the current judge is collected into a growing exam list, and a new sweep only starts if a second, separate task hits a judge failure that its agreed workaround cannot fix. This supersedes the 2026-07-30 note that a benchmark run "waits for the model swap" — nothing waits for a swap any more. |
+| 2026-08-19 | Added a §3 item, at the author's request: catching problems while other people use the tool (a "field watchdog" for after publication). Recorded here rather than as a task, because most of it waits for an actual decision to publish. |
 
 ---
 
@@ -181,6 +182,33 @@ Real and wanted, but waiting; the order below means nothing.
   shouldn't be trusted before a sample is checked. One command that picks a
   sample of claims from a finished run, has a strong model re-read them with
   the source, and writes a short "trust report".
+- **Catch problems while other people use the tool (a "field watchdog", for
+  after publication).** Everything we test today runs on our own test texts,
+  where the right answers are known. Once the tool is public — people running
+  it on their own computers, a web page anyone can use, maybe results shared
+  into a common database — failures will happen on texts we never see and
+  cannot score. Out there, only three kinds of signal exist, and this item is
+  the collection path for them, each strictly opt-in and carrying as little of
+  the user's text as possible. First, the user's own corrections: the report
+  screen already has buttons for "wrong source" and "the verdict is wrong",
+  and one more click should turn such a mark into a report the user can choose
+  to send us, containing only the claim, the source passage and the two
+  verdicts — a failure case confirmed by a real human, which is exactly what
+  our own testing spends effort trying to construct. Second, the tool's
+  self-reported health: each run already knows how many model requests failed,
+  whether a source file came out garbled, and where a second reading model
+  disagreed with the verdict; an opt-in summary of those counts (numbers only,
+  never the text itself) would show how the tool behaves on real-world
+  material our test collection can't represent. Third, the trust report from
+  the spot-check item above, which in the field doubles as a warning to the
+  user on kinds of text the tool was never tested on. Two small pieces are
+  worth building early because they help even before any release: a per-run
+  machine-readable health summary, and making the "verdict wrong" click
+  produce a ready-to-send report file. The rest waits for an actual decision
+  to publish. One stake worth writing down now: if results are ever shared
+  into a common database, a wrong verdict there misleads everyone who reuses
+  it, not just one writer — so shared entries must carry how they were
+  verified and a way to be challenged and corrected later.
 - **Rest of the testing batch:** stress-test the text parsers with generated
   garbage input; feed deliberately broken PDFs to the ingestion step; measure
   how much the existing test suite actually protects.
