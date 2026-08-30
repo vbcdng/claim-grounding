@@ -87,7 +87,7 @@ def run(model, prompt_path, addon=""):
     for cid, expected, claim, passage in CASES:
         raw = llm.call(template.replace("{CLAIM}", claim).replace("{PASSAGE}", passage),
                        temperature=0.0, max_output_tokens=2048)
-        got, reason = _parse_support(raw)
+        got, reason, _ = _parse_support(raw)
         results[cid] = (expected, got, reason[:70])
     ok = sum(1 for e, g, _ in results.values() if e == g)
     print(f"\n### {model} {'+entailment-addon' if addon else '(current prompt)'}: {ok}/{len(CASES)}")

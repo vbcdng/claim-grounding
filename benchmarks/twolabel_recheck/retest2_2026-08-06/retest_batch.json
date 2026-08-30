@@ -1,0 +1,27 @@
+[
+ {
+  "row_id": "dev4_t24",
+  "claim": "On March 1, 2017 Powell was named as one of three potential applicants to fill the vacant Supreme Court seat, the other two applicants being Judge Lisa White Hardwick and attorney Benjamin A. Lipman.",
+  "extract": "Eric Greitens will choose between Judge Lisa White Hardwick, Benjamin A. Lipman and Judge W. Brent Powell to be his final nominee to the seat vacated by the late Judge Richard Teitelman."
+ },
+ {
+  "row_id": "dev3_t21",
+  "claim": "Paterson died on November 10, 2018, at the age of 78.",
+  "extract": "(meta data) TITLE: Former Congresswoman Liz Patterson dies at 78 - News - GoUpstate - Spartanburg, SC (meta data) AUTHOR: Chris Lavender Subscribe Now # Former Congresswoman Liz Patterson dies at 78 Chris Lavender Staff Writer @LavenderSHJJason Spencer Staff Writer @jasontspencer ### Saturday Nov 10, 2018 at 4:14 PM Nov 10, 2018 at 8:26 PM Elizabeth \"Liz\" Johnston Patterson, a three-term congresswoman from Spartanburg and the daughter of former South Carolina Gov. Olin D. Johnston, died Saturday. She was 78."
+ },
+ {
+  "row_id": "train2_t19",
+  "claim": "However, after one season, McCarthy returned to Espanola and the head coaching position.",
+  "extract": "During the 2016-17 he decided to pursue his own dreams and goals of coaching pro in Europe and moved on to coach in the pro MOL ligue in Eastern Europe. He has returned to Espanola to his home and family to lead the Express in the upcoming season and many more to come."
+ },
+ {
+  "row_id": "dev4_t20",
+  "claim": "Mustaine congratulated the group respectfully, and honored his commitment to the European tour with Judas Priest.",
+  "extract": "Unfortunately, as you all know, I will be winding down our European tour with JUDAS PRIEST, so I will be unable to attend. So, it is with much respect that I say congratulations! \"I also had the nice surprise of hearing that they called to invite me to the pre-ceremony party the night before, and then to the actual ceremony."
+ },
+ {
+  "row_id": "dev4_t13",
+  "claim": "The polling through most of the race was close and no candidate was a definitive favorite.",
+  "extract": "\"Overwhelmingly, the state said we get things done,\" Walker told his cabinet at a Wednesday afternoon meeting. Jason Chan/The Badger Herald For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls. But the final Marquette University Law School poll found Walker up by seven percentage points among likely voters."
+ }
+]

@@ -1,0 +1,24 @@
+Voter prompt for the 2026-08-06 retest (round 1b). Identical to the round-1
+prompt recovered verbatim from the session transcript, except the file path and
+the inserted "Two precision rules" block — the ONE variable under test.
+Voters: 3 Fable + 3 Opus fresh Claude Code subagents, blind, all reading the
+same 6-row batch (3 round-1 fresh-split targets + 3 round-1 agreed sentinels,
+md5-shuffled). Every row was screened by a Sonnet subagent for substantive
+bio/chem/medical content before any Fable voter read it (all 6 clean —
+Fable-week rule on WiCE rows).
+
+---
+
+You are one judge in a two-judge reliability experiment on claim verification. Read the file <scratchpad>/twolabel_retest/retest_batch.json — a JSON array of rows, each with row_id, claim, extract.
+
+For each row, judge the claim against ONLY the extract text (no outside knowledge, no benefit of the doubt) and assign exactly one of two labels:
+- "supported" — everything the claim states is backed by the extract
+- "not_supported" — anything less: some part of the claim is not backed, the extract is silent about it, or the extract contradicts it. A number, name, or qualifier in the claim that does not match the extract means not_supported.
+
+Two precision rules:
+- A minor spelling variant of what is clearly the same name (one letter added, doubled, or swapped) counts as a match, not a mismatch; a genuinely different name still means not_supported.
+- Do not round up from likelihood: a part of the claim that the extract merely makes plausible or probable, rather than stating or strictly entailing it, is not backed.
+
+Judge each row independently; do not let one row influence another.
+
+Your final message must be ONLY a JSON array (no markdown fences, no commentary): [{"row_id": "...", "label": "supported"|"not_supported", "why": "one sentence", "quote_or_gap": "shortest verbatim extract snippet that proves the claim, or the claim part that lacks backing"}, ...] — one object per row, same order as the file.

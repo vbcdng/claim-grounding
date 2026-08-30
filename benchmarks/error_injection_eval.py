@@ -132,7 +132,7 @@ def main():
         if not passage.strip():
             return c["id"], None, None, kind
         def verdict(t):
-            ok, _, tally = matcher._vote_support(
+            ok, _, tally, _ = matcher._vote_support(
                 llm, prompt.replace("{CLAIM}", t).replace("{PASSAGE}", passage))
             return ok, tally
         return c["id"], verdict(c["text"]), verdict(bad), kind

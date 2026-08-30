@@ -1,0 +1,122 @@
+# Panel round summary
+
+The panel produced 23 answers and 4 refusals across 19 rows. A refusal means the model never gave a verdict — it is counted here and excluded from every vote, so no refusal can masquerade as an 'unsupported' answer.
+
+How the rows sorted: **6 unanimous** (every answering model gave the same label — these become proposed labels for the author to confirm), **0 split** (the models disagree — these go to the tie-break round), **13 with too few answers** to sort (fewer than two models answered).
+
+Quote check: 1 copied proof sentences could not be found word-for-word in the source text. Each is listed under its row below — a verdict resting only on an unfindable quote should not be trusted until a human looks.
+
+## Unanimous rows — proposed labels
+
+**retreat:b039** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "A 2026 study analyzing PLOS research articles found a data reuse rate of 43%."
+- proposed label: **pass (true as written)**
+- votes: sonnet: pass (true as written), gemma-4-31b-it: pass (true as written)
+- sonnet found it hard: The source paper itself has no explicit self-dated publication line (e.g. a masthead year); the 2026 dating is inferred from its own dataset citation 'PLOS & DataSeer (2026)' and other 2026-dated companion references, which is strong circumstantial evidence but not a direct first-person statement of the paper's own year.
+- gemma-4-31b-it found it hard: The study date is inferred from the citation 'PLOS & DataSeer (2026)' for the dataset produced by the method described in the paper, which is tolerated under the authorship/citation rule.
+
+**retreat:b086** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Weathered biotite demonstrates superior cesium sorption, often by two orders of magnitude, compared to other clay minerals like illite, smectite, kaolinite, and halloysite."
+- proposed label: **pass (true as written)**
+- votes: sonnet: pass (true as written), gemma-4-31b-it: pass (true as written)
+- sonnet found it hard: The 'often' hedge is only backed by a single explicit two-orders-of-magnitude measurement (at 18.5 Bq/50µL, 1-day reaction), though the paper does state WB sorbed far more than other minerals under all tested conditions, which supports treating 'often' as a reasonable generalization rather than an overstatement.
+- gemma-4-31b-it found it hard: The claim uses 'often' to describe the two orders of magnitude difference; while the source specifies this occurred at a specific concentration and time, the general finding of superior sorption is strongly supported across the results.
+
+**retreat:b137** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Every major class of forecasting model was evaluated, spanning statistical, tree-based, deep learning, hybrid, and transformer architectures."
+- proposed label: **pass (true as written)**
+- votes: sonnet: pass (true as written), gemma-4-31b-it: pass (true as written)
+- sonnet found it hard: The word 'every' asserts exhaustiveness that the source doesn't explicitly claim (it lists these five categories without stating no other major class exists), but the source itself frames the 14 models as spanning the full breadth of forecasting paradigms (statistical through transformer), so this reads as reasonable summary language rather than an unsupported new fact.
+- gemma-4-31b-it found it hard: The claim uses the phrase 'Every major class', while the source lists the specific classes evaluated. This is treated as tolerated as the source explicitly lists the comprehensive set of architectures used in the evaluation.
+
+**pilot100:cidev0063** (old label: ACCURATE (strict side: pass))
+- the claim: "online surveys offer perfect opportunities to collect real-time data to monitor and understand the rapidly evolving COVID-19 epidemiology in various settings. ."
+- proposed label: **fail — the source is silent on an asserted part**
+- votes: sonnet: fail — the source is silent on an asserted part, gemma-4-31b-it: fail — the source is silent on an asserted part
+- sonnet found it hard: The source is specifically about tracking public knowledge/perceptions/misconceptions of COVID-19 (via surveys in only two countries, US and UK), not about monitoring 'epidemiology' (disease spread/incidence) itself, and never uses 'real-time' or 'various settings' language — these are unproven extensions of the source's actual claims about a 'promising method' for assessing knowledge/perceptions.
+- gemma-4-31b-it found it hard: The claim is a verbatim sentence from the provided context paragraph, but the actual cited source (cidev0063.txt) does not contain this sentence. The source discusses 'rapid online surveys' as a 'promising method' to 'assess and track knowledge and perceptions', but it does not use the words 'perfect opportunities', 'real-time data', or 'epidemiology'.
+
+**pilot100:cidev0072** (old label: ACCURATE (strict side: pass))
+- the claim: "Maintaining the HIV care continuum has been particularly difficult during this ongoing pandemic due to three main challenges, first, gaining access to HIV testing and diagnostic facilities for new entrants, second, the delay in initiating antiretroviral therapy (ART) and third, refilling of ART drugs due to potential shortages, lockdown and traffic controls ."
+- proposed label: **fail — the source is silent on an asserted part**
+- votes: sonnet: fail — the source is silent on an asserted part, gemma-4-31b-it: fail — the source is silent on an asserted part
+- sonnet found it hard: The source's three numbered challenges align well with the claim's structure, but the added qualifiers 'for new entrants' and 'due to potential shortages' are not stated anywhere in the cited source text — the shortage/stock-fear detail appears only in the surrounding paragraph's other citation, not in the cited source itself.
+- gemma-4-31b-it found it hard: The source lists three challenges using 'First', 'Second', and 'Third', but it never explicitly states that these are the 'three main challenges'. It says the pandemic presents 'several barriers and challenges'. Therefore, the specific claim that there are 'three main challenges' is unproven.
+
+**pilot100:cidev0080** (old label: ACCURATE (strict side: pass))
+- the claim: "others animal models of COVID-19 are still under development, including ferrets ( )"
+- proposed label: **fail — the source states something different**
+- votes: sonnet: fail — the source states something different, gemma-4-31b-it: fail — the source states something different
+- sonnet found it hard: The claim frames the ferret model as 'still under development,' but the cited source explicitly reports the ferret model as already established and functioning ('we established an infection and transmission ferret animal model'), which is the opposite developmental status — a completed outcome, not an ongoing one.
+- gemma-4-31b-it found it hard: The claim asserts that ferret models are 'still under development', but the source explicitly states that the authors 'established' a ferret animal model in the study.
+
+## Rows with too few answers
+
+**retreat:b008** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Those counts measure where the models are made, not yet who controls a scarce input; the step from one to the other runs through the hardware. This concentration of activity rests on a physical chokepoint: Sastry et al. note that, unlike data or algorithms, the computing hardware needed to train the most capable systems is detectable, excludable, and quantifiable, and is made through an extremely concentrated supply chain."
+- votes: sonnet: pass (true as written)
+- UNFINDABLE QUOTE from sonnet on part "This concentration of activity rests on a physical chokepoint": "A key factor enhancing the detectability, excludability, and quantifiability of compute is the concentration of the glob"
+- sonnet found it hard: The two lead-in framing sentences ('Those counts measure...' and 'This concentration of activity rests on...') are the essay's own analytical bridge rather than a direct restatement of a source sentence, but they closely paraphrase the paper's core thesis (that hardware, unlike data/algorithms, is the tangible, concentrated, controllable input) and are not contradicted, so I treated them as tolerated paraphrase rather than unproven assertions.
+
+**retreat:b014** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Treated developers work in 1.4 more programming languages per month after adopting Claude Code than before — a rise from 0.90 to 2.30, over 150 percent."
+- votes: sonnet: pass (true as written)
+- sonnet found it hard: The claim is essentially a direct paraphrase of the paper's own summary sentence describing Table 1's cross-sectional pre/post comparison; all numbers and the percentage match exactly.
+
+**retreat:b047** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "A related Finnish tradition of hiding animal bones, coins, and tools in thresholds shows the same anxiety, with witchcraft fears more pronounced in densely built towns than in looser settlements."
+- votes: no answers
+- refused to answer: claude-code/sonnet
+
+**retreat:b071** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "In the 2022 Existential Risk Persuasion Tournament, 169 superforecasters and domain experts forecast benchmarks resolving by 2024–2025"
+- votes: no answers
+- refused to answer: claude-code/sonnet
+
+**retreat:b081** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Frontier development is heavily concentrated in the United States: around 70% of foundational AI models since 2017 have been built there, and the European Union trails far behind on the financing, skills, and market scale that the Draghi report identifies as the binding constraints."
+- votes: sonnet: pass (true as written)
+- sonnet found it hard: The phrase 'binding constraints' is not verbatim in the report, and financing/skills/market scale are not listed together in one sentence as a trio tied explicitly to AI frontier development — each is independently well-supported as a barrier discussed at length in the report (financing gap, skills gaps chapter, Single Market/scale barriers), and since the source is the Draghi report itself, attributing the framing to 'the Draghi report' is self-citation. This is a synthesis of genuinely present themes rather than a literal single-sentence match, which is the main judgment call here.
+
+**retreat:b089** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "A second, older thread runs through what archaeologists call apotropaic house protection, a cross-culturally recurring practice of placing charged objects at a dwelling's vulnerable edges."
+- votes: sonnet: pass (true as written)
+- sonnet found it hard: The exact compound term 'apotropaic house protection' never appears verbatim in walker2022.txt (the article's own vocabulary is 'apotropaic magic,' 'ritual closure,' 'protective magic'), but since the claim doesn't put the phrase in quote marks and the underlying concept — an archaeologist's term for magically-charged objects protecting houses at their structural boundaries (walls, foundations) across many cultures — is thoroughly supported, I treated the label as tolerated paraphrase rather than a failed quote.
+
+**retreat:b094** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "One reading is that existential AI risk is dominated by epistemic uncertainty (unknown mechanism) rather than aleatoric uncertainty (a stable random process) — exactly the kind of ignorance that standard probability elicitation, the superforecaster's core tool, was not built to represent"
+- votes: sonnet: fail — the source is silent on an asserted part
+- refused to answer: gemini/gemma-4-31b-it
+- sonnet found it hard: The source mentions a superforecaster only once (median likelihood of 0.0038 in a study) and never characterizes probability elicitation as 'the superforecaster's core tool' as a general methodological claim; 'unknown mechanism' also over-specifies the source's broader 'lack of knowledge' definition of epistemic uncertainty, so I treated both as unproven rather than tolerated paraphrase.
+
+**retreat:b117** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Or it might build up gradually, largely through economic processes and well before any such event: the "gradual disempowerment" described by Kulveit et al., in which the piece-by-piece replacement of human labour and judgement by AI erodes society's dependence on human participation, together with the related weakening of the incentives linking states and firms to their populations noted by Drago and Laine."
+- votes: sonnet: fail — the source is silent on an asserted part
+- sonnet found it hard: No source for 'Drago and Laine' was provided at all, so that attributed claim cannot be checked (unproven, not contradicted); the Kulveit paper does discuss a similar rentier-state mechanism for states, but that does not prove Drago and Laine also noted it, nor does it cover 'firms'. The 'largely through economic processes' framing is also not clearly supported since Kulveit's paper treats economy, culture, and states as three co-equal domains rather than emphasizing economic processes as primary.
+
+**retreat:b120** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "And the collapse can be quick. When Venezuela's oil revenues fell by more than nine-tenths after 2012, its capacity to import food fell with them, and the share of its people who were undernourished rose from about 3% to roughly 27% within seven years — through economic dislocation alone, without war or blockade."
+- votes: sonnet: fail — the source states something different
+- sonnet found it hard: The claim frames Venezuela's collapse as happening 'without war or blockade,' but the source explicitly attributes a 'key role' in the collapse to trade and financial sanctions that restricted access to world markets and crucial inputs — an externally imposed restriction functionally akin to a blockade, not 'economic dislocation alone.' This directly undercuts that clause even though the numeric/statistical parts of the claim check out.
+
+**retreat:b121** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Such concentration could arrive by either of two routes. It might come suddenly, through recursive self-improvement — an AI system improving its own capabilities in an accelerating cycle, the "intelligence explosion" first described by Good."
+- votes: sonnet: fail — the source is silent on an asserted part
+- sonnet found it hard: The source is Good's own paper and does contain the exact phrase 'intelligence explosion' tied to a machine-designs-better-machines mechanism, so authorship-by-Good is self-evidenced; but the source never claims priority ('first'), and its own citations at that point ([22],[34],[44]) are all Good's own other works, not evidence of who first used the term — the 'first described by' clause is an unproven priority assertion per the rubric's explicit never-tolerated category.
+
+**retreat:b128** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "The disagreement runs deeper than calibration. In an adversarial-collaboration study, "concerned" domain experts predicted a 20% chance of AI-caused existential catastrophe by 2100, while "skeptical" participants — mainly superforecasters — predicted 0.12%, and neither side substantially updated toward the other's views"
+- votes: sonnet: pass (true as written)
+
+**retreat:b132** (old label: contested (the author's July two-label scoring could not settle it))
+- the claim: "Strategic physical assets can pass by purchase rather than conquest. A foresight scenario, *Europe 2031*, illustrates one route: the leading power restricts access to its most capable models on a tiered, country-by-country basis; firms in other countries are progressively outcompeted; and the leading AI company acquires distressed industrial assets, such as carmakers and tool manufacturers, for their facilities and data."
+- votes: sonnet: fail — the source is silent on an asserted part
+- sonnet found it hard: The source ties the acquisitions explicitly to usable factory floor space/manufacturing capacity; 'industrial data' is mentioned only as a separate, general spending category for Atlas's robotics push, never linked to why it bought the specific carmakers/toolmakers, so the 'and data' half of the reason is not established.
+
+**pilot100:cidev0060** (old label: ACCURATE (strict side: pass))
+- the claim: "Marjot and colleagues found that patients with ARLD had a higher risk of mortality from COVID-19 [odds ratio (OR) 3.11, 95% CI 2.12–4.55, P < 0.001] compared to other aetiologies ."
+- votes: sonnet: pass (true as written)
+- refused to answer: gemini/gemma-4-31b-it
+- sonnet found it hard: ARLD vs ALD is the same alcohol-related liver disease abbreviation variant; authorship of 'Marjot and colleagues' is not stated in the body text but the paper's own contribution list shows initials 'TM' (consistent with Marjot T as a lead/co-first author per the known real-world paper), satisfying the citation-is-source tolerance rule. 'Compared to other aetiologies' is a loose but defensible paraphrase of the aetiology-comparison design in Table 1, not a verbatim statement in the source.
+
+No label in any answer key has been changed by this round. Every proposed label above waits for the author's ruling, and each accepted change will carry its era-stamp (old label, date, reason, rubric version).

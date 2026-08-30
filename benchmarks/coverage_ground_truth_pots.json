@@ -5,7 +5,7 @@
      "note": "DISPUTED — Fable+grader: the end-grain/rainwater component is an unproven author-fix; owner: 'obvious fact, needs no citation' (the common-knowledge exemption, r4 t1). Encodes nothing until the owner rules where the common-knowledge line sits; current code ambers it (conservative)"},
     {"id": "t4", "kind": "must_flag",
      "flag_terms": ["threshold"],
-     "note": "'concealed near hearths and thresholds' over-reads thwaite2020 (hearths yes, thresholds no) — Fable+grader author-fix, owner checked-ok with the unsupported verdict; passes via the unsupported arm today"},
+     "note": "'concealed near hearths and thresholds' over-reads thwaite2020 (hearths yes, thresholds no) — Fable+grader author-fix, owner checked-ok with the unsupported verdict; passed via the unsupported arm when written (2026-07-11). Since then component_rescue flips t4 to supported and the row passes via the covering amber naming the thresholds gap — BOTH arms are deliberate passes, so this row measures over-claim visibility, not verdict stability (task #50 2026-08-28: a batched-extraction arm lost the flip and still passed here; stability is checked by a claim-by-claim diff vs a same-code control, see docs/DEAD_ENDS.md entry 6). Do NOT convert to a supported-required row without a fresh author ruling: a 2026-08-29 proposal to do so was withdrawn by its proposer on reading this row, because it would contradict the July audit."},
     {"id": "t5", "kind": "must_cover",
      "anchors": ["line of defence"],
      "note": "Fable+grader+owner all supported (Fable's r4 gold-bench row); the Hoggard 'line of defence' sentence is the agreed core proof"},

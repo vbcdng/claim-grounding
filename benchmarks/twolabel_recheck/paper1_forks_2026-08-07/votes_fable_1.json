@@ -1,0 +1,86 @@
+[
+ {
+  "row_id": "paper1_t6",
+  "label": "supported",
+  "why": "Every figure matches the extract: US roughly three-quarters (74.5%), China about 14% (14.1%), EU under 5% (4.8%), as of 2025 (May 2025).",
+  "quote_or_gap": "These top five are currently: 1. USA, 74.5% 2. China, 14.1% 3. EU, 4.8%"
+ },
+ {
+  "row_id": "paper1_t14",
+  "label": "not_supported",
+  "why": "The extract says nothing about Chevron, Tengiz, or Kazakhstan, and gives no percentage figures for Hungary — only a qualitative 'strong increase of foreign capital', so the 90% telecommunications and 60% energy numbers are unbacked.",
+  "quote_or_gap": "Chevron took a forty-year stake in Kazakhstan's giant Tengiz oil field in 1993 ... foreign investors came to control roughly 90% of telecommunications and 60% of the energy sector"
+ },
+ {
+  "row_id": "paper1_t35",
+  "label": "not_supported",
+  "why": "The extract describes the intelligence-explosion mechanism verbatim but never names Good or states that he first described it, so the attribution and primacy part of the claim has no backing in the extract text.",
+  "quote_or_gap": "first described by Good"
+ },
+ {
+  "row_id": "paper1_t42",
+  "label": "supported",
+  "why": "The extract states each element: China is 'a peer competitor in AI', its models are closing in while still trailing, the contest is bipolar, Beijing's 'independent and controllable' AI objective, and Xi's top-down economic control.",
+  "quote_or_gap": "Ultimately, China is a peer competitor in AI."
+ },
+ {
+  "row_id": "paper1_t44",
+  "label": "not_supported",
+  "why": "The extract backs the income cost of self-sufficiency and China's chip-making lag, but contains nothing about an early lead compounding until one power pulls clear.",
+  "quote_or_gap": "an early lead may compound until one power pulls clear"
+ },
+ {
+  "row_id": "paper1_t68",
+  "label": "not_supported",
+  "why": "The extract states the substance (fixed-supply resources dominating outcomes, production bottlenecks on growth) but never names Korinek and Trammell or Erdil and Besiroglu, so the claim's attributions of these findings are unbacked by the extract text.",
+  "quote_or_gap": "Korinek and Trammell find ... Erdil and Besiroglu identify"
+ },
+ {
+  "row_id": "paper1_t65",
+  "label": "not_supported",
+  "why": "The extract backs first-strike incentives and the Hendrycks/Schmidt/Wang deterrence-nonproliferation-competitiveness framework, but says nothing about a trust dilemma versus a prisoner's dilemma or about RAND examining stabilising measures.",
+  "quote_or_gap": "the race is better understood as a trust dilemma than a prisoner's dilemma ... RAND examines measures intended to stabilise the competition"
+ },
+ {
+  "row_id": "paper1_t30",
+  "label": "not_supported",
+  "why": "The microtargeting, OpenAI-disruption, and annulment parts are backed, but the extract never states that the campaign's actual effect on votes was never established, and its 'no viral engagement' statement covers only election-related operations, not all twenty-plus.",
+  "quote_or_gap": "the campaign's actual effect on votes was never established"
+ },
+ {
+  "row_id": "paper1_t37",
+  "label": "not_supported",
+  "why": "The extract documents the rentier-state effect but says nothing about two works drawing a resource-curse analogy to an AI-and-capital economy or its implications for sustaining populations.",
+  "quote_or_gap": "Both draw an analogy to the \"resource curse\"... an economy whose value derives from AI and capital rather than from human labour would give those who control it little reason to sustain the populations"
+ },
+ {
+  "row_id": "paper1_t49",
+  "label": "not_supported",
+  "why": "The nine-tenths oil-revenue decline, the import collapse, and the 3.2%-to-27.4% rise over 2012-2019 are all stated, and 'outside of war' backs 'without war', but the extract never states the crisis happened without a blockade — and it says trade and financial sanctions restricting access to world markets played a key role.",
+  "quote_or_gap": "without war or blockade"
+ },
+ {
+  "row_id": "paper1_t28",
+  "label": "supported",
+  "why": "The extract states each successive model generation is more persuasive than the previous and that returns to model scale are sharply diminishing.",
+  "quote_or_gap": "each successive model generation is more persuasive than the previous"
+ },
+ {
+  "row_id": "paper1_t25",
+  "label": "not_supported",
+  "why": "The suspension order for foreign nationals and the Commission's technological-sovereignty statement are backed, but the extract says nothing about revocation happening overnight or the absence of any process by which an allied government can contest it.",
+  "quote_or_gap": "revoked overnight, without consultation and with no process by which an allied government can contest it"
+ },
+ {
+  "row_id": "paper1_t43",
+  "label": "not_supported",
+  "why": "The half-of-global grain reserves and the 95% grain self-sufficiency target are stated, but the extract says nothing about a 'dual-circulation' drive or self-sufficiency in energy and high-tech inputs, nor about the economy being centrally directed.",
+  "quote_or_gap": "a \"dual-circulation\" drive for self-sufficiency in food, energy, and high-tech inputs"
+ },
+ {
+  "row_id": "paper1_t47",
+  "label": "not_supported",
+  "why": "The extract backs developing countries' and LDCs' reliance on food imports and that lower export income jeopardizes their ability to pay for them, but it never states that most countries overall cannot feed themselves, that the great majority of developing states (as a count of states) are net food importers, and it says nothing about losing the value of a currency.",
+  "quote_or_gap": "Most countries cannot feed themselves from their own farms"
+ }
+]

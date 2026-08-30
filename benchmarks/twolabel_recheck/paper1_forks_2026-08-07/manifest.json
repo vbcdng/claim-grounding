@@ -1,0 +1,119 @@
+{
+ "date": "2026-08-07",
+ "design": "task #11 round 2: two-label recheck on the paper1 centrality/rule-A fork rows (docs/OPUS_GRADER_FULL_2026-07-17.md Shape 1). Prompt = round-1b prompt verbatim (incl. the two precision rules), only the file path differs. 3 Fable + 3 Opus fresh blind voters per batch. Fable-safe content (AI-governance paper), no medical screening needed.",
+ "targets": {
+  "t6": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+amber"
+  },
+  "t25": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+partial"
+  },
+  "t35": {
+   "fable_verdict": "supported_minor_caveat",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+amber"
+  },
+  "t37": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+partial"
+  },
+  "t43": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+amber"
+  },
+  "t44": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+partial"
+  },
+  "t47": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+amber"
+  },
+  "t49": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+amber"
+  },
+  "t65": {
+   "fable_verdict": "supported",
+   "grader_action": "add_citation_or_rewrite",
+   "fable_axis": "provable",
+   "grader_axis": "not_provable",
+   "pipeline_verdict": "supported+amber"
+  },
+  "t68": {
+   "fable_verdict": "own_interpretation",
+   "grader_action": "wrong_or_insufficient_evidence",
+   "fable_axis": "not_provable",
+   "grader_axis": "provable",
+   "pipeline_verdict": "unsupported"
+  }
+ },
+ "sentinels": {
+  "t28": {
+   "fable_verdict": "supported",
+   "grader_action": "supported",
+   "axis": "provable"
+  },
+  "t42": {
+   "fable_verdict": "supported",
+   "grader_action": "wrong_or_insufficient_evidence",
+   "axis": "provable"
+  },
+  "t14": {
+   "fable_verdict": "partial",
+   "grader_action": "add_citation_or_rewrite",
+   "axis": "not_provable"
+  },
+  "t30": {
+   "fable_verdict": "partial",
+   "grader_action": "add_citation_or_rewrite",
+   "axis": "not_provable"
+  }
+ },
+ "extract_recipe": "union of tool evidence sentences + covering-audit proof sentences + Opus grader verbatim-verified proofs, deduped, order stable",
+ "batches": {
+  "batch_1": [
+   "paper1_t6",
+   "paper1_t14",
+   "paper1_t35",
+   "paper1_t42",
+   "paper1_t44",
+   "paper1_t68",
+   "paper1_t65"
+  ],
+  "batch_2": [
+   "paper1_t30",
+   "paper1_t37",
+   "paper1_t49",
+   "paper1_t28",
+   "paper1_t47",
+   "paper1_t25",
+   "paper1_t43"
+  ]
+ }
+}

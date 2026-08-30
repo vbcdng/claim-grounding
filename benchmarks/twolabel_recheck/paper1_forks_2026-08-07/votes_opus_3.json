@@ -1,0 +1,86 @@
+[
+ {
+  "row_id": "paper1_t6",
+  "label": "not_supported",
+  "why": "The share figures match the extract (74.5% / 14.1% / 4.8%, May 2025), but the extract says nothing about a frontier-AI lead resting on control of a scarce physical resource rather than software, nor about a concentrated position being usable without building new chips.",
+  "quote_or_gap": "A lead in frontier AI therefore rests on control of a scarce physical resource, not on software alone ... so a concentrated position can be pressed without waiting for new chips to be built"
+ },
+ {
+  "row_id": "paper1_t14",
+  "label": "not_supported",
+  "why": "The extract describes Hungarian privatisation qualitatively only — it gives no percentages and never mentions Chevron, Tengiz, Kazakhstan, 1993, or a transformational recession.",
+  "quote_or_gap": "Chevron took a forty-year stake in Kazakhstan's giant Tengiz oil field in 1993 ... roughly 90% of telecommunications and 60% of the energy sector"
+ },
+ {
+  "row_id": "paper1_t35",
+  "label": "supported",
+  "why": "The extract states that an ultra-intelligent machine could design better machines producing an \"intelligence explosion\" and that the machine could improve itself, which is what the claim asserts.",
+  "quote_or_gap": "an ultra- intelligent machine could design even better machines; there would then unquestionably be an “intelligence explosion,”"
+ },
+ {
+  "row_id": "paper1_t42",
+  "label": "supported",
+  "why": "Each asserted element appears in the extract: China as a peer competitor, Chinese models trailing but closing in, the contest described as bipolar, the \"independent and controllable\" national objective, and Xi's top-down economic strategy.",
+  "quote_or_gap": "Ultimately, China is a peer competitor in AI. ... Beijing has made “independent and controllable” AI a key objective."
+ },
+ {
+  "row_id": "paper1_t44",
+  "label": "not_supported",
+  "why": "Autarky's income cost and China's chip-making lag are both in the extract, but nothing in it says an early lead compounds until one power pulls clear, nor that such a state absorbs the shock of being outcompeted better than an open economy.",
+  "quote_or_gap": "an early lead may compound until one power pulls clear"
+ },
+ {
+  "row_id": "paper1_t68",
+  "label": "supported",
+  "why": "The extract states that a fixed-supply resource such as land ends up constraining growth and capturing nearly all output, and separately names land, energy and capital as the most plausible production bottlenecks limiting how fast output can expand.",
+  "quote_or_gap": "In time, however, land becomes a binding constraint. The share of output received as land rents approaches 1 ... the most plausible bottlenecking factors that we can think of are land, energy and capital."
+ },
+ {
+  "row_id": "paper1_t65",
+  "label": "not_supported",
+  "why": "The MAIM/deterrence-nonproliferation-competitiveness content and the first-strike incentive are in the extract, but the extract never frames the race as a trust dilemma rather than a prisoner's dilemma, nor draws the cooperation conclusion attributed to that framing.",
+  "quote_or_gap": "the race is better understood as a trust dilemma than a prisoner's dilemma — so the powers can in principle cooperate to control it, and are better off doing so"
+ },
+ {
+  "row_id": "paper1_t30",
+  "label": "not_supported",
+  "why": "The extract nowhere states that the Romanian campaign's actual effect on votes was never established, and it limits the no-engagement finding to election-related operations rather than to all 20+ disrupted operations (which it also does not attribute to OpenAI by name).",
+  "quote_or_gap": "the campaign's actual effect on votes was never established"
+ },
+ {
+  "row_id": "paper1_t37",
+  "label": "not_supported",
+  "why": "The extract backs the accountability half of the rentier-state effect but says nothing about such states investing less in their citizens, nor about two authors drawing a resource-curse analogy.",
+  "quote_or_gap": "to invest less in them"
+ },
+ {
+  "row_id": "paper1_t49",
+  "label": "not_supported",
+  "why": "The numbers, the nine-tenths oil-revenue decline and the import-capacity mechanism all match, but the extract attributes a key role in the oil collapse to trade and financial sanctions, so it does not back the claim that this happened through economic dislocation alone, without blockade.",
+  "quote_or_gap": "through economic dislocation alone, without war or blockade"
+ },
+ {
+  "row_id": "paper1_t28",
+  "label": "supported",
+  "why": "The extract states both that each successive model generation is more persuasive than the previous and that returns to scale are sharply diminishing.",
+  "quote_or_gap": "each successive model generation is more persuasive than the previous"
+ },
+ {
+  "row_id": "paper1_t47",
+  "label": "not_supported",
+  "why": "The extract says developing countries in aggregate were net importers of agricultural products and that LDCs are net food importers, but it does not establish that the great majority of developing states individually are net food importers, nor mention loss of currency value.",
+  "quote_or_gap": "the great majority of developing states ... are net importers of food"
+ },
+ {
+  "row_id": "paper1_t25",
+  "label": "not_supported",
+  "why": "The Commission quote and the foreign-national access suspension are in the extract, but nothing supports that access was revoked overnight, without consultation, or with no process for an allied government to contest it.",
+  "quote_or_gap": "revoked overnight, without consultation and with no process by which an allied government can contest it"
+ },
+ {
+  "row_id": "paper1_t43",
+  "label": "not_supported",
+  "why": "The grain reserves and 95% staple-grain target are in the extract, but it says nothing about a dual-circulation policy or self-sufficiency in energy and high-tech inputs.",
+  "quote_or_gap": "a \"dual-circulation\" drive for self-sufficiency in food, energy, and high-tech inputs"
+ }
+]

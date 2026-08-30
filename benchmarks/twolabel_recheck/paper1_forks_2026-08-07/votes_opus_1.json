@@ -1,0 +1,86 @@
+[
+ {
+  "row_id": "paper1_t6",
+  "label": "supported",
+  "why": "Every figure in the claim matches the extract: about three-quarters for the US, ~14% for China, and under 5% for the EU as of May 2025.",
+  "quote_or_gap": "These top five are currently: 1. USA, 74.5% 2. China, 14.1% 3. EU, 4.8%"
+ },
+ {
+  "row_id": "paper1_t14",
+  "label": "not_supported",
+  "why": "The extract covers only qualitative Hungarian privatisation and says nothing about Chevron, Tengiz, 1993, or any percentage of sectors foreign-held.",
+  "quote_or_gap": "Chevron took a forty-year stake in Kazakhstan's giant Tengiz oil field in 1993 ... roughly 90% of telecommunications and 60% of the energy sector"
+ },
+ {
+  "row_id": "paper1_t35",
+  "label": "not_supported",
+  "why": "The extract describes self-improving machines and an intelligence explosion but never states who described it or that this was the first such description.",
+  "quote_or_gap": "the \"intelligence explosion\" first described by Good"
+ },
+ {
+  "row_id": "paper1_t42",
+  "label": "supported",
+  "why": "The extract states verbatim that China is a peer competitor, that the contest is bipolar, that Chinese models still trail but are closing in, that Beijing made \"independent and controllable\" AI a key objective across hardware and software, and that Xi runs a top-down economic strategy.",
+  "quote_or_gap": "Ultimately, China is a peer competitor in AI."
+ },
+ {
+  "row_id": "paper1_t44",
+  "label": "not_supported",
+  "why": "Autarky's income cost and China's chip-making lag are both backed, but the extract says nothing about an early lead compounding until one power pulls clear.",
+  "quote_or_gap": "an early lead may compound until one power pulls clear"
+ },
+ {
+  "row_id": "paper1_t68",
+  "label": "supported",
+  "why": "The extract states that a fixed-supply resource such as land becomes the binding constraint whose owners receive nearly all output, and separately names land, energy and capital as the most plausible production bottlenecks on growth.",
+  "quote_or_gap": "the most plausible bottlenecking factors that we can think of are land, energy and capital"
+ },
+ {
+  "row_id": "paper1_t65",
+  "label": "not_supported",
+  "why": "The MAIM deterrence, nonproliferation and competitiveness framework and the first-strike incentive are backed, but the extract never mentions a trust dilemma, a prisoner's dilemma, or that the powers are better off cooperating.",
+  "quote_or_gap": "the race is better understood as a trust dilemma than a prisoner's dilemma — so the powers can in principle cooperate to control it, and are better off doing so"
+ },
+ {
+  "row_id": "paper1_t30",
+  "label": "not_supported",
+  "why": "The extract does not name OpenAI as the reporting party, limits the no-viral-engagement finding to election-related operations rather than all 20+, and says nothing about the Romanian campaign's effect on votes never being established.",
+  "quote_or_gap": "none of which achieved significant audience engagement; ... the campaign's actual effect on votes was never established"
+ },
+ {
+  "row_id": "paper1_t37",
+  "label": "not_supported",
+  "why": "The extract backs the rentier-state regularity but says nothing about AI, capital, or any analogy drawn to an economy whose value derives from AI rather than human labour, and does not state that rentier states invest less in their citizens.",
+  "quote_or_gap": "an economy whose value derives from AI and capital rather than from human labour would give those who control it little reason to sustain the populations"
+ },
+ {
+  "row_id": "paper1_t49",
+  "label": "not_supported",
+  "why": "The numbers and the oil-revenue collapse match, but the extract explicitly attributes a key role to trade and financial sanctions restricting access to world markets, so it does not back \"through economic dislocation alone, without war or blockade\".",
+  "quote_or_gap": "through economic dislocation alone, without war or blockade"
+ },
+ {
+  "row_id": "paper1_t28",
+  "label": "supported",
+  "why": "The extract states both the generation-over-generation persuasiveness trend and the sharply diminishing returns to model scale.",
+  "quote_or_gap": "each successive model generation is more persuasive than the previous"
+ },
+ {
+  "row_id": "paper1_t47",
+  "label": "not_supported",
+  "why": "The extract speaks only of developing countries and LDCs in aggregate, not that most countries or the great majority of developing states individually are net food importers, and it never mentions currency value.",
+  "quote_or_gap": "Most countries cannot feed themselves from their own farms — the great majority of developing states ... a state stripped of ... the value of its currency"
+ },
+ {
+  "row_id": "paper1_t25",
+  "label": "not_supported",
+  "why": "The Commission quote is verbatim in the extract, but the extract does not say access was revoked overnight, without consultation, or that no process exists for an allied government to contest it.",
+  "quote_or_gap": "revoked overnight, without consultation and with no process by which an allied government can contest it"
+ },
+ {
+  "row_id": "paper1_t43",
+  "label": "not_supported",
+  "why": "The grain reserves and 95% target are in the extract, but it says nothing about a \"dual-circulation\" drive, central direction of the economy, or self-sufficiency in energy and high-tech inputs.",
+  "quote_or_gap": "centrally directed and deliberately buffered ... a \"dual-circulation\" drive for self-sufficiency in food, energy, and high-tech inputs"
+ }
+]

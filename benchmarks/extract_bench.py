@@ -123,7 +123,7 @@ def run_case(case, mode, K, llm, extract_prompt, judge_prompt):
     if uniq:
         window = " ".join(m["text"] for m in uniq[:12])
         passage = f"From {title}: {window}"
-        supported, reason = matcher._parse_support(
+        supported, reason, _ = matcher._parse_support(
             llm.call(judge_prompt.replace("{CLAIM}", claim).replace("{PASSAGE}", passage),
                      temperature=0.0, max_output_tokens=4096))
     in_tokens = int(sum(len(p.split()) for p in parts) * 1.4)

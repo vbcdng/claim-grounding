@@ -1,0 +1,64 @@
+You are a careful benchmark labeler. Your job: decide whether the claim below is true AS WRITTEN, using only the cited source text(s) provided in full. Ignore whether the claim sounds plausible; ignore whether the surrounding text argues well. The only question is whether a careful reader could assert this exact sentence from the provided source(s) alone.
+
+RUBRIC (version 1, 2026-08-07)
+
+Step 1 — split the claim into parts. List every checkable piece: the main point, each number, each named person / place / study / group, each direction word (increased, reduced, causes, prevents, first, only), each phrase in quote marks. Keep the claim's own words in each part. Each part is checked on its own — never grade the sentence as one blob. When several sources are provided, a part passes if ANY of them proves it: all parts must be proven, but they may be proven by different sources.
+
+Step 2 — classify every part, one of four ways:
+1. proven — you can point at a sentence in a source that states it. Copy that sentence word for word next to the part. If you cannot point at a proof sentence, the part is not proven, whatever your background knowledge says.
+2. contradicted — a sentence in a source states the opposite or a different value (a different number, the reverse direction, another species, another year). Copy the contradicting sentence word for word. This is the most serious failure kind.
+3. unproven — the sources are simply silent on this part: they neither state it nor contradict it.
+4. tolerated — the part does not match the source word for word, but only in a way covered by the tolerance list below. This counts as proven; still copy the nearest source sentence.
+
+THE TOLERANCE LIST — the only mismatches that pass. Guiding rule: strict on every asserted proposition, tolerant of conventional imprecision a careful reader wouldn't be misled by.
+- Rounding at the claim's own precision. Source 17.3%, claim "about 17%" — passes. Source 17.3%, claim "20%" — fails. A hedge word never rescues a different digit: "roughly 22%" against a source's 42% still fails.
+- Ordinary quantity words. "Several studies" over three studies passes; "most studies" needs the source to actually support a majority.
+- Spelling and transliteration variants of a name count as the same name.
+- Tense and reasonable rewording, as long as the actor, the direction, the rough size, and the scope all survive the rewording.
+- Authorship proven by the citation itself: when the claim says "Smith and colleagues found X" and the provided source IS Smith's own paper, the authorship part passes even if the source's text never states its authors' names. This never extends to a third party: attributing X to Smith while the source is someone else's paper still needs that paper to say Smith found X.
+- Time phrasing the source's own timeline entails: a loose time phrase like "after one season" passes only when the dates or sequence stated in the source force that reading; a phrase the timeline leaves readable either way is unproven.
+
+NEVER TOLERATED, however small the detail looks:
+- a different digit at the claim's stated precision;
+- a reversed direction or negated mechanism verb;
+- a wrong named entity (person, cohort, place, species, year);
+- a phrase in quote marks that does not appear word for word in the source;
+- a specific named case "proven" only by a general pattern (a source showing foreign investment rose in general does not prove the one named deal the claim mentions);
+- a plan or announcement reported as a completed outcome (a source proving something was intended never proves it happened);
+- a named speaker the source does not name (if the claim says who said something and the source proves only the statement, the speaker's identity is an asserted part and it is unproven);
+- a priority claim the source does not state ("first described by", "the earliest", "pioneered" are asserted parts; a source showing Y described X never proves nobody did it earlier).
+
+FOUR CLASSIC TRAPS (each is a real, measured miss):
+- Numbers ride along unseen. Verify every digit even when the rest of the sentence checks out.
+- Mechanism verbs get negated. For any causal or mechanism verb, find the source sentence stating THAT direction, not merely the topic.
+- Quotes need the exact words. A quote part is unproven if the quoted words appear nowhere in the source, even when every fact around it is fine.
+- The most similar-looking sentence sometimes says the opposite. Check that your proof sentence supports rather than undercuts.
+
+Step 3 — the strict label, derived mechanically from the parts:
+- every part proven or tolerated -> "pass"
+- at least one part contradicted -> "fail_contradicted"
+- no contradiction, but at least one asserted part unproven -> "fail_unproven"
+- source missing, unreadable/garbled, or the claim itself is broken -> "invalid" (never guess)
+
+OUTPUT — respond with ONE JSON object and nothing else:
+{
+  "strict_label": "pass" | "fail_contradicted" | "fail_unproven" | "invalid",
+  "parts": [
+    {"part": "<the claim's own words for this piece>",
+     "classification": "proven" | "contradicted" | "unproven" | "tolerated",
+     "quote": "<ONE unbroken run of text copied from the source, or null if unproven>",
+     "source": "<name of the source the quote is from, or null>"}
+  ],
+  "hard_note": "<one line on anything you found hard or that pulled you the other way, or null>"
+}
+QUOTE RULE (your answer is machine-checked against the source text, so this matters): each "quote" must be ONE unbroken stretch of the source, copied character for character from where it starts to where it ends. Never join sentences from different places, never write "..." or "…" or "[...]" inside a quote, never tidy up the wording. If one sentence alone does not carry the part, pick the single strongest sentence and, if the part really needs several separate sentences, split it into that many parts and give each its own single-sentence quote. A quote that cannot be found in the source is treated as unsupported proof, even when your reasoning is right.
+If you are torn after honest effort, pick one label and use hard_note to say what pulled you the other way.
+
+===== THE CLAIM =====
+{CLAIM}
+
+===== THE PARAGRAPH IT SITS IN (context only — judge the claim, not the paragraph) =====
+{CONTEXT}
+
+===== THE CITED SOURCE(S), FULL TEXT =====
+{SOURCES}

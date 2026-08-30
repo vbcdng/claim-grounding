@@ -1,0 +1,8 @@
+[
+ {"row_id": "dev4_t24", "label": "not_supported", "why": "The extract names the same three people as finalists but contains no date, so the claim's 'On March 1, 2017' has no backing.", "quote_or_gap": "On March 1, 2017"},
+ {"row_id": "train1_t26", "label": "not_supported", "why": "The extract says AZ took the winger after he was suddenly noticed at amateur club Hellas Sport and that he went through all the youth teams in Alkmaar, but nothing states the pickup by AZ happened quickly.", "quote_or_gap": "quickly"},
+ {"row_id": "dev3_t21", "label": "supported", "why": "The article, dated Saturday Nov 10 2018, says Patterson (a one-letter variant of Paterson) died Saturday at 78, matching the claim's date and age.", "quote_or_gap": "Saturday Nov 10, 2018 ... died Saturday. She was 78."},
+ {"row_id": "train2_t19", "label": "not_supported", "why": "The extract confirms he returned to Espanola to lead the team but never states how long he coached in Europe, so 'after one season' is only inferable, not stated.", "quote_or_gap": "after one season"},
+ {"row_id": "dev4_t20", "label": "not_supported", "why": "The extract is an unattributed first-person quote that congratulates respectfully and cites the Judas Priest tour, but Mustaine is never named as the speaker.", "quote_or_gap": "Mustaine (speaker never named in the extract)"},
+ {"row_id": "dev4_t13", "label": "supported", "why": "The extract states the two candidates were deadlocked and tied in several polls for much of the race, backing both close polling and no definitive favorite.", "quote_or_gap": "For much of the race, Walker and his Democratic challenger Mary Burke had been deadlocked, tying each other in several polls."}
+]

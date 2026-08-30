@@ -1,0 +1,39 @@
+{
+ "built": "2026-08-06",
+ "targets": [
+  "dev3_t21",
+  "train2_t19",
+  "train1_t26"
+ ],
+ "sentinels": [
+  "dev4_t20",
+  "dev4_t13",
+  "dev4_t24"
+ ],
+ "round1_votes": {
+  "dev4_t24": {
+   "fable": "not_supported",
+   "opus": "not_supported"
+  },
+  "train1_t26": {
+   "fable": "not_supported",
+   "opus": "supported"
+  },
+  "dev3_t21": {
+   "fable": "supported",
+   "opus": "not_supported"
+  },
+  "train2_t19": {
+   "fable": "not_supported",
+   "opus": "supported"
+  },
+  "dev4_t20": {
+   "fable": "supported",
+   "opus": "supported"
+  },
+  "dev4_t13": {
+   "fable": "supported",
+   "opus": "supported"
+  }
+ }
+}

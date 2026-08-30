@@ -1,0 +1,32 @@
+Voter prompt for the 2026-08-07 paper1 fork-row round (task #11 round 2).
+Identical to the round-1b prompt (retest_2026-08-06/prompt.txt) — the two-label
+question plus the two precision rules — except the batch file path. Rows: the
+10 centrality/rule-A fork rows from docs/OPUS_GRADER_FULL_2026-07-17.md Shape 1
+(t68 is the opposite-direction row) hidden among 4 axis-agreed sentinels,
+md5-shuffled, split into two 7-row batches. Voters: per batch, 3 Fable + 3 Opus
+fresh blind Claude Code subagents (12 agents total); votes_<family>_<N>.json =
+batch-1 voter N's rows + batch-2 voter N's rows (independent agents, arbitrary
+pairing — every row still has 3 independent votes per family). Paper1 content
+is AI-governance text, Fable-safe — no medical screening needed. Provenance
+note: batch-2 Fable voter 1 returned 6 of 7 rows on its first reply; the
+missing paper1_t47 was requested from the SAME agent in a follow-up message
+under the same instructions and appended verbatim. Extracts were built by
+build.py: union of tool evidence sentences + covering-audit proof sentences +
+the Opus grader's verbatim-gate-verified quotes, so every provable component's
+proof is in the extract.
+
+---
+
+You are one judge in a two-judge reliability experiment on claim verification. Read the file <scratchpad>/twolabel_retest3/batch_N.json — a JSON array of rows, each with row_id, claim, extract.
+
+For each row, judge the claim against ONLY the extract text (no outside knowledge, no benefit of the doubt) and assign exactly one of two labels:
+- "supported" — everything the claim states is backed by the extract
+- "not_supported" — anything less: some part of the claim is not backed, the extract is silent about it, or the extract contradicts it. A number, name, or qualifier in the claim that does not match the extract means not_supported.
+
+Two precision rules:
+- A minor spelling variant of what is clearly the same name (one letter added, doubled, or swapped) counts as a match, not a mismatch; a genuinely different name still means not_supported.
+- Do not round up from likelihood: a part of the claim that the extract merely makes plausible or probable, rather than stating or strictly entailing it, is not backed.
+
+Judge each row independently; do not let one row influence another.
+
+Your final message must be ONLY a JSON array (no markdown fences, no commentary): [{"row_id": "...", "label": "supported"|"not_supported", "why": "one sentence", "quote_or_gap": "shortest verbatim extract snippet that proves the claim, or the claim part that lacks backing"}, ...] — one object per row, same order as the file.

@@ -50,7 +50,7 @@
   {
    "id": "t17",
    "expect": "supported",
-   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "note": "run-8 hand-confirmed supported (2026-07-03); RE-CONFIRMED by author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)'): 'definitely supported, the report is full of equivalent phrases'. The task #1 dedup-sentence wording flips it to unsupported on gemma -> that wording blocks the branch merge until fixed.",
    "text": "The scenario is borrowed here only for that mechanism, not for its policy prescription. Its recommended response — that Europe build competitive frontier AI of its own, quickly enough to matter — looks doubtful on present trends. Frontier development is heavily concentrated in the United States: around 70% of foundational AI models since 2017 have been built there, and the European Union trails far behind on the financing, skills, and market scale that the Draghi report identifies as the binding constraints."
   },
   {
@@ -136,49 +136,44 @@
   },
   {
    "id": "t37",
-   "expect": "watch",
-   "note": "audit CORRECT (partial): 'invest less' in neither source -> supported = suspected FP; owner confirm pending; --second-opinion catches it 2-1",
+   "expect": "unsupported",
+   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — author confirmed the audit: 'invest less in them' is in neither source. Was: audit CORRECT (partial): 'invest less' in neither source -> supported = suspected FP; owner confirm pending; --second-opinion catches it 2-1",
    "text": "Both draw an analogy to the \"resource curse\": just as states funded by resource rents rather than by taxing their people have little incentive to invest in them, an economy whose value derives from AI and capital rather than from human labour would give those who control it little reason to sustain the populations — and the places — that no longer contribute to it. The underlying regularity is well established in political economy: states that draw their revenue from external rents rather than from taxing their citizens tend to be less accountable to them and to invest less in them — the \"rentier state\" effect documented across resource economies.",
-   "at_creation": "supported",
-   "improves_if": "unsupported"
+   "at_creation": "supported"
   },
   {
    "id": "t43",
-   "expect": "watch",
-   "note": "owner re-grade 2026-07-19: UNSUPPORTED — 'dual-circulation drive for self-sufficiency in food, energy, high-tech inputs' not in source (grain reserves + 95% target ARE supported); was run-8 hand-confirmed supported (2026-07-03)",
+   "expect": "unsupported",
+   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — locks in the author's 2026-07-19 re-grade (dual-circulation not in source). Was: owner re-grade 2026-07-19: UNSUPPORTED — 'dual-circulation drive for self-sufficiency in food, energy, high-tech inputs' not in source (grain reserves + 95% target ARE supported); was run-8 hand-confirmed supported (2026-07-03)",
    "text": "Its economy is also centrally directed and deliberately buffered against outside pressure: a \"dual-circulation\" drive for self-sufficiency in food, energy, and high-tech inputs, backed by grain reserves of roughly half the world's total and a 95% self-sufficiency target for staple grains.",
-   "at_creation": "supported",
-   "improves_if": "unsupported"
+   "at_creation": "supported"
   },
   {
    "id": "t44",
-   "expect": "watch",
-   "note": "audit CORRECT (partial): concrete facts supported, comparisons authorial; tail-rescue keep-or-revert open",
+   "expect": "unsupported",
+   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — claim IS cited (citation_scope=full); the comparative judgments are the paper's own, not in the source. Was: audit CORRECT (partial): concrete facts supported, comparisons authorial; tail-rescue keep-or-revert open",
    "text": "A state so placed could absorb the shock of being outcompeted far better than an open, trade-dependent one, and stay in the contest through the transition instead of collapsing before it. This advantage is real but limited. Self-sufficiency has a cost in lost income, China still lags at the frontier of chip-making, and an early lead may compound until one power pulls clear.",
    "at_creation": "supported"
   },
   {
    "id": "t47",
-   "expect": "watch",
-   "note": "owner re-grade 2026-07-19: UNSUPPORTED — 'most countries cannot feed themselves' overreaches source's 'many LDCs are net food importers'; quantifier components need rewrite/new source; was run-8 hand-confirmed supported (2026-07-03)",
+   "expect": "unsupported",
+   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — locks in the author's 2026-07-19 re-grade ('most countries' overreaches). Was: owner re-grade 2026-07-19: UNSUPPORTED — 'most countries cannot feed themselves' overreaches source's 'many LDCs are net food importers'; quantifier components need rewrite/new source; was run-8 hand-confirmed supported (2026-07-03)",
    "text": "Economic displacement of this kind is not merely impoverishment; it can become a threat to life. Most countries cannot feed themselves from their own farms — the great majority of developing states, and nearly all the poorest, are net importers of food — so a state stripped of its export earnings and the value of its currency loses, with them, the means to keep its population fed.",
-   "at_creation": "supported",
-   "improves_if": "unsupported"
+   "at_creation": "supported"
   },
   {
    "id": "t49",
-   "expect": "watch",
-   "note": "owner re-grade 2026-07-19: UNSUPPORTED — 'without war or blockade' contradicts source (sanctions played key role); 'within seven years' implies a causal clock the source ('Between 2012 and 2020') never states; was run-8 hand-confirmed supported (2026-07-03)",
+   "expect": "unsupported",
+   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — author promoted knowingly: both judges still say supported, so this row stays RED until the contradiction class is caught (task #2 territory). Was: owner re-grade 2026-07-19: UNSUPPORTED — 'without war or blockade' contradicts source (sanctions played key role); 'within seven years' implies a causal clock the source ('Between 2012 and 2020') never states; was run-8 hand-confirmed supported (2026-07-03)",
    "text": "And the collapse can be quick. When Venezuela's oil revenues fell by more than nine-tenths after 2012, its capacity to import food fell with them, and the share of its people who were undernourished rose from about 3% to roughly 27% within seven years — through economic dislocation alone, without war or blockade.",
-   "at_creation": "supported",
-   "improves_if": "unsupported"
+   "at_creation": "supported"
   },
   {
    "id": "t56",
-   "expect": "watch",
+   "expect": "unsupported",
    "at_creation": "supported",
-   "improves_if": "unsupported",
-   "note": "audit-correct = unsupported (armstrong2016 is a race game-theory model; the pollution/hegemon argument is the author's own). *** DRIFT-INDUCED FALSE POSITIVE ***: fresh flash-lite runs on 2026-07-05 now return SUPPORTED — the tool wrongly grounding an author claim, the dangerous direction. Demoted from HARD to watch only to unblock the gate; this is a REAL verdict-quality regression to investigate, NOT a benign flip (ROADMAP finding j, decision 2). improves_if it flips back to the audit-correct unsupported.",
+   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — author confirmed the audit: the pollution/indifference argument is the paper's own; both judges accept a thematic echo — stays RED until fixed. Was: audit-correct = unsupported (armstrong2016 is a race game-theory model; the pollution/hegemon argument is the author's own). *** DRIFT-INDUCED FALSE POSITIVE ***: fresh flash-lite runs on 2026-07-05 now return SUPPORTED — the tool wrongly grounding an author claim, the dangerous direction. Demoted from HARD to watch only to unblock the gate; this is a REAL verdict-quality regression to investigate, NOT a benign flip (ROADMAP finding j, decision 2). improves_if it flips back to the audit-correct unsupported.",
    "text": "The third condition matters most. An actor with no economic reason to sustain a population has, by the same logic, no economic reason to protect or spare it: the loss of interest that leaves land unclaimed could as easily let it be cleared, or let the emissions and runoff of a build-out elsewhere drift across it. Such pollution — the emissions, waste heat, water draw, and runoff of energy and computing infrastructure, and of the mining that supplies it — is likely to be heavy, because the hegemon answers to no local population that might object and no voters who could force it to stop. This is the lasting danger. A second danger is temporary and belongs to the transition: because one power most plausibly reaches dominance through an intense rivalry (the contest among resilient states noted above), the build-out of that period is rushed, with safety and environmental corners cut to avoid finishing second."
   },
   {
@@ -202,7 +197,7 @@
   {
    "id": "t65",
    "expect": "watch",
-   "note": "audit CORRECT* wrong file since replaced; MAIM in hendrycks2025 but trust-dilemma attribution in neither source",
+   "note": "KEEP WATCH per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)'): partly-proven territory (task #1's badge); no key change. Was: audit CORRECT* wrong file since replaced; MAIM in hendrycks2025 but trust-dilemma attribution in neither source",
    "text": "The two assumptions that drive the race — that the technology gives a decisive advantage, and that states put survival first — also make great-power conflict more likely: a power that expects to lose may strike first rather than accept a rival's permanent dominance. On their account the race is better understood as a trust dilemma than a prisoner's dilemma — so the powers can in principle cooperate to control it, and are better off doing so. Others propose explicit management regimes: Hendrycks, Schmidt and Wang combine deterrence — a posture of \"mutual assured AI malfunction,\" in which any bid for unilateral dominance invites pre-emptive sabotage — with nonproliferation and competitiveness, while RAND examines measures intended to stabilise the competition.",
    "at_creation": "supported"
   },
@@ -217,7 +212,7 @@
   {
    "id": "t74",
    "expect": "watch",
-   "note": "wrong file (1956 aviation yearbook) replaced with real Epoch article; verdict has flip-flopped between runs",
+   "note": "KEEP WATCH per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)'): the author read the one-screen comparison, leans UNSUPPORTED (the sharp price drop is for quadruped robots, not humanoids) but calls it a very hard call and asked whether to drop the row entirely; kept as watch so big future swings stay visible without ever failing the check. Was: wrong file (1956 aviation yearbook) replaced with real Epoch article; verdict has flip-flopped between runs",
    "text": "A near-term version of the same objection deserves direct attention: cheap, abundant robots. If machines can build machines, physical capacity might cease to be scarce — every usable site could be developed and no land left unclaimed — and the premise of this report would fail. The objection turns on *speed*. Robot production is indeed scaling quickly, with industry roadmaps and analysts pointing to fleets in the low millions of humanoid units per year around 2030 and unit costs falling sharply. But physical scaling is far slower than the digital progress driving it: each robot must be built from real components in real factories. Epoch AI judges that 1.5–3 million humanoids per year is clearly achievable by 2030 and 5–10 million plausible, but that current output is capped near 500,000 by bottlenecks such as high-precision reducers, and that reaching ten million units a year would require on the order of twenty Tesla-Gigafactory-scale plants, each taking from several months to over two years to build; the physical and production bottlenecks identified by Erdil and Besiroglu apply throughout.",
    "at_creation": "unsupported"
   },

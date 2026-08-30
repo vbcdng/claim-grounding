@@ -1,0 +1,4675 @@
+{
+  "n_items": 34,
+  "skipped": [
+    [
+      "paper1",
+      "t59",
+      "verdict=supported but no evidence entry has supported=true"
+    ],
+    [
+      "paper1",
+      "t62",
+      "verdict=supported but no evidence entry has supported=true"
+    ],
+    [
+      "bentonite",
+      "t4",
+      "verdict=supported but no evidence entry has supported=true"
+    ]
+  ],
+  "unresolved": [],
+  "results": {
+    "specter": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 6
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 8
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 110
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 460
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 54
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 14
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 47
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "bm25": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 255
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 8
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 229
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 6
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 151
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 464
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 77
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 13
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 23
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 671
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "specter_bm25_rrf": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 16
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 15
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 369
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 15
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 13
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 104
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "specter_bm25_maxnorm": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 14
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 113
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 461
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 7
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 15
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 50
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "specter_bm25_zsum": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 8
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 9
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 200
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 25
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 32
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 24
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 7
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 147
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "bge-small": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 11
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 80
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 199
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 41
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 13
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 18
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 66
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 28
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 19
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 40
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 586
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "bge-small_bm25_rrf": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 19
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 9
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 225
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 7
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 27
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 52
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 51
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 8
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 23
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 757
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "e5-small": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 13
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 140
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 14
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 9
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 28
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 30
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 35
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 11
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 100
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 78
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 22
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 47
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 236
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "e5-small_bm25_rrf": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 35
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 21
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 23
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 51
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 71
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 77
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 26
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 28
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 407
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "gte-small": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 10
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 80
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 27
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 35
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 49
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 3
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 10
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 55
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 22
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 7
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 224
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ],
+    "gte-small_bm25_rrf": [
+      {
+        "paper": "paper1",
+        "claim_id": "t4",
+        "pid": "ba547e4a7b4e55e0d59d224aed09ac143d29f08a",
+        "source_title": "The 2025 AI Index Report \u2014 Stanford HAI",
+        "n_sentences": 6770,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t5",
+        "pid": "96330589f0699153f01943999d14003f3ae07725",
+        "source_title": "Computing Power and the Governance of Artificial Intelligence \u2014 Sastry, G. and others",
+        "n_sentences": 3178,
+        "match_kind": "exact",
+        "rank": 4
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t6",
+        "pid": "c2c8aec74703ca06c9d73c9e305b61c7d5d6763d",
+        "source_title": "AI Supercomputers: Performance Share by Country \u2014 Epoch AI",
+        "n_sentences": 41,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t8",
+        "pid": "c2ac7a1f22e4253585f4ff3fa9c8fbef5af0a3ab",
+        "source_title": "Economic Growth under Transformative AI \u2014 Korinek, A. and Trammell, P.",
+        "n_sentences": 1351,
+        "match_kind": "exact",
+        "rank": 31
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t10",
+        "pid": "0a578171e21bab1ebc8830cb079d3cf01ca2a785",
+        "source_title": "The Next Great Divergence: Why AI May Widen Inequality Between Countries \u2014 UNDP",
+        "n_sentences": 239,
+        "match_kind": "exact",
+        "rank": 9
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t13",
+        "pid": "811cd860cd03d0f3ccee30c384429b01b59ea342",
+        "source_title": "Europe 2031 \u2014 Bakker, M. and Dada, J. and Juijn, D. and van Baarsen, S. and Fox, P. and Petropoulos, A. and Stelling, L.",
+        "n_sentences": 1192,
+        "match_kind": "exact",
+        "rank": 18
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t17",
+        "pid": "93fbf9d367cb24e23a51a104e8d66772c958e861",
+        "source_title": "The Future of European Competitiveness \u2014 Draghi, M.",
+        "n_sentences": 1872,
+        "match_kind": "exact",
+        "rank": 49
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t18",
+        "pid": "2ae28447f5f12600b50dde5deb856c369decf16a",
+        "source_title": "Open Models Lag State-of-the-Art Closed Models by 4 Months \u2014 Epoch AI",
+        "n_sentences": 32,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t27",
+        "pid": "af9dd01039519777402b9f7e25e6112af480622f",
+        "source_title": "Nature Human Behaviour \u2014 Salvi, F. and Horta Ribeiro, M. and Gallotti, R. and West, R.",
+        "n_sentences": 609,
+        "match_kind": "exact",
+        "rank": 5
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t28",
+        "pid": "5f495a56b27758345271912687052b9fbdffc3cf",
+        "source_title": "Measuring the Persuasiveness of Language Models \u2014 Anthropic",
+        "n_sentences": 43,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t35",
+        "pid": "35c6e1adc6821e4580becf3ba423d27fef92c254",
+        "source_title": "Advances in Computers \u2014 Good, I. J.",
+        "n_sentences": 1562,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "c12f2400fc2ed3c6d6b280a12151f4cd9a694f9b",
+        "source_title": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025) \u2014 Kulveit, J. and Douglas, R. and Ammann, N. and Turan, D. and Krueger, D. and Duvenaud, D.",
+        "n_sentences": 753,
+        "match_kind": "exact",
+        "rank": 60
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t36",
+        "pid": "129687849103f05b04a0058416934cbdb243d931",
+        "source_title": "The Intelligence Curse \u2014 Drago, L. and Laine, R.",
+        "n_sentences": 1546,
+        "match_kind": "exact",
+        "rank": 115
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t43",
+        "pid": "3e5673c0d10009a2c8fd10da98104568271d6745",
+        "source_title": "How Severe Are China's Food Security Challenges? \u2014 CSIS",
+        "n_sentences": 214,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t47",
+        "pid": "8f34de97dfce3dc1eb5de61e190939ead8342ed0",
+        "source_title": "The State of Agricultural Commodity Markets 2004 \u2014 Food and Agriculture Organization",
+        "n_sentences": 1150,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t49",
+        "pid": "39e83cd8153a55a0c727cafcc04e7fd61876adf5",
+        "source_title": "Latin American Perspectives \u2014 Rodr\u00edguez, F.",
+        "n_sentences": 495,
+        "match_kind": "exact",
+        "rank": 17
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t64",
+        "pid": "0a4edc6967cbe65de0267307b5b4b5fd28eb0c10",
+        "source_title": "The Manhattan Trap: Why a Race to Artificial Superintelligence is Self-Defeating \u2014 Katzke, C. and Futerman, G.",
+        "n_sentences": 583,
+        "match_kind": "exact",
+        "rank": 12
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t76",
+        "pid": "2310eb866ac60b11f639c622c227ea618681fe5c",
+        "source_title": "Moore's Law for Everything \u2014 Altman, S.",
+        "n_sentences": 131,
+        "match_kind": "exact",
+        "rank": 11
+      },
+      {
+        "paper": "paper1",
+        "claim_id": "t80",
+        "pid": "606609b5be8591361fc43f1ff91aaa0af3982e03",
+        "source_title": "Preparing for the Intelligence Explosion \u2014 MacAskill, W. and Moorhouse, F.",
+        "n_sentences": 1396,
+        "match_kind": "exact",
+        "rank": 386
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t0",
+        "pid": "f8a7feb664878f24adeff517c144b569635208e5",
+        "source_title": "Cesium_adsorption_desorption_behavior_of_clay_minerals_considering_actual_contamination_conditions_i_a973183290",
+        "n_sentences": 369,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t1",
+        "pid": "14cbf88d48d63906671194708b9e187abf8373c7",
+        "source_title": "Differential_sorption_behavior_of_Cesium_depending_on_humic_acid_content_in_clay_minerals_ec9d65184a",
+        "n_sentences": 14,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "bentonite",
+        "claim_id": "t3",
+        "pid": "2b48c32d66cd21411854249c3ac50fd8842d8c46",
+        "source_title": "Performance_of_molybdenum_vanadate_loaded_on_bentonite_for_retention_of_cesium-134_from_aqueous_solu_8d56fcd23b",
+        "n_sentences": 480,
+        "match_kind": "exact",
+        "rank": 2
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t0",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t1",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t2",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t3",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t4",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t5",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t6",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t7",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t8",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t9",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t10",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      },
+      {
+        "paper": "chimpanzee",
+        "claim_id": "t11",
+        "pid": "958b3a151580986f0fd571bcb52e2682409fe62b",
+        "source_title": "redshaw-suddendorf-can-chimpanzees-conceive-of-mutually-exclusive-future-possibilities-a-comment-on-chimpanzees-prepare",
+        "n_sentences": 269,
+        "match_kind": "exact",
+        "rank": 1
+      }
+    ]
+  },
+  "summary_pooled": {
+    "specter": {
+      "n": 34,
+      "top3_recall": 0.7058823529411765,
+      "top6_recall": 0.7941176470588235,
+      "top3": 24,
+      "top6": 27,
+      "median_rank": 1.0,
+      "max_rank": 460,
+      "ranks": [
+        1,
+        1,
+        6,
+        1,
+        8,
+        110,
+        460,
+        1,
+        54,
+        1,
+        17,
+        3,
+        1,
+        5,
+        1,
+        14,
+        1,
+        1,
+        47,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "bm25": {
+      "n": 34,
+      "top3_recall": 0.6470588235294118,
+      "top6_recall": 0.6764705882352942,
+      "top3": 22,
+      "top6": 23,
+      "median_rank": 1.0,
+      "max_rank": 671,
+      "ranks": [
+        1,
+        3,
+        1,
+        255,
+        8,
+        12,
+        229,
+        1,
+        3,
+        1,
+        6,
+        151,
+        464,
+        1,
+        77,
+        13,
+        17,
+        23,
+        671,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "specter_bm25_rrf": {
+      "n": 34,
+      "top3_recall": 0.7058823529411765,
+      "top6_recall": 0.7941176470588235,
+      "top3": 24,
+      "top6": 27,
+      "median_rank": 1.0,
+      "max_rank": 369,
+      "ranks": [
+        1,
+        1,
+        2,
+        16,
+        1,
+        15,
+        369,
+        1,
+        5,
+        1,
+        5,
+        15,
+        17,
+        1,
+        13,
+        5,
+        2,
+        2,
+        104,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "specter_bm25_maxnorm": {
+      "n": 34,
+      "top3_recall": 0.7647058823529411,
+      "top6_recall": 0.8235294117647058,
+      "top3": 26,
+      "top6": 28,
+      "median_rank": 1.0,
+      "max_rank": 461,
+      "ranks": [
+        1,
+        2,
+        1,
+        1,
+        14,
+        113,
+        461,
+        1,
+        5,
+        1,
+        7,
+        4,
+        2,
+        1,
+        2,
+        15,
+        2,
+        1,
+        50,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "specter_bm25_zsum": {
+      "n": 34,
+      "top3_recall": 0.6764705882352942,
+      "top6_recall": 0.7647058823529411,
+      "top3": 23,
+      "top6": 26,
+      "median_rank": 1.0,
+      "max_rank": 200,
+      "ranks": [
+        1,
+        3,
+        1,
+        8,
+        1,
+        9,
+        200,
+        1,
+        4,
+        1,
+        5,
+        25,
+        32,
+        1,
+        24,
+        7,
+        2,
+        5,
+        147,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "bge-small": {
+      "n": 34,
+      "top3_recall": 0.6470588235294118,
+      "top6_recall": 0.6470588235294118,
+      "top3": 22,
+      "top6": 22,
+      "median_rank": 2.0,
+      "max_rank": 586,
+      "ranks": [
+        11,
+        2,
+        1,
+        3,
+        17,
+        80,
+        199,
+        1,
+        41,
+        1,
+        3,
+        13,
+        18,
+        2,
+        66,
+        28,
+        19,
+        40,
+        586,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "bge-small_bm25_rrf": {
+      "n": 34,
+      "top3_recall": 0.6470588235294118,
+      "top6_recall": 0.6470588235294118,
+      "top3": 22,
+      "top6": 22,
+      "median_rank": 1.5,
+      "max_rank": 757,
+      "ranks": [
+        2,
+        2,
+        1,
+        19,
+        12,
+        9,
+        225,
+        1,
+        7,
+        1,
+        2,
+        27,
+        52,
+        1,
+        51,
+        8,
+        12,
+        23,
+        757,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "e5-small": {
+      "n": 34,
+      "top3_recall": 0.5588235294117647,
+      "top6_recall": 0.5882352941176471,
+      "top3": 19,
+      "top6": 20,
+      "median_rank": 2.0,
+      "max_rank": 236,
+      "ranks": [
+        1,
+        3,
+        4,
+        13,
+        17,
+        140,
+        14,
+        3,
+        9,
+        1,
+        28,
+        30,
+        35,
+        11,
+        100,
+        78,
+        22,
+        47,
+        236,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "e5-small_bm25_rrf": {
+      "n": 34,
+      "top3_recall": 0.6176470588235294,
+      "top6_recall": 0.6764705882352942,
+      "top3": 21,
+      "top6": 23,
+      "median_rank": 1.0,
+      "max_rank": 407,
+      "ranks": [
+        1,
+        3,
+        2,
+        35,
+        12,
+        21,
+        23,
+        1,
+        4,
+        1,
+        4,
+        51,
+        71,
+        2,
+        77,
+        26,
+        12,
+        28,
+        407,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "gte-small": {
+      "n": 34,
+      "top3_recall": 0.6176470588235294,
+      "top6_recall": 0.6470588235294118,
+      "top3": 21,
+      "top6": 22,
+      "median_rank": 2.0,
+      "max_rank": 224,
+      "ranks": [
+        1,
+        4,
+        3,
+        10,
+        12,
+        80,
+        27,
+        1,
+        12,
+        1,
+        2,
+        35,
+        49,
+        3,
+        10,
+        55,
+        22,
+        7,
+        224,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "gte-small_bm25_rrf": {
+      "n": 34,
+      "top3_recall": 0.6176470588235294,
+      "top6_recall": 0.6764705882352942,
+      "top3": 21,
+      "top6": 23,
+      "median_rank": 1.0,
+      "max_rank": 386,
+      "ranks": [
+        1,
+        4,
+        1,
+        31,
+        9,
+        18,
+        49,
+        1,
+        5,
+        1,
+        2,
+        60,
+        115,
+        1,
+        17,
+        17,
+        12,
+        11,
+        386,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "summary_by_paper": {
+    "specter": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.5263157894736842,
+        "top6_recall": 0.631578947368421,
+        "top3": 10,
+        "top6": 12,
+        "median_rank": 3,
+        "max_rank": 460,
+        "ranks": [
+          1,
+          1,
+          6,
+          1,
+          8,
+          110,
+          460,
+          1,
+          54,
+          1,
+          17,
+          3,
+          1,
+          5,
+          1,
+          14,
+          1,
+          1,
+          47
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 1,
+        "max_rank": 2,
+        "ranks": [
+          1,
+          2,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 0.9166666666666666,
+        "top6_recall": 1.0,
+        "top3": 11,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 4,
+        "ranks": [
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "bm25": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.3684210526315789,
+        "top6_recall": 0.42105263157894735,
+        "top3": 7,
+        "top6": 8,
+        "median_rank": 12,
+        "max_rank": 671,
+        "ranks": [
+          1,
+          3,
+          1,
+          255,
+          8,
+          12,
+          229,
+          1,
+          3,
+          1,
+          6,
+          151,
+          464,
+          1,
+          77,
+          13,
+          17,
+          23,
+          671
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 2,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          2,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "specter_bm25_rrf": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.47368421052631576,
+        "top6_recall": 0.631578947368421,
+        "top3": 9,
+        "top6": 12,
+        "median_rank": 5,
+        "max_rank": 369,
+        "ranks": [
+          1,
+          1,
+          2,
+          16,
+          1,
+          15,
+          369,
+          1,
+          5,
+          1,
+          5,
+          15,
+          17,
+          1,
+          13,
+          5,
+          2,
+          2,
+          104
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 1,
+        "max_rank": 2,
+        "ranks": [
+          1,
+          2,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "specter_bm25_maxnorm": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.5789473684210527,
+        "top6_recall": 0.6842105263157895,
+        "top3": 11,
+        "top6": 13,
+        "median_rank": 2,
+        "max_rank": 461,
+        "ranks": [
+          1,
+          2,
+          1,
+          1,
+          14,
+          113,
+          461,
+          1,
+          5,
+          1,
+          7,
+          4,
+          2,
+          1,
+          2,
+          15,
+          2,
+          1,
+          50
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 1,
+        "max_rank": 3,
+        "ranks": [
+          1,
+          3,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "specter_bm25_zsum": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.42105263157894735,
+        "top6_recall": 0.5789473684210527,
+        "top3": 8,
+        "top6": 11,
+        "median_rank": 5,
+        "max_rank": 200,
+        "ranks": [
+          1,
+          3,
+          1,
+          8,
+          1,
+          9,
+          200,
+          1,
+          4,
+          1,
+          5,
+          25,
+          32,
+          1,
+          24,
+          7,
+          2,
+          5,
+          147
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 1,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "bge-small": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.3684210526315789,
+        "top6_recall": 0.3684210526315789,
+        "top3": 7,
+        "top6": 7,
+        "median_rank": 17,
+        "max_rank": 586,
+        "ranks": [
+          11,
+          2,
+          1,
+          3,
+          17,
+          80,
+          199,
+          1,
+          41,
+          1,
+          3,
+          13,
+          18,
+          2,
+          66,
+          28,
+          19,
+          40,
+          586
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 2,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          2
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "bge-small_bm25_rrf": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.3684210526315789,
+        "top6_recall": 0.3684210526315789,
+        "top3": 7,
+        "top6": 7,
+        "median_rank": 9,
+        "max_rank": 757,
+        "ranks": [
+          2,
+          2,
+          1,
+          19,
+          12,
+          9,
+          225,
+          1,
+          7,
+          1,
+          2,
+          27,
+          52,
+          1,
+          51,
+          8,
+          12,
+          23,
+          757
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 2,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          2
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "e5-small": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.21052631578947367,
+        "top6_recall": 0.2631578947368421,
+        "top3": 4,
+        "top6": 5,
+        "median_rank": 17,
+        "max_rank": 236,
+        "ranks": [
+          1,
+          3,
+          4,
+          13,
+          17,
+          140,
+          14,
+          3,
+          9,
+          1,
+          28,
+          30,
+          35,
+          11,
+          100,
+          78,
+          22,
+          47,
+          236
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 1,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "e5-small_bm25_rrf": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.3157894736842105,
+        "top6_recall": 0.42105263157894735,
+        "top3": 6,
+        "top6": 8,
+        "median_rank": 12,
+        "max_rank": 407,
+        "ranks": [
+          1,
+          3,
+          2,
+          35,
+          12,
+          21,
+          23,
+          1,
+          4,
+          1,
+          4,
+          51,
+          71,
+          2,
+          77,
+          26,
+          12,
+          28,
+          407
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 1,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "gte-small": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.3157894736842105,
+        "top6_recall": 0.3684210526315789,
+        "top3": 6,
+        "top6": 7,
+        "median_rank": 10,
+        "max_rank": 224,
+        "ranks": [
+          1,
+          4,
+          3,
+          10,
+          12,
+          80,
+          27,
+          1,
+          12,
+          1,
+          2,
+          35,
+          49,
+          3,
+          10,
+          55,
+          22,
+          7,
+          224
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 2,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          2
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "gte-small_bm25_rrf": {
+      "paper1": {
+        "n": 19,
+        "top3_recall": 0.3157894736842105,
+        "top6_recall": 0.42105263157894735,
+        "top3": 6,
+        "top6": 8,
+        "median_rank": 11,
+        "max_rank": 386,
+        "ranks": [
+          1,
+          4,
+          1,
+          31,
+          9,
+          18,
+          49,
+          1,
+          5,
+          1,
+          2,
+          60,
+          115,
+          1,
+          17,
+          17,
+          12,
+          11,
+          386
+        ]
+      },
+      "bentonite": {
+        "n": 3,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 3,
+        "top6": 3,
+        "median_rank": 2,
+        "max_rank": 2,
+        "ranks": [
+          2,
+          1,
+          2
+        ]
+      },
+      "chimpanzee": {
+        "n": 12,
+        "top3_recall": 1.0,
+        "top6_recall": 1.0,
+        "top3": 12,
+        "top6": 12,
+        "median_rank": 1.0,
+        "max_rank": 1,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "encode_time_totals": {
+    "sentence-transformers/allenai-specter": 2.4172909259796143,
+    "BAAI/bge-small-en-v1.5": 278.90348267555237,
+    "intfloat/e5-small-v2": 293.1557595729828,
+    "thenlper/gte-small": 1955.977097272873
+  }
+}

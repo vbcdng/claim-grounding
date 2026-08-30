@@ -75,6 +75,32 @@ def score(analysis, gt):
     return rep
 
 
+def contamination(analysis) -> str:
+    """A short refusal message when the run must not be scored, else "".
+
+    Task #37: a request to the model that fails is recorded on the claim
+    (judge_error / checks_failed) and tallied in metadata.llm_failures — a
+    verdict or dropped warning produced by dead calls is an outage artifact,
+    so a run containing ANY of them can never be quoted as a result. The
+    reason-prefix scan covers result files from runs older than the markers."""
+    meta = analysis.get("metadata") or {}
+    lf = meta.get("llm_failures") or {}
+    n_failed = lf.get("failed_calls") or 0
+    affected = [c.get("id") for c in analysis.get("text_claims", [])
+                if c.get("judge_error") or c.get("checks_failed")
+                or str(c.get("reason", "")).startswith(
+                    ("no LLM response", "LLM judgment unparseable"))]
+    if not n_failed and not affected:
+        return ""
+    ids = ", ".join(str(i) for i in affected[:12]) + ("…" if len(affected) > 12 else "")
+    return (f"REFUSED to score: {n_failed} model request(s) failed during this "
+            f"run and {len(affected)} claim(s) could not be fully checked"
+            + (f" ({ids})" if affected else "")
+            + ". A verdict minted by a dead call is an outage artifact, not a "
+              "result. Re-run the same command (it retries just the affected "
+              "claims), then score the clean run.")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Score an analysis.json against the paper1 ground truth")
     ap.add_argument("--analysis", default=DEFAULT_ANALYSIS)
@@ -85,6 +111,11 @@ def main(argv=None):
         gt = json.load(f)
     with open(args.analysis, encoding="utf-8") as f:
         analysis = json.load(f)
+
+    bad = contamination(analysis)
+    if bad:
+        print(bad)
+        return 2
 
     run_model = (analysis.get("metadata") or {}).get("model")
     if run_model and gt.get("model") and run_model != gt["model"]:

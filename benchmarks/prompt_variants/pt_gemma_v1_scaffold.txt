@@ -1,0 +1,25 @@
+You are a careful scientific fact-checker. You are given a CLAIM made by a writer and a PASSAGE assembled from the sentences of the SEVERAL sources they cited (each labelled "From <source>:"). Decide whether the cited sources, TAKEN TOGETHER, actually support the claim.
+
+Follow this procedure IN ORDER:
+
+STEP 1 — Restate the passage. In 2-4 sentences, restate what the passage asserts in plain words, INCLUDING what it plainly entails: the ordinary meaning of its metaphors and emphatic terms (an "explosion" is sudden and fast), the instances covered by its generalizations ("everything became cheaper — housing, food, clothing, etc." covers other everyday necessities too), and what follows necessarily from its complete account (if the passage attributes an outcome entirely to one cause, then other causes were absent).
+
+STEP 2 — Separate the writer's voice. A claim may span several sentences, and some are the writer's framing — transitions, announcements, or the writer's own argument/interpretation. No source would state these; do NOT count them as unsupported components. They only matter if the passage CONTRADICTS them. Judge the remaining CITABLE assertions — the specific facts, findings, numbers, events, and attributions the writer credits to the cited sources.
+
+STEP 3 — Check each factual component of the citable assertions against your STEP 1 restatement, not against the passage's literal words. A component passes if the restatement covers it. A component FAILS only if it adds a checkable fact the passage genuinely does not contain or contradicts:
+- a number, magnitude, date or population that differs or is absent;
+- a concrete event or action (an order given, access refused, a study conducted) the passage never asserts;
+- a strengthening of the passage (passage "reduced" does NOT support claim "eliminated"; "some" does not support "all"; "requested" does not support "was granted" or "was refused");
+- a cause-effect direction or attribution the passage does not make.
+IGNORE soft hedges ("generally", "often", "can", "may", "about", "roughly") — they weaken the claim and never need their own proof.
+
+STEP 4 — Verdict. The claim is SUPPORTED only if every substantive component passed STEP 3. If the passage is weaker than the claim, stronger in a way that changes its meaning, or contradicts it, answer false. If a component adds a genuinely new checkable fact you cannot ground in the passage, answer false — but do not manufacture doubt out of mere wording differences.
+
+Write your STEP 1 restatement and STEP 3 component check briefly, then end with ONLY a JSON object on the final line:
+{"supported": true or false, "reason": "<one short sentence naming any unsupported component>"}
+
+CLAIM:
+{CLAIM}
+
+PASSAGE (sentences gathered from the cited sources):
+{PASSAGE}

@@ -1,0 +1,86 @@
+[
+ {
+  "row_id": "paper1_t6",
+  "label": "supported",
+  "why": "Every figure in the claim matches the extract: US about three-quarters, China 14.1% (~14%), EU 4.8% (under 5%) of GPU-cluster/AI-supercomputer performance as of 2025.",
+  "quote_or_gap": "These top five are currently: 1. USA, 74.5% 2. China, 14.1% 3. EU, 4.8%"
+ },
+ {
+  "row_id": "paper1_t14",
+  "label": "not_supported",
+  "why": "The extract only says privatisation strongly increased foreign capital in Hungarian telecoms and energy; it never gives the 90% or 60% figures, and the Chevron/Tengiz 1993 deal is entirely absent.",
+  "quote_or_gap": "foreign investors came to control roughly 90% of telecommunications and 60% of the energy sector"
+ },
+ {
+  "row_id": "paper1_t35",
+  "label": "not_supported",
+  "why": "The extract states the self-improvement mechanism and the 'intelligence explosion' verbatim, but nothing in it backs the priority qualifier that this was FIRST described (and it even points to other refs), so that part is unbacked.",
+  "quote_or_gap": "first described by Good"
+ },
+ {
+  "row_id": "paper1_t42",
+  "label": "supported",
+  "why": "The extract states verbatim that China is 'a peer competitor in AI', that the contest is bipolar, that its LLMs trail but are closing in, that Beijing has made 'independent and controllable' AI a key objective across hardware and software, and that Xi runs a comprehensive top-down economic strategy.",
+  "quote_or_gap": "Ultimately, China is a peer competitor in AI."
+ },
+ {
+  "row_id": "paper1_t44",
+  "label": "supported",
+  "why": "The extract backs both definite factual parts: autarky's income cost (embargo welfare losses of 2.83-8.14% of real income) and China's chip-making lag; the remaining clauses are the author's hedged reasoning, not factual assertions the extract contradicts.",
+  "quote_or_gap": "they are still severely constrained by domestic chip-making capabilities"
+ },
+ {
+  "row_id": "paper1_t68",
+  "label": "supported",
+  "why": "The extract states both cited findings: with automation, the fixed-supply resource constrains growth and its owners receive approximately all output (resources drive outcomes), and production bottlenecks from land, energy and capital are the most plausible constraint on how fast output can expand.",
+  "quote_or_gap": "the resource in fixed supply constrains growth and its owners receive approximately all output"
+ },
+ {
+  "row_id": "paper1_t65",
+  "label": "not_supported",
+  "why": "The first-strike dynamic and the Hendrycks/Schmidt/Wang deterrence-nonproliferation-competitiveness framework are backed, but the extract says nothing about the race being a trust dilemma rather than a prisoner's dilemma or the cooperation conclusion drawn from it.",
+  "quote_or_gap": "the race is better understood as a trust dilemma than a prisoner's dilemma"
+ },
+ {
+  "row_id": "paper1_t30",
+  "label": "not_supported",
+  "why": "The microtargeting result, the 20+ disrupted operations with no significant engagement, and the December 2024 annulment after a TikTok/Telegram campaign are all in the extract, but nothing in it states that the campaign's actual effect on votes was never established.",
+  "quote_or_gap": "the campaign's actual effect on votes was never established"
+ },
+ {
+  "row_id": "paper1_t37",
+  "label": "not_supported",
+  "why": "The extract documents the rentier-state concept and the taxation-accountability link, but says nothing about the two sources ('Both') drawing an AI analogy, about an economy whose value derives from AI and capital, or about rentier states investing less in their citizens.",
+  "quote_or_gap": "Both draw an analogy to the \"resource curse\"... an economy whose value derives from AI and capital... little reason to sustain the populations"
+ },
+ {
+  "row_id": "paper1_t49",
+  "label": "not_supported",
+  "why": "The nine-tenths oil-revenue decline, the import-capacity collapse, and the 3.2%-to-27.4% rise from 2012 to 2019 are all stated, and the contraction is called the second-largest outside of war, but the extract never says the crisis occurred without a blockade — indeed it credits trade and financial sanctions restricting access to world markets as a key factor.",
+  "quote_or_gap": "without war or blockade"
+ },
+ {
+  "row_id": "paper1_t28",
+  "label": "supported",
+  "why": "The extract states each successive model generation is more persuasive than the previous and that persuasiveness shows sharply diminishing returns to model scale.",
+  "quote_or_gap": "each successive model generation is more persuasive than the previous"
+ },
+ {
+  "row_id": "paper1_t47",
+  "label": "not_supported",
+  "why": "The extract says developing countries in aggregate were net importers and that 'many' LDCs are net food importers, which does not back the claim's stronger quantifiers that most countries cannot feed themselves and that nearly all the poorest states are net food importers.",
+  "quote_or_gap": "Most countries cannot feed themselves from their own farms — the great majority of developing states, and nearly all the poorest, are net importers of food"
+ },
+ {
+  "row_id": "paper1_t25",
+  "label": "not_supported",
+  "why": "The Commission quote and the nationality-based suspension are in the extract, but nothing backs that access was revoked overnight, without consultation, or that no process exists for an allied government to contest it.",
+  "quote_or_gap": "revoked overnight, without consultation and with no process by which an allied government can contest it"
+ },
+ {
+  "row_id": "paper1_t43",
+  "label": "not_supported",
+  "why": "The half-of-global grain reserves and the 95% grain self-sufficiency target are stated, but the extract says nothing about a centrally directed economy or a 'dual-circulation' drive for self-sufficiency in food, energy, and high-tech inputs.",
+  "quote_or_gap": "a \"dual-circulation\" drive for self-sufficiency in food, energy, and high-tech inputs"
+ }
+]

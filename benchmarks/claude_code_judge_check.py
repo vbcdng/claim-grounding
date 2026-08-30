@@ -78,7 +78,7 @@ def main():
         passage = rich_passage(c["text"], c["paper_ids"])
         if not passage.strip():
             return c["id"], None, "no evidence assembled"
-        ok, reason, tally = matcher._vote_support(
+        ok, reason, tally, _ = matcher._vote_support(
             llm, prompt.replace("{CLAIM}", c["text"]).replace("{PASSAGE}", passage))
         return c["id"], ok, f"{tally}: {reason[:100]}"
 

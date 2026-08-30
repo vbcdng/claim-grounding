@@ -11,7 +11,10 @@ though the audited claims were all negative at the claim level:
 - "must_cover" (the grader's tool-fetch rows — proof EXISTS in the source and
   was quoted): the claim must be supported, must have a covering set, and
   every listed anchor (a short distinctive substring of the grader-quoted
-  proof) must appear in the union of covered sentences. Catches
+  proof) must appear in the union of covered sentences. An anchor entry may
+  itself be a LIST of strings: any one of them satisfies that entry
+  (alternative accepted proofs — author ruling 2026-08-11, essay t6: the
+  paper's summary sentence is as valid as the detail sentence). Catches
   "everything's amber forever" over-strictness and retrieval regressions.
 - "must_flag" (the grader's author-fix rows — a component is NOT provable
   from the cited source): the claim must either be judged unsupported, or
@@ -70,7 +73,8 @@ def check(analysis: dict, gt: dict):
                                 f"source — grader quoted it)")
                 continue
             missing = [a for a in row.get("anchors", [])
-                       if _norm(a) not in covered_text]
+                       if not any(_norm(alt) in covered_text
+                                  for alt in (a if isinstance(a, list) else [a]))]
             if missing:
                 failures.append(f"{cid}: covering set lacks proof anchor(s): "
                                 + "; ".join(repr(a) for a in missing))
@@ -97,6 +101,18 @@ def main():
         analysis = json.load(f)
     with open(args.ground_truth, encoding="utf-8") as f:
         gt = json.load(f)
+
+    # Task #37: never score a run in which model requests failed — a shown or
+    # missing proof line produced by dead calls is an outage artifact. Shares
+    # the refusal rule with the verdict scorer (same directory import).
+    try:
+        from regression_check import contamination
+    except ImportError:                       # imported with the repo root on
+        from benchmarks.regression_check import contamination  # the path instead
+    bad = contamination(analysis)
+    if bad:
+        print(bad)
+        sys.exit(2)
 
     failures, watch_lines, n_hard = check(analysis, gt)
 

@@ -1,0 +1,31 @@
+You are a careful scientific fact-checker. You are given a CLAIM made by a writer and a PASSAGE assembled from the sentences of the SEVERAL sources they cited (each labelled "From <source>:"). Decide whether the cited sources, TAKEN TOGETHER, actually support the claim.
+
+The test is CONTENT, not wording. Never ask "does the passage use the claim's words?" — ask "does what the passage asserts, read plainly, make the claim true?" A claim is supported when a careful human reader of the passage would say: yes, that is a fair statement of what these sources say.
+
+How to judge:
+0. First set aside the writer's own voice: a claim may span several sentences, and some are the writer's framing — transitions, announcements, or the writer's own argument/interpretation. No source would state these; do NOT count them as unsupported components. They only matter if the passage CONTRADICTS them. Judge the remaining CITABLE assertions — the specific facts, findings, numbers, events, and attributions the writer credits to the cited sources.
+1. Break those citable assertions into individual factual components: named entities, relationships, and substantive qualifiers.
+2. ACCEPT a component if the passage states it OR entails it on a plain reading. Entailment includes:
+   - a paraphrase or a different word for the same thing ("sharply diminishing returns" supports "levelling off");
+   - a specific figure covering the claim's rounded or hedged wording ("64.4% of the time" supports "about two-thirds");
+   - a stated generalization covering the claim's named examples ("everything became cheaper — housing, food, clothing, etc." covers other everyday necessities the claim names);
+   - the plain meaning of the passage's own metaphor or emphatic wording (an "explosion" is sudden and fast);
+   - what necessarily follows from the passage's complete account (if the passage attributes an outcome entirely to one cause, a claim noting that a different cause was absent is entailed).
+3. REJECT a component ONLY when it adds a checkable fact the passage genuinely does not contain or contradicts:
+   - a number, magnitude, date or population that differs or is absent;
+   - a concrete event or action (an order given, access refused, a study conducted) the passage never asserts;
+   - a strengthening of the passage (passage "reduced" does NOT support claim "eliminated"; "some" does not support "all"; "requested access" does not support "was refused access");
+   - a cause-effect direction or attribution the passage does not make.
+4. IGNORE soft hedging/generalizing words that only make the claim WEAKER or more cautious — "generally", "often", "typically", "can", "may", "could", "some", "various", "about", "roughly". A claim hedged this way is supported by a specific concrete instance in the passage; do NOT require the hedge word itself to appear.
+5. A claim is also unsupported if the passage is weaker than it, stronger in a way that changes its meaning, or contradicts it.
+
+Precision still matters: when a component adds a genuinely new checkable fact and you cannot point to passage content entailing it, answer false. But do not manufacture doubt out of mere wording differences.
+
+Return ONLY a JSON object, no commentary:
+{"supported": true or false, "reason": "<one short sentence naming any unsupported component>"}
+
+CLAIM:
+{CLAIM}
+
+PASSAGE (sentences gathered from the cited sources):
+{PASSAGE}

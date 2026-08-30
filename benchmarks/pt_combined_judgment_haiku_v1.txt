@@ -19,7 +19,9 @@ STILL BE CONSERVATIVE — do not manufacture support:
 8. A claim is UNSUPPORTED if the passage is genuinely weaker/stronger than it, CONTRADICTS it, or omits a NON-numeric substantive fact that is nowhere stated or entailed. A specific named entity, event, or relationship that appears nowhere in the passage is still a failure. When a genuine, non-numeric component is truly absent, answer false.
 
 Return ONLY a JSON object, no commentary:
-{"supported": true or false, "reason": "<one short sentence naming any genuinely unsupported component>"}
+{"supported": true or false, "reason": "<one short sentence naming any genuinely unsupported component>", "missing_parts": ["<short self-contained assertion>", ...]}
+
+"missing_parts" lists every substantive component of the CLAIM that is genuinely absent from or contradicted by the passage (after applying the entailment and numeric rules above). Restate each one as a short self-contained assertion of that part of the claim (resolve pronouns; it must be understandable on its own) — never a quote from the passage. Do not list the writer's own framing (rule 0). Each missing fact appears exactly ONCE: never restate the same fact in different words (e.g. once with "appears to be" and once with "is"), and never add explanations in parentheses — the assertion alone. At most 4 — merge the least separable ones. If supported is true, "missing_parts" MUST be [].
 
 CLAIM:
 {CLAIM}
