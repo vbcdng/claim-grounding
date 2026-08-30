@@ -1,0 +1,32 @@
+{
+ "t5": {
+  "verdict": "supported",
+  "action": "supported",
+  "components": [
+   {
+    "part": "there is a popular claim that the bottles were preventive charms barring witches",
+    "proven_by_shown": true,
+    "provable_from_source": true
+   },
+   {
+    "part": "that preventive-charm claim is not well supported by the surviving texts",
+    "proven_by_shown": true,
+    "provable_from_source": true
+   },
+   {
+    "part": "the texts frame the bottles chiefly as a cure applied once bewitchment was already suspected",
+    "proven_by_shown": true,
+    "provable_from_source": true
+   }
+  ],
+  "missing_subclaim": "",
+  "rewrite_suggestion": "",
+  "proof_sentences": [
+   "5 Not only do scholars often identify them as part of a superstitious, prophylactic ritual that began in the sixteenth-century (a temporal claim for which known evidence does not exist), but also the term \u2018witch-bottle\u2019 is not contemporary, only arising in the nineteenth century.",
+   "15 Hoggard has described the practice as part of a \u2018line of defence\u2019 and \u2018apotropaic armoury\u2019 of the home, while Jason Semmens refers to the bottles as a \u2018protective charm for houses\u2019.",
+   "19 However, during the stated temporal boundaries, no known primary texts describe \u2018witch-bottles\u2019 as protective objects; instead, they wholly substantiate that this was a curative practice for a specific affliction of bewitchment.",
+   "20 As mentioned earlier, although especially towards the end of the period authors reference \u2018witch-bottles\u2019 as used for different purposes (often to reveal or harm the witch), no known early modern texts mention these objects as being used prophylactically or apotropaically."
+  ],
+  "why": "Every component is covered by the shown sentences. The existence of the popular/scholarly preventive-charm claim is proven by shown sentences 5, 14, and 15 (Merrifield's 'safeguard against future attacks', Hoggard's 'line of defence', Semmens's 'protective charm for houses'). The 'not well supported by surviving texts' component is proven by shown sentences 19 and 20 (no known primary texts describe them as protective or prophylactic), and the 'chiefly a cure for existing bewitchment' framing is proven by sentence 19 ('wholly substantiate that this was a curative practice for a specific affliction of bewitchment'), reinforced by the Drage cure account \u2014 sentence 20's note that later texts served other purposes also licenses the hedge 'chiefly'."
+ }
+}

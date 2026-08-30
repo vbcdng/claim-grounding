@@ -1,0 +1,174 @@
+{
+  "run": {
+    "text_file": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_4/project/my_text.md",
+    "run_name": "Why-Do-Old-Pots-End-Up-on-Fence-Posts-Rot-Prevention-and-the",
+    "sources_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_4/project/sources",
+    "output_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_4/app",
+    "project_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_4/project",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "timestamp": "2026-07-11 12:23:26"
+  },
+  "exported": "2026-07-11T11:23:35.363Z",
+  "marks": [
+    {
+      "id": "t0",
+      "text": "Across Britain, the Low Countries, and rural Europe, an upturned kettle, teapot, or flowerpot capping a wooden fence post draws little local comment. No single study documents this exact custom, so any explanation borrows from better-studied traditions: timber maintenance, and Europe's practice of using vessels for household protection.",
+      "markers": [],
+      "own_kind": {
+        "kind": "fact",
+        "reason": "The passage asserts the existence of a specific custom across multiple regions and claims that no single study documents it, which are checkable assertions about the actual world."
+      },
+      "verdict": "own",
+      "method": "none",
+      "proof_state": null,
+      "reason": "no_citation_marker",
+      "confidence": null,
+      "second_opinion": null,
+      "partial_support": null,
+      "component_check": null,
+      "over_citation": null,
+      "evidences": [],
+      "alternatives": [],
+      "marks": [
+        "needs_citation"
+      ],
+      "note": ""
+    },
+    {
+      "id": "t1",
+      "text": "Wood science supplies the mundane reading: decay fungi need moisture, oxygen, warmth, and a food source together, and the exposed end grain atop a post is where rainwater collects longest.",
+      "markers": [
+        "usda_wood_handbook"
+      ],
+      "own_kind": null,
+      "verdict": "supported",
+      "method": "llm_fulltext",
+      "proof_state": "partial",
+      "reason": "The passage explicitly states that decay fungi need moisture, oxygen, and warmth (mild temperatures), and that they use wood's chemical components as food. It also states that parts reached by rainwater are especially subject to decay, implying that exposed end grain atop a post, where rainwater collects longest, would be susceptible.",
+      "confidence": "low",
+      "second_opinion": null,
+      "partial_support": {
+        "reason": "The passage does not state that exposed end grain atop a post is where rainwater collects longest.",
+        "component_hunt": [
+          {
+            "component": "exposed end grain atop a post is where rainwater collects longest",
+            "found_in": [],
+            "searched": 0
+          }
+        ]
+      },
+      "component_check": null,
+      "over_citation": null,
+      "evidences": [
+        {
+          "source_title": "Wood Handbook: Wood as an Engineering Material — Forest Products Laboratory",
+          "sentence": "The incidence and development of molds, decay, and stains caused by fungi depend heavily on temperature and moisture conditions (Fig. 14–1).",
+          "supported": true
+        }
+      ],
+      "alternatives": [],
+      "marks": [
+        "other"
+      ],
+      "note": "I would say that this does not need citation, it is obvious fact"
+    },
+    {
+      "id": "t3",
+      "text": "A second, older thread runs through what archaeologists call apotropaic house protection, a cross-culturally recurring practice of placing charged objects at a dwelling's vulnerable edges.",
+      "markers": [
+        "walker2022"
+      ],
+      "own_kind": null,
+      "verdict": "unsupported",
+      "method": "llm_fulltext",
+      "proof_state": null,
+      "reason": "the passage does not mention a 'second, older thread' or that the practice is 'cross-culturally recurring'.",
+      "confidence": "high",
+      "second_opinion": null,
+      "partial_support": null,
+      "component_check": null,
+      "over_citation": null,
+      "evidences": [
+        {
+          "source_title": "Ritual Closure: Rites De Passage and Apotropaic Magic in an Animate World — Walker, William H. and Berryman, Judy",
+          "sentence": "We concentrate in this paper, however, on how apotropaic magic contributes to the strata formed in ritually closed pueblos and the kinds of objects that characterize them.",
+          "supported": false
+        }
+      ],
+      "alternatives": [],
+      "marks": [
+        "other"
+      ],
+      "note": ""
+    },
+    {
+      "id": "t5",
+      "text": "The popular claim that these bottles were preventive charms barring witches is not well supported by the surviving texts, which frame them chiefly as a cure applied once bewitchment was already suspected.",
+      "markers": [
+        "thwaite2020"
+      ],
+      "own_kind": null,
+      "verdict": "supported",
+      "method": "llm",
+      "proof_state": "full",
+      "reason": "The passage directly states that no known primary texts describe 'witch-bottles' as protective objects, but rather as a curative practice for bewitchment.",
+      "confidence": "high",
+      "second_opinion": null,
+      "partial_support": null,
+      "component_check": null,
+      "over_citation": null,
+      "evidences": [
+        {
+          "source_title": "What is a 'witch-bottle'? Assembling the textual evidence from early modern England — Thwaite, Annie",
+          "sentence": "19 However, during the stated temporal boundaries, no known primary texts describe ‘witch-bottles’ as protective objects; instead, they wholly substantiate that this was a curative practice for a specific affliction of bewitchment.",
+          "supported": true
+        }
+      ],
+      "alternatives": [],
+      "marks": [
+        "other"
+      ],
+      "note": "there are a lot of sentences, that says same thing, it is ok for this, but we probably should have some kind of limit, or tool that will pick only the best one, if there is too much of them"
+    },
+    {
+      "id": "t6",
+      "text": "A related Finnish tradition of hiding animal bones, coins, and tools in thresholds shows the same anxiety, with witchcraft fears more pronounced in densely built towns than in looser settlements.",
+      "markers": [
+        "hukantaival2016"
+      ],
+      "own_kind": null,
+      "verdict": "supported",
+      "method": "llm_fulltext",
+      "proof_state": "full",
+      "reason": "The passage explicitly states that social stress and concerns about envious witchcraft were more pronounced in densely built towns and group villages than in looser settlements, and that the emphasis shifts to borders, thresholds, and social relations within the community in more densely built towns and group villages, as a result of increased social stress. This directly supports the claim's assertion about witchcraft fears being more pronounced in densely built towns than in looser settlements.",
+      "confidence": "medium",
+      "second_opinion": null,
+      "partial_support": null,
+      "component_check": null,
+      "over_citation": null,
+      "evidences": [
+        {
+          "source_title": "\"For a Witch Cannot Cross Such a Threshold!\" Building Concealment Traditions in Finland c. 1200--1950 — Hukantaival, Sonja",
+          "sentence": "Here I have also speculated that the practices remained in an older form in the eastern areas, and the high focus on protection against witchcraft was a later development connected with the denser, less flexible structure of settlements.",
+          "supported": true
+        }
+      ],
+      "alternatives": [],
+      "marks": [
+        "verdict_wrong"
+      ],
+      "note": "no Finland mentioned;"
+    }
+  ],
+  "checked": [
+    "t0",
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "run": {
+    "text_file": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/project/my_text.md",
+    "run_name": "forager_work_hours",
+    "sources_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/project/sources",
+    "output_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/app",
+    "project_dir": "/home/moje/Documents/python_projects/claim-grounding/data/loop_rounds/round_6/project",
+    "model": "gemini/gemini-2.5-flash-lite",
+    "timestamp": "2026-07-11 19:13:28"
+  },
+  "exported": "2026-07-11T17:36:12.883Z",
+  "marks": [
+    {
+      "id": "t1",
+      "text": "That claim rested heavily on Richard Lee's fieldwork among the Ju/'hoansi (!Kung); Lee's own later accounting, once food processing, tool-making, and housework were included, raised total work closer to a standard industrial week, a revision anthropologists still cite as a caution against the low original estimate. Fieldwork with the Ache of eastern Paraguay directly tested the foraging-versus-farming comparison within a single population: once families that had been full-time foragers settled at an agricultural mission, both men and women worked fewer hours each day than they had in the forest, ate less, and shifted their childcare and labor patterns.",
+      "markers": [
+        "hawkes1987"
+      ],
+      "own_kind": null,
+      "verdict": "supported",
+      "method": "llm",
+      "proof_state": "partial",
+      "reason": "The passage directly supports the claim that Ache men and women worked fewer hours each day after settling at an agricultural mission compared to when they were foragers.",
+      "confidence": "low",
+      "second_opinion": null,
+      "partial_support": {
+        "reason": "The passage does not mention Richard Lee's fieldwork among the Ju/'hoansi (!Kung) or his later accounting of work hours.",
+        "component_hunt": [
+          {
+            "component": "Richard Lee's fieldwork among the Ju/'hoansi (!Kung) or his later accounting of work hours",
+            "found_in": [],
+            "searched": 0
+          }
+        ]
+      },
+      "component_check": null,
+      "covering": {
+        "uncovered": [
+          "Fieldwork with the Ache of eastern Paraguay tested the foraging-versus-farming comparison within a single population",
+          "Richard Lee's fieldwork among the Ju/'hoansi (!Kung)",
+          "Lee's later accounting raised total work closer to a standard industrial week once food processing, tool-making, and housework were included",
+          "anthropologists still cite Lee's revision as a caution against the low original estimate",
+          "Richard Lee"
+        ],
+        "common_knowledge": []
+      },
+      "over_citation": null,
+      "evidences": [
+        {
+          "source_title": "Ache at the Settlement: Contrasts Between Farming and Foraging — Hawkes, Kristen and Kaplan, Hillard and Hill, Kim and Hurtado, Ana Magdalena",
+          "sentence": "We report that at the settlement men and women work fewer hours each day than they do in the forest, people eat less, women do more work apart from their child- ren, and men invest more in direct parental care.",
+          "supported": true
+        }
+      ],
+      "alternatives": [],
+      "marks": [
+        "verdict_wrong"
+      ],
+      "note": "again  - the system knows that the data are missing, but for some reason it says supported ⚠ No evidence shown for: Fieldwork with the Ache of eastern Paraguay tested the foraging-versus-farming comparison within a single population · Richard Lee's fieldwork among the Ju/'hoansi (!Kung) · Lee's later accounting raised total work closer to a standard industrial week once food processing, tool-making, and housework were included · anthropologists still cite Lee's revision as a caution against the low original estimate · Richard Lee. The judge accepted the claim, but the displayed sentences don't prove these parts — open the source and check it yourself."
+    },
+    {
+      "id": "t3",
+      "text": "Consistent with this, a study of the Agta of the Philippines found individuals in camps more engaged in agricultural and other non-foraging work had substantially less leisure, a difference driven mainly by women's changing time use.",
+      "markers": [
+        "dyble2019"
+      ],
+      "own_kind": null,
+      "verdict": "supported",
+      "method": "llm",
+      "proof_state": "full",
+      "reason": "The passage directly states that the negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent less time at leisure in camps more heavily engaged in agriculture and other non-foraging work.",
+      "confidence": "high",
+      "second_opinion": null,
+      "partial_support": null,
+      "component_check": null,
+      "covering": null,
+      "over_citation": null,
+      "evidences": [
+        {
+          "source_title": "Engagement in Agricultural Work is Associated with Reduced Leisure Time Among Agta Hunter-Gatherers — Dyble, Mark and Thorley, Jack and Page, Abigail E. and Smith, Daniel and Migliano, Andrea Bamberg",
+          "sentence": "The negative relationship between leisure time and engagement in non-foraging out-of-camp work is driven largely by women, who spent much more time engaged in out-of-camp work and less time at leisure in those camps more heavily engaged in agriculture and other non-foraging work.",
+          "supported": true
+        }
+      ],
+      "alternatives": [],
+      "marks": [
+        "verdict_wrong"
+      ],
+      "note": "Agta of the Philippines - is not supported"
+    }
+  ],
+  "checked": [
+    "t0",
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+  ]
+}
