@@ -103,12 +103,16 @@ def _passages(c: Dict[str, Any]) -> List[str]:
 
 
 def _judge_once(claim_text: str, passages: List[str], llm,
-                judgment_prompt: str, combined_prompt: str):
+                judgment_prompt: str, combined_prompt: str, claim_id=None):
     prompt = combined_prompt if len(passages) > 1 else judgment_prompt
     raw = llm.call(prompt.replace("{CLAIM}", claim_text)
                          .replace("{PASSAGE}", "\n\n".join(passages)),
-                   temperature=0.0, max_output_tokens=2048)
-    return matcher._parse_support(raw)
+                   temperature=0.0, max_output_tokens=2048,
+                   purpose="second_opinion", claim_id=claim_id)
+    # _parse_support now also returns the judge's structured missing_parts
+    # (2026-08-06); second_opinion doesn't use it, so it's dropped here.
+    supported, reason, _missing_parts = matcher._parse_support(raw)
+    return supported, reason
 
 
 def run(claims: List[Dict[str, Any]], llm, workers: int = 4) -> Dict[str, Any]:
@@ -138,22 +142,37 @@ def run(claims: List[Dict[str, Any]], llm, workers: int = 4) -> Dict[str, Any]:
         if checkable(c):
             todo.append(c)
 
+    skipped_failed: List[str] = []
+
     def check(c: Dict[str, Any]) -> None:
+        # Snapshot the client's failure counter: a dead call comes back as
+        # "unsupported" from _parse_support, so an outage would fabricate a
+        # unanimous-looking disagreement on a healthy claim — and reuse would
+        # then freeze it in forever (task #37). If ANY call died while this
+        # claim's opinion was being formed, write nothing; the next run redoes
+        # it (reuse keys on the field's presence).
+        fails_before = getattr(llm, "failed_calls", 0)
         first_says = c["verdict"] == "supported"
         passages = _passages(c)
         supported, reason = _judge_once(c["text"], passages, llm,
-                                        judgment_prompt, combined_prompt)
+                                        judgment_prompt, combined_prompt,
+                                        claim_id=c.get("id"))
         votes = None
         if supported != first_says:
             # Confirm before flagging: majority of 3 (this call + 2 more).
             tally = [(supported, reason)]
             for _ in range(CONFIRM_VOTES):
                 tally.append(_judge_once(c["text"], passages, llm,
-                                         judgment_prompt, combined_prompt))
+                                         judgment_prompt, combined_prompt,
+                                         claim_id=c.get("id")))
             n_dis = sum(1 for s, _ in tally if s != first_says)
             supported = (not first_says) if n_dis * 2 > len(tally) else first_says
             reason = next(r for s, r in tally if s == supported)
             votes = f"{max(n_dis, len(tally) - n_dis)}-{min(n_dis, len(tally) - n_dis)}"
+        if getattr(llm, "failed_calls", 0) > fails_before:
+            c.pop("second_opinion", None)
+            skipped_failed.append(c.get("id"))
+            return
         c["second_opinion"] = {
             "model": llm.model,
             "verdict": "supported" if supported else "unsupported",
@@ -170,5 +189,11 @@ def run(claims: List[Dict[str, Any]], llm, workers: int = 4) -> Dict[str, Any]:
     strict = [c["id"] for c in claims
               if c.get("verdict") == "unsupported"
               and (c.get("second_opinion") or {}).get("agrees") is False]
+    if skipped_failed:
+        logger.warning(
+            f"second opinion skipped on {len(skipped_failed)} claim(s) — model "
+            f"calls failed while they were being checked; a re-run retries "
+            f"them: {', '.join(str(i) for i in skipped_failed)}")
     return {"checked": len(todo), "reused": reused,
-            "fp_flags": fp, "strict_flags": strict}
+            "fp_flags": fp, "strict_flags": strict,
+            "skipped_failed": skipped_failed}

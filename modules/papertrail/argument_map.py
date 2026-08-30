@@ -51,11 +51,10 @@ DEFAULT_CONFIDENCE = 0.6
 
 
 def _load_prompt(name: str) -> str:
-    """Mirror of matcher._load_prompt — kept local so this module needn't import
-    matcher (and its heavy embedding deps) just to read a prompt file."""
-    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    with open(os.path.join(root, "config", "prompts", name), "r", encoding="utf-8") as f:
-        return f.read()
+    """Kept local so this module needn't import matcher (and its heavy
+    embedding deps); routes through prompt_store like every loader (task #44)."""
+    from . import prompt_store
+    return prompt_store.load(name)
 
 
 def _prompt_sha(prompt: str) -> str:
@@ -112,7 +111,8 @@ def infer_edges(claims: List[Dict[str, Any]], llm) -> Optional[List[Dict[str, An
     # measured; 128/claim gives >2x headroom.
     raw = llm.call(prompt.replace("{CLAIMS}", _claims_block(claims)),
                    temperature=0.0,
-                   max_output_tokens=max(2048, 128 * len(claims)))
+                   max_output_tokens=max(2048, 128 * len(claims)),
+                   purpose="argmap_edges")
     obj = extract_json(raw)
     if isinstance(obj, dict):
         obj = obj.get("edges", [])
@@ -371,7 +371,8 @@ def _variant_confirm(pairs: List[Dict[str, Any]], by_id: Dict[str, Dict[str, Any
     # Same scaling rule as infer_edges: one verdict per pair (~30 tok each),
     # so a fixed cap truncates on pair-heavy papers and the confirm fails open.
     raw = llm.call(prompt, temperature=0.0,
-                   max_output_tokens=max(2048, 64 * len(pairs)))
+                   max_output_tokens=max(2048, 64 * len(pairs)),
+                   purpose="argmap_variants")
     obj = extract_json(raw)
     if isinstance(obj, dict):
         obj = obj.get("pairs", [])

@@ -87,9 +87,8 @@ _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 # ---------------------------------------------------------------------------
 
 def _load_prompt() -> str:
-    path = os.path.join(_PROJECT_ROOT, "config", "prompts", PROMPT_FILE)
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read()
+    from . import prompt_store   # run-lifetime cache + fingerprint (task #44)
+    return prompt_store.load(PROMPT_FILE)
 
 
 def _prompt_sha() -> str:
@@ -104,7 +103,7 @@ def _prompt_sha() -> str:
 # ---------------------------------------------------------------------------
 
 def judge_attribution(claim_text: str, passage: str, source_text: str,
-                      llm) -> Dict[str, Any]:
+                      llm, claim_id=None) -> Dict[str, Any]:
     """One LLM call: is `passage` the source's OWN assertion, or attributed to
     another work? Returns {attribution, cited_ref, confidence, reason}. A failed
     or unparseable judgment returns attribution='unknown', confidence=0.0 so the
@@ -115,7 +114,7 @@ def judge_attribution(claim_text: str, passage: str, source_text: str,
               .replace("{SOURCE}", (source_text or "")[:_SOURCE_CTX_CHARS]))
     resp = None
     try:
-        resp = llm.call_json(prompt)
+        resp = llm.call_json(prompt, purpose="origin_trace", claim_id=claim_id)
     except Exception as e:
         logger.warning("attribution judge failed: %s", e)
     if not isinstance(resp, dict):
@@ -151,7 +150,7 @@ def _cached_attribution(claim: Dict[str, Any], node: Dict[str, Any], llm,
         except Exception:
             pass
     result = judge_attribution(claim.get("text", ""), node.get("passage", ""),
-                               node.get("text", ""), llm)
+                               node.get("text", ""), llm, claim_id=claim.get("id"))
     # Never cache a failure: the unknown/0.0 shape is judge_attribution's
     # failed-call sentinel — caching it would make every future run reuse the
     # failure "for free" instead of retrying (evidence_independence's

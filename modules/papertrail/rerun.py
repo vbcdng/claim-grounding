@@ -84,6 +84,28 @@ def changed_source_files(prev_hashes, current_hashes: Dict[str, str]):
     return {fn for fn, h in current_hashes.items() if prev_hashes.get(fn) != h}
 
 
+def changed_prompts(prev_prompts, current_fingerprints: Dict[str, str]):
+    """Prompt file names whose content changed since the previous run (task #44).
+
+    Verdict reuse is only honest if the instruction files the previous run
+    used are byte-identical now. Compares the previous run's recorded
+    metadata.prompts block against the current snapshot's {name: sha1}
+    fingerprints, restricted to the prompts the previous run actually LOADED
+    (its "used" list) — an edit to an experimental prompt file no verdict
+    depended on must not force a full re-run. A used prompt that no longer
+    exists counts as changed. Returns None when the previous analysis predates
+    prompt tracking (caller decides; the source-hash precedent is to warn and
+    trust)."""
+    if not isinstance(prev_prompts, dict):
+        return None
+    prev_fp = prev_prompts.get("fingerprints")
+    if not isinstance(prev_fp, dict):
+        return None
+    used = prev_prompts.get("used")
+    names = [n for n in prev_fp if not used or n in used]
+    return {n for n in names if current_fingerprints.get(n) != prev_fp[n]}
+
+
 def reusable(prev_claim: Dict[str, Any]) -> bool:
     """Judged verdicts carry over; so do 'own' claims — the verdict itself is
     free to rebuild, but the own_kind tag on it was PAID for (own-split, one
@@ -101,6 +123,12 @@ def reusable(prev_claim: Dict[str, Any]) -> bool:
     # is that these get re-judged. judge_error is the flag (matcher, since
     # 2026-07-20); the reason prefixes cover analyses from older runs.
     if prev_claim.get("judge_error"):
+        return False
+    # Same rule for the extra checks (partial support, covering set, …): a
+    # check that overlapped failed calls recorded `checks_failed` instead of
+    # its output (matcher._note_check_failure, task #37) — re-judge the claim
+    # so the check actually runs.
+    if prev_claim.get("checks_failed"):
         return False
     if reason.startswith("no LLM response") or reason.startswith("LLM judgment unparseable"):
         return False

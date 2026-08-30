@@ -99,13 +99,17 @@ class TestShippedGroundTruth(unittest.TestCase):
 
     def test_known_anchor_claims_present(self):
         by_id = {c["id"]: c for c in self.gt["claims"]}
-        # t56: re-baselined to watch 2026-07-05 (drift-induced FP under flash-lite),
-        # but the audit-correct answer (unsupported) must stay preserved as improves_if.
-        self.assertEqual(by_id["t56"]["expect"], "watch")
-        self.assertEqual(by_id["t56"].get("improves_if"), "unsupported")  # audit CORRECT
+        # t56 + t37: watch rows until the author's 2026-08-11 rulings (vault
+        # page "Problem rows to rule on (gate 2026-08-11)", applied in 8fa7647)
+        # promoted both to HARD unsupported — t56 knowingly red until the
+        # thematic-echo class is caught (task #2), t37 the confirmed audit call.
+        self.assertEqual(by_id["t56"]["expect"], "unsupported")
+        self.assertEqual(by_id["t37"]["expect"], "unsupported")
         self.assertEqual(by_id["t27"]["expect"], "supported")     # audit TOO_STRICT, fixed
-        self.assertEqual(by_id["t37"]["expect"], "watch")         # suspected FP, owner call open
-        self.assertEqual(by_id["t37"].get("improves_if"), "unsupported")
+        # t17: author re-confirmed supported 2026-08-11 ("the report is full of
+        # equivalent phrases") — the row the round-2 in-prompt missing_parts
+        # demand wrongly flipped; round 3 exists to keep it green.
+        self.assertEqual(by_id["t17"]["expect"], "supported")
 
     def test_ids_are_unique(self):
         ids = [c["id"] for c in self.gt["claims"]]

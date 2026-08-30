@@ -586,7 +586,7 @@ def _llm_gate(candidates: List[Dict[str, Any]], target_text: str,
               .replace("{TARGET}", target_text.strip())
               .replace("{CANDIDATES}", "\n".join(lines)))
     try:
-        resp = llm.call_json(prompt)
+        resp = llm.call_json(prompt, purpose="paper_search_gate")
     except Exception as e:
         logger.warning("snowball LLM gate failed (%s); keeping cosine ranking", e)
         return candidates

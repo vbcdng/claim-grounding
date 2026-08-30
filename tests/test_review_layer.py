@@ -20,10 +20,11 @@ class TestVoteTally(unittest.TestCase):
     def test_unanimous_tally(self):
         llm = MagicMock()
         llm.call.return_value = json.dumps({"supported": True, "reason": "ok"})
-        ok, reason, tally = matcher._vote_support(llm, "JG")
+        ok, reason, tally, missing = matcher._vote_support(llm, "JG")
         self.assertTrue(ok)
         self.assertEqual(tally, "2-0")            # first two agree -> early exit
         self.assertEqual(llm.call.call_count, 2)
+        self.assertIsNone(missing)                # positive verdict -> no missing_parts
 
     def test_split_tally(self):
         llm = MagicMock()
@@ -32,10 +33,11 @@ class TestVoteTally(unittest.TestCase):
             json.dumps({"supported": False, "reason": "no"}),
             json.dumps({"supported": False, "reason": "no again"}),
         ]
-        ok, reason, tally = matcher._vote_support(llm, "JG")
+        ok, reason, tally, missing = matcher._vote_support(llm, "JG")
         self.assertFalse(ok)
         self.assertEqual(tally, "2-1")            # the borderline signal
         self.assertEqual(llm.call.call_count, 3)
+        self.assertIsNone(missing)                # no vote supplied missing_parts
 
     def test_extract_evidence_records_votes_and_window(self):
         sent = "A single meaningful sentence about the actual topic of interest here."

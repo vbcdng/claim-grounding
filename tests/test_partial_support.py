@@ -330,6 +330,223 @@ class TestPartialFlagsRounds(unittest.TestCase):
         self.assertEqual(len(probed), 5)
 
 
+class TestStructuredMissingParts(unittest.TestCase):
+    """2026-08-06 round 1: the combined-judgment prompt now also returns a
+    structured `missing_parts` list alongside its free-text reason. The regex
+    over `reason` (_missing_components) stays as the fallback for models,
+    prompts, or cached payloads that don't provide the field. No API calls."""
+
+    def test_coerce_accepts_a_clean_list(self):
+        self.assertEqual(
+            matcher._coerce_missing_parts(["A", "B", "B", " ", "c", ""]),
+            ["A", "B", "c"])                    # dedup (case-insensitive), empties dropped
+
+    def test_coerce_caps_at_four(self):
+        self.assertEqual(
+            matcher._coerce_missing_parts(["a", "b", "c", "d", "e"]),
+            ["a", "b", "c", "d"])
+
+    def test_coerce_rejects_non_list_top_level(self):
+        # missing field, a bare string, a dict, an int -> all "not provided"
+        for junk in ("a string reason", {"a": 1}, 5, None):
+            self.assertIsNone(matcher._coerce_missing_parts(junk), junk)
+
+    def test_coerce_ignores_junk_items_without_crashing(self):
+        # a list of dicts / nested lists / ints mixed with real strings: junk
+        # items are dropped, scalars are coerced, nothing raises.
+        self.assertEqual(
+            matcher._coerce_missing_parts([{"a": 1}, ["nested"], 5, "", "  ", "ok"]),
+            ["5", "ok"])
+
+    def test_coerce_of_a_list_of_only_junk_is_an_empty_list_not_none(self):
+        # the field WAS a real list (so not "absent") -- every item was junk.
+        self.assertEqual(matcher._coerce_missing_parts([{"a": 1}, ["x"]]), [])
+
+    # ---- round 2 (2026-08-07): near-duplicate merge -------------------------
+    # Measured on round 1's real runs: 9 lists, 33 entries, 10 near-duplicate
+    # pairs that exact case-insensitive matching let through. The merge compares
+    # content-token sets (hedges/articles/prepositions dropped, inflections
+    # folded, unicode folded); equal keys keep the shorter surface, a subset is
+    # absorbed by the COVERING entry. Real round-1 rows below.
+
+    def test_dedupe_hedged_twin_keeps_the_plain_form(self):
+        self.assertEqual(
+            matcher._dedupe_missing_parts(
+                ["Weathered biotite appears to be the best clay sorption material",
+                 "Weathered biotite is the best clay sorption material"]),
+            ["Weathered biotite is the best clay sorption material"])
+
+    def test_dedupe_extra_adjective_is_absorbed_by_the_covering_entry(self):
+        self.assertEqual(
+            matcher._dedupe_missing_parts(
+                ["Chevron took a forty-year stake in Kazakhstan's Tengiz oil field in 1993",
+                 "Chevron took a forty-year stake in Kazakhstan's giant Tengiz oil field in 1993"]),
+            ["Chevron took a forty-year stake in Kazakhstan's giant Tengiz oil field in 1993"])
+
+    def test_dedupe_conjunction_absorbs_both_fragments(self):
+        conj = ("OpenAI reports disrupting more than twenty covert influence "
+                "operations using its models during 2024, none achieving "
+                "significant audience engagement")
+        self.assertEqual(
+            matcher._dedupe_missing_parts(
+                [conj,
+                 "OpenAI disrupted more than twenty covert influence operations using its models during 2024",
+                 "None of these operations achieved significant audience engagement"]),
+            [conj])
+
+    def test_dedupe_never_merges_entries_whose_numbers_differ(self):
+        rows = ["Foreign investors controlled roughly 90% of telecommunications in Hungary",
+                "Foreign investors controlled roughly 60% of the energy sector in Hungary"]
+        self.assertEqual(matcher._dedupe_missing_parts(rows), rows)
+
+    def test_dedupe_folds_unicode_subscripts(self):
+        self.assertEqual(
+            len(matcher._dedupe_missing_parts(
+                ["Kunipia-F bentonite is superior to SiO₂",
+                 "Kunipia-F bentonite is superior to SiO2"])), 1)
+
+    def test_dedupe_ignores_bracketed_asides_when_comparing(self):
+        got = matcher._dedupe_missing_parts(
+            ["Tool manufacturers are targeted for acquisition (not mentioned in the passage)",
+             "Tool manufacturers are targeted for acquisition"])
+        self.assertEqual(len(got), 1)
+
+    def test_dedupe_keeps_genuinely_distinct_facts(self):
+        rows = ["Trump cited a specific security flaw as the reason for the order",
+                "Anthropic was unable to screen users by nationality",
+                "The models were taken offline at short notice"]
+        self.assertEqual(matcher._dedupe_missing_parts(rows), rows)
+
+    def test_coerce_shaves_a_leading_that_fragment(self):
+        self.assertEqual(
+            matcher._coerce_missing_parts(
+                ["that zeolite has the highest sorption among all minerals"]),
+            ["zeolite has the highest sorption among all minerals"])
+
+    def test_vote_support_union_merges_across_voters(self):
+        # two negative voters word the same missing fact differently; the
+        # cross-voter union must carry it once.
+        payloads = [
+            '{"supported": false, "reason": "r1", "missing_parts": '
+            '["The EU trails far behind on skills"]}',
+            '{"supported": false, "reason": "r2", "missing_parts": '
+            '["The EU trails in skills", "The Draghi report names market scale"]}',
+        ]
+        llm = MagicMock()
+        llm.call.side_effect = payloads + payloads   # enough for all votes
+        ok, _, _, missing = matcher._vote_support(llm, "JG", early_break=True)
+        self.assertFalse(ok)
+        self.assertEqual(missing,
+                         ["The EU trails far behind on skills",
+                          "The Draghi report names market scale"])
+
+    def test_missing_from_prefers_structured_over_regex(self):
+        got = matcher._missing_from(
+            ["a clean structured component"],
+            "the passage does not state that a totally different regex phrase applies")
+        self.assertEqual(got, ["a clean structured component"])
+
+    def test_missing_from_falls_back_when_structured_absent(self):
+        got = matcher._missing_from(
+            None, "the passage does not state that the sky is blue")
+        self.assertEqual(got, ["the sky is blue"])
+
+    def test_missing_from_falls_back_when_structured_explicitly_empty(self):
+        # An explicit [] on a negative judgment means "the judge named
+        # nothing" -- weaker than a real regex hit, so it still falls back;
+        # behavior can only match or improve on the pre-structured path.
+        got = matcher._missing_from(
+            [], "the passage does not state that the sky is blue")
+        self.assertEqual(got, ["the sky is blue"])
+
+    def test_missing_from_returns_empty_when_neither_source_has_anything(self):
+        self.assertEqual(matcher._missing_from(None, "the figure is in no source"), [])
+        self.assertEqual(matcher._missing_from([], "the figure is in no source"), [])
+
+
+class TestStructuredMissingPartsInPartialFlags(unittest.TestCase):
+    """Same design note as TestPartialFlagsRounds: round-3 (verify the
+    verifier) and the component hunt must use the judge's OWN structured list
+    when the free-text reason doesn't match any regex shape."""
+
+    LEAD = "Could one country outgrow the rest of the world entirely."
+    WIN = "Growth compounds under automation feedback."
+
+    def _sources(self):
+        return {
+            "p1": {"title": "Outgrowing the world",
+                   "sentences": [{"text": self.LEAD, "page": 1}], "claims": []},
+            "p2": {"title": "Second source",
+                   "sentences": [{"text": "Another lead sentence entirely.", "page": 1}],
+                   "claims": []},
+        }
+
+    def _evidences(self):
+        return [{"paper_id": "p1", "source_title": "Outgrowing the world",
+                 "supported": False, "window": self.WIN},
+                {"paper_id": "p2", "source_title": "Second source",
+                 "supported": False, "window": "An unrelated window."}]
+
+    def _llm(self, fn):
+        llm = MagicMock()
+        llm.call.side_effect = lambda p, **kw: json.dumps(fn(p))
+        return llm
+
+    def test_structured_missing_parts_drives_the_component_hunt(self):
+        # The escalated reason has NO regex-matchable shape ("nope, just no")
+        # but DOES carry a structured missing_parts list. A pure regex-only
+        # pipeline would compute comps=[] and never call comp_hunt at all --
+        # this proves the structured field is what drove round 3.
+        hunted = []
+        def fn(p):
+            return {"supported": False, "reason": "nope, just no",
+                   "missing_parts": ["the doubling figure by 2030"]}
+        def comp_hunt(comps):
+            hunted.extend(comps)
+            return []
+        flags = matcher._partial_flags(
+            "One country could outgrow the rest of the world.",
+            ["p1", "p2"], self._sources(), self._evidences(),
+            self._llm(fn), "CLAIM {CLAIM} PASSAGE {PASSAGE}",
+            comp_hunt=comp_hunt)
+        self.assertIn("partial_support", flags)
+        self.assertEqual(hunted, ["the doubling figure by 2030"])
+
+    def test_no_structured_field_and_unmatched_reason_skips_the_hunt(self):
+        # Same unmatched reason, but NO missing_parts field this time -> the
+        # regex fallback also finds nothing, so comp_hunt is never invoked
+        # (pre-structured behavior, unchanged).
+        hunted = []
+        def fn(p):
+            return {"supported": False, "reason": "nope, just no"}
+        def comp_hunt(comps):
+            hunted.extend(comps)
+            return []
+        flags = matcher._partial_flags(
+            "One country could outgrow the rest of the world.",
+            ["p1", "p2"], self._sources(), self._evidences(),
+            self._llm(fn), "CLAIM {CLAIM} PASSAGE {PASSAGE}",
+            comp_hunt=comp_hunt)
+        self.assertIn("partial_support", flags)
+        self.assertEqual(hunted, [])
+
+    def test_supported_verdict_with_missing_parts_field_is_ignored(self):
+        # A judge that (incorrectly, per the prompt contract) returns
+        # missing_parts on a POSITIVE verdict must not perturb anything.
+        def fn(p):
+            return {"supported": True, "reason": "all covered",
+                   "missing_parts": ["should never surface"]}
+        flags = matcher._partial_flags(
+            "One country could outgrow the rest of the world.",
+            ["p1", "p2"], self._sources(),
+            [{"paper_id": "p1", "source_title": "Outgrowing the world",
+              "supported": True, "window": self.WIN},
+             {"paper_id": "p2", "source_title": "Second source",
+              "supported": False, "window": "An unrelated window."}],
+            self._llm(fn), "CLAIM {CLAIM} PASSAGE {PASSAGE}")
+        self.assertNotIn("partial_support", flags)
+
+
 class TestPartialSupportViewer(unittest.TestCase):
 
     def _analysis(self, partial=True):

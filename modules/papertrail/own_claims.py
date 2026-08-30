@@ -73,7 +73,8 @@ def classify(claims: List[Dict[str, Any]], llm, workers: int = 4) -> Dict[str, A
 
     def tag(c: Dict[str, Any]) -> None:
         raw = llm.call(prompt.replace("{CLAIM}", c["text"]),
-                       temperature=0.0, max_output_tokens=1024)
+                       temperature=0.0, max_output_tokens=1024,
+                       purpose="own_split", claim_id=c.get("id"))
         kind, reason = _parse_kind(raw)
         if kind is None:
             c.pop("own_kind", None)     # honest gap beats a guessed class

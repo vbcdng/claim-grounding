@@ -19,7 +19,7 @@ class FakeLLM:
         self.calls = 0
         self.prompts = []
 
-    def call(self, prompt, temperature=0.0, max_output_tokens=2048):
+    def call(self, prompt, temperature=0.0, max_output_tokens=2048, **kwargs):
         self.prompts.append(prompt)
         resp = self.responses[min(self.calls, len(self.responses) - 1)]
         self.calls += 1

@@ -75,6 +75,11 @@ class ClaudeCodeClient(LLMClient):
         self.provider = "claude-code"
         self.api_key = None                 # auth = the CLI's own login
         self.api_base = None
+        # The inherited call() checks this before the free-tier size preflight
+        # (llm_client, 1dc1280). This backend skips super().__init__, so set it
+        # here or every call dies on AttributeError. The CLI seat has no
+        # request-size ceiling to preflight — always False.
+        self._patient_rate = False
         self.cli = shutil.which("claude")
         if not self.cli:
             raise RuntimeError(

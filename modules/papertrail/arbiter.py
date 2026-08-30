@@ -34,10 +34,24 @@ from .llm_client import extract_json, parallel_map
 
 logger = logging.getLogger("papertrail.arbiter")
 
-DEFAULT_MODEL = "deepseek/deepseek-v4-flash"
+# gpt-5.6-luna via OpenRouter: the arbiter pick (author ruling 2026-08-30,
+# task #63/#66), promoted from the 2026-08-01 replay comparison — best
+# recorded-agreement of 4 candidates on 119 claims, only third-family option
+# (independent of both the Gemma judge and DeepSeek), 0/5 supported-on-bad.
+# Thought-free via _BUILTIN_EXTRA_BODY (llm_client). OpenAI is the sole
+# OpenRouter supplier for this model, so no quantization-mixture concern.
+# Previous default deepseek/deepseek-v4-flash still works as an override.
+DEFAULT_MODEL = "openrouter/openai/gpt-5.6-luna"
 PROMPT_FILE = "pt_arbiter_v1.txt"
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DEEPSEEK_KEY_PATH = os.path.join(PROJECT_ROOT, "config", "deepseek_api_key.txt")
+OPENROUTER_KEY_PATH = os.path.join(PROJECT_ROOT, "config", "openrouter_api_key.txt")
+# provider prefix -> (env var, project key file); used by resolve_key and by
+# the CLI's downgrade-to-note check when the default arbiter has no key.
+_KEY_SOURCES = {
+    "deepseek/": ("DEEPSEEK_API_KEY", DEEPSEEK_KEY_PATH),
+    "openrouter/": ("OPENROUTER_API_KEY", OPENROUTER_KEY_PATH),
+}
 
 SECTION_FULL_WORDS = 30_000   # <= this: pass the whole source text
 SECTION_CAP_WORDS = 20_000    # long docs: best contiguous section of ~this size
@@ -48,14 +62,33 @@ _LIGATURES = {"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff",
 
 
 def resolve_key(model: str) -> Optional[str]:
-    """DeepSeek models: fall back to the project key file when the env var is
-    absent (LLMClient's own file fallback is gemini-only). Other providers:
-    None → LLMClient resolves the provider env var itself. Never pass the
-    caller's --api-key here — that is the PRIMARY judge's (Gemini) key."""
-    if model.startswith("deepseek/") and not os.environ.get("DEEPSEEK_API_KEY") \
-            and os.path.exists(DEEPSEEK_KEY_PATH):
-        return DEEPSEEK_KEY_PATH
+    """DeepSeek/OpenRouter models: fall back to the project key file when the
+    env var is absent (LLMClient's own file fallback is gemini-only). Other
+    providers: None → LLMClient resolves the provider env var itself. Never
+    pass the caller's --api-key here — that is the PRIMARY judge's key."""
+    for prefix, (env_var, key_path) in _KEY_SOURCES.items():
+        if model.startswith(prefix) and not os.environ.get(env_var) \
+                and os.path.exists(key_path):
+            return key_path
     return None
+
+
+def key_available(model: str) -> bool:
+    """True when a key for this model's provider is findable (env var or
+    project key file). Providers outside _KEY_SOURCES return True — LLMClient
+    resolves their env var itself and a failure is caught by the caller."""
+    for prefix, (env_var, key_path) in _KEY_SOURCES.items():
+        if model.startswith(prefix):
+            return bool(os.environ.get(env_var)) or os.path.exists(key_path)
+    return True
+
+
+def key_hint(model: str) -> str:
+    """Human-readable 'where to put the key' hint for the no-key info note."""
+    for prefix, (env_var, key_path) in _KEY_SOURCES.items():
+        if model.startswith(prefix):
+            return f"{env_var} or config/{os.path.basename(key_path)}"
+    return "the provider's API-key environment variable"
 
 
 def trigger(c: Dict[str, Any]) -> Optional[str]:
@@ -179,9 +212,8 @@ def verify_quotes(quotes: List[str], sources_text_norm: str) -> (list, int):
 # ---------- the pass ----------
 
 def _load_prompt() -> str:
-    with open(os.path.join(PROJECT_ROOT, "config", "prompts", PROMPT_FILE),
-              "r", encoding="utf-8") as f:
-        return f.read()
+    from . import prompt_store   # run-lifetime cache + fingerprint (task #44)
+    return prompt_store.load(PROMPT_FILE)
 
 
 def run(claims: List[Dict[str, Any]], sources: Dict[str, Any], llm,
@@ -217,7 +249,8 @@ def run(claims: List[Dict[str, Any]], sources: Dict[str, Any], llm,
                   .replace("{CLAIM}", c.get("text", ""))
                   .replace("{SHOWN}", _shown_block(c))
                   .replace("{CONTEXT}", _source_blocks(c, sources)))
-        raw = llm.call(prompt, temperature=0.0, max_output_tokens=3000)
+        raw = llm.call(prompt, temperature=0.0, max_output_tokens=3000,
+                       purpose="arbiter", claim_id=c.get("id"))
         j = extract_json(raw)
         if not isinstance(j, dict) or j.get("action") not in (
                 "supported", "add_citation_or_rewrite", "wrong_or_insufficient_evidence"):
@@ -312,6 +345,118 @@ def resolve_ambers(claims: List[Dict[str, Any]]) -> Dict[str, Any]:
             "held": sorted(held)}
 
 
+PARTIAL_MAP_PROMPT_FILE = "pt_arbiter_partial_map_prompt.txt"
+_CENTRALITIES = ("core", "supporting", "framing")
+
+
+def partial_map(claims: List[Dict[str, Any]], llm,
+                workers: int = 4) -> Dict[str, Any]:
+    """The "partly proven" badge (task #1 round 2 step 3; design in
+    docs/FINDING1_PARTIAL_FROM_ARBITER_DESIGN.md): the red-card mirror of
+    resolve_ambers. An UNSUPPORTED claim whose arbiter holds gate-verified
+    verbatim proofs gets ONE small call mapping each proof to the claim part
+    it proves and tagging that part core / supporting / framing. Only a proven
+    CORE part — with at least one part still unproven — earns
+
+        c["proof_state"] = "partial_from_arbiter"
+        c["arbiter_partial"] = {model, prompt_sha, parts, why, badge}
+
+    DISPLAY ONLY — the verdict field never moves (proven-core-AND-all-proven
+    is component/arbiter rescue's job, which runs before this and flips the
+    verdict itself, taking the claim out of scope here). The centrality guard
+    is mandatory on this side: promoting a red card risks false reassurance,
+    so a claim whose proven parts are all framing/supporting stays flat (its
+    proofs are still shown by the existing proof-may-exist note). The prompt
+    biases every doubt downward (unproven over proven, framing over core).
+    Anchors (validated against the human audit, see the design doc): badge on
+    paper1 t24/t32 + bentonite t2; NO badge on paper1 t23/t30 + bentonite
+    t5/t14."""
+    from . import prompt_store   # run-lifetime cache + fingerprint (task #44)
+    tpl = prompt_store.load(PARTIAL_MAP_PROMPT_FILE)
+    sha = hashlib.sha1((llm.model + "\x1f" + tpl).encode("utf-8")).hexdigest()[:12]
+
+    todo, reused = [], 0
+    for c in claims:
+        ab = c.get("arbiter") or {}
+        eligible = (not c.get("owner_flag")
+                    and c.get("verdict") == "unsupported"
+                    and bool(ab.get("proofs")))
+        if not eligible:
+            # A previous run's badge must not outlive its eligibility (claim
+            # rescued to supported, arbiter re-ran without proofs, author
+            # ruling landed) — same stale rule as resolve_ambers.
+            if c.get("proof_state") == "partial_from_arbiter":
+                c.pop("proof_state", None)
+            c.pop("arbiter_partial", None)
+            continue
+        prior = c.get("arbiter_partial") or {}
+        if prior.get("prompt_sha") == sha:
+            reused += 1
+            # Re-derive the badge from the stored decision so an inherited
+            # analysis (incremental rerun) stays self-consistent.
+            if prior.get("badge"):
+                c["proof_state"] = "partial_from_arbiter"
+            elif c.get("proof_state") == "partial_from_arbiter":
+                c.pop("proof_state", None)
+            continue
+        todo.append(c)
+
+    def check(c: Dict[str, Any]) -> None:
+        ab = c["arbiter"]
+        proofs = ab["proofs"]
+        numbered = "\n".join(f"{i}. \"{q}\"" for i, q in enumerate(proofs, 1))
+        hints = "\n".join(f"- {m}" for m in (c.get("judge_missing_parts") or [])) \
+            or "(none given)"
+        prompt = (tpl.replace("{CLAIM}", c.get("text", ""))
+                  .replace("{PROOFS}", numbered)
+                  .replace("{UNPROVEN_HINTS}", hints)
+                  .replace("{ARBITER_WHY}", ab.get("why") or "(none)"))
+        raw = llm.call(prompt, temperature=0.0, max_output_tokens=2000,
+                       purpose="arbiter_partial_map", claim_id=c.get("id"))
+        j = extract_json(raw)
+        raw_parts = (j or {}).get("parts")
+        if not isinstance(raw_parts, list) or not raw_parts:
+            logger.warning(f"Partial-map response for {c.get('id')} unparseable "
+                           f"— no badge, retried next run")
+            return
+        parts = []
+        for p in raw_parts:
+            if not isinstance(p, dict) or not str(p.get("part") or "").strip():
+                continue
+            cent = str(p.get("centrality") or "").strip().lower()
+            if cent not in _CENTRALITIES:
+                cent = "framing"          # unknown tag = least central (conservative)
+            nums = p.get("proven_by") if isinstance(p.get("proven_by"), list) else []
+            proven_by = sorted({int(n) for n in nums
+                                if isinstance(n, (int, float)) and 1 <= int(n) <= len(proofs)})
+            parts.append({"part": str(p["part"]).strip(), "centrality": cent,
+                          "proven_by": proven_by})
+        if not parts:
+            return
+        proven = [p for p in parts if p["proven_by"]]
+        unproven = [p for p in parts if not p["proven_by"]]
+        core_proven = any(p["centrality"] == "core" for p in proven)
+        # All parts proven = rescue territory, not a badge — rescue already ran
+        # and the judge was NOT unanimous, so flat unsupported stands.
+        badge = bool(core_proven and unproven)
+        c["arbiter_partial"] = {"model": llm.model, "prompt_sha": sha,
+                                "parts": parts, "badge": badge,
+                                "why": ((j or {}).get("why") or "").strip()}
+        if badge:
+            c["proof_state"] = "partial_from_arbiter"
+        elif c.get("proof_state") == "partial_from_arbiter":
+            c.pop("proof_state", None)
+
+    parallel_map(check, todo, workers=workers)
+
+    badged = [c["id"] for c in todo
+              if (c.get("arbiter_partial") or {}).get("badge")]
+    held = [c["id"] for c in todo if c.get("arbiter_partial")
+            and not c["arbiter_partial"]["badge"]]
+    return {"checked": len(todo), "reused": reused,
+            "badged": sorted(badged), "held": sorted(held)}
+
+
 # ---------------------------------------------------------------------------
 # Arbiter rescue (owner ask 2026-07-12, "solve t21"): the verdict-path half of
 # the proof-may-exist chip. The arbiter itself still NEVER decides a verdict —
@@ -386,9 +531,12 @@ def rescue(claims: List[Dict[str, Any]], sources: Dict[str, Dict], llm,
             arb["rescued"] = False
             held.append(c["id"])
             return
-        ok, reason, votes = matcher._combined_judge(c["text"], windows, llm,
-                                                    combined_prompt,
-                                                    early_break=False)
+        # _combined_judge now also returns the judge's structured missing_parts
+        # (2026-08-06); arbiter rescue is a positive-verdict path and doesn't
+        # use it, so it's dropped.
+        ok, reason, votes, _missing_parts = matcher._combined_judge(
+            c["text"], windows, llm, combined_prompt,
+            early_break=False, purpose="arbiter_rescue")
         if ok and votes.endswith("-0"):
             c["verdict"] = "supported"
             c["method"] = "arbiter_rescue"

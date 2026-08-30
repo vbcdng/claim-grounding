@@ -10,11 +10,11 @@ unsupported claims and source claims your text omitted.
 Usage:
   python3 verify_my_text.py --text my_writing.md --sources sources/ \\
     [--references my_writing.md.refs.txt] [--output-dir data/my_text_verification/] \\
-    [--api-key config/google_api_key.txt] [--model gemini/gemini-2.5-flash-lite] \\
+    [--api-key config/google_api_key.txt] [--model gemini/gemma-4-31b-it] \\
     [--api-base URL] [--open]
 
 LLM provider: any litellm-supported model via --model "provider/model", e.g.
-  gemini/gemini-2.5-flash-lite (default)   openai/gpt-4o-mini   anthropic/claude-sonnet-4-...
+  gemini/gemma-4-31b-it (default, free Google tier)   openai/gpt-4o-mini   openrouter/<model>...
   ollama/llama3 (with --api-base http://localhost:11434)   openrouter/<model>
 $0 option: --backend claude-code (or --model claude-code/haiku) sends every call to the
 local `claude` CLI headlessly — no API key, runs on a Claude subscription (dev runs).
@@ -39,10 +39,12 @@ import webbrowser
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from modules.papertrail import (text_decomposer, source_decomposer, matcher, viewer,
+                                checkpoint,
                                 cost_estimator, rerun, second_opinion, own_claims, arbiter,
                                 citation_scope,
                                 argument_map, crux, evidence_independence,
-                                provenance_export, llm_client)
+                                provenance_export, llm_client, prompt_store,
+                                deep_check_store)
 from modules.papertrail.llm_client import LLMClient
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -140,6 +142,7 @@ def run_fix_claim(args):
 
     # Same model as the run unless overridden — a different judge would make the
     # verification incomparable with the run's verdicts.
+    llm_client.set_call_log(os.path.join(args.output_dir, "llm_calls.jsonl"))
     args.model = args.model or analysis.get("metadata", {}).get("model")
     apply_backend(args)      # a claude-code run's metadata routes the fix there too
     llm = LLMClient(model=args.model, api_key=args.api_key, api_base=args.api_base)
@@ -250,8 +253,8 @@ def main():
                     help="Escalate the flagged claims (unsupported, supported-with-gaps, "
                          "conflicting sentence) to a strong model that re-reads them WITH "
                          "large source context. DEFAULT ON since 2026-07-14 with "
-                         f"{arbiter.DEFAULT_MODEL} (needs DEEPSEEK_API_KEY or "
-                         "config/deepseek_api_key.txt — skipped with a one-line note "
+                         f"{arbiter.DEFAULT_MODEL} (needs OPENROUTER_API_KEY or "
+                         "config/openrouter_api_key.txt — skipped with a one-line note "
                          "if neither exists); pass a MODEL to override, --no-arbiter to "
                          "turn off. Findings render as chips with verbatim-verified "
                          "quotes — never overriding a verdict. ~1 large call per flagged "
@@ -333,20 +336,19 @@ def main():
     cc_backend = apply_backend(args)
     # Arbiter is DEFAULT ON (owner ruling 2026-07-14) on every backend — under
     # claude-code apply_backend already routed the default to claude-code/sonnet
-    # ($0). Opt out with --no-arbiter. A missing DeepSeek key downgrades to a
-    # one-line info note + skip, never an error or warning: the tier is additive
-    # and the no-key path is a documented, nominally-correct run (judge F-7).
+    # ($0). Opt out with --no-arbiter. A missing provider key (OpenRouter for
+    # the luna default, DeepSeek for that override) downgrades to a one-line
+    # info note + skip, never an error or warning: the tier is additive and
+    # the no-key path is a documented, nominally-correct run (judge F-7).
     arbiter_skipped_no_key = False
     if args.no_arbiter:
         args.arbiter = None
-    elif args.arbiter and args.arbiter.startswith("deepseek/") \
-            and not os.environ.get("DEEPSEEK_API_KEY") \
-            and not os.path.exists(arbiter.DEEPSEEK_KEY_PATH):
+    elif args.arbiter and not arbiter.key_available(args.arbiter):
         logger.info(
-            "Note: the optional arbiter re-check is off (no DeepSeek key found); "
-            "the run works fine without it. To enable it, add DEEPSEEK_API_KEY or "
-            "config/deepseek_api_key.txt, or pass --arbiter <other-model>; pass "
-            "--no-arbiter to hide this note.")
+            "Note: the optional arbiter re-check is off (no key found for "
+            f"{args.arbiter}); the run works fine without it. To enable it, add "
+            f"{arbiter.key_hint(args.arbiter)}, or pass --arbiter <other-model>; "
+            "pass --no-arbiter to hide this note.")
         args.arbiter = None
         arbiter_skipped_no_key = True
 
@@ -361,10 +363,22 @@ def main():
         logger.error(f"Sources folder not found: {args.sources}"); sys.exit(1)
 
     os.makedirs(args.output_dir, exist_ok=True)
+    # Per-call bookkeeping (task #20): every LLM call from here on appends one
+    # JSONL line to <output-dir>/llm_calls.jsonl (purpose, tokens, cost, response;
+    # prompt hash-only unless PAPERTRAIL_LOG_PROMPTS=1). Read-side: nothing on
+    # the verdict path consumes this file.
+    llm_client.set_call_log(os.path.join(args.output_dir, "llm_calls.jsonl"))
     cache_dir = os.path.join(args.output_dir, "source_claims")
     sources_out = os.path.join(args.output_dir, "sources")
     os.makedirs(sources_out, exist_ok=True)
     start = time.time()
+
+    # Freeze every instruction file NOW (task #44): each prompt's text is read
+    # once here and served from memory for the whole run, so an edit to
+    # config/prompts/ while this run is in flight can no longer reach it. The
+    # returned {name: fingerprint} map is compared against the previous run
+    # below and written into metadata.prompts at the end.
+    prompt_fingerprints = prompt_store.snapshot(matcher.PROMPT_OVERRIDES)
 
     with open(args.text, "r", encoding="utf-8") as f:
         raw_text = f.read()
@@ -399,6 +413,12 @@ def main():
             logger.warning(f"Could not read the previous analysis.json ({e}) — doing a full run")
     if prev_analysis is not None:
         prev_model = prev_analysis.get("metadata", {}).get("model")
+        # Instruction-file check (task #44): None = the previous run predates
+        # prompt tracking (warned about in the reuse branch below); a non-empty
+        # set = at least one prompt the previous run used has different content
+        # now, so its verdicts were made under different instructions.
+        changed_prompt_names = rerun.changed_prompts(
+            prev_analysis.get("metadata", {}).get("prompts"), prompt_fingerprints)
         if not prev_model:
             # Runs made before model-in-metadata tracking have no model recorded.
             # The default model changed (flash -> flash-lite, 2026-07-04), so these
@@ -411,7 +431,18 @@ def main():
         elif prev_model != model_str:
             logger.info(f"Previous run used {prev_model}, this one uses {model_str} — "
                         "verdicts are not comparable, doing a full re-run")
+        elif changed_prompt_names:
+            logger.info(f"Instruction files changed since the previous run: "
+                        f"{', '.join(sorted(changed_prompt_names))} — its verdicts "
+                        f"were made under different instructions, so none are "
+                        f"reused and the whole text is judged fresh")
         else:
+            if changed_prompt_names is None:
+                logger.warning("Previous run predates prompt tracking "
+                               "(metadata.prompts missing) — cannot prove it used "
+                               "the same instruction files; reusing its verdicts "
+                               "anyway (git history of config/prompts/ can confirm; "
+                               "--full forces a re-judge)")
             changed_files = rerun.changed_source_files(
                 prev_analysis.get("metadata", {}).get("source_hashes"), source_hashes)
             if changed_files is None:
@@ -438,6 +469,12 @@ def main():
                                 if fn and os.path.exists(os.path.join(args.sources, fn))}
                     remapped = cur_pids != set(p.get("paper_ids") or [])
                     if rerun.reusable(p) and not src_changed and not remapped:
+                        # Runs before the 2026-08-07 near-duplicate merge can
+                        # carry the same missing fact twice (hedged + plain);
+                        # clean the reused list so old caches heal on re-run.
+                        if p.get("judge_missing_parts"):
+                            p["judge_missing_parts"] = matcher._dedupe_missing_parts(
+                                p["judge_missing_parts"])
                         reuse_map[tc["id"]] = p
                     elif src_changed or remapped:
                         # same text, different source content/mapping -> re-judged;
@@ -451,6 +488,30 @@ def main():
             logger.info(f"Incremental: {len(reuse_map)} unchanged claims keep their previous "
                         f"verdicts; {len(text_claims) - len(reuse_map)} will be judged "
                         f"(--full forces a complete re-run)")
+
+    # Save-as-you-go recovery (2026-08-10): an INTERRUPTED run journals every
+    # judged claim to checkpoint.jsonl as it lands (see checkpoint.py); if that
+    # journal matches this exact configuration (model + text + source content),
+    # its claims re-enter through the same reuse guards as incremental runs —
+    # including the never-reuse-an-outage-verdict rule. Applies even with
+    # --full: --full distrusts a FINISHED previous run, while the journal is
+    # this same run, interrupted mid-flight.
+    ckpt_path = os.path.join(args.output_dir, "checkpoint.jsonl")
+    text_sha1 = hashlib.sha1(body.encode("utf-8")).hexdigest()
+    ck_claims = checkpoint.load(ckpt_path, model_str, text_sha1, source_hashes)
+    if ck_claims:
+        ck_matched = rerun.match_claims(ck_claims, text_claims)
+        n_ck = 0
+        for tc in text_claims:
+            if tc["id"] in reuse_map:
+                continue
+            p = (ck_matched.get(tc["id"]) or {}).get("reuse")
+            if p is not None and rerun.reusable(p):
+                reuse_map[tc["id"]] = p
+                n_ck += 1
+        if n_ck:
+            logger.info(f"Recovered {n_ck} judged claim(s) from the interrupted "
+                        f"previous run (checkpoint.jsonl) — they skip re-judging")
 
     # Pre-run cost estimate (no API calls). --estimate prints and exits; a real run
     # above the threshold asks for confirmation first (--yes skips). On incremental
@@ -567,7 +628,8 @@ def main():
     # work (the SPECTER encode of the sources can take minutes). Without this,
     # a typo'd key surfaces as a per-call error wall and a garbage run
     # (2026-07-14 clean-venv test). call() logs the provider's actual error.
-    if llm.call("Reply with the single word: ok", max_output_tokens=128) is None:
+    if llm.call("Reply with the single word: ok", max_output_tokens=128,
+                purpose="sanity_check") is None:
         print(f"\nAPI check failed for model {llm.model}: a tiny test call returned "
               f"nothing (the provider's error is logged above — usually a missing or "
               f"invalid API key). Fix the key (--api-key <file-or-value>, or the "
@@ -635,9 +697,11 @@ def main():
 
     # Stage 3: match + verdict. Embeddings cache next to the source-claims cache —
     # SPECTER encoding of ~30k source claims/sentences dominated re-run wall time.
+    ckpt_writer = checkpoint.Writer(ckpt_path, model_str, text_sha1, source_hashes)
     analysis = matcher.run(text_claims, sources, llm, workers=args.concurrency,
                            emb_cache_dir=os.path.join(args.output_dir, "embeddings"),
-                           reuse=reuse_map, partial_check=not args.no_partial_check)
+                           reuse=reuse_map, partial_check=not args.no_partial_check,
+                           checkpoint=ckpt_writer)
     # Diff vs the previous run: changed/new claims get a "prev" record so the
     # viewer can flag them (✎, the Changed filter) and show what they replaced.
     if prev_analysis is not None and (reuse_map or prev_info):
@@ -721,6 +785,7 @@ def main():
                         + (f" (scoped: {', '.join(cs_summary['scoped_ids'])})"
                            if cs_summary["scoped_ids"] else ""))
     so_summary = None
+    llm2 = None
     if args.second_opinion:
         # Wrapped: at this point the judging above is already PAID FOR, and
         # analysis.json isn't on disk yet — a bad second-opinion model string
@@ -743,6 +808,7 @@ def main():
                            if flags else " — agrees with every verdict"))
 
     arb_summary = None
+    llm_arb = None
     if args.arbiter:
         # Wrapped like the second opinion: judging is already paid for — a bad
         # arbiter model string or a missing key must not take the run down.
@@ -808,6 +874,27 @@ def main():
                                                if c["verdict"] == "unsupported")
             except Exception as e:
                 logger.warning(f"Arbiter rescue failed (verdicts unaffected): {e}")
+        # "Partly proven" badge (task #1 step 3): for claims STILL unsupported
+        # after rescue whose arbiter holds gate-verified proofs, one small call
+        # maps each proof to the claim part it proves; a proven CORE part (with
+        # gaps remaining) earns the slate badge. Display-only, never a verdict.
+        if arb_summary is not None:
+            try:
+                pm_summary = arbiter.partial_map(analysis["text_claims"], llm_arb,
+                                                 workers=args.concurrency)
+                if pm_summary["checked"] or pm_summary["reused"]:
+                    logger.info(
+                        f"Partly-proven mapping: {pm_summary['checked']} claim(s) mapped"
+                        + (f", {pm_summary['reused']} kept from the previous run"
+                           if pm_summary["reused"] else "")
+                        + (f" — badge on {', '.join(pm_summary['badged'])}"
+                           if pm_summary["badged"] else " — no badges")
+                        + (f"; proven parts not central enough on "
+                           f"{', '.join(pm_summary['held'])}"
+                           if pm_summary["held"] else ""))
+                    arb_summary["partly_proven"] = pm_summary["badged"]
+            except Exception as e:
+                logger.warning(f"Partly-proven mapping failed (verdicts unaffected): {e}")
 
     analysis["metadata"] = {
         "text_file": os.path.abspath(args.text),
@@ -820,6 +907,20 @@ def main():
         "processing_time_seconds": round(time.time() - start, 1),
         "source_hashes": source_hashes,
     }
+    # Which instruction text produced this run (task #44): fingerprints of
+    # every prompt file as frozen at run start, plus which were actually
+    # loaded. On an incremental run the reused verdicts were produced under
+    # the PREVIOUS run's prompts — reuse only happened because every prompt it
+    # used is byte-identical now, so its "used" names are carried forward to
+    # keep the next comparison complete (a mostly-incremental run loads few
+    # prompts itself).
+    prompts_block = prompt_store.metadata_block()
+    if prev_analysis is not None and reuse_map:
+        prev_used = (prev_analysis.get("metadata", {}).get("prompts")
+                     or {}).get("used") or []
+        prompts_block["used"] = sorted(set(prompts_block["used"]) | set(prev_used))
+    analysis["metadata"]["prompts"] = prompts_block
+
     # Actual spend (owner ask, 2026-07-11): what THIS run really used, per
     # model — the estimator's numbers above were a pre-run prediction.
     actual_usage = llm_client.usage_summary()
@@ -833,10 +934,12 @@ def main():
     if own_summary is not None:
         analysis["metadata"]["own_split"] = {
             "counts": own_summary["counts"], "fact_ids": own_summary["fact_ids"],
+            "unparsed": own_summary.get("unparsed", 0),
         }
     if cs_summary is not None:
         analysis["metadata"]["citation_scope"] = {
             "counts": cs_summary["counts"], "scoped_ids": cs_summary["scoped_ids"],
+            "unparsed": cs_summary.get("unparsed", 0),
         }
     if arb_summary is not None:
         analysis["metadata"]["arbiter"] = {
@@ -852,7 +955,21 @@ def main():
             "model": llm2.model, "checked": so_summary["checked"],
             "fp_flags": so_summary["fp_flags"],
             "strict_flags": so_summary["strict_flags"],
+            "skipped_failed": so_summary.get("skipped_failed", []),
         }
+    # Task #37 — outage honesty: the result file itself states whether any
+    # model request failed during this run, so nothing has to scan every claim
+    # (or the terminal log) to notice a broken run. failed_calls sums the
+    # judge, second-opinion, and arbiter clients; claims_affected lists every
+    # claim carrying a judge_error or checks_failed marker. The benchmark
+    # scorers refuse to score a run where this block is non-zero.
+    analysis["metadata"]["llm_failures"] = {
+        "failed_calls": sum(getattr(x, "failed_calls", 0)
+                            for x in (llm, llm2, llm_arb) if x is not None),
+        "claims_affected": sorted(
+            c["id"] for c in analysis["text_claims"]
+            if c.get("judge_error") or c.get("checks_failed")),
+    }
     analysis["sources"] = [
         {"paper_id": pid, "key": s.get("key"), "filename": s.get("filename"),
          "title": s.get("title"), "num_claims": len(s.get("claims", []))}
@@ -865,9 +982,37 @@ def main():
             shutil.copy2(analysis_path, os.path.join(args.output_dir, "analysis_prev.json"))
         except Exception as e:
             logger.warning(f"Could not archive the previous analysis.json: {e}")
+        # An old deep_check.json describes the verdicts we are about to replace,
+        # and its comments are keyed by positional claim id — so it must not sit
+        # beside the new verdicts (task #57, 2026-08-19). Set it aside the same
+        # way as the analysis; nothing is deleted, one generation is kept.
+        try:
+            still_valid = deep_check_store.load_valid(args.output_dir, analysis)[1]
+            archived = deep_check_store.archive_previous(args.output_dir)
+            if archived:
+                logger.info(
+                    "The deep-check comments from the previous run were set aside as "
+                    f"{os.path.basename(archived)}, because the claims have just been "
+                    "judged again. Run deep_check.py on this folder to get fresh "
+                    "comments.")
+                if still_valid.get("total") and not still_valid.get("dropped"):
+                    logger.info(
+                        "Those comments still match every claim and verdict in this "
+                        f"run ({still_valid['usable']} of them), so nothing was lost: "
+                        f"copy {deep_check_store.PREV_FILENAME} back to "
+                        f"{deep_check_store.FILENAME} to keep them.")
+        except Exception as e:
+            logger.warning(f"Could not archive the previous deep_check.json: {e}")
     with open(analysis_path, "w", encoding="utf-8") as f:
         json.dump(analysis, f, indent=2, ensure_ascii=False)
     logger.info(f"Wrote analysis: {analysis_path}")
+    # The run's verdicts are safely in analysis.json now — the save-as-you-go
+    # journal has done its job and would only shadow future edits if kept.
+    ckpt_writer.close()
+    try:
+        os.remove(ckpt_path)
+    except OSError:
+        pass
 
     # Optional PROV-O export — pure, no LLM calls.
     if args.provenance_export:
@@ -942,21 +1087,60 @@ def main():
     # A verdict minted while model calls were dying is not a finding. Say so
     # louder than the per-call log lines, and promise the (true, thanks to
     # rerun.reusable) cheap fix: a plain re-run retries exactly these claims.
-    judge_errs = [c["id"] for c in analysis["text_claims"] if c.get("judge_error")]
-    if judge_errs:
-        print(f"\nWARNING: {len(judge_errs)} claim(s) could not be fully judged — the "
-              f"model API stopped responding during the run (rate limit / quota / "
-              f"outage; see the log above). They are marked 'not fully judged' in "
-              f"the viewer and their 'unsupported' may be an artifact. Re-running "
-              f"the same command retries JUST these claims: "
-              f"{', '.join(judge_errs[:12])}{'…' if len(judge_errs) > 12 else ''}",
-              file=sys.stderr)
+    lf = analysis["metadata"]["llm_failures"]
+    if lf["failed_calls"] or lf["claims_affected"]:
+        affected = lf["claims_affected"]
+        detail = (f"{len(affected)} claim(s) could not be fully checked — they are "
+                  f"marked in the viewer, a rejected verdict on them may be an "
+                  f"artifact of the outage rather than the sources, and re-running "
+                  f"the same command retries JUST these claims: "
+                  f"{', '.join(affected[:12])}{'…' if len(affected) > 12 else ''}"
+                  if affected else
+                  "no verdict was affected, but a small tag pass was skipped on "
+                  "some claims; a re-run fills those in")
+        print(f"\nWARNING: {lf['failed_calls']} request(s) to the model failed "
+              f"during this run (rate limit / quota / outage; see the log above). "
+              f"{detail}", file=sys.stderr)
 
     if actual_usage:
         for mdl, u in actual_usage.items():
             cost_str = f"${u['cost_usd']:.4f}" if u["cost_usd"] else "$0 (or unknown pricing)"
-            print(f"Actual usage [{mdl}]: {u['calls']} calls, "
-                  f"{u['prompt_tokens']:,} in / {u['completion_tokens']:,} out tokens, {cost_str}")
+            cached = u.get("cached_prompt_tokens", 0)
+            cached_str = f" (of which {cached:,} cached)" if cached else ""
+            # claude-code reports no per-attempt usage; show its logical calls.
+            n_calls = u["calls"] or sum(p["calls"] for p in u.get("by_purpose", {}).values())
+            print(f"Actual usage [{mdl}]: {n_calls} calls, "
+                  f"{u['prompt_tokens']:,} in{cached_str} / {u['completion_tokens']:,} out tokens, {cost_str}")
+        # Task #20: where the calls went. One row per purpose, costliest first —
+        # this table is what phase 2 (context trimming) will be planned from.
+        rows = []
+        for mdl, u in actual_usage.items():
+            for pname, p in u.get("by_purpose", {}).items():
+                rows.append((p["cost_usd"], p["calls"], pname, mdl, p))
+        if rows:
+            rows.sort(key=lambda r: (-r[0], -r[1], r[2]))
+            many_models = len(actual_usage) > 1
+            print("Where the calls went (per purpose, costliest first):")
+            for cost, _calls, pname, mdl, p in rows:
+                label = f"{pname} [{mdl}]" if many_models else pname
+                print(f"  {label:<32} {p['calls']:>5} calls  "
+                      f"{p['prompt_tokens']:>11,} in / {p['completion_tokens']:>9,} out  "
+                      f"${cost:.4f}")
+        # Estimate-vs-actual in one line (working-style review lesson 4,
+        # approved 2026-08-09): estimates ran 2-3x off in both directions and
+        # every gap was reconciled by hand after the fact. `point` is the
+        # pre-run point estimate for the core judging only — the add-on passes
+        # were announced as excluded, so name that in the comparison.
+        if point is not None:
+            total_actual = sum(u["cost_usd"] for u in actual_usage.values())
+            if point > 0:
+                print(f"Estimate check: predicted ${point:.2f} before the run "
+                      f"(core judging only, add-on passes excluded) — the whole "
+                      f"run actually cost ${total_actual:.4f}, i.e. "
+                      f"{total_actual / point:.1f} times the estimate.")
+            else:
+                print(f"Estimate check: predicted $0.00 before the run — the "
+                      f"whole run actually cost ${total_actual:.4f}.")
 
     viewer_abs = os.path.abspath(viewer_path)
     print(f"\nReview file (open in any browser — no server needed):\n  {viewer_abs}")

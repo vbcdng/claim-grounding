@@ -47,9 +47,8 @@ _ORDINALS = {"first", "second", "third", "fourth", "fifth", "zeroth",
 
 
 def _load_prompt(name: str) -> str:
-    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    with open(os.path.join(root, "config", "prompts", name), "r", encoding="utf-8") as f:
-        return f.read()
+    from . import prompt_store   # local import: keeps this module dependency-light
+    return prompt_store.load(name)
 
 
 def _oneline(text: str) -> str:
@@ -131,7 +130,7 @@ def _confirm_chunk(pairs: List[Dict], text_of: Dict[str, str], llm) -> Optional[
     for n, p in enumerate(pairs, 1):
         lines.append(f"PAIR {n}:\n  A: {_oneline(text_of[p['a']])}\n  B: {_oneline(text_of[p['b']])}")
     prompt = _load_prompt(PROMPT_FILE).replace("{PAIRS}", "\n".join(lines))
-    raw = llm.call(prompt, temperature=0.0, max_output_tokens=4096)
+    raw = llm.call(prompt, temperature=0.0, max_output_tokens=4096, purpose="dedup")
     if not raw:
         return None
     from .llm_client import extract_json

@@ -97,7 +97,8 @@ def classify(claims: List[Dict[str, Any]], llm, workers: int = 4) -> Dict[str, A
     def tag(c: Dict[str, Any]) -> None:
         keys = ", ".join(c.get("markers") or [])
         raw = llm.call(prompt.replace("{CLAIM}", c["text"]).replace("{KEYS}", keys),
-                       temperature=0.0, max_output_tokens=1024)
+                       temperature=0.0, max_output_tokens=1024,
+                       purpose="citation_scope", claim_id=c.get("id"))
         payload, err = _parse(raw)
         if payload is None:
             c.pop("citation_scope", None)

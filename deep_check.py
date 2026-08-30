@@ -27,7 +27,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from modules.papertrail import matcher, viewer
+from modules.papertrail import deep_check_store as dcs, matcher, viewer
 from modules.papertrail.llm_client import LLMClient, extract_json, parallel_map
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -128,7 +128,8 @@ def build_prompt(tc, sources):
 
 
 def check_claim(tc, sources, llm):
-    raw = llm.call(build_prompt(tc, sources), temperature=0.0, max_output_tokens=2048)
+    raw = llm.call(build_prompt(tc, sources), temperature=0.0, max_output_tokens=2048,
+                   purpose="deep_check", claim_id=tc.get("id"))
     obj = extract_json(raw) or {}
     if not isinstance(obj, dict) or "supported" not in obj:
         return {"error": "unparseable reply", "raw": (raw or "")[:400]}
@@ -146,10 +147,20 @@ def check_claim(tc, sources, llm):
     }
 
 
-def regenerate_viewer(run_dir, analysis, dc_map):
+def regenerate_viewer(run_dir, analysis, payload):
+    """Rebuild viewer.html with the commentary injected in memory.
+
+    Only comments that still describe THIS analysis get through (task #57,
+    2026-08-19): deep_check_store.validate checks each one's recorded claim text
+    and verdict against the run. Fresh results always pass; the same guard is
+    what makes a payload read back from disk safe, since claim ids are positional
+    and mean a different sentence after any edit to the author's text.
+    """
+    usable, report = dcs.validate(payload, analysis)
+    logger.info(dcs.report_sentence(report))
     for tc in analysis.get("text_claims", []):
-        if tc.get("id") in dc_map and "error" not in dc_map[tc["id"]]:
-            tc["deep_check"] = dc_map[tc["id"]]     # in-memory only
+        if tc.get("id") in usable:
+            tc["deep_check"] = usable[tc["id"]]     # in-memory only
     source_texts = {}
     for s in analysis.get("sources", []):
         fn = s.get("filename")
@@ -199,14 +210,18 @@ def main():
     disagree = [k for k, v in ok.items() if not v["agrees"]]
     errs = [k for k, v in dc_map.items() if "error" in v]
 
-    out_path = os.path.join(a.run_dir, "deep_check.json")
-    json.dump({"model": a.model, "results": dc_map},
-              open(out_path, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+    # Stamped payload (task #57): the fingerprint of the analysis judged, plus
+    # each comment's claim text hash + the verdict it was judging, so nothing
+    # downstream can pair these comments with a later run's verdicts.
+    payload = dcs.wrap(analysis, a.model, dc_map)
+    out_path = os.path.join(a.run_dir, dcs.FILENAME)
+    json.dump(payload, open(out_path, "w", encoding="utf-8"),
+              indent=2, ensure_ascii=False)
     logger.info(f"wrote {out_path}: {len(ok)} checked, {len(disagree)} disagree "
                 f"{disagree}, {len(errs)} errors {errs}")
 
     if not a.no_viewer:
-        v = regenerate_viewer(a.run_dir, analysis, dc_map)
+        v = regenerate_viewer(a.run_dir, analysis, payload)
         logger.info(f"viewer refreshed: {v}")
 
 

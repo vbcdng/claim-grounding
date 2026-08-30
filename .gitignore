@@ -9,6 +9,7 @@ config/*_api_key*.txt
 config/unpaywall_email.txt
 
 # Regenerable outputs
+logs/
 data/
 examples/*/output/
 **/source_claims/
@@ -16,3 +17,4 @@ _assets/
 
 # never commit API keys
 config/deepseek_api_key.txt
+

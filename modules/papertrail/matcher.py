@@ -12,13 +12,15 @@ the source's atomic claims: a source claim is "used" if a sentence that supporte
 text claim is one of that claim's evidence sentences.
 """
 
+import copy
 import os
 import re
 import logging
 import unicodedata
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 
 from . import embeddings
+from . import prompt_store
 from .llm_client import extract_json
 
 logger = logging.getLogger(__name__)
@@ -221,10 +223,11 @@ PROMPT_OVERRIDES: Dict[str, str] = {}
 
 
 def _load_prompt(name: str) -> str:
-    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    path = PROMPT_OVERRIDES.get(name) or os.path.join(root, "config", "prompts", name)
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read()
+    # Cached for the process (prompt_store, task #44): a mid-run edit to a
+    # prompt file can no longer swap the instructions for remaining claims.
+    # PROMPT_OVERRIDES is consulted at call time, so installing an override
+    # after some loads still works (it resolves to a different cached path).
+    return prompt_store.load(name, PROMPT_OVERRIDES)
 
 
 def _load_judgment_prompt() -> str:
@@ -237,22 +240,198 @@ def _failed_calls(llm) -> int:
     return n if isinstance(n, int) else 0
 
 
-def _parse_support(raw: str) -> Tuple[bool, str]:
+def _note_check_failure(out: Dict, name: str, llm, fails_before: int) -> bool:
+    """True (and recorded on the claim) when a model call died while the named
+    extra check ran. A dead call reads as a negative answer to every voter, so
+    a check that overlapped ANY failure may have minted a phantom warning —
+    the caller must throw the check's output away and leave its "already done"
+    stamp unset, so the next run redoes exactly this check (task #37, the
+    outage-honesty contract judge_error established for verdicts). The
+    `checks_failed` list feeds the viewer chip + top banner, the run-end
+    warning, metadata.llm_failures, rerun's no-reuse rule, and the scorers'
+    refusal. Under --concurrency a neighbour claim's failure trips this too;
+    during an outage that over-recording is honest — "couldn't fully check" —
+    and a plain re-run retries it for free."""
+    if _failed_calls(llm) > fails_before:
+        failed = out.setdefault("checks_failed", [])
+        if name not in failed:
+            failed.append(name)
+        return True
+    return False
+
+
+# Structured `missing_parts` (short self-contained assertions naming a
+# rejected claim's absent components — the facts a regex previously had to
+# fish out of the free-text reason, see _missing_components below).
+# Round 3 (2026-08-11): the list is produced by ONE follow-up call
+# (_missing_parts_followup) that runs only AFTER a claim's final verdict is
+# already "unsupported". Round 2 asked the judging prompt itself for the list,
+# and the act of enumerating missing parts AT DECISION TIME tipped a
+# borderline tail-rescue call from supported to unsupported (gate row
+# paper1/t17, author-ruled supported 2026-08-11); task #18 measured that only
+# the demand's presence mattered, not its wording. Post-decision, the list
+# cannot influence any verdict by construction. The judge-response slot for
+# the field stays and is read defensively — a custom prompt or cached payload
+# may still supply it: only a genuine list of short assertions is trusted,
+# anything else is treated as "not provided" (None), never as an empty
+# finding ([]) — that distinction is what lets callers fall back to the regex
+# exactly when the structured field is truly absent.
+_MISSING_PARTS_CAP = 4
+
+# Round-2 near-duplicate fix (2026-08-07): exact case-insensitive matching let
+# the same missing fact survive twice — hedged vs plain ("appears to be" / "is"),
+# with vs without an adjective ("giant Tengiz" / "Tengiz"), ₂ vs 2, or with a
+# trailing parenthetical explanation. Measured on the round-1 runs: 9 claims,
+# 33 entries, 10 near-duplicate pairs. Duplicate detection now compares
+# normalized CONTENT-token sets; the tokens below carry no content for this
+# purpose (articles, copulas, hedges, connectives), so they are dropped from
+# the comparison key — never from the displayed text.
+_MISSING_PART_NOISE = frozenset(
+    "the a an is are was were be been being to that as of "
+    "in on for with by from at into over under during such "
+    "these this those they them their it its "
+    "appears appear appeared seems seem seemed likely possibly apparently "
+    "reportedly allegedly described named said considered".split())
+
+_BRACKETED_RE = re.compile(r"\([^)]*\)|\[[^\]]*\]")
+_TOKEN_RE = re.compile(r"[a-z0-9]+(?:[-'][a-z0-9]+)*")
+
+
+def _stem_token(t: str) -> str:
+    """Crude inflection folding for duplicate detection only (never displayed):
+    disrupted/disrupting/disrupts -> disrupt, capabilities -> capability.
+    Digits are left whole — '90' must never equal '60'."""
+    if t.isdigit():
+        return t
+    if len(t) > 5 and t.endswith("ing"):
+        return t[:-3]
+    if len(t) > 4 and t.endswith("ed"):
+        return t[:-2]
+    if len(t) > 4 and t.endswith("ies"):
+        return t[:-3] + "y"
+    if len(t) > 4 and t.endswith("es"):
+        return t[:-2]
+    if len(t) > 3 and t.endswith("s") and not t.endswith("ss"):
+        return t[:-1]
+    return t
+
+
+def _missing_part_key(s: str) -> frozenset:
+    """Comparison key for one missing-parts entry: unicode-folded (SiO₂ == SiO2),
+    lowercased, bracketed asides removed, punctuation dropped, noise tokens
+    (articles/copulas/prepositions/hedges) dropped, inflections folded. Empty
+    keys are replaced by the raw lowercased string so a content-free entry
+    never merges with everything. Numeric tokens survive whole, so entries
+    differing only in a number can never merge (their keys aren't subsets)."""
+    t = unicodedata.normalize("NFKC", s).lower()
+    t = _BRACKETED_RE.sub(" ", t)
+    toks = set()
+    for m in _TOKEN_RE.findall(t):
+        if m in _MISSING_PART_NOISE:
+            continue
+        st = _stem_token(m)
+        if st not in _MISSING_PART_NOISE:
+            toks.add(st)
+    return frozenset(toks) if toks else frozenset({s.strip().lower()})
+
+
+def _dedupe_missing_parts(items: List[str]) -> List[str]:
+    """Order-preserving merge of missing-parts entries. Two entries are the
+    same fact when their content-token keys are equal or one is a subset of
+    the other ("...giant Tengiz field..." vs "...Tengiz field..."). On equal
+    keys the shorter surface wins (plain beats hedged); on a subset the
+    COVERING entry wins — a conjunction entry that spans two later fragments
+    must absorb both, not be replaced by the first fragment. Caps at
+    _MISSING_PARTS_CAP."""
+    kept: List[Tuple[str, frozenset]] = []
+    for s in items:
+        key = _missing_part_key(s)
+        for i, (ks, kk) in enumerate(kept):
+            if key == kk:
+                if len(s) < len(ks):
+                    kept[i] = (s, kk)
+                break
+            if key < kk:          # new entry adds nothing — drop it
+                break
+            if kk < key:          # new entry covers the kept one — take over
+                kept[i] = (s, key)
+                break
+        else:
+            kept.append((s, key))
+    return [s for s, _ in kept[:_MISSING_PARTS_CAP]]
+
+
+def _coerce_missing_parts(raw: Any) -> Optional[List[str]]:
+    """Defensive read of a judge's `missing_parts` field. None = not a usable
+    list (missing, a string, a dict, or any other non-list shape) — callers
+    must fall back to the regex. A real list: non-string/non-scalar items
+    (dicts, nested lists) are dropped rather than crashing, remaining items are
+    str().strip()'d (a leading "that " is shaved off — judges sometimes emit
+    clause fragments), empties dropped, near-duplicates merged
+    (_dedupe_missing_parts), capped at _MISSING_PARTS_CAP. Can legitimately
+    return [] when the list was real but every item was junk."""
+    if not isinstance(raw, list):
+        return None
+    cleaned: List[str] = []
+    for item in raw:
+        if isinstance(item, (dict, list)):
+            continue
+        s = str(item).strip()
+        if s.lower().startswith("that "):
+            s = s[5:].strip()
+        if not s:
+            continue
+        cleaned.append(s)
+    return _dedupe_missing_parts(cleaned)
+
+
+def _missing_parts_followup(claim: str, labeled_windows: List[Tuple[str, str]],
+                            reason: str, llm, prompt: str) -> Optional[List[str]]:
+    """Round 3 (2026-08-11): ONE post-verdict call that names a rejected
+    claim's missing components — see the module comment above _MISSING_PARTS_CAP
+    for why this must never run during judging. The reply is read tolerantly:
+    extra keys (e.g. a judging prompt's background_gaps) are ignored, and
+    anything unusable returns None — the caller then records no list, the same
+    outcome as before round 1."""
+    passage = "\n\n".join(f"From {title}: {win}" if title else win
+                          for title, win in labeled_windows)
+    raw = llm.call(prompt.replace("{CLAIM}", claim)
+                         .replace("{PASSAGE}", passage)
+                         .replace("{REASON}", reason or ""),
+                   temperature=0.0, max_output_tokens=2048,
+                   purpose="missing_parts")
+    if not raw:
+        return None
+    obj = extract_json(raw)
+    if isinstance(obj, dict):
+        parts = _coerce_missing_parts(obj.get("missing_parts"))
+        return parts or None
+    return None
+
+
+def _parse_support(raw: str) -> Tuple[bool, str, Optional[List[str]]]:
     """
     Robustly read the support judgment, tolerating truncated/fenced JSON.
-    Returns (supported, reason).
+    Returns (supported, reason, missing_parts) — missing_parts is the judge's
+    OWN structured list (see _coerce_missing_parts), or None when the model /
+    prompt didn't provide one (the regex-fallback JSON parse below never
+    attempts to recover it — a cut-off response has no reliable list to read).
     """
     if not raw:
-        return False, "no LLM response -> treated as unsupported"
+        return False, "no LLM response -> treated as unsupported", None
     obj = extract_json(raw)
     if isinstance(obj, dict) and "supported" in obj:
-        return bool(obj["supported"]), str(obj.get("reason", "LLM support judgment"))
+        return (bool(obj["supported"]),
+                str(obj.get("reason", "LLM support judgment")),
+                _coerce_missing_parts(obj.get("missing_parts")))
     # Fallback: regex the boolean even if the JSON is cut off mid-string.
     m = re.search(r'"supported"\s*:\s*(true|false)', raw, re.IGNORECASE)
     if m:
         rmatch = re.search(r'"reason"\s*:\s*"([^"]*)', raw)
-        return m.group(1).lower() == "true", (rmatch.group(1).strip() if rmatch else "LLM support judgment")
-    return False, "LLM judgment unparseable -> treated as unsupported"
+        return (m.group(1).lower() == "true",
+                (rmatch.group(1).strip() if rmatch else "LLM support judgment"),
+                None)
+    return False, "LLM judgment unparseable -> treated as unsupported", None
 
 
 def _snippet(sentence: str, n_words: int = 7) -> str:
@@ -332,11 +511,13 @@ def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
         # argues") are only judgeable when the judge knows whose document this is.
         label = _src_label(src)
         passage = f"From {label}: {_window(sents, j)}" if label else _window(sents, j)
-        supported, reason = _parse_support(
+        # This per-source prompt has no missing_parts field; discard the slot.
+        supported, reason, _ = _parse_support(
             llm.call(_inject_date_rule(
                          prompt.replace("{CLAIM}", claim).replace("{PASSAGE}", passage),
                          passage),
-                     temperature=0.0, max_output_tokens=2048))
+                     temperature=0.0, max_output_tokens=2048,
+                     purpose="retrieval_judge"))
         if first_reason is None:
             first_reason = reason
         if supported:
@@ -346,14 +527,21 @@ def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
 
 
 def _combined_judge(claim: str, labeled_windows: List[Tuple[str, str]], llm, prompt: str,
-                    early_break: bool = True) -> Tuple[bool, str, str]:
-    """Does the union of the cited sources' best passages together support the claim?"""
+                    early_break: bool = True,
+                    purpose: str = "combined_judge"
+                    ) -> Tuple[bool, str, str, Optional[List[str]]]:
+    """Does the union of the cited sources' best passages together support the claim?
+    `purpose` is bookkeeping only (task #20): callers on other stages (partial
+    check, component rescue, arbiter rescue) pass their own tag. The 4th return
+    value is the judge's structured missing_parts (union across the negative
+    votes when the majority verdict is negative; None on a positive verdict or
+    when no negative voter provided the field) — see _vote_support."""
     passage = "\n\n".join(f"From {title}: {win}" for title, win in labeled_windows)
     return _vote_support(llm,
                          _inject_date_rule(
                              prompt.replace("{CLAIM}", claim).replace("{PASSAGE}", passage),
                              passage),
-                         early_break=early_break)
+                         early_break=early_break, purpose=purpose)
 
 
 # Fallback judgments sit on the borderline by construction (the cheap cosine path
@@ -364,25 +552,39 @@ def _combined_judge(claim: str, labeled_windows: List[Tuple[str, str]], llm, pro
 JUDGE_VOTES = 3
 
 
-def _vote_support(llm, prompt: str, early_break: bool = True) -> Tuple[bool, str, str]:
+def _vote_support(llm, prompt: str, early_break: bool = True,
+                  purpose: str = "untagged"
+                  ) -> Tuple[bool, str, str, Optional[List[str]]]:
     """Majority verdict + a matching reason + the tally ('2-0' unanimous, '2-1'
-    split). The tally is free borderline-ness signal: a 2-1 'unsupported' is a
-    close call the viewer flags for human review instead of hiding.
+    split) + the judge's structured missing_parts. The tally is free
+    borderline-ness signal: a 2-1 'unsupported' is a close call the viewer
+    flags for human review instead of hiding.
     early_break=False always casts all JUDGE_VOTES votes — for decisions that
-    need the full tally (the partial-support flag requires a UNANIMOUS negative)."""
-    votes: List[Tuple[bool, str]] = []
+    need the full tally (the partial-support flag requires a UNANIMOUS negative).
+    missing_parts: on a negative majority, the UNION (deduped, capped) of every
+    negative voter's own structured list; None when the majority is positive or
+    no negative voter supplied one — never [] purely from an absent field, so
+    callers can tell "the judge said nothing is missing" from "not provided"."""
+    votes: List[Tuple[bool, str, Optional[List[str]]]] = []
     for _ in range(JUDGE_VOTES):
         votes.append(_parse_support(
-            llm.call(prompt, temperature=0.0, max_output_tokens=4096)))
+            llm.call(prompt, temperature=0.0, max_output_tokens=4096,
+                     purpose=purpose)))
         if early_break and len(votes) == 2 and votes[0][0] == votes[1][0]:
             break
-    n_true = sum(1 for s, _ in votes if s)
+    n_true = sum(1 for s, _, _ in votes if s)
     ok = n_true * 2 > len(votes)
     tally = f"{max(n_true, len(votes) - n_true)}-{min(n_true, len(votes) - n_true)}"
-    for s, r in votes:            # report a reason matching the majority verdict
+    structured = None
+    if not ok:
+        pooled = [c for s, _, sm in votes if not s and sm for c in sm]
+        union = _dedupe_missing_parts(pooled)
+        if union:
+            structured = union
+    for s, r, _ in votes:          # report a reason matching the majority verdict
         if s == ok:
-            return ok, r, tally
-    return ok, votes[-1][1], tally
+            return ok, r, tally, structured
+    return ok, votes[-1][1], tally, structured
 
 
 # ---------- LLM full-source extraction fallback ----------
@@ -456,8 +658,41 @@ def _map_to_index(extracted: str, sents: List[Dict[str, Any]]) -> Dict[str, Any]
 # get CHEAPER as well as more reliable (top-K chunks vs the whole text).
 EXTRACT_CHUNK_WORDS = 1200
 EXTRACT_TOP_CHUNKS = 6
+# Task #50 half one, DECIDED 2026-08-20: chunk MERGING IS OFF AND STAYS OFF.
+# What it does when enabled: the fulltext-fallback call site packs consecutive
+# kept chunks into ONE extraction call up to EXTRACT_MERGE_WORDS words (~2 chunks;
+# a short tail may ride along as a 3rd), document order kept, no chunk ever
+# dropped, retry-on-empty still a single unmerged chunk. Only that call site ever
+# passes a cap — component rescue / partial check / covering audit are untouched
+# (they belong to #18/#39). Do NOT re-enable outside a benchmark arm, and do NOT
+# revisit skip-chunks rules: an offline replay of every logged run
+# (benchmarks/task50_replay/) proved winning proof sentences sit at every
+# relevance rank (gentlest rank rule loses 25/687 winners) and per-chunk
+# max-sentence cosine is >=0.60 for essentially every chunk, so score floors
+# separate nothing.
+# WHY OFF — gate-proven to cost verdicts (2026-08-19/20).
+# Two arms of the six-text gate, same code, one variable: merging ON scored
+# paper1 23/27 hard rows, merging OFF scored 25/27. Two claims flipped
+# supported->unsupported (t13 tiered-access scenario, t17 binding constraints),
+# both on this fallback path; the control arm reproduced the 8/11 task1r3
+# baseline call-for-call (2497 calls / 4,121,225 input tokens), which rules out
+# judge flakiness and master drift. Cause: the extractor is tuned on ~1200-word
+# chunks and misses the needle in a ~2400-word pack. Net effect was NEGATIVE —
+# each false unsupported pulls in a component-rescue sweep, so paper1 rose +15%
+# calls / +22% input tokens even though extraction calls fell 17% gate-wide.
+# The machinery stays dormant and measurable: PT_EXTRACT_MERGE=1 turns it on
+# (only for a benchmark arm), EXTRACT_MERGE_WORDS is the cap it then uses.
+EXTRACT_MERGE_WORDS = 2600
+EXTRACT_MERGE_ON = os.environ.get("PT_EXTRACT_MERGE", "") == "1"
 EXTRACT_LEX_CHUNKS = 2   # extra chunks rescued by LEXICAL overlap (union with the
                          # cosine top-K, never a replacement — recall can only rise)
+# Task #50 half two, DECIDED 2026-08-29 (author): BATCHED-PARTS rescue
+# extraction was built, gate-tested RED (arm task50batch, 2026-08-28: pots t4
+# lost its rescue flip + 4 paper1 display losses despite -41% rescue input
+# tokens), and REMOVED from the tree per author ruling — the full story and
+# every other dead trim idea lives in docs/DEAD_ENDS.md; the removed code is
+# recoverable at commit ebe3bd6 on branch worktree-task50-fulltext-trim.
+# Do not rebuild it without reading that doc first.
 
 
 _LEX_TOKEN_RE = re.compile(r"\d{1,3}(?:[ ,.]\d{3})+|\d+(?:[.,]\d+)?%?|[a-z]{4,}")
@@ -531,14 +766,44 @@ def _chunk_sents(sents: List[Dict[str, Any]], chunk_words: int = EXTRACT_CHUNK_W
     return chunks
 
 
+def _kept_chunk_idxs(sents: List[Dict], chunks: List[Tuple[str, List[int]]],
+                     row: Optional[List[float]], lex: List[float]) -> List[int]:
+    """Which chunk indices ONE probe text (a claim or a rescue component) reads:
+    the top EXTRACT_TOP_CHUNKS by the probe's sentence cosines, plus the lexical
+    rescue (union, never replacement): chunks holding the probe's rare tokens
+    that cosine buried (run-7 t17 class) — only chunks with a real overlap
+    qualify, a zero score adds nothing. Round-6: on huge documents the fixed
+    top-2 lexical rescue is too narrow (UNODC, ~330 chunks: the per-100,000
+    needle ranked just past it) — breadth scales with size, capped at 8 extra
+    chunks. Short sources and probes without a cosine row read everything.
+    Returned in document order."""
+    if not (row and len(row) == len(sents) and len(chunks) > EXTRACT_TOP_CHUNKS):
+        return list(range(len(chunks)))
+    ranked = sorted(range(len(chunks)),
+                    key=lambda i: -max(row[j] for j in chunks[i][1]))
+    keep = set(ranked[:EXTRACT_TOP_CHUNKS])
+    lex_ranked = sorted(range(len(chunks)),
+                        key=lambda i: -max(lex[j] for j in chunks[i][1]))
+    lex_keep = max(EXTRACT_LEX_CHUNKS, min(8, len(chunks) // 40))
+    for i in lex_ranked[:lex_keep]:
+        if max(lex[j] for j in chunks[i][1]) > 0:
+            keep.add(i)
+    return sorted(keep)
+
+
 def _extract_evidence(claim: str, pid: str, src: Dict[str, Any], llm,
                       extract_prompt: str, judge_prompt: str,
-                      row: List[float] = None) -> Dict[str, Any]:
+                      row: List[float] = None,
+                      purpose: str = "fulltext_extract",
+                      merge_words: Optional[int] = None) -> Dict[str, Any]:
     """LLM extracts verbatim supporting sentence(s) from ONE source — per ~1200-word
     chunk, not whole-document — and judges whether that source alone supports the
     claim. row = the claim's cosine per source sentence (from the candidate stage);
     when present and the source is long, only the top-EXTRACT_TOP_CHUNKS chunks by
-    max sentence cosine are read. Returns one evidence entry."""
+    max sentence cosine are read. merge_words (task #50): pack consecutive kept
+    chunks into one extraction call up to this many words — same text read, fewer
+    calls; None = one call per chunk, and only the fulltext-fallback call site
+    passes a cap. Returns one evidence entry."""
     sents = src.get("sentences", []) or []
     title = src.get("title")
     base = {"paper_id": pid, "source_title": title, "cosine": None, "via": "llm_fulltext"}
@@ -547,39 +812,51 @@ def _extract_evidence(claim: str, pid: str, src: Dict[str, Any], llm,
         return {**base, "supported": False, "sentence": None, "page": None, "snippet": "",
                 "reason": "source text empty/unreadable", "window": "", "j": -1}
     lex = _lex_scores(claim, [s.get("text", "") for s in sents])
-    if row and len(row) == len(sents) and len(chunks) > EXTRACT_TOP_CHUNKS:
-        ranked = sorted(range(len(chunks)),
-                        key=lambda i: -max(row[j] for j in chunks[i][1]))
-        keep = set(ranked[:EXTRACT_TOP_CHUNKS])
-        # Lexical rescue (union, never replacement): chunks holding the claim's
-        # rare tokens that cosine buried (run-7 t17 class). Only chunks with a
-        # real overlap qualify — a zero score adds nothing.
-        lex_ranked = sorted(range(len(chunks)),
-                            key=lambda i: -max(lex[j] for j in chunks[i][1]))
-        # Round-6: on huge documents the fixed top-2 lexical rescue is too
-        # narrow (UNODC, ~330 chunks: the per-100,000 needle ranked just past
-        # it) — scale breadth with size, capped at 8 extra chunks.
-        lex_keep = max(EXTRACT_LEX_CHUNKS, min(8, len(chunks) // 40))
-        for i in lex_ranked[:lex_keep]:
-            if max(lex[j] for j in chunks[i][1]) > 0:
-                keep.add(i)
-        chunks = [chunks[i] for i in sorted(keep)]                     # document order
+    chunks = [chunks[i] for i in _kept_chunk_idxs(sents, chunks, row, lex)]
 
     def _extract_from(text: str) -> List[str]:
         return _parse_sentences(
             llm.call(extract_prompt.replace("{CLAIM}", claim).replace("{SOURCE}", text),
-                     temperature=0.0, max_output_tokens=2048))
+                     temperature=0.0, max_output_tokens=2048, purpose=purpose))
 
-    extracted = [e for text, _ in chunks for e in _extract_from(text)]
+    texts = [text for text, _ in chunks]
+    if merge_words and len(texts) > 1:
+        # Task #50 merge: pack consecutive kept chunks (document order preserved)
+        # into one call up to merge_words words. Never drops text — the extractor
+        # reads exactly the union it read before, in fewer calls. Kept chunks may
+        # be non-adjacent after the long-doc cap; the blank line marks the seam.
+        packed, cur, words = [], [], 0
+        for t in texts:
+            w = len(t.split())
+            if cur and words + w > merge_words:
+                packed.append("\n\n".join(cur)); cur, words = [], 0
+            cur.append(t); words += w
+        if cur:
+            packed.append("\n\n".join(cur))
+        texts = packed
+    extracted = [e for text in texts for e in _extract_from(text)]
     if not extracted and chunks:
         # A legitimately-empty answer and a flaky/truncated one look identical; one
         # retry on the most relevant chunk recovers the variance cases cheaply.
+        # Deliberately a SINGLE unmerged chunk — the benchmarked needle size.
         extracted = _extract_from(chunks[0][0])
     if not extracted:
         return {**base, "supported": False, "sentence": None, "page": None, "snippet": "",
                 "reason": "LLM found no sentence in the full source supporting the claim",
                 "window": "", "j": -1}
 
+    return _judge_extracted(claim, src, sents, base, llm, judge_prompt,
+                            extracted, row, lex, purpose)
+
+
+def _judge_extracted(claim: str, src: Dict[str, Any], sents: List[Dict],
+                     base: Dict[str, Any], llm, judge_prompt: str,
+                     extracted: List[str], row: Optional[List[float]],
+                     lex: List[float], purpose: str) -> Dict[str, Any]:
+    """Post-extraction half of the full-text probe (_extract_evidence): map the
+    extracted strings to source sentences, apply the quality/membership gates,
+    rank and cap, build the judged window, and vote. `extracted` must be
+    non-empty."""
     mapped = [_map_to_index(e, sents) for e in extracted]
     # Evidence-quality gate (paper1 audit): drop fragments ("."), and drop
     # extractions that do NOT exist in the source but closely mirror the claim —
@@ -613,7 +890,7 @@ def _extract_evidence(claim: str, pid: str, src: Dict[str, Any], llm,
             return True                     # verbatim quote (spacing-insensitive)
         if _unsourced_claim_fragment(m["text"], claim, full_loose, full_chars):
             logger.info("membership gate: dropped unsourced claim-fragment "
-                        "extraction from %s: %.90r", pid, m["text"])
+                        "extraction from %s: %.90r", base["paper_id"], m["text"])
             return False
         return True                         # honest non-verbatim condensation
 
@@ -653,13 +930,15 @@ def _extract_evidence(claim: str, pid: str, src: Dict[str, Any], llm,
     window = " ".join(parts)
     label = _src_label(src)
     passage = f"From {label}: {window}" if label else window
-    supported, reason, votes = _vote_support(
+    supported, reason, votes, structured = _vote_support(
         llm, _inject_date_rule(
             judge_prompt.replace("{CLAIM}", claim).replace("{PASSAGE}", passage),
-            passage))
+            passage),
+        purpose=purpose)
     primary = mapped[0]
     return {**base, "supported": supported, "sentence": primary["text"], "page": primary["page"],
             "snippet": _snippet(primary["text"]), "reason": reason, "votes": votes,
+            "missing_parts": structured,
             "window": window, "j": primary["j"]}
 
 
@@ -950,6 +1229,21 @@ def _missing_components(reason: str) -> List[str]:
     return []
 
 
+def _missing_from(structured: Optional[List[str]], reason: str) -> List[str]:
+    """The missing-component list for a negative combined judgment: the judge's
+    OWN structured `missing_parts` (2026-08-06) when it named at least one
+    component, else the regex fallback over its free-text reason. structured
+    is None (field absent/unparseable) or a non-empty list by construction
+    (see _vote_support) — but note the asymmetry callers rely on: a judge that
+    returned an EXPLICIT empty list on a negative verdict named nothing, and
+    that is weaker evidence than a real regex hit, so it still falls back —
+    behavior can only ever match or improve on the pre-structured regex-only
+    path, never regress it."""
+    if structured:
+        return structured
+    return _missing_components(reason)
+
+
 def _claim_names_source(claim: str, src: Dict[str, Any]) -> bool:
     """Does the claim text explicitly attribute to this source (by author name)?
     Cheap surname probe from the citation key ('drago2025' -> 'drago')."""
@@ -997,7 +1291,8 @@ def _partial_flags(claim: str, pids: List[str], sources: Dict[str, Dict],
     if not round1:
         return {}
     labeled = round1
-    ok, reason, votes = _combined_judge(claim, [(t, w) for _, t, w in round1], llm, prompt)
+    ok, reason, votes, structured = _combined_judge(claim, [(t, w) for _, t, w in round1],
+                                                     llm, prompt, purpose="partial_check")
     escalated = False
     if not ok:
         round2 = [x for x in (entry(pid, esc_context(pid, claim))
@@ -1008,8 +1303,9 @@ def _partial_flags(claim: str, pids: List[str], sources: Dict[str, Dict],
             # alarms), so the deciding round casts ALL votes and only a UNANIMOUS
             # negative flags; a split negative is borderline judge noise
             # (flash-lite flips borderline verdicts at temp 0), not a finding.
-            ok, reason, votes = _combined_judge(claim, [(t, w) for _, t, w in round2],
-                                                llm, prompt, early_break=False)
+            ok, reason, votes, structured = _combined_judge(
+                claim, [(t, w) for _, t, w in round2], llm, prompt,
+                early_break=False, purpose="partial_check")
             escalated = True
     if not ok:
         unanimous = votes.endswith("-0")
@@ -1029,7 +1325,10 @@ def _partial_flags(claim: str, pids: List[str], sources: Dict[str, Dict],
         # cited source contains it; all named components supported -> the flag
         # refuted itself, drop it. A genuinely absent component (the real t69
         # class) survives the probe unchanged.
-        comps = _missing_components(reason) if escalated else []
+        # 2026-08-06: the judge's own structured missing_parts (when it named
+        # at least one) now outranks the reason-text regex; the regex stays as
+        # the fallback for models/prompts/cached payloads without the field.
+        comps = _missing_from(structured, reason) if escalated else []
         def _comp_supported(comp: str) -> bool:
             live = [pid for pid in pids if sources.get(pid) is not None]
             if extract_check is not None:
@@ -1037,7 +1336,8 @@ def _partial_flags(claim: str, pids: List[str], sources: Dict[str, Dict],
             targeted = [x for x in (entry(pid, esc_context(pid, comp)) for pid in live) if x]
             if not targeted:
                 return False
-            return _combined_judge(comp, [(t, w) for _, t, w in targeted], llm, prompt)[0]
+            return _combined_judge(comp, [(t, w) for _, t, w in targeted], llm, prompt,
+                                   purpose="partial_check")[0]
         comp_missing = [c for c in comps if not _comp_supported(c)]
         if comps and not comp_missing:
             return {}
@@ -1070,7 +1370,8 @@ def _partial_flags(claim: str, pids: List[str], sources: Dict[str, Dict],
         rest = [(t, w) for p2, t, w in labeled if p2 != pid]
         if not rest:
             continue
-        sup, _, tally = _combined_judge(claim, rest, llm, prompt, early_break=False)
+        sup, _, tally, _ = _combined_judge(claim, rest, llm, prompt, early_break=False,
+                                           purpose="partial_check")
         if sup and tally.endswith("-0"):
             over.append({"paper_id": pid,
                          "source_title": (sources.get(pid) or {}).get("title")})
@@ -1085,7 +1386,8 @@ def _split_components(claim_text: str, llm, split_prompt: str) -> List[str]:
     Returns [] on any failure — the caller falls back to the regex."""
     try:
         obj = extract_json(llm.call(split_prompt.replace("{CLAIM}", claim_text),
-                                    temperature=0.0, max_output_tokens=512) or "")
+                                    temperature=0.0, max_output_tokens=512,
+                                    purpose="component_check") or "")
         comps = obj.get("components") if isinstance(obj, dict) else None
         if not isinstance(comps, list):
             return []
@@ -1097,7 +1399,8 @@ def _split_components(claim_text: str, llm, split_prompt: str) -> List[str]:
 def _component_rescue(claim_text: str, pids: List[str], sources: Dict[str, Dict],
                       llm, extract_prompt: str, combined_prompt: str,
                       reason: str, base_windows: List[Tuple[str, str]],
-                      adhoc_row=None, split_prompt: str = None) -> Dict[str, Any]:
+                      adhoc_row=None, split_prompt: str = None,
+                      structured_missing: Optional[List[str]] = None) -> Dict[str, Any]:
     """False-unsupported rescue (owner walkthrough t23): a multi-component claim
     whose support is SPREAD across a source fails every single-window judgment —
     the judge names one component as missing while the others crowd it out of the
@@ -1106,14 +1409,17 @@ def _component_rescue(claim_text: str, pids: List[str], sources: Dict[str, Dict]
     whole claim on the union of the original windows + the per-component
     evidence. Since round 6 the component list comes from a real LLM split of
     the claim (ALL components probed, not just the judge-named ones — the
-    all-found bar then actually means every part); the reason-regex is the
-    fallback when the split fails. Flipping unsupported->supported manufactures
-    the worst FP class, so the flip requires a UNANIMOUS all-votes positive.
+    all-found bar then actually means every part); this split STAYS primary.
+    Only when the split fails does the fallback slot run: the judge's own
+    structured missing_parts (2026-08-06, `structured_missing` — the list
+    paired with `reason`) when it named at least one, else the reason-text
+    regex. Flipping unsupported->supported manufactures the worst FP class, so
+    the flip requires a UNANIMOUS all-votes positive.
     Returns None (nothing parseable / nothing found) or
     {"flip", "found", "missing", "evidence", ["reason", "votes"]}."""
     comps = _split_components(claim_text, llm, split_prompt) if split_prompt else []
     if not comps:
-        comps = _missing_components(reason)
+        comps = _missing_from(structured_missing, reason)
     if not comps:
         return None
     found, missing, comp_evs = [], [], []
@@ -1125,7 +1431,8 @@ def _component_rescue(claim_text: str, pids: List[str], sources: Dict[str, Dict]
                 continue
             row = adhoc_row(pid, comp) if adhoc_row is not None else None
             e = _extract_evidence(comp, pid, src, llm, extract_prompt,
-                                  combined_prompt, row=row)
+                                  combined_prompt, row=row,
+                                  purpose="component_rescue")
             if e and e.get("supported"):
                 ev = e
                 break
@@ -1145,8 +1452,9 @@ def _component_rescue(claim_text: str, pids: List[str], sources: Dict[str, Dict]
     windows = list(base_windows) + [(e["source_title"], e["window"])
                                     for e in comp_evs
                                     if e["window"] not in seen]
-    ok, new_reason, votes = _combined_judge(claim_text, windows, llm,
-                                            combined_prompt, early_break=False)
+    ok, new_reason, votes, _ = _combined_judge(claim_text, windows, llm,
+                                               combined_prompt, early_break=False,
+                                               purpose="component_rescue")
     if ok and votes.endswith("-0"):
         return {"flip": True, "found": found, "missing": [],
                 "evidence": comp_evs, "reason": new_reason, "votes": votes}
@@ -1282,7 +1590,8 @@ def _covering_set(claim: str, pids: List[str], sources: Dict[str, Dict], row_for
         lines.append(f"[{i}]{label} {c['text']}")
     raw = llm.call(prompt.replace("{CLAIM}", claim)
                          .replace("{CANDIDATES}", "\n".join(lines)),
-                   temperature=0.0, max_output_tokens=2048)
+                   temperature=0.0, max_output_tokens=2048,
+                   purpose="covering_audit")
     cov = _parse_covering(raw, cands)
     if cov and cov["uncovered"] and probe is not None:
         still = list(cov["uncovered"][COVER_ESCALATE_MAX:])
@@ -1542,7 +1851,8 @@ def _pick_verify_call(claim: str, parts: List[str],
                                              else "  (no picked sentence)"))
     raw = llm.call(prompt.replace("{CLAIM}", claim)
                          .replace("{PICKS}", "\n".join(blocks)),
-                   temperature=0.0, max_output_tokens=2048)
+                   temperature=0.0, max_output_tokens=2048,
+                   purpose="covering_audit")
     return _parse_pick_verify(raw, parts, len(covered))
 
 
@@ -1760,6 +2070,7 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                 "evidences": [], "used": [], "votes": None}
 
     combined_votes = None            # tally of the multi-source combined judge, if it ran
+    structured_missing = None        # judge-structured missing_parts paired with `reason`
     ents, subj_missing = [], {}      # entity-guard state (fulltext paths only)
     supported_entries = [e for e in evidences if e["supported"]]
     if supported_entries:
@@ -1772,7 +2083,9 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
         # supporting sentence(s), and re-judge. Applies to single- AND multi-source claims.
         fb = [e for e in (_extract_evidence(claim_text, pid, sources[pid], llm,
                                             extract_prompt, combined_prompt,
-                                            row=row_for(pid))
+                                            row=row_for(pid),
+                                            merge_words=(EXTRACT_MERGE_WORDS
+                                                         if EXTRACT_MERGE_ON else None))
                           for pid in pids if sources.get(pid) is not None) if e]
         if fb:
             # Show the LLM-found sentences, not cosine's — but when extraction
@@ -1823,7 +2136,7 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
             used = fb_supported
         elif len(with_sentence) >= 2 and not _union_missing(with_sentence):
             # No single source suffices, but several are on-topic -> do they TOGETHER support it?
-            ok, reason, votes = _combined_judge(claim_text,
+            ok, reason, votes, structured_missing = _combined_judge(claim_text,
                                                 [(_src_label(sources.get(e["paper_id"])) or e["source_title"],
                                                   e["window"]) for e in with_sentence],
                                                 llm, combined_prompt)
@@ -1840,8 +2153,10 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
             used = []
         else:
             verdict, method = "unsupported", "llm_fulltext"
-            reason = (with_sentence[0]["reason"] if with_sentence
-                      else (fb[0]["reason"] if fb else "no supporting sentence found in any cited source"))
+            primary_fb = with_sentence[0] if with_sentence else (fb[0] if fb else None)
+            reason = (primary_fb["reason"] if primary_fb
+                      else "no supporting sentence found in any cited source")
+            structured_missing = primary_fb.get("missing_parts") if primary_fb else None
             used = []
 
     component_check = None
@@ -1857,7 +2172,8 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                 if e.get("window")]
         rescue = _component_rescue(claim_text, pids, sources, llm, extract_prompt,
                                    combined_prompt, reason, base, adhoc_row=adhoc_row,
-                                   split_prompt=split_prompt)
+                                   split_prompt=split_prompt,
+                                   structured_missing=structured_missing)
         if rescue is not None:
             comp_evs = [{**e, "via": "component_rescue"} for e in rescue["evidence"]]
             component_check = {"found": rescue["found"],
@@ -1889,6 +2205,13 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
            "evidences": evidences, "used": used, "votes": combined_votes}
     if verdict == "unsupported" and _failed_calls(llm) > fails_before:
         out["judge_error"] = True
+    # Round 1 of structured missing-parts (2026-08-06): additive only, nothing
+    # reads it yet (round 2). `structured_missing` is the list paired with the
+    # `reason` that produced the FINAL unsupported verdict — a component
+    # rescue that flips the verdict to supported leaves it stale, so it is
+    # only recorded when the claim is still unsupported here.
+    if verdict == "unsupported" and structured_missing:
+        out["judge_missing_parts"] = structured_missing
     if subj_missing:
         # Consumed by arbiter.rescue: a rescue must never re-buy a positive
         # from a source that does not name the claim's entities.
@@ -1970,7 +2293,7 @@ ALTERNATIVES_PER_CLAIM = 3
 
 def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1,
         emb_cache_dir: str = None, reuse: Dict[str, Dict] = None,
-        partial_check: bool = False) -> Dict[str, Any]:
+        partial_check: bool = False, checkpoint=None) -> Dict[str, Any]:
     """
     text_claims: [{id, text, markers, paper_ids}]
     sources:     {paper_id: {title, sentences:[{text,page}], claims:[...], ...}}
@@ -1999,6 +2322,7 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
     covering_prompt = _load_covering_prompt()
     pick_verify_prompt = _load_prompt("pt_pick_verify_prompt.txt")
     component_split_prompt = _load_prompt("pt_component_split_prompt.txt")
+    missing_parts_prompt = _load_prompt("pt_missing_parts_prompt.txt")
 
     # Tail-rescue suffixes: for every multi-sentence cited claim, precompute the
     # last-k-sentence texts as pseudo-claims so their cosine rows are built here
@@ -2138,7 +2462,8 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
             if src is None:
                 return False
             e = _extract_evidence(text, pid, src, llm, extract_prompt,
-                                  combined_prompt, row=adhoc_rows(pid, text)[1])
+                                  combined_prompt, row=adhoc_rows(pid, text)[1],
+                                  purpose="partial_check")
             return bool(e and e.get("supported"))
 
         def comp_hunt(comps: List[str]) -> List[Dict[str, Any]]:
@@ -2173,10 +2498,19 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                                 "searched": min(len(scored), COMPONENT_HUNT_SOURCES)})
             return results
 
-        out.update(_partial_flags(judged_text, pids, sources,
-                                  out.get("evidences") or [], llm, combined_prompt,
-                                  esc_context=esc_ctx, extract_check=extract_check,
-                                  comp_hunt=comp_hunt))
+        fails_before = _failed_calls(llm)
+        flags = _partial_flags(judged_text, pids, sources,
+                               out.get("evidences") or [], llm, combined_prompt,
+                               esc_context=esc_ctx, extract_check=extract_check,
+                               comp_hunt=comp_hunt)
+        if _note_check_failure(out, "partial_check", llm, fails_before):
+            # A dead call votes "no" in _combined_judge/_extract_evidence, so
+            # a flag minted during failures may be pure outage noise (the
+            # 2026-08-06 chimpanzee run: 7 phantom "partial support?" chips
+            # from 233 refused calls). Drop it; `partial_checked` stays unset
+            # so a re-run redoes this check.
+            return
+        out.update(flags)
         out["partial_checked"] = True
 
     covering_on_reuse: List[str] = []  # reused claims whose coverage pass ran this run
@@ -2221,6 +2555,7 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                 return r
             return row_for(pid, tc["id"])
 
+        fails_before = _failed_calls(llm)
         try:
             cov = _covering_set(judged_text, tc.get("paper_ids", []), sources,
                                 row_fn, out.get("evidences") or [], llm,
@@ -2232,7 +2567,15 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                                                sources)
         except Exception as ex:
             logger.warning(f"covering-set pass failed for {tc['id']}: {ex}")
-        out["covering_checked"] = True
+        if _note_check_failure(out, "covering", llm, fails_before):
+            # A failed escalation probe reads as "no proof found" and would
+            # paint a phantom amber "no evidence shown for: X" line; a failed
+            # main call would silently hide real gaps. Either way the block is
+            # untrustworthy — drop it; `covering_checked` stays unset so a
+            # re-run rebuilds it.
+            out.pop("covering", None)
+        else:
+            out["covering_checked"] = True
         _set_proof_state(out)
 
     def _make_cover_probe(tc: Dict):
@@ -2247,7 +2590,8 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                     continue
                 e = _extract_evidence(part, pid, src, llm, extract_prompt,
                                       combined_prompt,
-                                      row=adhoc_rows(pid, part)[1])
+                                      row=adhoc_rows(pid, part)[1],
+                                      purpose="covering_audit")
                 if e and e.get("supported") and e.get("sentence"):
                     return {"component": part, "paper_id": pid,
                             "source_title": e.get("source_title"),
@@ -2305,7 +2649,16 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                 if cov and not cov.get("pick_verified"):
                     # Cache predates the round-5 pick-verify audit: buy it
                     # once (one call); `pick_verified` carries it forward.
+                    # The audit edits `cov` in place, and its escalation
+                    # probes read a dead call as "no proof" — snapshot first
+                    # so an outage restores the untouched block (task #37).
+                    cov_before = copy.deepcopy(cov)
+                    fails_before = _failed_calls(llm)
                     _pick_verify(out, tc, _judged_text(out, tc))
+                    if _note_check_failure(out, "covering_verify", llm,
+                                           fails_before):
+                        out["covering"] = cov = cov_before
+                        cov.pop("pick_verified", None)
                     cov["spans"] = _covering_spans(cov, tc.get("paper_ids", []),
                                                    sources)
                     verify_on_reuse.append(tc["id"])
@@ -2403,6 +2756,22 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
             out["byline_inferred"] = True
         if res.get("component_check"):
             out["component_check"] = res["component_check"]
+        if res.get("judge_missing_parts"):
+            out["judge_missing_parts"] = res["judge_missing_parts"]
+        # Round 3 (2026-08-11): the missing-parts list comes from one follow-up
+        # call made only now that the verdict is final — a supported or
+        # tail-rescued claim never pays it, and a rejection with no judged
+        # windows (missing source file) gets no list, as before round 1. The
+        # judge-supplied field above still wins when a custom prompt or cached
+        # payload provided one.
+        if verdict == "unsupported" and not out.get("judge_missing_parts"):
+            wins = [(e.get("source_title") or "", e["window"])
+                    for e in evidences if e.get("window")]
+            if wins:
+                followup = _missing_parts_followup(tc["text"], wins, reason,
+                                                   llm, missing_parts_prompt)
+                if followup:
+                    out["judge_missing_parts"] = followup
         if res.get("subject_guard"):
             out["subject_guard"] = res["subject_guard"]
         if res.get("judge_error"):
@@ -2444,6 +2813,10 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
 
     def _process_with_progress(tc: Dict) -> Tuple[Dict, set]:
         r = process_claim(tc)
+        # Save-as-you-go journal (checkpoint.py): the finished record hits the
+        # disk before the counter moves, so a power cut never loses it.
+        if checkpoint is not None:
+            checkpoint(r[0])
         with _done_lock:
             _done["n"] += 1
             n = _done["n"]

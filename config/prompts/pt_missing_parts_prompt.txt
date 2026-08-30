@@ -1,0 +1,19 @@
+A claim from a piece of writing was checked against passages from its cited source(s), and the verdict is already final: NOT fully supported. Your only job is to name what is missing. You are not re-judging the claim — the verdict cannot change here.
+
+CLAIM:
+{CLAIM}
+
+PASSAGES FROM THE CITED SOURCE(S):
+{PASSAGE}
+
+THE VERDICT'S STATED REASON:
+{REASON}
+
+List every substantive component of the CLAIM that is absent from or contradicted by the passages:
+- Restate each one as a short self-contained assertion of that part of the claim (resolve pronouns; it must be understandable on its own) — never a quote from the passages.
+- List only factual components of the claim itself (facts, numbers, named entities, attributions, qualifiers) — never the writer's own framing, transitions, definitions, or opinions.
+- Each missing fact appears exactly ONCE: never restate the same fact in different words (e.g. once with "appears to be" and once with "is"), and never add explanations in parentheses — the assertion alone.
+- At most 4 — merge the least separable ones.
+
+Return ONLY a JSON object, no commentary:
+{"missing_parts": ["<short self-contained assertion>", ...]}

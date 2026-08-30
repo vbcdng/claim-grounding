@@ -80,15 +80,19 @@ def fix_claim(analysis: Dict[str, Any], sources: Dict[str, Dict], llm,
     rewrite_prompt = matcher._load_prompt("pt_rewrite_claim_prompt.txt")
     obj = llm.call_json(rewrite_prompt.replace("{CLAIM}", tc["text"])
                         .replace("{PASSAGES}", joined),
-                        temperature=0.2, max_output_tokens=2048)
+                        temperature=0.2, max_output_tokens=2048,
+                        purpose="claim_fix", claim_id=claim_id)
     if not isinstance(obj, dict) or not (obj.get("rewritten") or "").strip():
         raise RuntimeError("the rewrite call returned no usable JSON — try again")
     rewritten = obj["rewritten"].strip()
 
     # Verify the rewrite the same way the pipeline judges claims (majority vote).
     judge_prompt = matcher._load_prompt("pt_combined_judgment_prompt.txt")
-    supported, reason, _votes = matcher._vote_support(
-        llm, judge_prompt.replace("{CLAIM}", rewritten).replace("{PASSAGE}", joined))
+    # _vote_support now also returns the judge's structured missing_parts
+    # (2026-08-06); the fixer doesn't use it here, so it's dropped.
+    supported, reason, _votes, _missing_parts = matcher._vote_support(
+        llm, judge_prompt.replace("{CLAIM}", rewritten).replace("{PASSAGE}", joined),
+        purpose="claim_fix")
 
     tc["fix_suggestion"] = {
         "text": rewritten,

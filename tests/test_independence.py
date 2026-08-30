@@ -19,7 +19,7 @@ class FakeLLM:
         self.model = model
         self.calls = 0
 
-    def call(self, prompt, temperature=0.0, max_output_tokens=512):
+    def call(self, prompt, temperature=0.0, max_output_tokens=512, **kwargs):
         self.calls += 1
         self.last_prompt = prompt
         return self.response

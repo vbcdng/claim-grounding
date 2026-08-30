@@ -303,6 +303,19 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
                       'sources. Re-running the same command retries just these '
                       'claims.">⚠ not fully judged — API failed</span>')
 
+    # An extra check (partial support, covering set, …) overlapped failed
+    # model calls: its output was dropped instead of shown (a dead call reads
+    # as a "no" and would fabricate warnings). A plain re-run redoes it.
+    if c.get("checks_failed"):
+        names = ", ".join(str(n).replace("_", " ") for n in c["checks_failed"])
+        vis_chips += (f'<span class="jechip" title="the model API stopped '
+                      f'responding while this claim\'s extra check(s) ran '
+                      f'({_esc(names)}) — their result was dropped rather than '
+                      f'shown, because a failed request reads as a &quot;no&quot; '
+                      f'and would invent warnings. Re-running the same command '
+                      f'redoes just these checks.">⚠ check not run — API '
+                      f'failed</span>')
+
     # ---------- lead-in split (tail_rescue) ----------
     rescue = c.get("tail_rescue") or {}
     if verdict == "supported" and rescue.get("supported"):
@@ -949,6 +962,26 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
         warn_html = (f'<div class="warnbanner"><b>⚠ {len(marker_errors)} input warning(s)</b>'
                      f' — cited sources that could not be used (their claims show as'
                      f' unsupported):<ul>{items}</ul></div>')
+    # Task #37 — outage honesty: a run during which model requests failed must
+    # never look like a healthy run. Same banner as viewer.py.
+    lf = analysis.get("metadata", {}).get("llm_failures") or {}
+    lf_affected = lf.get("claims_affected")
+    if lf_affected is None:
+        lf_affected = [c.get("id") for c in analysis.get("text_claims", [])
+                       if c.get("judge_error") or c.get("checks_failed")]
+    if lf.get("failed_calls") or lf_affected:
+        n_fail = lf.get("failed_calls")
+        head = (f"⚠ {n_fail} request(s) to the model failed during this run"
+                if n_fail else "⚠ Model requests failed during this run")
+        ids = ", ".join(_esc(str(i)) for i in lf_affected[:12])
+        more = "…" if len(lf_affected) > 12 else ""
+        detail = (f' {len(lf_affected)} claim(s) could not be fully checked '
+                  f'(marked on their cards): {ids}{more}.' if lf_affected else "")
+        warn_html += (f'<div class="warnbanner"><b>{head}</b> — a rate limit, '
+                      f'quota, or outage.{detail} A rejected verdict or a missing '
+                      f'warning on those claims may be caused by the failed '
+                      f'requests, not by the sources. Re-running the same command '
+                      f'retries exactly the affected claims.</div>')
 
     st_json = json.dumps(source_texts, ensure_ascii=False).replace("</", "<\\/")
     # SAME derivation as v1 -> same RUN_ID -> shared review marks between viewers.

@@ -31,7 +31,7 @@ class FakeLLM:
     def _normalize_model(model):
         return model if model and "/" in model else f"gemini/{model or 'x'}"
 
-    def call(self, prompt, temperature=0.1, max_output_tokens=8000):
+    def call(self, prompt, temperature=0.1, max_output_tokens=8000, **kwargs):
         return self.ping_response
 
 

@@ -584,6 +584,18 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                  'command retries just these claims.">⚠ not fully judged — API '
                  'failed</span>')
 
+    # An extra check (partial support, covering set, …) overlapped failed
+    # model calls: its output was dropped instead of shown (a dead call reads
+    # as a "no" and would fabricate warnings). A plain re-run redoes it.
+    if c.get("checks_failed"):
+        names = ", ".join(str(n).replace("_", " ") for n in c["checks_failed"])
+        chip += (f'<span class="jechip" title="the model API stopped responding '
+                 f'while this claim\'s extra check(s) ran ({_esc(names)}) — their '
+                 f'result was dropped rather than shown, because a failed request '
+                 f'reads as a &quot;no&quot; and would invent warnings. Re-running '
+                 f'the same command redoes just these checks.">⚠ check not run — '
+                 f'API failed</span>')
+
     # Second opinion (--second-opinion): a different model re-read the same
     # evidence. Disagreement is a FLAG, never a veto — the verdict stands, the
     # chip + note send the human to the evidence.
@@ -646,6 +658,35 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                      f'verified verbatim:{res_quotes}'
                      f'{_esc(ab.get("why") or "")} The flag was cleared; the '
                      f'verdict was always supported.</div>')
+        elif verdict == "unsupported" and c.get("proof_state") == "partial_from_arbiter" \
+                and (c.get("arbiter_partial") or {}).get("badge"):
+            # "Partly proven" (task #1 step 3, design in
+            # docs/FINDING1_PARTIAL_FROM_ARBITER_DESIGN.md): the arbiter's
+            # gate-verified quotes prove a CORE part of this rejected claim,
+            # with at least one part still unproven. Display-only — the card
+            # stays counted Unsupported; slate, deliberately distinct from the
+            # supported-side amber (opposite reader reactions).
+            apm = c["arbiter_partial"]
+            proofs_list = ab.get("proofs") or []
+            rows = ""
+            for p in apm.get("parts") or []:
+                if p.get("proven_by"):
+                    qs = "".join(f'<div class="ab-quote">&ldquo;{_esc(proofs_list[i - 1])}&rdquo;</div>'
+                                 for i in p["proven_by"] if 0 < i <= len(proofs_list))
+                    rows += (f'<div class="pp-part proven">✔ <b>{_esc(p.get("part") or "")}</b> '
+                             f'<span class="pp-cent">({_esc(p.get("centrality") or "")}, proven)</span>{qs}</div>')
+                else:
+                    rows += (f'<div class="pp-part gap">✘ {_esc(p.get("part") or "")} '
+                             f'<span class="pp-cent">(not proven)</span></div>')
+            chip += ('<span class="pparbchip" title="this claim stays unsupported, but the '
+                     'arbiter holds word-for-word verified source quotes proving a central '
+                     'part of it — open the card to see which parts are proven">'
+                     '◐ partly proven</span>')
+            note += (f'<div class="pparb-note">◐ Partly proven ({ab_model}): this claim is '
+                     f'counted unsupported — not every part is proven — but the quotes below '
+                     f'passed a word-for-word check against the cited source and prove the '
+                     f'marked parts. {_esc(apm.get("why") or "")}{rows}'
+                     f'The verdict above is unchanged — read the unproven parts and decide.</div>')
         elif verdict == "unsupported" and ab["action"] == "wrong_or_insufficient_evidence" \
                 and ab.get("proofs"):
             chip += ('<span class="abchip fetch" title="the arbiter found verbatim '
@@ -704,6 +745,10 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
     # variant itself is computed above (badge_cls).
     partly_cls = (" partlyproven" if verdict == "supported"
                   and c.get("proof_state") == "partial" else "")
+    # "Partly proven" card class (unsupported side) feeds its own filter chip.
+    if verdict == "unsupported" and c.get("proof_state") == "partial_from_arbiter" \
+            and (c.get("arbiter_partial") or {}).get("badge"):
+        partly_cls += " partlyarb"
     # Citation-scope card class feeds the "Scoped citation" filter chip; the
     # badge/chip/note themselves are computed above.
     scoped_cls = (" scoped" if verdict == "unsupported"
@@ -936,7 +981,7 @@ def _omitted_card(o: Dict[str, Any], fname_map: Dict[str, str], source_texts: Di
     meta = _esc(o.get('source_title') or '') + rel_str
     return f"""
       <div class="card omitted">
-        <div class="card-head"><span class="badge omitted">OMITTED</span><span class="meta">{meta} {plink}</span></div>
+        <div class="card-head"><span class="badge omitted">UNUSED</span><span class="meta">{meta} {plink}</span></div>
         <div class="card-claim">{_esc(o['text'])}</div>
         {quote_html}
         {actions_html}
@@ -978,6 +1023,10 @@ def _review_data(analysis: Dict[str, Any], claims: list, out_dir: str) -> Dict[s
                              "proofs": (c.get("arbiter") or {}).get("proofs") or [],
                              "conflict": (c.get("arbiter") or {}).get("conflict")}
                             if (c.get("arbiter") or {}).get("action") else None),
+                "arbiter_partial": ({"badge": c["arbiter_partial"].get("badge"),
+                                     "parts": c["arbiter_partial"].get("parts") or [],
+                                     "why": c["arbiter_partial"].get("why") or ""}
+                                    if c.get("arbiter_partial") else None),
                 "component_check": c.get("component_check") or None,
                 "covering": ({"uncovered": (c.get("covering") or {}).get("uncovered") or [],
                               "common_knowledge": (c.get("covering") or {}).get("common_knowledge") or []}
@@ -1329,6 +1378,16 @@ function buildBrief() {
         L.push('Conflicting evidence (verified): "' + c.arbiter.conflict.sentence + '" — '
                + (c.arbiter.conflict.why || ''));
     }
+    if (c.arbiter_partial && c.arbiter_partial.badge)
+      L.push('Partly proven (still counted unsupported): '
+             + (c.arbiter_partial.why || '')
+             + ' Proven parts: '
+             + c.arbiter_partial.parts.filter(function(p) { return p.proven_by && p.proven_by.length; })
+                 .map(function(p) { return p.part + ' (' + p.centrality + ')'; }).join(' / ')
+             + '. Unproven parts: '
+             + c.arbiter_partial.parts.filter(function(p) { return !p.proven_by || !p.proven_by.length; })
+                 .map(function(p) { return p.part; }).join(' / ')
+             + '. Rewrite down to the proven parts, or source the unproven ones.');
     if (c.over_citation && c.over_citation.sources && c.over_citation.sources.length)
       L.push('Possible over-citation: ' + c.over_citation.sources.join(', ')
              + ' — the other cited sources already cover the claim and this one does not back '
@@ -1602,6 +1661,14 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
                   f'supported whose shown sentences do not prove every component — the amber '
                   f'line on the card names the unproven part">Not proven as written ({n_partly})</button>'
                   if n_partly else "")
+    n_pparb = sum(1 for c in claims if c["verdict"] == "unsupported"
+                  and c.get("proof_state") == "partial_from_arbiter"
+                  and (c.get("arbiter_partial") or {}).get("badge"))
+    pparb_btn = (f'<button class="fbtn pparbf" data-f="partlyarb" title="claims counted '
+                 f'unsupported where the arbiter holds word-for-word verified quotes '
+                 f'proving a central part — the card lists proven and unproven parts">'
+                 f'Partly proven ({n_pparb})</button>'
+                 if n_pparb else "")
     n_partial = sum(1 for c in claims if c.get("partial_support"))
     partial_btn = (f'<button class="fbtn partial" data-f="partial" title="multi-citation claims '
                    f'judged supported, but a specific component was in none of the cited '
@@ -1644,6 +1711,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
         <button class="fbtn" data-f="supported">Supported ({n_sup})</button>
         {partly_btn}
         <button class="fbtn" data-f="unsupported">Unsupported ({n_uns})</button>
+        {pparb_btn}
         {scoped_btn}
         <button class="fbtn" data-f="own">Your own ({n_own})</button>
         {conf_btns}
@@ -1763,6 +1831,27 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
         warn_html = (f'<div class="warnbanner"><b>⚠ {len(marker_errors)} input warning(s)</b>'
                      f' — cited sources that could not be used (their claims show as'
                      f' unsupported):<ul>{items}</ul></div>')
+    # Task #37 — outage honesty: a run during which model requests failed must
+    # never look like a healthy run. The count comes from metadata.llm_failures
+    # (new runs) with a claim-scan fallback for result files from older runs.
+    lf = analysis.get("metadata", {}).get("llm_failures") or {}
+    lf_affected = lf.get("claims_affected")
+    if lf_affected is None:
+        lf_affected = [c.get("id") for c in analysis.get("text_claims", [])
+                       if c.get("judge_error") or c.get("checks_failed")]
+    if lf.get("failed_calls") or lf_affected:
+        n_fail = lf.get("failed_calls")
+        head = (f"⚠ {n_fail} request(s) to the model failed during this run"
+                if n_fail else "⚠ Model requests failed during this run")
+        ids = ", ".join(_esc(str(i)) for i in lf_affected[:12])
+        more = "…" if len(lf_affected) > 12 else ""
+        detail = (f' {len(lf_affected)} claim(s) could not be fully checked '
+                  f'(marked on their cards): {ids}{more}.' if lf_affected else "")
+        warn_html += (f'<div class="warnbanner"><b>{head}</b> — a rate limit, '
+                      f'quota, or outage.{detail} A rejected verdict or a missing '
+                      f'warning on those claims may be caused by the failed '
+                      f'requests, not by the sources. Re-running the same command '
+                      f'retries exactly the affected claims.</div>')
     # Embed text sources so "Open source text" can build the new tab with no server.
     st_json = json.dumps(source_texts, ensure_ascii=False).replace("</", "<\\/")
     # Review-loop embeds: RUN_ID keys the localStorage marks to THIS run (a re-run
@@ -1888,6 +1977,15 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
              border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
   .abchip.conflict {{ color:#374151; border-color:#9ca3af; }}
+  .pparbchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+    border-radius:8px; background:#f1f5f9; color:#334155; border:1px solid #64748b;
+    margin-left:6px; white-space:nowrap; }}
+  .pparb-note {{ font-size:12px; background:#f8fafc; border:1px solid #64748b; color:#334155;
+    border-radius:6px; padding:6px 9px; margin-top:6px; }}
+  .pp-part {{ margin:5px 0 5px 4px; }}
+  .pp-part.gap {{ color:#7f1d1d; }}
+  .pp-cent {{ font-size:10px; color:#64748b; }}
+  .fbtn.pparbf {{ border-color:#64748b; color:#334155; }}
   .ab-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .ab-note.ok {{ background:#f8fafc; border-color:#e2e8f0; color:#475569; }}

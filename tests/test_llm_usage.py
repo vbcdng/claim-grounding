@@ -8,6 +8,7 @@ Run:  venv/bin/python3 -m unittest tests.test_llm_usage -v
 import os
 import sys
 import unittest
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -56,6 +57,75 @@ class TestUsageLedger(unittest.TestCase):
 
     def test_empty_ledger_summary(self):
         self.assertEqual(llm_client.usage_summary(), {})
+
+
+class TestCachedPromptTokens(unittest.TestCase):
+    """Cache-hit split (2026-08-01): a cached input token is ~10x cheaper, so
+    without this the cost columns aren't comparable across providers/runs.
+    Exercises llm_client._record_usage directly against synthetic `resp`
+    objects shaped like each provider's real usage payload."""
+
+    def setUp(self):
+        with llm_client._USAGE_LOCK:
+            llm_client._USAGE.clear()
+
+    def test_deepseek_shaped_prompt_cache_hit_tokens(self):
+        resp = SimpleNamespace(usage=SimpleNamespace(
+            prompt_tokens=100, completion_tokens=5, prompt_cache_hit_tokens=80))
+        llm_client._record_usage("deepseek/deepseek-v4-flash", resp)
+        u = llm_client.usage_summary()["deepseek/deepseek-v4-flash"]
+        self.assertEqual(u["cached_prompt_tokens"], 80)
+
+    def test_openai_shaped_prompt_tokens_details(self):
+        resp = SimpleNamespace(usage=SimpleNamespace(
+            prompt_tokens=100, completion_tokens=5,
+            prompt_tokens_details=SimpleNamespace(cached_tokens=60)))
+        llm_client._record_usage("openai/gpt-4o-mini", resp)
+        u = llm_client.usage_summary()["openai/gpt-4o-mini"]
+        self.assertEqual(u["cached_prompt_tokens"], 60)
+
+    def test_anthropic_shaped_cache_read_input_tokens(self):
+        resp = SimpleNamespace(usage=SimpleNamespace(
+            prompt_tokens=100, completion_tokens=5,
+            cache_read_input_tokens=40, cache_creation_input_tokens=10))
+        llm_client._record_usage("anthropic/claude-sonnet-4", resp)
+        u = llm_client.usage_summary()["anthropic/claude-sonnet-4"]
+        # a cache WRITE (cache_creation_input_tokens) is a cost, not a hit —
+        # only the read count is recorded as cached_prompt_tokens.
+        self.assertEqual(u["cached_prompt_tokens"], 40)
+
+    def test_no_cache_fields_defaults_to_zero(self):
+        resp = SimpleNamespace(usage=SimpleNamespace(prompt_tokens=100, completion_tokens=5))
+        llm_client._record_usage("gemini/gemini-2.5-flash-lite", resp)
+        u = llm_client.usage_summary()["gemini/gemini-2.5-flash-lite"]
+        self.assertEqual(u["cached_prompt_tokens"], 0)
+
+    def test_usage_as_plain_dict(self):
+        resp = SimpleNamespace(usage={"prompt_tokens": 100, "completion_tokens": 5,
+                                       "prompt_cache_hit_tokens": 30})
+        llm_client._record_usage("deepseek/deepseek-v4-flash", resp)
+        u = llm_client.usage_summary()["deepseek/deepseek-v4-flash"]
+        self.assertEqual(u["cached_prompt_tokens"], 30)
+        # the totals must read from a dict too, or a cache hit could be
+        # recorded against a prompt-token count of zero
+        self.assertEqual(u["prompt_tokens"], 100)
+        self.assertEqual(u["completion_tokens"], 5)
+
+    def test_usage_as_dict_with_nested_openai_details(self):
+        resp = SimpleNamespace(usage={"prompt_tokens": 100, "completion_tokens": 5,
+                                       "prompt_tokens_details": {"cached_tokens": 15}})
+        llm_client._record_usage("openai/gpt-4o-mini", resp)
+        u = llm_client.usage_summary()["openai/gpt-4o-mini"]
+        self.assertEqual(u["cached_prompt_tokens"], 15)
+
+    def test_accumulates_across_multiple_calls(self):
+        for hit in (80, 20):
+            resp = SimpleNamespace(usage=SimpleNamespace(
+                prompt_tokens=100, completion_tokens=5, prompt_cache_hit_tokens=hit))
+            llm_client._record_usage("deepseek/deepseek-v4-flash", resp)
+        u = llm_client.usage_summary()["deepseek/deepseek-v4-flash"]
+        self.assertEqual(u["cached_prompt_tokens"], 100)
+        self.assertEqual(u["calls"], 2)
 
 
 if __name__ == "__main__":

@@ -196,6 +196,149 @@ class TestSplitDrivenRescue(unittest.TestCase):
         self.assertEqual(c["verdict"], "unsupported")
 
 
+class TestStructuredMissingPartsInRescue(unittest.TestCase):
+    """2026-08-06: the regex-fallback slot in component rescue now tries the
+    judge's own structured missing_parts before the reason-text regex.
+    _split_components STAYS primary regardless -- that precedence is
+    unchanged. No API calls."""
+
+    CLAIM = ("The gadget is waterproof to 30 meters and lasts 12 hours on "
+             "one charge.")
+    S_CHARGE = "The gadget lasts 12 hours on a single charge."
+    SPLIT_MARK = "Split the CLAIM into its citable components"
+
+    def _sources(self):
+        return {"p1": {"title": "Gadget Weekly", "key": "gadget2026",
+                       "sentences": [{"text": self.S_CHARGE, "page": 1}],
+                       "claims": []}}
+
+    def _llm(self, split_components=None):
+        """Extraction finds S_CHARGE only for a component naming '12 hours';
+        any other component finds nothing. The union re-judge always
+        supports. split_components=None means no split call is expected
+        (split_prompt=None in the test); a list means the split call returns
+        it verbatim."""
+        def call(p, **kw):
+            if self.SPLIT_MARK in p:
+                return json.dumps({"components": split_components or []})
+            if "evidence finder" in p:
+                found = "12 hours" in p
+                return json.dumps({"sentences": [self.S_CHARGE] if found else []})
+            if "TAKEN TOGETHER" in p:
+                return json.dumps({"supported": True, "reason": "every component is stated"})
+            return json.dumps({"supported": False, "reason": "candidate rejected"})
+        llm = MagicMock()
+        llm.call.side_effect = call
+        return llm
+
+    def _rescue(self, llm, reason, split_prompt=None, structured_missing=None):
+        return matcher._component_rescue(
+            self.CLAIM, ["p1"], self._sources(), llm,
+            "evidence finder CLAIM {CLAIM} SOURCE {SOURCE}",
+            "TAKEN TOGETHER CLAIM {CLAIM} PASSAGE {PASSAGE}",
+            reason, [], split_prompt=split_prompt,
+            structured_missing=structured_missing)
+
+    def test_split_stays_primary_even_when_structured_is_present(self):
+        # split names the FINDABLE component; structured names a different,
+        # UNFINDABLE one. If structured wrongly outranked split, the probe
+        # would search for the unfindable component and never flip.
+        llm = self._llm(split_components=["the gadget lasts 12 hours on one charge"])
+        rescue = self._rescue(
+            llm, reason="nope", split_prompt=self.SPLIT_MARK,
+            structured_missing=["the gadget is waterproof to 30 meters"])
+        self.assertIsNotNone(rescue)
+        self.assertEqual(rescue["found"], ["the gadget lasts 12 hours on one charge"])
+        self.assertTrue(rescue["flip"])
+
+    def test_structured_used_when_split_returns_nothing(self):
+        # No split_prompt at all (split skipped entirely) -> falls straight
+        # to structured_missing, which names a component the extraction finds.
+        llm = self._llm()
+        rescue = self._rescue(
+            llm, reason="nope, unmatched by any regex shape", split_prompt=None,
+            structured_missing=["the gadget lasts 12 hours on one charge"])
+        self.assertIsNotNone(rescue)
+        self.assertEqual(rescue["found"], ["the gadget lasts 12 hours on one charge"])
+        self.assertTrue(rescue["flip"])
+
+    def test_regex_fallback_when_structured_absent(self):
+        # No split_prompt, no structured_missing -> the pre-2026-08-06 path:
+        # the regex over `reason` is the only source of components.
+        llm = self._llm()
+        rescue = self._rescue(
+            llm,
+            reason="the passage does not state that the gadget lasts 12 hours on one charge",
+            split_prompt=None, structured_missing=None)
+        self.assertIsNotNone(rescue)
+        self.assertEqual(rescue["found"], ["the gadget lasts 12 hours on one charge"])
+
+    def test_no_components_from_any_source_skips_the_rescue(self):
+        # No split, no structured, and an unmatched reason -> _missing_from
+        # returns [] just like the old regex-only path did.
+        llm = self._llm()
+        rescue = self._rescue(llm, reason="nope, no shape at all",
+                              split_prompt=None, structured_missing=None)
+        self.assertIsNone(rescue)
+
+
+class TestJudgeMissingPartsField(unittest.TestCase):
+    """2026-08-06 round 1: `judge_missing_parts` is purely additive on the
+    claim's evaluation result -- recorded when the FINAL verdict is
+    unsupported and the judge supplied a structured list, absent when it
+    didn't. Nothing reads it yet (round 2). No API calls."""
+
+    CLAIM = ("The device runs for 12 hours on one charge and is waterproof "
+             "to 30 meters.")
+    SENT = "The device runs for 12 hours on a single charge."
+
+    def _sources(self):
+        return {"p1": {"title": "Gadget Weekly", "key": "gadget2026",
+                       "sentences": [{"text": self.SENT, "page": 1}],
+                       "claims": []}}
+
+    def _evaluate(self, llm):
+        # cosine below OFFTOPIC on every candidate -> straight to the
+        # full-text extraction fallback (component_rescue=False keeps this
+        # test focused on the missing-parts field, not the rescue machinery).
+        return matcher._evaluate(
+            self.CLAIM, ["p1"], lambda pid: [0.5], self._sources(), llm,
+            "CLAIM {CLAIM} PASSAGE {PASSAGE}",
+            "evidence finder CLAIM {CLAIM} SOURCE {SOURCE}",
+            "TAKEN TOGETHER CLAIM {CLAIM} PASSAGE {PASSAGE}",
+            component_rescue=False)
+
+    def test_structured_missing_parts_recorded_on_unsupported_claim(self):
+        def call(p, **kw):
+            if "evidence finder" in p:
+                return json.dumps({"sentences": [self.SENT]})
+            if "TAKEN TOGETHER" in p:
+                return json.dumps({"supported": False,
+                                   "reason": "waterproofing is never mentioned",
+                                   "missing_parts": ["the device is waterproof to 30 meters"]})
+            return json.dumps({"supported": False, "reason": "candidate rejected"})
+        llm = MagicMock()
+        llm.call.side_effect = call
+        res = self._evaluate(llm)
+        self.assertEqual(res["verdict"], "unsupported")
+        self.assertEqual(res.get("judge_missing_parts"),
+                         ["the device is waterproof to 30 meters"])
+
+    def test_absent_when_judge_provides_no_field(self):
+        def call(p, **kw):
+            if "evidence finder" in p:
+                return json.dumps({"sentences": [self.SENT]})
+            if "TAKEN TOGETHER" in p:
+                return json.dumps({"supported": False,
+                                   "reason": "waterproofing is never mentioned"})
+            return json.dumps({"supported": False, "reason": "candidate rejected"})
+        llm = MagicMock()
+        llm.call.side_effect = call
+        res = self._evaluate(llm)
+        self.assertEqual(res["verdict"], "unsupported")
+        self.assertNotIn("judge_missing_parts", res)
+
+
 class TestNumericCanon(unittest.TestCase):
 
     def test_grouped_numbers_share_a_token(self):

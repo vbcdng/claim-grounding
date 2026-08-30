@@ -372,10 +372,8 @@ def _pair_why(a: Dict[str, Any], b: Dict[str, Any],
 # --------------------------------------------------------------------------
 
 def _load_prompt() -> str:
-    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    with open(os.path.join(root, "config", "prompts", PROMPT_FILE),
-              "r", encoding="utf-8") as f:
-        return f.read()
+    from . import prompt_store   # run-lifetime cache + fingerprint (task #44)
+    return prompt_store.load(PROMPT_FILE)
 
 
 def _describe_source(s: Dict[str, Any]) -> str:
@@ -398,7 +396,8 @@ def confirm_pair(pair: Dict[str, Any], by_key: Dict[str, Dict[str, Any]],
               .replace("{SIGNALS}", pair.get("why") or ", ".join(pair["relations"])))
     pair = dict(pair)
     try:
-        raw = llm.call(prompt, temperature=0.0, max_output_tokens=512)
+        raw = llm.call(prompt, temperature=0.0, max_output_tokens=512,
+                       purpose="independence")
         obj = extract_json(raw)
     except Exception as e:
         logger.warning("independence confirm failed for (%s,%s): %s",

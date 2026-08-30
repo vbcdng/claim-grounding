@@ -476,9 +476,8 @@ def _is_junk_claim(text: str) -> bool:
 
 
 def _load_prompt() -> str:
-    path = os.path.join(embeddings_project_root(), "config", "prompts", "pt_extract_claims_prompt.txt")
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read()
+    from . import prompt_store   # run-lifetime cache + fingerprint (task #44)
+    return prompt_store.load("pt_extract_claims_prompt.txt")
 
 
 def embeddings_project_root() -> str:
@@ -494,7 +493,7 @@ def _extract_claims_from_text(text: str, llm, workers: int = 1) -> List[str]:
 
     def extract_chunk(chunk: str) -> List[str]:
         prompt = prompt_template.replace("{TEXT}", chunk)
-        result = llm.call_json(prompt, temperature=0.1)
+        result = llm.call_json(prompt, temperature=0.1, purpose="source_decompose")
         if isinstance(result, list):
             return [c.strip() for c in result if isinstance(c, str) and c.strip()]
         return []

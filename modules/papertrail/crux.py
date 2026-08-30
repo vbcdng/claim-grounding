@@ -208,7 +208,7 @@ def confirm_cruxes(candidates: List[Dict[str, Any]], argmap: Dict[str, Any],
     block = "\n".join(f"{i}. {c['text']}" for i, c in enumerate(candidates, 1))
     prompt = (argument_map._load_prompt(PROMPT_FILE)
               .replace("{THESIS}", thesis_txt).replace("{CANDIDATES}", block))
-    raw = llm.call(prompt, temperature=0.0, max_output_tokens=1024)
+    raw = llm.call(prompt, temperature=0.0, max_output_tokens=1024, purpose="crux")
     obj = extract_json(raw)
     if isinstance(obj, dict):
         obj = obj.get("cruxes", [])
