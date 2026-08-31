@@ -5,7 +5,7 @@ have not fixed yet. Each entry says what happens, why, and what to do
 about it where a workaround exists. Problems that get fixed move to the
 "Fixed" section at the end, with the date of the fix.
 
-Last updated: 2026-08-30. Most entries come from a systematic self-check
+Last updated: 2026-08-31. Most entries come from a systematic self-check
 of the whole repository on 2026-07-20. That check also re-computed every
 published benchmark number from the data included in the repository, and
 every number reproduced. Nothing on this list changes a published result.
@@ -26,96 +26,10 @@ every number reproduced. Nothing on this list changes a published result.
 
 ## Problems you might hit when using the tool
 
-**1. A citation marker with a typo is dropped without any warning.**
-The tool only recognizes markers written exactly as `[[key]]`, with no
-spaces inside. A marker like `[[my key]]` (a space inside) or `[[key]`
-(a missing bracket) is not recognized, and the tool does not tell you.
-The sentence is then treated as your own uncited words and gets no
-check at all. The interactive setup helper does not catch these either,
-because its marker check accepts spaces that the real reader rejects.
-
-Workaround: after a run, open the viewer and confirm that every
-sentence you cited shows a verdict. A cited sentence shown as an "own"
-claim means its marker was not recognized.
-
-**2. A source file the tool cannot read looks like an ordinary
-rejection.** A scanned PDF contains pictures of pages instead of
-machine-readable text, so the tool finds no sentences in it. Claims
-citing such a file are marked unsupported with the technical reason "no
-source sentences", styled like any other rejection. There is no clear
-"this source could not be read" state. When a claim cites several
-sources and one of them is unreadable, that source adds nothing to the
-check. The claim's card does not say so.
-
-Workaround: run
-`venv/bin/python download_sources.py --report-only` for your project.
-The report it writes flags every source file with little or no readable
-text.
-
-**3. The first run downloads one model file, and blocking that download
-gives a raw error.** The tool compares sentences with a comparison
-model that runs on your own computer. That model is about 440
-megabytes and is downloaded once, the first time you run the tool. If
-that download cannot happen, the run stops with a raw technical error
-instead of a plain explanation.
-
-This happens when the machine is
-offline. It also happens when the command was started with the two
-`..._OFFLINE=1` settings that some older instructions showed. Those
-settings tell the tool to never use the network.
-
-Workaround: let the very first run reach the internet once. Every later
-run works fully offline.
-
-**4. On Windows, the `--open` flag builds a wrong address.** The flag
-should open the finished report in your browser, but the address it
-builds is not in the form Windows browsers accept. The report itself is
-fine. Workaround: the file path is always printed at the end of the
-run. Open that file by hand.
-
-**5. A missing `claude` program ends in a long technical error trace.**
-The `--backend claude-code` option runs the checks through the Claude
-Code command-line program. If that program is not installed, the run
-stops with a full Python error trace. The last line of the trace does
-explain the problem in plain words. The interactive setup helper checks
-for the program properly and will not offer the option when it is
-missing.
-
-**6. Failures inside the optional argument-structure pass can look like
-a clean result.** The `--argument-map` flag adds an optional extra pass
-that maps how your claims support each other. The pass has three parts.
-If one part fails, its panel section shows the same text as a genuine
-empty finding. An example is "no cruxes identified" (a crux is a claim
-that much of the argument depends on). It does not say that the part
-failed.
-
-If all three parts fail, the whole panel is missing without comment.
-Warnings appear only in the terminal output. Verdicts are never
-affected by this pass.
-
-## Notes for people re-checking the published benchmark numbers
-
-**7. Two supporting documents are named without their folder.** A
-note in `benchmarks/wice_anchor/README.md` cites
-`NIGHT_LOG_2026-07-12_accB.md` and `FIRST_CHECK_RUN.md` by bare
-filename. Both files are in the repository, at
-`docs/archive/NIGHT_LOG_2026-07-12_accB.md` and
-`docs/FIRST_CHECK_RUN.md`. The note just does not say where they are.
-
-**8. The "58 rows" figure in `FOR_REVIEWERS.md` counts full and partial
-support together.** The 58 counts rows where the final label found real
-or partial support for a claim the tool had called unsupported. A
-script that counts only full "supported" labels gets 10. It is the same
-data under a stricter counting rule. The sentence in the document has
-not been reworded yet.
-
-**9. The benchmark scorer prints an alarming banner that reports old
-news.** On 6 of the test batches that were kept aside and never used
-during tuning, the scorer prints "FALSE-SUPPORT FAILURE". The banner
-is correct, not a malfunction. Those rows are exactly the false-support
-cases
-the submission itself discloses: 3 in the base set, 6 after the
-disputed rows were re-judged. It is not a new failure you discovered.
+Nothing is open on this list right now. All nine problems from the
+2026-08-30 version of this page were fixed on 2026-08-31 — the details
+are in the "Fixed" section at the end. New problems will be added here
+as they are found.
 
 ## Limits of the verdicts themselves
 
@@ -137,6 +51,91 @@ rewritten again. Since that day the repository only changes by ordinary
 commits.
 
 ## Fixed
+
+**Fixed 2026-08-31 — four weaknesses found by a security review of the
+whole project.** A review using automated scanners plus model readers
+went through every place the tool touches files or reads input it does
+not control. Four real weaknesses were found and fixed the same day.
+First, a citation key coming from an imported bibliography could
+contain path characters that made the source downloader write its file
+outside the sources folder. Second, a DOI printed inside a downloaded
+file could count as permission to overwrite an existing source file
+during inbox ingestion. Third, one report page (a search-results viewer
+not yet reachable from the command line) did not check link addresses
+before embedding them. Fourth, the interactive setup helper printed a
+pasted API key back to the screen inside its "command to skip the
+wizard next time" line, so saving that command would save the key with
+it. The fixes: file names and keys are cleaned in one shared module
+(`modules/papertrail/safe_paths.py`) before any write, overwriting now
+requires a key-named file, link addresses are checked, and the printed
+command shows the key redacted. None of this affects verdicts.
+
+**Fixed 2026-08-31 — the six tool problems from the previous version of
+this page.** None of these fixes changes any verdict. They add warnings,
+plain error messages, and clearer report displays. Their old numbering:
+
+- *(1)* A typo in a citation marker used to be dropped without any
+  warning. Examples are `[[my key]]` with a space and `[[key]` with a
+  missing bracket. The sentence silently became an unchecked "own"
+  claim. The tool now prints a warning for each marker-like tag it
+  cannot read. The same warning appears in the yellow banner at the top
+  of the viewer. The interactive setup helper now uses the same marker
+  rules as the real reader and lists the typos it finds.
+- *(2)* A source file with no readable text used to look like an
+  ordinary rejection. (A scanned PDF stores pictures of pages instead
+  of text.) It is now a separate grey "could not be checked" state. The
+  claim's card says in plain words that the file has no readable text.
+  The report header counts it as "unverifiable" instead of a judged
+  failure. When a claim cites several sources, the card names which one
+  was unreadable. The stored verdict value is unchanged, so nothing
+  downstream moves. The same fix also covers a second case the page had
+  not listed. It was found by a measurement during the same day's
+  library update. A damaged font inside a PDF can replace every letter
+  with a different one, so the text reads as gibberish while looking
+  structurally normal. That case used to sail through to the judgment
+  step with no notice at all. The tool now measures the share of
+  invisible control characters in each source's final text. Real
+  language in any alphabet has essentially none of them. A file over
+  the line gets the same grey "could not be checked" treatment, and the
+  card says the text came out garbled. Do not expect to see this state
+  in a normal run. After the same day's reading fixes, zero of the
+  project's 227 test source files trip it. It is a guard for the next
+  broken PDF, not a message you should ever see on healthy sources.
+- *(3)* Blocking the one-time first-run model download (about 440
+  megabytes) used to end in a raw technical error. The run now stops at
+  startup, within seconds, with a plain explanation — including a note
+  when the `..._OFFLINE=1` settings are the cause.
+- *(4)* On Windows, `--open` built a browser address in the wrong form.
+  The address is now built by the standard library routine that is
+  correct on every platform.
+- *(5)* A missing `claude` program under `--backend claude-code` used
+  to end in a full Python error trace. The run now exits with the
+  one-line explanation only.
+- *(6)* A failure inside one part of the optional `--argument-map` pass
+  used to render like a genuine empty finding ("no cruxes identified").
+  A failure of all three parts made the whole panel disappear. Each
+  failed part now shows an amber "this check failed and did not finish"
+  line. The panel renders even when every part failed. One limit
+  remains. The `--fix-claim` command rebuilds the report from the saved
+  files, and a failed part saved no file. A report rebuilt that way
+  shows the plain empty wording again.
+
+**Fixed 2026-08-31 — the three documentation notes for people
+re-checking the published benchmark numbers.** These were numbered 7, 8
+and 9 in the previous version of this page:
+
+- Two supporting documents were named without their folder in
+  `benchmarks/wice_anchor/README.md`. The note now gives their full
+  paths from the repository root
+  (`docs/archive/NIGHT_LOG_2026-07-12_accB.md` and
+  `docs/FIRST_CHECK_RUN.md`).
+- The "58 rows" sentence in `FOR_REVIEWERS.md` now says the count
+  includes both full and partial support. Counting only full
+  "supported" labels gives 10 rows from the same data.
+- The benchmark scorer's "FALSE-SUPPORT FAILURE" banner now prints a
+  note for re-checkers. The cases it reports are the false-support
+  cases the submission itself already discloses (3 in the base set, 6
+  after the disputed rows were re-judged). It is not a new failure.
 
 **Fixed 2026-08-19 — a failed model request inside the extra checks
 went unreported, so the run looked complete.** The main judging step

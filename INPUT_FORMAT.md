@@ -29,7 +29,7 @@ Format is one `key = filename` per line; lines starting with `#` are comments:
     jones     = jones_agi_labor.txt
 
 ## 3. Sources — the `--sources <dir>` folder
-Contains every file named in the references. `.pdf` (parsed with PyPDF2) and `.txt`
+Contains every file named in the references. `.pdf` (parsed with pypdf) and `.txt`
 are supported.
 
 ## Output

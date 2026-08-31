@@ -29,7 +29,8 @@ Additionally 4 scored rows carry `display_fix_derived` (a display-only fix —
 evidence collapse, badge wording — was derived from them; verdict path
 untouched): ninashipperlee, bonairpresbyterianchurch, cokezoo,
 averymurraychristmas. Full evidence pointers: the 2026-07-19 contamination
-audit (SUBJECT_GUARD.md, NIGHT_LOG_2026-07-12_accB.md, FIRST_CHECK_RUN.md).
+audit (docs/SUBJECT_GUARD.md, docs/archive/NIGHT_LOG_2026-07-12_accB.md,
+docs/FIRST_CHECK_RUN.md — paths from the repository root).
 Author-ruled row jessicachastain is tier X (contamination outranks tier A for
 scoring; the author label stays recorded in the row).
 

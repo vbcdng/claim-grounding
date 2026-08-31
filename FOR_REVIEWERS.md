@@ -54,9 +54,10 @@ fact-checking tool.
 
 **Names you will meet in the documents.** Where a working document or a
 data field says "owner", it means the author of this tool — the docs were
-written as working notes during development and the word stayed. "Fable 5" and "Opus" are Claude models, "K3" is Kimi K3, and
-"Gemini flash-lite" is the tool's default judge — where a document names one
-of them, it names which model produced or graded a verdict. A "gate" is the
+written as working notes during development and the word stayed. "Fable 5" and "Opus" are Claude models, "K3" is Kimi K3,
+"Gemini flash-lite" was the tool's default judge until 2026-08-30, and
+"Gemma" (gemma-4-31b-it, free) is the default since then — where a document
+names one of them, it names which model produced or graded a verdict. A "gate" is the
 regression benchmark a change must pass before it ships.
 
 ## Test 1 — the 236-claim audit (no key — files to read)
@@ -85,7 +86,11 @@ said), `fable_verdict` (what the auditing model concluded), `agreement`,
 **What you will find.** 58 rows where the tool said "unsupported" but the
 final label (model audit, corrected by the author's re-rulings) found real
 support in the source — the safe error direction, a claim sent back to the
-author unnecessarily. In the other direction, four real
+author unnecessarily. That 58 counts full and partial support together:
+rows whose final label found support for the whole claim plus rows where
+only part of the claim was supported. A stricter count that accepts only
+full "supported" final labels gets 10 rows from the same data. In the
+other direction, four real
 false "supported" verdicts survived verification: `newsys_wice_dev1.jsonl`
 rows t11 and t16, one planted bug appearing in both `newsys_synth_11`
 and `newsys_synth_12` (row t5), and one essay row

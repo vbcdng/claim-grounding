@@ -448,6 +448,11 @@ def score(analysis_path, gt_path):
     if fs_base or fs_adj:
         print("*** FALSE-SUPPORT FAILURE: refuted row(s) scored supported — "
               "stop and report ***")
+        print("    (If you are re-checking the published numbers: the "
+              "submission already discloses these cases — 3 in the base "
+              "set, 6 after the disputed rows were re-judged. Seeing this "
+              "banner on those rows confirms the disclosure; it is not a "
+              "new failure.)")
 
     print("\nper-claim:")
     for key, wl, tl, adj, note in rows:
