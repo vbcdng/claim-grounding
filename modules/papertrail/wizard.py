@@ -391,6 +391,21 @@ def _arbiter_note(model):
 
 # ---------- the wizard ----------
 
+def _redacted_argv(argv: list) -> list:
+    """Copy of argv with any --api-key VALUE replaced by a placeholder.
+
+    The key-entry step accepts either a file path or a pasted key, and a pasted
+    key would otherwise be echoed inside the printed "equivalent command"
+    (task #70). Only the display copy is changed; the argv actually parsed keeps
+    the real value.
+    """
+    out = list(argv)
+    for i, item in enumerate(out[:-1]):
+        if item == "--api-key":
+            out[i + 1] = "<your key — keep it out of saved commands>"
+    return out
+
+
 def run_wizard(input_fn=input, run_script=_run_script) -> list:
     """Walk the pipeline interactively; return the equivalent verify argv list."""
     _enable_path_completion()
@@ -465,6 +480,14 @@ def run_wizard(input_fn=input, run_script=_run_script) -> list:
                input_fn=input_fn):
         argv += ["--open"]
 
+    # NEVER print a pasted key back (task #70): this command invites the author to
+    # save it, so a raw key here ends up in shell history, a script or a notes file,
+    # and a saved command re-run later would expose the key in `ps` output too.
     print("\nEquivalent command (to skip the wizard next time):\n  "
-          + "python3 verify_my_text.py " + " ".join(shlex.quote(a) for a in argv) + "\n")
+          + "python3 verify_my_text.py " + " ".join(shlex.quote(a)
+                                                   for a in _redacted_argv(argv)) + "\n")
+    if "--api-key" in argv:
+        print("The key is hidden above. Put it in a file and pass that path instead,\n"
+              "or set the provider's API-key environment variable, so the saved\n"
+              "command holds no secret.\n")
     return argv

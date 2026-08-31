@@ -25,6 +25,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 from .direct_downloader import extract_page_text, pdf_has_text, THIN_TEXT_WORDS  # noqa: E402
+from .safe_paths import safe_key, resolve_inside  # noqa: E402
 
 _DOI_RE = re.compile(r"\b(10\.\d{4,9}/[-._;()/:A-Za-z0-9]+)")
 INGESTIBLE_EXTS = (".pdf", ".txt", ".html", ".htm")
@@ -39,9 +40,9 @@ def read_file_text(path, max_pdf_pages=5) -> str:
     ext = os.path.splitext(path)[1].lower()
     try:
         if ext == ".pdf":
-            import PyPDF2
+            import pypdf
             with open(path, "rb") as f:
-                reader = PyPDF2.PdfReader(f)
+                reader = pypdf.PdfReader(f)
                 return "\n".join((page.extract_text() or "")
                                  for page in reader.pages[:max_pdf_pages])
         with open(path, "r", encoding="utf-8", errors="ignore") as f:
@@ -126,6 +127,14 @@ def ingest_file(path, key, sources_dir, dry_run=False, copy=False):
     ext = os.path.splitext(path)[1].lower()
     warning = None
 
+    # The key comes from a manifest built out of someone else's bibliography, and
+    # this function moves files and deletes stale counterparts — both would act
+    # outside sources_dir on an unsafe key (task #70 finding 1).
+    key = safe_key(key)
+    if resolve_inside(sources_dir, f"{key}.pdf") is None:
+        raise ValueError(f"refusing to ingest: citation key {key!r} does not "
+                         f"produce a filename inside {sources_dir}")
+
     if ext in (".html", ".htm"):
         filename = f"{key}.txt"
         if not dry_run:
@@ -192,8 +201,13 @@ def plan_ingest(files, entries, has_file):
                                 f"one and rename it to {key}.pdf ({how})"))
             continue
         path, entry, how = ms[0]
-        # replacing an existing source is deliberate-only: key-named or DOI match
-        if has_file(key) and not ("key" in how or "DOI" in how):
+        # Replacing an existing source is deliberate-only, and ONLY a key-named
+        # file counts as deliberate — naming the file <key>.pdf is a gesture the
+        # author has to make by hand. A DOI printed inside the file used to count
+        # too, which let a dropped file that merely mentions an existing source's
+        # DOI overwrite that source silently and rewrite what every claim is
+        # checked against (task #70 finding 2).
+        if has_file(key) and "key" not in how:
             blocked.append((path, key,
                             f"already has a source file — rename to {key}.pdf to "
                             f"replace it deliberately ({how})"))

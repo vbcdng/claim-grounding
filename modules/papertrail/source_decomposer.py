@@ -19,7 +19,13 @@ logger = logging.getLogger(__name__)
 
 EVIDENCE_LINK_THRESHOLD = 0.75   # PaperTrail Stage-1 evidence linking
 _CHUNK_WORD_TARGET = 1200        # group paragraphs into chunks to limit LLM calls
-CACHE_SCHEMA = 8                 # bump to invalidate caches when the stored shape changes
+CACHE_SCHEMA = 9                 # bump to invalidate caches when the stored shape changes
+                                 # (9: PDF reader swapped PyPDF2 3.0.1 -> pypdf 6.x, plus the
+                                 #  fallback text-loss guard, both task #71.
+                                 #  pypdf extracts different text on most PDFs — usually near-
+                                 #  identical, but it reads the letter-spaced class (anthropic2024)
+                                 #  CLEANLY where PyPDF2 garbled it, so the pdftotext fallback
+                                 #  fires less. Rebuild the sentence index from the new read.)
                                  # (8: rebuild sentence index with the et-al abbrev merge +
                                  #  line-break-split pdftotext swap — t8/t11/t18)
                                  # (7: re-index sentences so the space-collapse pdftotext
@@ -50,10 +56,14 @@ def _strip_txt_preamble(text: str) -> str:
 
 
 def _looks_letter_spaced(text: str, sample_chars: int = 4000) -> bool:
-    """PyPDF2 sometimes extracts a PDF's text layer one glyph per token
+    """A PDF text layer sometimes extracts one glyph per token
     ("M e a s u r i n g t h e P e r s u a s i v e n e s s ..." — the
     anthropic2024/macaskill2025 class). Normal English runs ~2-5% single-letter
-    tokens; garbled extractions run well past half."""
+    tokens; garbled extractions run well past half.
+
+    Found under PyPDF2 3.0.1, which was the reader until 2026-08-31; pypdf 6.x
+    reads anthropic2024 cleanly, so this fires rarely now. Kept because pypdf
+    still garbles other files this way and the check costs nothing."""
     tokens = text[:sample_chars].split()
     if len(tokens) < 40:
         return False
@@ -62,7 +72,7 @@ def _looks_letter_spaced(text: str, sample_chars: int = 4000) -> bool:
 
 
 def _looks_space_collapsed(text: str, sample_chars: int = 8000) -> bool:
-    """PyPDF2 sometimes drops the spaces BETWEEN words on certain PDFs, gluing
+    """A PDF text layer sometimes drops the spaces BETWEEN words, gluing
     short words together ("In69%ofthestudies thesubjects compensated forthe..." —
     the mcnamara1987 scanned-PDF class). The inverse of _looks_letter_spaced.
 
@@ -102,7 +112,7 @@ def _looks_locally_glued(text: str) -> bool:
     return _count_glued_runs(text) > 0
 
 
-# Intra-word line-break garble (the drouinchartier2020/t18 class): PyPDF2 splits
+# Intra-word line-break garble (the drouinchartier2020/t18 class): the reader splits
 # words across a wrapped line into a stray leading letter + the remainder
 # ("p articipants", "r esults", "cardi\nova"). Neither whole-doc detector fires
 # (the doc is mostly fine). Signal: standalone single-CONSONANT tokens — real
@@ -151,15 +161,58 @@ def _pdftotext_pages(path: str) -> Optional[List[str]]:
         return None
 
 
+def source_reader_id() -> str:
+    """Which library extracted this run's PDF text, as '<name> <version>'.
+
+    Recorded in analysis.json's metadata so an incremental re-run can refuse to
+    reuse verdicts made with a different extractor (rerun.source_reader_changed).
+    Falls back to the bare name if the version is unreadable.
+    """
+    try:
+        import pypdf
+        return f"pypdf {pypdf.__version__}"
+    except Exception:
+        return "pypdf"
+
+
+# Minimum share of the primary read's LETTERS (whitespace ignored) that the
+# pdftotext fallback must still contain before we accept it (task #71).
+#
+# Worked example — the two real files that set this number, measured 2026-08-31:
+#   anthropic2024.pdf  the fallback is CORRECT (the primary read was garble).
+#                      Raw character counts drop 0.8%, non-whitespace 0.0% —
+#                      de-garbling rearranges spacing, it does not delete letters.
+#   unodc2023.pdf      the fallback has LOST most of the 162-page report:
+#                      573,914 non-whitespace characters become 108,465, a ratio
+#                      of 0.19. Swapping it in throws away four fifths of the
+#                      source, so claims citing it would go unsupported for no
+#                      reason. No garble detector can see this — they measure
+#                      token shapes, not how much document survived.
+# Whitespace is excluded because letter-spaced garble ("e p u b l i c") inflates
+# the raw count with spaces alone; counting letters makes the two cases separate.
+#
+# The threshold sits in an empty gap, not at a guess. Measured over all 228
+# unique source PDFs in data/ (logs/pdftotext_ratio_distribution.json): 65 files
+# fire a detector and so attempt a swap; 64 of them keep 98.7% or more of the
+# letters, exactly one (unodc2023) keeps 18.9%, and NOTHING lands in between.
+# So every legitimate swap in the corpus is above 0.98 and the single harmful one
+# is below 0.19; any threshold between them behaves identically on real data.
+_FALLBACK_MIN_TEXT_RATIO = 0.6
+
+
+def _nonspace_len(text: str) -> int:
+    return sum(1 for c in text if not c.isspace())
+
+
 def read_source_pages(path: str) -> List[str]:
-    """Per-page text for PDFs (via PyPDF2); a single-element list for plain text.
+    """Per-page text for PDFs (via pypdf); a single-element list for plain text.
 
     Page boundaries are what let the viewer jump the PDF to the right page, so we keep
     each page separate here (read_source_file joins them for the rest of the pipeline).
     """
     if path.lower().endswith(".pdf"):
         try:
-            from PyPDF2 import PdfReader
+            from pypdf import PdfReader
             with open(path, "rb") as f:
                 reader = PdfReader(f)
                 pages = [(page.extract_text() or "") for page in reader.pages]
@@ -182,14 +235,29 @@ def read_source_pages(path: str) -> List[str]:
                          and not _looks_space_collapsed(alt_joined))
                 # The localized detectors (glue, line-break) already pass the
                 # whole-doc tests, so require the fallback to actually REDUCE the
-                # signal that fired before swapping — never trade PyPDF2 for a
+                # signal that fired before swapping — never trade the pypdf read for a
                 # differently-broken pdftotext (e.g. a multi-column reflow).
                 better_glue = _count_glued_runs(alt_joined) < glued_runs
                 better_cons = _single_consonant_frac(alt_joined) < cons_frac
-                if clean and (letter or collapsed
+                # ...and require it to still CONTAIN the document (task #71).
+                # pdftotext can return a fraction of a large report and look
+                # perfectly clean doing it, because the detectors above judge
+                # token shapes and never ask how much text survived.
+                primary_len = _nonspace_len(joined)
+                kept = (_nonspace_len(alt_joined) / primary_len) if primary_len else 1.0
+                enough_text = kept >= _FALLBACK_MIN_TEXT_RATIO
+                if not enough_text:
+                    logger.warning(
+                        f"{os.path.basename(path)}: extracted text looks {kind}, but the "
+                        f"pdftotext fallback holds only {kept:.0%} of the letters "
+                        f"({_nonspace_len(alt_joined)} vs {primary_len}) — it has lost "
+                        f"most of the document, so KEEPING the original read; the {kind} "
+                        f"artifacts stay, which is far less damaging than dropping "
+                        f"{1 - kept:.0%} of the source")
+                if enough_text and clean and (letter or collapsed
                               or (glued_runs and better_glue)
                               or (linebreak and better_cons)):
-                    logger.warning(f"{os.path.basename(path)}: PyPDF2 text is {kind} "
+                    logger.warning(f"{os.path.basename(path)}: pypdf text is {kind} "
                                    "garble — using the pdftotext extraction instead")
                     return alt
             logger.warning(f"{os.path.basename(path)}: extracted text looks {kind}; "
@@ -214,7 +282,7 @@ def read_source_pages(path: str) -> List[str]:
 
 
 def read_source_file(path: str) -> str:
-    """Read a source document's full text (.pdf via PyPDF2, otherwise plain text)."""
+    """Read a source document's full text (.pdf via pypdf, otherwise plain text)."""
     return "\n".join(read_source_pages(path))
 
 
@@ -564,7 +632,7 @@ def decompose_source(path: str, paper_id: str, key: str, cache_dir: str, llm,
             with open(cache_path, "r", encoding="utf-8") as f:
                 cached = json.load(f)
             if cached.get("file_hash") == fhash:
-                # Claims extracted from letter-spaced PyPDF2 garble (a cache
+                # Claims extracted from letter-spaced reader garble (a cache
                 # written before the pdftotext fallback existed) poison every
                 # retrieval that reads them — and a sentence-only rebuild can't
                 # fix them. Detect on the cached CLAIM text and fall through to

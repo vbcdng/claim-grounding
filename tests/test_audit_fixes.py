@@ -360,7 +360,7 @@ class TestContentCheck(unittest.TestCase):
             "Hackenburg, K."), "mismatch")
 
     def test_spaced_letters_artifact_survives(self):
-        # PyPDF2 sometimes yields "P r epar ing f or ..." — compact matching must cope
+        # a PDF reader sometimes yields "P r epar ing f or ..." — compact matching must cope
         p = self._tmp("P r epar ing f or the Int elligence Expl osion\n" + "b o d y " * 200)
         self.assertEqual(dd.content_check(p, "Preparing for the Intelligence Explosion"), "ok")
 

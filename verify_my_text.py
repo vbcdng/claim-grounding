@@ -419,6 +419,18 @@ def main():
         # now, so its verdicts were made under different instructions.
         changed_prompt_names = rerun.changed_prompts(
             prev_analysis.get("metadata", {}).get("prompts"), prompt_fingerprints)
+        # Extractor check (task #71): source files are compared by BYTES, so a
+        # changed PDF library is invisible to changed_source_files even though
+        # every sentence read out of those files may have moved. A MISSING
+        # source_reader means the run predates the 2026-08-31 swap and so used
+        # PyPDF2 — known, not unknown — and is re-judged (author ruling, option
+        # B). Projects with no PDF sources at all are exempt: no PDF was read,
+        # so nothing about them can have changed.
+        reader_now = source_decomposer.source_reader_id()
+        prev_reader = prev_analysis.get("metadata", {}).get("source_reader")
+        has_pdf_sources = any(str(f).lower().endswith(".pdf") for f in source_hashes)
+        reader_changed = rerun.source_reader_changed(
+            prev_reader, reader_now, has_pdf_sources)
         if not prev_model:
             # Runs made before model-in-metadata tracking have no model recorded.
             # The default model changed (flash -> flash-lite, 2026-07-04), so these
@@ -436,6 +448,15 @@ def main():
                         f"{', '.join(sorted(changed_prompt_names))} — its verdicts "
                         f"were made under different instructions, so none are "
                         f"reused and the whole text is judged fresh")
+        elif reader_changed:
+            prev_desc = (prev_reader if prev_reader else
+                         f"{rerun.PRE_TRACKING_READER} (not recorded, so it predates "
+                         f"the 2026-08-31 reader swap and used that one)")
+            logger.info(f"Previous run read PDFs with {prev_desc}, this one uses "
+                        f"{reader_now} — the same PDF file yields different text, so "
+                        f"its verdicts rest on text this run cannot reproduce; none "
+                        f"are reused and the whole text is judged fresh "
+                        f"(--full does the same thing explicitly)")
         else:
             if changed_prompt_names is None:
                 logger.warning("Previous run predates prompt tracking "
@@ -498,7 +519,8 @@ def main():
     # this same run, interrupted mid-flight.
     ckpt_path = os.path.join(args.output_dir, "checkpoint.jsonl")
     text_sha1 = hashlib.sha1(body.encode("utf-8")).hexdigest()
-    ck_claims = checkpoint.load(ckpt_path, model_str, text_sha1, source_hashes)
+    ck_claims = checkpoint.load(ckpt_path, model_str, text_sha1, source_hashes,
+                                source_decomposer.source_reader_id())
     if ck_claims:
         ck_matched = rerun.match_claims(ck_claims, text_claims)
         n_ck = 0
@@ -697,7 +719,8 @@ def main():
 
     # Stage 3: match + verdict. Embeddings cache next to the source-claims cache —
     # SPECTER encoding of ~30k source claims/sentences dominated re-run wall time.
-    ckpt_writer = checkpoint.Writer(ckpt_path, model_str, text_sha1, source_hashes)
+    ckpt_writer = checkpoint.Writer(ckpt_path, model_str, text_sha1, source_hashes,
+                                    source_decomposer.source_reader_id())
     analysis = matcher.run(text_claims, sources, llm, workers=args.concurrency,
                            emb_cache_dir=os.path.join(args.output_dir, "embeddings"),
                            reuse=reuse_map, partial_check=not args.no_partial_check,
@@ -906,6 +929,10 @@ def main():
         "marker_errors": marker_errors,
         "processing_time_seconds": round(time.time() - start, 1),
         "source_hashes": source_hashes,
+        # Which library extracted the PDF text (task #71). Source files are
+        # compared by BYTES, so a changed extractor is otherwise invisible to
+        # the reuse check even though every source sentence may have moved.
+        "source_reader": source_decomposer.source_reader_id(),
     }
     # Which instruction text produced this run (task #44): fingerprints of
     # every prompt file as frozen at run start, plus which were actually

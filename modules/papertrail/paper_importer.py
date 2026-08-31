@@ -82,8 +82,9 @@ _CTRL_RE = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
 
 def _read_paper_pages(path: str) -> List[str]:
     """PDF pages for the importer: poppler pdftotext FIRST (it preserves the
-    blank-line paragraph structure the claim splitter needs — PyPDF2 collapsed
-    a 64-page paper into ONE paragraph in live testing), PyPDF2 as fallback.
+    blank-line paragraph structure the claim splitter needs — the library reader
+    collapsed a 64-page paper into ONE paragraph in live testing, measured on
+    PyPDF2 3.0.1), the library reader (pypdf) as fallback.
     Non-PDFs go through the normal reader."""
     from .source_decomposer import _pdftotext_pages, read_source_pages
     _sniff_paper_file(path)

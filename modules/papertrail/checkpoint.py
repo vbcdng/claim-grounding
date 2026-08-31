@@ -11,10 +11,17 @@ through the normal incremental-reuse path instead of re-judging them. The
 caller deletes the file right after analysis.json is written, so a finished
 run leaves no journal behind and ordinary incremental re-runs are untouched.
 
-Validity guard: the first line is a header {model, text_sha1, source_hashes}.
-If ANY of them differs in the restarted run, the whole checkpoint is ignored
-— a recovered verdict must never silently cross a model, text, or source
-change. Recovery applies even under --full: --full means "don't trust the
+Validity guard: the first line is a header
+{model, text_sha1, source_hashes, source_reader}. If ANY of them differs in the
+restarted run, the whole checkpoint is ignored — a recovered verdict must never
+silently cross a model, text, source or PDF-reader change. `source_reader`
+(task #71) exists because source files are compared by BYTES: the same PDF read
+by a different library yields different text, so a journal written under the old
+reader holds verdicts this run cannot reproduce. A journal with NO source_reader
+field is treated as `rerun.PRE_TRACKING_READER`, not as unknown — it predates the
+2026-08-31 swap, so it is known to have used PyPDF2 (author ruling, "option B")
+— and is therefore discarded. A journal for a project with no PDF sources is
+exempt, since no PDF was read. Recovery applies even under --full: --full means "don't trust the
 FINISHED previous run", while the checkpoint is this same run, interrupted.
 Delete checkpoint.jsonl by hand to forbid recovery.
 
@@ -31,7 +38,8 @@ logger = logging.getLogger("papertrail")
 
 
 def load(path: str, model: str, text_sha1: str,
-         source_hashes: Dict[str, str]) -> List[Dict[str, Any]]:
+         source_hashes: Dict[str, str],
+         source_reader: str = "") -> List[Dict[str, Any]]:
     """Claim records journaled by an interrupted run of the same configuration.
 
     Returns [] when the file is absent, belongs to a different configuration,
@@ -50,6 +58,19 @@ def load(path: str, model: str, text_sha1: str,
                 logger.info("checkpoint.jsonl belongs to a different run "
                             "configuration (model/text/sources changed) — ignored")
                 return []
+            if source_reader:
+                from . import rerun
+                has_pdf = any(str(f).lower().endswith(".pdf") for f in source_hashes)
+                prev_reader = header.get("source_reader")
+                if rerun.source_reader_changed(prev_reader, source_reader, has_pdf):
+                    prev_desc = (prev_reader if prev_reader else
+                                 f"{rerun.PRE_TRACKING_READER} (not recorded, so it "
+                                 f"predates the 2026-08-31 reader swap)")
+                    logger.info(f"checkpoint.jsonl was written while PDFs were read by "
+                                f"{prev_desc}; this run uses {source_reader} — the same "
+                                f"PDF yields different text, so the journaled verdicts "
+                                f"cannot be reproduced and are ignored")
+                    return []
             for line in f:
                 line = line.strip()
                 if not line:
@@ -72,13 +93,14 @@ class Writer:
     the journal must never kill the run it protects."""
 
     def __init__(self, path: str, model: str, text_sha1: str,
-                 source_hashes: Dict[str, str]):
+                 source_hashes: Dict[str, str], source_reader: str = ""):
         self._lock = threading.Lock()
         self._f = None
         try:
             self._f = open(path, "w", encoding="utf-8")
             self._write({"model": model, "text_sha1": text_sha1,
-                         "source_hashes": source_hashes})
+                         "source_hashes": source_hashes,
+                         "source_reader": source_reader})
         except Exception as e:
             logger.warning(f"Could not open checkpoint journal ({e}) — "
                            f"running without save-as-you-go protection")

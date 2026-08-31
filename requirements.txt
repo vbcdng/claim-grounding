@@ -9,8 +9,20 @@ torch==2.12.1; sys_platform != 'linux'
 
 litellm==1.74.0
 sentence-transformers==5.5.1
-PyPDF2==3.0.1
+
+# PDF reading. Was PyPDF2==3.0.1 until 2026-08-31; PyPDF2 is unmaintained under
+# that name (a malformed PDF can pin it at full CPU — GHSA-hm9v-vj3r-r55m) and
+# pypdf is the maintained continuation with the same PdfReader API. The swap
+# CHANGES extracted text: near-identical on almost every source, but pypdf reads
+# the letter-spaced class (data/*/sources/anthropic2024.pdf) as clean prose where
+# PyPDF2 returned "e p u b l i c l y", so source_decomposer's pdftotext fallback
+# fires less. CACHE_SCHEMA 8->9 rebuilds sentence indexes from the new read.
+pypdf==6.16.2
+
+# nltk is DELIBERATELY not bumped: it decides where sentences break, which sets
+# claim boundaries, which can move verdicts — and its published advisories all
+# concern code paths this tool never calls. Change it only alongside a gate run.
 nltk==3.9.4
-requests==2.32.4
+requests==2.33.0
 beautifulsoup4==4.13.4
 numpy

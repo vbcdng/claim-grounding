@@ -38,6 +38,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from modules.papertrail import direct_downloader as dd
 from modules.papertrail import semantic_scholar_api as s2
+from modules.papertrail.safe_paths import safe_key, resolve_inside
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("download_sources")
@@ -72,12 +73,12 @@ def write_report(report_path, manifest_entries, sources_dir, run_results):
     """
     present, missing_link, missing_search = [], [], []
     for e in manifest_entries:
-        key = e["key"]
+        key = safe_key(e["key"])
         r = run_results.get(key, {})
         filename = None
         for ext in (".pdf", ".txt"):
-            p = os.path.join(sources_dir, key + ext)
-            if os.path.exists(p) and os.path.getsize(p) > 1000:
+            p = resolve_inside(sources_dir, key + ext)
+            if p and os.path.exists(p) and os.path.getsize(p) > 1000:
                 filename = key + ext
                 break
         if filename:
@@ -256,8 +257,11 @@ def main():
         backups = {}
         if args.force:
             for ext in (".pdf", ".txt"):
-                p = os.path.join(sources_dir, entry["key"] + ext)
-                if os.path.exists(p):
+                # resolve_inside, not os.path.join: --force renames the file it
+                # finds, so an unsafe key would move a file outside sources_dir
+                # (task #70 finding 1).
+                p = resolve_inside(sources_dir, safe_key(entry["key"]) + ext)
+                if p and os.path.exists(p):
                     os.replace(p, p + ".bak")
                     backups[p] = p + ".bak"
 

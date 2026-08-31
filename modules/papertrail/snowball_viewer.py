@@ -22,6 +22,8 @@ import html
 import hashlib
 from typing import Any, Dict, List, Optional
 
+from .safe_paths import safe_link
+
 # Visual language borrowed from viewer.py so the tools feel like one.
 STATUS_BANNER = {
     "search_failed": ("Seed search failed (rate-limited or offline) — this is a "
@@ -71,7 +73,10 @@ def _candidate_card(c: Dict[str, Any]) -> str:
     hops = max(0, len(path) - 1)
     is_seed = hops == 0
     rel = c.get("relevance")
-    url = c.get("url")
+    # safe_link before _esc: escaping protects the surrounding markup but leaves
+    # the scheme alone, so a 'javascript:...' address arriving in a database
+    # metadata field would stay clickable and run in the page (task #70 finding 3).
+    url = safe_link(c.get("url"))
     link = (f'<a class="paperlink" href="{_esc(url)}" target="_blank" rel="noopener">open ↗</a>'
             if url else "")
     year = c.get("year")

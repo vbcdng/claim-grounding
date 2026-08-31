@@ -32,6 +32,8 @@ import random
 import logging
 from urllib.parse import urlparse, urljoin, quote
 
+from .safe_paths import safe_key, resolve_inside
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -292,12 +294,19 @@ def try_page(url, key, sources_dir, session, title=None, author=None):
     saved as an Epoch analysis this way).
     Returns (outcome, filename, detail): outcome 'pdf'|'text'|'text_thin'|None.
     """
+    # Same guard as download_source: this is a public entry point, so it does not
+    # rely on its caller having cleaned the key (task #70 finding 1).
+    key = safe_key(key)
+    pdf_path = resolve_inside(sources_dir, f"{key}.pdf")
+    txt_path = resolve_inside(sources_dir, f"{key}.txt")
+    if pdf_path is None or txt_path is None:
+        return None, None, "unsafe citation key"
+
     fetched = fetch_html(url, session)
     if fetched is None:
         return None, None, "page fetch failed"
     soup, final_url = fetched
 
-    pdf_path = os.path.join(sources_dir, f"{key}.pdf")
     for pdf_url in extract_pdf_links(soup, final_url):
         if download_file(pdf_url, pdf_path, session):
             if title and content_check(pdf_path, title, author) == "mismatch":
@@ -312,7 +321,6 @@ def try_page(url, key, sources_dir, session, title=None, author=None):
         logger.warning(f"Extracted only {len(text or '')} chars from {final_url} — not saving")
         return None, None, "no PDF linked and page text too short"
 
-    txt_path = os.path.join(sources_dir, f"{key}.txt")
     with open(txt_path, 'w', encoding='utf-8') as f:
         f.write(f"Source URL: {final_url}\n\n---\n\n" + text)
     logger.info(f"Saved page text: {key}.txt ({words} words)")
@@ -509,9 +517,9 @@ def content_check(path, title, author=None) -> str:
     text = ""
     try:
         if path.lower().endswith(".pdf"):
-            import PyPDF2
+            import pypdf
             with open(path, "rb") as f:
-                reader = PyPDF2.PdfReader(f)
+                reader = pypdf.PdfReader(f)
                 text = "\n".join((p.extract_text() or "") for p in reader.pages[:5])
         else:
             with open(path, "r", encoding="utf-8", errors="ignore") as f:
@@ -538,9 +546,9 @@ def pdf_has_text(path, min_chars=200) -> bool:
     """Cheap sanity check that a downloaded PDF yields extractable text (else it's
     a scan/broken file that would silently produce an empty decomposition later)."""
     try:
-        import PyPDF2
+        import pypdf
         with open(path, "rb") as f:
-            reader = PyPDF2.PdfReader(f)
+            reader = pypdf.PdfReader(f)
             chars = 0
             for page in reader.pages[:5]:
                 chars += len(page.extract_text() or "")
@@ -564,10 +572,19 @@ def download_source(entry: dict, sources_dir: str, session, force=False) -> dict
     'not_fetchable'. 'landing' is the best human-visitable page for a manual
     download. force=True re-fetches even when a file already exists.
     """
-    key = entry["key"]
-    pdf_path = os.path.join(sources_dir, f"{key}.pdf")
-    txt_path = os.path.join(sources_dir, f"{key}.txt")
+    # A key reaching here came from a .bib or a [@key] marker the author did not
+    # write. Clean it, then confirm the cleaned name really lands inside
+    # sources_dir before anything is written (task #70 finding 1): os.path.join
+    # silently drops sources_dir when the second part is an absolute path.
+    key = safe_key(entry["key"])
+    pdf_path = resolve_inside(sources_dir, f"{key}.pdf")
+    txt_path = resolve_inside(sources_dir, f"{key}.txt")
     landing = _landing_url(entry)
+    if pdf_path is None or txt_path is None:
+        logger.error(f"[{key}] refusing to download: the citation key does not "
+                     f"produce a filename inside {sources_dir}")
+        return {"key": key, "outcome": "not_fetchable", "filename": None,
+                "landing": landing, "detail": "unsafe citation key"}
 
     if not force:
         for path in (pdf_path, txt_path):

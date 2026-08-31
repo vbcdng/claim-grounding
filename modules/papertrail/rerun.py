@@ -106,6 +106,41 @@ def changed_prompts(prev_prompts, current_fingerprints: Dict[str, str]):
     return {n for n in names if current_fingerprints.get(n) != prev_fp[n]}
 
 
+# Every run made before 2026-08-31 read PDFs with this, so an analysis or journal
+# with no recorded reader is not "unknown" — it is known to be this one.
+PRE_TRACKING_READER = "PyPDF2 3.0.1"
+
+
+def source_reader_changed(prev_reader, current_reader: str,
+                          has_pdf_sources: bool = True) -> bool:
+    """True when the previous run extracted source text with a different reader
+    than this one (task #71).
+
+    Verdict reuse compares source files by their BYTES, so a changed extractor
+    is invisible to `changed_source_files`: the same PDF now yields different
+    text and the reused verdict was made against the old text. The 2026-08-31
+    PyPDF2 -> pypdf swap is the case this exists for — on two corpus sources
+    PyPDF2 returned a character-substitution garble that every detector reads as
+    clean, so a reused verdict there rests on text that was never the source.
+
+    A MISSING `prev_reader` is treated as `PRE_TRACKING_READER`, not as unknown
+    (author ruling 2026-08-31, "option B"). This departs from how untracked
+    prompts and source hashes are handled — those warn and trust — because the
+    two cases differ: a missing prompt fingerprint may mean nothing changed,
+    while a missing reader field means something definite, that the run predates
+    the swap and therefore used PyPDF2.
+
+    `has_pdf_sources=False` short-circuits to False: a project whose sources are
+    all plain text never went through a PDF reader, so re-judging it would buy
+    nothing.
+    """
+    if not has_pdf_sources:
+        return False
+    if not isinstance(prev_reader, str) or not prev_reader:
+        prev_reader = PRE_TRACKING_READER
+    return prev_reader != current_reader
+
+
 def reusable(prev_claim: Dict[str, Any]) -> bool:
     """Judged verdicts carry over; so do 'own' claims — the verdict itself is
     free to rebuild, but the own_kind tag on it was PAID for (own-split, one

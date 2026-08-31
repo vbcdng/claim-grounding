@@ -26,6 +26,8 @@ import json
 import logging
 from typing import Dict, List, Optional, Tuple
 
+from .safe_paths import safe_key
+
 logger = logging.getLogger(__name__)
 
 
@@ -60,7 +62,9 @@ class PandocCitationRecognizer:
     def find_citations(self, text: str) -> List[Citation]:
         out = []
         for m in self._BRACKET_RE.finditer(text):
-            keys = self._KEY_RE.findall(m.group(1))
+            # safe_key at the seam: the raw pattern accepts '/', '.' and '~', which
+            # would travel into sources/<key>.pdf as a path (task #70 finding 1).
+            keys = [safe_key(k) for k in self._KEY_RE.findall(m.group(1))]
             if keys:
                 out.append(Citation(m.start(), m.end(), keys))
         return out
@@ -104,9 +108,17 @@ def _parse_bibtex(path: str) -> Dict[str, Dict]:
 
     entries: Dict[str, Dict] = {}
     for m in _BIB_ENTRY_START_RE.finditer(raw):
-        entry_type, key = m.group(1).lower(), m.group(2)
+        entry_type, raw_key = m.group(1).lower(), m.group(2)
         if entry_type in ("comment", "preamble", "string"):
             continue
+        # The entry pattern accepts anything but a comma or space, so a hostile
+        # .bib could name an entry '/tmp/x' or '../../x' and steer the downloaded
+        # file there (task #70 finding 1). Same cleaning as the marker side, so a
+        # citation and its bibliography entry still resolve to each other.
+        key = safe_key(raw_key)
+        if key != raw_key:
+            logger.warning(f"Bibliography key {raw_key!r} is not a usable filename — "
+                           f"importing it as {key!r}")
         body = _read_balanced(raw, raw.find("{", m.start()))
         fields = _parse_bib_fields(body)
         url = fields.get("url") or _first_url(fields.get("note", ""))

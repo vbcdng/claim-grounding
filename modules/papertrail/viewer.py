@@ -25,6 +25,7 @@ from urllib.parse import quote
 from typing import Dict, Any, Optional
 
 from modules.papertrail import text_decomposer
+from modules.papertrail.safe_paths import safe_link
 
 logger = logging.getLogger(__name__)
 
@@ -107,7 +108,10 @@ def _paper_link(meta: Dict[str, Dict[str, str]], paper_id: str, fallback_title: 
     stored metadata needed). Returns '' if there's nothing to link.
     """
     info = meta.get(paper_id, {})
-    url = (info.get("url") or "").strip()
+    # No pipeline writer fills `url` today, so this is future-proofing rather than
+    # a live hole: if one ever does, the value would come from a paper database
+    # and _esc alone would not stop a 'javascript:' scheme (task #70 finding 3).
+    url = safe_link(info.get("url"))
     if url:
         return (f'<a class="paperlink" href="{_esc(url)}" target="_blank" rel="noopener" '
                 f'title="Open the original paper\'s webpage">View paper ↗</a>')

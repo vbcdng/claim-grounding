@@ -95,3 +95,62 @@ class CheckpointTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CheckpointPdfReaderGuard(unittest.TestCase):
+    """Task #71: the journal header records WHICH library read the PDFs.
+
+    Source files are compared by bytes, so a changed PDF library is invisible to
+    the model/text/source-hash guards while every sentence read out of those
+    files may have moved. A journal written under a different reader holds
+    verdicts this run cannot reproduce, so it is ignored."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.path = os.path.join(self.tmp.name, "checkpoint.jsonl")
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _journal(self, reader):
+        w = checkpoint.Writer(self.path, "m1", "t1", HASHES, reader)
+        w(_claim("c1", "one"))
+        w.close()
+
+    def test_same_reader_recovers(self):
+        self._journal("pypdf 6.16.2")
+        got = checkpoint.load(self.path, "m1", "t1", HASHES, "pypdf 6.16.2")
+        self.assertEqual([c["id"] for c in got], ["c1"])
+
+    def test_different_reader_is_ignored(self):
+        self._journal("PyPDF2 3.0.1")
+        got = checkpoint.load(self.path, "m1", "t1", HASHES, "pypdf 6.16.2")
+        self.assertEqual(got, [])
+
+    def test_untracked_reader_is_discarded(self):
+        # a journal written before task #71 has no source_reader field. Author
+        # ruling 2026-08-31 ("option B"): that is not unknown, it is known to be
+        # PyPDF2, so the journal cannot be reproduced and is dropped.
+        self._journal("")
+        got = checkpoint.load(self.path, "m1", "t1", HASHES, "pypdf 6.16.2")
+        self.assertEqual(got, [])
+
+    def test_untracked_reader_recovers_on_the_old_reader(self):
+        self._journal("")
+        got = checkpoint.load(self.path, "m1", "t1", HASHES, rerun.PRE_TRACKING_READER)
+        self.assertEqual([c["id"] for c in got], ["c1"])
+
+    def test_plain_text_project_is_exempt(self):
+        # no PDF among the sources, so the reader cannot have changed anything
+        txt_only = {"a.txt": "sha-a"}
+        w = checkpoint.Writer(self.path, "m1", "t1", txt_only, "")
+        w(_claim("c1", "one"))
+        w.close()
+        got = checkpoint.load(self.path, "m1", "t1", txt_only, "pypdf 6.16.2")
+        self.assertEqual([c["id"] for c in got], ["c1"])
+
+    def test_caller_that_names_no_reader_is_unaffected(self):
+        # back-compat: an older caller passing four arguments skips the check
+        self._journal("pypdf 6.16.2")
+        got = checkpoint.load(self.path, "m1", "t1", HASHES)
+        self.assertEqual([c["id"] for c in got], ["c1"])

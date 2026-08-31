@@ -437,7 +437,7 @@ def _parse_support(raw: str) -> Tuple[bool, str, Optional[List[str]]]:
 def _snippet(sentence: str, n_words: int = 7) -> str:
     """A short, distinctive search term for the viewer's fallback PDF find.
 
-    The stored sentence is PyPDF2-extracted and often won't match PDF.js's text layer
+    The stored sentence is pypdf-extracted and often won't match PDF.js's text layer
     verbatim; a normalized first-few-words prefix (minus any leading [n] reference
     marker) is far more likely to hit.
     """

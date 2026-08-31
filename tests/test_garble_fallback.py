@@ -1,4 +1,4 @@
-"""Letter-spaced PDF garble (the anthropic2024/macaskill2025 class): PyPDF2
+"""Letter-spaced PDF garble (the anthropic2024/macaskill2025 class): the PDF reader
 sometimes extracts a text layer one glyph per token, which poisons the sentence
 index, the decomposed claims, and every downstream judge. read_source_pages now
 detects that shape and falls back to poppler's pdftotext when available;
@@ -28,7 +28,7 @@ class LooksLetterSpaced(unittest.TestCase):
         self.assertFalse(sd._looks_letter_spaced("a b c d"))
 
     def test_spaceless_blob_not_flagged(self):
-        # the OTHER PyPDF2 failure shape ("Wewillsoonlive...") is handled by the
+        # the OTHER reader failure shape ("Wewillsoonlive...") is handled by the
         # segmentation guards, not this detector
         self.assertFalse(sd._looks_letter_spaced("Wewillsoonliveinaworld" * 100))
 
@@ -88,7 +88,7 @@ class LooksLocallyGlued(unittest.TestCase):
         self.assertFalse(sd._looks_locally_glued("The electroencephalographic pattern was normal. " * 30))
 
 
-# Intra-word line-break garble (drouinchartier2020/t18): PyPDF2 splits a word
+# Intra-word line-break garble (drouinchartier2020/t18): the reader splits a word
 # across a wrapped line into a stray leading letter + remainder ("p articipants",
 # "r esults"). Whole-doc detectors pass; the signal is standalone single-CONSONANT
 # tokens (real single-letter words are only a/A/I/O).
@@ -195,45 +195,115 @@ class ReadSourcePagesFallback(unittest.TestCase):
         return mock.Mock(pages=pages)
 
     def test_garbled_pdf_uses_pdftotext(self):
-        with mock.patch("PyPDF2.PdfReader", return_value=self._reader_with([GARBLE])), \
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([GARBLE])), \
              mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
              mock.patch.object(sd, "_pdftotext_pages", return_value=[CLEAN]):
             self.assertEqual(sd.read_source_pages("x.pdf"), [CLEAN])
 
     def test_garbled_pdf_without_poppler_keeps_old_behavior(self):
-        with mock.patch("PyPDF2.PdfReader", return_value=self._reader_with([GARBLE])), \
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([GARBLE])), \
              mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
              mock.patch.object(sd, "_pdftotext_pages", return_value=None):
             self.assertEqual(sd.read_source_pages("x.pdf"), [GARBLE])
 
     def test_clean_pdf_never_calls_fallback(self):
-        with mock.patch("PyPDF2.PdfReader", return_value=self._reader_with([CLEAN])), \
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([CLEAN])), \
              mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
              mock.patch.object(sd, "_pdftotext_pages") as fb:
             self.assertEqual(sd.read_source_pages("x.pdf"), [CLEAN])
             fb.assert_not_called()
 
-    def test_fallback_still_garbled_keeps_pypdf2_text(self):
+    def test_fallback_still_garbled_keeps_reader_text(self):
         # pdftotext can also fail to de-garble (image-layer OCR PDFs) — keep the
         # original rather than swap one garble for another
         other_garble = "X y z w " * 200
-        with mock.patch("PyPDF2.PdfReader", return_value=self._reader_with([GARBLE])), \
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([GARBLE])), \
              mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
              mock.patch.object(sd, "_pdftotext_pages", return_value=[other_garble]):
             self.assertEqual(sd.read_source_pages("x.pdf"), [GARBLE])
 
     def test_localized_glue_swaps_when_fallback_is_cleaner(self):
         # whole-doc detectors pass, but a 25+-char run triggers the swap — and
-        # only because pdftotext removes the glued run
-        with mock.patch("PyPDF2.PdfReader", return_value=self._reader_with([LOCAL_GLUE])), \
+        # only because pdftotext removes the glued run.
+        # The fallback text is sized to match LOCAL_GLUE: this test is about the
+        # glue-reduction condition, and since task #71 a fallback that has lost
+        # most of the letters is refused on its own (see FallbackTextLossGuard),
+        # so a much shorter stand-in would fail for an unrelated reason.
+        clean_same_size = CLEAN * 2
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([LOCAL_GLUE])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[clean_same_size]):
+            self.assertEqual(sd.read_source_pages("x.pdf"), [clean_same_size])
+
+    def test_localized_glue_kept_when_fallback_not_cleaner(self):
+        # if pdftotext still has the glued run (no improvement), don't swap —
+        # never trade the reader text for a differently-broken reflow
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([LOCAL_GLUE])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[LOCAL_GLUE]):
+            self.assertEqual(sd.read_source_pages("x.pdf"), [LOCAL_GLUE])
+
+
+class SourceReaderId(unittest.TestCase):
+    """Task #71: the reader identity recorded in analysis.json metadata."""
+
+    def test_names_the_library_and_version(self):
+        got = sd.source_reader_id()
+        self.assertTrue(got.startswith("pypdf "), got)
+        # a version, not a placeholder — the reuse guard compares this string
+        self.assertRegex(got, r"^pypdf \d+\.\d+")
+
+    def test_falls_back_to_the_bare_name(self):
+        with mock.patch.dict("sys.modules", {"pypdf": None}):
+            self.assertEqual(sd.source_reader_id(), "pypdf")
+
+
+class FallbackTextLossGuard(unittest.TestCase):
+    """Task #71: the pdftotext fallback must not swap in a truncated document.
+
+    Found on data/loop_rounds/round_5/app/sources/unodc2023.pdf, a 162-page
+    report: its text trips the space-collapse detector, and the pdftotext the
+    tool swapped in held 19% of the letters (108,465 of 573,914). The garble
+    detectors cannot see this — they measure token shapes, never how much of the
+    document survived — so a separate check is needed. Whitespace is excluded
+    because letter-spaced garble inflates the raw count with spaces alone."""
+
+    def _reader_with(self, page_texts):
+        pages = [mock.Mock(extract_text=mock.Mock(return_value=t)) for t in page_texts]
+        return mock.Mock(pages=pages)
+
+    def test_truncated_fallback_is_refused(self):
+        # GARBLE fires a detector; the fallback is clean but holds a fraction
+        truncated = CLEAN[:len(CLEAN) // 10]
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([GARBLE])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[truncated]):
+            self.assertEqual(sd.read_source_pages("x.pdf"), [GARBLE])
+
+    def test_truncated_fallback_says_why(self):
+        truncated = CLEAN[:len(CLEAN) // 10]
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([GARBLE])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[truncated]), \
+             self.assertLogs(sd.logger, level="WARNING") as cm:
+            sd.read_source_pages("x.pdf")
+        self.assertTrue(any("lost most of the document" in m for m in cm.output),
+                        cm.output)
+
+    def test_letter_spaced_swap_still_happens_despite_a_shorter_count(self):
+        # the real anthropic2024 case: de-garbling removes SPACES, so the raw
+        # character count falls while the letters are all still there. This is
+        # exactly the swap the guard must not block.
+        spaced = " ".join("the quick brown fox jumps over the lazy dog " * 40)
+        degarbled = spaced.replace(" ", "")
+        self.assertLess(len(degarbled), len(spaced) * 0.6)          # raw count collapses
+        self.assertEqual(sd._nonspace_len(degarbled), sd._nonspace_len(spaced))
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([spaced])), \
              mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
              mock.patch.object(sd, "_pdftotext_pages", return_value=[CLEAN]):
             self.assertEqual(sd.read_source_pages("x.pdf"), [CLEAN])
 
-    def test_localized_glue_kept_when_fallback_not_cleaner(self):
-        # if pdftotext still has the glued run (no improvement), don't swap —
-        # never trade PyPDF2 for a differently-broken reflow
-        with mock.patch("PyPDF2.PdfReader", return_value=self._reader_with([LOCAL_GLUE])), \
-             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
-             mock.patch.object(sd, "_pdftotext_pages", return_value=[LOCAL_GLUE]):
-            self.assertEqual(sd.read_source_pages("x.pdf"), [LOCAL_GLUE])
+    def test_nonspace_len_ignores_whitespace_only(self):
+        self.assertEqual(sd._nonspace_len("a b\tc\nd"), 4)
+        self.assertEqual(sd._nonspace_len("   \n\t "), 0)
+        self.assertEqual(sd._nonspace_len(""), 0)

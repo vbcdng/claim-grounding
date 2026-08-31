@@ -291,3 +291,47 @@ class TestOwnClaimReuse(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SourceReaderChanged(unittest.TestCase):
+    """Task #71: verdict reuse must not silently cross a PDF-reader change.
+
+    changed_source_files compares source files by their BYTES, so swapping the
+    extraction library leaves every hash identical while the text read out of
+    those files differs — the 2026-08-31 PyPDF2 -> pypdf swap reads the
+    letter-spaced class as clean prose, so a reused verdict could rest on
+    garble that no longer exists."""
+
+    def test_same_reader_allows_reuse(self):
+        self.assertFalse(rerun.source_reader_changed("pypdf 6.16.2", "pypdf 6.16.2"))
+
+    def test_different_reader_blocks_reuse(self):
+        self.assertTrue(rerun.source_reader_changed("PyPDF2 3.0.1", "pypdf 6.16.2"))
+
+    def test_different_version_of_the_same_library_blocks_reuse(self):
+        # a version bump can change extraction too — that is the whole reason
+        # the recorded value carries the version
+        self.assertTrue(rerun.source_reader_changed("pypdf 6.0.0", "pypdf 6.16.2"))
+
+    def test_untracked_previous_run_counts_as_the_old_reader(self):
+        # Author ruling 2026-08-31 ("option B"): a missing field is not unknown.
+        # Every run before that date used PyPDF2, so an analysis with no recorded
+        # reader is KNOWN to differ from today's and must be re-judged. This is
+        # deliberately unlike untracked prompts/source hashes, which warn and
+        # trust — a missing prompt fingerprint may mean nothing changed, a
+        # missing reader field cannot.
+        self.assertTrue(rerun.source_reader_changed(None, "pypdf 6.16.2"))
+        self.assertTrue(rerun.source_reader_changed("", "pypdf 6.16.2"))
+        self.assertTrue(rerun.source_reader_changed({"name": "pypdf"}, "pypdf 6.16.2"))
+
+    def test_untracked_run_on_the_old_reader_is_not_a_change(self):
+        # the assumed value is a real one, not a sentinel that always differs
+        self.assertFalse(rerun.source_reader_changed(None, rerun.PRE_TRACKING_READER))
+
+    def test_projects_with_no_pdf_sources_are_exempt(self):
+        # no PDF was read, so no PDF reader can have changed anything; re-judging
+        # a plain-text project would spend money for nothing
+        self.assertFalse(rerun.source_reader_changed(None, "pypdf 6.16.2",
+                                                     has_pdf_sources=False))
+        self.assertFalse(rerun.source_reader_changed("PyPDF2 3.0.1", "pypdf 6.16.2",
+                                                     has_pdf_sources=False))
