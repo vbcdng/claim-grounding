@@ -15,9 +15,13 @@ the P52 hardware. Pricing and Ollama tags drift — re-verify before relying on 
 - Net effect: re-running on the same sources is nearly free; the bill/slow-part is
   **first runs on new papers**. Delete `source_claims/` to force re-decomposition with a
   new model.
-- The default is `gemini-2.5-flash-lite` since 2026-07-04 (config change). With the old
-  default (`gemini-2.5-flash`, $2.50/M out) **output-token cost dominated** because it is
-  a *thinking* model that bills hidden reasoning tokens.
+- The default is `gemini/gemma-4-31b-it` on Google's free tier since 2026-08-30 (author
+  ruling, task #63/#66) — the judge pick since 2026-08-02 written into the config. Free
+  means slow: the free tier limits requests per minute, so long runs pace themselves.
+  For faster paid runs use `openrouter/google/gemma-4-31b-it`.
+- History: `gemini-2.5-flash-lite` was the default 2026-07-04 → 2026-08-30 (it retires
+  2026-10-16). Before that, `gemini-2.5-flash` ($2.50/M out) — **output-token cost
+  dominated** because it is a *thinking* model that bills hidden reasoning tokens.
 
 ---
 
@@ -28,15 +32,41 @@ Per-million-token pricing, verified June 2026:
 | Model | litellm string | Input | Output | Notes |
 |---|---|---|---|---|
 | Gemini 2.5 Flash | `gemini/gemini-2.5-flash` | $0.30 | **$2.50** | thinking model; expensive output; old default |
-| **Current default** Gemini 2.5 Flash-Lite | `gemini/gemini-2.5-flash-lite` | $0.10 | $0.40 | **same Google key, ~6× cheaper output, not heavy-thinking; 0-FP judge on the paper1 bench** |
+| Gemini 2.5 Flash-Lite | `gemini/gemini-2.5-flash-lite` | $0.10 | $0.40 | default 2026-07-04 → 2026-08-30; retires 2026-10-16; 0-FP judge on the paper1 bench |
 | Gemini 2.0 Flash-Lite | `gemini/gemini-2.0-flash-lite` | $0.075 | $0.30 | cheapest in-family |
 | GPT-4.1 nano | `openai/gpt-4.1-nano` | $0.10 | $0.40 | needs `OPENAI_API_KEY`; 128K ctx |
 | GPT-4o-mini | `openai/gpt-4o-mini` | $0.15 | $0.60 | very reliable JSON, 128K ctx |
 | Mistral Small 3.2 | `mistral/mistral-small-latest` | $0.075 | $0.20 | cheapest output of the hosted set |
 | DeepSeek chat (V3.x) | `deepseek/deepseek-chat` | ~$0.14 | ~$0.28 | needs `DEEPSEEK_API_KEY` |
-| DeepSeek V4 Flash | `deepseek/deepseek-v4-flash` | ~$0.09 | ~$0.18 | **tested 2026-07-03: 7/11 on the judge bench — too strict on entailment (refused t49/t35/t27/t68); negatives all held. Do not switch; flash-lite stays** |
+| DeepSeek V4 Flash | `deepseek/deepseek-v4-flash` | ~$0.09 | ~$0.18 | default ARBITER 2026-07-12 → 2026-08-30, still a supported override. As a judge, tested 2026-07-03: 7/11 on the judge bench — too strict on entailment; do not switch |
+| GPT-5.6 luna (default arbiter) | `openrouter/openai/gpt-5.6-luna` | $0.10 | $0.60 | **default arbiter since 2026-08-30** (won the 2026-08-01 replay comparison); needs `OPENROUTER_API_KEY` or `config/openrouter_api_key.txt`; thought-free builtin |
+| **Current default** Gemma 4 31B Instruct | `gemini/gemma-4-31b-it` | $0.00 | $0.00 | **default judge since 2026-08-30**; Google free tier only (rate-paced — slow but $0); what the gate runs on; the same model paid on OpenRouter lists $0.08 in / $0.35 out (checked 2026-08-18) |
 
 Auth: export the provider env var, or pass `--api-key <raw-key-or-file>`.
+
+### What a gate run actually costs and how long it takes (measured 2026-08-18, task #18)
+
+Measured from `llm_calls.jsonl`, not estimated. One six-document ship-gate arm on
+free Google gemma = **~3,450 calls, ~6.4M input tokens, ~0.21M output tokens**
+(mean 1,874 input / 60 output tokens per call, median output 46). Priced at
+OpenRouter's listed rate for the same model that is **~$0.59 per gate arm**;
+~90% of the bill is input, which is why task #50 (trim the per-claim context)
+is the lever that matters. All of task #18's gemma work to date — 28,470 calls,
+52.5M in / 1.68M out — would have been **~$4.79**. The same volume on
+flash-lite would be ~$5.90, so the free tier saves the whole amount rather than
+a discount.
+
+Speed, same source: median call **2.3s**, but the MEAN is 7.4s because free-tier
+pacing waits are counted inside the call (they do not increment `api_attempts`).
+On one arm, 12% of calls took ≥10s and consumed **69% of all model time**; one
+call waited 6,179s. Measured wall clock 3h47 at concurrency 2, which matches
+sum-of-latency/2 — so the free tier's cost is ~2.5 hours of waiting per arm, not
+model slowness. OpenRouter's published per-provider throughput for this model is
+38–200 tok/s against our effective ~18 tok/s, and a paid endpoint also lifts the
+concurrency-2 pin (4 dropped claims on free Google, task #37 makes a drop look
+like a red card), so a paid arm projects to **~15 min at concurrency 8**.
+Caveat: OpenRouter's OWN free variant is unusable here — 20 requests/minute and
+50/day (1,000/day after ever buying $10 of credit), i.e. ~a month for this task.
 
 ### Verified usable: `gemini-2.5-flash-lite`
 Tested live through `LLMClient` with the existing `config/google_api_key.txt`:
@@ -64,7 +94,8 @@ inference via Ollama**; offload a few layers to the GPU for a small bump. See `L
 1. Reliable JSON / instruction-following (#1 factor).
 2. Sound factual (entailment-style) judgment.
 3. **≥32K context** — the full-text extraction fallback (`_extract_evidence`) sends a
-   *whole paper* in one call. (This supersedes the old `LOCAL_MODELS.md` note that context
+   *whole paper* in one call. (This supersedes the old note — now in
+   `docs/archive/LOCAL_MODELS_ANALYSIS_2026-05-29.md` — that context
    is a non-issue — that predated the fallback.)
 4. **general instruct** models, not "Coder" variants.
 

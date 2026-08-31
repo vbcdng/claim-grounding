@@ -13,7 +13,7 @@ Two practical notes before you start. First, if you cloned this repo before
 once that day to remove two paywalled source texts, and will not be
 rewritten again. Second, a pre-deadline self-audit found a handful of rough
 edges we chose to document rather than rush-fix; they are listed with
-workarounds in `docs/KNOWN_ISSUES_2026-07-20.md`, and none affect the
+workarounds in `docs/KNOWN_ISSUES.md`, and none affect the
 numbers this page tells you how to reproduce.
 
 ## How the tool works, in plain terms

@@ -36,8 +36,8 @@ from . import cost_estimator
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-RECOMMENDED_MODEL = "gemini/gemini-2.5-flash-lite"
-BIGGER_MODEL = "gemini/gemini-2.5-flash"
+RECOMMENDED_MODEL = "gemini/gemma-4-31b-it"       # the default since 2026-08-30: $0 on Google's free tier, slow (rate-paced)
+BIGGER_MODEL = "openrouter/google/gemma-4-31b-it"  # same model paid via OpenRouter: much faster, ~$0.08/$0.35 per M tokens
 DEFAULT_CLAUDE_CODE_ALIAS = "haiku"        # the Stream-E dev backend's tested default
 DEFAULT_OLLAMA_TAG = "gemma4:26b"          # ranked #1 for this box in docs/MODEL_OPTIONS.md
 DEFAULT_OLLAMA_URL = "http://localhost:11434"
@@ -311,10 +311,11 @@ def _model_step(input_fn):
         return f" (${p['input']:.2f}/M in, ${p['output']:.2f}/M out)" if p else ""
 
     print("\nModel — does the reading and judging. Embeddings always stay local (free).")
-    print(f"  1) {RECOMMENDED_MODEL} — recommended: cheapest tested, "
-          f"benchmarked on this tool{price(RECOMMENDED_MODEL)}")
-    print(f"  2) {BIGGER_MODEL} — bigger Gemini; thinking model, "
-          f"much pricier output{price(BIGGER_MODEL)}")
+    print(f"  1) {RECOMMENDED_MODEL} — recommended and the default: free on Google's "
+          f"free tier, benchmarked on this tool; slow (the free tier limits requests "
+          f"per minute){price(RECOMMENDED_MODEL)}")
+    print(f"  2) {BIGGER_MODEL} — the same model, paid through OpenRouter: "
+          f"much faster{price(BIGGER_MODEL)}")
     print("  3) claude-code — $0 through your Claude Code login (haiku or sonnet); "
           "no API key, slower")
     print("  4) local model via Ollama — free, runs on this machine (Ollama must be running)")
@@ -372,19 +373,20 @@ def _api_key_step(model, input_fn):
 
 
 def _arbiter_note(model):
-    """The arbiter is ON by default but silently self-disables without a DeepSeek
-    key — say up front which way THIS run will go (print-only, no question)."""
+    """The arbiter is ON by default but silently self-disables without an
+    OpenRouter key — say up front which way THIS run will go (print-only)."""
     print("\nArbiter — a second model that re-checks every flagged claim (default on).")
     if model.startswith("claude-code/"):
         print("  Follows the claude-code backend: claude-code/sonnet, $0 — nothing to set up.")
         return
-    if os.environ.get("DEEPSEEK_API_KEY") or \
-            os.path.isfile(os.path.join(PROJECT_ROOT, "config", "deepseek_api_key.txt")):
-        print("  DeepSeek key found — it will run (deepseek/deepseek-v4-flash, ~a cent per run).")
+    if os.environ.get("OPENROUTER_API_KEY") or \
+            os.path.isfile(os.path.join(PROJECT_ROOT, "config", "openrouter_api_key.txt")):
+        print("  OpenRouter key found — it will run (openrouter/openai/gpt-5.6-luna, "
+              "cents per run).")
         return
-    print("  No DeepSeek key found, so it will be SKIPPED (one warning, never an error).\n"
-          "  To enable it: put a key from platform.deepseek.com into\n"
-          "  config/deepseek_api_key.txt (or export DEEPSEEK_API_KEY) and re-run.")
+    print("  No OpenRouter key found, so it will be SKIPPED (one note, never an error).\n"
+          "  To enable it: put a key from openrouter.ai into\n"
+          "  config/openrouter_api_key.txt (or export OPENROUTER_API_KEY) and re-run.")
 
 
 # ---------- the wizard ----------

@@ -20,11 +20,11 @@
     "comment": "Settings for dynamic_prompt_ranking.py"
   },
   "claim_validation": {
-    "model_name": "gemini-2.5-flash-lite",
+    "model_name": "gemma-4-31b-it",
     "thinking_budget": 8024,
     "max_output_tokens": 8000,
     "temperature": 0.1,
-    "comment": "Default model for verify_my_text.py (via llm_client). flash-lite: ~6x cheaper output than flash, 0-FP judge on the paper1 bench; changed from gemini-2.5-flash 2026-07-04 so bare runs match the recommended model."
+    "comment": "Default model for verify_my_text.py (via llm_client). gemma-4-31b-it on Google's free route: the judge pick since 2026-08-02 (author, task #9) and what every gate/bench run uses; written into the default 2026-08-30 (author ruling, task #63) — the old default gemini-2.5-flash-lite retires 2026-10-16. Free tier only: slow (rate-paced), multi-key rotation applies, thinking-off builtin. Paid/faster: openrouter/google/gemma-4-31b-it."
   },
   "synthesis_repair": {
     "model_name": "gemini-2.5-flash",
