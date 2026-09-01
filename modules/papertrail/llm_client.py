@@ -134,10 +134,15 @@ _BUILTIN_EXTRA_BODY: Dict[str, Dict[str, Any]] = {
     # gemma-4 on Google's own API (free tier only): hidden thinking eats the
     # output budget and can return EMPTY under a tight cap; thinkingLevel
     # MINIMAL zeroes it (verified live 2026-08-02, MODEL_HOSTING_LANDSCAPE §6).
-    # NOTE: litellm (1.74.0) silently DROPS extra_body for the gemini/
-    # provider, so _call_impl merges gemini/ payloads as TOP-LEVEL litellm
-    # kwargs instead — thinkingConfig is a GenerationConfig field litellm
-    # forwards. The OpenRouter gemma route is prefix-excluded as usual.
+    # NOTE: litellm mishandles extra_body for the gemini/ provider on both
+    # versions we tested: 1.74.0 silently DROPS it, and 1.84.0 places it at
+    # the request ROOT, where Google does not read generation settings
+    # (request capture + live probe, 2026-09-01, task #71 — the no-workaround
+    # arm returned EMPTY). So _call_impl merges gemini/ payloads as TOP-LEVEL
+    # litellm kwargs instead — thinkingConfig is a GenerationConfig field
+    # litellm forwards. KEEP this workaround even though 1.84.0 "supports"
+    # extra_body for gemini/. The OpenRouter gemma route is prefix-excluded
+    # as usual.
     "gemini/gemma-4": {"thinkingConfig": {"thinkingLevel": "MINIMAL"}},
 }
 
@@ -540,9 +545,11 @@ class LLMClient:
         extra = _extra_body_for(self.model)
         if extra:
             if self.provider == "gemini":
-                # litellm (verified on 1.74.0) silently DROPS extra_body for
-                # the gemini/ provider; GenerationConfig fields DO pass through
-                # as top-level kwargs (MODEL_HOSTING_LANDSCAPE §6).
+                # litellm mishandles extra_body for gemini/: 1.74.0 DROPS
+                # it, 1.84.0 puts it at the request ROOT where Google ignores
+                # generation settings (request capture 2026-09-01, task #71).
+                # GenerationConfig fields DO pass through as top-level kwargs
+                # — keep this path (MODEL_HOSTING_LANDSCAPE §6).
                 kwargs.update(extra)
             else:
                 kwargs["extra_body"] = extra

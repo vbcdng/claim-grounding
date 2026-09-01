@@ -197,3 +197,39 @@ class ProperNounListNotAStub(unittest.TestCase):
         self.assertEqual(len(claims), 1)
         self.assertEqual(claims[0]["markers"], ["a"])
         self.assertIn("found the opposite", claims[0]["text"])
+
+
+class MarkerTypos(unittest.TestCase):
+    """find_marker_typos (task #69 item 1): near-miss markers the parser
+    rejects must produce a warning instead of vanishing silently."""
+
+    def test_space_inside_key_is_flagged(self):
+        warns = td.find_marker_typos("Print caused it [[my key]].")
+        self.assertEqual(len(warns), 1)
+        self.assertIn("[[my key]]", warns[0])
+
+    def test_bad_characters_flagged(self):
+        warns = td.find_marker_typos("Result [[smith.2020]] and [[a,b]].")
+        self.assertEqual(len(warns), 2)
+
+    def test_missing_closing_bracket_flagged(self):
+        warns = td.find_marker_typos("Print caused it [[eisenstein1980]. More text.")
+        self.assertEqual(len(warns), 1)
+        self.assertIn("closing", warns[0])
+
+    def test_missing_opening_bracket_flagged(self):
+        warns = td.find_marker_typos("Print caused it [eisenstein1980]]. More text.")
+        self.assertEqual(len(warns), 1)
+        self.assertIn("opening", warns[0])
+
+    def test_valid_markers_not_flagged(self):
+        self.assertEqual(td.find_marker_typos(
+            "One [[a]], grouped ([[b]]; [[c-d_2020]]), adjacent [[e]][[f]]."), [])
+
+    def test_plain_single_brackets_not_flagged(self):
+        self.assertEqual(td.find_marker_typos(
+            "Numeric cites [1] and [12, 13] and editorial [sic] stay quiet."), [])
+
+    def test_duplicate_typo_warns_once(self):
+        warns = td.find_marker_typos("A [[my key]] and again [[my key]].")
+        self.assertEqual(len(warns), 1)

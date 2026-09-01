@@ -64,6 +64,30 @@ class NewDispatch(unittest.TestCase):
                 LLMClient(model="claude-code/haiku")
             self.assertIn("claude", str(ctx.exception))
 
+    def test_missing_cli_exits_main_without_a_traceback(self):
+        # Task #69 item 5: the direct CLI path used to let the RuntimeError
+        # escape main() as a full Python trace; it must exit(1) with the
+        # one-line message instead.
+        import sys
+        import tempfile
+        import verify_my_text
+        tmp = tempfile.mkdtemp()
+        txt = os.path.join(tmp, "t.md")
+        src = os.path.join(tmp, "sources")
+        os.makedirs(src)
+        with open(txt, "w") as f:
+            f.write("A claim. [[a]]\n\n[References]\na = a.txt\n")
+        with open(os.path.join(src, "a.txt"), "w") as f:
+            f.write("Source text about the claim.")
+        argv = ["verify_my_text.py", "--text", txt, "--sources", src,
+                "--backend", "claude-code",
+                "--output-dir", os.path.join(tmp, "out")]
+        with mock.patch("shutil.which", return_value=None), \
+             mock.patch.object(sys, "argv", argv):
+            with self.assertRaises(SystemExit) as ctx:
+                verify_my_text.main()
+            self.assertEqual(ctx.exception.code, 1)
+
 
 class CallBehavior(unittest.TestCase):
     def test_call_returns_stdout_and_call_json_parses_fences(self):

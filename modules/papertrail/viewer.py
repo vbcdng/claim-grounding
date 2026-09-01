@@ -47,6 +47,16 @@ def _norm_ws(s: str) -> str:
     return " ".join((s or "").split())
 
 
+def _all_sources_unreadable(c: Dict[str, Any]) -> bool:
+    """True when EVERY cited source of this claim was unreadable (empty or
+    garbled text layer) — the verdict then judged garbage or nothing, so the
+    viewer treats the claim as an input problem, not a judgment (task #69
+    item 2). Verdict fields are never changed by this."""
+    ur = {u.get("pid") for u in (c.get("unreadable_sources") or [])}
+    pids = set(c.get("paper_ids") or [])
+    return bool(ur) and bool(pids) and pids <= ur
+
+
 def _confidence(c: Dict[str, Any]) -> Optional[tuple]:
     """(level, why) — how sure the judge was, derived from signals the run
     already records (vote tallies, which pipeline stage decided, match
@@ -57,8 +67,11 @@ def _confidence(c: Dict[str, Any]) -> Optional[tuple]:
     verdict = c.get("verdict")
     if verdict not in ("supported", "unsupported"):
         return None
-    if verdict == "unsupported" and str(c.get("reason", "")).startswith("source_file_missing"):
+    if verdict == "unsupported" and str(c.get("reason", "")).startswith(
+            ("source_file_missing", "no_source_sentences")):
         return None                        # input problem, not a judgment
+    if _all_sources_unreadable(c):
+        return None                        # judged garbled text — also an input problem
     if (c.get("second_opinion") or {}).get("agrees") is False:
         return ("low", "a second model read the same evidence and reached the opposite "
                        "verdict — read the evidence and decide yourself")
@@ -413,6 +426,28 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
           <div class="evidence">
             <div class="ev-label"><span class="srcchip no" title="the file for this citation is not in the sources folder, so it could not be checked">source file missing</span> [[{_esc(mm.get('key') or '')}]]</div>
             <div class="reason">The cited file <code>{_esc(mm.get('filename') or '')}</code> is not in the sources folder — this citation was not verified. Add the file and re-run to check it.</div>
+          </div>"""
+    # Unreadable cited sources (task #69 item 2): the file exists but either
+    # parsed to zero sentences (a scanned PDF holds pictures of pages, not
+    # text) or parsed into gibberish (a broken font inside the PDF replaced
+    # the letters — task #71 handover). Same treatment as a missing file: a
+    # grey per-source row, never a red judgment.
+    for us in (c.get("unreadable_sources") or []):
+        if us.get("why") == "garbled":
+            note = ("The cited file's text came out as gibberish when read — usually a "
+                    "broken font inside the PDF, which replaces every letter with a "
+                    "different one. What the tool read is not real language, so this "
+                    "citation could not be meaningfully checked. Supply a text or OCR "
+                    "copy of the source and re-run.")
+        else:
+            note = ("The cited file has no readable text — often a scanned PDF, which "
+                    "stores pictures of pages instead of text. This citation was not "
+                    "verified. <code>python download_sources.py --report-only</code> "
+                    "lists every source file with little or no readable text.")
+        blocks += f"""
+          <div class="evidence">
+            <div class="ev-label"><span class="srcchip no" title="the file for this citation contains no readable text, so it could not be checked">{'source text garbled' if us.get('why') == 'garbled' else 'source unreadable'}</span> [[{_esc(us.get('key') or '')}]]</div>
+            <div class="reason">{note}</div>
           </div>"""
 
     if not blocks:
@@ -1526,6 +1561,15 @@ def _assessment_panel(assessment: Optional[Dict[str, Any]]) -> str:
     argmap = assessment.get("argument_map") or {}
     crux = assessment.get("crux") or {}
     indep = assessment.get("independence") or {}
+    # A pass that CRASHED must not render like a pass that ran and found
+    # nothing (task #69 item 6) — the run records per-pass errors here.
+    errors = assessment.get("errors") or {}
+
+    def _err_html(pass_key: str) -> str:
+        return ('<p class="meta am-err">⚠ this check failed and did not finish — '
+                'the section is empty because it did not run, not because '
+                'nothing was found (error: '
+                f'{_esc(errors.get(pass_key, ""))})</p>')
 
     # Cruxes — claims the argument most depends on (topology + fragility).
     cx_rows = []
@@ -1538,7 +1582,8 @@ def _assessment_panel(assessment: Optional[Dict[str, Any]]) -> str:
             f'<span class="am-ctext">{_esc(c.get("text",""))}</span> {frag_badge}'
             f'<div class="am-why">{_esc(c.get("why",""))}</div></li>')
     crux_html = ("<ol class='am-list'>" + "".join(cx_rows) + "</ol>") if cx_rows \
-                else "<p class='meta'>no cruxes identified</p>"
+                else (_err_html("crux") if "crux" in errors
+                      else "<p class='meta'>no cruxes identified</p>")
 
     # Evidence independence — cited-source pairs flagged as correlated.
     src_title = {s.get("key"): (s.get("title") or s.get("key"))
@@ -1559,7 +1604,8 @@ def _assessment_panel(assessment: Optional[Dict[str, Any]]) -> str:
     indep_head = (f"{len(flagged)} flagged pair(s) / {n_src} sources"
                   + (f" → {n_clusters} independent cluster(s)" if n_clusters is not None else ""))
     indep_html = ("<ul class='am-list'>" + "".join(ind_rows) + "</ul>") if ind_rows \
-        else "<p class='meta'>no correlated-source pairs flagged — cited sources look independent</p>"
+        else (_err_html("independence") if "independence" in errors
+              else "<p class='meta'>no correlated-source pairs flagged — cited sources look independent</p>")
 
     # Argument map — argdown-style inference edge list (textual, not a graph render).
     nodes = {n.get("id"): n for n in (argmap.get("nodes") or [])}
@@ -1585,7 +1631,8 @@ def _assessment_panel(assessment: Optional[Dict[str, Any]]) -> str:
     map_html = thesis_html + (
         f"<div class='am-sub'><h4>Inference edges ({len(edge_rows)})</h4>"
         f"<ul class='am-list am-edges'>{''.join(edge_rows)}</ul></div>"
-        if edge_rows else "<p class='meta'>no edges inferred</p>")
+        if edge_rows else (_err_html("argument_map") if "argument_map" in errors
+                           else "<p class='meta'>no edges inferred</p>"))
 
     method = _esc(argmap.get("method") or crux.get("method") or "")
     model = _esc(str(argmap.get("model") or crux.get("model") or indep.get("model") or ""))
@@ -1647,10 +1694,20 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
     # Honest coverage: "unsupported" that really means "the source file was never
     # checked" must not be lumped in with judged failures, or the header implies
     # more (and worse) verification than actually happened.
-    n_unverifiable = sum(1 for c in claims if c["verdict"] == "unsupported"
-                         and str(c.get("reason", "")).startswith("source_file_missing"))
+    n_unv_missing = sum(1 for c in claims if c["verdict"] == "unsupported"
+                        and str(c.get("reason", "")).startswith("source_file_missing"))
+    # "no_source_sentences" = the file exists but parsed to zero readable
+    # sentences (scanned PDF); _all_sources_unreadable also catches claims whose
+    # every cited source parsed into gibberish (ciphered text layer) — both are
+    # input problems like a missing file, not judged rejections (task #69 item 2).
+    n_unv_unreadable = sum(1 for c in claims if c["verdict"] == "unsupported"
+                           and (str(c.get("reason", "")).startswith("no_source_sentences")
+                                or _all_sources_unreadable(c)))
+    n_unverifiable = n_unv_missing + n_unv_unreadable
+    unv_kinds = " / ".join(k for k, n in (("source file missing", n_unv_missing),
+                                          ("source unreadable", n_unv_unreadable)) if n)
     unverifiable_total = (f' &nbsp;·&nbsp; <b style="color:#9ca3af">{n_unverifiable} unverifiable '
-                          f'(source file missing)</b>' if n_unverifiable else "")
+                          f'({unv_kinds})</b>' if n_unverifiable else "")
     n_changed = sum(1 for c in claims if (c.get("prev") or {}).get("changed"))
     changed_btn = (f'<button class="fbtn" data-f="changed">Changed ({n_changed})</button>'
                    if n_changed else "")
@@ -2209,6 +2266,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .assess-head {{ display:flex; justify-content:space-between; align-items:center; }}
   .assess-title {{ font-weight:600; color:#334155; }}
   .am-note {{ font-weight:400; color:#9ca3af; font-size:11px; }}
+  .am-err {{ color:#92400e; background:#fef3c7; border-radius:4px; padding:4px 8px; }}
   .assess-body {{ display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:18px; margin-top:8px; }}
   .assess-body.collapsed {{ display:none; }}
   .assess-col h3 {{ font-size:13px; margin:0 0 6px; color:#334155; }}

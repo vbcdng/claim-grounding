@@ -15,7 +15,41 @@ from typing import List, Dict, Tuple
 logger = logging.getLogger(__name__)
 
 MARKER_RE = re.compile(r"\[\[([A-Za-z0-9_-]+)\]\]")
+# Near-miss detection (known-issues item 1, task #69): marker-LIKE sequences the
+# real parser rejects, so a typo'd citation warns instead of silently becoming
+# an unchecked "own" claim. Single-bracket text ([1], [sic]) is never flagged.
+_BAD_KEY_MARKER_RE = re.compile(r"\[\[([^\[\]]+?)\]\]")          # [[my key]], [[a.b]]
+_MISSING_CLOSE_RE = re.compile(r"\[\[([^\[\]\n]+?)\](?!\])")     # [[key]
+_MISSING_OPEN_RE = re.compile(r"(?<!\[)\[([^\[\]\n]+?)\]\]")     # [key]]
+_KEY_OK_RE = re.compile(r"[A-Za-z0-9_-]+\Z")
 _REFERENCES_HEADER_RE = re.compile(r"^\s*\[References\]\s*$", re.IGNORECASE | re.MULTILINE)
+
+
+def find_marker_typos(text: str) -> List[str]:
+    """Plain-language warnings for citation markers with typos. The parser only
+    recognizes [[key]] with letters, digits, - and _ inside; anything close to
+    that shape but not matching it is silently unparsed, so the caller should
+    surface these (they feed metadata.marker_errors -> the viewer's warning
+    banner). Deduplicated, in order of first appearance."""
+    def _snip(s: str) -> str:
+        s = re.sub(r"\s+", " ", s).strip()
+        return s if len(s) <= 40 else s[:37] + "..."
+    out = []
+    for m in _BAD_KEY_MARKER_RE.finditer(text):
+        if not _KEY_OK_RE.match(m.group(1)):
+            out.append(f"marker typo: [[{_snip(m.group(1))}]] is not a valid marker "
+                       "(only letters, digits, - and _ may appear between the double "
+                       "brackets) — it was ignored, so its sentence was treated as "
+                       "your own uncited words and not checked")
+    for m in _MISSING_CLOSE_RE.finditer(text):
+        out.append(f"marker typo: [[{_snip(m.group(1))}] is missing its closing "
+                   "bracket — it was ignored, so its sentence was treated as your "
+                   "own uncited words and not checked")
+    for m in _MISSING_OPEN_RE.finditer(text):
+        out.append(f"marker typo: [{_snip(m.group(1))}]] is missing its opening "
+                   "bracket — it was ignored, so its sentence was treated as your "
+                   "own uncited words and not checked")
+    return list(dict.fromkeys(out))
 _FRONTMATTER_RE = re.compile(r"\A﻿?\s*---[ \t]*\n(.*?)\n---[ \t]*\n", re.S)
 
 

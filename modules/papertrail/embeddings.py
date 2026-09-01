@@ -36,7 +36,24 @@ def get_model(model_name: str = DEFAULT_MODEL):
         except Exception:
             logger.info("No complete local copy — downloading from the HuggingFace Hub "
                         "(one-time, ~440 MB)")
-            _model = SentenceTransformer(model_name)
+            try:
+                _model = SentenceTransformer(model_name)
+            except Exception as e:
+                # Blocked first-run download (task #69, known-issues item 3):
+                # explain in plain words instead of letting the raw hub error
+                # escape. verify_my_text catches this RuntimeError at startup.
+                offline_vars = [v for v in ("HF_HUB_OFFLINE", "TRANSFORMERS_OFFLINE")
+                                if os.environ.get(v, "").strip() not in ("", "0")]
+                hint = (f" Note: the setting(s) {', '.join(offline_vars)} are switched on "
+                        "in this terminal — they forbid the tool from using the network; "
+                        "unset them for the first run." if offline_vars else
+                        " The machine may be offline or the download blocked.")
+                raise RuntimeError(
+                    f"The sentence-comparison model ({model_name}, ~440 MB) is not on "
+                    f"this computer yet and could not be downloaded.{hint} Let the very "
+                    "first run reach the internet once; every later run works fully "
+                    f"offline. (Download error: {e.__class__.__name__}: {str(e)[:200]})"
+                ) from e
         # A CUDA-build torch on a GPU it has no kernels for still reports
         # cuda-available and only crashes on the first encode
         # (torch.AcceleratorError — 2026-07-14 clean-venv install test, where

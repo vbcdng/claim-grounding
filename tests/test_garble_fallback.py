@@ -307,3 +307,89 @@ class FallbackTextLossGuard(unittest.TestCase):
         self.assertEqual(sd._nonspace_len("a b\tc\nd"), 4)
         self.assertEqual(sd._nonspace_len("   \n\t "), 0)
         self.assertEqual(sd._nonspace_len(""), 0)
+
+
+# A ciphered text layer, shaped like the real one. A broken embedded font maps
+# every letter to another byte and the inter-word space to a control byte, so
+# word LENGTHS survive intact and all four garble detectors above stay silent on
+# the characters themselves. Pairs of words share a control byte here because
+# that is what the real file does — which is what makes the mean token length
+# 8-20 letters and fires _looks_space_collapsed, the only reason the fallback is
+# attempted at all. Plain-shifted text with ordinary spaces fires nothing and is
+# therefore still not repaired; see ARCHITECTURE.md for that known limit.
+def _ciphered(n_words: int = 400) -> str:
+    words = ("Anthropic has developed a new evaluation method to measure the "
+             "persuasiveness of language models".split() * 40)[:n_words]
+    shift = lambda w: "".join(chr(ord(c) + 3) for c in w)
+    return " ".join(shift(words[i]) + "\x03" + shift(words[i + 1])
+                    for i in range(0, len(words) - 1, 2))
+
+
+class ReadabilityBeatsLength(unittest.TestCase):
+    """Task #71 follow-up: the text-loss guard must not protect UNREADABLE text.
+
+    The guard above refuses a pdftotext fallback that holds too few of the
+    letters, which is right when the letters are real. It is wrong when they are
+    not: on data/loop_rounds/round_5/app/sources/unodc2023.pdf the pypdf read is
+    a shift-3 cipher with a control byte for the space, and the guard kept
+    609,542 characters of it (16.1% control characters) in preference to
+    pdftotext's 137,330 characters of clean prose (0.0%). Length cannot make up
+    for characters that are wrong, so when the primary read is unreadable and the
+    fallback is readable, readability decides regardless of the ratio."""
+
+    def _reader_with(self, page_texts):
+        pages = [mock.Mock(extract_text=mock.Mock(return_value=t)) for t in page_texts]
+        return mock.Mock(pages=pages)
+
+    def test_the_fixture_reproduces_the_real_shape(self):
+        cipher = _ciphered()
+        # unreadable by the control-char measure, and invisible to the detectors
+        # that look at letters rather than at bytes
+        self.assertGreaterEqual(sd._control_char_rate(cipher), sd.GARBLED_CONTROL_RATE)
+        self.assertFalse(sd._looks_letter_spaced(cipher))
+        self.assertEqual(sd._count_glued_runs(cipher), 0)
+        # ...but the glued token lengths do fire the space-collapse test, which is
+        # what makes the tool try pdftotext in the first place
+        self.assertTrue(sd._looks_space_collapsed(cipher))
+        self.assertLess(sd._control_char_rate(CLEAN), sd.GARBLED_CONTROL_RATE)
+
+    def test_shorter_readable_prose_replaces_a_ciphered_read(self):
+        cipher = _ciphered()
+        short = CLEAN[:len(CLEAN) // 5]          # ~19% of the letters, as in the real file
+        self.assertLess(sd._nonspace_len(short),
+                        sd._nonspace_len(cipher) * sd._FALLBACK_MIN_TEXT_RATIO)
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([cipher])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[short]):
+            self.assertEqual(sd.read_source_pages("x.pdf"), [short])
+
+    def test_it_says_why_it_accepted_the_loss(self):
+        cipher = _ciphered()
+        short = CLEAN[:len(CLEAN) // 5]
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([cipher])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[short]), \
+             self.assertLogs(sd.logger, level="WARNING") as cm:
+            sd.read_source_pages("x.pdf")
+        self.assertTrue(any("not readable language" in m for m in cm.output), cm.output)
+        # and it must NOT also claim it kept the original
+        self.assertFalse(any("KEEPING the original read" in m for m in cm.output), cm.output)
+
+    def test_an_unreadable_fallback_never_replaces_an_unreadable_read(self):
+        # swapping one cipher for a shorter cipher gains nothing and loses text
+        cipher = _ciphered()
+        short_cipher = _ciphered(60)
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([cipher])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[short_cipher]):
+            self.assertEqual(sd.read_source_pages("x.pdf"), [cipher])
+
+    def test_a_readable_primary_read_keeps_its_length_protection(self):
+        # the unodc guard itself must survive: GARBLE has no control characters,
+        # so a truncated fallback is still refused exactly as before
+        truncated = CLEAN[:len(CLEAN) // 10]
+        self.assertLess(sd._control_char_rate(GARBLE), sd.GARBLED_CONTROL_RATE)
+        with mock.patch("pypdf.PdfReader", return_value=self._reader_with([GARBLE])), \
+             mock.patch("builtins.open", mock.mock_open(read_data=b"")), \
+             mock.patch.object(sd, "_pdftotext_pages", return_value=[truncated]):
+            self.assertEqual(sd.read_source_pages("x.pdf"), [GARBLE])

@@ -19,7 +19,11 @@ logger = logging.getLogger(__name__)
 
 EVIDENCE_LINK_THRESHOLD = 0.75   # PaperTrail Stage-1 evidence linking
 _CHUNK_WORD_TARGET = 1200        # group paragraphs into chunks to limit LLM calls
-CACHE_SCHEMA = 9                 # bump to invalidate caches when the stored shape changes
+CACHE_SCHEMA = 11                # bump to invalidate caches when the stored shape changes
+                                 # (11: the garble repair may now replace an UNREADABLE read with
+                                 #  a much shorter readable one, so the text of a ciphered source
+                                 #  changes completely — task #71. Next free: 12)
+                                 # (10 = text_quality field, task #69)
                                  # (9: PDF reader swapped PyPDF2 3.0.1 -> pypdf 6.x, plus the
                                  #  fallback text-loss guard, both task #71.
                                  #  pypdf extracts different text on most PDFs — usually near-
@@ -137,6 +141,43 @@ def _looks_linebreak_split(text: str) -> bool:
     return _single_consonant_frac(text) > _LINEBREAK_CONS_THRESH
 
 
+# Ciphered text layers (task #69 item 2 extension, measured by task #71,
+# 2026-08-31): a broken embedded font can substitute every letter, leaving word
+# LENGTHS normal — all four detectors above stay silent and the gibberish goes
+# to the judge. Control characters (below the printable range, excluding
+# tab/CR/LF) separate cleanly, measured over all 227 text-yielding source PDFs
+# in data/ (logs/final_text_ctrl_rate.json): the one ciphered file scores
+# 0.1609, the highest READABLE file 0.00916 (sparse form-feed/ligature bytes —
+# a small nonzero rate is NORMAL, only the magnitude means anything), so the
+# band around 0.05 is 17.6x wide and empty; anything in ~0.015–0.15 behaves
+# identically on this corpus. Language-independent (readable German = 0.0).
+# The rate MUST be computed on read_source_pages output (post-repair) — on the
+# RAW library read the same measure separates ciphered from readable by only
+# 1.6x (0.0254 vs 0.0155) and NO safe threshold exists; do not "optimise" this
+# to the raw read. Common-English-word rate and two-extractor overlap were
+# measured and REJECTED (German scores worse than real cipher; false alarms on
+# readable files) — logs/gibberish_detectors.json.
+GARBLED_CONTROL_RATE = 0.05
+
+
+def _control_char_rate(text: str) -> float:
+    if not text:
+        return 0.0
+    n = sum(1 for ch in text if ord(ch) < 32 and ch not in "\t\r\n")
+    return n / len(text)
+
+
+def _text_quality(text: str) -> Dict[str, Any]:
+    """Stored on the source dict so the matcher/viewer can render a garbled
+    source as "could not be checked" instead of an ordinary judged rejection.
+    MUST be computed on read_source_pages output (after the repair), never on
+    the raw library read — the repair absorbs most of the mess and raw-read
+    thresholds are delicate (task #71 measurement trap)."""
+    rate = _control_char_rate(text)
+    return {"control_char_rate": round(rate, 4),
+            "unreadable": rate >= GARBLED_CONTROL_RATE}
+
+
 def _pdftotext_pages(path: str) -> Optional[List[str]]:
     """Per-page text via poppler's pdftotext (pages arrive form-feed-separated);
     None when the binary is missing or extraction fails."""
@@ -245,7 +286,25 @@ def read_source_pages(path: str) -> List[str]:
                 # token shapes and never ask how much text survived.
                 primary_len = _nonspace_len(joined)
                 kept = (_nonspace_len(alt_joined) / primary_len) if primary_len else 1.0
-                enough_text = kept >= _FALLBACK_MIN_TEXT_RATIO
+                # ...but the length test protects the DOCUMENT, so it may only
+                # protect text that still is the document. Keeping 100% of a
+                # ciphered read in preference to shorter real prose is strictly
+                # worse at any ratio: the characters are wrong, so none of that
+                # length is usable. When the primary read is unreadable and the
+                # fallback is readable, readability wins over length outright.
+                # Live case: unodc2023.pdf, 609,542 chars at 16% control
+                # characters kept over 137,330 chars of clean prose (task #71).
+                unreadable_primary = _control_char_rate(joined) >= GARBLED_CONTROL_RATE
+                readable_alt = _control_char_rate(alt_joined) < GARBLED_CONTROL_RATE
+                rescue = unreadable_primary and readable_alt
+                enough_text = rescue or kept >= _FALLBACK_MIN_TEXT_RATIO
+                if rescue and kept < _FALLBACK_MIN_TEXT_RATIO:
+                    logger.warning(
+                        f"{os.path.basename(path)}: the pypdf text is not readable language "
+                        f"({_control_char_rate(joined):.1%} of it is control characters) — "
+                        f"taking the pdftotext read even though it holds only {kept:.0%} of "
+                        f"the letters, because extra length does not help when the "
+                        f"characters themselves are wrong")
                 if not enough_text:
                     logger.warning(
                         f"{os.path.basename(path)}: extracted text looks {kind}, but the "
@@ -256,7 +315,8 @@ def read_source_pages(path: str) -> List[str]:
                         f"{1 - kept:.0%} of the source")
                 if enough_text and clean and (letter or collapsed
                               or (glued_runs and better_glue)
-                              or (linebreak and better_cons)):
+                              or (linebreak and better_cons)
+                              or rescue):
                     logger.warning(f"{os.path.basename(path)}: pypdf text is {kind} "
                                    "garble — using the pdftotext extraction instead")
                     return alt
@@ -663,6 +723,7 @@ def decompose_source(path: str, paper_id: str, key: str, cache_dir: str, llm,
                 elif cached.get("claims") is not None:
                     logger.info(f"[cache] upgrading {filename} to schema {CACHE_SCHEMA} (no LLM)")
                     cached["sentences"] = _sentence_index(path)
+                    cached["text_quality"] = _text_quality("\n".join(read_source_pages(path)))
                     cached["schema"] = CACHE_SCHEMA
                     cached["num_sentences"] = len(cached["sentences"])
                     cached["key"] = key
@@ -702,9 +763,15 @@ def decompose_source(path: str, paper_id: str, key: str, cache_dir: str, llm,
         "sentences": sentence_index,   # full source sentences (text + page) for Stage-3 matching
         "claims": claims,
         "decomposed": bool(extract_claims),  # False = claims deliberately skipped
+        "text_quality": _text_quality(text),
     }
     if not text.strip():
         result["warning"] = "source_text_empty (scanned PDF or unreadable) — supply a .txt/OCR copy"
+    elif result["text_quality"]["unreadable"]:
+        result["warning"] = ("source_text_garbled (control-char rate "
+                             f"{result['text_quality']['control_char_rate']}) — the text "
+                             "layer is not readable language; supply a .txt/OCR copy")
+        logger.warning(f"{filename}: {result['warning']}")
 
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)

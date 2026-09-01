@@ -73,6 +73,29 @@ class TestAssessmentPanel(unittest.TestCase):
         self.assertIn("most depended on", html)
         self.assertIn("no edges inferred", html)
 
+    def test_failed_pass_renders_error_not_clean_empty(self):
+        # Task #69 item 6: a crashed pass must say so, not look like an empty
+        # finding ("no cruxes identified" etc.).
+        a = {"argument_map": ASSESSMENT["argument_map"],
+             "independence": ASSESSMENT["independence"],
+             "errors": {"crux": "boom: model call failed"}}
+        html = self._render(a)
+        self.assertIn("this check failed and did not finish", html)
+        self.assertIn("boom: model call failed", html)
+        self.assertNotIn("no cruxes identified", html)
+
+    def test_all_passes_failed_still_shows_panel_with_errors(self):
+        a = {"errors": {"argument_map": "e1", "independence": "e2", "crux": "e3"}}
+        html = self._render(a)
+        self.assertIn('id="assess"', html)   # panel no longer vanishes silently
+        self.assertEqual(html.count("this check failed and did not finish"), 3)
+
+    def test_genuinely_empty_result_keeps_clean_wording(self):
+        a = {**ASSESSMENT, "crux": {"cruxes": [], "method": "topology"}}
+        html = self._render(a)
+        self.assertIn("no cruxes identified", html)
+        self.assertNotIn("this check failed and did not finish", html)
+
     def test_coverage_ratio_bar(self):
         # Prior-art item #6: the document-level supported/unsupported/own strip.
         html = self._render(None)  # independent of the assessment panel

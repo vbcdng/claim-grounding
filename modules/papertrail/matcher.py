@@ -2683,6 +2683,23 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                      "evidence": None, "evidences": [],
                      "reason": "no_citation_marker"}, set())
 
+        # A cited source whose file parsed to zero sentences (a scanned PDF is
+        # pictures of pages, not text), or whose text parsed but is gibberish
+        # (ciphered text layer — control-char rate measured at index time,
+        # task #71 handover), contributes NOTHING meaningful to the check.
+        # Record which cited sources that hit, so the viewer can say "could not
+        # be checked" instead of styling it like a judged rejection
+        # (known-issues item 2, task #69). Display-only — verdicts unchanged.
+        unreadable = []
+        for pid in pids:
+            src = sources.get(pid) or {}
+            why = ("empty" if not src.get("sentences")
+                   else "garbled" if (src.get("text_quality") or {}).get("unreadable")
+                   else None)
+            if why:
+                unreadable.append({"pid": pid, "key": src.get("key"),
+                                   "title": src.get("title"), "why": why})
+
         # Full claim through the grounding chain (candidates -> extraction ->
         # combined -> component rescue).
         res = _evaluate(tc["text"], pids, lambda pid: row_for(pid, tc["id"]),
@@ -2691,9 +2708,12 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                         split_prompt=component_split_prompt)
 
         if not res["evidences"]:
-            return ({**tc, "verdict": "unsupported", "method": "none", "cosine": None,
-                     "evidence": None, "evidences": [],
-                     "reason": res["reason"]}, set())
+            out = {**tc, "verdict": "unsupported", "method": "none", "cosine": None,
+                   "evidence": None, "evidences": [],
+                   "reason": res["reason"]}
+            if unreadable:
+                out["unreadable_sources"] = unreadable
+            return (out, set())
 
         # Tail rescue: the marker scopes over everything since the previous marker,
         # so a failed multi-sentence claim may be a supported cited assertion sunk
@@ -2782,6 +2802,11 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
         # (item 16, t14).
         if tc.get("missing_markers"):
             out["missing_markers"] = tc["missing_markers"]
+        # Same idea for a multi-citation claim with one unreadable member source:
+        # it was judged on the readable ones, and the card should say which cited
+        # file could not be checked (task #69 item 2).
+        if unreadable:
+            out["unreadable_sources"] = unreadable
 
         # Covering-set display pass: a supported card must show the sentences
         # proving EVERY component, or say plainly which parts have no shown

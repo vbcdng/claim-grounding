@@ -33,6 +33,7 @@ import shlex
 import shutil
 
 from . import cost_estimator
+from . import text_decomposer
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -125,7 +126,10 @@ def _pos_int(v):
 # ---------- pipeline helpers ----------
 
 _PANDOC_CITE_RE = re.compile(r"\[@[A-Za-z0-9_]")     # [@key] / [@a; @b] pandoc citations
-_MARKER_RE = re.compile(r"\[\[[^\[\]]+\]\]")         # this tool's [[key]] markers
+# The REAL marker pattern (task #69 item 1): the wizard used to accept any
+# [[...]], including [[my key]] forms the parser rejects, so its guard passed
+# texts whose markers would all be dropped.
+_MARKER_RE = text_decomposer.MARKER_RE               # this tool's [[key]] markers
 
 
 def _slug(path):
@@ -186,10 +190,21 @@ def _maybe_import_step(text, input_fn, run_script):
 def _marker_guard(text, input_fn):
     """A text with zero [[key]] markers verifies nothing (every sentence becomes an
     uncited 'own' claim) — say so and confirm before letting the run happen."""
-    if _MARKER_RE.search(_read_text_file(text)):
+    content = _read_text_file(text)
+    if _MARKER_RE.search(content):
         return
-    print("\n  ! No [[key]] citation markers found in this text. Without markers NOTHING\n"
-          "    is verified — the whole text becomes uncited 'own' claims.\n"
+    typos = text_decomposer.find_marker_typos(content)
+    if typos:
+        print(f"\n  ! This text has {len(typos)} marker-like tag(s) with typos and no valid\n"
+              "    [[key]] markers. A typo'd marker (a space inside, a missing bracket) is\n"
+              "    not recognized — its sentence would be treated as your own uncited words\n"
+              "    and not checked. The first few:")
+        for t in typos[:3]:
+            print(f"      - {t.split(' — ')[0]}")
+    else:
+        print("\n  ! No [[key]] citation markers found in this text.")
+    print("    Without valid markers NOTHING is verified — the whole text becomes\n"
+          "    uncited 'own' claims.\n"
           "    Your own draft -> add [[key]] markers (see INPUT_FORMAT.md).\n"
           "    A published paper (PDF/DOI/arXiv) -> import_paper.py.\n"
           "    A Claude Science export ([@key] + .bib) -> import_claude_research.py.")

@@ -247,6 +247,15 @@ class TestWizardPipeline(WizardBase):
         with self.assertRaises(SystemExit):
             run_quiet(scripted(plain, "n"))    # continue anyway? -> no
 
+    def test_typo_only_markers_trigger_the_guard(self):
+        # [[my key]] passed the old loose check but the real parser drops it —
+        # the guard must fire now that both use the same pattern (task #69 item 1).
+        plain = os.path.join(self.tmp, "typos.md")
+        with open(plain, "w") as f:
+            f.write("Print caused it [[my key]]. Another [[key].\n")
+        with self.assertRaises(SystemExit):
+            run_quiet(scripted(plain, "n"))    # continue anyway? -> no
+
     def test_no_markers_confirmed_continues(self):
         plain = os.path.join(self.tmp, "plain.md")
         with open(plain, "w") as f:

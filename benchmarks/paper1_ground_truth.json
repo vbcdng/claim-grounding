@@ -37,8 +37,10 @@
   },
   {
    "id": "t13",
-   "expect": "supported",
-   "note": "run-8 hand-confirmed supported set (2026-07-03)",
+   "expect": "watch",
+   "at_creation": "supported",
+   "improves_if": "supported",
+   "note": "WATCH per author ruling 2026-09-01 in chat ('put t47 and t13 to watch row', task #69 session): consistently 'unsupported' since the pypdf reader swap (cb19fe2) — reproduced in BOTH 2026-09-01 gate arms (task69gate + task69ctrl), so NOT a flip-flopper; cause unidentified (source 99% unchanged, #69's diff excluded by control; lead suspect = fulltext chunk-boundary shift). Investigation = task #76; re-promote to hard supported when it flips back. Was: run-8 hand-confirmed supported set (2026-07-03)",
    "text": "Strategic physical assets can pass by purchase rather than conquest. A foresight scenario, *Europe 2031*, illustrates one route: the leading power restricts access to its most capable models on a tiered, country-by-country basis; firms in other countries are progressively outcompeted; and the leading AI company acquires distressed industrial assets, such as carmakers and tool manufacturers, for their facilities and data."
   },
   {
@@ -157,8 +159,9 @@
   },
   {
    "id": "t47",
-   "expect": "unsupported",
-   "note": "HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — locks in the author's 2026-07-19 re-grade ('most countries' overreaches). Was: owner re-grade 2026-07-19: UNSUPPORTED — 'most countries cannot feed themselves' overreaches source's 'many LDCs are net food importers'; quantifier components need rewrite/new source; was run-8 hand-confirmed supported (2026-07-03)",
+   "expect": "watch",
+   "improves_if": "unsupported",
+   "note": "WATCH per author ruling 2026-09-01 in chat ('put t47 and t13 to watch row', task #69 session): since the pypdf swap (cb19fe2) reads this source completely, the judge accepts 'some developing countries' as proof of the 'most countries' claim — a diagnosed quantifier over-generalization (task #71 traced it; the old rejection rested on a broken read that dropped these words). Fix = task #75; re-promote to hard unsupported when it ships. Was: HARD unsupported per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)') — locks in the author's 2026-07-19 re-grade ('most countries' overreaches). Earlier: owner re-grade 2026-07-19: UNSUPPORTED — 'most countries cannot feed themselves' overreaches source's 'many LDCs are net food importers'; quantifier components need rewrite/new source; was run-8 hand-confirmed supported (2026-07-03)",
    "text": "Economic displacement of this kind is not merely impoverishment; it can become a threat to life. Most countries cannot feed themselves from their own farms — the great majority of developing states, and nearly all the poorest, are net importers of food — so a state stripped of its export earnings and the value of its currency loses, with them, the means to keep its population fed.",
    "at_creation": "supported"
   },

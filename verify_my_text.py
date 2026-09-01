@@ -32,6 +32,7 @@ import time
 import shutil
 import hashlib
 import logging
+import pathlib
 import argparse
 import datetime
 import webbrowser
@@ -39,7 +40,7 @@ import webbrowser
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from modules.papertrail import (text_decomposer, source_decomposer, matcher, viewer,
-                                checkpoint,
+                                checkpoint, embeddings,
                                 cost_estimator, rerun, second_opinion, own_claims, arbiter,
                                 citation_scope,
                                 argument_map, crux, evidence_independence,
@@ -145,8 +146,10 @@ def run_fix_claim(args):
     llm_client.set_call_log(os.path.join(args.output_dir, "llm_calls.jsonl"))
     args.model = args.model or analysis.get("metadata", {}).get("model")
     apply_backend(args)      # a claude-code run's metadata routes the fix there too
-    llm = LLMClient(model=args.model, api_key=args.api_key, api_base=args.api_base)
     try:
+        # Construction raises RuntimeError when --backend claude-code has no
+        # `claude` program on PATH — plain message, no trace (task #69 item 5).
+        llm = LLMClient(model=args.model, api_key=args.api_key, api_base=args.api_base)
         sug = claim_fixer.fix_claim(analysis, sources, llm, args.fix_claim,
                                     emb_cache_dir=os.path.join(args.output_dir, "embeddings"))
     except (ValueError, RuntimeError) as e:
@@ -197,7 +200,9 @@ def run_fix_claim(args):
         print(f"  What changed: {sug['changes']}\n")
     print(f"The suggestion is now in the viewer too:\n  {os.path.abspath(viewer_path)}")
     if args.open:
-        webbrowser.open("file://" + os.path.abspath(viewer_path))
+        # as_uri() builds a browser-valid address on every platform — string
+        # concatenation broke on Windows drive letters (task #69 item 4).
+        webbrowser.open(pathlib.Path(viewer_path).resolve().as_uri())
 
 
 def main():
@@ -652,7 +657,13 @@ def main():
             logger.warning(f"Could not read {manifest_path}: {e}")
 
     # Resolve markers -> source files -> paper_ids.
-    llm = LLMClient(model=args.model, api_key=args.api_key, api_base=args.api_base)
+    try:
+        llm = LLMClient(model=args.model, api_key=args.api_key, api_base=args.api_base)
+    except RuntimeError as e:
+        # e.g. --backend claude-code with no `claude` program on PATH — the
+        # message is already plain; a full trace buries it (task #69 item 5).
+        logger.error(str(e))
+        sys.exit(1)
     # Fail fast on a bad/missing API key: one tiny call BEFORE any expensive
     # work (the SPECTER encode of the sources can take minutes). Without this,
     # a typo'd key surfaces as a per-call error wall and a garbage run
@@ -666,6 +677,15 @@ def main():
               f"ANTHROPIC_API_KEY) and re-run. Nothing else was spent.",
               file=sys.stderr)
         sys.exit(2)
+    # Fail fast on the other first-run dependency too: the local
+    # sentence-comparison model (one-time ~440 MB download). A blocked download
+    # used to surface as a raw error deep in the pipeline (task #69 item 3);
+    # loading it here costs seconds when a local copy exists.
+    try:
+        embeddings.get_model()
+    except RuntimeError as e:
+        logger.error(str(e))
+        sys.exit(1)
     # Source decomposition is retired from the CLI (2026-07-16, owner — redesign
     # parked in IDEAS.md): verdicts and supporting sentences never used the
     # decomposed claims (0/90 measured). Runs build the sentence index only;
@@ -674,7 +694,10 @@ def main():
     decomp_llm = llm
     sources = {}            # paper_id -> source-claims dict
     source_texts = {}       # paper_id -> full text (non-PDF sources, embedded in the viewer)
-    marker_errors = []
+    # Near-miss markers ([[my key]], [[key]) parse as nothing and used to vanish
+    # silently (known-issues item 1, task #69) — warn through the same channel
+    # as unmapped/missing markers (metadata.marker_errors -> viewer banner).
+    marker_errors = text_decomposer.find_marker_typos(body)
     for tc in text_claims:
         pids = []
         for key in tc.get("markers", []):
@@ -1073,6 +1096,10 @@ def main():
                         f"{len(amap.get('edges', []))} edges")
         except Exception as e:
             logger.warning(f"Argument-map build failed: {e}")
+            # Record the failure so the viewer panel can say "this check
+            # failed" instead of rendering a clean empty result (task #69
+            # item 6). Never touches verdicts.
+            assessment.setdefault("errors", {})["argument_map"] = str(e)[:300]
         try:
             dedup_path = os.path.join(args.output_dir, "dedup.json")
             dedup = None
@@ -1087,6 +1114,7 @@ def main():
                         f"{indep.get('summary', {}).get('n_clusters')} independent cluster(s)")
         except Exception as e:
             logger.warning(f"Independence assessment failed: {e}")
+            assessment.setdefault("errors", {})["independence"] = str(e)[:300]
         try:
             cx = crux.find_cruxes(assessment.get("argument_map") or {"nodes": [], "edges": []},
                                   analysis=analysis, independence=assessment.get("independence"))
@@ -1095,6 +1123,7 @@ def main():
             logger.info(f"Cruxes: top {len(cx.get('cruxes', []))} by {cx.get('method')}")
         except Exception as e:
             logger.warning(f"Crux ranking failed: {e}")
+            assessment.setdefault("errors", {})["crux"] = str(e)[:300]
 
     viewer_path = os.path.join(args.output_dir, "viewer.html")
     viewer.generate(analysis, viewer_path, title=f"Verification — {os.path.basename(args.text)}",
@@ -1182,7 +1211,9 @@ def main():
     viewer_abs = os.path.abspath(viewer_path)
     print(f"\nReview file (open in any browser — no server needed):\n  {viewer_abs}")
     if args.open:
-        webbrowser.open("file://" + viewer_abs)
+        # as_uri() builds a browser-valid address on every platform — string
+        # concatenation broke on Windows drive letters (task #69 item 4).
+        webbrowser.open(pathlib.Path(viewer_abs).as_uri())
 
 
 if __name__ == "__main__":

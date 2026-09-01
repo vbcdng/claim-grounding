@@ -7,7 +7,7 @@
 torch==2.12.1+cpu; sys_platform == 'linux'
 torch==2.12.1; sys_platform != 'linux'
 
-litellm==1.74.0
+litellm==1.84.0
 sentence-transformers==5.5.1
 
 # PDF reading. Was PyPDF2==3.0.1 until 2026-08-31; PyPDF2 is unmaintained under

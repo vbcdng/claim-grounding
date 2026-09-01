@@ -35,7 +35,7 @@ import logging
 from typing import Dict, Any, Optional, List, Tuple
 
 from modules.papertrail.viewer import (
-    _esc, _confidence, _filename_map, _paper_meta, _paper_link,
+    _esc, _confidence, _all_sources_unreadable, _filename_map, _paper_meta, _paper_link,
     _coverage_bars, _assessment_panel, _review_data,
     _source_actions, _fix_section, _clamped_quote, _is_scoped, _omitted_card,
     _norm_ws, _SECONDHAND_RE, _DISAGREE_RE, REVIEW_JS,
@@ -733,6 +733,21 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
                      f'<code>{_esc(mm.get("filename") or "")}</code> ([[{_esc(mm.get("key") or "")}]]) '
                      f'is not in the sources folder — this citation was not verified. '
                      f'Add the file and re-run to check it.</div>')
+    # Unreadable cited source files (task #69 item 2): the file exists but has
+    # no readable text (scanned PDF — pictures of pages, not text) or its text
+    # came out as gibberish (broken font inside the PDF, task #71 handover).
+    for us in (c.get("unreadable_sources") or []):
+        if us.get("why") == "garbled":
+            key_html += (f'<div class="unsupp-note">⚠ The cited file for '
+                         f'[[{_esc(us.get("key") or "")}]] came out as gibberish when read '
+                         f'— usually a broken font inside the PDF — so this citation could '
+                         f'not be meaningfully checked. Supply a text or OCR copy and re-run.</div>')
+        else:
+            key_html += (f'<div class="unsupp-note">⚠ The cited file for '
+                         f'[[{_esc(us.get("key") or "")}]] has no readable text — often a '
+                         f'scanned PDF — so this citation was not verified. '
+                         f'<code>python download_sources.py --report-only</code> lists every '
+                         f'source file with little or no readable text.</div>')
 
     # ---------- assemble ----------
     more_html = ""
@@ -804,8 +819,15 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
     n_scoped_cite = sum(1 for c in claims if _is_scoped(c))
     n_uns = sum(1 for c in claims if c["verdict"] == "unsupported") - n_scoped_cite
     n_own = sum(1 for c in claims if c["verdict"] == "own")
-    n_unverifiable = sum(1 for c in claims if c["verdict"] == "unsupported"
-                         and str(c.get("reason", "")).startswith("source_file_missing"))
+    # source_file_missing = the cited file is absent; no_source_sentences = the
+    # file exists but has no readable text (scanned PDF). Both are input
+    # problems, not judged rejections (task #69 item 2).
+    n_unv_missing = sum(1 for c in claims if c["verdict"] == "unsupported"
+                        and str(c.get("reason", "")).startswith("source_file_missing"))
+    n_unv_unreadable = sum(1 for c in claims if c["verdict"] == "unsupported"
+                           and (str(c.get("reason", "")).startswith("no_source_sentences")
+                                or _all_sources_unreadable(c)))
+    n_unverifiable = n_unv_missing + n_unv_unreadable
     n_changed = sum(1 for c in claims if (c.get("prev") or {}).get("changed"))
     n_cite = sum(1 for c in claims if c["verdict"] == "own"
                  and (c.get("own_kind") or {}).get("kind") == "fact")
@@ -997,8 +1019,10 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
                     if n_partly else "")
     omitted_total = (f' &nbsp;·&nbsp; <b class="o">{totals.get("omitted", 0)} unused source points</b>'
                      if omitted else "")
+    unv_kinds = " / ".join(k for k, n in (("source file missing", n_unv_missing),
+                                          ("source unreadable", n_unv_unreadable)) if n)
     unverifiable_total = (f' &nbsp;·&nbsp; <b style="color:#9ca3af">{n_unverifiable} unverifiable '
-                          f'(source file missing)</b>' if n_unverifiable else "")
+                          f'({unv_kinds})</b>' if n_unverifiable else "")
     scoped_total = (f'\n    <b style="color:#818cf8">{n_scoped_cite} scoped citation</b> &nbsp;·&nbsp;'
                     if n_scoped_cite else "")
     cite_total = (f'&nbsp;·&nbsp; <b style="color:#e5e7eb">📎 {n_cite} citation '
@@ -1330,6 +1354,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .assess-head {{ display:flex; justify-content:space-between; align-items:center; }}
   .assess-title {{ font-weight:600; color:#334155; }}
   .am-note {{ font-weight:400; color:#9ca3af; font-size:11px; }}
+  .am-err {{ color:#92400e; background:#fef3c7; border-radius:4px; padding:4px 8px; }}
   .assess-body {{ display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:18px; margin-top:8px; }}
   .assess-body.collapsed {{ display:none; }}
   .assess-col h3 {{ font-size:13px; margin:0 0 6px; color:#334155; }}
