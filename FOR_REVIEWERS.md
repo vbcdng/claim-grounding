@@ -152,6 +152,16 @@ WiCE is a public research dataset of Wikipedia claims checked by human
 annotators (Kamoi et al., EMNLP 2023). It is used here twice, and the
 distinction matters:
 
+One dating note before the numbers. Both WiCE evaluations ran in July
+2026, on the tool as it was then. The tool's defaults have changed
+since: a free Gemma judge (2026-08-30), a different arbiter model, and
+the verdict-flipping re-check now off by default (2026-09-01). So the
+numbers below describe the July configuration, not today's default
+one. `benchmarks/run_wice_heldout.sh` pins the July configuration, so
+a re-run reproduces the published numbers rather than measuring
+today's defaults. The benchmark has not yet been re-run under today's
+defaults.
+
 **Development benchmark (159 claims).** These ran during development; one
 failure found there led to a permanent code fix, and the published score
 (80% agreement with the second-model re-check, 52% without, zero false
