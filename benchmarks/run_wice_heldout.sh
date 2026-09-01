@@ -52,9 +52,14 @@ for B in "$ROOT"/test_b* "$ROOT"/refuted_b*; do
         continue
     fi
     echo "== running the tool on $B =="
+    # The two pinned arbiter flags reproduce the published configuration:
+    # the defaults changed later (2026-08-30 a different arbiter model,
+    # 2026-09-01 the rescue flip became opt-in), and the published
+    # "with the re-check" numbers depend on both being as they were.
     $PY verify_my_text.py \
         --text "$B/my_text.md" --sources "$B/sources" --output-dir "$RUN" \
-        --model gemini/gemini-2.5-flash-lite --full --yes
+        --model gemini/gemini-2.5-flash-lite --full --yes \
+        --arbiter deepseek/deepseek-v4-flash --arbiter-rescue
     echo "== scoring $B =="
     $PY benchmarks/wice_bench.py score \
         --analysis "$RUN/analysis.json" --ground-truth "$B/wice_ground_truth.json" \

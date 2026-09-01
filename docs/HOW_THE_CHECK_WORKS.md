@@ -127,17 +127,28 @@ reports must include a quote, and the tool verifies that the quote
 really appears in the source, word for word. A finding without a real
 quote is discarded.
 
-The arbiter can change what you see in two ways. First, when it finds
-proof for a rejected claim, the original judge re-reads exactly the
-passages the arbiter found. Only a unanimous "supported" changes the
-verdict, and the card records that the arbiter's finding caused it.
+The arbiter can change what you see in two ways. The first way is
+clearing a warning. When a supported card says "not proven as written"
+and the arbiter finds the missing sentences, the warning is cleared.
+The card then shows who cleared it. A warning the arbiter does not
+clear is strong evidence of a real gap. It means a second model, given
+the whole source, found no proof either.
 
-Second, the arbiter can clear a warning. When a supported
-card says "not proven as written" and the arbiter finds the missing
-sentences, the warning is cleared. The card then shows who cleared it.
-A warning the arbiter does not clear is strong evidence of a real gap.
-It means a second model, given the whole source, found no proof
-either.
+The second way is off unless you ask for it. Start the run with
+`--arbiter-rescue`, and a rejected claim can be re-judged on the
+passages the arbiter found. The original judge re-reads exactly those
+passages. Only a unanimous "supported" changes the verdict, and the
+card records what caused it.
+
+This flip used to happen by default. We turned it off on 2026-09-01
+after a measurement. We re-ran the same rejected claims three times
+each with the current arbiter model. Some runs flipped a claim and
+some did not. A verdict change should not depend on which run you
+happened to get.
+
+Without the flag, the arbiter's verified find still appears on the
+rejected card as a "proof may exist" note. You see the evidence, and
+the verdict stays what the judge decided.
 
 ## Step 8 — what you get at the end
 

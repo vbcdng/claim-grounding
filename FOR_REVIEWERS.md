@@ -44,7 +44,15 @@ text look like `[[smith2020]]` and point at files in that folder.
    proof sentences, they are verified verbatim against the source, and the
    original judge re-reads exactly those sentences; only a unanimous vote
    flips the verdict. The second model itself never decides a verdict — it
-   can only point at sentences for the first judge to re-read.
+   can only point at sentences for the first judge to re-read. Since
+   2026-09-01 the verdict-flipping part of this step is off by default.
+   It runs only when the run is started with `--arbiter-rescue`. The
+   reason: with the newer second model, the flip did not repeat reliably
+   across identical re-runs. By default the found sentences are shown on
+   the claim's card without changing the verdict. The WiCE numbers in
+   Test 3 that say "with the re-check" were measured with the flip
+   active, under the models named there. `benchmarks/run_wice_heldout.sh`
+   passes the flag, so a re-run matches the published configuration.
 6. **Output.** A machine-readable `analysis.json` and a self-contained HTML
    report. Every verdict in the report shows the sentences it rests on.
 

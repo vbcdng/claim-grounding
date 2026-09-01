@@ -224,10 +224,19 @@ That demo cost $0.04 with the arbiter model we used at the time
 (DeepSeek). With today's default arbiter (OpenAI's gpt-5.6-luna, which
 won our model comparison) the same run would cost a few cents more.
 
-The arbiter never decides a verdict by itself. The one exception works
-only in the claim's favor. When its verified proof convinces the first
-judging model on a re-read, a falsely rejected claim flips to
-supported. The card says so.
+The arbiter never decides a verdict by itself. There is one optional
+exception, and it works only in the claim's favor. Start the run with
+`--arbiter-rescue`, and a falsely rejected claim can flip to
+supported. The flip happens only when the arbiter's verified proof
+convinces the first judging model on a re-read, and the card says so.
+
+This flip used to be on by default. We turned it off on 2026-09-01
+after a measurement. We re-ran the same rejected claims three times
+each with the current arbiter model. Some runs flipped a claim and
+some did not, and a verdict change should not depend on which run you
+happened to get. Without the flag, the arbiter's verified find still
+appears on the rejected card as a "proof may exist" note. The verdict
+stays what the judge decided.
 
 ### How long a run takes
 
@@ -409,7 +418,7 @@ The same legend, for reading here:
 | ⚠ 2nd opinion disagrees | a second model disagreed — lowers confidence, read the evidence yourself |
 | 🔷 proof may exist | the arbiter found word-for-word verified sentences the first pass never saw |
 | ⚡ conflicting evidence? | the arbiter found a source sentence that may contradict the claim |
-| ⛑ arbiter rescue | first judged unsupported, then flipped to supported: the arbiter located proof and the first judging model accepted it on a re-read |
+| ⛑ arbiter rescue | first judged unsupported, then flipped to supported: the arbiter located proof and the first judging model accepted it on a re-read. Appears only in runs started with `--arbiter-rescue` (off by default since 2026-09-01) |
 | ⛑ gap closed by arbiter | an amber flag cleared — the arbiter found word-for-word proof for the gap |
 | ⚠ check not run — API failed | the model API stopped responding during this claim's extra checks — their result was dropped instead of guessed. A plain re-run retries exactly these |
 | ✎ changed | edited since the last run (incremental re-runs only) |

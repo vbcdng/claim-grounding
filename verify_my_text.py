@@ -263,11 +263,18 @@ def main():
                     help="Skip the arbiter tier (it is on by default): no flagged-claim "
                          "escalation, no amber resolution, no arbiter rescue.")
     ap.add_argument("--no-arbiter-rescue", action="store_true",
-                    help="With --arbiter: keep the 'proof may exist' chip only, "
-                         "without the rescue step (by default the arbiter's "
-                         "verbatim-verified proof windows are re-judged by the "
-                         "PRIMARY judge, and a unanimous positive flips a false "
-                         "unsupported to supported, method=arbiter_rescue).")
+                    help="Accepted for back-compat and now a no-op: rescue is OFF "
+                         "by default since 2026-09-01. Pass --arbiter-rescue to "
+                         "turn it back on.")
+    ap.add_argument("--arbiter-rescue", action="store_true",
+                    help="Let the arbiter's verbatim-verified proof windows be "
+                         "re-judged by the PRIMARY judge, so a unanimous positive "
+                         "flips a false unsupported to supported "
+                         "(method=arbiter_rescue). OFF by default since 2026-09-01 "
+                         "(author ruling): measured non-deterministic on luna — the "
+                         "same claim rescued in one run and not the next, 4 rows x 3 "
+                         "repeats all mixed, control row included. The arbiter's "
+                         "other powers (chips, amber resolution) are unaffected.")
     ap.add_argument("--no-citation-scope", action="store_true",
                     help="Skip classifying the citation scope of unsupported cited "
                          "claims. By default each gets one tiny LLM call deciding "
@@ -868,12 +875,15 @@ def main():
                     + (f"; still amber: {', '.join(res_summary['held'])}"
                        if res_summary["held"] else ""))
                 arb_summary["amber_resolved"] = res_summary["resolved"]
-        # Arbiter rescue (owner 2026-07-12): the arbiter's gate-verified proof
-        # windows are re-judged by the PRIMARY judge; a unanimous positive
-        # flips the false unsupported (method="arbiter_rescue") — the arbiter
-        # fetches, the primary judge decides. --no-arbiter-rescue keeps the
-        # old chips-only behavior.
-        if arb_summary is not None and not args.no_arbiter_rescue:
+        # Arbiter rescue: the arbiter's gate-verified proof windows are re-judged
+        # by the PRIMARY judge; a unanimous positive flips the false unsupported
+        # (method="arbiter_rescue") — the arbiter fetches, the primary judge
+        # decides. Default ON 2026-07-12 → OFF 2026-09-01 (author ruling): the
+        # 4 rows luna rescued on the 8/31 pilot100 run were re-probed 3x each and
+        # EVERY row came out mixed, the answer-key-accurate control included, so
+        # the flip is a coin toss rather than a finding. Opt back in with
+        # --arbiter-rescue; --no-arbiter-rescue stays accepted as a no-op.
+        if arb_summary is not None and args.arbiter_rescue:
             try:
                 rescue_summary = arbiter.rescue(analysis["text_claims"], sources,
                                                 llm, workers=args.concurrency)
