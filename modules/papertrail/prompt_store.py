@@ -85,6 +85,24 @@ def snapshot(overrides: Optional[Dict[str, str]] = None) -> Dict[str, str]:
         return dict(_fp_by_name)
 
 
+# Card 86: the stage 3a converter's instruction text lives outside
+# config/prompts/ (a file named by --aida-converter-prompt, or card 83's
+# field-tool templates); it is entered under this name.
+AIDA_CONVERTER = "aida_converter"
+
+
+def register(name: str, text: str) -> str:
+    """Enter an instruction text that does not live in config/prompts/ into
+    the run's fingerprint list and mark it used, so metadata.prompts carries it
+    and rerun.changed_prompts treats a change in it like any other (card 86).
+    Returns its fingerprint."""
+    fp = fingerprint(text)
+    with _lock:
+        _fp_by_name[name] = fp
+        _used_names.add(name)
+    return fp
+
+
 def metadata_block() -> Dict[str, object]:
     """The metadata.prompts payload for analysis.json: every fingerprint the
     run saw, which names were served from an override, which names the run

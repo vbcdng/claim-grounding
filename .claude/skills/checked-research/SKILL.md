@@ -1,6 +1,6 @@
 ---
 name: checked-research
-description: Deep-research a topic and produce a machine-verifiable cited text — runs Claude Code's built-in deep-research workflow, shapes its report to this tool's input format (my_text.md + my_text.md.refs.txt), collects the sources, runs the checker, and does at most one repair cycle. Invoke when the user wants a researched text whose every citation is verified against its real source.
+description: Deep-research a topic and produce a machine-verifiable cited text — runs a budget-limited copy of Claude Code's built-in deep-research workflow (every sub-question gets its own share, a report always comes back), shapes its report to this tool's input format (my_text.md + my_text.md.refs.txt), collects the sources, runs the checker, and does at most one repair cycle. Invoke when the user wants a researched text whose every citation is verified against its real source.
 ---
 
 # Checked research — deep-research whose citations get verified
@@ -17,15 +17,19 @@ You produce a cited text whose every citation has been machine-checked against i
 - Nothing paid without the user's explicit go in this conversation: the checker's default judge is free; the default arbiter (`--arbiter`, on by default) is a PAID OpenRouter model — ask, or pass `--no-arbiter`, or use `--backend claude-code` (all $0). Name the model and expected cost when you ask.
 - Report failures as failures. A skipped step, a refused call, or a missing source is stated in the final report, not smoothed over.
 
-## Step 0 — model check
+## Step 0 — model and size check
 
-The built-in deep-research workflow's helper agents inherit THIS session's model. Tell the user which model that is before starting. If they wanted a specific research model (e.g. Sonnet), the session itself must run on it — they should restart with that model; you cannot switch the workflow's model from inside.
+The research step runs as many helper agents (about 50 with the defaults below). Its search, fetch and vote helpers run on Sonnet (`limits.helperModel`, default `"sonnet"`); its first step (splitting the question) and its last step (writing the report) inherit THIS session's model. Tell the user both before starting. Every helper also starts by loading the project's instruction files (CLAUDE.md and any memory index), so a large instruction file is paid once per helper: say so if the working folder's CLAUDE.md is large, and offer to run from a folder with a small one.
 
 ## Step 1 — research
 
-Run the built-in deep-research workflow (Workflow tool, `name: "deep-research"`), passing the user's topic as the question, extended with: "For every factual claim, name the specific source it comes from. End with a numbered source list giving, per source: authors, year, title, DOI or URL, and open-access status if known." The report it returns is the raw material; its sources list is the citation universe — everything downstream cites ONLY papers from it.
+1a. Split first. Write down the separate sub-questions the user's topic actually asks (a compound question usually asks 2-5). Show them to the user in one line each. Put them into the question text as "Sub-questions: 1. … 2. …", so the research step gives each its own search angle.
 
-If the Workflow tool is unavailable in your session, or you research any other way (direct web searches, fetching named pages), you MUST say so explicitly, at the moment it happens and again in the final report, naming what you used instead and why. Substituting your own research routine silently counts as a failure of this skill, even when the text comes out fine — the first test run did exactly this and the deviation was only caught by reading the session log.
+1b. Run the budget-limited research workflow that ships next to this file — Workflow tool with `scriptPath: "<this skill's folder>/deep_research_within_budget.js"` and `args: {question: "<the question>", limits: {}}` (pass `args` as a JSON object, not a string). The question is the user's topic with the sub-questions, extended with: "For every factual claim, name the specific source it comes from. End with a numbered source list giving, per source: authors, year, title, DOI or URL, and open-access status if known." The defaults give every search angle at most 3 fetched sources and 2 checked claims, 3 votes per claim, and at most 64 helpers. Change a limit only when the user asks for a bigger or smaller run; say which limit you changed. The report it returns is the raw material; its sources list is the citation universe — everything downstream cites ONLY papers from it.
+
+1c. Read the result's `coverage` list before writing anything. A sub-question with `confirmed: 0` was NOT answered from checked sources: say so to the user and in the final report, and do not fill it from your own knowledge. If `reportWrittenBy` starts with "script (no model)", the report was written by the workflow script itself because the model could not run (usually the subscription's usage limit): its findings are the checked claims, unmerged. Then either (a) wait until the limit resets and run the same Workflow call again with `resumeFromRunId: "<the run id>"` — the helpers that already finished come back from the run's record without new model calls, and only the missing ones run — or (b) continue with the script-written report; tell the user which you chose.
+
+If the Workflow tool is unavailable in your session, or you research any other way (the built-in `deep-research` workflow by name, direct web searches, fetching named pages), you MUST say so explicitly, at the moment it happens and again in the final report, naming what you used instead and why. Substituting your own research routine silently counts as a failure of this skill, even when the text comes out fine — the first test run did exactly this and the deviation was only caught by reading the session log.
 
 ## Step 2 — shape the text for the checker
 
@@ -51,4 +55,4 @@ Run `venv/bin/python verify_my_text.py --text <working>/my_text.md --sources <wo
 
 ## Step 5 — one repair cycle, then report
 
-For each unsupported or gap-flagged claim, re-read the verdict's evidence and fix the TEXT (soften, split, re-attribute, or delete the sentence — following the same writing rules), never the verdict. Re-run the checker into `run2`. Then stop, whatever the result, and give the user: what was written, per-claim verdicts before and after, what was repaired and how, every source that could not be fetched, every call that failed, and the run folders' paths so they can open `viewer.html` themselves.
+For each unsupported or gap-flagged claim, re-read the verdict's evidence and fix the TEXT (soften, split, re-attribute, or delete the sentence — following the same writing rules), never the verdict. Re-run the checker into `run2`. Then stop, whatever the result, and give the user: what was written, the sub-questions and how many checked claims each got (the research step's `coverage`), per-claim verdicts before and after, what was repaired and how, every source that could not be fetched, every call that failed, and the run folders' paths so they can open `viewer.html` themselves.

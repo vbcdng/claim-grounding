@@ -9,7 +9,9 @@ passing on a fresh paper1 run (`verify_my_text.py --full` on the paper1 inputs,
     venv/bin/python3 benchmarks/regression_check.py
     venv/bin/python3 benchmarks/regression_check.py --analysis data/paper1_verification/analysis.json
 
-Exit codes: 0 = no regressions, 1 = at least one hard expectation failed.
+Exit codes: 0 = no NEW regression (rows the author has ruled accepted_red may still
+print red — they are a standing reminder, not a failure), 1 = at least one hard
+expectation failed, 2 = refused to score (failed model calls).
 'watch' claims (gray areas / open owner calls) are reported, never a failure.
 Ground truth: benchmarks/paper1_ground_truth.json — provenance in
 docs/PAPER1_TUNING_STATE.md ("Hand-audit ground truth").
@@ -47,7 +49,8 @@ def score(analysis, gt):
     {failures: [...], passes: n, watch: [...], drifted: [...], missing: [...]}"""
     claims = analysis.get("text_claims", [])
     by_id = {c["id"]: c for c in claims}
-    rep = {"failures": [], "passes": 0, "watch": [], "drifted": [], "missing": []}
+    rep = {"failures": [], "passes": 0, "watch": [], "drifted": [], "missing": [],
+           "accepted_red": []}
 
     for entry in gt["claims"]:
         c, drifted = find_claim(entry, by_id, claims)
@@ -69,9 +72,19 @@ def score(analysis, gt):
         elif verdict == entry["expect"]:
             rep["passes"] += 1
         else:
-            rep["failures"].append({"id": entry["id"], "expect": entry["expect"],
-                                    "got": verdict, "note": entry["note"],
-                                    "reason": c.get("reason", "")})
+            item = {"id": entry["id"], "expect": entry["expect"],
+                    "got": verdict, "note": entry["note"],
+                    "reason": c.get("reason", "")}
+            # An "accepted_red" row is a hard row the author has ruled to keep
+            # red as a standing reminder (it fails today and the fix is a known
+            # open task). It still prints red, but it is not a NEW failure and
+            # does not fail the gate (2026-09-06: the queue page had shown every
+            # baseline gate as "failed" because of these rows).
+            if entry.get("accepted_red"):
+                item["accepted_red"] = entry["accepted_red"]
+                rep["accepted_red"].append(item)
+            else:
+                rep["failures"].append(item)
     return rep
 
 
@@ -123,13 +136,17 @@ def main(argv=None):
               f"(verdict profile may differ; the expectations still apply)")
 
     rep = score(analysis, gt)
-    hard = rep["passes"] + len(rep["failures"])
+    accepted = rep.get("accepted_red", [])
+    hard = rep["passes"] + len(rep["failures"]) + len(accepted)
 
     for f_ in rep["failures"]:
         print(f"FAIL  {f_['id']}: expected {f_['expect']}, got {f_['got']}")
         print(f"      ground truth: {f_['note']}")
         if f_["reason"]:
             print(f"      run reason:   {f_['reason'][:200]}")
+    for f_ in accepted:
+        print(f"RED   {f_['id']}: expected {f_['expect']}, got {f_['got']} — accepted by the "
+              f"author, not a new failure ({f_['accepted_red']})")
     for entry, new_id in rep["drifted"]:
         print(f"note: {entry['id']} matched by text as {new_id} (ids shifted)")
     for entry in rep["missing"]:
@@ -137,6 +154,7 @@ def main(argv=None):
               f"Update the ground truth if the edit was intentional.")
 
     print(f"\nHard expectations: {rep['passes']}/{hard} pass"
+          + (f", {len(accepted)} red accepted by the author" if accepted else "")
           + (f", {len(rep['failures'])} FAIL" if rep["failures"] else ""))
 
     if rep["watch"]:
@@ -154,6 +172,9 @@ def main(argv=None):
     if rep["failures"]:
         print("\nREGRESSION — do not ship this config.")
         return 1
+    if accepted:
+        print("\nBASELINE — only rows the author has accepted are red; no new failure.")
+        return 0
     print("\nOK — no regressions.")
     return 0
 

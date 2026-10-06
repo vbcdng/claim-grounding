@@ -81,8 +81,13 @@ def analysis_fingerprint(analysis: Dict[str, Any]) -> str:
 
 
 def wrap(analysis: Dict[str, Any], model: str, results: Dict[str, Dict],
-         checked_at: Optional[str] = None) -> Dict[str, Any]:
-    """Build the on-disk payload: results + everything needed to spot staleness."""
+         checked_at: Optional[str] = None, fmt: str = FORMAT) -> Dict[str, Any]:
+    """Build the on-disk payload: results + everything needed to spot staleness.
+
+    `fmt` exists so a second side-file with the same staleness contract can
+    reuse this bookkeeping under its own format name — granite_store.py (task
+    #65) is the first such caller. Leave it alone for deep-check itself.
+    """
     by_id = {c.get("id"): c for c in (analysis.get("text_claims") or [])}
     stamped = {}
     for cid, r in (results or {}).items():
@@ -92,7 +97,7 @@ def wrap(analysis: Dict[str, Any], model: str, results: Dict[str, Dict],
         r["verdict_checked"] = c.get("verdict")
         stamped[cid] = r
     return {
-        "format": FORMAT,
+        "format": fmt,
         "model": model,
         "checked_at": checked_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "analysis_fingerprint": analysis_fingerprint(analysis),
@@ -102,7 +107,8 @@ def wrap(analysis: Dict[str, Any], model: str, results: Dict[str, Dict],
 
 
 def validate(payload: Any, analysis: Dict[str, Any],
-             allow_unstamped: bool = False) -> Tuple[Dict[str, Dict], Dict[str, Any]]:
+             allow_unstamped: bool = False, fmt: str = FORMAT,
+             required_key: str = "supported") -> Tuple[Dict[str, Dict], Dict[str, Any]]:
     """Split a payload into (usable comments, report).
 
     A comment is usable only when its claim still exists, its claim text hashes
@@ -131,7 +137,7 @@ def validate(payload: Any, analysis: Dict[str, Any],
     def drop(reason):
         report["reasons"][reason] = report["reasons"].get(reason, 0) + 1
 
-    stamped = payload.get("format") == FORMAT
+    stamped = payload.get("format") == fmt
     report["fingerprint_matches"] = (
         payload.get("analysis_fingerprint") == analysis_fingerprint(analysis)
         if stamped else None)
@@ -139,7 +145,7 @@ def validate(payload: Any, analysis: Dict[str, Any],
     by_id = {c.get("id"): c for c in (analysis.get("text_claims") or [])}
     usable = {}
     for cid, r in results.items():
-        if not isinstance(r, dict) or "error" in r or "supported" not in r:
+        if not isinstance(r, dict) or "error" in r or required_key not in r:
             drop("unusable_result")
             continue
         if not stamped or "claim_sha" not in r or "verdict_checked" not in r:
@@ -169,7 +175,8 @@ def validate(payload: Any, analysis: Dict[str, Any],
 
 def load_valid(run_dir: str, analysis: Dict[str, Any],
                filename: str = FILENAME,
-               allow_unstamped: bool = False) -> Tuple[Dict[str, Dict], Dict[str, Any]]:
+               allow_unstamped: bool = False, fmt: str = FORMAT,
+               required_key: str = "supported") -> Tuple[Dict[str, Dict], Dict[str, Any]]:
     """Read <run_dir>/deep_check.json and return only comments still in date.
 
     A missing / unreadable file is not an error: no comments, a report saying so.
@@ -186,18 +193,24 @@ def load_valid(run_dir: str, analysis: Dict[str, Any],
             payload = json.load(f)
     except (OSError, ValueError):
         payload = None
-    usable, report = validate(payload, analysis, allow_unstamped=allow_unstamped)
+    usable, report = validate(payload, analysis, allow_unstamped=allow_unstamped,
+                              fmt=fmt, required_key=required_key)
     report["present"] = True
     report["path"] = path
     return usable, report
 
 
-def report_sentence(report: Dict[str, Any]) -> str:
-    """One plain-language sentence for a log line or a report page."""
+def report_sentence(report: Dict[str, Any], label: str = "deep-check",
+                    noun_singular: str = "comment") -> str:
+    """One plain-language sentence for a log line or a report page.
+
+    `label`/`noun_singular` let a second side-file with the same contract name
+    itself ("Granite answers" rather than "deep-check comments"); task #65.
+    """
     if not report.get("present", True) or report.get("total", 0) == 0:
-        return "No deep-check comments were found for this run."
+        return f"No {label} {noun_singular}s were found for this run."
     total = report.get("total", 0)
-    noun = "comment" if total == 1 else "comments"
+    noun = noun_singular if total == 1 else noun_singular + "s"
     describe = "describes" if report.get("usable") == 1 else "describe"
     was = "was" if report.get("dropped") == 1 else "were"
     unver = (f" {report['unverified']} of them carry no record of the run they were "
@@ -206,25 +219,26 @@ def report_sentence(report: Dict[str, Any]) -> str:
     if report.get("dropped"):
         why = ", ".join(f"{n} {REASON_WORDS.get(k, 'for an unrecorded reason')}"
                         for k, n in sorted(report.get("reasons", {}).items()))
-        return (f"{report['usable']} of {total} deep-check {noun} still "
+        return (f"{report['usable']} of {total} {label} {noun} still "
                 f"{describe} the current verdicts; {report['dropped']} {was} left "
                 f"out ({why}).{unver}")
-    return (f"All {report['usable']} deep-check {noun} still {describe} the current "
+    return (f"All {report['usable']} {label} {noun} still {describe} the current "
             f"verdicts (checked {report.get('checked_at') or 'at an unrecorded time'}"
             f" by {report.get('model') or 'an unrecorded model'}).{unver}")
 
 
-def archive_previous(run_dir: str) -> Optional[str]:
+def archive_previous(run_dir: str, filename: str = FILENAME,
+                     prev_filename: str = PREV_FILENAME) -> Optional[str]:
     """Move an existing deep_check.json aside to deep_check_prev.json.
 
     Called on a re-run into an existing output dir, next to the analysis_prev.json
     copy. Returns the archive path, or None when there was nothing to archive.
     Overwrites an older archive (one generation kept, like analysis_prev.json).
     """
-    src = os.path.join(run_dir, FILENAME)
+    src = os.path.join(run_dir, filename)
     if not os.path.exists(src):
         return None
-    dst = os.path.join(run_dir, PREV_FILENAME)
+    dst = os.path.join(run_dir, prev_filename)
     os.replace(src, dst)
     return dst
 

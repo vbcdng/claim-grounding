@@ -50,6 +50,30 @@
 #   ESTIMATE_ONLY=1 print the plan, the pinning and the cost estimate, then stop
 #                  without making a single request. Free. Use this to show the
 #                  author what a paid arm would cost before asking for a go.
+#   EXTRA_FLAGS="--aida-grounder --aida-field-tools"
+#                  (card #85 follow-up 3, 2026-10-01) extra verify_my_text.py
+#                  flags appended to BOTH passes, exactly as in the free script.
+#                  Word-split on purpose; quote nothing inside. Recorded in every
+#                  output folder as .extra_flags: one tag = one set of flags, a
+#                  re-run of the tag with different flags is refused (exit 2).
+#   REUSE_FROM=<tag> (card #85 follow-up 3; the free script's card #141 switch)
+#                  serve every request that is byte-for-byte identical to one
+#                  the earlier PAID arm <tag> already asked from that arm's
+#                  recorded answer; only the rest is sent and paid for. Reused
+#                  answers are marked in llm_calls.jsonl, cost nothing, and are
+#                  left out of the spending check; the summary prints "reused N
+#                  of M calls" per text. Refused (exit 2, before anything is
+#                  sent): <tag> is this tag; STABILITY_RUN=1 or --verdict-vote in
+#                  EXTRA_FLAGS; and, unlike the free script, any text whose donor
+#                  folder is missing, was not judged on this paid host, or holds
+#                  no request fingerprints (recorded before card #141) — on this
+#                  script a donor that cannot donate means paying for the whole
+#                  arm, which is not what the go was priced for.
+#   RECORD_REQUESTS=1 default: write each request's fingerprint into
+#                  llm_calls.jsonl so this arm can serve a later REUSE_FROM.
+#                  Changes nothing sent and no result file. 0 = log as before.
+#   STABILITY_RUN=1 mark this arm as a verdict-stability measurement, so
+#                  REUSE_FROM is refused.
 #
 # WHY THE PRECISION IS PINNED. Left alone the marketplace routes each request to
 # the cheapest company, which serves a four-bit copy of the model — a copy that
@@ -72,6 +96,15 @@ ESTIMATE_ONLY=${ESTIMATE_ONLY:-0}
 PROMPTS=${PROMPTS:-}
 MAX_USD=${MAX_USD:-2.00}
 AUTHOR_GO=${AUTHOR_GO:-}
+EXTRA_FLAGS=${EXTRA_FLAGS:-}
+REUSE_FROM=${REUSE_FROM:-}
+RECORD_REQUESTS=${RECORD_REQUESTS:-1}
+STABILITY_RUN=${STABILITY_RUN:-0}
+# Test seams (tests/test_paid_gate_reuse.py only), the same three as the free
+# script: a stand-in checker, a list of texts, a root for the output folders.
+VERIFY_SCRIPT=${GATE_VERIFY_SCRIPT:-verify_my_text.py}
+OUT_ROOT=${GATE_OUT_ROOT:-data}
+HOST_NOW="paid-openrouter-bf16"
 
 # The four sellers that hold the full-precision copy, cheapest first, with
 # compressed copies and every other seller refused outright.
@@ -100,6 +133,26 @@ if [ "$TAG" = "canonical" ]; then
   echo "  named tag; promoting a paid arm to canonical is the author's decision." >&2
   exit 2
 fi
+
+# Answer reuse from an earlier arm: refuse the combinations that would make the
+# arm measure nothing (same rules as the free script, card #141).
+if [ -n "$REUSE_FROM" ]; then
+  if [ "$REUSE_FROM" = "$TAG" ]; then
+    echo "ERROR: REUSE_FROM=$REUSE_FROM is this arm's own tag. Reuse copies answers" >&2
+    echo "  from a DIFFERENT, earlier arm; give that arm's tag." >&2
+    exit 2
+  fi
+  if [ "$STABILITY_RUN" != "0" ] || [[ " $EXTRA_FLAGS " == *" --verdict-vote "* ]]; then
+    echo "ERROR: REUSE_FROM is set, but this arm is a verdict-stability measurement" >&2
+    echo "  (STABILITY_RUN=1 or --verdict-vote in EXTRA_FLAGS). A stability measurement" >&2
+    echo "  asks the same questions again to see whether the answers change, so" >&2
+    echo "  copying the earlier arm's answers would make it measure nothing." >&2
+    echo "  Switch one of the two off." >&2
+    exit 2
+  fi
+fi
+[ "$STABILITY_RUN" != "0" ] && export PAPERTRAIL_STABILITY_RUN=1
+[ "$RECORD_REQUESTS" != "0" ] && export PAPERTRAIL_RECORD_REQUESTS=1
 
 # ---- the permission check, before anything else can spend --------------------
 if [ "$SCORE_ONLY" != "1" ] && [ "$ESTIMATE_ONLY" != "1" ]; then
@@ -137,7 +190,7 @@ fi
 
 verify() {  # <verify_my_text.py args...>
   if [ -z "$PROMPTS" ]; then
-    $PY verify_my_text.py "$@"
+    $PY "$VERIFY_SCRIPT" "$@"
   else
     local pairs=()
     IFS=',' read -ra pairs <<< "$PROMPTS"
@@ -154,10 +207,36 @@ TEXTS=(
   "bohemia|data/loop_rounds/round_3/project/my_text.md|data/loop_rounds/round_3/project/sources|data/gate_run_bohemia"
   "pots|data/loop_rounds/round_4/project/my_text.md|data/loop_rounds/round_4/project/sources|data/gate_run_pots"
 )
+# Tests only: GATE_TEXTS="name|text|sources|donor;name|..." replaces the list.
+if [ -n "${GATE_TEXTS:-}" ]; then
+  IFS=';' read -ra TEXTS <<< "$GATE_TEXTS"
+fi
 
-outdir() { echo "data/gate_${TAG}_$1"; }
+outdir() { outdir_for "$TAG" "$1"; }
+outdir_for() { echo "$OUT_ROOT/gate_${1}_$2"; }   # <tag> <name>
 
-# Price everything this arm has sent so far, from the per-request logs.
+# Can the REUSE_FROM arm's folder for <name> donate? Prints a reason and
+# returns 1 when it cannot: no call log, not judged on this paid host, or no
+# request fingerprints (recorded before card #141, or with RECORD_REQUESTS=0).
+donor_problem() {  # <name>
+  local d log
+  d=$(outdir_for "$REUSE_FROM" "$1")
+  log="$d/llm_calls.jsonl"
+  if [ ! -f "$log" ]; then
+    echo "no call log at $log"; return 1
+  fi
+  if [ ! -f "$d/.judge_host" ] || [ "$(cat "$d/.judge_host")" != "$HOST_NOW" ]; then
+    echo "$d was not judged on the paid full-precision host"; return 1
+  fi
+  if ! grep -q '"request_sha256"' "$log"; then
+    echo "$log holds no request fingerprints (recorded before card #141)"; return 1
+  fi
+  return 0
+}
+
+# Price everything this arm has sent so far, from the per-request logs. A line
+# marked "reused" was served from the REUSE_FROM arm's recorded answer, was
+# never sent, and costs nothing, so it is left out.
 spent_so_far() {
   $PY - "$PRICE_IN_PER_M" "$PRICE_OUT_PER_M" "$@" <<'PYEOF'
 import json, sys, os
@@ -171,6 +250,8 @@ for d in sys.argv[3:]:
         try:
             r = json.loads(line)
         except ValueError:
+            continue
+        if r.get("reused"):
             continue
         tin += r.get("prompt_tokens") or 0
         tout += r.get("completion_tokens") or 0
@@ -204,6 +285,8 @@ echo "precision pin: $PIN"
 echo "spending ceiling: \$$MAX_USD (a six-text arm costs about \$0.60)"
 [ -z "$PROMPTS" ] && echo "prompts: config/prompts/ as committed (no override)" \
                   || echo "prompts: OVERRIDDEN in-process -> $PROMPTS"
+echo "extra flags: ${EXTRA_FLAGS:-(none)}"
+echo "answer reuse: ${REUSE_FROM:-(off)}"
 
 if [ "$ESTIMATE_ONLY" = "1" ]; then
   echo
@@ -212,8 +295,44 @@ if [ "$ESTIMATE_ONLY" = "1" ]; then
   echo "  and 0.2 million returned, measured on earlier arms."
   echo "  At the cheapest pinned seller (\$0.08 in / \$0.35 out per million): about \$0.58"
   echo "  At the dearest pinned seller (\$0.14 in / \$0.40 out per million): about \$0.98"
+  if [ -n "$EXTRA_FLAGS" ]; then
+    echo "  EXTRA_FLAGS adds the calls of those switches on top of that. No earlier"
+    echo "  paid arm ran with them, so their number is NOT in this estimate; the"
+    echo "  spending ceiling (\$$MAX_USD) stops the arm between texts if it would pass."
+  fi
+  if [ -n "$REUSE_FROM" ]; then
+    echo "  REUSE_FROM=$REUSE_FROM: every request identical to one that arm asked is"
+    echo "  served from its recorded answer for \$0, so only the requests that differ"
+    echo "  are paid (93-100% repeat between arms one switch apart, card #141)."
+    for row in "${TEXTS[@]}"; do
+      IFS='|' read -r name _ _ _ <<< "$row"
+      if why=$(donor_problem "$name"); then
+        printf "    %-10s donor ready: %s\n" "$name" "$(outdir_for "$REUSE_FROM" "$name")"
+      else
+        printf "    %-10s donor NOT ready (%s) — a real run would be refused\n" "$name" "$why"
+      fi
+    done
+  fi
   echo "  Free alternative, same six texts, same scoring: benchmarks/run_gate_gemma.sh"
   exit 0
+fi
+
+# A paid arm that reuses answers must have a usable donor for EVERY text before
+# anything is sent: otherwise that text is asked in full and paid in full.
+if [ "$SCORE_ONLY" != "1" ] && [ -n "$REUSE_FROM" ]; then
+  bad=0
+  for row in "${TEXTS[@]}"; do
+    IFS='|' read -r name _ _ _ <<< "$row"
+    if ! why=$(donor_problem "$name"); then
+      echo "ERROR: REUSE_FROM=$REUSE_FROM cannot donate for $name: $why." >&2
+      bad=1
+    fi
+  done
+  if [ "$bad" = "1" ]; then
+    echo "  Nothing was sent. Run the donor arm first (with RECORD_REQUESTS left on)," >&2
+    echo "  or drop REUSE_FROM deliberately, with the author's go for the full price." >&2
+    exit 2
+  fi
 fi
 
 if [ "$SCORE_ONLY" != "1" ]; then
@@ -237,7 +356,7 @@ if [ "$SCORE_ONLY" != "1" ]; then
     # model string, so a host change already forces a re-judge, but a mixed folder
     # is still unreadable afterwards — refuse it outright.
     host_file="$out/.judge_host"
-    host_now="paid-openrouter-bf16"
+    host_now="$HOST_NOW"
     if [ -f "$host_file" ] && [ "$(cat "$host_file")" != "$host_now" ]; then
       echo "ERROR: $out holds results from a different judge host: $(cat "$host_file")" >&2
       echo "  Use a new <tag>. Mixing hosts in one folder makes the arm meaningless." >&2
@@ -256,21 +375,49 @@ if [ "$SCORE_ONLY" != "1" ]; then
     fi
     printf '%s' "$arm_now" > "$arm_file"
 
+    # One tag = one set of EXTRA_FLAGS (card #85 follow-up 3). A folder from
+    # before this stamp existed was run with no extra flags, so a missing file
+    # reads as "none".
+    flags_file="$out/.extra_flags"
+    flags_now="${EXTRA_FLAGS:-none}"
+    flags_disk="none"
+    [ -f "$flags_file" ] && flags_disk=$(cat "$flags_file")
+    if [ -f "$out/analysis.json" ] || [ -f "$flags_file" ]; then
+      if [ "$flags_disk" != "$flags_now" ]; then
+        echo "ERROR: $out was produced with different EXTRA_FLAGS." >&2
+        echo "  on disk: $flags_disk" >&2
+        echo "  now:     $flags_now" >&2
+        echo "  Use a new <tag>: one tag holds one set of flags." >&2
+        exit 2
+      fi
+    fi
+    printf '%s' "$flags_now" > "$flags_file"
+
     printf '%s\n' "$AUTHOR_GO" > "$out/.paid_run_authorization"
 
     if [ ! -d "$out/embeddings" ] && [ -d "$donor/embeddings" ] && [ "$donor" != "$out" ]; then
       cp -r "$donor/embeddings" "$out/embeddings"
     fi
 
+    # Point the model client at the donor arm's answers for THIS text, and
+    # remember where this run's call-log lines start for the reuse count.
+    if [ -n "$REUSE_FROM" ]; then
+      donor_log="$(outdir_for "$REUSE_FROM" "$name")/llm_calls.jsonl"
+      export PAPERTRAIL_REUSE_FROM="$donor_log"
+      echo "=== $name reuses identical answers from $donor_log ==="
+      $PY benchmarks/gate_reuse.py mark --out "$out"
+    fi
+
     verify --text "$text" --sources "$sources" --output-dir "$out" \
-        --model "$MODEL" --yes --full --no-arbiter --concurrency "$CONC"
+        --model "$MODEL" --yes --full --no-arbiter --concurrency "$CONC" $EXTRA_FLAGS
     echo "=== $name first pass exit=$? $(date +%F' '%H:%M:%S) ==="
     # Second identical pass WITHOUT --full: re-asks only what failed. Paid
     # requests fail far less often than the free seat drops claims, but an
     # outage still turns a failed request into a red card (task #37).
     verify --text "$text" --sources "$sources" --output-dir "$out" \
-        --model "$MODEL" --yes --no-arbiter --concurrency "$CONC"
+        --model "$MODEL" --yes --no-arbiter --concurrency "$CONC" $EXTRA_FLAGS
     echo "=== $name retry exit=$? $(date +%F' '%H:%M:%S) ==="
+    [ -n "$REUSE_FROM" ] && unset PAPERTRAIL_REUSE_FROM
     served_by "$out"
   done
 fi
@@ -291,6 +438,15 @@ for row in "${TEXTS[@]}"; do
 done
 [ "${missing:-0}" = "0" ] || echo "  WARNING: a text has no result file — check the log for a crash or the spending ceiling."
 [ "$contaminated" = "0" ] || echo "  WARNING: refused calls present — those claims read as red cards (task #37). Re-run to retry them before trusting any score."
+
+if [ -n "$REUSE_FROM" ]; then
+  echo
+  echo "=== ANSWERS REUSED FROM ARM $REUSE_FROM (counts this test's calls only; reused answers cost \$0) ==="
+  for row in "${TEXTS[@]}"; do
+    IFS='|' read -r name _ _ _ <<< "$row"
+    printf "  %-10s %s\n" "$name" "$($PY benchmarks/gate_reuse.py summary --out "$(outdir "$name")")"
+  done
+fi
 
 echo
 alldirs=()

@@ -111,3 +111,25 @@ class TestWatchAndEdges(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestAcceptedRed(unittest.TestCase):
+    """2026-09-06: an accepted_red must_cover row that fails is reported
+    separately and does not count as a new failure."""
+
+    def test_split_puts_accepted_row_aside(self):
+        analysis = {"text_claims": [{"id": "t8", "verdict": "unsupported"},
+                                    {"id": "t9", "verdict": "unsupported"}]}
+        gt = {"claims": [{"id": "t8", "kind": "must_cover", "anchors": ["x"], "note": "n",
+                          "accepted_red": "author 2026-08-11"},
+                         {"id": "t9", "kind": "must_cover", "anchors": ["y"], "note": "n"}]}
+        failures, accepted, watch, n_hard = coverage_check.check_split(analysis, gt)
+        self.assertEqual(n_hard, 2)
+        self.assertEqual(len(failures), 1)
+        self.assertTrue(failures[0].startswith("t9:"))
+        self.assertEqual(len(accepted), 1)
+        self.assertTrue(accepted[0].startswith("t8:"))
+        # the old three-value shape still lists both, for callers that predate the split
+        f3, _, n3 = coverage_check.check(analysis, gt)
+        self.assertEqual(len(f3), 2)
+

@@ -29,8 +29,23 @@ Usage examples
     # run one command once when done (e.g. a scoring step):
     python3 wait_for_run.py --pid 12345 --then "venv/bin/python score.py"
 
+  4. (card 138, 2026-09-28) A --pattern that the program writing the log can
+     never print would wait until the timeout. Before waiting, a SELF-TEST
+     finds that program (--producer, the log's own header line from
+     gemma_queue.py or run_logged.sh, or the queue entry of a not-yet-started
+     queue log), reads its source plus the local scripts and Python modules it
+     uses, and REFUSES at once (exit 1) when a word of the pattern appears in
+     none of them. Only letter words of 3+ characters are compared, so a
+     variable part ("GATE EXIT=0" vs the script's "GATE EXIT=$rc") passes.
+     When no producer can be found the test is skipped with a note on stderr;
+     --skip-self-test "<reason>" turns it off deliberately. Known limits: the
+     words are looked up one by one, so a phrase made of words the programs
+     print in other places passes; and a word that only comes from data (a
+     text name printed via a variable) is refused — skip the test for that.
+
 Give MULTIPLE conditions and it finishes when ANY one is met (the reason is
-named in the output). Exit codes: 0 = done, 2 = timed out, 1 = bad arguments.
+named in the output). Exit codes: 0 = done, 2 = timed out, 1 = bad arguments
+or a failed self-test.
 Polls quietly (default every 30 s) and prints ONE final line — never pipe a
 long run through tail (standing rule); point --log at the file instead.
 stdlib only, no network.
@@ -38,12 +53,15 @@ stdlib only, no network.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
+import shlex
 import subprocess
 import sys
 import time
 from datetime import datetime
+from pathlib import Path
 
 
 def pid_alive(pid: int) -> bool:
@@ -54,6 +72,181 @@ def pid_alive(pid: int) -> bool:
     except PermissionError:
         return True  # exists, owned by someone else
     return True
+
+
+# ---------------------------------------------------------------- self-test
+
+_QUEUE_HEADER = re.compile(r"^=== \S+ start: (.*) \(cwd (.*)\)$")
+_RUN_LOGGED_HEADER = re.compile(r"^=== command: (.*)$")
+_SCRIPT_EXT = (".py", ".sh", ".bash")
+_MAX_FILES = 400
+
+
+def pattern_branches(pattern: str) -> list[list[str]]:
+    """The letter words (3+ chars) of each top-level alternative of a regex.
+    An alternative with no such word cannot be checked (empty list)."""
+    s = re.sub(r"\\[a-zA-Z]", " ", pattern)   # \d \s \b ... are not letters
+    s = re.sub(r"\[[^\]]*\]", " ", s)          # character classes
+    s = re.sub(r"\{[^}]*\}", " ", s)           # repeat counts
+    s = re.sub(r"\(\?[a-zA-Z]+\)", " ", s)     # inline flags like (?i)
+    s = s.replace("\\|", "\0")
+    branches = []
+    for part in s.split("|"):
+        part = re.sub(r"\\(.)", r"\1", part.replace("\0", "|"))
+        branches.append(re.findall(r"[A-Za-z][A-Za-z0-9_]{2,}", part))
+    return branches
+
+
+def _scripts_in(text: str, cwd: Path) -> list[Path]:
+    """Existing script files named as words of a command or a shell script."""
+    try:
+        words = shlex.split(text, comments=True)
+    except ValueError:
+        words = text.split()
+    out = []
+    for w in words:
+        for tok in re.split(r"[\s=;|&()<>\"'`{}$:,]+", w):
+            tok = tok.lstrip("-")  # "${VAR:-default.py}" leaves "-default.py"
+            if tok.endswith(_SCRIPT_EXT):
+                p = Path(tok) if os.path.isabs(tok) else cwd / tok
+                if p.is_file():
+                    out.append(p.resolve())
+    return out
+
+
+def _py_imports(path: Path, root: Path) -> list[Path]:
+    out = []
+    try:
+        src = path.read_text(errors="replace")
+    except OSError:
+        return out
+    for m in re.finditer(r"^\s*(?:from\s+(\.*[\w.]*)\s+import\s+([\w, ]+)|import\s+([\w., ]+))",
+                         src, re.MULTILINE):
+        names = []
+        if m.group(1) is not None:
+            mod = m.group(1)
+            base = path.parent if mod.startswith(".") else root
+            mod = mod.lstrip(".")
+            names.append((base, mod))
+            for sub in m.group(2).split(","):  # "from pkg import module"
+                if sub.strip():
+                    names.append((base, f"{mod}.{sub.strip()}" if mod else sub.strip()))
+        else:
+            for mod in m.group(3).split(","):
+                names.append((root, mod.strip().split(" ")[0]))
+        for base, mod in names:
+            if not mod:
+                continue
+            rel = Path(*mod.split("."))
+            for cand in (base / f"{rel}.py", base / rel / "__init__.py"):
+                if cand.is_file():
+                    out.append(cand.resolve())
+    return out
+
+
+def producer_sources(start: list[Path], root: Path) -> list[Path]:
+    """start + the local scripts they name + (recursively) the local Python
+    modules the Python ones import, all inside root. Bounded."""
+    seen: list[Path] = []
+    todo = [p.resolve() for p in start if p.is_file()]
+    while todo and len(seen) < _MAX_FILES:
+        p = todo.pop()
+        if p in seen:
+            continue
+        seen.append(p)
+        if p.suffix == ".py":
+            todo.extend(_py_imports(p, root))
+        if p.suffix in (".sh", ".bash") or p in start:
+            try:
+                todo.extend(q for q in _scripts_in(p.read_text(errors="replace"), root)
+                            if q not in seen)
+            except OSError:
+                pass
+    return seen
+
+
+def find_producers(log: str, explicit: list[str] | None) -> tuple[list[Path], Path]:
+    """(the files that write this log, the folder their paths resolve in)."""
+    logp = Path(log).resolve()
+    if explicit:
+        files = [Path(p).resolve() for p in explicit]
+        return files, files[0].parent
+    head = ""
+    if logp.is_file():
+        with open(logp, "rb") as f:
+            head = f.read(65536).decode(errors="replace")
+    for line in head.splitlines()[:20]:
+        m = _QUEUE_HEADER.match(line)
+        if m:
+            cwd = Path(m.group(2))
+            files = _scripts_in(m.group(1), cwd)
+            q = logp.parent.parent.parent / "bin" / "gemma_queue.py"
+            if q.is_file():
+                files.append(q.resolve())
+            return files, cwd
+        m = _RUN_LOGGED_HEADER.match(line)
+        if m:
+            cwd = logp.parent.parent  # run_logged.sh writes <repo>/logs/
+            files = _scripts_in(m.group(1), cwd)
+            if (cwd / "run_logged.sh").is_file():
+                files.append((cwd / "run_logged.sh").resolve())
+            return files, cwd
+    # A queue job that has not started yet: its log is <base>/logs/<id>.log and
+    # the entry in <base>/queue.jsonl says what will write it (read only).
+    if logp.parent.name == "logs" and (logp.parent.parent / "queue.jsonl").is_file():
+        eid = logp.stem
+        try:
+            lines = (logp.parent.parent / "queue.jsonl").read_text().splitlines()
+        except OSError:
+            lines = []
+        for line in lines:
+            try:
+                e = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if e.get("id") == eid:
+                cwd = Path(e.get("workdir") or ".")
+                files = _scripts_in(e.get("command", ""), cwd)
+                q = logp.parent.parent.parent / "bin" / "gemma_queue.py"
+                if q.is_file():
+                    files.append(q.resolve())
+                return files, cwd
+    return [], logp.parent
+
+
+def self_test(log: str, pattern: str, explicit: list[str] | None = None) -> tuple[bool | None, str]:
+    """(True = the pattern can appear, False = it cannot, None = cannot tell;
+    one plain sentence)."""
+    start, root = find_producers(log, explicit)
+    if not start:
+        return None, (f"self-test skipped: could not tell which program writes {log}; "
+                      f"add --producer <script> to check the pattern")
+    files = producer_sources(start, root)
+    text = ""
+    for p in files:
+        try:
+            text += p.read_text(errors="replace") + "\n"
+        except OSError:
+            pass
+    fold = "(?i)" in pattern
+    hay = text.lower() if fold else text
+    missing_per_branch = []
+    for words in pattern_branches(pattern):
+        if not words:
+            return None, "self-test skipped: the pattern has no plain word to look for"
+        missing = [w for w in words if (w.lower() if fold else w) not in hay]
+        if not missing:
+            return True, f"self-test passed: the pattern's words appear in {len(files)} producer file(s)"
+        missing_per_branch.append(missing)
+    names = ", ".join(str(p) for p in start[:4])
+    return False, (f"REFUSING: the end pattern {pattern!r} can never appear in {log}. "
+                   f"The words {', '.join(repr(w) for w in missing_per_branch[0])} are "
+                   f"printed by none of the {len(files)} file(s) that write this log "
+                   f"(starting from {names}), so waiting would only end at the timeout. "
+                   f"Look up the exact end line the program prints, or add "
+                   f"--producer <script> if the log is written by something else. If "
+                   f"the word comes from data rather than from the program (a text "
+                   f"or file name the program prints), add --skip-self-test \"<reason>\".")
 
 
 def main() -> int:
@@ -69,12 +262,25 @@ def main() -> int:
                     help="give up after this many seconds (default 12h; exit code 2)")
     ap.add_argument("--interval", type=float, default=30, help="poll every N seconds (default 30)")
     ap.add_argument("--then", help="shell command to run ONCE when done (not on timeout)")
+    ap.add_argument("--producer", action="append",
+                    help="script that writes --log (repeatable); used by the pattern self-test")
+    ap.add_argument("--skip-self-test", metavar="REASON",
+                    help="do not check that --pattern can appear in --log; give the reason")
     a = ap.parse_args()
 
     if not (a.pid or (a.log and (a.pattern or a.quiet_secs)) or a.target):
         ap.error("give --pid, --log with --pattern/--quiet-secs, or --file")
     if a.pattern and not a.log:
         ap.error("--pattern needs --log")
+
+    # Failure mode 4: a pattern the log's writer can never print.
+    if a.pattern and not (a.skip_self_test or "").strip():
+        ok, msg = self_test(a.log, a.pattern, a.producer)
+        if ok is False:
+            print(msg)
+            return 1
+        if ok is None:
+            print(msg, file=sys.stderr)
 
     # Failure mode 1: evidence that predates the watcher must not count.
     log_pos = 0

@@ -9,8 +9,11 @@ false-positive risk (t37 would have been flagged in every run it slipped
 through); an unsupported claim the second judge accepts is a strictness miss.
 
 The flag NEVER changes a verdict — it renders as a viewer chip + drops the
-confidence chip to "low", so the human looks. Both models read through the same
-API key (Gemini); cost is ~1 small call per judged claim.
+confidence chip to "low", so the human looks. Cost is ~1 small call per judged
+claim. Until 2026-09-10 the default rode the judge's own Gemini key; it is now
+`claude-code/sonnet` (see DEFAULT_MODEL), so the pass needs no extra key and
+spends nothing — and a user with no `claude` CLI gets one warning, no verdict
+change (verify_my_text wraps this whole pass).
 
 Also consumes `<run dir>/verdict_feedback.json` (written by /apply-review for
 "verdict wrong" marks): a claim the author already ruled on gets an
@@ -27,7 +30,26 @@ from .llm_client import parallel_map
 
 logger = logging.getLogger("papertrail.second_opinion")
 
-DEFAULT_MODEL = "gemini/gemini-2.5-flash"
+# Default picked 2026-09-10 (task #67, the pick moved here from #66). The old
+# default `gemini/gemini-2.5-flash` retires 2026-10-16, so it had to move. Three
+# constraints decided it:
+#   1. It must not be the judge's own family. The judge default is Google's
+#      gemma-4-31b-it, and MODEL_OPTIONS.md records that Google's other small
+#      model (gemini-3.8-flash) "adds no independence to a panel" for that exact
+#      reason — a same-company second reader defeats the pass.
+#   2. It must not be the arbiter's model either (openrouter/openai/gpt-5.6-luna,
+#      default ON): the same model in both layers correlates their disagreements,
+#      so the two checks stop being two.
+#   3. Of the remaining third-family candidates only Anthropic Sonnet 5 is
+#      MEASURED in this project (deep_check.py's own default; the grader ruling
+#      in CLAUDE_GRADER_BENCHMARK_TEST_PLAN_2026-07-26.md). DeepSeek V4 Flash was
+#      measured but retired 2026-09-10 into an unmeasured V4.1; Qwen 3.8 Flash and
+#      GLM 5.3 Flash are new and thinking-heavy, and task #32 measured that hidden
+#      reasoning makes a second reader STRICTER, i.e. worse here.
+# Cost is $0 on a Claude subscription; latency is higher than a raw API, which is
+# acceptable for an opt-in pass. Without the `claude` CLI the pass is skipped with
+# one warning and the run is complete without it.
+DEFAULT_MODEL = "claude-code/sonnet"
 
 # A lone disagreement from a borderline-flippy model would spam the review with
 # noise; a disagreement only stands if it survives a majority-of-3 (the first

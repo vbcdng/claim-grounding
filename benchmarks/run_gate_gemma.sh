@@ -27,6 +27,35 @@
 #                       (task #37), which on a gate is a fake failure.
 #
 #   SCORE_ONLY=1        skip the runs, score whatever is already on disk.
+#   RESUME=0            re-judge every text even if it already finished
+#                       (card #134). Default 1: re-running the SAME tag skips
+#                       a text whose earlier run finished both passes under
+#                       the same code commit, model, prompts, EXTRA_FLAGS,
+#                       text and sources, with no refused calls — so a crash,
+#                       restart or sleep costs only the unfinished texts. A
+#                       fresh tag has nothing recorded and runs everything.
+#                       The refused-call check and scoring still read every
+#                       text. Logic: benchmarks/gate_resume.py.
+#   REUSE_FROM=<tag>    (card #141, default off) serve every request that is
+#                       byte-for-byte identical to one the earlier arm <tag>
+#                       already asked (same model, prompt, temperature, output
+#                       limit, provider settings) from that arm's recorded
+#                       answer, and ask Gemma only the rest. Measured offline:
+#                       93-100% of calls repeat between two arms that differ
+#                       by one switch. Failed answers are never reused; every
+#                       reused answer is marked in llm_calls.jsonl and the
+#                       summary prints "reused N of M calls" per text. Refused
+#                       together with STABILITY_RUN=1 or --verdict-vote in
+#                       EXTRA_FLAGS (a stability measurement needs fresh
+#                       answers), and refused when <tag> is this tag. Only arms
+#                       recorded with request fingerprints can donate (every
+#                       arm from card #141 on; RECORD_REQUESTS below).
+#   RECORD_REQUESTS=1   default: write each request's fingerprint into
+#                       llm_calls.jsonl so this arm can serve a later REUSE_FROM.
+#                       Changes nothing sent to the model and no result file.
+#                       0 = log exactly as before card #141.
+#   STABILITY_RUN=1     mark this arm as a verdict-stability measurement, so
+#                       REUSE_FROM is refused.
 #   MODEL=<litellm id>  override the judge (default gemini/gemma-4-31b-it).
 #   PROMPTS="name=path[,name=path]"
 #                       gate a PROMPT VARIANT without editing config/prompts/.
@@ -55,12 +84,24 @@ PY=${PY:-venv/bin/python3}
 MODEL=${MODEL:-gemini/gemma-4-31b-it}
 SCORE_ONLY=${SCORE_ONLY:-0}
 PROMPTS=${PROMPTS:-}
+# EXTRA_FLAGS="--direction-check" (2026-09-09, card #101): extra verify_my_text.py
+# flags appended to BOTH passes, so a default-off check can be measured on one
+# arm without touching the script. Word-split on purpose; quote nothing inside.
+EXTRA_FLAGS=${EXTRA_FLAGS:-}
+RESUME=${RESUME:-1}
+REUSE_FROM=${REUSE_FROM:-}
+RECORD_REQUESTS=${RECORD_REQUESTS:-1}
+STABILITY_RUN=${STABILITY_RUN:-0}
+# Test seams (tests/test_gate_resume.py only): a stand-in checker, a list of
+# texts, and a root for the non-canonical output folders. Unset = normal gate.
+VERIFY_SCRIPT=${GATE_VERIFY_SCRIPT:-verify_my_text.py}
+OUT_ROOT=${GATE_OUT_ROOT:-data}
 
 # With PROMPTS set, the runs go through the in-process override runner instead of
 # verify_my_text.py directly, so config/prompts/ is never written.
 verify() {  # <verify_my_text.py args...>
   if [ -z "$PROMPTS" ]; then
-    $PY verify_my_text.py "$@"
+    $PY "$VERIFY_SCRIPT" "$@"
   else
     local pairs=()
     IFS=',' read -ra pairs <<< "$PROMPTS"
@@ -87,18 +128,45 @@ TEXTS=(
   "bohemia|data/loop_rounds/round_3/project/my_text.md|data/loop_rounds/round_3/project/sources|data/gate_run_bohemia"
   "pots|data/loop_rounds/round_4/project/my_text.md|data/loop_rounds/round_4/project/sources|data/gate_run_pots"
 )
+# Tests only: GATE_TEXTS="name|text|sources|donor;name|..." replaces the list.
+if [ -n "${GATE_TEXTS:-}" ]; then
+  IFS=';' read -ra TEXTS <<< "$GATE_TEXTS"
+fi
 
 outdir() {  # <name> -> the directory this run writes to
-  case "$TAG:$1" in
+  outdir_for "$TAG" "$1"
+}
+outdir_for() {  # <tag> <name> -> the directory that tag's run of <name> writes to
+  case "$1:$2" in
     canonical:paper1)    echo data/paper1_verification ;;
     canonical:bentonite) echo data/bentonite_verification ;;
     canonical:chimp)     echo data/chimp_verification ;;
     canonical:essay)     echo data/coverage_gate_run ;;
     canonical:bohemia)   echo data/gate_run_bohemia ;;
     canonical:pots)      echo data/gate_run_pots ;;
-    *)                   echo "data/gate_${TAG}_$1" ;;
+    *)                   echo "$OUT_ROOT/gate_${1}_$2" ;;
   esac
 }
+
+# Card #141: answer reuse from an earlier arm. Refuse the combinations that
+# would make the arm measure nothing.
+if [ -n "$REUSE_FROM" ]; then
+  if [ "$REUSE_FROM" = "$TAG" ]; then
+    echo "ERROR: REUSE_FROM=$REUSE_FROM is this arm's own tag. Reuse copies answers" >&2
+    echo "  from a DIFFERENT, earlier arm; give that arm's tag." >&2
+    exit 2
+  fi
+  if [ "$STABILITY_RUN" != "0" ] || [[ " $EXTRA_FLAGS " == *" --verdict-vote "* ]]; then
+    echo "ERROR: REUSE_FROM is set, but this arm is a verdict-stability measurement" >&2
+    echo "  (STABILITY_RUN=1 or --verdict-vote in EXTRA_FLAGS). A stability measurement" >&2
+    echo "  asks the same questions again to see whether the answers change, so" >&2
+    echo "  copying the earlier arm's answers would make it measure nothing." >&2
+    echo "  Switch one of the two off." >&2
+    exit 2
+  fi
+fi
+[ "$STABILITY_RUN" != "0" ] && export PAPERTRAIL_STABILITY_RUN=1
+[ "$RECORD_REQUESTS" != "0" ] && export PAPERTRAIL_RECORD_REQUESTS=1
 
 echo "=== GATE RUN tag=$TAG model=$MODEL concurrency=$CONC score_only=$SCORE_ONLY $(date +%F' '%H:%M:%S) ==="
 [ -z "$PROMPTS" ] && echo "prompts: config/prompts/ as committed (no override)" \
@@ -126,18 +194,52 @@ if [ "$SCORE_ONLY" != "1" ]; then
       exit 2
     fi
     printf '%s' "$arm_now" > "$arm_file"
+    # Which code produced this folder (card #134): "<sha>" or "<sha>+dirty".
+    $PY benchmarks/gate_resume.py commit > "$out/.code_commit"
+    resume_args=(--out "$out" --text "$text" --sources "$sources" --model "$MODEL"
+                 --arm "$arm_now" --extra "$EXTRA_FLAGS")
+    # Skip a text this tag already finished under identical inputs (card #134).
+    # Anything different, missing or doubtful prints "RUN: <reason>" and the text
+    # is judged from zero exactly as before.
+    if [ "$RESUME" != "0" ]; then
+      if $PY benchmarks/gate_resume.py check "${resume_args[@]}"; then
+        echo "=== $name skipped: already finished in this test $(date +%F' '%H:%M:%S) ==="
+        continue
+      fi
+    fi
+    $PY benchmarks/gate_resume.py forget --out "$out"
     if [ ! -d "$out/embeddings" ] && [ -d "$donor/embeddings" ] && [ "$donor" != "$out" ]; then
       cp -r "$donor/embeddings" "$out/embeddings"
     fi
+    # Card #141: point the model client at the earlier arm's answers for THIS
+    # text, and remember where this run's call-log lines start for the count.
+    if [ -n "$REUSE_FROM" ]; then
+      unset PAPERTRAIL_REUSE_FROM
+      donor_log="$(outdir_for "$REUSE_FROM" "$name")/llm_calls.jsonl"
+      if [ -f "$donor_log" ]; then
+        export PAPERTRAIL_REUSE_FROM="$donor_log"
+        echo "=== $name reuses identical answers from $donor_log ==="
+      else
+        echo "=== $name: no call log at $donor_log; every call is asked live ==="
+      fi
+      $PY benchmarks/gate_reuse.py mark --out "$out"
+    fi
     # First pass: --full so nothing is reused from an earlier run.
     verify --text "$text" --sources "$sources" --output-dir "$out" \
-        --model "$MODEL" --yes --full --no-arbiter --concurrency "$CONC"
-    echo "=== $name first pass exit=$? $(date +%F' '%H:%M:%S) ==="
+        --model "$MODEL" --yes --full --no-arbiter --concurrency "$CONC" $EXTRA_FLAGS
+    first_rc=$?
+    echo "=== $name first pass exit=$first_rc $(date +%F' '%H:%M:%S) ==="
     # Second identical pass WITHOUT --full: re-asks only what the free seat
     # dropped; everything else is reused, so this is cheap.
     verify --text "$text" --sources "$sources" --output-dir "$out" \
-        --model "$MODEL" --yes --no-arbiter --concurrency "$CONC"
-    echo "=== $name retry exit=$? $(date +%F' '%H:%M:%S) ==="
+        --model "$MODEL" --yes --no-arbiter --concurrency "$CONC" $EXTRA_FLAGS
+    retry_rc=$?
+    echo "=== $name retry exit=$retry_rc $(date +%F' '%H:%M:%S) ==="
+    [ -n "$REUSE_FROM" ] && unset PAPERTRAIL_REUSE_FROM
+    # Record the text as finished only when both passes exited cleanly.
+    if [ "$first_rc" = "0" ] && [ "$retry_rc" = "0" ]; then
+      $PY benchmarks/gate_resume.py stamp "${resume_args[@]}"
+    fi
   done
 fi
 
@@ -162,6 +264,15 @@ done
 [ "${missing:-0}" = "0" ] || echo "  WARNING: a text has no result file — run without SCORE_ONLY, or check the log for a crash."
 [ "$contaminated" = "0" ] || echo "  WARNING: refused calls present — those claims read as red cards (task #37). Re-run to retry them before trusting any score."
 
+if [ -n "$REUSE_FROM" ]; then
+  echo
+  echo "=== ANSWERS REUSED FROM ARM $REUSE_FROM (card #141; counts this test's calls only) ==="
+  for row in "${TEXTS[@]}"; do
+    IFS='|' read -r name text sources donor <<< "$row"
+    printf "  %-10s %s\n" "$name" "$($PY benchmarks/gate_reuse.py summary --out "$(outdir "$name")")"
+  done
+fi
+
 echo
 rc=0
 if [ "$TAG" = "canonical" ]; then
@@ -181,5 +292,10 @@ fi
 
 [ "$contaminated" = "0" ] && [ "${missing:-0}" = "0" ] || rc=1
 echo
+if [ "$rc" = "0" ]; then
+  echo "=== GATE RESULT: no new red row. Rows the author has ruled accepted_red (paper1 t49, t56; essay t8, t10 as of 2026-09-06) may still print RED above — they are standing reminders, not failures. ==="
+else
+  echo "=== GATE RESULT: a NEW red row, a refused call or a missing result file — read the FAIL lines above. ==="
+fi
 echo "=== GATE EXIT=$rc  (tag=$TAG) $(date +%F' '%H:%M:%S) ==="
 exit $rc

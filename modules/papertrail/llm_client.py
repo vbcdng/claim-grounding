@@ -99,6 +99,15 @@ def _log_call(model: str, purpose: str, claim_id: Optional[str], prompt: str,
             rec["generation_ids"] = gens[0] if len(gens) == 1 else gens
         if claim_id is not None:
             rec["claim_id"] = claim_id
+        # Card #141: the exact-request fingerprint a later arm's answer store
+        # matches on, and a mark on every answer served from that store. Only
+        # written while PAPERTRAIL_REUSE_FROM / PAPERTRAIL_RECORD_REQUESTS is
+        # set, so a run with both unset logs byte-for-byte what it logged before.
+        if ctx.get("request_sha256"):
+            rec["request_sha256"] = ctx["request_sha256"]
+        if ctx.get("reused_from"):
+            rec["reused"] = True
+            rec["reused_from"] = ctx["reused_from"]
         if _log_prompts_enabled():
             rec["prompt_text"] = prompt
         with _CALL_LOG_LOCK:
@@ -110,6 +119,141 @@ def _log_call(model: str, purpose: str, claim_id: Optional[str], prompt: str,
                 f.write(json.dumps(rec, ensure_ascii=False) + "\n")
     except Exception as e:
         logger.warning(f"llm_calls.jsonl write failed (call not logged): {e}")
+
+
+# ---- Answer store (card #141, 2026-09-28; OFF unless PAPERTRAIL_REUSE_FROM is
+# set). A second arm of the same test re-asks thousands of questions the first
+# arm already asked word for word (measured offline: 93-100% of calls for a
+# one-switch pair, 63-71% after a prompt change — benchmarks/card141_reuse_measure.py).
+# With PAPERTRAIL_REUSE_FROM=<llm_calls.jsonl>[<os.pathsep><more>] the client
+# serves a request whose fingerprint (sha256 over the EXACT request body minus
+# the key: model, messages, temperature, clamped max_tokens, provider params,
+# api_base) matches a usable recorded answer, and asks the model only for the
+# rest. Multiset: a request recorded k times serves at most k asks, in recorded
+# order (votes/retries ask the same request on purpose). Failed answers are
+# never loaded. Refused outright with PAPERTRAIL_STABILITY_RUN set: a
+# verdict-stability measurement needs fresh samples by definition.
+# PAPERTRAIL_RECORD_REQUESTS=1 writes the fingerprint without serving anything
+# (the gate script sets it, so every gate arm can donate later).
+_REUSE_LOCK = threading.Lock()
+_REUSE_STORE: Optional[Dict[str, list]] = None   # fingerprint -> [(answer, donor path), oldest first]
+_REUSE_STORE_SRC: Optional[str] = None           # env value the store was loaded from
+_REUSE_STATS = {"loaded": 0, "served": 0, "asked_live": 0}
+
+
+def _reuse_env() -> str:
+    return os.environ.get("PAPERTRAIL_REUSE_FROM", "").strip()
+
+
+def _record_requests_enabled() -> bool:
+    return bool(_reuse_env()) or os.environ.get(
+        "PAPERTRAIL_RECORD_REQUESTS", "").strip().lower() in ("1", "true", "yes")
+
+
+def _stability_run() -> bool:
+    return os.environ.get("PAPERTRAIL_STABILITY_RUN", "").strip() not in ("", "0")
+
+
+STABILITY_REFUSAL = (
+    "Answer reuse (PAPERTRAIL_REUSE_FROM / the gate's REUSE_FROM) is switched on, "
+    "but this run is a verdict-stability measurement (PAPERTRAIL_STABILITY_RUN, "
+    "or the verdict vote). A stability measurement asks the same questions again "
+    "to see whether the answers change, so copying the earlier answers would make "
+    "it measure nothing. Switch one of the two off.")
+
+
+def request_fingerprint(body: Dict[str, Any]) -> str:
+    """sha256 over a request body (everything sent except the key). Canonical
+    JSON, so key order never matters and any byte change in any field does."""
+    return hashlib.sha256(json.dumps(body, sort_keys=True, ensure_ascii=False,
+                                     separators=(",", ":")).encode("utf-8")).hexdigest()
+
+
+def load_answer_store(paths: list) -> Dict[str, list]:
+    """fingerprint -> [(answer, path)] usable recorded answers (oldest first).
+    A line without request_sha256 (recorded before card #141, or with
+    recording off) cannot be matched exactly and is skipped. Raises
+    FileNotFoundError for a missing file: asking to reuse a file that is not
+    there is a typo, not a request to run everything live."""
+    store: Dict[str, list] = {}
+    for path in paths:
+        if not os.path.isfile(path):
+            raise FileNotFoundError(
+                f"PAPERTRAIL_REUSE_FROM names {path}, which does not exist.")
+        rows = []
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rows.append(json.loads(line))
+                except ValueError:
+                    continue
+        rows.sort(key=lambda r: (str(r.get("ts", "")), r.get("seq", 0)))
+        for r in rows:
+            fp = r.get("request_sha256")
+            ans = r.get("response_text")
+            if not fp or r.get("failed") or not isinstance(ans, str) or not ans:
+                continue
+            store.setdefault(fp, []).append((ans, path))
+    return store
+
+
+def answer_store_active() -> bool:
+    """Load the store for the current env value (once) and say whether reuse
+    is on. Raises RuntimeError (STABILITY_REFUSAL) when combined with a
+    stability run, FileNotFoundError on a missing donor file."""
+    global _REUSE_STORE, _REUSE_STORE_SRC
+    src = _reuse_env()
+    if not src:
+        return False
+    if _stability_run():
+        raise RuntimeError(STABILITY_REFUSAL)
+    with _REUSE_LOCK:
+        if _REUSE_STORE is None or _REUSE_STORE_SRC != src:
+            paths = [p for p in src.split(os.pathsep) if p.strip()]
+            _REUSE_STORE = load_answer_store(paths)
+            _REUSE_STORE_SRC = src
+            _REUSE_STATS.update(loaded=sum(len(v) for v in _REUSE_STORE.values()),
+                                served=0, asked_live=0)
+            logger.info(f"Answer reuse ON: {_REUSE_STATS['loaded']} recorded answers "
+                        f"loaded from {len(paths)} call log(s)")
+            if not _REUSE_STATS["loaded"]:
+                logger.warning("Answer reuse ON but no answer could be loaded: the "
+                               "earlier arm's call log carries no request "
+                               "fingerprints (recorded before card #141 or with "
+                               "recording off). Every call is asked live.")
+    return True
+
+
+def _take_answer(fp: str) -> Optional[tuple]:
+    """(answer, donor path) for the oldest unused recorded answer, or None."""
+    with _REUSE_LOCK:
+        lst = (_REUSE_STORE or {}).get(fp)
+        if lst:
+            _REUSE_STATS["served"] += 1
+            return lst.pop(0)
+        _REUSE_STATS["asked_live"] += 1
+        return None
+
+
+def reuse_summary() -> Optional[Dict[str, int]]:
+    """{loaded, served, asked_live} for this process, or None when reuse is off."""
+    if not _reuse_env():
+        return None
+    with _REUSE_LOCK:
+        return dict(_REUSE_STATS)
+
+
+def reset_answer_store() -> None:
+    """Forget the loaded store (tests; a process that changes the env value
+    reloads on its own)."""
+    global _REUSE_STORE, _REUSE_STORE_SRC
+    with _REUSE_LOCK:
+        _REUSE_STORE = None
+        _REUSE_STORE_SRC = None
+        _REUSE_STATS.update(loaded=0, served=0, asked_live=0)
 
 
 # Built-in per-model provider params, applied when PAPERTRAIL_LLM_EXTRA_BODY
@@ -131,6 +275,13 @@ _BUILTIN_EXTRA_BODY: Dict[str, Dict[str, Any]] = {
     # answers (verified 2026-08-01; `enable_thinking: false` does NOT work).
     # Escape hatch: PAPERTRAIL_LLM_EXTRA_BODY='{"deepseek/deepseek-v4-flash": {}}'.
     "deepseek/deepseek-v4-flash": {"thinking": {"type": "disabled"}},
+    # deepseek-flash = V4.1 Flash, DeepSeek's own service since 2026-09-10; it
+    # RETIRED v4-flash and the old name now silently routes to this model, so
+    # any measurement keyed to "deepseek-v4-flash" describes a model that is
+    # gone. Same hidden-thinking behaviour, same switch — verified live on
+    # 2026-09-10 (task #32 q6 panel: 27 calls, ~460 visible output tokens each,
+    # no empty answers). The OpenRouter route is prefix-excluded as usual.
+    "deepseek/deepseek-flash": {"thinking": {"type": "disabled"}},
     # gemma-4 on Google's own API (free tier only): hidden thinking eats the
     # output budget and can return EMPTY under a tight cap; thinkingLevel
     # MINIMAL zeroes it (verified live 2026-08-02, MODEL_HOSTING_LANDSCAPE §6).
@@ -313,7 +464,12 @@ DEFAULT_GEMINI_KEY_PATH = os.path.join(PROJECT_ROOT, "config", "google_api_key.t
 # anomaly: waiting IS the pacing. Calls on these models retry rate errors up
 # to _MAX_RATE_WAITS without consuming regular attempts, so an overnight or
 # background run self-paces instead of dropping verdicts after 3 tries.
-_FREE_TIER_PACED_PREFIXES = ("gemini/gemma-4",)
+# Google's Gemini Flash models on the free seat behave the same way (card #100,
+# 2026-09-09): the free tier throttles per minute AND per day, so a per-minute
+# 429 is the pacing, not a failure, and must not consume one of the three
+# regular attempts. Only the gemini/ routes are listed — an OpenRouter-hosted
+# Gemini would be a paid seat with ordinary retries.
+_FREE_TIER_PACED_PREFIXES = ("gemini/gemma-4", "gemini/gemini-3", "gemini/gemini-flash")
 
 # The free Google seat rejects any request over roughly 52,000 characters
 # (measured live 2026-08-08, task #15). A bigger prompt can NEVER succeed
@@ -324,25 +480,51 @@ _FREE_TIER_PACED_PREFIXES = ("gemini/gemma-4",)
 # instead: same downstream handling as any failed call, an hour sooner.
 _FREE_TIER_MAX_PROMPT_CHARS = 52_000
 _MAX_RATE_WAITS = 40   # worst case ~43 min on one key; a daily-quota 429 still gives up
+# Google-side server errors (litellm InternalServerError / ServiceUnavailableError,
+# "An internal error has occurred", 502/504) on the same free seat are also
+# transient and also come in waves: the two day75b gate runs of 2026-09-08/09
+# lost 341 and 52 calls to the three fast retries (1 s, 2 s) below and were
+# unscorable (task #37 rule). On paced models such errors now wait 60 s each,
+# up to _MAX_SERVER_WAITS, without consuming a regular attempt (author go 2026-09-09).
+_MAX_SERVER_WAITS = 20   # worst case ~20 min per call
+_SERVER_ERROR_MARKERS = ("internalservererror", "internal server error",
+                         "internal error has occurred", "serviceunavailableerror",
+                         "service unavailable", "status code 500", "status code 502",
+                         "status code 503", "status code 504", "bad gateway",
+                         "gateway timeout", '"code": 500', '"code": 503')
 
 
 def _free_google_only() -> bool:
     """FREE_GOOGLE_ONLY=1 (env) = money-lock mode: only Google keys from files
     named config/google_api_key*_free.txt (keys with NO billing attached, so
-    Google cannot charge them) may be used, and every non-Google paid provider
+    Google cannot charge them) may be used — except by a Gemma model, which is
+    free on every key and rotates over all key files (card 143, see
+    _gemini_key_files) — and every non-Google paid provider
     is refused at client construction. The $0 claude-code backend is unaffected
     (it never runs this class's __init__). Set by the /free-google-api skill."""
     return os.environ.get("FREE_GOOGLE_ONLY", "").strip() not in ("", "0")
 
 
-def _gemini_key_files() -> list:
+def _is_gemma(model: Optional[str]) -> bool:
+    """Exactly the litellm `gemini/gemma-*` family. Gemma on Google direct is
+    free of charge on every key (Google offers it on the free tier only — no
+    paid tier exists), so under FREE_GOOGLE_ONLY a Gemma call may use a billed
+    key without any charge (card 143, author 2026-09-29)."""
+    return str(model or "").startswith("gemini/gemma-")
+
+
+def _gemini_key_files(model: Optional[str] = None) -> list:
     """config/google_api_key*.txt, sorted — google_api_key.txt (the primary)
     first, then google_api_key2.txt, google_api_key3.txt… One key per file.
     Each extra Google account's key adds its own free-tier quota; calls
     round-robin across them and a rate-limited call switches to the next key.
-    Under FREE_GOOGLE_ONLY only *_free.txt files (no-billing keys) are eligible."""
+    Under FREE_GOOGLE_ONLY only *_free.txt files (no-billing keys) are eligible,
+    EXCEPT for a Gemma model (_is_gemma), which gets every key file so a locked
+    Gemma job rotates over both Google accounts (card 143). model=None keeps
+    the strict free-only list (callers that don't name a model)."""
     import glob
-    pattern = "google_api_key*_free.txt" if _free_google_only() else "google_api_key*.txt"
+    strict = _free_google_only() and not _is_gemma(model)
+    pattern = "google_api_key*_free.txt" if strict else "google_api_key*.txt"
     return sorted(glob.glob(os.path.join(PROJECT_ROOT, "config", pattern)))
 
 # Output-token ceiling used when litellm doesn't know the model (the flash
@@ -444,7 +626,7 @@ class LLMClient:
         keys: list = []
         if self.provider == "gemini":
             loaded_files: list = []
-            for path in _gemini_key_files():
+            for path in _gemini_key_files(self.model):
                 try:
                     with open(path, "r", encoding="utf-8") as f:
                         key = f.read().strip()
@@ -462,8 +644,14 @@ class LLMClient:
                         "free-only mode the run refuses to fall back to an "
                         "environment key (it could be a paid one). Add the "
                         "no-billing key files or unset FREE_GOOGLE_ONLY.")
-                logger.info("FREE_GOOGLE_ONLY: Google keys restricted to "
-                            f"no-billing files: {', '.join(loaded_files)}")
+                if _is_gemma(self.model):
+                    # Gemma is free on every key: rotate over all accounts,
+                    # duplicate key values dropped above (key2 == key2_free).
+                    logger.info("FREE_GOOGLE_ONLY: Gemma model, rotating over "
+                                f"all Google key files: {', '.join(loaded_files)}")
+                else:
+                    logger.info("FREE_GOOGLE_ONLY: Google keys restricted to "
+                                f"no-billing files: {', '.join(loaded_files)}")
         elif _free_google_only():
             # Unreachable in practice (__init__ refuses non-gemini providers
             # first), kept as a second lock in case a subclass skips that check.
@@ -479,6 +667,17 @@ class LLMClient:
     # be indistinguishable from a genuine negative (rerun.py refuses to reuse
     # verdicts minted under failures; verify_my_text tallies them at run end).
     failed_calls = 0
+
+    def max_prompt_chars(self) -> Optional[int]:
+        """The largest prompt this client will actually send, in characters, or
+        None when it has no known ceiling.
+
+        This is the same number the size preflight in call() enforces, exposed
+        so a caller can shape its context to fit instead of having the call
+        skipped (task #105). It is a measured provider limit, not a token
+        estimate: on the free-tier-paced Google seats a bigger prompt is
+        refused by the provider, so it can never succeed."""
+        return _FREE_TIER_MAX_PROMPT_CHARS if self._patient_rate else None
 
     def call(self, prompt: str, temperature: float = 0.1, max_output_tokens: int = 8000,
              purpose: str = "untagged", claim_id: Optional[str] = None) -> Optional[str]:
@@ -505,6 +704,21 @@ class LLMClient:
                       latency_s=0.0, temperature=temperature,
                       max_output_tokens=max_output_tokens)
             return None
+        # Card #141 answer store. Only the plain litellm path is covered (a
+        # subclass with its own _call_impl, e.g. the claude-code backend, never
+        # fingerprints or reuses). Off = nothing below runs.
+        if _record_requests_enabled() and type(self)._call_impl is LLMClient._call_impl:
+            ctx["request_sha256"] = request_fingerprint(
+                self._request_body(prompt, temperature, max_output_tokens))
+            if answer_store_active():
+                hit = _take_answer(ctx["request_sha256"])
+                if hit is not None:
+                    reused, ctx["reused_from"] = hit
+                    _roll_purpose(self.model, purpose, ctx)
+                    _log_call(self.model, purpose, claim_id, prompt, reused, ctx,
+                              latency_s=0.0, temperature=temperature,
+                              max_output_tokens=max_output_tokens)
+                    return reused
         _TLS.ctx = ctx
         t0 = time.time()
         try:
@@ -520,26 +734,17 @@ class LLMClient:
                   max_output_tokens=max_output_tokens)
         return out
 
-    def _call_impl(self, prompt: str, temperature: float = 0.1, max_output_tokens: int = 8000) -> Optional[str]:
-        """Call the model; return response text or None. Retries on transient/rate
-        errors. The requested cap is clamped to the model's output ceiling, and a
-        response cut off at the cap (finish_reason == "length") retries with a
-        doubled cap — a silently truncated batched-JSON answer parses to None
-        downstream and looks like "the model found nothing" (the 0-edge bug
-        class), which is worse than paying one more call."""
-        kwargs = {
+    def _request_body(self, prompt: str, temperature: float,
+                      max_output_tokens: int) -> Dict[str, Any]:
+        """Everything _call_impl sends to litellm except the API key. One
+        builder for both the real call and the card-#141 request fingerprint,
+        so the fingerprint cannot drift from what is actually sent."""
+        kwargs: Dict[str, Any] = {
             "model": self.model,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": temperature,
             "max_tokens": min(max_output_tokens, self._output_cap),
         }
-        key_count = len(self._api_keys)
-        key_idx = 0
-        if key_count:
-            if key_count > 1:
-                self._key_rr += 1
-                key_idx = self._key_rr % key_count
-            kwargs["api_key"] = self._api_keys[key_idx]
         if self.api_base:
             kwargs["api_base"] = self.api_base
         extra = _extra_body_for(self.model)
@@ -553,6 +758,23 @@ class LLMClient:
                 kwargs.update(extra)
             else:
                 kwargs["extra_body"] = extra
+        return kwargs
+
+    def _call_impl(self, prompt: str, temperature: float = 0.1, max_output_tokens: int = 8000) -> Optional[str]:
+        """Call the model; return response text or None. Retries on transient/rate
+        errors. The requested cap is clamped to the model's output ceiling, and a
+        response cut off at the cap (finish_reason == "length") retries with a
+        doubled cap — a silently truncated batched-JSON answer parses to None
+        downstream and looks like "the model found nothing" (the 0-edge bug
+        class), which is worse than paying one more call."""
+        kwargs = self._request_body(prompt, temperature, max_output_tokens)
+        key_count = len(self._api_keys)
+        key_idx = 0
+        if key_count:
+            if key_count > 1:
+                self._key_rr += 1
+                key_idx = self._key_rr % key_count
+            kwargs["api_key"] = self._api_keys[key_idx]
 
         def _rotate_key() -> None:
             nonlocal key_idx
@@ -562,6 +784,7 @@ class LLMClient:
         max_retries = 3
         attempt = 0
         rate_waits = 0
+        server_waits = 0
         tried_keys = {key_idx}
         while attempt < max_retries:
             try:
@@ -620,6 +843,19 @@ class LLMClient:
                     logger.warning(f"Rate-limited (free-tier pacing, wait "
                                    f"{rate_waits}/{_MAX_RATE_WAITS}): retrying in {wait}s")
                     time.sleep(wait)
+                    continue        # pacing — doesn't consume an attempt
+                is_server = (not is_rate) and any(k in msg for k in _SERVER_ERROR_MARKERS)
+                if is_server and self._patient_rate and server_waits < _MAX_SERVER_WAITS:
+                    # Free-tier-only model: a Google-side 5xx wave passes in
+                    # minutes; waiting keeps the claim instead of minting a
+                    # false 'unsupported' from a dead call.
+                    server_waits += 1
+                    if key_count > 1:
+                        _rotate_key()
+                    logger.warning(f"Server error from the free service (wait "
+                                   f"{server_waits}/{_MAX_SERVER_WAITS}): retrying in 60s: "
+                                   f"{str(e)[:160]}")
+                    time.sleep(60)
                     continue        # pacing — doesn't consume an attempt
                 attempt += 1
                 if attempt < max_retries:

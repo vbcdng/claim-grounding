@@ -85,6 +85,74 @@ class TestSubjectTokens(unittest.TestCase):
             ["university", "oklahoma"])
 
 
+T10 = ("Tellingly, individual forecasters' near-term performance was "
+       "statistically indistinguishable from simple algorithms.")
+AGTA = ("Consistent with this, a study of the Agta of the Philippines found "
+        "individuals in camps more engaged in agricultural work.")
+
+
+class TestOrdinaryOpener(unittest.TestCase):
+    """Card 45 (gate row essay/t10): a single sentence-initial ordinary word is
+    not a name, however rare it is in the source; real names still arm."""
+
+    def test_t10_tellingly_disarms(self):
+        self.assertEqual(matcher._subject_tokens(T10), [])
+        self.assertEqual(matcher._claim_entity_sets(T10), [])
+
+    def test_class_not_just_adverbs(self):
+        # the card's point: the defect is 'first word absent from the source',
+        # not 'framing adverb' — plain openers disarm too
+        for t in ("Individual forecasters were indistinguishable from simple rules.",
+                  "Among fields, the life sciences showed the highest rate.",
+                  "Previous studies have investigated the factors.",
+                  "Crucially, once the analysis adjusted for cholesterol, it vanished.",
+                  "Real-world energy use was 20.8% greater than test values.",
+                  "Faculty with foreign degrees make up one-tenth of the total."):
+            self.assertEqual(matcher._subject_tokens(t), [], t)
+
+    def test_single_token_names_still_arm(self):
+        self.assertEqual(matcher._subject_tokens(
+            "Finland has the highest rate of the tradition."), ["finland"])
+        self.assertEqual(matcher._subject_tokens(
+            "Leicht argues middle powers should skip strategy-writing."), ["leicht"])
+        self.assertEqual(matcher._subject_tokens(
+            "Engelmann et al. report evidence that chimpanzees prepare."),
+            ["engelmann"])
+        self.assertEqual(matcher._subject_tokens(
+            "Agta foragers spent more time in camp."), ["agta"])
+
+    def test_inner_capital_marks_a_name(self):
+        self.assertEqual(matcher._subject_tokens(
+            "ReviewGuard was evaluated on 20,861 papers."), ["reviewguard"])
+        self.assertEqual(matcher._subject_tokens(
+            "InSight traveled 483 million km."), ["insight"])
+
+    def test_after_an_article_capitals_are_evidence(self):
+        # "The Court ..." is capitalized mid-sentence: old rules stand
+        self.assertEqual(matcher._subject_tokens(
+            "The Court announced judgment in favor of the bank."), ["court"])
+
+    def test_agta_still_guarded_by_its_midsentence_name(self):
+        # before card 45 this claim's 'subject' was the word 'consistent';
+        # now the guard rests on the real name, as it should
+        self.assertEqual(matcher._subject_tokens(AGTA), [])
+        self.assertEqual(matcher._claim_entity_sets(AGTA),
+                         [("Agta of the Philippines", ["agta", "philippines"])])
+
+    def test_is_ordinary_word(self):
+        for w in ("Tellingly", "Crucially", "Similarly", "Individual",
+                  "Adjustments", "Real-world", "Previous"):
+            self.assertTrue(matcher._is_ordinary_word(w), w)
+        for w in ("Majid", "Finland", "Agta", "Leicht", "Engelmann", "Marjot",
+                  "Tarnitz", "ReviewGuard", "Kim"):
+            self.assertFalse(matcher._is_ordinary_word(w), w)
+
+    def test_frozen_list_is_loaded(self):
+        self.assertGreater(len(matcher._ORDINARY_WORDS), 10000)
+        for name in ("majid", "finland", "agta", "leicht", "engelmann"):
+            self.assertNotIn(name, matcher._ORDINARY_WORDS)
+
+
 class TestSubjectInSource(unittest.TestCase):
     def _src(self, *sentences):
         return {"sentences": [{"text": s} for s in sentences]}
@@ -175,6 +243,31 @@ class TestGuardOnFulltextPath(unittest.TestCase):
         res = _run([c], srcs, _llm(QF_SENT, True))
         out = res["text_claims"][0]
         self.assertEqual(out["verdict"], "supported")
+
+    def test_t10_positive_survives_when_opener_absent_from_source(self):
+        # card 45: the source never prints 'tellingly'; the judge's unanimous
+        # positive must no longer be thrown out for it
+        c = {"id": "t10", "text": T10, "markers": ["tetlock"], "paper_ids": ["p1"]}
+        proof = ("Individual forecasters performed no better than simple "
+                 "statistical baselines over short horizons.")
+        srcs = {"p1": {"title": "forecasting study", "key": "tetlock",
+                       "sentences": [{"text": "We ran a tournament."},
+                                     {"text": proof}], "claims": []}}
+        res = _run([c], srcs, _llm(proof, True))
+        out = res["text_claims"][0]
+        self.assertEqual(out["verdict"], "supported")
+        self.assertNotIn("subject_guard", out)
+
+    def test_agta_claim_still_rejected_when_source_never_names_agta(self):
+        c = {"id": "t3", "text": AGTA, "markers": ["forager"], "paper_ids": ["p1"]}
+        proof = ("Foragers in settled camps did more agricultural work than "
+                 "those in forest camps.")
+        srcs = {"p1": {"title": "forager study", "key": "forager",
+                       "sentences": [{"text": proof}], "claims": []}}
+        res = _run([c], srcs, _llm(proof, True))
+        out = res["text_claims"][0]
+        self.assertEqual(out["verdict"], "unsupported")
+        self.assertIn("Agta of the Philippines", out["reason"])
 
     def test_component_rescue_skipped_when_all_sources_guarded(self):
         srcs = _sources(["Round 2 scores were posted.", QF_SENT])

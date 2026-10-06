@@ -43,9 +43,21 @@ def _norm(s: str) -> str:
 
 
 def check(analysis: dict, gt: dict):
-    """Returns (failures, watch_lines, n_hard). Pure; testable offline."""
+    """Returns (failures, watch_lines, n_hard). Pure; testable offline. Failures
+    include the author-accepted red rows; check_split separates them."""
+    failures, accepted, watch_lines, n_hard = check_split(analysis, gt)
+    return failures + accepted, watch_lines, n_hard
+
+
+def check_split(analysis: dict, gt: dict):
+    """Returns (new_failures, accepted_red, watch_lines, n_hard). A hard row
+    carrying "accepted_red" (the author ruled it stays red as a standing
+    reminder while its fix is an open task) goes to accepted_red instead of
+    new_failures, so a baseline run exits 0 (2026-09-06)."""
     claims = {c.get("id"): c for c in analysis.get("text_claims", [])}
-    failures, watch_lines, n_hard = [], [], 0
+    failures, accepted, watch_lines, n_hard = [], [], [], 0
+    accepted_ids = {row.get("id"): row.get("accepted_red") for row in gt.get("claims", [])
+                    if row.get("accepted_red")}
 
     for row in gt.get("claims", []):
         cid, kind = row.get("id"), row.get("kind")
@@ -88,7 +100,12 @@ def check(analysis: dict, gt: dict):
                                 f"uncovered list")
         else:
             failures.append(f"{cid}: unknown ground-truth kind {kind!r}")
-    return failures, watch_lines, n_hard
+    for f_ in list(failures):
+        cid = f_.split(":", 1)[0]
+        if cid in accepted_ids:
+            failures.remove(f_)
+            accepted.append(f"{f_} — accepted by the author, not a new failure ({accepted_ids[cid]})")
+    return failures, accepted, watch_lines, n_hard
 
 
 def main():
@@ -114,19 +131,28 @@ def main():
         print(bad)
         sys.exit(2)
 
-    failures, watch_lines, n_hard = check(analysis, gt)
+    failures, accepted, watch_lines, n_hard = check_split(analysis, gt)
 
-    print(f"\nCoverage expectations: {n_hard - len(failures)}/{n_hard} pass")
+    print(f"\nCoverage expectations: {n_hard - len(failures) - len(accepted)}/{n_hard} pass"
+          + (f", {len(accepted)} red accepted by the author" if accepted else "")
+          + (f", {len(failures)} FAIL" if failures else ""))
     if watch_lines:
         print("Watch (tracked, never a failure):")
         for w in watch_lines:
             print(w)
+    if accepted:
+        print("\nRED, accepted by the author (standing reminders, not new failures):")
+        for x in accepted:
+            print("  ✗ " + x)
     if failures:
         print("\nFAILURES:")
         for x in failures:
             print("  ✗ " + x)
         print("\nREGRESSION on the owner evidence standard — do not ship.")
         sys.exit(1)
+    if accepted:
+        print("\nBASELINE — only rows the author has accepted are red; no new failure.")
+        sys.exit(0)
     print("\nOK — shown-evidence coverage matches the grader answer key.")
 
 

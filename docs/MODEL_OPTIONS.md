@@ -25,6 +25,42 @@ the P52 hardware. Pricing and Ollama tags drift — re-verify before relying on 
 
 ---
 
+## Models available as of 2026-09-10 (web check for task #32 question q6)
+
+_Checked on 2026-09-10 by web search plus OpenRouter's public model list (no money spent). The prices are per million tokens, written as input / output. A "flash" model is a company's small fast model; "open weights" means the model file itself can be downloaded and run elsewhere. Every price here drifts; the OpenRouter list (`https://openrouter.ai/api/v1/models`, no key needed) is the fastest re-check._
+
+**What changed since the last check (2026-08-30).**
+
+- **DeepSeek retired V4 Flash on 2026-09-10** and replaced it with **V4.1 Flash** (model string `deepseek-flash` on DeepSeek's own service, `deepseek/deepseek-v4.1-flash` on OpenRouter). The old name `deepseek/deepseek-v4-flash` is still accepted but now silently runs the new model, so the "supported arbiter override" in this repository is a different model than the one that was measured. DeepSeek's own service charges half price off-peak: $0.15 / $0.60 off-peak against $0.30 / $1.20 in peak hours (peak is 01:00-04:00 and 06:00-10:00 UTC, Monday to Friday). OpenRouter charges the peak price all day. The built-in "thinking off" switch in `llm_client.py` matches the old name only; whether the new model accepts the same switch is being tested by the q6 run.
+- **DeepSeek V4 Pro** is retired from 2026-09-14 (its requests are routed to V4.1 Flash).
+- **Alibaba released Qwen 3.8 Flash** (2026-08-26 on OpenRouter, $0.15 / $0.47, weights public under Alibaba's own licence). Qwen 3.7 Flash, the one the August panel used, is still listed.
+- **Z.ai released GLM 5.3 Flash** (2026-08-26, open weights under the MIT licence, $0.15 / $0.50 list; OpenRouter still showed a $0.075 / $0.25 promotion on 2026-09-10). A new company for the panel.
+- **Xiaomi MiMo V2.5** ($0.14 / $0.28 on OpenRouter) is another new company at the cheap end.
+- **GPT 5.6 Luna** (OpenAI, the default arbiter) is $0.20 / $1.20 on OpenRouter; the $0.10 / $0.60 recorded in August was a discounted seller.
+- **Kimi K2.6** is cheaper on Moonshot's own service ($0.60 / $3.41 measured in August) than on OpenRouter ($0.95 / $4.00). **Kimi K3** (2026-07-16, 2.8 trillion parameters) costs $3 / $15 and is not worth it for the checker.
+- **Gemini 3.8 Flash** (Google, 2026-09-02, $0.75 / $3.75) is Google's newest small model. It is the same company as the default judge (Gemma 4), so it adds no independence to a panel.
+- Also new but not useful here: Claude Fable 5.1 and Mythos 5.1 (2026-09-01, expensive), GPT 6 Astra (2026-09-04, expensive), Tencent Hy4 preview (2026-08-28, open weights, $0.83 / $2.50), Grok 4.6 (2026-08-12, $2 / $6), Meta Muse Spark 1.3 (2026-09-02). Claude Haiku is still at 4.5 (no Haiku 5). No public leaderboard measures these models on this tool's exact task (read a source, judge one citation); the closest ones, FACTS Grounding and Vectara's hallucination leaderboard, were last updated before these models came out.
+
+**Cheap models by company, for a panel of independent checkers (one arm per company):**
+
+| Company | Model | Route | Price in / out | Thinking off |
+|---|---|---|---|---|
+| DeepSeek | V4.1 Flash | `deepseek/deepseek-flash` (own service, off-peak) | $0.15 / $0.60 | `thinking: {type: disabled}` — verified working on 2026-09-10 (about 460 visible output tokens per call, no empty answers) |
+| OpenAI | GPT 5.6 Luna | `openrouter/openai/gpt-5.6-luna` | $0.20 / $1.20 | built in (`reasoning.enabled=false`) |
+| Alibaba | Qwen 3.8 Flash | `openrouter/qwen/qwen3.8-flash` | $0.15 / $0.47 | `reasoning: {enabled: false}` — and keep it off: with `reasoning: {enabled: true}` this model returned an EMPTY answer on 6 of 17 arbiter calls (2026-09-10), 115 to 196 seconds each. Cause is not refusal but truncation: `finish_reason=length` — the hidden reasoning spends the whole output budget before the visible answer starts, and `llm_client`'s own escalation to 6,000 then 12,000 max tokens does not always save it. It also hits OpenRouter rate limits on long-context calls, so re-ask unanswered rows |
+| Z.ai | GLM 5.3 Flash | `openrouter/z-ai/glm-5.3-flash` | $0.15 / $0.50 list | **cannot be switched off** — OpenRouter answers "Reasoning is mandatory for this endpoint and cannot be disabled" (400) and every call fails; run it with `reasoning: {effort: low}` and treat it as a thinking model, which is not directly comparable with thought-free arms |
+| Xiaomi | MiMo V2.5 | `openrouter/xiaomi/mimo-v2.5` | $0.14 / $0.28 | `reasoning: {enabled: false}` |
+| Moonshot | Kimi K2.6 | `openai/kimi-k2.6` + `--api-base https://api.moonshot.ai/v1`, temperature 0.6 | $0.60 / $3.41 | `thinking: {type: disabled}` |
+| Anthropic | Sonnet 5 | `claude-code/sonnet` | subscription, no bill | n/a |
+| Mistral | Small 4 | `mistral/mistral-small-latest` | $0.15 / $0.60 | weak on public tests (intelligence index 11), not recommended |
+| xAI | Grok 4.1 Fast | own service | $0.20 / $0.50 | untested here |
+
+**The three model roles and their defaults as of 2026-09-10.** The tool asks about a claim in up to three places, and each place should be a different company, or asking twice tells you nothing new. The **judge** decides the verdict and is Google's `gemini/gemma-4-31b-it` on the free tier. The **arbiter** re-reads only the flagged claims with the whole source and is OpenAI's `openrouter/openai/gpt-5.6-luna` (on by default, paid, skipped with one note when no key is present). The **second opinion** (`--second-opinion`, off by default) re-reads the judge's own evidence for every verdict and became Anthropic's `claude-code/sonnet` on 2026-09-10 (task #67), replacing `gemini/gemini-2.5-flash`, which retires 2026-10-16. Three reasons for that pick: the old default rode the judge's own Gemini key and so shared the judge's family; Google's other small model, Gemini 3.8 Flash, has the same problem (see the note above that it "adds no independence to a panel"); and of the third-family candidates only Sonnet 5 is already measured in this project, because `deep_check.py` has used it as its own default reader since 2026-07-10. It costs nothing on a Claude subscription, needs no key, and when the `claude` command is not installed the pass is skipped with one note instead of failing the run. The cheap paid alternative to name explicitly is DeepSeek V4.1 Flash (`deepseek/deepseek-flash`, about a cent per run); do not point the second opinion at the arbiter's own model, because then two of the three layers are one model.
+
+**Hidden reasoning makes the second checker STRICTER, measured 2026-09-10** (task #32, `docs/task32_thinking_2026-09-10/`): the same model and the same 27 rows, thinking off versus on, dropped the tool's own complaint 12 times versus 4 (OpenAI's Luna) and 13 times versus 1 (Alibaba's Qwen). Since 18 of those 27 rows carry a citation a human called accurate, a stricter checker is WORSE here: it keeps false alarms on the page. Output tokens per call roughly doubled (505 → 1,166 on Luna), which is how the switch is proven to have taken effect. Do not turn thinking on for the arbiter without re-measuring.
+
+The seven-arm q6 run on 2026-09-10 (`benchmarks/run_q6_panel_2026-09-10.sh`, results under `docs/arbiter_replay_2026-09-10/`) is the first live use of the four new arms; its logs are the measured record of their real token counts and behaviour.
+
 ## Option B — Cheaper hosted APIs (one flag)
 
 Per-million-token pricing, verified June 2026:

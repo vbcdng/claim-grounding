@@ -29,6 +29,7 @@ import re
 from collections import Counter
 from typing import Any, Dict, List, Optional
 
+from . import long_source
 from . import matcher
 from .llm_client import extract_json, parallel_map
 
@@ -138,9 +139,21 @@ def _shown_block(c: Dict[str, Any]) -> str:
     return "\n".join(lines) or "(none shown)"
 
 
-def _relevant_section(claim_text: str, sents: List[Dict[str, Any]]) -> str:
-    """Full source text if short; else the best contiguous ~20k-word section."""
+def _relevant_section(claim_text: str, sents: List[Dict[str, Any]],
+                      budget_chars: Optional[int] = None) -> str:
+    """Full source text if short; else the best contiguous section of it.
+
+    `budget_chars`, when given, is a hard character ceiling for what this
+    source may contribute to the prompt, and it wins over the word-based caps
+    below. It exists because the seat's real limit is in characters: the free
+    Google seat refuses any request over about 52,000 characters, so before
+    task #105 a ~20,000-word section (about 120,000 characters) was skipped
+    without being sent and the arbiter silently never saw any long source
+    there. With no budget the behaviour is exactly what it was."""
     texts = [s.get("text", "") for s in sents]
+    if budget_chars is not None:
+        chunks = matcher._chunk_sents(sents)
+        return long_source.best_section(claim_text, texts, budget_chars, chunks)
     total = sum(len(t.split()) for t in texts)
     if total <= SECTION_FULL_WORDS:
         return " ".join(texts)
@@ -159,6 +172,23 @@ def _relevant_section(claim_text: str, sents: List[Dict[str, Any]]) -> str:
     return " ".join(ch[0] for ch in chunks[lo:hi + 1])
 
 
+def section_budget(llm, n_sources: int) -> Optional[int]:
+    """How many characters of source text each cited source may contribute,
+    or None when the seat has no known ceiling.
+
+    Worked example: a claim citing two sources on the free Google seat, whose
+    ceiling is 52,000 characters. The prompt needs room for its instructions
+    and the evidence already shown, so 12,000 characters are reserved and the
+    remaining 40,000 are split between the two sources: 20,000 characters
+    each. Before this, each source contributed up to about 120,000 characters
+    and the call was skipped without being sent."""
+    limit = long_source.call_limit_for(llm)
+    if not limit:
+        return None
+    room = max(1, limit - long_source.DEFAULT_PROMPT_ROOM)
+    return max(long_source.MIN_PIECE_CHARS, room // max(1, n_sources))
+
+
 def _claim_pids(c: Dict[str, Any]) -> List[str]:
     pids, seen = [], set()
     for pid in (c.get("paper_ids") or []):
@@ -171,7 +201,10 @@ def _claim_pids(c: Dict[str, Any]) -> List[str]:
     return pids
 
 
-def _source_blocks(c: Dict[str, Any], sources: Dict[str, Any]) -> str:
+def _source_blocks(c: Dict[str, Any], sources: Dict[str, Any],
+                   budget_chars: Optional[int] = None) -> str:
+    """The source text this claim's arbiter call carries. `budget_chars` is the
+    per-source character ceiling from section_budget (None = no ceiling)."""
     parts = []
     for pid in _claim_pids(c):
         src = sources.get(pid) or {}
@@ -180,7 +213,8 @@ def _source_blocks(c: Dict[str, Any], sources: Dict[str, Any]) -> str:
         if not sents:
             parts.append(f'From "{title}": (source text unavailable)')
             continue
-        parts.append(f'From "{title}":\n"{_relevant_section(c.get("text", ""), sents)}"')
+        parts.append(f'From "{title}":\n'
+                     f'"{_relevant_section(c.get("text", ""), sents, budget_chars)}"')
     return "\n\n".join(parts) or "(no source text found)"
 
 
@@ -245,10 +279,15 @@ def run(claims: List[Dict[str, Any]], sources: Dict[str, Any], llm,
 
     def check(item) -> None:
         c, reason = item
+        # Shape the source text to what this seat will actually send (task
+        # #105): on a seat with a character ceiling an over-sized prompt is
+        # skipped without being called, so the arbiter would silently see
+        # nothing at all on exactly the long sources it is most needed for.
+        budget = section_budget(llm, len(_claim_pids(c)) or 1)
         prompt = (tpl.replace("{TRIGGER}", reason)
                   .replace("{CLAIM}", c.get("text", ""))
                   .replace("{SHOWN}", _shown_block(c))
-                  .replace("{CONTEXT}", _source_blocks(c, sources)))
+                  .replace("{CONTEXT}", _source_blocks(c, sources, budget)))
         raw = llm.call(prompt, temperature=0.0, max_output_tokens=3000,
                        purpose="arbiter", claim_id=c.get("id"))
         j = extract_json(raw)
@@ -521,6 +560,11 @@ def rescue(claims: List[Dict[str, Any]], sources: Dict[str, Dict], llm,
                     continue
                 title = src.get("title") or pid
                 w = _locate_window(proof, src) or proof
+                # Quantifier guard (task #75): a verbatim proof that gives the
+                # group a SMALLER share than the claim ('some' vs 'most') must
+                # not re-buy the positive the matcher refused.
+                if matcher._quantifier_overreach(c.get("text") or "", [proof], [w]):
+                    continue
                 if w not in [x[1] for x in windows]:
                     windows.append((title, w))
                 evs.append({"paper_id": pid, "source_title": title,

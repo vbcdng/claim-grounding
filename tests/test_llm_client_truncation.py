@@ -37,7 +37,13 @@ def _client(output_cap=65535):
 class TestOutputCapClamp(unittest.TestCase):
     def test_known_model_cap_detected(self):
         c = LLMClient(model="gemini/gemini-2.5-flash-lite", api_key="k")
-        self.assertEqual(c._output_cap, 65535)
+        # The cap comes from litellm's model table; that table changed this
+        # model's figure from 65,535 to 65,536 (card 166), so compare with the
+        # table instead of a copied number.
+        import litellm
+        self.assertEqual(c._output_cap,
+                         int(litellm.get_max_tokens("gemini/gemini-2.5-flash-lite")))
+        self.assertGreater(c._output_cap, 8192)
 
     def test_request_clamped_to_ceiling(self):
         c = _client(output_cap=65535)

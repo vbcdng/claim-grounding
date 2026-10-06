@@ -335,9 +335,75 @@ def _span_info(row):
     s = min(c["start"] for c in cc)
     e = max(c["end"] for c in cc)
     if not par or e > len(par):
-        return " ".join(c.get("text", "") for c in cc), None
+        return " ".join(c.get("text", "") for c in _by_start(cc)), None
     lo, hi = _sentence_bounds(par, s, e)
     return par[s:e], (lo >= s and hi <= e + 1)
+
+
+# --- joining several annotated spans (card 123, 2026-09-24) ---------------
+# 314 of the 3,063 citation files mark more than one span, and 67 of those
+# store them OUT of paragraph order (dev/040_PMC7144857/PMC7748189_1: the later
+# span first). The old join was ' '.join(texts) in stored order, which put a
+# later clause before an earlier one and dropped the sentence end between them.
+# Now: spans are sorted by start and merged where they overlap or touch; a gap
+# with no words of its own (whitespace, '. ', ' (<|other_cit|>). ', or a
+# mid-word cut) is copied from the paragraph so punctuation survives; a gap
+# with words the annotator left out becomes ' … ', and when that gap crosses a
+# sentence end the end mark is kept (left sentence closed, right one opened).
+ELLIPSIS = "…"
+_GAP_TOKENS = re.compile(r"<\|[a-z_]*cit\|>|\[[^\[\]]*\]|\([^()]*\)")
+_GAP_SENT_END = re.compile(r"[.!?](?=\s|$)")
+
+
+def _by_start(cc):
+    return sorted(cc, key=lambda c: (c.get("start", 0), c.get("end", 0)))
+
+
+def _has_words(s):
+    return bool(re.search(r"\w", _GAP_TOKENS.sub("", s)))
+
+
+def _join_gap(par, left_end, right_start):
+    """What goes between two annotated spans: see the block comment above."""
+    gap = par[left_end:right_start]
+    if not _has_words(gap) or not re.search(r"\s", gap):
+        return gap                         # punctuation / citations / mid-word
+    ends = [m for m in _GAP_SENT_END.finditer(gap)
+            if not _ABBREV.search(par[:left_end + m.start() + 1])]
+    if not ends:
+        return f" {ELLIPSIS} "             # words left out inside one sentence
+    head = _strip_trailing_cites(par[:left_end].rstrip())
+    left_closed = head.endswith((".", "!", "?")) and not _ABBREV.search(head)
+    left = ""
+    whole = len(ends)                      # sentences the gap ends
+    if not left_closed:
+        # the left span's own sentence runs on into the gap: close it there
+        first = ends[0]
+        left = (f" {ELLIPSIS}" if _has_words(gap[:first.start()]) else "") + gap[first.start()]
+        whole -= 1
+    skipped = f"{ELLIPSIS} " if whole > 0 else ""   # whole sentences left out
+    right = f"{ELLIPSIS} " if _has_words(gap[ends[-1].end():]) else ""
+    return f"{left} {skipped or right}"
+
+
+def _join_spans(row):
+    """All annotated spans of a row as one text, in PARAGRAPH order."""
+    cc = row.get("citation_context") or []
+    par = row.get("citing_paragraph") or ""
+    ordered = _by_start(cc)
+    if (not par or any(c["end"] > len(par) for c in ordered)
+            or any(par[c["start"]:c["end"]] != c.get("text", "") for c in ordered)):
+        return " ".join(c.get("text", "") for c in ordered)
+    merged = []
+    for c in ordered:
+        if merged and c["start"] <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], c["end"])
+        else:
+            merged.append([c["start"], c["end"]])
+    out = par[merged[0][0]:merged[0][1]]
+    for (_, prev_end), (s, e) in zip(merged, merged[1:]):
+        out += _join_gap(par, prev_end, s) + par[s:e]
+    return out
 
 
 def _raw_claim_text(row, unit="span"):
@@ -350,7 +416,7 @@ def _raw_claim_text(row, unit="span"):
         if e <= len(par):
             lo, hi = _sentence_bounds(par, s, e)
             return par[lo:hi]
-    return " ".join(c.get("text", "") for c in cc)
+    return _join_spans(row)
 
 
 def _co_citation(raw_text):

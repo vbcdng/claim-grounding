@@ -42,14 +42,63 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from modules.papertrail import (text_decomposer, source_decomposer, matcher, viewer,
                                 checkpoint, embeddings,
                                 cost_estimator, rerun, second_opinion, own_claims, arbiter,
-                                citation_scope,
+                                citation_scope, number_direction,
                                 argument_map, crux, evidence_independence,
                                 provenance_export, llm_client, prompt_store,
-                                deep_check_store)
+                                deep_check_store, granite_check)
 from modules.papertrail.llm_client import LLMClient
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("verify_my_text")
+
+
+# Card 166 (the author's decisions of 2026-10-06, run-2 Q9 and Q10): the public
+# copy ships WITHOUT the HHEM check (modules/papertrail/hhem_check.py; card 169
+# designs its public process) and WITHOUT the new checking path
+# (modules/papertrail/aida/, card 85). Both are looked up, not imported blindly:
+# when a file is absent its switches still parse and the run prints one plain
+# sentence instead of stopping on an import error. find_spec (not try/except
+# ImportError) so a real import fault INSIDE a present module still surfaces.
+def _optional_module(name):
+    import importlib
+    import importlib.util
+    if importlib.util.find_spec(name) is None:
+        return None
+    return importlib.import_module(name)
+
+
+hhem_check = _optional_module("modules.papertrail.hhem_check")
+HHEM_ABSENT_NOTE = ("Note: the small local checker on rejected claims (HHEM) is not "
+                    "part of this version of the tool, so it was skipped; the run "
+                    "works fully without it.")
+AIDA_ABSENT_NOTE = ("Note: the new checking path that splits sentences into short "
+                    "pieces (the --aida-... switches) is not part of this version of "
+                    "the tool, so those switches were ignored and the run uses the "
+                    "normal checking.")
+AIDA_SWITCHES = ("aida_grounder", "aida_converter_prompt", "aida_field_tools",
+                 "aida_green_to_red", "aida_red_to_green", "aida_completeness_check",
+                 "aida_reconvert", "aida_act_gate_score", "aida_act_multi_sentence",
+                 "aida_no_quantity_trigger", "aida_no_plain_trigger", "aida_convert_all")
+
+
+def aida_available() -> bool:
+    import importlib.util
+    return importlib.util.find_spec("modules.papertrail.aida") is not None
+
+
+def drop_absent_aida(args) -> bool:
+    """When the new checking path is not in this copy and any of its switches
+    was given: print AIDA_ABSENT_NOTE once and switch the path off, so the run
+    continues on the normal checking. Returns True when it did so."""
+    if aida_available():
+        return False
+    if not any(getattr(args, s, None) for s in AIDA_SWITCHES):
+        return False
+    logger.info(AIDA_ABSENT_NOTE)
+    for s in AIDA_SWITCHES:
+        if hasattr(args, s):
+            setattr(args, s, None if s == "aida_converter_prompt" else False)
+    return True
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -86,9 +135,11 @@ def apply_backend(args) -> bool:
                        f"Use the Gemini default backend for large, fast runs.")
         args.concurrency = RECOMMENDED_MAX_CONCURRENCY
     if getattr(args, "second_opinion", None) == second_opinion.DEFAULT_MODEL:
-        # Bare --second-opinion on the $0 backend must not silently spend on the
-        # paid Gemini default; claude-code/sonnet keeps the "genuinely different
-        # model" property at $0. (An explicit provider model stays as given.)
+        # Kept after the 2026-09-10 default change (task #67): the bare default is
+        # ALREADY claude-code/sonnet, so this only normalizes the alias and keeps
+        # the guard in place should the default ever move back to a paid provider —
+        # a bare flag must never silently spend under the "$0 API spend" banner.
+        # (An explicit provider model stays as given.)
         args.second_opinion = canonical_model("sonnet")
         logger.info(f"--second-opinion follows the claude-code backend: "
                     f"{args.second_opinion} ($0)")
@@ -249,8 +300,10 @@ def main():
     ap.add_argument("--second-opinion", metavar="MODEL", nargs="?",
                     const=second_opinion.DEFAULT_MODEL, default=None,
                     help="After judging, have a SECOND model re-read the same evidence "
-                         f"for every verdict (default: {second_opinion.DEFAULT_MODEL}; "
-                         "same API key). Disagreements are flagged in the viewer — "
+                         f"for every verdict (default: {second_opinion.DEFAULT_MODEL}, "
+                         "which runs on your Claude subscription: no extra key, $0; "
+                         "no `claude` CLI = the pass is skipped with one note). "
+                         "Disagreements are flagged in the viewer — "
                          "never overriding a verdict. ~1 small call per judged claim; "
                          "catches both false positives and over-strict rejections.")
     ap.add_argument("--arbiter", metavar="MODEL", nargs="?",
@@ -264,6 +317,37 @@ def main():
                          "turn off. Findings render as chips with verbatim-verified "
                          "quotes — never overriding a verdict. ~1 large call per flagged "
                          "claim (docs/ARBITER_PLAN.md).")
+    ap.add_argument("--granite-check", action="store_true",
+                    help="OFF BY DEFAULT. After judging, have a free checker model "
+                         "running on THIS COMPUTER re-read every claim the judge "
+                         "APPROVED, against about 6,000 characters of the cited "
+                         "source, and mark the ones it is not convinced by with a "
+                         "caution chip worded as a question. Costs no money at all "
+                         "and never changes a verdict. COSTS TIME: roughly two and a "
+                         "half to four minutes per approved claim on this processor, "
+                         "so twenty approved claims add about an hour to the run. "
+                         "Needs the 4.9 GB Granite Guardian weight file on disk "
+                         "(task #65; run granite_check.py on a finished run folder "
+                         "to do the same thing afterwards instead).")
+    # Back-compat no-op: --hhem-check was the opt-in switch before the check went
+    # default-on (the author's decision of 2026-09-29); --no-hhem-check opts out.
+    ap.add_argument("--hhem-check", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--no-hhem-check", action="store_true",
+                    help="Skip the small local checker on rejected claims (it is ON "
+                         "by default). That check has a small free checker model "
+                         "running on THIS COMPUTER (HHEM) re-read every claim the "
+                         "judge REJECTED, against about 6,000 characters of the cited "
+                         "source around the tool's best sentence, and marks the ones "
+                         "it scores at or above 0.12 with a grey chip 'proof may "
+                         "exist?'. Costs no money, never changes a verdict, about two "
+                         "to three seconds per rejected claim. Measured (card 118): "
+                         "flags 17 of 22 wrong rejections and 30 of 92 correct ones, "
+                         "so most chips are about a correct rejection. When the "
+                         "checker is not installed (PAPERTRAIL_HHEM_PYTHON or "
+                         "data/task54_corpus/venv_checkers, plus the model files) the "
+                         "run prints one note and carries on without it; "
+                         "hhem_check.py <run folder> does the same on a finished run "
+                         "(card 132).")
     ap.add_argument("--no-arbiter", action="store_true",
                     help="Skip the arbiter tier (it is on by default): no flagged-claim "
                          "escalation, no amber resolution, no arbiter rescue.")
@@ -287,12 +371,89 @@ def main():
                          "methods/concept/related-work pointer inside the authors' "
                          "own text; scoped cards are re-badged in the viewer "
                          "(indigo, never red) — the verdict itself never changes.")
+    # Card 85 (stage 3a): the new grounding path, OFF by default. With it off
+    # nothing below imports it, so the analysis and every model request are
+    # byte-identical (tests/test_stage3a_grounder.py, measure M16).
+    ap.add_argument("--aida-grounder", action="store_true",
+                    help="Stage 3a (card 85), experimental, OFF by default: after the "
+                         "normal judging, cut every cited span into sentences, convert "
+                         "the flagged ones into short pieces (the converter never sees "
+                         "the source) and judge each piece alone. In shadow mode (the "
+                         "default) the result is saved on each claim as 'conversion' "
+                         "and no verdict changes. Needs --aida-field-tools or "
+                         "--aida-converter-prompt.")
+    ap.add_argument("--aida-converter-prompt", default=None,
+                    help="Instruction text for the stage 3a converter (a file path). "
+                         "Refused if it still carries the old 'stands alone' wording "
+                         "(card 144). Without it (and without --aida-field-tools) every "
+                         "triggered sentence is judged whole.")
+    ap.add_argument("--aida-field-tools", action="store_true",
+                    help="Stage 3a: use card 83's field tools as the converter (a fixed "
+                         "rule first, then one short judge question per field; the split "
+                         "uses benchmarks/conversion_key/baseline_prompts/field1_split.txt). "
+                         "Answers on 'stands alone', 'which earlier sentence' and 'which "
+                         "work' can never change a verdict on their own.")
+    ap.add_argument("--aida-green-to-red", action="store_true",
+                    help="Stage 3a: let a confirmed contradiction turn a green card red "
+                         "(OFF: the author's question 4, shadow run first).")
+    ap.add_argument("--aida-red-to-green", action="store_true",
+                    help="Stage 3a: let a confirmed all-pieces-proven result turn a red "
+                         "card green (OFF: the author's question 4).")
+    ap.add_argument("--aida-completeness-check", action="store_true",
+                    help="Card 157 (OFF by default, no model call): compare every "
+                         "converted sentence with its pieces and flag anything the "
+                         "rewriting dropped (a figure, a quantity or condition word, a "
+                         "denial, words a piece says it covers). A flag on a green "
+                         "sentence marks it for a stronger model later; it never "
+                         "changes a verdict.")
+    ap.add_argument("--aida-reconvert", action="store_true",
+                    help="Stage 3b (card 86): forget the saved conversions in "
+                         "<output-dir>/aida_cache/ and ask the converter again about every "
+                         "flagged sentence. Without it a re-run asks the converter nothing "
+                         "about a sentence whose words, markers and three earlier sentences "
+                         "are unchanged; --full keeps the saved conversions (the converter "
+                         "never reads the sources).")
+    ap.add_argument("--viewer-per-sentence", action="store_true",
+                    help="Stage 3b (card 86): also write viewer_per_sentence.html, which "
+                         "shows one card per sentence of the new path instead of one card "
+                         "per claim, so the two layouts can be compared. Reviews saved from "
+                         "that file are for that file only.")
+    ap.add_argument("--aida-act-gate-score", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--aida-act-multi-sentence", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--aida-no-quantity-trigger", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--aida-no-plain-trigger", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--aida-convert-all", action="store_true", help=argparse.SUPPRESS)
     ap.add_argument("--no-own-split", action="store_true",
                     help="Skip classifying uncited (own) claims as structural / opinion / "
                          "fact. By default each own claim gets one tiny LLM call and "
                          "factual assertions without a citation are chipped "
                          "'citation needed?' in the viewer (pennies; tags are reused "
                          "on incremental runs).")
+    ap.add_argument("--no-number-check", action="store_true",
+                    help="Skip the numeric cross-check. By default every claim judged "
+                         "supported has each figure it states (percentages, ratios such "
+                         "as 'RR 1.42', counts, amounts with units) looked up in the "
+                         "full text of the sources it cites; a figure found nowhere is "
+                         "chipped in the viewer. Costs nothing — no LLM call — and never "
+                         "changes a verdict. Verbal quantities ('roughly three-quarters') "
+                         "and bare years are exempt on purpose.")
+    ap.add_argument("--figure-in-proof", action="store_true",
+                    help="With the numeric cross-check on, also record WHERE each "
+                         "figure was found: in the sentences quoted as proof for the "
+                         "claim, in the retrieved passage around them, or only "
+                         "somewhere else in the cited paper. A figure found only "
+                         "elsewhere in the paper is chipped 'figure not in the quoted "
+                         "proof' — it may belong to a different result. Costs nothing "
+                         "— no LLM call — and never changes a verdict. Off by default "
+                         "until its false-alarm rate is ruled on (task #99).")
+    ap.add_argument("--direction-check", action="store_true",
+                    help="Ask, for each supported cited claim whose wording asserts a "
+                         "direction ('upregulating', 'leads to'), whether the source "
+                         "passages state the same direction, the opposite one, or "
+                         "neither: one tiny LLM call per such claim. A claim whose "
+                         "direction the source does not confirm is chipped in the "
+                         "viewer; the verdict never changes. Off by default until its "
+                         "false-alarm rate on the free judge model is measured.")
     # Back-compat no-op: --partial-check was the opt-in switch before it went
     # default-on (2026-07-05, after the streamC 3-round-ladder fix passed the
     # fresh 3-paper gate). Kept so old invocations still parse.
@@ -328,6 +489,15 @@ def main():
     ap.add_argument("--provenance-export", action="store_true",
                     help="Also write provenance.json — a PROV-O-shaped export of every "
                          "verdict (claim / evidence+method / run-metadata). No LLM calls.")
+    # Card 166: in a copy without the new checking path or the HHEM check the
+    # switches still parse (old command lines keep working) but the help text
+    # stops advertising what is not there.
+    for act in ap._actions:
+        if act.dest in AIDA_SWITCHES and not aida_available():
+            act.help = argparse.SUPPRESS
+        elif act.dest == "no_hhem_check" and hhem_check is None:
+            act.help = ("Accepted and ignored: the small local checker on rejected "
+                        "claims (HHEM) is not part of this version of the tool.")
     argv = sys.argv[1:]
     wizard_mode = False
     if not argv:
@@ -345,6 +515,7 @@ def main():
                      "wizard needs a TTY. Pass --text and --sources (see "
                      "--help), or run this in an interactive shell for the wizard.")
     args = ap.parse_args(argv)
+    drop_absent_aida(args)
     cc_backend = apply_backend(args)
     # Arbiter is DEFAULT ON (owner ruling 2026-07-14) on every backend — under
     # claude-code apply_backend already routed the default to claude-code/sonnet
@@ -380,6 +551,17 @@ def main():
     # prompt hash-only unless PAPERTRAIL_LOG_PROMPTS=1). Read-side: nothing on
     # the verdict path consumes this file.
     llm_client.set_call_log(os.path.join(args.output_dir, "llm_calls.jsonl"))
+    # Card #141: answer reuse from an earlier arm's call log (off unless
+    # PAPERTRAIL_REUSE_FROM is set). Refused before the first call for a
+    # stability measurement; the getattr covers the verdict vote (card #3)
+    # without depending on it being merged.
+    if llm_client._reuse_env():
+        if getattr(args, "verdict_vote", False):
+            logger.error(llm_client.STABILITY_REFUSAL); sys.exit(2)
+        try:
+            llm_client.answer_store_active()
+        except (RuntimeError, FileNotFoundError) as e:
+            logger.error(str(e)); sys.exit(2)
     cache_dir = os.path.join(args.output_dir, "source_claims")
     sources_out = os.path.join(args.output_dir, "sources")
     os.makedirs(sources_out, exist_ok=True)
@@ -391,6 +573,27 @@ def main():
     # returned {name: fingerprint} map is compared against the previous run
     # below and written into metadata.prompts at the end.
     prompt_fingerprints = prompt_store.snapshot(matcher.PROMPT_OVERRIDES)
+    # Card 86: the stage 3a converter's instruction text comes from a file named
+    # on the command line (or card 83's field-tool templates), not from
+    # config/prompts/, so it is entered into the same fingerprint list under
+    # the name "aida_converter" and marked used. A changed converter text then
+    # stops verdict reuse exactly like any changed instruction text (rerun.py
+    # is unchanged). Built here, before the comparison below; the model client
+    # is attached once it exists. Only with --aida-grounder.
+    aida_conv = None
+    if args.aida_grounder:
+        from modules.papertrail.aida import grounder as _g
+        if args.aida_field_tools:
+            from modules.papertrail.aida.field_converter import FieldConverter
+            aida_conv = FieldConverter(None)
+        elif args.aida_converter_prompt:
+            with open(args.aida_converter_prompt, encoding="utf-8") as pf:
+                aida_conv = _g.PromptConverter(None, pf.read(),
+                                               name=os.path.basename(args.aida_converter_prompt))
+        if aida_conv is not None:
+            prompt_fingerprints = dict(prompt_fingerprints)
+            prompt_fingerprints[prompt_store.AIDA_CONVERTER] = prompt_store.register(
+                prompt_store.AIDA_CONVERTER, aida_conv.fingerprint)
 
     with open(args.text, "r", encoding="utf-8") as f:
         raw_text = f.read()
@@ -562,8 +765,11 @@ def main():
                                       model_str, paper_id_for, decompose=do_decompose)
         print("\n" + cost_estimator.format_estimate(est) + "\n")
         if args.second_opinion:
+            so_price = ("$0, it runs on your Claude subscription"
+                        if str(args.second_opinion).startswith("claude-code")
+                        else "typically a cent or two")
             print(f"(--second-opinion adds ~1 small judgment call per judged claim "
-                  f"with {args.second_opinion} — typically a cent or two)\n")
+                  f"with {args.second_opinion} — {so_price})\n")
         if args.arbiter:
             n_judged_est = sum(1 for tc in est_claims if tc.get("markers"))
             wc_arb = cost_estimator.arbiter_worst_case(args.arbiter, n_judged_est)
@@ -793,6 +999,68 @@ def main():
             logger.info(f"Dropped {n_stale_cs} citation-scope tag(s) carried from the "
                         f"previous run (--no-citation-scope this run)")
 
+    # Pipeline step 9b (card 85, stage 3a; ARCHITECTURE §4, §12, §14.22): the
+    # new grounding path. Only with --aida-grounder; a failure never touches
+    # the verdicts already judged.
+    if not args.aida_grounder:
+        for c in analysis["text_claims"]:
+            c.pop("conversion", None)
+    if args.aida_grounder:
+        from modules.papertrail.aida import grounder
+        try:
+            g_settings = grounder.Settings(
+                act_plain_flag=not args.aida_no_plain_trigger,
+                act_quantity=not args.aida_no_quantity_trigger,
+                act_gate_score=args.aida_act_gate_score,
+                act_multi_sentence=args.aida_act_multi_sentence,
+                allow_green_to_red=args.aida_green_to_red,
+                allow_red_to_green=args.aida_red_to_green,
+                completeness_check=args.aida_completeness_check,
+                convert_all=args.aida_convert_all)
+            g_conv = aida_conv          # built at run start (card 86)
+            if g_conv is not None:
+                g_conv.llm = llm
+            g_cache = None
+            if g_conv is not None:
+                from modules.papertrail.aida import conversion_cache
+                g_cache = conversion_cache.ConversionCache(
+                    conversion_cache.cache_path(args.output_dir), clear=args.aida_reconvert)
+            g_hhem = None
+            if not getattr(args, "no_hhem_check", False):
+                try:
+                    if hhem_check is not None and hhem_check.availability() is None:   # None = installed
+                        g_hhem = grounder.hhem_piece_scorer(sources)
+                except Exception:
+                    g_hhem = None
+            g_summary = grounder.run(
+                analysis["text_claims"], sources, settings=g_settings, converter=g_conv,
+                evaluate=grounder.default_evaluator(
+                    sources, llm, os.path.join(args.output_dir, "embeddings")),
+                reach_decider=lambda p: llm.call(p, temperature=0.0, max_output_tokens=8,
+                                                 purpose="aida_citation_reach"),
+                check_llm=llm, confirm_llm=llm, hhem_scorer=g_hhem, cache=g_cache)
+            analysis["aida_grounder"] = g_summary
+            if g_cache is not None:
+                cs = g_summary["conversion_cache"]
+                logger.info(f"Stage 3b conversion cache: {cs['reused']} sentence(s) reused "
+                            f"from an earlier run, {cs['converted']} converted now "
+                            f"({cs['file']})")
+            k = g_summary["counts"]
+            logger.info(f"Stage 3a (shadow unless switched on): {k['sentences']} sentence(s) "
+                        f"in {k['claims']} cited claim(s), {k['converted']} converted, "
+                        f"{k['cannot_be_converted']} judged whole; candidate changes "
+                        f"{k['candidates']}, confirmed {k['confirmed']}, applied {k['changed']}; "
+                        f"{len(g_summary['unsure_reach'])} sentence(s) with unsure citation "
+                        f"reach for the author to read")
+            if k["changed"]["red_to_green"] or k["changed"]["green_to_red"]:
+                t = analysis["coverage"]["totals"]
+                t["supported"] = sum(1 for c in analysis["text_claims"]
+                                     if c["verdict"] == "supported")
+                t["unsupported"] = sum(1 for c in analysis["text_claims"]
+                                       if c["verdict"] == "unsupported")
+        except Exception as e:
+            logger.warning(f"Stage 3a grounder failed (verdicts unaffected): {e}")
+
     # Author verdict rulings (verdict_feedback.json, written by /apply-review):
     # surfaced as "author disputed" chips; those claims skip the second opinion —
     # the owner's ruling outranks any model's.
@@ -952,6 +1220,61 @@ def main():
             except Exception as e:
                 logger.warning(f"Partly-proven mapping failed (verdicts unaffected): {e}")
 
+    # Numeric cross-check (task #2, ARCHITECTURE §6.8). Runs LAST of the claim
+    # passes so it sees the verdicts as they will be published: the arbiter can
+    # still flip one to supported above, and only supported cited claims are
+    # checked. Deterministic — zero model calls — and display-only.
+    nc_summary = None
+    if not args.no_number_check:
+        try:
+            nc_summary = number_direction.check_numbers(
+                analysis["text_claims"], sources, in_proof=args.figure_in_proof)
+            if nc_summary["checked"]:
+                logger.info(
+                    f"Numeric cross-check: {nc_summary['checked']} supported cited "
+                    f"claim(s) carried a figure"
+                    + (f" — no matching figure in the cited source for "
+                       f"{', '.join(nc_summary['flagged_ids'])}"
+                       if nc_summary["flagged_ids"] else " — every figure found")
+                    + (f"; in the paper but not in the quoted proof for "
+                       f"{', '.join(nc_summary['elsewhere_ids'])}"
+                       if nc_summary.get("elsewhere_ids") else ""))
+        except Exception as e:
+            logger.warning(f"Numeric cross-check failed (verdicts unaffected): {e}")
+    else:
+        n_stale_nc = sum(1 for c in analysis["text_claims"]
+                         if c.pop(number_direction.FIELD, None) is not None)
+        if n_stale_nc:
+            logger.info(f"Dropped {n_stale_nc} numeric cross-check result(s) carried "
+                        f"from the previous run (--no-number-check this run)")
+
+    # Cause-and-effect / increase-or-decrease direction check (task #2). One
+    # small call per supported cited claim whose wording asserts a direction.
+    # OPT-IN: its false-alarm rate on the free judge is not measured yet.
+    dir_summary = None
+    if args.direction_check:
+        try:
+            dir_summary = number_direction.check_direction(analysis["text_claims"], llm,
+                                                           workers=args.concurrency)
+            if dir_summary["checked"] or dir_summary["reused"]:
+                k = dir_summary["counts"]
+                logger.info(
+                    f"Direction check: {dir_summary['checked']} asked"
+                    + (f", {dir_summary['reused']} kept from the previous run"
+                       if dir_summary["reused"] else "")
+                    + f" — {k['confirmed']} confirmed, {k['reversed']} reversed, "
+                    + f"{k['not_stated']} not stated in the source"
+                    + (f" (flagged: {', '.join(dir_summary['flagged_ids'])})"
+                       if dir_summary["flagged_ids"] else ""))
+        except Exception as e:
+            logger.warning(f"Direction check failed (verdicts unaffected): {e}")
+    else:
+        n_stale_dir = sum(1 for c in analysis["text_claims"]
+                          if c.pop(number_direction.DIR_FIELD, None) is not None)
+        if n_stale_dir:
+            logger.info(f"Dropped {n_stale_dir} direction-check result(s) carried from "
+                        f"the previous run (--direction-check not requested this run)")
+
     analysis["metadata"] = {
         "text_file": os.path.abspath(args.text),
         "sources_dir": os.path.abspath(args.sources),
@@ -986,6 +1309,9 @@ def main():
     actual_usage = llm_client.usage_summary()
     if actual_usage:
         analysis["metadata"]["llm_usage"] = actual_usage
+    reuse_stats = llm_client.reuse_summary()   # card #141; None (absent) when off
+    if reuse_stats is not None:
+        analysis["metadata"]["answer_reuse"] = reuse_stats
     if prev_analysis is not None and (reuse_map or prev_info):
         analysis["metadata"]["incremental"] = {
             "reused": len(reuse_map), "changed": len(prev_info),
@@ -1000,6 +1326,22 @@ def main():
         analysis["metadata"]["citation_scope"] = {
             "counts": cs_summary["counts"], "scoped_ids": cs_summary["scoped_ids"],
             "unparsed": cs_summary.get("unparsed", 0),
+        }
+    if nc_summary is not None:
+        analysis["metadata"]["number_check"] = {
+            "checked": nc_summary["checked"], "flagged": nc_summary["flagged"],
+            "flagged_ids": nc_summary["flagged_ids"],
+        }
+        if "elsewhere" in nc_summary:
+            analysis["metadata"]["number_check"]["in_proof"] = True
+            analysis["metadata"]["number_check"]["elsewhere"] = nc_summary["elsewhere"]
+            analysis["metadata"]["number_check"]["elsewhere_ids"] = \
+                nc_summary["elsewhere_ids"]
+    if dir_summary is not None:
+        analysis["metadata"]["direction_check"] = {
+            "checked": dir_summary["checked"], "counts": dir_summary["counts"],
+            "flagged_ids": dir_summary["flagged_ids"],
+            "unparsed": dir_summary.get("unparsed", 0),
         }
     if arb_summary is not None:
         analysis["metadata"]["arbiter"] = {
@@ -1063,6 +1405,47 @@ def main():
                         f"{deep_check_store.FILENAME} to keep them.")
         except Exception as e:
             logger.warning(f"Could not archive the previous deep_check.json: {e}")
+        # Same reasoning for the free local checker's answers (task #65): they
+        # are keyed by positional claim id and are an opinion about verdicts we
+        # are about to replace, so they must not sit beside the new ones.
+        try:
+            g_valid = granite_check.load_valid(args.output_dir, analysis)[1]
+            g_archived = granite_check.archive_previous(args.output_dir)
+            if g_archived:
+                logger.info(
+                    "The local checker's answers from the previous run were set "
+                    f"aside as {os.path.basename(g_archived)}, because the claims "
+                    "have just been judged again. Run granite_check.py on this "
+                    "folder for fresh ones.")
+                if g_valid.get("total") and not g_valid.get("dropped"):
+                    logger.info(
+                        "Those answers still match every claim and verdict in this "
+                        f"run ({g_valid['usable']} of them), so nothing was lost: "
+                        f"copy {granite_check.PREV_FILENAME} back to "
+                        f"{granite_check.FILENAME} to keep them.")
+        except Exception as e:
+            logger.warning(f"Could not archive the previous granite_check.json: {e}")
+        # And for the small local checker's "proof may exist?" answers (card 132).
+        # Absent in the public copy (card 166): nothing to archive then.
+        try:
+            h_valid, h_archived = {}, None
+            if hhem_check is not None:
+                h_valid = hhem_check.load_valid(args.output_dir, analysis)[1]
+                h_archived = hhem_check.archive_previous(args.output_dir)
+            if h_archived:
+                logger.info(
+                    "The small local checker's answers from the previous run were set "
+                    f"aside as {os.path.basename(h_archived)}, because the claims "
+                    "have just been judged again. Run hhem_check.py on this "
+                    "folder for fresh ones.")
+                if h_valid.get("total") and not h_valid.get("dropped"):
+                    logger.info(
+                        "Those answers still match every claim and verdict in this "
+                        f"run ({h_valid['usable']} of them), so nothing was lost: "
+                        f"copy {hhem_check.PREV_FILENAME} back to "
+                        f"{hhem_check.FILENAME} to keep them.")
+        except Exception as e:
+            logger.warning(f"Could not archive the previous hhem_check.json: {e}")
     with open(analysis_path, "w", encoding="utf-8") as f:
         json.dump(analysis, f, indent=2, ensure_ascii=False)
     logger.info(f"Wrote analysis: {analysis_path}")
@@ -1125,6 +1508,23 @@ def main():
             logger.warning(f"Crux ranking failed: {e}")
             assessment.setdefault("errors", {})["crux"] = str(e)[:300]
 
+    # Optional free second opinion on the APPROVED claims, from a checker model
+    # running on this computer (task #65). No money, no verdict change — the
+    # cost is minutes of processor time per claim, which is why it is off by
+    # default. Contained: any failure logs and leaves the run intact.
+    if getattr(args, "granite_check", False):
+        granite_check.run_and_write(args.output_dir, analysis)
+    # Free "proof may exist?" warning on the REJECTED claims, from a small checker
+    # model on this computer (card 132). DEFAULT ON since 2026-09-29 (the author:
+    # "always on"); --no-hhem-check opts out. Same contract as the Granite check:
+    # no money, no verdict change; a checker that is not installed or fails is
+    # one plain note and the run finishes normally (hhem_check.run_and_write).
+    if not getattr(args, "no_hhem_check", False):
+        if hhem_check is None:          # public copy (card 166): one plain note
+            logger.info(HHEM_ABSENT_NOTE)
+        else:
+            hhem_check.run_and_write(args.output_dir, analysis)
+
     viewer_path = os.path.join(args.output_dir, "viewer.html")
     viewer.generate(analysis, viewer_path, title=f"Verification — {os.path.basename(args.text)}",
                     source_texts=source_texts, assessment=assessment)
@@ -1134,6 +1534,14 @@ def main():
     viewer_v2.generate(analysis, os.path.join(args.output_dir, "viewer_v2.html"),
                        title=f"Verification — {os.path.basename(args.text)}",
                        source_texts=source_texts, assessment=assessment)
+    # Card 86, the author's question 7: a second layout with one card per
+    # sentence of the new path, written next to the default files for comparing.
+    if args.viewer_per_sentence:
+        from modules.papertrail import aida_card
+        for p in aida_card.write_per_sentence_viewers(
+                analysis, args.output_dir, title=f"Verification — {os.path.basename(args.text)}",
+                source_texts=source_texts, assessment=assessment):
+            logger.info(f"Per-sentence viewer: {p}")
 
     t = analysis["coverage"]["totals"]
     # Break "unsupported" down by cause — "28 unsupported" reads as 28 failed

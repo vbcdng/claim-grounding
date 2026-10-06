@@ -25,6 +25,9 @@ from urllib.parse import quote
 from typing import Dict, Any, Optional
 
 from modules.papertrail import text_decomposer
+from modules.papertrail import proof_display
+from modules.papertrail import aida_card
+from modules.papertrail.matcher import _unusable_evidence
 from modules.papertrail.safe_paths import safe_link
 
 logger = logging.getLogger(__name__)
@@ -32,6 +35,39 @@ logger = logging.getLogger(__name__)
 # How many omitted source-claims (ranked by relevance) to show before collapsing
 # the rest behind a "show more" toggle.
 OMITTED_SHOWN = 15
+
+# Hover text of the grey "proof may exist?" chip (hhem_check.py, card 132), shared
+# by both viewers. The check is default-on since 2026-09-29, so a reader who never
+# asked for it sees this chip: one plain sentence, and it must say the verdict is
+# never changed. "About two in three" = 30 false marks / 47 marks (card 118).
+HHEM_CHIP_TITLE = ("A second, small checker model on this computer thinks the cited "
+                   "source may prove this rejected claim after all; it is only a "
+                   "question for you to check and it never changes the verdict "
+                   "(about two in three of these marks turn out to be on a claim "
+                   "that was rightly rejected).")
+# Card 166 (the author's decision of 2026-10-06, run-2 Q10): the public copy ships
+# without the HHEM check. There the legend's explanation of the chip is replaced
+# by this one sentence, unless a claim in the run still carries an HHEM answer.
+HHEM_ABSENT_LEGEND = ('<div class="legrow">The small local checker on rejected claims '
+                      '(HHEM) is not part of this version of the tool, so no card '
+                      'carries its "proof may exist?" chip.</div>')
+_HHEM_LEGEND_RE = re.compile(r'<div class="legrow">(?:<span class="hhchip">|<b>The small '
+                             r'local checker on rejected claims</b>).*?</div>', re.S)
+
+
+def hhem_shown(analysis: Dict[str, Any]) -> bool:
+    """True when this copy has the HHEM check, or a claim carries its answer."""
+    import importlib.util
+    if importlib.util.find_spec("modules.papertrail.hhem_check") is not None:
+        return True
+    return any(c.get("hhem_check") for c in analysis.get("text_claims") or [])
+
+
+def hhem_legend(page: str, analysis: Dict[str, Any]) -> str:
+    """Swap the HHEM legend row for HHEM_ABSENT_LEGEND when hhem_shown is False."""
+    if hhem_shown(analysis):
+        return page
+    return _HHEM_LEGEND_RE.sub(lambda m: HHEM_ABSENT_LEGEND, page, count=1)
 # Hard cap on omitted cards EMBEDDED in the HTML. Real runs can produce tens of
 # thousands of omitted source claims (paper1: ~30k -> a 47 MB viewer that chokes
 # browsers); they are relevance-ranked, so everything past the cap is noise —
@@ -310,9 +346,9 @@ _DISAGREE_RE = re.compile(r"(?i)\bcontradict|\bopposite\b|\bcontrary to\b|\brefu
 _EVIDENCE_CLAMP_CHARS = 700   # boilerplate-length "sentences" collapse behind a toggle
 
 
-def _clamped_quote(sentence: str) -> str:
-    """Blockquote with a show-all toggle for absurdly long 'sentences' (nav dumps,
-    glued captions — owner walkthrough item 8's display side)."""
+def _one_blockquote(sentence: str) -> str:
+    """One quoted passage, with a show-all toggle for absurdly long 'sentences'
+    (nav dumps, glued captions — owner walkthrough item 8's display side)."""
     if len(sentence) <= _EVIDENCE_CLAMP_CHARS:
         return f'<blockquote>{_esc(sentence)}</blockquote>'
     head = sentence[:_EVIDENCE_CLAMP_CHARS].rsplit(" ", 1)[0]
@@ -320,6 +356,127 @@ def _clamped_quote(sentence: str) -> str:
             f'<details class="judged"><summary>show the full passage '
             f'({len(sentence.split())} words)</summary>'
             f'<div class="judged-text">{_esc(sentence)}</div></details>')
+
+
+def _clamped_quote(sentence: str, window: Optional[str] = None) -> str:
+    """The card's quoted proof, rendered honestly (task #4, 2026-09-02).
+
+    A stored "sentence" is not always one sentence of the source. PDF text puts
+    reference numbers on the line, so the splitter can glue two sentences from
+    different places into one string — and the card then shows them as a single
+    continuous quote, which reads as far stronger proof than either half is
+    (the fresh50:cidev0028 false support). The same splitter sometimes stops a
+    quote mid-clause.
+
+    So: glued sentences are quoted SEPARATELY with a line saying they are not
+    contiguous; a quote cut off mid-sentence is finished from the judged window
+    (source text, never invented) when the window holds the rest; and a quote
+    that is a reference-list line or a dumped table row is labelled as such
+    instead of being passed off as a statement the source makes. Display only —
+    no verdict, count, filter or exported field is touched."""
+    p = proof_display.prepare(sentence, window, _unusable_evidence)
+    parts = p["parts"] or [sentence or ""]
+    out = "".join(_one_blockquote(x) for x in parts)
+    if p["split"]:
+        out += (f'<div class="quote-warn" title="the source text ran these together '
+                f'because the reference numbers between them are printed as '
+                f'superscripts; they are separate sentences from different places">'
+                f'⚠ These are {len(parts)} separate sentences from different places in '
+                f'the source, not one continuous quote. Read each on its own before '
+                f'accepting it as proof.</div>')
+    if p["completed"]:
+        out += ('<div class="quote-note">The stored quote stopped mid-sentence; it was '
+                'finished here from the source text the judge read.</div>')
+    elif p["cut_off"]:
+        out += ('<div class="quote-warn">⚠ This quote stops mid-sentence — the source '
+                'text was cut off when it was read. Open the source to see the whole '
+                'sentence.</div>')
+    if "reference" in p["flaws"]:
+        out += ('<div class="quote-warn">⚠ This looks like a line from the source\'s '
+                'reference list or its citation header, not a statement the source '
+                'makes. It should not be read as proof.</div>')
+    if "table" in p["flaws"]:
+        out += ('<div class="quote-warn">⚠ This is a row of table figures or page '
+                'metadata, not a sentence. Open the source to read the numbers in '
+                'their table.</div>')
+    return out
+
+
+# Task #19 (2026-09-02): the part-by-part list on an UNSUPPORTED card. Wording
+# from docs/TASK19_CARD_WORDING_2026-08-07.md, cases 1 and 4; shared by both
+# viewers so the two pages say the same thing. Display-only — never a verdict.
+PART_LIST_HEADER = "Checked part by part:"
+
+
+# Task #19 (2026-09-03): the same case-4 contract applied to the OTHER way a red
+# card fails to state a readable objection. When the cited file is absent or its
+# text could not be read, matcher stores the objection as an internal code
+# ("source_file_missing: x.pdf", "no_source_sentences (source empty or
+# unreadable)") and both viewers printed it verbatim after "✗ Not supported:" —
+# 204 of the 4,225 rejected cards in the runs on disk, about 5 in every 100
+# (benchmarks/scan_red_card_explanations.py). Two faults in one line: the reader
+# is shown a code, and a missing input is dressed up as a judgment on their
+# sentence. The header already counts these rows separately as "unverifiable";
+# the card now says the same thing in words. Display only: the verdict field,
+# every count and every filter stay as they are.
+NOT_CHECKED_BADGE = "NOT CHECKED"
+NOT_CHECKED_TITLE = ("the text of the cited source could not be read, so nothing in "
+                     "this sentence was actually judged")
+
+
+def unchecked_objection(c: Dict[str, Any]) -> str:
+    """Plain words for a rejected card that was never really checked, or "" when
+    the claim was judged normally. Reads the stored reason code only."""
+    reason = str(c.get("reason") or "")
+    # Every cited source parsed to garble: the header already counts the row as
+    # "unverifiable (source unreadable)" (review 2026-09-04, second check), so
+    # the card must say the same instead of a judged objection.
+    if c.get("paper_ids") and _all_sources_unreadable(c):
+        return ("Nothing in this sentence was checked. The text of every cited file "
+                "came out unreadable, which usually means the file stores pictures of "
+                "the pages instead of letters, so there was no source text to judge "
+                "the sentence against. This is a problem with the files, not a "
+                "judgement about your sentence — supply a text copy of the source and "
+                "run the check again.")
+    if reason.startswith("source_file_missing"):
+        files = reason.split(":", 1)[1].strip() if ":" in reason else ""
+        which = f" ({files})" if files else ""
+        return ("Nothing in this sentence was checked. The file for its citation is not "
+                f"in the sources folder{which}, so there was no source text to read. "
+                "This is a missing file, not a judgement about your sentence — add the "
+                "file and run the check again.")
+    if reason.startswith("no_source_sentences"):
+        return ("Nothing in this sentence was checked. The cited file holds no text the "
+                "tool could read, which usually means the file stores pictures of the "
+                "pages instead of letters, so there was no source text to read. This is "
+                "a problem with the file, not a judgement about your sentence — supply a "
+                "text copy of the source and run the check again.")
+    return ""
+
+
+def _missing_part_row(part: str, others_backed: bool) -> str:
+    """One ✗ row per part the judges could not find (case 1): names the part and
+    says what to do about it, in one plain sentence."""
+    rest = " — the rest of the sentence is already backed" if others_backed else ""
+    return (f'<div class="judged-text compcheck-missing">✗ <b>{_esc(part)}</b> — not found '
+            f'in any cited source. Support this part elsewhere, soften it, or drop it'
+            f'{rest}.</div>')
+
+
+def _whole_rejected_row(c: Dict[str, Any]) -> str:
+    """Case 4 contract: a red card whose every part WAS found must still state
+    the judges' objection (the claim's reason). With no objection recorded it
+    says so, instead of looking confident — an unexplained red card is a bug,
+    never a verdict to trust."""
+    reason = _norm_ws(str(c.get("reason") or "")).strip()
+    if reason:
+        return (f'<div class="judged-text compcheck-tail">✗ <b>The judges still rejected the '
+                f'sentence as a whole.</b> Their objection: &ldquo;{_esc(reason)}&rdquo; '
+                f'Every individual part was found — read the objection and the proofs '
+                f'and decide yourself.</div>')
+    return ('<div class="judged-text compcheck-unexplained">✗ <b>The tool could not explain '
+            'this verdict.</b> Every part was found and the judges recorded no objection, '
+            'so treat this red card as unexplained rather than confident.</div>')
 
 
 def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[str, str],
@@ -349,6 +506,14 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
     if verdict == "unsupported" and cscope.get("scope") in ("methods", "concept", "related"):
         badge = f"SCOPED CITATION ({cscope['scope'].upper()})"
         badge_cls = "unsupported scoped"
+    # Never-checked rows (task #19, 2026-09-03): the source text could not be
+    # read at all, so a red "UNSUPPORTED" badge claims a judgment that was never
+    # made — and contradicts the header, which already counts these rows as
+    # unverifiable. DISPLAY ONLY: the verdict field and the filters are untouched.
+    unchecked = unchecked_objection(c) if verdict == "unsupported" else ""
+    if unchecked:
+        badge = NOT_CHECKED_BADGE
+        badge_cls = "unsupported notchecked"
     method = c.get("method", "")
     cosine = c.get("cosine")
     meta = []
@@ -390,10 +555,14 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
         if not e.get("supported") and _DISAGREE_RE.search(e.get("reason") or ""):
             disagree_rows.append((e.get("source_title") or "", e.get("reason") or ""))
         if sentence:
+            # Task #4: the source link and the Copy button use the CORRECTED
+            # first sentence, so a reader never copies (or searches the PDF
+            # for) a string that glues two separate source sentences together.
+            shown = proof_display.primary_text(sentence, e.get("window"))
             actions = _source_actions(fname_map, e.get("paper_id"), e.get("page"),
-                                      sentence, e.get("snippet", ""), source_texts)
-            body = (f'{_clamped_quote(sentence)}'
-                    f'<button class="copy" onclick="copyText(this)" data-quote="{_esc(sentence)}">Copy</button>'
+                                      shown, e.get("snippet", ""), source_texts)
+            body = (f'{_clamped_quote(sentence, e.get("window"))}'
+                    f'<button class="copy" onclick="copyText(this)" data-quote="{_esc(shown)}">Copy</button>'
                     f'{actions}')
             # Context on demand for EVERY row (owner walkthrough item 11: a bare
             # 7-word quote is meaningless without its surroundings): the judged
@@ -456,7 +625,8 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                       'as your own idea, argument, or transition. Nothing was checked; '
                       'add a [[key]] marker if it should be grounded in a source.</div>')
         else:
-            blocks = f'<div class="evidence reason">⚠ {_esc(c.get("reason",""))}</div>'
+            blocks = (f'<div class="evidence reason">⚠ '
+                      f'{_esc(unchecked or c.get("reason") or "")}</div>')
             # Even with no evidence rows at all, the cited sources must stay
             # openable from the card (friend feedback 2026-07-19).
             for pid in (c.get("paper_ids") or []):
@@ -477,6 +647,14 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
     # literacy amber where the proof existed verbatim), so the always-on
     # line overstated certainty.
     key_note = ""
+    # Task #4: the sentences that actually PROVE each part of the claim belong in
+    # the always-visible part of the card. Before this, v1 put them in `note`,
+    # which simple mode (the default view) hides behind the details button — so
+    # the only sentence the reader saw was the judge's retrieved candidate, which
+    # is chosen for wording similarity and is often topical rather than proving
+    # (quality-sprint Finding 3). v2 already showed the proof rows as the main
+    # display; v1 now matches it. Display only: no verdict, count or filter moves.
+    proof_html = ""
     note = ""
     if verdict == "supported" and method == "tail_rescue":
         # rescued via the combined judge: no single source sufficed for the tail
@@ -493,6 +671,8 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                 'passage states everything, so each part of the claim was verified '
                 'separately in the source and the combination re-judged. The quoted '
                 'evidence below is per-part.</div>')
+    elif verdict == "unsupported" and unchecked:
+        key_note = f'<div class="unsupp-note notchecked">⚠ {_esc(unchecked)}</div>'
     elif verdict == "unsupported" and c.get("reason"):
         key_note = f'<div class="unsupp-note">✗ Not supported: {_esc(c["reason"])}</div>'
 
@@ -557,15 +737,16 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                                "snippet": ce.get("snippet", ""),
                                "source_title": ce.get("source_title") or ""})
         for g in groups:
+            shown = proof_display.primary_text(g["sentence"])
             actions = _source_actions(fname_map, g["paper_id"], g["page"],
-                                      g["sentence"], g["snippet"], source_texts)
+                                      shown, g["snippet"], source_texts)
             parts_html = " · ".join(f'✓ {_esc(p)}' for p in g["parts"])
             rows += (f'<div class="covset-row"><div class="covset-part">'
                      f'{parts_html} '
                      f'<span class="covset-src">{_esc(g["source_title"])}</span></div>'
                      f'{_clamped_quote(g["sentence"])}'
                      f'<button class="copy" onclick="copyText(this)" '
-                     f'data-quote="{_esc(g["sentence"])}">Copy</button>{actions}</div>')
+                     f'data-quote="{_esc(shown)}">Copy</button>{actions}</div>')
         if rows:
             # "Read it in context" (owner request 2026-07-11): the used
             # sentences plus all original text between them, per source — so
@@ -584,11 +765,11 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
             rows += ('<div class="covset-foot">Assembled after the verdict: the tool '
                      're-read the source\'s best passages and mapped each part of '
                      'the claim to the sentence that proves it.</div>')
-            note += (f'<details class="covering"><summary>Evidence coverage — which '
-                     f'sentence proves which part ({n_parts} part'
-                     f'{"s" if n_parts != 1 else ""} with shown proof'
-                     + (f', {len(unc)} without' if unc else '')
-                     + f')</summary>{rows}</details>')
+            proof_html += (f'<div class="covering"><div class="covering-head">'
+                           f'Evidence coverage — which sentence proves which part '
+                           f'({n_parts} part{"s" if n_parts != 1 else ""} with shown '
+                           f'proof' + (f', {len(unc)} without' if unc else '')
+                           + f')</div>{rows}</div>')
 
     # A split judge vote (2-1) is a borderline call, not a confident rejection —
     # say so, so the human reviews it instead of trusting the verdict blindly.
@@ -668,6 +849,44 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                  f'({_esc(dc.get("model") or "")}, {_esc(dc.get("confidence") or "?")} '
                  f'confidence; testing aid, never a veto): '
                  f'{_esc(dc.get("commentary") or "")}{q}{better}</div>')
+    # Free local checker (granite_check.py, task #65): a checker model running
+    # on this computer re-read an APPROVED claim against a large slice of the
+    # cited source. Only its disagreement is shown, and only ever as a
+    # question — measured on 122 approved claims it catches 89% of the tool's
+    # mistakes while querying 35% of its correct calls, so about one flag in
+    # every 2.3 is about a claim that was fine. NEVER a veto.
+    gc = c.get("granite_check") or {}
+    if gc.get("agrees") is False:
+        chip += ('<span class="gcchip" title="a free checker model running on this '
+                 'computer re-read this approved claim against a large slice of the '
+                 'source and was not convinced; about one flag in 2.3 is about a claim '
+                 'that was fine">❓ worth a second look?</span>')
+        note += (f'<div class="gc-note">❓ A free checker model on this computer '
+                 f'({_esc(gc.get("model") or "")}) re-read this approved claim against '
+                 f'{gc.get("slice_chars") or 0} characters of '
+                 f'{_esc(str(gc.get("from_source") or "the cited source"))} and was not '
+                 f'convinced. This is a question, not a finding: roughly one flag in '
+                 f'every 2.3 concerns a claim that was perfectly fine, and this model '
+                 f'cannot tell whether the citation points at the right paper at all. '
+                 f'The verdict above is unchanged — read the evidence and decide.</div>')
+    # Small free local checker on REJECTED claims (hhem_check.py, card 132):
+    # HHEM scored the claim against ~6,000 characters of the cited source at or
+    # above card 118's pass mark. Measured on 114 rejected claims: 17 of 22 wrong
+    # rejections marked, 30 of 92 correct ones too. A question, NEVER a veto.
+    hh = c.get("hhem_check") or {}
+    if hh.get("proof_may_exist") is True and verdict == "unsupported":
+        chip += ('<span class="hhchip" title="' + HHEM_CHIP_TITLE + '">'
+                 '❓ proof may exist?</span>')
+        note += (f'<div class="hh-note">❓ A small free checker model on this computer '
+                 f'({_esc(hh.get("model") or "")}) re-read this rejected claim against '
+                 f'{hh.get("slice_chars") or 0} characters of '
+                 f'{_esc(str(hh.get("from_source") or "the cited source"))} and scored it '
+                 f'{float(hh.get("score") or 0):.2f}, at or above its pass mark of '
+                 f'{float(hh.get("threshold") or 0):.2f}, so the proof may be in the source '
+                 f'after all. This is a question, not a finding: measured on 114 rejected '
+                 f'claims it marks 17 of the 22 the tool got wrong but also 30 of the 92 '
+                 f'it got right. The verdict above is unchanged — read the source and '
+                 f'decide.</div>')
     # Arbiter (--arbiter): a strong model re-read ONLY this flagged claim with
     # large source context. NEVER a veto — every quote shown here passed the
     # deterministic verbatim gate against the cited sources' text.
@@ -858,8 +1077,13 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
     # 2026-07-11, P2): a compound claim that fails must still SHOW which
     # parts WERE proven (with their sentences) and list every part that was
     # not — the found evidence must not vanish into a flat "unsupported"
-    # (WiCE t13: the 1988-Wales-cap proof was found, then hidden). Display
-    # only; the verdict is untouched.
+    # (WiCE t13: the 1988-Wales-cap proof was found, then hidden). Task #19
+    # (2026-09-02) reshaped it into ONE part-by-part list — every part carries
+    # its own ✓/✗ marker and a ✗ row says what to do — and added the case-4
+    # contract: all parts found + nothing missing ⇒ the judges' objection is
+    # quoted on the card (189 such rows in the runs on disk had an empty list
+    # and no stated objection). Proofs go through proof_display (task #4).
+    # Display only; the verdict is untouched.
     cc = c.get("component_check") or {}
     if verdict == "unsupported" and cc:
         found, missing = cc.get("found") or [], cc.get("missing") or []
@@ -867,27 +1091,21 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
         for x in (cc.get("evidence") or []):
             if x.get("sentence") and x.get("component") not in ev_by_comp:
                 ev_by_comp[x.get("component")] = x
-        if found:
+        if found or missing:
             rows = ""
             for p in found:
                 x = ev_by_comp.get(p)
-                proof = (f' — &ldquo;{_esc(x["sentence"])}&rdquo; '
-                         f'<i>({_esc(x.get("source_title") or "")})</i>'
-                         if x else "")
+                proof = ""
+                if x:
+                    shown = proof_display.primary_text(x["sentence"])
+                    proof = (f' — &ldquo;{_esc(shown)}&rdquo; '
+                             f'<i>({_esc(x.get("source_title") or "")})</i>')
                 rows += f'<div class="judged-text">✓ <b>{_esc(p)}</b>{proof}</div>'
-            note += (f'<div class="compcheck-note">◐ Partly proven despite the '
-                     f'verdict: these parts of the claim WERE found in the cited '
-                     f'source(s):{rows}'
-                     + ("" if missing else
-                        '<div class="compcheck-tail">But the judges did not accept '
-                        'that these pieces together prove the whole claim — read '
-                        'the evidence and decide yourself.</div>')
-                     + '</div>')
-        if missing:
-            ml = "; ".join(f'&ldquo;{_esc(x)}&rdquo;' for x in missing)
-            note += (f'<div class="compcheck-missing">✗ Not found in the cited '
-                     f'sources: {ml} — support these parts elsewhere, or they may '
-                     f'be wrong.</div>')
+            for m in missing:
+                rows += _missing_part_row(m, bool(found))
+            if found and not missing:
+                rows += _whole_rejected_row(c)
+            note += f'<div class="compcheck-note"><b>{PART_LIST_HEADER}</b>{rows}</div>'
 
     # Secondhand evidence (item 12, t9): the supporting sentence itself cites
     # another work — the author may be citing a middleman.
@@ -966,6 +1184,59 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
             chip += (f'<span class="kindchip" title="{_esc(ok.get("reason") or "")}">'
                      f'{_esc(ok["kind"])}</span>')
 
+    # Numeric cross-check (task #2): a figure the claim states that appears in
+    # none of the cited sources. Deterministic, display-only — the verdict field
+    # is untouched, so a green card can carry this amber warning.
+    nc = c.get("number_check") or {}
+    if nc.get("missing"):
+        miss = ", ".join(nc["missing"])
+        bound_row = next((cl for cl in (nc.get("clusters") or [])
+                          if not cl.get("found") and cl.get("why_not")), None)
+        chip += ('<span class="citechip loud" title="a figure in this claim was not '
+                 'found in the source it cites">🔢 figure not in source</span>')
+        if bound_row:
+            note += (f'<div class="cite-note">🔢 This claim says '
+                     f'&ldquo;{_esc(miss)}&rdquo;, and {_esc(bound_row["why_not"])}. '
+                     f'The words were judged supported; the figure itself was not. '
+                     f'Check it against the source.</div>')
+        else:
+            note += (f'<div class="cite-note">🔢 The figure(s) {_esc(miss)} could not be '
+                     f'found anywhere in the cited source text, in that form, as the '
+                     f'matching ratio or percentage, or within rounding. The wording was '
+                     f'judged supported; this figure was not. Check it against the '
+                     f'source.</div>')
+    elif nc.get("elsewhere"):
+        # Task #99: the figure IS printed in the cited paper, but not in the
+        # sentences quoted as proof for this claim — so it may belong to a
+        # different result in the same paper. Weaker than the chip above.
+        away = ", ".join(nc["elsewhere"])
+        chip += ('<span class="citechip" title="this figure appears in the cited paper, '
+                 'but not in the sentences quoted as proof">🔢 figure not in the quoted '
+                 'proof</span>')
+        note += (f'<div class="cite-note">🔢 The figure(s) {_esc(away)} do appear in the '
+                 f'cited paper, but not in the sentences quoted as proof for this claim. '
+                 f'A figure printed elsewhere in the same paper can belong to something '
+                 f'else. Check that the source states this figure for this statement.'
+                 f'</div>')
+
+    # Direction check (task #2, only with --direction-check): the source
+    # passages do not carry the claim's cause-and-effect or increase/decrease
+    # direction. Display-only.
+    dc = c.get("direction_check") or {}
+    if dc.get("answer") in ("reversed", "not_stated"):
+        reversed_ = dc["answer"] == "reversed"
+        chip += ('<span class="citechip loud" title="the source passages do not state '
+                 'the direction this claim asserts">'
+                 + ('🔁 direction reversed?' if reversed_ else '🔁 direction not confirmed')
+                 + '</span>')
+        lead = ("the source states the opposite direction"
+                if reversed_ else "the source passages do not state this direction at all")
+        note += (f'<div class="cite-note">🔁 This claim says '
+                 f'&ldquo;{_esc(dc.get("cue") or "")}&rdquo;, and {lead}. '
+                 f'&ldquo;{_esc(dc.get("reason") or "")}&rdquo; '
+                 f'A second model was asked this one question about the passages above; '
+                 f'the verdict was not changed.</div>')
+
     # Diff vs the previous run (incremental re-verification): flag edited/new
     # claims so the reader can jump straight to what they changed.
     prev = c.get("prev") or {}
@@ -995,16 +1266,36 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
               f'<textarea class="tnote" placeholder="optional note for the fixer" rows="2"></textarea>'
               f'</div>')
 
+    # Card 86: the new grounding path's parts (claim["conversion"]). Every
+    # string is empty on a claim without it, so the card is byte-identical.
+    chip += aida_card.chips(c)
+    key_note += aida_card.parent_note(c) + aida_card.block(
+        c, lambda pr: _aida_proof_row(pr, fname_map, source_texts, paper_meta))
+    conf_cls += aida_card.card_class(c)
+
     return f"""
       <div class="card {'scopedcite' if scoped_cls else verdict}{changed_cls}{cite_cls}{partial_cls}{partly_cls}{scoped_cls}{overcite_cls}{conf_cls}" id="card-{c['id']}" data-text="text-{c['id']}" onclick="brush('{c['id']}', 'card')">
         <div class="card-head"><span class="head-left"><span class="badge {badge_cls}">{badge}</span><span class="claimno">{_esc(c['id'])}</span>{chip}</span><span class="meta">{_esc(meta_str)}</span></div>
         <div class="card-claim">{claim_html}</div>
         {key_note}
         <div class="adv">{note}</div>
+        {proof_html}
         {blocks}
         <div class="adv">{_fix_section(c, fix_cmd_base)}{triage}</div>
         <button class="morebtn" onclick="toggleMore(event, this)">▸ details &amp; review</button>
       </div>"""
+
+
+def _aida_proof_row(pr: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[str, str],
+                    paper_meta: Dict[str, Dict[str, str]]) -> str:
+    """Card 86: one proof sentence of a proven part — the real quote (through
+    proof_display, task #4), its source's title and the usual open-in-source
+    action."""
+    pid = pr.get("paper_id")
+    shown = proof_display.primary_text(pr.get("sentence") or "")
+    title = (paper_meta.get(pid) or {}).get("title") or fname_map.get(pid, pid or "")
+    return (f'&ldquo;{_esc(shown)}&rdquo; <i>({_esc(title)})</i>'
+            + _source_actions(fname_map, pid, pr.get("page"), shown, "", source_texts))
 
 
 def _omitted_card(o: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[str, str],
@@ -1045,6 +1336,16 @@ def _review_data(analysis: Dict[str, Any], claims: list, out_dir: str) -> Dict[s
                                     "reason": cs.get("reason")}
                                    if cs.get("scope") in ("methods", "concept", "related")
                                    else None),
+                "number_check": (
+                    {"missing": (c.get("number_check") or {}).get("missing")}
+                    if (c.get("number_check") or {}).get("missing")
+                    else {"elsewhere": (c.get("number_check") or {}).get("elsewhere")}
+                    if (c.get("number_check") or {}).get("elsewhere") else None),
+                "direction_check": ({"answer": (c.get("direction_check") or {}).get("answer"),
+                                     "cue": (c.get("direction_check") or {}).get("cue"),
+                                     "reason": (c.get("direction_check") or {}).get("reason")}
+                                    if (c.get("direction_check") or {}).get("answer")
+                                    in ("reversed", "not_stated") else None),
                 "verdict": c.get("verdict"), "method": c.get("method"),
                 "proof_state": c.get("proof_state"),
                 "reason": c.get("reason"),
@@ -1748,6 +2049,10 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
                     f'cited source adds nothing the others don\'t already cover — the citation '
                     f'may belong elsewhere">Over-cited ({n_overcite})</button>'
                     if n_overcite else "")
+    # Card 86: "Split into parts (n)" and the new path's styles — both empty
+    # when no claim carries a conversion, so the page stays byte-identical.
+    aida_btn = aida_card.filter_button(claims)
+    aida_css = aida_card.css(claims)
     assess_section = _assessment_panel(assessment)
     # Scoped-citation cards ride the "own" segment of the ratio bar — they are
     # the authors' own text by classification.
@@ -1779,7 +2084,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
         {partial_btn}
         {overcite_btn}
         {cite_btn}
-        {changed_btn}
+        {changed_btn}{aida_btn}
         <button class="fbtn hchk" data-f="hchecked" title="cards you marked ✓ checked">✓ Checked (<span id="chkN">0</span>)</button>
         <button class="fbtn hunchk" data-f="hunchecked" title="cards you have not marked ✓ checked yet">Unchecked (<span id="unchkN">0</span>)</button>
       </div>"""
@@ -1816,7 +2121,8 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
             <div class="legrow"><span class="badge supported">SUPPORTED</span> the cited source contains the statement — not that the source is strong or the claim is true</div>
             <div class="legrow"><span class="badge supported partly">NOT PROVEN AS WRITTEN</span> judged supported by the sources overall, but the shown sentences don't prove every component — the amber line on the card names the unproven part; the underlying verdict is unchanged</div>
             <div class="legrow"><span style="color:#6b7280">◦ commonly known</span> a component with no shown proof that the tool judged an everyday fact needing no citation — grey and quiet, never counted against the claim</div>
-            <div class="legrow"><span class="badge unsupported">UNSUPPORTED</span> no cited source backs it (or the source file is missing)</div>
+            <div class="legrow"><span class="badge unsupported">UNSUPPORTED</span> the cited sources were read and none of them backs it</div>
+            <div class="legrow"><span class="badge notchecked">NOT CHECKED</span> the cited file is missing from the sources folder, or its text could not be read — nothing about this sentence was judged</div>
             <div class="legrow"><span class="badge scoped">SCOPED CITATION</span> the passage is the authors&rsquo; own work; the citation backs only a method/concept/related pointer inside it — not an authoring error</div>
             <div class="legrow"><span class="badge own">YOUR OWN CLAIM</span> your uncited claim — thesis, argument, transition; nothing was checked</div>
             <div class="legrow"><span class="badge omitted">UNUSED</span> a point one of your sources makes that your text didn't cite — a menu, not an error</div>
@@ -1831,6 +2137,8 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
             <div class="legrow"><span class="disagreechip">sources may disagree?</span> a co-cited source's evidence was judged to argue the opposite</div>
             <div class="legrow"><span class="sochip">2nd opinion</span> a second model disagreed — lowers confidence, read the evidence yourself; never a veto</div>
             <div class="legrow"><span class="dcchip flag">deep check</span> a stronger model re-read the claim with source context and commented (testing aid) — its commentary is on the card; never a veto</div>
+            <div class="legrow"><span class="gcchip">❓ worth a second look?</span> a free checker model running on this computer re-read an approved claim against a large slice of the source and was not convinced. It is a question, not a finding: measured on 122 approved claims it catches 89% of the tool's mistakes but also queries 35% of its correct calls, so about one flag in every 2.3 is about a claim that was fine. It cannot tell whether the citation points at the right paper at all; never a veto</div>
+            <div class="legrow"><span class="hhchip">❓ proof may exist?</span> a small free checker model running on this computer (HHEM) re-read a REJECTED claim against about six thousand characters of the cited source and scored it as possibly supported. It is a question, not a finding: measured on 114 rejected claims it marks 17 of the 22 the tool wrongly rejected, but also 30 of the 92 it rejected correctly, so most of these chips are about a correct rejection. This check runs on every run, unless it was switched off with --no-hhem-check or the checker is not installed on the computer that made the run; it never changes a verdict.</div>
             <div class="legrow"><span class="abchip fetch">🔷 proof may exist</span> the arbiter (--arbiter) re-read a FLAGGED claim with the source and found verbatim-verified sentences the judge never saw — read them and decide; never a veto</div>
             <div class="legrow"><span class="abchip conflict">⚡ conflicting evidence?</span> the arbiter found a source sentence that may CONTRADICT the claim (verified verbatim) — read it on the card</div>
             <div class="legrow"><span class="rescuechip">⛑ arbiter rescue</span> first judged unsupported; the arbiter located verbatim-verified proof and the PRIMARY judge re-judged it unanimously supported — the verdict flip is the primary judge's, never the arbiter's</div>
@@ -2034,6 +2342,19 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .dc-note.flag {{ color:#374151; }}
   .dc-better {{ margin-top:4px; font-style:italic; }}
+  /* Free local checker (task #65) — a question about a green card, so the same
+     neutral grey ghost chip as every other piece of metadata, never a hue. */
+  .gcchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
+             background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
+  .gc-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
+  /* Small local checker on rejected claims (card 132) — same neutral grey. */
+  .hhchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
+             border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
+             background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
+  .hh-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
+              border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .abchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
              border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
@@ -2072,6 +2393,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .badge.partly {{ background:#d97706; }}
   .fbtn.partlyf {{ border-color:#fbbf24; color:#b45309; }}
   .badge.scoped {{ background:#6366f1; }}
+  .badge.notchecked {{ background:#9ca3af; }}
   .scopechip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
                 border-radius:8px; margin-left:6px; vertical-align:middle;
                 background:#eef2ff; color:#4338ca; border:1px solid #a5b4fc; cursor:help; }}
@@ -2096,6 +2418,9 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
                        border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .covset-miss {{ font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
                   border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
+  .covering-head {{ font-weight:600; color:#374151; margin-bottom:4px; }}
+  div.covering {{ font-size:12px; margin:8px 0 0; border:1px solid #e5e7eb;
+    border-radius:6px; padding:8px 10px; background:#fff; }}
   details.covering {{ font-size:12px; margin:8px 0 0; border:1px solid #e5e7eb;
                       border-radius:6px; padding:4px 8px; background:#fafafa; }}
   details.covering summary {{ cursor:pointer; color:#374151; font-weight:600; }}
@@ -2114,9 +2439,9 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .compcheck-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
                      border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .compcheck-note .judged-text {{ margin:4px 0 0; }}
-  .compcheck-tail {{ color:#475569; margin-top:4px; }}
-  .compcheck-missing {{ font-size:12px; background:#fffbeb; border:1px solid #fbbf24; color:#b45309;
-                        border-radius:6px; padding:6px 10px; margin:6px 0 0; }}
+  .compcheck-note .compcheck-tail {{ color:#475569; }}
+  .compcheck-note .compcheck-missing {{ background:#fffbeb; border-left-color:#fbbf24; color:#b45309; }}
+  .compcheck-note .compcheck-unexplained {{ background:#fef2f2; border-left-color:#fca5a5; color:#991b1b; }}
   .shchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
              border-radius:8px; margin-left:6px; vertical-align:middle;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; cursor:help; }}
@@ -2235,6 +2560,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .srcchip.no {{ background:#e5e7eb; color:#374151; }}
   .combined-note {{ font-size:12px; color:var(--teal); background:var(--teal-bg); padding:4px 8px; border-radius:4px; margin-top:6px; }}
   .unsupp-note {{ font-size:12px; color:#b91c1c; background:#fef2f2; padding:4px 8px; border-radius:4px; margin-top:6px; }}
+  .unsupp-note.notchecked {{ color:#475569; background:#f1f5f9; }}
   .fixbox {{ margin-top:8px; padding:8px 10px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; }}
   .fixbox blockquote {{ margin:6px 0; }}
   .fix-head {{ font-size:12px; font-weight:600; color:#166534; }}
@@ -2248,6 +2574,13 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   details.judged {{ margin-top:6px; font-size:12px; }}
   details.judged summary {{ cursor:pointer; color:#6b7280; }}
   .judged-text {{ margin-top:4px; padding:6px 8px; background:#f9fafb; border-left:3px solid #d1d5db; color:#374151; line-height:1.5; }}
+  /* Task #4 quote honesty notes: neutral grey — these describe the QUOTE, not
+     the verdict, and the colour budget reserves hue for verdict states. */
+  .quote-warn {{ font-size:11.5px; color:#4b5563; background:#f3f4f6;
+                 border-left:3px solid #9ca3af; padding:5px 8px; margin:3px 0 6px;
+                 line-height:1.45; }}
+  .quote-note {{ font-size:11px; color:#6b7280; margin:2px 0 6px; }}
+  blockquote + blockquote {{ margin-top:5px; }}
   blockquote {{ margin:0; padding:8px 10px; background:#f3f4f6; border-left:3px solid var(--teal); font-size:13px; font-style:italic; }}
   .evidence.reason {{ font-size:12px; color:var(--red); }}
   .copy {{ margin-top:6px; font-size:11px; padding:3px 8px; border:1px solid #d1d5db; background:#fff; border-radius:4px; cursor:pointer; }}
@@ -2300,7 +2633,7 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
   .legend-grp {{ flex:1; min-width:260px; }}
   .legend-h {{ font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:.04em; font-size:10px; margin:4px 0; }}
   .legrow {{ margin:5px 0; line-height:1.5; color:#4b5563; }}
-  .legrow .badge {{ margin-right:5px; vertical-align:middle; }}
+  .legrow .badge {{ margin-right:5px; vertical-align:middle; }}{aida_css}
 </style></head>
 <body class="simple detailview">
 <header>
@@ -2716,6 +3049,7 @@ const REVIEW_DATA = {rd_json};
 </script>
 </body></html>"""
 
+    page = hhem_legend(page, analysis)
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(page)

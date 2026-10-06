@@ -1,0 +1,945 @@
+{
+ "run_dirs": 514,
+ "sweeps": 4162,
+ "long_sweeps_over_6_chunks": 1662,
+ "supported_mapped_winners": 978,
+ "supported_unmapped": 4,
+ "policies": {
+  "base": {
+   "chunks_read": 18678,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 965,
+   "unsupported_sweeps": 3180,
+   "winners_lost": 13
+  },
+  "lex3": {
+   "chunks_read": 19267,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 966,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 589,
+   "chunks_added": 589,
+   "chunks_dropped": 0,
+   "unsupported_sweeps_with_new_chunk": 450,
+   "winners_lost": 12
+  },
+  "lex4": {
+   "chunks_read": 19734,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 966,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 802,
+   "chunks_added": 1056,
+   "chunks_dropped": 0,
+   "unsupported_sweeps_with_new_chunk": 591,
+   "winners_lost": 12
+  },
+  "top7": {
+   "chunks_read": 20100,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 965,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 1422,
+   "chunks_added": 1422,
+   "chunks_dropped": 0,
+   "unsupported_sweeps_with_new_chunk": 1079,
+   "winners_lost": 13
+  },
+  "fused6": {
+   "chunks_read": 17807,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 965,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 1177,
+   "chunks_added": 937,
+   "chunks_dropped": 1808,
+   "unsupported_sweeps_with_new_chunk": 642,
+   "winners_lost": 13
+  },
+  "fused6lex3": {
+   "chunks_read": 17946,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 966,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 1206,
+   "chunks_added": 1076,
+   "chunks_dropped": 1808,
+   "unsupported_sweeps_with_new_chunk": 714,
+   "winners_lost": 12
+  },
+  "lrel90": {
+   "chunks_read": 18830,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 965,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 126,
+   "chunks_added": 152,
+   "chunks_dropped": 0,
+   "unsupported_sweeps_with_new_chunk": 116,
+   "winners_lost": 13
+  },
+  "lrel80": {
+   "chunks_read": 19296,
+   "sweeps": 4162,
+   "winners": 978,
+   "winners_kept": 965,
+   "unsupported_sweeps": 3180,
+   "sweeps_changed": 363,
+   "chunks_added": 618,
+   "chunks_dropped": 0,
+   "unsupported_sweeps_with_new_chunk": 299,
+   "winners_lost": 13
+  }
+ },
+ "winners_lost_examples": {
+  "base": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "regret_giving_run",
+    "claim": "t9",
+    "sentence": "Althou gh this lab study did not specifi cally solicit feelings of regret in decision -making fo r individuals, past stu"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   }
+  ],
+  "lex3": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "rerun56_violence",
+    "claim": "t0",
+    "sentence": "TABLE 2 Overall Homicide Rates in Europe, Thirteenth to Twentieth Centuries Average Period Homicide Rate Number of Estim"
+   }
+  ],
+  "lex4": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "rerun56_violence",
+    "claim": "t0",
+    "sentence": "TABLE 2 Overall Homicide Rates in Europe, Thirteenth to Twentieth Centuries Average Period Homicide Rate Number of Estim"
+   }
+  ],
+  "top7": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "regret_giving_run",
+    "claim": "t9",
+    "sentence": "Althou gh this lab study did not specifi cally solicit feelings of regret in decision -making fo r individuals, past stu"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   }
+  ],
+  "fused6": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "regret_giving_run",
+    "claim": "t9",
+    "sentence": "Althou gh this lab study did not specifi cally solicit feelings of regret in decision -making fo r individuals, past stu"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   }
+  ],
+  "fused6lex3": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "rerun56_violence",
+    "claim": "t0",
+    "sentence": "TABLE 2 Overall Homicide Rates in Europe, Thirteenth to Twentieth Centuries Average Period Homicide Rate Number of Estim"
+   }
+  ],
+  "lrel90": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "regret_giving_run",
+    "claim": "t9",
+    "sentence": "Althou gh this lab study did not specifi cally solicit feelings of regret in decision -making fo r individuals, past stu"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   }
+  ],
+  "lrel80": [
+   {
+    "run": "gate_task18r6e_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task1r3_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task37gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task39_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task44gate_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "gate_task61publish_paper1",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "app",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "nightB_essay_recheck",
+    "claim": "t9",
+    "sentence": "The validation of near- to mid-term technological forecasts, and AI forecasts specifically, would be very useful for com"
+   },
+   {
+    "run": "regret_giving_run",
+    "claim": "t9",
+    "sentence": "Althou gh this lab study did not specifi cally solicit feelings of regret in decision -making fo r individuals, past stu"
+   },
+   {
+    "run": "paper1_haiku",
+    "claim": "t80",
+    "sentence": "P r eparing for the Int elligence Explosion Will MacAskill & Fin Moorhouse Mar ch 20 25 1 Cont ents P r eparing for the "
+   },
+   {
+    "run": "baseline_paper1_gemma",
+    "claim": "t17",
+    "sentence": "It drives high-growth companies overseas, in turn reducing the pool of projects to be financed and hindering the develop"
+   }
+  ]
+ },
+ "t13": [
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "base",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "lex3",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "lex4",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "top7",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    7,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "fused6",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "fused6lex3",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "lrel90",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task61publish_paper1",
+   "policy": "lrel80",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "base",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "lex3",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "lex4",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "top7",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    10,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "fused6",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "fused6lex3",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "lrel90",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69ctrl_paper1",
+   "policy": "lrel80",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "base",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "lex3",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "lex4",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "top7",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    10,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "fused6",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "fused6lex3",
+   "proof_chunk_read": true,
+   "n_chunks": 17,
+   "read": [
+    3,
+    8,
+    9,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "lrel90",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    11,
+    12,
+    14
+   ]
+  },
+  {
+   "run": "gate_task69gate_paper1",
+   "policy": "lrel80",
+   "proof_chunk_read": false,
+   "n_chunks": 17,
+   "read": [
+    3,
+    5,
+    8,
+    11,
+    12,
+    14
+   ]
+  }
+ ],
+ "seconds": 413
+}

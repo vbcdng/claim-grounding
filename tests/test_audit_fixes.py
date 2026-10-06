@@ -9,7 +9,7 @@ import sys
 import json
 import tempfile
 import unittest
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -162,13 +162,15 @@ class TestDegenerateFilters(unittest.TestCase):
 
     def test_auto_support_still_fires_without_contradiction(self):
         # false-alarm control for BUG-1: an ordinary >=0.97 match with a clean
-        # window still auto-accepts with no LLM call.
+        # window still auto-accepts with no LLM call. Since card 133 only a
+        # word-identical claim qualifies (a paraphrase like "The US hosts…" is
+        # judged — tests/test_near_verbatim_shortcut.py).
         matched = "The United States hosts about three quarters of global compute."
         src = {"title": "S", "sentences": [
             {"text": matched, "page": 1},
             {"text": "China is second with roughly fourteen percent.", "page": 1}]}
         llm = MagicMock()
-        e = matcher._judge_source("The US hosts about three quarters of global compute.",
+        e = matcher._judge_source("The United States hosts about three quarters of global compute.",
                                   "p1", src, [0.99, 0.10], llm, "{CLAIM}{PASSAGE}")
         self.assertFalse(llm.call.called)         # auto-accepted, no judge call
         self.assertTrue(e["supported"])
@@ -320,6 +322,70 @@ class TestChunkedExtraction(unittest.TestCase):
         # cost stays bounded: <= (top + lexical-rescue) extractions + 2 votes
         self.assertLessEqual(llm.call.call_count,
                              matcher.EXTRACT_TOP_CHUNKS + matcher.EXTRACT_LEX_CHUNKS + 2)
+
+    def _t13_boundary_shift_case(self):
+        """Task #76 (paper1 t13, 2026-09-02): the proof sentence shares a few
+        rare words with the claim (lexical rank 3 among the chunks) but has a
+        buried cosine, and its chunk holds no high-cosine neighbour, so it sits
+        at cosine rank 8 of 10 — the shape the pypdf boundary shift produced.
+        Two decoy chunks share MORE words with the claim and are already in the
+        cosine top-6, so only a top-3 lexical rescue reaches the needle."""
+        claim = ("The leading power restricts access to its most capable models on a "
+                 "tiered, country-by-country basis, and firms in other countries are "
+                 "progressively outcompeted.")
+        needle = ("Access to the most capable models is throttled by default, in part "
+                  "to save compute for American customers.")
+        decoy1 = ("Firms in other countries are progressively outcompeted while the "
+                  "leading power restricts access on a tiered basis.")
+        decoy2 = ("The leading power restricts access to models on a country-by-country "
+                  "basis for firms in other countries.")
+        sents = [{"text": "Blue elephants wander across quiet plains during misty "
+                          "winter mornings again.", "page": 1 + i // 100}
+                 for i in range(1100)]
+        sents[5] = {"text": decoy1, "page": 1}
+        sents[120] = {"text": decoy2, "page": 2}
+        sents[900] = {"text": needle, "page": 9}
+        chunks = matcher._chunk_sents(sents)
+        self.assertGreater(len(chunks), matcher.EXTRACT_TOP_CHUNKS)
+        needle_chunk = next(i for i, (_, idx) in enumerate(chunks) if 900 in idx)
+        row = [0.4] * len(sents)
+        # seven chunks outrank the needle's by cosine (ranks 1-7); needle chunk = rank 8
+        for rank, ci in enumerate(i for i in range(len(chunks)) if i != needle_chunk):
+            if rank < 7:
+                row[chunks[ci][1][0]] = 0.9 - 0.01 * rank
+        row[900] = 0.5
+        llm = MagicMock()
+        llm.call.side_effect = lambda p, **kw: (
+            json.dumps({"supported": True, "reason": "tiered access stated"}) if p.startswith("JG")
+            else json.dumps({"sentences": [needle]}) if needle in p
+            else json.dumps({"sentences": []}))
+        src = {"title": "Europe 2031", "sentences": sents}
+        lex = matcher._lex_scores(claim, [s["text"] for s in sents])
+        lex_rank = sorted(range(len(chunks)),
+                          key=lambda i: -max(lex[j] for j in chunks[i][1]))
+        self.assertEqual(lex_rank.index(needle_chunk), 2)   # lexical rank 3
+        return claim, needle, src, row, llm
+
+    def test_lexical_rescue_reads_rank3_chunk_t13(self):
+        claim, needle, src, row, llm = self._t13_boundary_shift_case()
+        e = matcher._extract_evidence(claim, "p1", src, llm,
+                                      "EX {CLAIM} {SOURCE}", "JG {CLAIM} {PASSAGE}",
+                                      row=row)
+        self.assertEqual(e["sentence"], needle)
+        self.assertTrue(e["supported"])
+        self.assertLessEqual(llm.call.call_count,
+                             matcher.EXTRACT_TOP_CHUNKS + matcher.EXTRACT_LEX_CHUNKS + 2)
+
+    def test_lexical_rescue_of_two_misses_t13(self):
+        # Documents the pre-#76 failure: with the old top-2 lexical rescue the
+        # needle chunk is never sent to the extractor and the claim is rejected.
+        claim, needle, src, row, llm = self._t13_boundary_shift_case()
+        with patch.object(matcher, "EXTRACT_LEX_CHUNKS", 2):
+            e = matcher._extract_evidence(claim, "p1", src, llm,
+                                          "EX {CLAIM} {SOURCE}", "JG {CLAIM} {PASSAGE}",
+                                          row=row)
+        self.assertFalse(e["supported"])
+        self.assertFalse(any(needle in c.args[0] for c in llm.call.call_args_list))
 
 
 class TestContentCheck(unittest.TestCase):

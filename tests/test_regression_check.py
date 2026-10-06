@@ -118,3 +118,27 @@ class TestShippedGroundTruth(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestAcceptedRed(unittest.TestCase):
+    """2026-09-06: a hard row the author ruled accepted_red prints red but is
+    not a new failure, so a baseline gate exits 0."""
+
+    def test_accepted_red_row_is_not_a_failure(self):
+        rep = rc.score(
+            {"text_claims": [{"id": "t1", "text": "A.", "verdict": "supported"},
+                             {"id": "t2", "text": "B.", "verdict": "supported"}]},
+            {"claims": [{"id": "t1", "text": "A.", "expect": "unsupported", "note": "n",
+                         "accepted_red": "author 2026-08-11"},
+                        {"id": "t2", "text": "B.", "expect": "unsupported", "note": "n"}]})
+        self.assertEqual([f["id"] for f in rep["failures"]], ["t2"])
+        self.assertEqual([f["id"] for f in rep["accepted_red"]], ["t1"])
+
+    def test_accepted_red_row_that_passes_counts_as_a_pass(self):
+        rep = rc.score(
+            {"text_claims": [{"id": "t1", "text": "A.", "verdict": "unsupported"}]},
+            {"claims": [{"id": "t1", "text": "A.", "expect": "unsupported", "note": "n",
+                         "accepted_red": "author 2026-08-11"}]})
+        self.assertEqual(rep["passes"], 1)
+        self.assertEqual(rep["accepted_red"], [])
+

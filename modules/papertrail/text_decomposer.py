@@ -186,6 +186,82 @@ def _starts_with_frame_opener(lowered: str) -> bool:
                for opener in _FRAME_OPENERS)
 
 
+# --- Long openers (card #25) -------------------------------------------------
+#
+# The 6-word cap above missed openers that describe the study before naming
+# its authors: "Using preliminary US county level analysis, Abedi et al.[[a]]
+# document that X" (pilot100:cidev0023, 9 words) split into a content-free
+# cited stub + the real assertion UNCITED, never checked. What matters is not
+# length but that the opener asserts nothing. A segment of more than 6 words
+# is a stub only when ALL hold:
+#   1. it ENDS in a strong author-naming tail: "<Name> et al.", "<Name> and
+#      colleagues/co-workers", or an author list WITH a year ("Kim, Lee and
+#      Park (2019)"). A yearless name list is refused here — "In the three
+#      regions studied, China and Japan" is a place list, not a byline;
+#   2. the prefix before the tail starts with a frame opener, or with an
+#      introductory preposition AND is set off from the tail by a comma;
+#   3. no prefix word is a finite/auxiliary verb, a subject pronoun, a
+#      relative word or a negation (closed list below) — a crude, deliberately
+#      over-refusing stand-in for "no clause of its own"; participles like
+#      "Using"/"collected" are fine, they don't assert;
+#   4. at most _LONG_STUB_MAX_WORDS words.
+# Anything else keeps the split-before-the-marker behaviour. Short segments
+# (<=6 words) take the original path unchanged.
+
+_LONG_STUB_MAX_WORDS = 25
+
+_INTRO_PREPOSITIONS = (
+    "in", "from", "with", "through", "after", "during", "across", "among",
+    "for", "on", "at", "over", "within", "via", "drawing on", "building on",
+    "analysing", "analyzing", "studying", "examining", "surveying", "modelling",
+    "modeling",
+)
+
+# Words that give the prefix a clause of its own. Closed list; extend it (not
+# the logic) if a false merge turns up.
+_CLAUSE_WORDS = frozenset("""
+is are was were be been being am has have had do does did can could will would
+may might must shall should we i you he she it they our us them this these those
+that which who whom whose where when while because although though since if not
+no never found find finds show shows showed shown report reports reported
+suggest suggests suggested demonstrate demonstrates demonstrated argue argues
+argued claim claims claimed conclude concludes concluded note notes noted
+observe observes observed document documents documented indicate indicates
+indicated reveal reveals revealed confirm confirms confirmed
+""".split())
+
+_NAME_TAIL = (
+    rf"{_AUTHOR_TOKEN}(?:\s+(?:and|&)\s+{_AUTHOR_TOKEN})?\s+et\s+al\.?"
+    rf"|{_AUTHOR_TOKEN}\s+(?:and|&)\s+(?:colleagues|co-?workers)"
+    rf"|{_AUTHOR_TOKEN}(?:\s*(?:,|and|&)\s*{_AUTHOR_TOKEN})*\s*\(?\d{{4}}\)?"
+)
+_LONG_STUB_TAIL_RE = re.compile(
+    rf"(?P<sep>,?)\s*(?<![A-Za-z'’\-])(?P<tail>(?:{_NAME_TAIL}))[.,)]*\s*(?:{_YEAR})?[.,)]*$"
+)
+
+
+def _is_long_attribution_stub(seg: str) -> bool:
+    words = seg.split()
+    if len(words) > _LONG_STUB_MAX_WORDS:
+        return False
+    m = _LONG_STUB_TAIL_RE.search(seg)
+    if not m or m.start() == 0:
+        return False
+    prefix = seg[:m.start()].strip()
+    if not prefix:
+        return False
+    lowered = prefix.lower()
+    if not _starts_with_frame_opener(lowered):
+        if not any(lowered.startswith(p + " ") for p in _INTRO_PREPOSITIONS):
+            return False
+        if m.group("sep") != ",":
+            return False
+    # an all-caps token is an acronym ("US county"), never the pronoun "us"
+    prefix_words = [w.lower() for w in re.findall(r"[A-Za-z]+(?:['’][A-Za-z]+)?", prefix)
+                    if not (len(w) > 1 and w.isupper())]
+    return not any(w in _CLAUSE_WORDS for w in prefix_words)
+
+
 def _is_attribution_stub(seg: str) -> bool:
     """True if `seg` (the text immediately before a marker-group, markers
     already stripped) is a narrative-citation attribution stub — a sentence
@@ -193,7 +269,8 @@ def _is_attribution_stub(seg: str) -> bool:
     rather than the assertion the marker is citing.
 
     All of these must hold, per the design spec (docs/ARCHITECTURE.md §5.1):
-    short (<=6 words), no sentence-ending punctuation inside it (so it reads
+    short (<=6 words; a longer segment goes to _is_long_attribution_stub,
+    card #25), no sentence-ending punctuation inside it (so it reads
     as an opener, not the tail of a prior sentence), and one of: ends in
     "et al[.]" (+ optional comma/paren/year), is a bare author-name list, or
     starts with a closed frame-opener phrase. Conservative by construction —
@@ -201,10 +278,10 @@ def _is_attribution_stub(seg: str) -> bool:
     seg = seg.strip()
     if not seg:
         return False
-    if len(seg.split()) > 6:
-        return False
     if re.search(r"[.!?]", _ET_AL_TOKEN_RE.sub("", seg)):
         return False
+    if len(seg.split()) > 6:
+        return _is_long_attribution_stub(seg)   # card #25
     if _ET_AL_STUB_RE.match(seg):
         return True
     if _AUTHOR_LIST_STUB_RE.match(seg):
@@ -308,6 +385,51 @@ def _strip_orphan_punct(s: str) -> str:
     return _ORPHAN_OPEN_RE.sub("", _ORPHAN_CLOSE_RE.sub("", s)).strip()
 
 
+# Card #128: punkt (and the regex fallback) cut after scholarly abbreviations —
+# "Kim et al. verified X" -> ["Kim et al.", "verified X"], "tasks, i.e. the hard
+# ones" -> 2 pieces. A cut right after one of these is undone:
+#   _NEVER_FINAL: abbreviations that do not end an English sentence in practice
+#     (a following capital is still the same sentence: "cf. Fig. 2", "e.g. Kim").
+#   _MAYBE_FINAL: "et al." / "etc." DO end sentences ("... by Smith et al. The
+#     next ..."), so they are rejoined only when the next piece cannot start a
+#     sentence: lowercase, digit, opening bracket, a punctuation mark, or the
+#     possessive "'s" (chimpanzee text: "excluded [from Engelmann et al.'s study]").
+_NEVER_FINAL_RE = re.compile(
+    r"(?:\b(?:i\.\s?e|e\.\s?g|cf|vs|viz|approx|ca|resp|Fig|Figs|Eq|Eqs|Ref|Refs"
+    r"|Tab|Sec|Ch|Vol|pp|Dr|Mr|Mrs|Ms|Prof)\.)$", re.IGNORECASE)
+_MAYBE_FINAL_RE = re.compile(r"\b(?:et\s+al|etc)\.$", re.IGNORECASE)
+_NOT_A_START_RE = re.compile(r"^(?:[a-z0-9]|[(\[{,;:%'’])")
+
+
+def _rejoin_abbreviation_cuts(pieces: List[str], text: str = None) -> List[str]:
+    """Undo cuts right after an abbreviation. With `text` (the string the pieces
+    were cut from) a rejoined sentence is the exact original stretch, so "al.'s"
+    stays "al.'s"; without it the pieces are joined by one space."""
+    spans = []
+    pos = 0
+    for piece in pieces:
+        start = text.find(piece, pos) if text is not None else -1
+        spans.append((start, start + len(piece)) if start >= 0 else None)
+        if start >= 0:
+            pos = start + len(piece)
+    out: List[str] = []
+    out_spans: List[tuple] = []
+    for piece, span in zip(pieces, spans):
+        if out and (_NEVER_FINAL_RE.search(out[-1])
+                    or (_MAYBE_FINAL_RE.search(out[-1]) and _NOT_A_START_RE.match(piece))):
+            prev = out_spans[-1]
+            if prev is not None and span is not None:
+                out[-1] = text[prev[0]:span[1]]
+                out_spans[-1] = (prev[0], span[1])
+            else:
+                out[-1] = out[-1] + " " + piece
+                out_spans[-1] = None
+        else:
+            out.append(piece)
+            out_spans.append(span)
+    return out
+
+
 def _sentence_split(text: str) -> List[str]:
     # Normalise newlines to spaces but keep markers attached to their sentence.
     text = re.sub(r"\s+", " ", text).strip()
@@ -315,6 +437,7 @@ def _sentence_split(text: str) -> List[str]:
         return []
     try:
         import nltk
-        return [s.strip() for s in nltk.sent_tokenize(text) if s.strip()]
+        pieces = [s.strip() for s in nltk.sent_tokenize(text) if s.strip()]
     except Exception:
-        return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+        pieces = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    return _rejoin_abbreviation_cuts(pieces, text)

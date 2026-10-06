@@ -31,7 +31,7 @@
         "gold-level performance",
         "9.7%"
       ],
-      "note": "Fable supported (r2), owner: 'very nice improvement'"
+      "note": "Fable supported (r2), the author judged the improvement good"
     },
     {
       "id": "t6",
@@ -42,7 +42,7 @@
           "overestimating improvements in climate technology"
         ]
       ],
-      "note": "EITHER quote satisfies the anchor per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)'): the paper's summary sentence is as valid a proof as the detail sentence. (List-in-list = alternatives; scorer support added same commit.)"
+      "note": "EITHER quote satisfies the anchor per author ruling 2026-08-11 (the author's row-by-row review of the gate of 2026-08-11): the paper's summary sentence is as valid a proof as the detail sentence. (List-in-list = alternatives; scorer support added same commit.)"
     },
     {
       "id": "t7",
@@ -56,7 +56,8 @@
         "wave 4",
         "underestimating the progress"
       ],
-      "note": "BOTH anchors stay required per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)'): the verdict is right but the tool must SHOW the wave-4 sentence that proves 'persisting into 2025-2026' like any other grounded part. Fix lives in tasks #4/#19. Was: Fable supported (r2)"
+      "note": "BOTH anchors stay required per author ruling 2026-08-11 (the author's row-by-row review of the gate of 2026-08-11): the verdict is right but the tool must SHOW the wave-4 sentence that proves 'persisting into 2025-2026' like any other grounded part. Fix lives in tasks #4/#19. Was: Fable supported (r2)",
+      "accepted_red": "the author's row-by-row review of the gate of 2026-08-11: stays red as a reminder until the fix ships; marked accepted_red 2026-09-06 so a baseline gate exits 0"
     },
     {
       "id": "t9",
@@ -74,7 +75,8 @@
       "anchors": [
         "not statistically distinguishable"
       ],
-      "note": "KEEP HARD per author ruling 2026-08-11 (vault: 'Problem rows to rule on (gate 2026-08-11)'): the claim is right, the subject-guard code is wrong (rejects on the transition word 'Tellingly'); stays red until task #45 or another fix solves it — the author explicitly wants to see which fix gets there. Was: Fable supported (r2), owner checked-ok"
+      "note": "KEEP HARD per author ruling 2026-08-11 (the author's row-by-row review of the gate of 2026-08-11): the claim is right, the subject-guard code is wrong (rejects on the transition word 'Tellingly'); stays red until task #45 or another fix solves it — the author explicitly wants to see which fix gets there. Was: Fable supported (r2), owner checked-ok",
+      "accepted_red": "the author's row-by-row review of the gate of 2026-08-11: stays red as a reminder until the fix ships; marked accepted_red 2026-09-06 so a baseline gate exits 0"
     },
     {
       "id": "t11",

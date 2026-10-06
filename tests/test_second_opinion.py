@@ -225,5 +225,33 @@ class TestViewerFlags(unittest.TestCase):
         self.assertIn("taxation half only", page)
 
 
+class TestDefaultModelPick(unittest.TestCase):
+    """Task #67 (2026-09-10): pin the two properties the default was picked for.
+
+    The pass exists so a claim is read by a model that is NOT the one whose work
+    is being checked. Two ways to break that silently: point the default at the
+    judge's own family, or point it at the arbiter's model (default ON), which
+    would correlate the two layers' disagreements. Both are cheap to assert.
+    """
+
+    def test_default_is_not_the_judge_family(self):
+        from modules.papertrail import llm_client
+        judge = llm_client._default_model()          # the config's judge, prefixed
+        self.assertTrue(judge, "the config must name a judge model")
+        judge_family = judge.split("/", 1)[0]        # e.g. "gemini"
+        self.assertNotEqual(second_opinion.DEFAULT_MODEL.split("/", 1)[0], judge_family)
+        self.assertNotIn("gemma", second_opinion.DEFAULT_MODEL)
+        self.assertNotIn("gemini", second_opinion.DEFAULT_MODEL)
+
+    def test_default_is_not_the_arbiter_model(self):
+        from modules.papertrail import arbiter
+        self.assertNotEqual(second_opinion.DEFAULT_MODEL, arbiter.DEFAULT_MODEL)
+
+    def test_default_spends_nothing_and_needs_no_key(self):
+        # A $0 default keeps a bare `--second-opinion` safe to type: no key to
+        # configure, nothing billed. Change this only with the author's ruling.
+        self.assertTrue(second_opinion.DEFAULT_MODEL.startswith("claude-code/"))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -305,3 +305,89 @@ class TestRescueReJudge(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def _write_arbiterless_run(base, name="repaired_run"):
+    """A run made with the arbiter switched OFF — the shape task #32's repaired
+    round-3 runs have, which `replay(fresh=True)` must accept."""
+    run = os.path.join(base, "data", name)
+    os.makedirs(os.path.join(run, "source_claims"))
+    claims = [
+        {"id": "t1", "text": "The kiln was fired at 900 degrees.", "verdict": "unsupported",
+         "paper_ids": ["p1"], "evidences": []},
+        {"id": "t2", "text": "Glaze needs quartz.", "verdict": "supported",
+         "proof_state": "partial", "paper_ids": ["p1"], "evidences": [],
+         "covering": {"uncovered": ["quartz"]}},
+    ]
+    analysis = {"text_claims": claims,
+                "sources": [{"paper_id": "p1", "title": "Pots Paper — A. Author"}],
+                "metadata": {"text_file": "/somewhere/pots_loop.md",
+                             "timestamp": "2026-09-10T09:00:00", "model": "gemini/judge"}}
+    with open(os.path.join(run, "analysis.json"), "w") as f:
+        json.dump(analysis, f)
+    with open(os.path.join(run, "source_claims", "p1.json"), "w") as f:
+        json.dump({"paper_id": "p1", "title": "t",
+                   "sentences": [{"text": REAL_SENT, "page": 1}]}, f)
+    return run
+
+
+class TestFreshRows(unittest.TestCase):
+    """task #32 q6: ask a candidate about claims no arbiter ever saw."""
+
+    ROWS = [{"run": ".", "claim_id": "t1", "strata": [], "gt": None},
+            {"run": ".", "claim_id": "t2", "strata": [], "gt": None}]
+
+    def test_without_fresh_the_rows_are_skipped(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            run = _write_arbiterless_run(tmp)
+            fake = FakeLLM(PROVABLE)
+            summary = arbiter_replay.replay(self.ROWS, os.path.join(tmp, "out"),
+                                            data_dir=run, llm=fake)
+            self.assertEqual(summary["claims"], 0)
+            self.assertEqual(fake.calls, 0)
+            self.assertEqual(len(summary["problems"]), 2)
+            self.assertIn("--fresh", summary["problems"][0])
+
+    def test_fresh_asks_and_records_no_comparison(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            run = _write_arbiterless_run(tmp)
+            with open(os.path.join(run, "analysis.json"), "rb") as f:
+                before = f.read()
+            out = os.path.join(tmp, "out")
+            fake = FakeLLM(PROVABLE)
+            summary = arbiter_replay.replay(self.ROWS, out, data_dir=run, llm=fake,
+                                            judge_llm=FakeJudge(supported=True))
+            # fresh=False by default, so the flag has to be explicit
+            self.assertEqual(summary["claims"], 0)
+            summary = arbiter_replay.replay(self.ROWS, out, data_dir=run, llm=fake,
+                                            judge_llm=FakeJudge(supported=True),
+                                            fresh=True)
+            self.assertEqual(summary["claims"], 2)
+            self.assertEqual(summary["no_response"], 0)
+            with open(os.path.join(run, "analysis.json"), "rb") as f:
+                self.assertEqual(f.read(), before)   # run dir untouched
+            with open(os.path.join(out, "results.jsonl")) as f:
+                by_id = {r["claim_id"]: r for r in map(json.loads, f)}
+            for r in by_id.values():
+                self.assertTrue(r["fresh"])
+                self.assertIsNone(r["action_match"])   # nothing to compare against
+                self.assertIsNone(r["old"])
+                self.assertEqual(r["new"]["n_proofs"], 1)      # quote gate still runs
+                self.assertEqual(r["new"]["quotes_dropped"], 1)
+            # the production machinery still runs on the fresh rulings
+            self.assertTrue(by_id["t1"]["rescue"]["proposed"])
+            self.assertTrue(by_id["t2"]["amber"]["would_resolve"])
+            with open(os.path.join(out, "report.md")) as f:
+                report = f.read()
+            self.assertIn("no recorded arbiter answer", report)
+
+    def test_estimate_needs_fresh_too(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            run = _write_arbiterless_run(tmp)
+            plain = arbiter_replay.replay(self.ROWS, os.path.join(tmp, "o1"),
+                                          data_dir=run, estimate_only=True)
+            self.assertEqual(plain["claims"], 0)
+            fresh = arbiter_replay.replay(self.ROWS, os.path.join(tmp, "o2"),
+                                          data_dir=run, estimate_only=True, fresh=True)
+            self.assertEqual(fresh["claims"], 2)
+            self.assertGreater(fresh["est_input_tokens"], 0)

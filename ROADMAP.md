@@ -38,6 +38,7 @@ Sizes: **S** = hours, **M** = a day or two, **L** = several days or more.
 | 2026-08-30 | Progress note on the §3 repair-loop item (a ready-made instruction text for agent programs is now included, and the first half of the loop has been run end to end). One cost item added to the speed-and-cost list: measure how often the second checker runs. The whole file was rewritten to the project's measured plain-style rules: sentences under 25 words, no semicolons, real lists. No item was added, removed or reordered beyond what these rows say. |
 | 2026-08-30 | Wording pass on the author's request: project shorthand replaced with plain words throughout — "parked" is now "paused", "shipped" is "finished" or "included", the judge-model "sweep" is a "comparison", and similar. No meanings changed. |
 | 2026-08-30 | Added the note at the top: after the past month of work, this plan is due for a strong revision, and the next version of the document will be distinctly different. The items below were left as they are. |
+| 2026-09-02 | The §2 item "show the right proof sentence on the card" is finished and removed from the list. Two things were wrong and both are fixed. The results page sometimes printed two sentences from different parts of a paper as though they were one continuous quote, because the small reference numbers printed between them hid the sentence break, and in one benchmark row that joined quote produced a wrong "supported" decision. And the sentences that prove each part of a claim were hidden behind a button in the default view, so the only sentence most readers saw was one picked for having similar wording. The change is in the pages that draw the results only, so no decision can move. |
 
 ---
 
@@ -174,13 +175,6 @@ missed too.
 
 This list has no priority order. Take whichever item fits the moment.
 
-- **Show the right proof sentence on the card.** Some cards show a
-  sentence that is merely about the same topic, instead of the one that
-  actually proves the claim. The proving sentence was already found and
-  sits in the run's data. The change is display-only, so verdicts
-  cannot move, and the design is done. It is worth doing before
-  everything else. It is nearly free, and a card showing the wrong
-  sentence gives the reader evidence that proves nothing.
 - **"Source file missing" becomes its own category.** A claim whose
   source file simply isn't there currently gets the same red
   "unsupported" verdict as a claim that was really checked and failed.

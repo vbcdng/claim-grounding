@@ -21,6 +21,7 @@ accepted for interface parity and ignored.
 """
 
 import logging
+import os
 import random
 import shutil
 import subprocess
@@ -35,6 +36,28 @@ logger = logging.getLogger(__name__)
 DEFAULT_CLI_MODEL = "haiku"     # cheapest; the judge study's subject
 _TIMEOUT_S = 240                # per call; the CLI adds ~seconds of startup overhead
 _MAX_RETRIES = 3                # attempts for a GENERIC failure (short 2^n backoff)
+
+# Why the limit is adjustable (card #88, measured 2026-09-12 in
+# data/card88/sonnet_20260912/claude-code_sonnet_one_prompt/llm_calls.jsonl):
+# a Sonnet-class model's conversion calls ran 100-385 s with 2,700-5,200-char
+# answers, while the Opus-class arm's ran 19 s at the median and 148 s at most.
+# Two Sonnet calls were killed at 240 s, and three kills in a row store the
+# sentence as a refusal — so OUR limit, not the model, decides the result.
+# Set PAPERTRAIL_CLAUDE_CLI_TIMEOUT_S (whole seconds) to raise it for slow models.
+_TIMEOUT_ENV = "PAPERTRAIL_CLAUDE_CLI_TIMEOUT_S"
+
+
+def cli_timeout_s() -> int:
+    """Per-call CLI timeout: $PAPERTRAIL_CLAUDE_CLI_TIMEOUT_S, else _TIMEOUT_S (240).
+
+    Read at call time, not import time, so a test (or benchmarks/ci_blind_reader.py,
+    which assigns _TIMEOUT_S directly) can change it without reloading the module.
+    An unset, empty or non-numeric value falls back to the default.
+    """
+    try:
+        return int(str(os.environ.get(_TIMEOUT_ENV, "")).strip())
+    except (TypeError, ValueError):
+        return _TIMEOUT_S
 
 # The local CLI shares one Claude subscription across the whole --concurrency
 # fan-out, so a high fan-out trips a rate/concurrency ceiling: the burst comes
@@ -101,12 +124,13 @@ class ClaudeCodeClient(LLMClient):
         # a genuinely broken call still gives up fast. Timeouts count as generic.
         gen = thr = 0
         while gen < _MAX_RETRIES and thr < _THROTTLE_MAX_RETRIES:
+            limit_s = cli_timeout_s()
             try:
                 out = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
-                                     timeout=_TIMEOUT_S, cwd=self._cwd)
+                                     timeout=limit_s, cwd=self._cwd)
             except subprocess.TimeoutExpired:
                 gen += 1
-                logger.warning(f"claude CLI timed out after {_TIMEOUT_S}s "
+                logger.warning(f"claude CLI timed out after {limit_s}s "
                                f"(generic attempt {gen}/{_MAX_RETRIES})")
                 if gen < _MAX_RETRIES:
                     time.sleep(2 ** (gen - 1))

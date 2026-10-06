@@ -199,6 +199,88 @@ class ProperNounListNotAStub(unittest.TestCase):
         self.assertIn("found the opposite", claims[0]["text"])
 
 
+class LongOpenerStubs(unittest.TestCase):
+    """Card #25: the 6-word cap split openers that describe the study before
+    naming its authors (pilot100:cidev0023, 9 words), leaving the real
+    assertion uncited. A longer opener now merges when it ends in an
+    author-naming tail and asserts nothing of its own; one that asserts
+    something still splits."""
+
+    def _one(self, body, marker="a"):
+        claims = td.extract_claims(body)
+        self.assertEqual(len(claims), 1, claims)
+        self.assertEqual(claims[0]["markers"], [marker])
+        return claims[0]["text"]
+
+    def _split(self, body):
+        claims = td.extract_claims(body)
+        self.assertEqual(len(claims), 2, claims)
+        self.assertEqual(claims[1]["markers"], [])
+        return claims
+
+    def test_cidev0023_long_frame_opener_merges(self):
+        text = self._one(
+            "Using preliminary US county level analysis, Abedi et al. ([[cidev0023]]) "
+            "document that existing rates of poverty, disease and the presence of "
+            "ethnic minorities were all associated with higher infection.", "cidev0023")
+        self.assertEqual(text,
+                         "Using preliminary US county level analysis, Abedi et al. document "
+                         "that existing rates of poverty, disease and the presence of ethnic "
+                         "minorities were all associated with higher infection.")
+
+    def test_cidev0038_paragraph_end_claim_unchanged(self):
+        # The marker closes the paragraph and the segment asserts a similarity:
+        # it is a real claim and stays one cited claim, exactly as before.
+        body = ("We developed a mathematical model describing the distribution of "
+                "observed SARS-CoV-2 viral loads over time after infection. This model "
+                "is similar to that used by Larremore et al. ([[cidev0038]])")
+        claims = td.extract_claims(body)
+        self.assertEqual(len(claims), 1)
+        self.assertEqual(claims[0]["markers"], ["cidev0038"])
+        self.assertTrue(claims[0]["text"].endswith("similar to that used by Larremore et al."))
+
+    def test_long_according_to_without_comma_merges(self):
+        self.assertIn("rates rose", self._one(
+            "According to a large national survey of older adults by Kim et al.[[a]] rates rose."))
+
+    def test_long_preposition_opener_and_colleagues_merges(self):
+        self.assertIn("found lower blood pressure", self._one(
+            "In a 2020 cohort of older adults in rural areas, Smith and colleagues[[a]] "
+            "found lower blood pressure."))
+
+    def test_long_opener_author_list_with_year_merges(self):
+        self.assertIn("reported fewer infections", self._one(
+            "In a cohort study of three thousand adults, Kim, Lee and Park (2019)[[a]] "
+            "reported fewer infections."))
+
+    def test_long_opener_with_its_own_clause_still_splits(self):
+        claims = self._split(
+            "Using a large cohort we showed that smoking causes cancer, as did Kim et al.[[a]] "
+            "in mice.")
+        self.assertEqual(claims[0]["markers"], ["a"])
+
+    def test_long_opener_with_auxiliary_verb_still_splits(self):
+        # comma + preposition start are both present; only the verbs ("was
+        # shown") refuse it
+        self._split("In mice the drug was shown to lower blood pressure, Kim et al.[[a]] "
+                    "in two trials.")
+
+    def test_long_opener_not_starting_with_preposition_still_splits(self):
+        self._split("This model is similar to the one used by Larremore et al.[[a]] "
+                    "and it performs well.")
+
+    def test_long_opener_yearless_name_list_still_splits(self):
+        # a place list, not a byline: a yearless name list is refused on the long path
+        self._split("In the three regions studied during the survey, China and Japan[[a]] "
+                    "saw the largest rises.")
+
+    def test_long_preposition_opener_without_comma_still_splits(self):
+        self._split("In a study of mice fed a high fat diet Kim et al.[[a]] found weight gain.")
+
+    def test_over_long_opener_still_splits(self):
+        self._split("Using " + "very " * 25 + "old data, Kim et al.[[a]] found weight gain.")
+
+
 class MarkerTypos(unittest.TestCase):
     """find_marker_typos (task #69 item 1): near-miss markers the parser
     rejects must produce a warning instead of vanishing silently."""

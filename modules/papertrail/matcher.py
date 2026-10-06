@@ -31,7 +31,9 @@ logger = logging.getLogger(__name__)
 OFFTOPIC = 0.55       # candidate sentence cosine below this -> not a candidate
 AUTO_SUPPORT = 0.97   # near-verbatim match -> accept without an LLM call
                       # (unless the ±1 window carries a retraction/correction
-                      # cue — see _CONTRA_CUE_RE below)
+                      # cue — see _CONTRA_CUE_RE below — or the claim's words
+                      # are not the sentence's words exactly — see
+                      # _near_verbatim_ok, card 133)
 
 # Retraction/correction cues that disqualify the near-verbatim auto-accept: a
 # high-cosine match to a sentence that the surrounding window walks back
@@ -72,6 +74,30 @@ def _charstream(s: str) -> str:
     'per - sonalized', glued or letter-spaced text), so an honest quote of a
     garbled region matches the source only at the character level."""
     return "".join(re.findall(r"[a-z0-9]+", (s or "").lower()))
+
+
+# Numeric reference markers the source prints and the claim does not carry
+# ("[6,8,9 ]", "[ 6]", "[3–5]"): stripped before the word-identity test below.
+_NUM_REF_MARKER_RE = re.compile(r"\[\s*\d+(?:\s*[,;–-]\s*\d+)*\s*\]")
+
+
+def _near_verbatim_ok(claim: str, sentence: str) -> Tuple[bool, str]:
+    """May the cosine ≥ AUTO_SUPPORT shortcut accept `claim` on `sentence`
+    WITHOUT a judge call? Only when the claim's words ARE the sentence's words
+    (case, punctuation, spacing, PDF hyphen-splits and numeric reference
+    markers ignored). Card 133: SPECTER cosine ≥0.97 was fooled on 34 of 79
+    distinct shortcut acceptances on disk — eggs t36 ("A further meta-analysis
+    reached compatible conclusions but is paywalled" ↔ "Our meta-analysis have
+    several limitations", 0.977), changed figures (2.68% vs 6.68%), flipped
+    directions (increased vs declines), swapped words, a dropped "Early
+    newspaper reports stated that" — shapes no overlap threshold separates, so
+    anything short of word identity goes to the judge (one call, never a
+    verdict). Pure string test, no model call."""
+    c = _charstream(_NUM_REF_MARKER_RE.sub(" ", claim or ""))
+    s = _charstream(_NUM_REF_MARKER_RE.sub(" ", sentence or ""))
+    if c and c == s:
+        return True, "claim words identical to the sentence"
+    return False, "claim words differ from the sentence"
 
 
 # The unsourced-claim-fragment test (essay-t9 class, VERIFIED_FINDINGS
@@ -466,8 +492,12 @@ def _window(sents: List[Dict[str, Any]], j: int, radius: int = 1) -> str:
 
 
 def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
-                  llm, prompt: str) -> Dict[str, Any]:
-    """Best supporting (or, failing that, closest) sentence within ONE source for a claim."""
+                  llm, prompt: str, prefer: Optional[List[int]] = None) -> Dict[str, Any]:
+    """Best supporting (or, failing that, closest) sentence within ONE source for a claim.
+    prefer (card 85, stage 3a): source-sentence indices judged FIRST, after
+    quoted-span hits — the passages the whole parent sentence already found,
+    so a short piece's search starts from its parent's passages. None (every
+    caller but aida/grounder.py) leaves the judge order exactly as before."""
     sents = src.get("sentences", []) or []
     if not sents or not row:
         return None
@@ -489,6 +519,12 @@ def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
     q_hits = [j for j in _quote_hit_indices(claim, sents)
               if not _unusable_evidence(sents[j].get("text", ""))]
     judge_order = q_hits + [j for j in topk if j not in q_hits]
+    if prefer:
+        pref = [j for j in prefer if isinstance(j, int) and 0 <= j < len(sents)
+                and j not in q_hits
+                and not _unusable_evidence(sents[j].get("text", ""))]
+        judge_order = q_hits + pref + [j for j in judge_order
+                                       if j not in q_hits and j not in pref]
     if not judge_order:
         if ranked:
             j = ranked[0]
@@ -499,13 +535,15 @@ def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
     for j in judge_order:
         cos = float(row[j])
         if j not in q_hits and cos >= AUTO_SUPPORT \
+                and _near_verbatim_ok(claim, sents[j].get("text", ""))[0] \
                 and not _CONTRA_CUE_RE.search(_window(sents, j)):
             # A retraction/correction cue in the ±1 window disqualifies the
             # auto-accept (synth prizerec class, VERIFIED_FINDINGS 2026-07-17:
             # a ≥0.97 match to "early reports stated X won…" locked in supported
             # while the NEXT sentence said the reports were retracted). The claim
             # still gets judged below — with the window — so a true support only
-            # pays one extra call; it is never auto-rejected here.
+            # pays one extra call; it is never auto-rejected here. Same for a
+            # claim whose words are not the sentence's words (card 133).
             return entry(j, True, f"near-verbatim match (cosine {round(cos,4)} ≥ {AUTO_SUPPORT})")
         # Provenance matters: attribution claims ("UNDP describes…", "as Altman
         # argues") are only judgeable when the judge knows whose document this is.
@@ -684,8 +722,31 @@ EXTRACT_TOP_CHUNKS = 6
 # (only for a benchmark arm), EXTRACT_MERGE_WORDS is the cap it then uses.
 EXTRACT_MERGE_WORDS = 2600
 EXTRACT_MERGE_ON = os.environ.get("PT_EXTRACT_MERGE", "") == "1"
-EXTRACT_LEX_CHUNKS = 2   # extra chunks rescued by LEXICAL overlap (union with the
-                         # cosine top-K, never a replacement — recall can only rise)
+EXTRACT_LEX_CHUNKS = 3   # extra chunks rescued by LEXICAL overlap (union with the
+                         # cosine top-K, never a replacement — recall can only rise).
+# How many pooled proof sentences reach the judge after ranking (task #94). Was a
+# bare `uniq[:8]` since the chunked extractor shipped 2026-07-03; named here so the
+# value is measurable and gate-testable. Offline replay over the logged extraction
+# calls (benchmarks/task94_replay/, no model calls, 271 rebuilt sweeps) says the
+# cap binds in about one full read in four (73 of 271; 368 of 1,724 pooled
+# sentences cut) but none of the cut sentences ranked in its source's top 10 on
+# either retrieval signal — the same two signals the ranking uses, so that is
+# evidence of no measured harm, not proof of none; only t13 was read by hand.
+# Kept at 8 because a longer stitched passage raises the judge's 'not stated'
+# refusals. Counts and the t13 walk-through: that folder's FINDINGS.md.
+EXTRACT_EVIDENCE_CAP = 8
+# 2 -> 3 on 2026-09-02 (task #76, paper1 t13): the proof sentence ("Access to the
+# most capable models is throttled by default ...") is lexical rank 3 of ~1,200
+# source sentences but cosine rank 162, so its chunk is read only when a
+# high-cosine neighbour happens to share the 1,200-word window. The pypdf reader
+# swap (cb19fe2) added 10 header sentences upstream, every later chunk boundary
+# moved ~14 sentences, the neighbour slid into the previous chunk, the proof
+# chunk fell from cosine rank 6 to 8, and lexical rank 3 missed the top-2 rescue
+# by one — reproduced call-for-call from the 8/31 vs 9/01 logs. Offline replay
+# over 4,162 logged sweeps (benchmarks/task76_replay/): +589 chunks read
+# (+3.2%), 0 chunks dropped, no past winner lost, t13's proof chunk read in
+# both post-swap runs. Fused (RRF) chunk ranking was rejected there: it changes
+# the read set in 1,177 sweeps and drops 1,808 chunks base read.
 # Task #50 half two, DECIDED 2026-08-29 (author): BATCHED-PARTS rescue
 # extraction was built, gate-tested RED (arm task50batch, 2026-08-28: pots t4
 # lost its rescue flip + 4 paper1 display losses despite -41% rescue input
@@ -849,14 +910,14 @@ def _extract_evidence(claim: str, pid: str, src: Dict[str, Any], llm,
                             extracted, row, lex, purpose)
 
 
-def _judge_extracted(claim: str, src: Dict[str, Any], sents: List[Dict],
-                     base: Dict[str, Any], llm, judge_prompt: str,
-                     extracted: List[str], row: Optional[List[float]],
-                     lex: List[float], purpose: str) -> Dict[str, Any]:
-    """Post-extraction half of the full-text probe (_extract_evidence): map the
-    extracted strings to source sentences, apply the quality/membership gates,
-    rank and cap, build the judged window, and vote. `extracted` must be
-    non-empty."""
+def _pool_extracted(claim: str, sents: List[Dict], extracted: List[str],
+                    row: Optional[List[float]], lex: List[float],
+                    paper_id: str = "") -> List[Dict[str, Any]]:
+    """Pool the strings the extractor copied out of every chunk into the ranked
+    candidate list the cap is then applied to: map each to a source sentence,
+    apply the quality and membership gates, de-duplicate, and rank. Split out of
+    _judge_extracted so the offline replay (benchmarks/task94_replay/) measures
+    the SHIPPED pooling instead of a copy of it that can drift."""
     mapped = [_map_to_index(e, sents) for e in extracted]
     # Evidence-quality gate (paper1 audit): drop fragments ("."), and drop
     # extractions that do NOT exist in the source but closely mirror the claim —
@@ -890,7 +951,7 @@ def _judge_extracted(claim: str, src: Dict[str, Any], sents: List[Dict],
             return True                     # verbatim quote (spacing-insensitive)
         if _unsourced_claim_fragment(m["text"], claim, full_loose, full_chars):
             logger.info("membership gate: dropped unsourced claim-fragment "
-                        "extraction from %s: %.90r", base["paper_id"], m["text"])
+                        "extraction from %s: %.90r", paper_id, m["text"])
             return False
         return True                         # honest non-verbatim condensation
 
@@ -911,7 +972,52 @@ def _judge_extracted(claim: str, src: Dict[str, Any], sents: List[Dict],
         lex_vals = [lex[m["j"]] if m["j"] >= 0 else -1.0 for m in uniq]
         fused = _rrf(cos_vals, lex_vals)
         uniq = [uniq[i] for i in sorted(range(len(uniq)), key=lambda i: -fused[i])]
-    mapped = uniq[:8]
+    return uniq
+
+
+def _cap_record(pooled: List[Dict[str, Any]], sents: List[Dict],
+                row: Optional[List[float]], lex: List[float]) -> Dict[str, Any]:
+    """Task #98: the per-sweep record of what EXTRACT_EVIDENCE_CAP did. `pooled`
+    is the ranked pool BEFORE the cap. Ranks are 0-based positions among ALL
+    sentences of the source (0 = most relevant), -1 for an unmapped hit — the same
+    convention as benchmarks/task94_replay/replay_evidence_cap.py, so the two
+    measurements are comparable row for row."""
+    n = len(pooled)
+    rec: Dict[str, Any] = {"cap": EXTRACT_EVIDENCE_CAP, "pooled": n,
+                           "shown": min(n, EXTRACT_EVIDENCE_CAP),
+                           "cut": max(0, n - EXTRACT_EVIDENCE_CAP),
+                           "n_sents_in_source": len(sents), "cut_sentences": []}
+    if n <= EXTRACT_EVIDENCE_CAP:
+        return rec
+    lex_rank = {j: r for r, j in enumerate(sorted(range(len(lex)), key=lambda j: -lex[j]))}
+    cos_rank = ({j: r for r, j in enumerate(sorted(range(len(row)), key=lambda j: -row[j]))}
+                if row and len(row) == len(sents) else {})
+    for pos, m in enumerate(pooled[EXTRACT_EVIDENCE_CAP:], start=EXTRACT_EVIDENCE_CAP):
+        j = m.get("j", -1)
+        rec["cut_sentences"].append({
+            "pool_rank": pos, "j": j, "text": (m.get("text") or "")[:220],
+            "lex_rank": lex_rank.get(j, -1) if j >= 0 else -1,
+            "cos_rank": cos_rank.get(j, -1) if (j >= 0 and cos_rank) else -1})
+    return rec
+
+
+def _judge_extracted(claim: str, src: Dict[str, Any], sents: List[Dict],
+                     base: Dict[str, Any], llm, judge_prompt: str,
+                     extracted: List[str], row: Optional[List[float]],
+                     lex: List[float], purpose: str) -> Dict[str, Any]:
+    """Post-extraction half of the full-text probe (_extract_evidence): pool and
+    rank the extracted strings (_pool_extracted), cap the list, build the judged
+    window, and vote. `extracted` must be non-empty."""
+    pooled = _pool_extracted(claim, sents, extracted, row, lex,
+                             base.get("paper_id", ""))
+    mapped = pooled[:EXTRACT_EVIDENCE_CAP]
+    # Task #98 (2026-09-08; the author asked that every future run keep this
+    # information): record what the cap did, so the eight-sentence limit
+    # can be re-measured from analysis.json alone (the task #94 replay rebuilds
+    # it from llm_calls.jsonl with the CURRENT extraction prompt, which a prompt
+    # edit silently breaks for older runs). Pure bookkeeping — no verdict, count,
+    # filter or viewer text reads it.
+    base = {**base, "evidence_cap": _cap_record(pooled, sents, row, lex)}
     if not mapped:
         return {**base, "supported": False, "sentence": None, "page": None, "snippet": "",
                 "reason": "LLM returned no usable source sentence (fragments or claim echo)",
@@ -1694,6 +1800,53 @@ irish scottish welsh western eastern northern southern
 """.split())
 _SUBJECT_MIN_TOKEN = 3
 
+# Card 45 (2026-09-24, gate row essay/t10 "Tellingly, individual forecasters'
+# ..."): a SINGLE-token leading run at token 0 is capitalized only because it
+# starts the sentence, so its capital letter is no evidence of a name. The
+# 7/12 small _SUBJECT_COMMON set missed most such openers: a scan of 1,398
+# distinct cited claims on disk found 393 single-token leading subjects, about
+# half ordinary words (among, such, across, consistent, previous, tellingly,
+# individual ...), each one a false rejection waiting for a source that happens
+# not to print that word. Frozen list (committed file, never the system
+# dictionary): words written lowercase in >= 3 of 911 distinct source docs
+# (benchmarks/build_ordinary_words.py). Names are essentially never written
+# lowercase (majid/leicht/engelmann/finland/agta: 0 docs). Applies ONLY to the
+# single token-0 case: after an article ("The Court") or in a multi-token run
+# ("University of Oklahoma") the capitals are real evidence and the old rules
+# stand. Accepted miss: a name that is also an English word ("Swift ...",
+# "Young ...") no longer arms the guard — the conservative direction.
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                       "ordinary_words.txt"), encoding="utf-8") as _f:
+    _ORDINARY_WORDS = frozenset(l.strip() for l in _f
+                                if l.strip() and not l.startswith("#"))
+
+
+def _is_ordinary_word(w: str) -> bool:
+    """True when `w` (a sentence-initial token) is an ordinary English word by
+    the frozen list: possessive stripped, every hyphen part ordinary, plural
+    -s/-es and adverb -ly/-ily/-ally forms folded to a listed stem. A capital
+    letter after the first ("InSight", "ReviewGuard", "LLMs") marks a name."""
+    if any(ch.isupper() for ch in w[1:]):
+        return False
+    lw = _fold(w)
+    lw = re.sub(r"['’]s?$", "", lw)
+    parts = [p for p in lw.split("-") if p]
+    if not parts:
+        return False
+
+    def one(p: str) -> bool:
+        if p in _ORDINARY_WORDS:
+            return True
+        if p.endswith("s") and (p[:-1] in _ORDINARY_WORDS
+                                or (p.endswith("es") and p[:-2] in _ORDINARY_WORDS)):
+            return True
+        if p.endswith("ly") and len(p) >= 6:   # tellingly, crucially, happily
+            return (p[:-2] in _ORDINARY_WORDS
+                    or (p.endswith("ily") and p[:-3] + "y" in _ORDINARY_WORDS)
+                    or (p.endswith("ally") and p[:-4] in _ORDINARY_WORDS))
+        return False
+    return all(one(p) for p in parts)
+
 
 def _fold(s: str) -> str:
     """Lowercase + strip diacritics ('Ljubojević' matches 'Ljubojevic')."""
@@ -1709,11 +1862,14 @@ def _subject_tokens(text: str) -> List[str]:
     first = re.split(r"(?<=[.!?])\s+", (text or "").strip())[0]
     toks = first.split()
     run: List[str] = []
+    start = -1
     for i, tok in enumerate(toks):
         w = tok.strip(punct)
         if not run and i == 0 and w.lower() in ("the", "a", "an"):
             continue                      # "The Shining ..." → subject Shining
         if re.match(r"^[A-Z](?:[^\W\d_]|['’-])*$", w):  # unicode: Ljubojević
+            if not run:
+                start = i
             run.append(w)
             if tok and tok[-1] in punct:  # closing quote/comma ends the run
                 break
@@ -1729,6 +1885,8 @@ def _subject_tokens(text: str) -> List[str]:
         return lw in _SUBJECT_COMMON or lw.rstrip("s") in _SUBJECT_COMMON
     if len(run) == 1 and _common(run[0]):
         return []                         # "Reviews of ..." — ordinary opener
+    if len(run) == 1 and start == 0 and _is_ordinary_word(run[0]):
+        return []                         # card 45: "Tellingly, ..." / "Individual ..."
     kept = [_fold(w) for w in run
             if len(w) >= _SUBJECT_MIN_TOKEN and not _common(w)]
     # A multi-token run that COLLAPSES to one checkable token is a fragment of
@@ -1778,6 +1936,313 @@ def _claim_entity_sets(text: str) -> List[Tuple[str, List[str]]]:
         if len(toks) >= 2:
             sets.append((s, toks))
     return sets
+
+
+# --- Quantifier guard (task #75, 2026-09-03; gate row paper1 t47): once the
+# pypdf reader (task #71) read foodandagricultureorganization2004 completely,
+# the cosine-stage judge accepted "For SOME developing countries, the collapse
+# of commodity prices was traumatic..." as proof of "MOST countries cannot feed
+# themselves ... the great majority of developing states ... are net importers"
+# — a false support in the dangerous direction, reproduced in two independent
+# arms (task69gate + task69ctrl). Proof of a smaller share of a group is never
+# proof of a larger share. Deterministic, no model call: the claim quantifies a
+# group with a LARGE-share phrase, an evidence sentence quantifies the SAME
+# group (a shared head word after the quantifier) with a SMALL-share phrase,
+# and nothing the judge saw (the ±1 window) quantifies that group with a
+# large-share phrase or states a share >= half. Fires on every acceptance path
+# (cosine, fulltext, combined, component rescue) and arbiter.rescue honors it.
+# Deliberately narrow — a source that states the fact generically ("developing
+# countries are net food importers") or with a different noun ("many LDCs")
+# never fires: the guard needs the SAME group word on both sides. Standing
+# 2026-08-08 ruling: no judging-prompt rewording tasks — this is code.
+# Blast-radius scan: benchmarks/quantifier_guard_scan.py (offline, $0).
+# 2026-09-08 (task #75 synthetic set, 1,387 rows): 'more/over/at least half'
+# joined the large side; 'nearly/less than half', percentages under 50 and
+# fractions ('one in five', 'a quarter of') joined the small side; 'all' (only
+# before a plural word, not after 'not/at/after/above') and 'every' joined the
+# large side; a pronoun right after a quantifier ('some of these') names no
+# group; clause-final adverb 'most' ('what matters most is') is not a share.
+_Q_LARGE_RE = re.compile(
+    r"\b(?:most|the\s+(?:great|vast|overwhelming|large|clear)?\s*majority\s+of"
+    r"|(?:nearly|almost|virtually|practically|essentially)\s+all(?:\s+of)?"
+    r"|all\s+but\s+a\s+few|the\s+bulk\s+of|nine\s+in\s+ten|two[-\s]thirds\s+of"
+    r"|three[-\s]quarters\s+of|(?:more|greater)\s+than\s+half(?:\s+of)?"
+    r"|over\s+half(?:\s+of)?|at\s+least\s+half(?:\s+of)?"
+    r"|all(?:\s+of)?(?=\s+(?:the\s+)?(?:[A-Za-z][A-Za-z-]*\s+)?[A-Za-z][A-Za-z-]*s\b)"
+    r"|every(?:\s+one\s+of\s+the)?)\b", re.I)
+_Q_SMALL_RE = re.compile(
+    r"\b(?:some|several|a\s+few|few|a\s+number\s+of|a\s+handful\s+of"
+    r"|a\s+small\s+(?:number|share|minority|proportion|fraction)\s+of"
+    r"|a\s+minority\s+of|many"
+    r"|(?:nearly|almost|less\s+than|fewer\s+than|under|below)\s+half(?:\s+of)?)\b", re.I)
+# Numeric shares: a percentage followed by 'of', 'N out of M', 'one in N',
+# 'a third/quarter/fifth of'. Value >= 0.5 counts as large, below as small.
+_Q_NUM_RE = re.compile(
+    r"(?:(?P<pct>\d+(?:\.\d+)?)\s?(?:%|percent|per\s+cent)\s+of\b"
+    r"|\b(?P<num>\d+)\s+(?:out\s+of|in)\s+(?P<den>\d+)\b"
+    r"|\b(?:one|a)\s+(?P<frac>third|quarter|fifth|sixth|seventh|eighth|ninth|tenth)\s+of\b"
+    r"|\bone\s+in\s+(?P<word>three|four|five|six|seven|eight|nine|ten|twenty)\b)", re.I)
+_Q_FRAC = {"third": 1 / 3, "quarter": 0.25, "fifth": 0.2, "sixth": 1 / 6, "seventh": 1 / 7,
+           "eighth": 0.125, "ninth": 1 / 9, "tenth": 0.1, "three": 1 / 3, "four": 0.25,
+           "five": 0.2, "six": 1 / 6, "seven": 1 / 7, "eight": 0.125, "nine": 1 / 9,
+           "ten": 0.1, "twenty": 0.05}
+# "most" that is NOT a share of a group: superlative ("the most vulnerable",
+# "its most important"), "at most", adverbial uses ("most likely"), and the
+# clause-final adverb ("what matters most is", "hit them most").
+_Q_MOST_NOT_SHARE_BEFORE = re.compile(
+    r"(?:\b(?:the|at|its|their|his|her|our|your|whose|it|them|us|you|him|me"
+    r"|matter|matters|mattered|count|counts|counted|suffer|suffers|suffered"
+    r"|benefit|benefits|benefited|struggle|struggles|struggled|care|cares|cared)"
+    r"|['’]s)\s*$", re.I)
+_Q_MOST_NOT_SHARE_AFTER = frozenset((
+    "likely", "notably", "importantly", "recently", "commonly", "frequently",
+    "often", "plausibly", "clearly", "obviously", "famously", "directly",
+    "strongly", "widely", "closely", "significantly", "severely", "acutely",
+    "probably", "certainly", "easily", "readily", "is", "are", "was", "were"))
+# "all" / "every" that is not a share: "not all", "at all", "after all",
+# "above all", "first of all", "by all accounts", "not every".
+_Q_ALL_NOT_SHARE_BEFORE = re.compile(r"\b(?:not|at|after|above|of|by)\s*$", re.I)
+# tokens after a quantifier that name no group (determiners, auxiliaries,
+# frequent verbs) — never a shared head word
+_Q_HEAD_SKIP = frozenset("""
+the a an of its their his her our your these those this that such other own
+them they same very more less only still even also just cannot have has had will would
+could should must were been being are was does than with from into about which
+there where when while during among between within over under above below
+""".split())
+# a pronoun right after the quantifier (past 'of'/'the'): the group is named
+# elsewhere and the guard cannot compare it — no heads, guard silent
+_Q_PRONOUNS = frozenset("them they these those this that it its us we you which whom".split())
+_Q_SHARE_PCT_RE = re.compile(r"(\d+(?:\.\d+)?)\s?(?:%|percent\b|per cent\b)", re.I)
+_Q_SHARE_WORDS_RE = re.compile(
+    r"\b(?:majority|predominantly|mostly|largely|mainly|generally|typically"
+    r"|usually|overwhelmingly|universally|commonly|widespread)\b", re.I)
+Q_HEAD_TOKENS = 2     # head words read after a quantifier (first two content words)
+Q_HEAD_REACH = 5      # tokens scanned after the quantifier to find them
+
+
+def _q_stem(w: str) -> str:
+    w = _fold(w)
+    if w.endswith("ies") and len(w) > 4:
+        return w[:-3] + "y"
+    if w.endswith("s") and not w.endswith("ss") and len(w) > 4:
+        return w[:-1]
+    return w
+
+
+def _q_heads(text: str, m: "re.Match") -> List[str]:
+    """Stemmed content words right after a quantifier match: the group it
+    quantifies ('Most countries cannot' -> ['country']; 'the great majority of
+    developing states' -> ['developing', 'state'])."""
+    tail = re.findall(r"[A-Za-z][A-Za-z'’-]*", text[m.end():m.end() + 80])
+    for w in tail[:3]:
+        lw = w.lower()
+        if lw in ("of", "the"):
+            continue
+        if lw in _Q_PRONOUNS:
+            return []                     # 'some of these ...': no group word
+        break
+    heads: List[str] = []
+    for w in tail[:Q_HEAD_REACH]:
+        lw = w.lower().replace("’", "'")
+        if lw in _Q_HEAD_SKIP or len(lw) < 4:
+            continue
+        heads.append(_q_stem(lw))
+        if len(heads) >= Q_HEAD_TOKENS:
+            break
+    return heads
+
+
+def _q_is_share_most(text: str, m: "re.Match") -> bool:
+    """A large-side word match counts as a share only when it is not a
+    superlative ('the most'), 'at most', an adverb ('most likely', 'matters
+    most is'), or a non-share 'all'/'every' ('not all', 'at all')."""
+    word = m.group(0).lower().split()[0]
+    before = text[max(0, m.start() - 12):m.start()]
+    if word == "most":
+        if _Q_MOST_NOT_SHARE_BEFORE.search(before):
+            return False
+        nxt = re.findall(r"[A-Za-z]+", text[m.end():m.end() + 30])
+        return not (nxt and nxt[0].lower() in _Q_MOST_NOT_SHARE_AFTER)
+    if word in ("all", "every"):
+        return not _Q_ALL_NOT_SHARE_BEFORE.search(before)
+    return True
+
+
+def _q_num_share(m: "re.Match") -> Optional[float]:
+    """The share a numeric match states, 0..1, or None."""
+    try:
+        if m.group("pct"):
+            return float(m.group("pct")) / 100.0
+        if m.group("num"):
+            den = float(m.group("den"))
+            return float(m.group("num")) / den if den else None
+        if m.group("frac"):
+            return _Q_FRAC[m.group("frac").lower()]
+        if m.group("word"):
+            return _Q_FRAC[m.group("word").lower()]
+    except (ValueError, KeyError):
+        return None
+    return None
+
+
+def _q_phrases(text: str, rx: "re.Pattern") -> List[Tuple[str, List[str]]]:
+    """[(quantifier phrase as written incl. its head words, stemmed heads)]
+    for one side: rx is _Q_LARGE_RE (word phrases + numeric shares >= half)
+    or _Q_SMALL_RE (word phrases + numeric shares below half)."""
+    out = []
+
+    def _push(m):
+        heads = _q_heads(text, m)
+        if heads:
+            span_end = min(len(text), m.end() + 80)
+            words = re.findall(r"\S+", text[m.start():span_end])
+            shown = " ".join(words[:len(m.group(0).split()) + Q_HEAD_REACH])
+            out.append((shown.rstrip(",.;:—-"), heads))
+
+    for m in rx.finditer(text or ""):
+        if rx is _Q_LARGE_RE and not _q_is_share_most(text, m):
+            continue
+        _push(m)
+    for m in _Q_NUM_RE.finditer(text or ""):
+        v = _q_num_share(m)
+        if v is None:
+            continue
+        if (rx is _Q_LARGE_RE and v >= 0.5) or (rx is _Q_SMALL_RE and v < 0.5):
+            _push(m)
+    return out
+
+
+def _q_large_share_present(text: str, heads: List[str]) -> bool:
+    """Does `text` give the group a large share — a large-share phrase on a
+    shared head word, a share word for the sentence's subject, or any stated
+    share >= half?"""
+    for _, hs in _q_phrases(text, _Q_LARGE_RE):
+        if set(hs) & set(heads):
+            return True
+    if _Q_SHARE_WORDS_RE.search(text or ""):
+        return True
+    for n in _Q_SHARE_PCT_RE.findall(text or ""):
+        try:
+            if float(n) >= 50:
+                return True
+        except ValueError:
+            pass
+    return False
+
+
+def _quantifier_overreach(claim: str, sentences: List[Optional[str]],
+                          windows: List[Optional[str]]) -> Optional[Dict[str, str]]:
+    """The guard. `sentences` are the evidence sentences that bought a
+    positive; `windows` everything the judge read for them. Returns None
+    (guard off / no overreach) or {"claim_phrase", "evidence_phrase"}."""
+    large = _q_phrases(claim or "", _Q_LARGE_RE)
+    if not large:
+        return None
+    sents = [s for s in sentences if s]
+    wins = [w for w in windows if w] or sents
+    for c_phrase, c_heads in large:
+        if any(_q_large_share_present(w, c_heads) for w in wins):
+            continue                      # the judge saw a large share stated
+        for s in sents:
+            for e_phrase, e_heads in _q_phrases(s, _Q_SMALL_RE):
+                # The SAME GROUP on both sides: the word right after one
+                # quantifier (its group noun, or the adjective before it) must
+                # appear among the other side's heads. A shared second head
+                # alone is not enough — 'Most hospitals reported shortages' vs
+                # 'Some clinics reported shortages' share only the verb
+                # (review 2026-09-04, second check) and must not fire.
+                if c_heads[0] in e_heads or e_heads[0] in c_heads:
+                    return {"claim_phrase": c_phrase, "evidence_phrase": e_phrase}
+    return None
+
+
+# Sticky hold (card 72 round 1, 2026-09-28; gate day72 paper1 t47): once the
+# guard has caught a claim's large-share phrase on a source's small-share
+# sentence, a LATER positive from that same source must show the large share
+# for the same group itself. The q110 gate: cosine stage caught "Most
+# countries" on "For some developing countries...", then the fulltext judge
+# (writer's-voice prompt variant) accepted the unquantified "these countries
+# also rely increasingly on food imports" — no small-share word there, so the
+# per-sentence rule had nothing to see. Only a same-group large-share phrase
+# counts here (not _q_large_share_present's loose share words / bare
+# percentages): a fulltext window joins up to eight sentences from all over
+# the source, and "predominantly rural" or "50 to 80 percent of the foreign
+# exchange" in it says nothing about the claim's group. Blast radius: 678
+# stored analyses, 18 claims with a guard record, 1 of them still supported
+# (this t47) — benchmarks/card72_sticky_guard_scan.py.
+def _q_same_group_large(text: str, heads: List[str]) -> bool:
+    for _, hs in _q_phrases(text or "", _Q_LARGE_RE):
+        if hs and heads and (hs[0] in heads or heads[0] in hs):
+            return True
+    return False
+
+
+def _q_sticky_overreach(claim: str, q_hit: Dict[str, Any], paper_id: Optional[str],
+                        sentences: List[Optional[str]],
+                        windows: List[Optional[str]]) -> Optional[Dict[str, str]]:
+    """The sticky hold: None unless the guard already fired on `paper_id` for
+    this claim and none of `sentences`/`windows` gives the caught group a
+    large share."""
+    if not q_hit or paper_id not in (q_hit.get("paper_ids") or []):
+        return None
+    heads = next((hs for p, hs in _q_phrases(claim or "", _Q_LARGE_RE)
+                  if p == q_hit.get("claim_phrase")), None)
+    if not heads:
+        return None
+    if any(_q_same_group_large(t, heads) for t in list(sentences) + list(windows) if t):
+        return None
+    return {"claim_phrase": q_hit["claim_phrase"],
+            "evidence_phrase": q_hit["evidence_phrase"]}
+
+
+def _q_hold_positives(claim_text: str, entries: List[Dict[str, Any]],
+                      q_hit: Dict[str, Any]) -> None:
+    """Apply the sticky hold to every positive in `entries`, in place (same
+    shape as _q_filter_positives)."""
+    for e in entries:
+        if not e.get("supported"):
+            continue
+        q = _q_sticky_overreach(claim_text, q_hit, e.get("paper_id"),
+                                [e.get("sentence")], [e.get("window")])
+        if not q:
+            continue
+        e["supported"] = False
+        e["quantifier_guard"] = q
+        e["reason"] = _q_reason(q)
+        logging.info("Quantifier guard (sticky): held a later positive — claim "
+                     "'%s' (claim %s)", q["claim_phrase"], claim_text[:60])
+
+
+def _q_reason(q: Dict[str, str]) -> str:
+    return (f"the claim says '{q['claim_phrase']}' but the cited passage says "
+            f"only '{q['evidence_phrase']}' — proof of a smaller share of a "
+            f"group is not proof of a larger share (quantifier guard)")
+
+
+def _q_filter_positives(claim_text: str, entries: List[Dict[str, Any]],
+                        hit: Dict[str, Any]) -> None:
+    """Turn every positive whose evidence overreaches into a negative, in
+    place; record the first hit's phrases and every guarded paper id in
+    `hit` (mutated). The entry keeps its sentence so the card still shows
+    what the judge read."""
+    for e in entries:
+        if not e.get("supported"):
+            continue
+        q = _quantifier_overreach(claim_text, [e.get("sentence")], [e.get("window")])
+        if not q:
+            continue
+        e["supported"] = False
+        e["quantifier_guard"] = q
+        e["reason"] = _q_reason(q)
+        hit.setdefault("claim_phrase", q["claim_phrase"])
+        hit.setdefault("evidence_phrase", q["evidence_phrase"])
+        hit.setdefault("paper_ids", [])
+        if e.get("paper_id") not in hit["paper_ids"]:
+            hit["paper_ids"].append(e.get("paper_id"))
+        logging.info("Quantifier guard: dropped a positive — claim '%s' vs "
+                     "evidence '%s' (claim %s)", q["claim_phrase"],
+                     q["evidence_phrase"], claim_text[:60])
 
 
 # --- Round-7 fix A (owner plan of record; double-confirmed r4 t6 Finland +
@@ -2037,7 +2502,9 @@ def _covering_spans(cov: Dict[str, Any], pids: List[str],
 def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict],
               llm, judgment_prompt: str, extract_prompt: str,
               combined_prompt: str, adhoc_row=None,
-              component_rescue: bool = True, split_prompt: str = None) -> Dict[str, Any]:
+              component_rescue: bool = True, split_prompt: str = None,
+              q_prior: Optional[Dict[str, Any]] = None,
+              prefer: Optional[Dict[str, List[int]]] = None) -> Dict[str, Any]:
     """The full grounding chain for ONE claim text against its cited sources:
     cosine candidates -> full-text extraction fallback -> multi-source combined
     judge -> component rescue on a fulltext negative. row_for(pid) returns the
@@ -2060,7 +2527,9 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
         row = row_for(pid)
         if src is None or not row:
             continue
-        e = _judge_source(claim_text, pid, src, row, llm, judgment_prompt)
+        e = (_judge_source(claim_text, pid, src, row, llm, judgment_prompt,
+                           prefer=prefer.get(pid)) if prefer
+             else _judge_source(claim_text, pid, src, row, llm, judgment_prompt))
         if e is not None:
             evidences.append(e)
 
@@ -2072,6 +2541,14 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
     combined_votes = None            # tally of the multi-source combined judge, if it ran
     structured_missing = None        # judge-structured missing_parts paired with `reason`
     ents, subj_missing = [], {}      # entity-guard state (fulltext paths only)
+    # quantifier-guard state (every path, task #75); a tail suffix inherits the
+    # full claim's hit (q_prior, card 72) so the sticky hold applies to it too
+    q_hit: Dict[str, Any] = ({**q_prior, "paper_ids": list(q_prior.get("paper_ids") or [])}
+                             if q_prior else {})
+    # Quantifier guard on the cosine-stage positives (the t47 path): a dropped
+    # positive falls through to the fulltext read below like any negative, so
+    # a source that DOES state the large share elsewhere can still prove it.
+    _q_filter_positives(claim_text, evidences, q_hit)
     supported_entries = [e for e in evidences if e["supported"]]
     if supported_entries:
         verdict, method, reason = "supported", "llm", supported_entries[0]["reason"]
@@ -2087,6 +2564,8 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                                             merge_words=(EXTRACT_MERGE_WORDS
                                                          if EXTRACT_MERGE_ON else None))
                           for pid in pids if sources.get(pid) is not None) if e]
+        _q_filter_positives(claim_text, fb, q_hit)   # fulltext positives too
+        _q_hold_positives(claim_text, fb, q_hit)     # sticky hold (card 72)
         if fb:
             # Show the LLM-found sentences, not cosine's — but when extraction
             # came back EMPTY for a source, keep the candidate stage's closest
@@ -2140,6 +2619,28 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                                                 [(_src_label(sources.get(e["paper_id"])) or e["source_title"],
                                                   e["window"]) for e in with_sentence],
                                                 llm, combined_prompt)
+            if ok:
+                # The combined judge reads several windows at once; the same
+                # small-share sentence must not buy the verdict here either.
+                q = _quantifier_overreach(claim_text,
+                                          [e.get("sentence") for e in with_sentence],
+                                          [e.get("window") for e in with_sentence])
+                if q:
+                    ok, reason = False, _q_reason(q)
+                    q_hit.setdefault("claim_phrase", q["claim_phrase"])
+                    q_hit.setdefault("evidence_phrase", q["evidence_phrase"])
+                    q_hit.setdefault("paper_ids", sorted({e["paper_id"] for e in with_sentence}))
+                else:
+                    # sticky hold (card 72): a caught source joined into the
+                    # union must show the large share somewhere in the union
+                    held = [e for e in with_sentence
+                            if e["paper_id"] in (q_hit.get("paper_ids") or [])]
+                    q = held and _q_sticky_overreach(
+                        claim_text, q_hit, held[0]["paper_id"],
+                        [e.get("sentence") for e in with_sentence],
+                        [e.get("window") for e in with_sentence])
+                    if q:
+                        ok, reason = False, _q_reason(q)
             verdict, method = ("supported" if ok else "unsupported"), "combined_fulltext"
             combined_votes = votes
             used = with_sentence if ok else []
@@ -2175,6 +2676,30 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                                    split_prompt=split_prompt,
                                    structured_missing=structured_missing)
         if rescue is not None:
+            if rescue["flip"]:
+                # A component proven by a small-share sentence cannot flip a
+                # large-share claim (the rescue re-judges the union of windows,
+                # which is exactly where 'some' could re-buy 'most').
+                q = _quantifier_overreach(claim_text,
+                                          [e.get("sentence") for e in rescue["evidence"]],
+                                          [e.get("window") for e in rescue["evidence"]])
+                if q:
+                    rescue["flip"] = False
+                    rescue["quantifier_guard"] = q
+                    q_hit.setdefault("claim_phrase", q["claim_phrase"])
+                    q_hit.setdefault("evidence_phrase", q["evidence_phrase"])
+                    q_hit.setdefault("paper_ids", sorted({e["paper_id"] for e in rescue["evidence"]}))
+                else:
+                    # sticky hold (card 72) on the rescue's union of windows
+                    held = [e for e in rescue["evidence"]
+                            if e["paper_id"] in (q_hit.get("paper_ids") or [])]
+                    q = held and _q_sticky_overreach(
+                        claim_text, q_hit, held[0]["paper_id"],
+                        [e.get("sentence") for e in rescue["evidence"]],
+                        [e.get("window") for e in rescue["evidence"]])
+                    if q:
+                        rescue["flip"] = False
+                        rescue["quantifier_guard"] = q
             comp_evs = [{**e, "via": "component_rescue"} for e in rescue["evidence"]]
             component_check = {"found": rescue["found"],
                                "missing": rescue["missing"],
@@ -2219,6 +2744,13 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
             "subject": "; ".join(sorted({d for m in subj_missing.values()
                                          for d in m})),
             "missing_from": sorted(subj_missing)}
+    if q_hit:
+        # Consumed by arbiter.rescue (a proof window that overreaches is
+        # skipped) and shown on the card through the reason text.
+        out["quantifier_guard"] = q_hit
+        if verdict == "unsupported":
+            qr = _q_reason(q_hit)
+            out["reason"] = qr if reason == qr else f"{qr}; the judge's own reading: {reason}"
     # P3 visible caveat: a judge that resolved relative time against the
     # article date prefixes its reason with DATE-INFERRED. Surface it as a
     # flag (viewer chip); the prefix stays in the reason text too.
@@ -2725,6 +3257,10 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
         if res["verdict"] == "unsupported":
             sents_split = _sentence_split(tc["text"])
             tried: List[int] = []
+            # a guard hit on the full claim carries into its suffixes (card 72
+            # sticky hold): a suffix still saying "Most countries" must not be
+            # re-bought by the positive the full evaluation held
+            q_prior = res.get("quantifier_guard")
             for k in range(1, TAIL_RESCUE_MAX_SUFFIX + 1):
                 if len(sents_split) <= k:
                     break
@@ -2733,7 +3269,8 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                 tr = _evaluate(" ".join(sents_split[-k:]), pids,
                                lambda pid, cid=cid: row_for(pid, cid),
                                sources, llm, judgment_prompt, extract_prompt,
-                               combined_prompt, component_rescue=False)
+                               combined_prompt, component_rescue=False,
+                               q_prior=q_prior)
                 if tr["verdict"] == "supported":
                     res = tr
                     tail_info = {"supported": True, "reach": k,
@@ -2794,6 +3331,8 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
                     out["judge_missing_parts"] = followup
         if res.get("subject_guard"):
             out["subject_guard"] = res["subject_guard"]
+        if res.get("quantifier_guard"):
+            out["quantifier_guard"] = res["quantifier_guard"]
         if res.get("judge_error"):
             out["judge_error"] = True
         # A multi-citation claim where SOME cited files are missing still gets

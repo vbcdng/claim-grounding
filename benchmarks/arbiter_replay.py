@@ -400,7 +400,8 @@ def replay(rows: List[Dict[str, Any]], out_dir: str, data_dir: str = DEFAULT_DAT
            rescue_judge_model: Optional[str] = None,
            rescue_judge_api_key: Optional[str] = None,
            judge_llm=None, api_base: Optional[str] = None,
-           temperature: Optional[float] = None) -> Dict[str, Any]:
+           temperature: Optional[float] = None,
+           fresh: bool = False) -> Dict[str, Any]:
     """Replay `rows` (inventory/sample rows) against a candidate arbiter.
     Pass `llm` to inject a fake client (tests); otherwise `model` is required.
     `api_base` targets an OpenAI-compatible endpoint the installed litellm has
@@ -409,7 +410,12 @@ def replay(rows: List[Dict[str, Any]], out_dir: str, data_dir: str = DEFAULT_DAT
     estimate_only assembles the real prompts and returns token counts, no calls
     (the estimate does NOT include rescue-judge calls — rescues are rare,
     ~a handful per arm). `rescue_judge_model` / `judge_llm` (injectable for
-    tests) turn on the real rescue re-judge — see _rejudge()."""
+    tests) turn on the real rescue re-judge — see _rejudge().
+    `fresh=True` (task #32 q6, 2026-09-10) also accepts claims that carry NO
+    recorded arbiter payload — a run made with the arbiter switched off, such
+    as the repaired round-3 runs — and asks the candidate the question the
+    recorded arbiter never got; those rows have `old` = None and
+    `action_match` = None, and the agreement tables leave them out."""
     tpl = arbiter._load_prompt()
     by_run: Dict[str, List[Dict]] = {}
     for r in rows:
@@ -425,10 +431,19 @@ def replay(rows: List[Dict[str, Any]], out_dir: str, data_dir: str = DEFAULT_DAT
         sources = load_run_sources(run_dir)
         for r in run_rows:
             orig = claims_by_id.get(r["claim_id"])
-            if not orig or not orig.get("arbiter"):
-                problems.append(f"{run_rel}/{r['claim_id']}: claim or arbiter payload missing")
+            if not orig:
+                problems.append(f"{run_rel}/{r['claim_id']}: claim missing")
                 continue
-            restored, old, approx = restore_pre_arbiter(orig)
+            if orig.get("arbiter"):
+                restored, old, approx = restore_pre_arbiter(orig)
+            elif fresh:
+                restored = copymod.deepcopy(orig)
+                restored.pop("owner_flag", None)
+                old, approx = {}, False
+            else:
+                problems.append(f"{run_rel}/{r['claim_id']}: arbiter payload missing "
+                                f"(pass --fresh to ask anyway)")
+                continue
             computed_trigger = arbiter.trigger(restored)
             if computed_trigger is None:
                 problems.append(f"{run_rel}/{r['claim_id']}: trigger lost after restoration — skipped")
@@ -479,12 +494,15 @@ def replay(rows: List[Dict[str, Any]], out_dir: str, data_dir: str = DEFAULT_DAT
                                              judge_llm, sink,
                                              log_prompts=log_prompts)
         rec = {"run": job["run"], "claim_id": restored.get("id"),
+               "row_id": job["row"].get("row"),
+               "fresh": not old,
                "strata": job["row"]["strata"], "gt": job["row"].get("gt"),
                "restored_approx": job["approx"],
                "trigger_recorded": old.get("trigger"),
                "trigger_replay": job["computed_trigger"],
                "old": _compact(old), "new": new_compact,
-               "action_match": bool(new) and new.get("action") == old.get("action"),
+               "action_match": (None if not old
+                                else bool(new) and new.get("action") == old.get("action")),
                "no_response": new is None,
                "rescue": rescue_rec, "amber": amber_rec,
                "new_payload": new}
@@ -542,6 +560,9 @@ def write_report(out_dir: str) -> str:
 
     answered = [r for r in rows if not r["no_response"]]
     n_unparsed = len(rows) - len(answered)
+    n_fresh = sum(1 for r in rows if r.get("fresh"))
+    # only rows WITH a recorded arbiter answer can be compared against one
+    answered = [r for r in answered if r.get("old")]
     lines = [f"# Arbiter replay — {summary.get('model', '?')} vs recorded", ""]
     lines.append(f"Claims replayed: {len(rows)} across {summary.get('runs', '?')} runs; "
                  f"wall time {summary.get('wall_seconds', '?')}s.")
@@ -549,6 +570,12 @@ def write_report(out_dir: str) -> str:
         lines.append(f"\n**⚠ {n_unparsed} claims returned unparseable output — "
                      f"per-claim comparisons below are INCOMPLETE; do not quote "
                      f"the numbers without saying so.**")
+    if n_fresh:
+        lines.append(f"\n{n_fresh} of {len(rows)} claims carry no recorded arbiter answer "
+                     f"(their run was made with the arbiter switched off), so the "
+                     f"agreement and quote-gate tables below cover only the "
+                     f"{len(answered)} rows that have one; the candidate's own rulings "
+                     f"for every row are in results.jsonl (`new_payload`).")
     if summary.get("problems"):
         lines.append("\nSkipped/problem rows:")
         lines += [f"- {p}" for p in summary["problems"]]
@@ -598,8 +625,9 @@ def write_report(out_dir: str) -> str:
         lines.append("|---|---|---|---|")
         for r in flips:
             new = r["new"] or {}
+            old = r["old"] or {}
             lines.append(f"| {r['run']}/{r['claim_id']} "
-                         f"| {r['old']['action']} ({r['old']['n_proofs']}) "
+                         f"| {old.get('action', '—')} ({old.get('n_proofs', '—')}) "
                          f"| {new.get('action', 'NO RESPONSE')} ({new.get('n_proofs', '—')}) "
                          f"| {'yes' if r['restored_approx'] else ''} |")
 
@@ -656,9 +684,10 @@ def write_report(out_dir: str) -> str:
             gt = r.get("gt") or {}
             gt_s = gt.get("expect") or gt.get("kind") or "?"
             new = r["new"] or {}
-            flag = "" if r["action_match"] else " **≠**"
+            flag = "" if r["action_match"] in (True, None) else " **≠**"
             lines.append(f"| {r['run']}/{r['claim_id']} | {gt_s} "
-                         f"| {r['old']['action']} | {new.get('action', 'NO RESPONSE')}{flag} |")
+                         f"| {(r['old'] or {}).get('action', '—')} "
+                         f"| {new.get('action', 'NO RESPONSE')}{flag} |")
 
     if summary.get("usage_delta"):
         lines.append("\n## Usage (this replay only)")
@@ -722,6 +751,11 @@ def main(argv=None):
             p.add_argument("--rescue-judge-api-key")
             p.add_argument("--yes", action="store_true",
                            help="skip the confirmation on >200 claims")
+        if name in ("estimate", "replay"):
+            p.add_argument("--fresh", action="store_true",
+                           help="also ask about claims with NO recorded arbiter "
+                                "payload (a run made with the arbiter off); "
+                                "such rows get old=None and no agreement score")
     args = ap.parse_args(argv)
     _guard_out_dir(args.out)
     os.makedirs(args.out, exist_ok=True)
@@ -762,7 +796,8 @@ def main(argv=None):
         rows = _load_json(sample_path)["rows"]
 
     if args.mode == "estimate":
-        est = replay(rows, args.out, data_dir=args.data_dir, estimate_only=True)
+        est = replay(rows, args.out, data_dir=args.data_dir, estimate_only=True,
+                     fresh=getattr(args, "fresh", False))
         print(json.dumps(est, indent=2))
         print("(input tokens = real assembled prompts / 4 chars-per-token; "
               f"output assumes the measured {EST_OUT_TOKENS_PER_CALL}/call mean)")
@@ -775,7 +810,8 @@ def main(argv=None):
                      log_prompts=args.log_prompts, api_base=args.api_base,
                      temperature=args.temperature,
                      rescue_judge_model=args.rescue_judge,
-                     rescue_judge_api_key=args.rescue_judge_api_key)
+                     rescue_judge_api_key=args.rescue_judge_api_key,
+                     fresh=getattr(args, "fresh", False))
     print(json.dumps({k: summary[k] for k in ("model", "claims", "no_response",
                                               "rescue", "amber",
                                               "wall_seconds", "usage_delta")}, indent=2))
