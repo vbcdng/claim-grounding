@@ -142,8 +142,8 @@ class TestComponentNotes(unittest.TestCase):
                           "sentence": "Europe lags in compute today.", "page": 1}]}
         page = _render(c)
         # P2 symmetric display (owner ruling 2026-07-11): proven parts visible
-        # WITH their sentences, all unproven parts listed — since task #19
-        # (2026-09-02) as ONE part-by-part list, each ✗ row with its action.
+        # WITH their sentences, all unproven parts listed — since
+        # 2026-09-02 as ONE part-by-part list, each ✗ row with its action.
         self.assertIn("compcheck-note", page)
         self.assertIn("Checked part by part", page)
         self.assertIn("Europe lags in compute today.", page)     # proof sentence shown

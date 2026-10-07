@@ -28,7 +28,7 @@
 #
 #   SCORE_ONLY=1        skip the runs, score whatever is already on disk.
 #   RESUME=0            re-judge every text even if it already finished
-#                       (card #134). Default 1: re-running the SAME tag skips
+#                       before. Default 1: re-running the SAME tag skips
 #                       a text whose earlier run finished both passes under
 #                       the same code commit, model, prompts, EXTRA_FLAGS,
 #                       text and sources, with no refused calls — so a crash,
@@ -36,7 +36,7 @@
 #                       fresh tag has nothing recorded and runs everything.
 #                       The refused-call check and scoring still read every
 #                       text. Logic: benchmarks/gate_resume.py.
-#   REUSE_FROM=<tag>    (card #141, default off) serve every request that is
+#   REUSE_FROM=<tag>    (default off) serve every request that is
 #                       byte-for-byte identical to one the earlier arm <tag>
 #                       already asked (same model, prompt, temperature, output
 #                       limit, provider settings) from that arm's recorded
@@ -49,11 +49,11 @@
 #                       EXTRA_FLAGS (a stability measurement needs fresh
 #                       answers), and refused when <tag> is this tag. Only arms
 #                       recorded with request fingerprints can donate (every
-#                       arm from card #141 on; RECORD_REQUESTS below).
+#                       arm since this switch existed; RECORD_REQUESTS below).
 #   RECORD_REQUESTS=1   default: write each request's fingerprint into
 #                       llm_calls.jsonl so this arm can serve a later REUSE_FROM.
 #                       Changes nothing sent to the model and no result file.
-#                       0 = log exactly as before card #141.
+#                       0 = log exactly as before the answer-reuse switch existed.
 #   STABILITY_RUN=1     mark this arm as a verdict-stability measurement, so
 #                       REUSE_FROM is refused.
 #   MODEL=<litellm id>  override the judge (default gemini/gemma-4-31b-it).
@@ -84,7 +84,7 @@ PY=${PY:-venv/bin/python3}
 MODEL=${MODEL:-gemini/gemma-4-31b-it}
 SCORE_ONLY=${SCORE_ONLY:-0}
 PROMPTS=${PROMPTS:-}
-# EXTRA_FLAGS="--direction-check" (2026-09-09, card #101): extra verify_my_text.py
+# EXTRA_FLAGS="--direction-check" (2026-09-09): extra verify_my_text.py
 # flags appended to BOTH passes, so a default-off check can be measured on one
 # arm without touching the script. Word-split on purpose; quote nothing inside.
 EXTRA_FLAGS=${EXTRA_FLAGS:-}
@@ -194,11 +194,11 @@ if [ "$SCORE_ONLY" != "1" ]; then
       exit 2
     fi
     printf '%s' "$arm_now" > "$arm_file"
-    # Which code produced this folder (card #134): "<sha>" or "<sha>+dirty".
+    # Which code produced this folder: "<sha>" or "<sha>+dirty".
     $PY benchmarks/gate_resume.py commit > "$out/.code_commit"
     resume_args=(--out "$out" --text "$text" --sources "$sources" --model "$MODEL"
                  --arm "$arm_now" --extra "$EXTRA_FLAGS")
-    # Skip a text this tag already finished under identical inputs (card #134).
+    # Skip a text this tag already finished under identical inputs.
     # Anything different, missing or doubtful prints "RUN: <reason>" and the text
     # is judged from zero exactly as before.
     if [ "$RESUME" != "0" ]; then
@@ -266,7 +266,7 @@ done
 
 if [ -n "$REUSE_FROM" ]; then
   echo
-  echo "=== ANSWERS REUSED FROM ARM $REUSE_FROM (card #141; counts this test's calls only) ==="
+  echo "=== ANSWERS REUSED FROM ARM $REUSE_FROM (counts this test's calls only) ==="
   for row in "${TEXTS[@]}"; do
     IFS='|' read -r name text sources donor <<< "$row"
     printf "  %-10s %s\n" "$name" "$($PY benchmarks/gate_reuse.py summary --out "$(outdir "$name")")"

@@ -37,8 +37,8 @@ DEFAULT_CLI_MODEL = "haiku"     # cheapest; the judge study's subject
 _TIMEOUT_S = 240                # per call; the CLI adds ~seconds of startup overhead
 _MAX_RETRIES = 3                # attempts for a GENERIC failure (short 2^n backoff)
 
-# Why the limit is adjustable (card #88, measured 2026-09-12 in
-# data/card88/sonnet_20260912/claude-code_sonnet_one_prompt/llm_calls.jsonl):
+# Why the limit is adjustable (measured 2026-09-12 on our own conversion
+# runs):
 # a Sonnet-class model's conversion calls ran 100-385 s with 2,700-5,200-char
 # answers, while the Opus-class arm's ran 19 s at the median and 148 s at most.
 # Two Sonnet calls were killed at 240 s, and three kills in a row store the

@@ -5,7 +5,7 @@ have not fixed yet. Each entry says what happens, why, and what to do
 about it where a workaround exists. Problems that get fixed move to the
 "Fixed" section at the end, with the date of the fix.
 
-Last updated: 2026-08-31. Most entries come from a systematic self-check
+Last updated: 2026-10-07. Most entries come from a systematic self-check
 of the whole repository on 2026-07-20. That check also re-computed every
 published benchmark number from the data included in the repository, and
 every number reproduced. Nothing on this list changes a published result.
@@ -51,6 +51,30 @@ rewritten again. Since that day the repository only changes by ordinary
 commits.
 
 ## Fixed
+
+**Fixed 2026-10-07 — full copies of other people's texts removed from
+five old result pages and from the bentonite example.** Five result
+pages from July, `docs/loop_rounds/round_2/viewer.html` to
+`round_6/viewer.html`, each stored complete copies of the web pages and
+articles their claims were checked against, so that a button could show
+the whole source with the quoted sentence highlighted. The five pages
+held 14 such copies, and no licence allowing them to be republished had
+been recorded for any of them. The pages now keep only the sentences
+they quote, with each source's title and web address, and the button
+now shows those sentences and the address instead of the whole source;
+the verdicts and the quoted evidence on the claim cards are unchanged.
+Three source files of the bentonite example were removed for the same
+reason, because none of the three files states a licence to republish
+it: a Goldschmidt 2023 conference abstract, an article of the Polish
+Journal of Environmental Studies, and a saved page of the Chiang Mai
+Journal of Science. The Polish journal's website says its articles are
+published under the Creative Commons Attribution-NonCommercial 4.0
+licence, which allows non-commercial sharing with credit, so that
+article may come back with a credit line later.
+`examples/bentonite/README.md` lists what is missing and why.
+Older versions in this repository's history still contain the removed
+copies, because the history is not rewritten again (see the note
+above).
 
 **Fixed 2026-08-31 — four weaknesses found by a security review of the
 whole project.** A review using automated scanners plus model readers
@@ -125,10 +149,9 @@ re-checking the published benchmark numbers.** These were numbered 7, 8
 and 9 in the previous version of this page:
 
 - Two supporting documents were named without their folder in
-  `benchmarks/wice_anchor/README.md`. The note now gives their full
-  paths from the repository root
-  (`docs/archive/NIGHT_LOG_2026-07-12_accB.md` and
-  `docs/FIRST_CHECK_RUN.md`).
+  `benchmarks/wice_anchor/README.md`. Both are our private working
+  notes and are not part of this repository, so since 2026-10-07 the
+  note says that instead of giving file paths.
 - The "58 rows" sentence in `FOR_REVIEWERS.md` now says the count
   includes both full and partial support. Counting only full
   "supported" labels gives 10 rows from the same data.

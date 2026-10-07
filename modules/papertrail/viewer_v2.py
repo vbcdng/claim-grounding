@@ -16,7 +16,7 @@ are untouched):
     rows) as the main evidence display, each with source links — not just the
     judge's single pick.
   • Unsupported cards: the reason is always visible; the part-by-part list
-    ("Checked part by part", task #19) is its own named expander WITH source
+    ("Checked part by part") is its own named expander WITH source
     links; everything else
     (arbiter reading, non-supporting passages, fix suggestions) sits behind a
     "▸ more checks" expander that names its contents.
@@ -103,8 +103,8 @@ def _proof_row(parts: List[str], sentence: str, source_title: str, paper_id: str
 
 def _aida_proof_row_v2(pr: Dict[str, Any], fname_map: Dict[str, str],
                        source_texts: Dict[str, str], paper_meta: Dict[str, Dict[str, str]]) -> str:
-    """Card 86: one proof sentence of a proven part, shown like every v2
-    proof — the real quote (task #4), its source, Copy, open in source."""
+    """One proof sentence of a proven part, shown like every v2
+    proof — the real quote, its source, Copy, open in source."""
     pid = pr.get("paper_id")
     shown = proof_display.primary_text(pr.get("sentence") or "")
     title = (paper_meta.get(pid) or {}).get("title") or fname_map.get(pid, pid or "")
@@ -297,7 +297,7 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
                        "your uncited claim — thesis, argument, transition; nothing was checked"),
     }[dclass]
 
-    # Never-checked rows (task #19, 2026-09-03; wording shared with viewer.py):
+    # Never-checked rows (2026-09-03; wording shared with viewer.py):
     # the cited file is absent or its text could not be read, so the sentence was
     # never actually judged. The red badge and the raw reason code both go, and
     # the card says in words that nothing was checked. Display only — the display
@@ -476,7 +476,7 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
         elif c.get("reason"):
             key_html += f'<div class="unsupp-note">✗ Not supported: {_esc(c["reason"])}</div>'
 
-        # Part-by-part list (task #19, 2026-09-02; wording shared with viewer.py):
+        # Part-by-part list (2026-09-02; wording shared with viewer.py):
         # its own named expander, ✓ rows WITH source links (v2 fix; v1 quotes
         # the sentence link-less), one ✗ row per missing part, and the case-4
         # contract row (all parts found ⇒ the judges' objection is quoted).
@@ -565,7 +565,7 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
                           f'</div></details>')
 
     # ---------- cross-state nudges (into "more checks") ----------
-    # Numeric cross-check (task #2): a figure the claim states that is in none of
+    # Numeric cross-check: a figure the claim states that is in none of
     # the sources it cites. Deterministic and display-only, so it can sit on a
     # green card; always visible, because a wrong figure on a supported claim is
     # exactly the mistake the reader would otherwise carry into a finished text.
@@ -597,7 +597,7 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
                      f'something else. Check that the source states this figure for this '
                      f'statement.</div>')
 
-    # Direction check (task #2, only with --direction-check).
+    # Direction check (only with --direction-check).
     dc = c.get("direction_check") or {}
     if dc.get("answer") in ("reversed", "not_stated"):
         reversed_ = dc["answer"] == "reversed"
@@ -701,7 +701,7 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
                      f'confidence; testing aid, never a veto): '
                      f'{_esc(dc.get("commentary") or "")}{q}{better}</div>'))
 
-    # Free local checker (granite_check.py, task #65): a checker model running
+    # Free local checker (granite_check.py): a checker model running
     # on this computer re-read an APPROVED claim against a large slice of the
     # cited source. Disagreement only, always worded as a question — about one
     # flag in every 2.3 concerns a claim that was fine. NEVER a veto.
@@ -721,8 +721,8 @@ def _card_v2(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[st
             f'whether the citation points at the right paper at all. The verdict above '
             f'is unchanged — read the evidence and decide.</div>')))
 
-    # Small free local checker on REJECTED claims (hhem_check.py, card 132):
-    # HHEM scored the claim at or above card 118's pass mark against ~6,000
+    # Small free local checker on REJECTED claims (hhem_check.py):
+    # HHEM scored the claim at or above its measured pass mark against ~6,000
     # characters of the cited source. A question, NEVER a veto.
     hh = c.get("hhem_check") or {}
     if hh.get("proof_may_exist") is True and verdict == "unsupported":
@@ -1338,11 +1338,11 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .dc-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
-  /* Free local checker (task #65) — a question about a green card, so a
+  /* Free local checker — a question about a green card, so a
      neutral grey note like the other metadata, never a verdict hue. */
   .gc-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
-  /* Small local checker on rejected claims (card 132) — same neutral grey. */
+  /* Small local checker on rejected claims — same neutral grey. */
   .hh-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .dc-note.flag {{ color:#374151; }}
@@ -1936,7 +1936,7 @@ const REVIEW_DATA = {rd_json};
 </script>
 </body></html>"""
 
-    page = hhem_legend(page, analysis)     # card 166: public copy has no HHEM
+    page = hhem_legend(page, analysis)     # the public copy has no HHEM
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(page)

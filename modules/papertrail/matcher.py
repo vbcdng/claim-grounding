@@ -33,7 +33,7 @@ AUTO_SUPPORT = 0.97   # near-verbatim match -> accept without an LLM call
                       # (unless the ±1 window carries a retraction/correction
                       # cue — see _CONTRA_CUE_RE below — or the claim's words
                       # are not the sentence's words exactly — see
-                      # _near_verbatim_ok, card 133)
+                      # _near_verbatim_ok)
 
 # Retraction/correction cues that disqualify the near-verbatim auto-accept: a
 # high-cosine match to a sentence that the surrounding window walks back
@@ -494,7 +494,7 @@ def _window(sents: List[Dict[str, Any]], j: int, radius: int = 1) -> str:
 def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
                   llm, prompt: str, prefer: Optional[List[int]] = None) -> Dict[str, Any]:
     """Best supporting (or, failing that, closest) sentence within ONE source for a claim.
-    prefer (card 85, stage 3a): source-sentence indices judged FIRST, after
+    prefer (stage 3a): source-sentence indices judged FIRST, after
     quoted-span hits — the passages the whole parent sentence already found,
     so a short piece's search starts from its parent's passages. None (every
     caller but aida/grounder.py) leaves the judge order exactly as before."""
@@ -543,7 +543,7 @@ def _judge_source(claim: str, pid: str, src: Dict[str, Any], row: List[float],
             # while the NEXT sentence said the reports were retracted). The claim
             # still gets judged below — with the window — so a true support only
             # pays one extra call; it is never auto-rejected here. Same for a
-            # claim whose words are not the sentence's words (card 133).
+            # claim whose words are not the sentence's words.
             return entry(j, True, f"near-verbatim match (cosine {round(cos,4)} ≥ {AUTO_SUPPORT})")
         # Provenance matters: attribution claims ("UNDP describes…", "as Altman
         # argues") are only judgeable when the judge knows whose document this is.
@@ -724,7 +724,7 @@ EXTRACT_MERGE_WORDS = 2600
 EXTRACT_MERGE_ON = os.environ.get("PT_EXTRACT_MERGE", "") == "1"
 EXTRACT_LEX_CHUNKS = 3   # extra chunks rescued by LEXICAL overlap (union with the
                          # cosine top-K, never a replacement — recall can only rise).
-# How many pooled proof sentences reach the judge after ranking (task #94). Was a
+# How many pooled proof sentences reach the judge after ranking. Was a
 # bare `uniq[:8]` since the chunked extractor shipped 2026-07-03; named here so the
 # value is measurable and gate-testable. Offline replay over the logged extraction
 # calls (benchmarks/task94_replay/, no model calls, 271 rebuilt sweeps) says the
@@ -735,7 +735,7 @@ EXTRACT_LEX_CHUNKS = 3   # extra chunks rescued by LEXICAL overlap (union with t
 # Kept at 8 because a longer stitched passage raises the judge's 'not stated'
 # refusals. Counts and the t13 walk-through: that folder's FINDINGS.md.
 EXTRACT_EVIDENCE_CAP = 8
-# 2 -> 3 on 2026-09-02 (task #76, paper1 t13): the proof sentence ("Access to the
+# 2 -> 3 on 2026-09-02 (paper1 t13): the proof sentence ("Access to the
 # most capable models is throttled by default ...") is lexical rank 3 of ~1,200
 # source sentences but cosine rank 162, so its chunk is read only when a
 # high-cosine neighbour happens to share the 1,200-word window. The pypdf reader
@@ -1013,7 +1013,7 @@ def _judge_extracted(claim: str, src: Dict[str, Any], sents: List[Dict],
     mapped = pooled[:EXTRACT_EVIDENCE_CAP]
     # Task #98 (2026-09-08; the author asked that every future run keep this
     # information): record what the cap did, so the eight-sentence limit
-    # can be re-measured from analysis.json alone (the task #94 replay rebuilds
+    # can be re-measured from analysis.json alone (the offline replay rebuilds
     # it from llm_calls.jsonl with the CURRENT extraction prompt, which a prompt
     # edit silently breaks for older runs). Pure bookkeeping — no verdict, count,
     # filter or viewer text reads it.
@@ -1886,7 +1886,7 @@ def _subject_tokens(text: str) -> List[str]:
     if len(run) == 1 and _common(run[0]):
         return []                         # "Reviews of ..." — ordinary opener
     if len(run) == 1 and start == 0 and _is_ordinary_word(run[0]):
-        return []                         # card 45: "Tellingly, ..." / "Individual ..."
+        return []                         # e.g. "Tellingly, ..." / "Individual ..."
     kept = [_fold(w) for w in run
             if len(w) >= _SUBJECT_MIN_TOKEN and not _common(w)]
     # A multi-token run that COLLAPSES to one checkable token is a fragment of
@@ -1938,8 +1938,8 @@ def _claim_entity_sets(text: str) -> List[Tuple[str, List[str]]]:
     return sets
 
 
-# --- Quantifier guard (task #75, 2026-09-03; gate row paper1 t47): once the
-# pypdf reader (task #71) read foodandagricultureorganization2004 completely,
+# --- Quantifier guard (2026-09-03; gate row paper1 t47): once the
+# pypdf reader read foodandagricultureorganization2004 completely,
 # the cosine-stage judge accepted "For SOME developing countries, the collapse
 # of commodity prices was traumatic..." as proof of "MOST countries cannot feed
 # themselves ... the great majority of developing states ... are net importers"
@@ -1956,7 +1956,7 @@ def _claim_entity_sets(text: str) -> List[Tuple[str, List[str]]]:
 # never fires: the guard needs the SAME group word on both sides. Standing
 # 2026-08-08 ruling: no judging-prompt rewording tasks — this is code.
 # Blast-radius scan: benchmarks/quantifier_guard_scan.py (offline, $0).
-# 2026-09-08 (task #75 synthetic set, 1,387 rows): 'more/over/at least half'
+# 2026-09-08 (a synthetic set, 1,387 rows): 'more/over/at least half'
 # joined the large side; 'nearly/less than half', percentages under 50 and
 # fractions ('one in five', 'a quarter of') joined the small side; 'all' (only
 # before a plural word, not after 'not/at/after/above') and 'every' joined the
@@ -2157,7 +2157,7 @@ def _quantifier_overreach(claim: str, sentences: List[Optional[str]],
     return None
 
 
-# Sticky hold (card 72 round 1, 2026-09-28; gate day72 paper1 t47): once the
+# Sticky hold (2026-09-28; gate row paper1 t47): once the
 # guard has caught a claim's large-share phrase on a source's small-share
 # sentence, a LATER positive from that same source must show the large share
 # for the same group itself. The q110 gate: cosine stage caught "Most
@@ -2541,8 +2541,8 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
     combined_votes = None            # tally of the multi-source combined judge, if it ran
     structured_missing = None        # judge-structured missing_parts paired with `reason`
     ents, subj_missing = [], {}      # entity-guard state (fulltext paths only)
-    # quantifier-guard state (every path, task #75); a tail suffix inherits the
-    # full claim's hit (q_prior, card 72) so the sticky hold applies to it too
+    # quantifier-guard state (every path); a tail suffix inherits the
+    # full claim's hit (q_prior) so the sticky hold applies to it too
     q_hit: Dict[str, Any] = ({**q_prior, "paper_ids": list(q_prior.get("paper_ids") or [])}
                              if q_prior else {})
     # Quantifier guard on the cosine-stage positives (the t47 path): a dropped
@@ -2565,7 +2565,7 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                                                          if EXTRACT_MERGE_ON else None))
                           for pid in pids if sources.get(pid) is not None) if e]
         _q_filter_positives(claim_text, fb, q_hit)   # fulltext positives too
-        _q_hold_positives(claim_text, fb, q_hit)     # sticky hold (card 72)
+        _q_hold_positives(claim_text, fb, q_hit)     # sticky hold
         if fb:
             # Show the LLM-found sentences, not cosine's — but when extraction
             # came back EMPTY for a source, keep the candidate stage's closest
@@ -2631,7 +2631,7 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                     q_hit.setdefault("evidence_phrase", q["evidence_phrase"])
                     q_hit.setdefault("paper_ids", sorted({e["paper_id"] for e in with_sentence}))
                 else:
-                    # sticky hold (card 72): a caught source joined into the
+                    # sticky hold: a caught source joined into the
                     # union must show the large share somewhere in the union
                     held = [e for e in with_sentence
                             if e["paper_id"] in (q_hit.get("paper_ids") or [])]
@@ -2690,7 +2690,7 @@ def _evaluate(claim_text: str, pids: List[str], row_for, sources: Dict[str, Dict
                     q_hit.setdefault("evidence_phrase", q["evidence_phrase"])
                     q_hit.setdefault("paper_ids", sorted({e["paper_id"] for e in rescue["evidence"]}))
                 else:
-                    # sticky hold (card 72) on the rescue's union of windows
+                    # sticky hold on the rescue's union of windows
                     held = [e for e in rescue["evidence"]
                             if e["paper_id"] in (q_hit.get("paper_ids") or [])]
                     q = held and _q_sticky_overreach(
@@ -3257,7 +3257,7 @@ def run(text_claims: List[Dict], sources: Dict[str, Dict], llm, workers: int = 1
         if res["verdict"] == "unsupported":
             sents_split = _sentence_split(tc["text"])
             tried: List[int] = []
-            # a guard hit on the full claim carries into its suffixes (card 72
+            # a guard hit on the full claim carries into its suffixes (the
             # sticky hold): a suffix still saying "Most countries" must not be
             # re-bought by the positive the full evaluation held
             q_prior = res.get("quantifier_guard")

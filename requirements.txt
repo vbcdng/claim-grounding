@@ -25,10 +25,10 @@ pypdf==6.16.2
 nltk==3.9.4
 requests==2.33.0
 
-# NOT here on purpose: typesafe-sdk, the maker's package for the Jev model
-# (card #116). The documented endpoint is a single POST with a JSON body, which
-# `requests` above already covers, and modules/papertrail/jev_client.py calls it
-# directly. If the package is ever added, pin it to the version actually
-# installed and change only jev_client._send_once.
+# NOT here on purpose: typesafe-sdk, the maker's package for the Jev model.
+# The documented endpoint is a single POST with a JSON body, which `requests`
+# above already covers; an optional private client for the Jev model, not part
+# of this release, calls it directly. If the package is ever added, pin it to
+# the version actually installed.
 beautifulsoup4==4.13.4
 numpy

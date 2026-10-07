@@ -29,7 +29,7 @@ Usage examples
     # run one command once when done (e.g. a scoring step):
     python3 wait_for_run.py --pid 12345 --then "venv/bin/python score.py"
 
-  4. (card 138, 2026-09-28) A --pattern that the program writing the log can
+  4. (2026-09-28) A --pattern that the program writing the log can
      never print would wait until the timeout. Before waiting, a SELF-TEST
      finds that program (--producer, the log's own header line from
      gemma_queue.py or run_logged.sh, or the queue entry of a not-yet-started

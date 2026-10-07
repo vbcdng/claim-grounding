@@ -186,7 +186,7 @@ def _starts_with_frame_opener(lowered: str) -> bool:
                for opener in _FRAME_OPENERS)
 
 
-# --- Long openers (card #25) -------------------------------------------------
+# --- Long openers -------------------------------------------------------------
 #
 # The 6-word cap above missed openers that describe the study before naming
 # its authors: "Using preliminary US county level analysis, Abedi et al.[[a]]
@@ -269,8 +269,8 @@ def _is_attribution_stub(seg: str) -> bool:
     rather than the assertion the marker is citing.
 
     All of these must hold, per the design spec (docs/ARCHITECTURE.md §5.1):
-    short (<=6 words; a longer segment goes to _is_long_attribution_stub,
-    card #25), no sentence-ending punctuation inside it (so it reads
+    short (<=6 words; a longer segment goes to _is_long_attribution_stub),
+    no sentence-ending punctuation inside it (so it reads
     as an opener, not the tail of a prior sentence), and one of: ends in
     "et al[.]" (+ optional comma/paren/year), is a bare author-name list, or
     starts with a closed frame-opener phrase. Conservative by construction —
@@ -281,7 +281,7 @@ def _is_attribution_stub(seg: str) -> bool:
     if re.search(r"[.!?]", _ET_AL_TOKEN_RE.sub("", seg)):
         return False
     if len(seg.split()) > 6:
-        return _is_long_attribution_stub(seg)   # card #25
+        return _is_long_attribution_stub(seg)
     if _ET_AL_STUB_RE.match(seg):
         return True
     if _AUTHOR_LIST_STUB_RE.match(seg):

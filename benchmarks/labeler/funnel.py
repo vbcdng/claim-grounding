@@ -142,7 +142,7 @@ LOSSY_READ_MODES = {"sectioned"}
 def silence_is_trustworthy(verdict):
     """Can this vote's "the source is silent" answer stand on its own?
 
-    A vote that records the answer itself is believed (task #105's piece-read
+    A vote that records the answer itself is believed (the piece-read
     mode sets silence_trustworthy=True only when every piece of the source was
     read and answered). Otherwise the mode decides, and a vote with no mode
     recorded at all is a round-1 whole-source read."""
@@ -179,7 +179,7 @@ def sort_rows(rows, verdicts):
         # way: the 2026-09-04 control run turned two of three passes into
         # silences this way, so such a vote may not carry a proposed label on
         # its own. Which readings those are is decided per vote, not per mode:
-        # a vote may record silence_trustworthy itself (task #105's piece-read
+        # a vote may record silence_trustworthy itself (the piece-read
         # mode does, because it reads every piece and has no summarising step
         # that can drop a sentence), and otherwise the scan-then-judge mode
         # named "sectioned" is the one known-lossy reading.
@@ -249,7 +249,7 @@ def write_summary(sorted_rows, verdicts, path):
                        if any(m == "piece_read"
                               for m in r.get("read_modes", {}).values()))
     if n_piece_read:
-        lines += [f"Reading mode: on {n_piece_read} of these rows at least one model read the source piece by piece in the stronger way built for task #105. The claim was split into its checkable parts once, and then every numbered piece of the source was asked directly, about those same parts, whether it proves them, contradicts them or says nothing about them. There is no summarising step in between that could drop a sentence, and every piece was read, so an answer of 'the source is silent on this part' from this reading rests on the whole source and is not held back the way a scan-then-judge answer is.", ""]
+        lines += [f"Reading mode: on {n_piece_read} of these rows at least one model read the source piece by piece in the stronger way built for sources too long for one call. The claim was split into its checkable parts once, and then every numbered piece of the source was asked directly, about those same parts, whether it proves them, contradicts them or says nothing about them. There is no summarising step in between that could drop a sentence, and every piece was read, so an answer of 'the source is silent on this part' from this reading rests on the whole source and is not held back the way a scan-then-judge answer is.", ""]
     if n_unverified:
         lines += [f"Quote check: {n_unverified} copied proof sentences could not be found word-for-word in the source text. Each is listed under its row below — a verdict resting only on an unfindable quote should not be trusted until a human looks.", ""]
     else:

@@ -308,7 +308,7 @@ if __name__ == "__main__":
 
 
 def _write_arbiterless_run(base, name="repaired_run"):
-    """A run made with the arbiter switched OFF — the shape task #32's repaired
+    """A run made with the arbiter switched OFF — the shape the repaired
     round-3 runs have, which `replay(fresh=True)` must accept."""
     run = os.path.join(base, "data", name)
     os.makedirs(os.path.join(run, "source_claims"))
@@ -332,7 +332,7 @@ def _write_arbiterless_run(base, name="repaired_run"):
 
 
 class TestFreshRows(unittest.TestCase):
-    """task #32 q6: ask a candidate about claims no arbiter ever saw."""
+    """Fresh rows: ask a candidate about claims no arbiter ever saw."""
 
     ROWS = [{"run": ".", "claim_id": "t1", "strata": [], "gt": None},
             {"run": ".", "claim_id": "t2", "strata": [], "gt": None}]

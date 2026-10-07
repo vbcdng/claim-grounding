@@ -133,7 +133,7 @@ class TestOrdinaryOpener(unittest.TestCase):
             "The Court announced judgment in favor of the bank."), ["court"])
 
     def test_agta_still_guarded_by_its_midsentence_name(self):
-        # before card 45 this claim's 'subject' was the word 'consistent';
+        # before the opener fix this claim's 'subject' was the word 'consistent';
         # now the guard rests on the real name, as it should
         self.assertEqual(matcher._subject_tokens(AGTA), [])
         self.assertEqual(matcher._claim_entity_sets(AGTA),
@@ -245,7 +245,7 @@ class TestGuardOnFulltextPath(unittest.TestCase):
         self.assertEqual(out["verdict"], "supported")
 
     def test_t10_positive_survives_when_opener_absent_from_source(self):
-        # card 45: the source never prints 'tellingly'; the judge's unanimous
+        # the source never prints 'tellingly'; the judge's unanimous
         # positive must no longer be thrown out for it
         c = {"id": "t10", "text": T10, "markers": ["tetlock"], "paper_ids": ["p1"]}
         proof = ("Individual forecasters performed no better than simple "

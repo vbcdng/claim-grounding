@@ -31,7 +31,7 @@ predate the field and are read as "whole_source"):
    verdict can miss proof that a whole-source read would have found, so it is
    weaker evidence for "unproven" than a whole-source verdict and the funnel
    labels it as such. It is NOT the method of record.
- - "piece_read" (opt-in, --piece-read-when-too-long; task #105): the same
+ - "piece_read" (opt-in, --piece-read-when-too-long): the same
    numbered pieces, but no summarising step. The claim is split into its
    checkable parts in one call, and then EVERY piece is asked the rubric's own
    question about those same parts, with each proof quote checked word for word
@@ -322,7 +322,7 @@ def sectioned_judge(client, template, scan_template, row, model,
     return {**stats, "answered": False, "reason": last_reason}
 
 
-# ---------- piece-read mode (task #105) ----------
+# ---------- piece-read mode ----------
 #
 # Why this mode exists, in one worked example. Row retreat:b039 claims a 2026
 # study of PLOS research articles found a data reuse rate of 43 percent. Read
@@ -571,7 +571,7 @@ def judge_one(client, template, row, model,
     a row over the cap is then read in numbered pieces instead of becoming a
     no-answer. Without it the behaviour is unchanged.
 
-    `piece_read`, the same shape, chooses the task #105 mode instead: every
+    `piece_read`, the same shape, chooses the piece-read mode instead: every
     numbered piece answers the rubric's own question about one fixed list of
     claim parts, with no summarising step in between. When both are given,
     piece_read wins, because it is the stronger reading of the two."""
@@ -740,7 +740,7 @@ def main():
     ap.add_argument("--piece-read-when-too-long", action="store_true",
                     help="read an over-cap source piece by piece, asking every "
                          "piece the rubric's own question about one fixed list "
-                         "of claim parts (task #105). No summarising step, so "
+                         "of claim parts. No summarising step, so "
                          "'the source is silent' rests on the whole source. "
                          "Wins over --sectioned-when-too-long when both are given.")
     ap.add_argument("--piece-chars", type=int, default=DEFAULT_PIECE_CHARS,

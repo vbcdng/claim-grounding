@@ -506,7 +506,7 @@ class TestPieceReadSilenceProposesNoLabel(unittest.TestCase):
         self.assertEqual(out["proposed_label"], "fail_unproven")
 
 
-# ---------- piece-read mode (task #105) ----------
+# ---------- piece-read mode ----------
 
 FILLER = "The committee met and discussed the agenda at length. "
 NEEDLE = ("Weathered biotite sorbed caesium two orders of magnitude more "
@@ -564,7 +564,7 @@ class PieceStub:
 
 
 class TestPieceReadMode(unittest.TestCase):
-    """The reading built for task #105: every numbered piece answers the
+    """The reading built for sources too long for one call: every numbered piece answers the
     rubric's own question about one fixed list of claim parts."""
 
     def setUp(self):

@@ -99,7 +99,7 @@ class TestViewerV2(unittest.TestCase):
 
     def test_unsupported_reason_and_partly_proven(self):
         self.assertIn("the source says otherwise", self.html)
-        self.assertIn("Checked part by part", self.html)       # task #19 part list
+        self.assertIn("Checked part by part", self.html)       # part-by-part list
         self.assertIn("1 of 2 parts found", self.html)
         self.assertIn("The true part is stated.", self.html)
         self.assertIn("the false part", self.html)

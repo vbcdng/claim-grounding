@@ -340,7 +340,7 @@ def _span_info(row):
     return par[s:e], (lo >= s and hi <= e + 1)
 
 
-# --- joining several annotated spans (card 123, 2026-09-24) ---------------
+# --- joining several annotated spans (2026-09-24) ------------------------
 # 314 of the 3,063 citation files mark more than one span, and 67 of those
 # store them OUT of paragraph order (dev/040_PMC7144857/PMC7748189_1: the later
 # span first). The old join was ' '.join(texts) in stored order, which put a

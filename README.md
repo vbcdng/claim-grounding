@@ -268,9 +268,10 @@ download:
       --output-dir runs/example --open
 
 `--open` launches `viewer.html` when done. A larger example with nine
-sources is in `examples/bentonite/`. Two of its sources are
-subscription-only papers we may not redistribute. Its README explains
-which two files to fetch yourself.
+sources is in `examples/bentonite/`. Five of its sources are not
+included: two subscription-only papers we may not redistribute, and
+three whose files state no licence. Its README explains which five
+files to fetch yourself.
 
 ## 5. Or let the wizard ask you everything
 

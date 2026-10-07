@@ -3,7 +3,8 @@
 The submission states test results. This page explains how the tool reaches
 a verdict, what each test actually tests, and gives the commands to re-run
 the scoring on your own machine. Test 1 is files to read — no API key, no
-setup; Test 2 runs the full pipeline for a few cents with your own key;
+setup; Test 2 runs the full pipeline with your own Google key on Google's
+free tier;
 Test 3 covers the WiCE benchmarks, which you can re-score offline in
 seconds or re-run end to end for about $1.40.
 
@@ -113,7 +114,7 @@ the same story (a false "supported" that the fix caught); the rows just
 captured the verdict at different moments. VERIFIED_FINDINGS has the
 before/after for each.
 
-## Test 2 — run the whole pipeline (your API key, a few cents)
+## Test 2 — run the whole pipeline (your Google API key, free tier)
 
 One hand-audited paper ships complete: text, source (openly licensed,
 CC-BY), and the human claim-by-claim ground truth. You can run the full
@@ -124,7 +125,7 @@ verification and score it against the human audit:
         --text examples/chimpanzee_validation/my_text.md \
         --sources examples/chimpanzee_validation/sources \
         --output-dir /tmp/chimp_check \
-        --model gemini/gemini-2.5-flash-lite --api-key <your key> \
+        --model gemini/gemma-4-31b-it --api-key <your key> \
         --no-arbiter --yes
     venv/bin/python3 benchmarks/regression_check.py \
         --analysis /tmp/chimp_check/analysis.json \
@@ -139,12 +140,22 @@ without it passing. The ground-truth files are readable without running
 anything: `benchmarks/*_ground_truth.json` and
 `benchmarks/coverage_ground_truth_*.json`.
 
-The larger bentonite gate paper is also in `examples/`, but two of its
-sources are subscription articles whose extracted text may not be
-redistributed here (DOIs 10.1007/s10450-020-00263-y and 10.1007/s10967-024-09627-y)
-— fetch those two yourself to reproduce it fully. Until you do, any bentonite
-run (even `--estimate`) prints two `source file missing` warnings; that is
-expected, not breakage — details in `examples/bentonite/README.md`.
+`gemini/gemma-4-31b-it` is the tool's default judge; Google offers it on
+its free tier, so a Google API key without billing is enough. The tool's
+own offline tests need one more program, pytest, which `requirements.txt`
+does not install:
+
+    venv/bin/pip install pytest
+    venv/bin/python -m pytest -q
+
+The larger bentonite gate paper is also in `examples/`, but five of its
+nine sources are not included: two subscription articles whose extracted
+text may not be redistributed here (DOIs 10.1007/s10450-020-00263-y and
+10.1007/s10967-024-09627-y), and three sources whose files state no
+licence (removed 2026-10-07) — fetch those five yourself to reproduce it
+fully. Until you do, any bentonite run on the default backend (even
+`--estimate`) prints five `source file missing` warnings; that is expected, not breakage — details
+in `examples/bentonite/README.md`.
 
 ## Test 3 — WiCE: the development benchmark and the held-out test
 

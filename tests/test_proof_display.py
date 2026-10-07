@@ -25,17 +25,17 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from modules.papertrail import proof_display as pd
 from modules.papertrail import viewer, viewer_v2
 
-# The real fresh50:cidev0028 evidence row, verbatim from the run's analysis.json.
-GLUED = ("The global burden of CLD is vast, with cirrhosis now estimated to affect "
-         "112 million people worldwide, resulting in 2 million deaths per year "
-         "through hepatic decompensation and hepatocellular carcinoma (HCC).2 , 3 "
+# Modelled on the real fresh50:cidev0028 evidence row, shortened to two
+# sentences: the superscript reference numbers "2 , 3" glue them together,
+# and the stored row stops in the middle of the second one. WINDOW is the
+# judged window, which carries the rest of that second sentence.
+GLUED = ("Cirrhosis leads to 2 million deaths per year through hepatic "
+         "decompensation and hepatocellular carcinoma (HCC).2 , 3 "
          "Cirrhosis is characterised by immune dysregulation, leading to concerns "
          "that these")
-WINDOW = ("Whilst medical comorbidities have been implicated as risk factors, the "
-          "impact of underlying chronic liver disease (CLD) remains incompletely "
-          "defined. " + GLUED + " patients may be at increased risk of complications "
-          "following SARS-CoV-2 infection.4 International guidelines have tended to "
-          "advocate for enhanced physical distancing.")
+WINDOW = ("The paragraph opens here. " + GLUED + " patients may be at increased "
+          "risk of complications following "
+          "SARS-CoV-2 infection.")
 
 
 class TestSplitGlued(unittest.TestCase):
@@ -166,7 +166,7 @@ def _page(analysis, v2=False):
 class TestViewerRendersHonestly(unittest.TestCase):
     def setUp(self):
         self.ev = {"paper_id": "p1", "source_title": "Alpha", "supported": True,
-                   "sentence": GLUED, "page": 1, "snippet": "The global",
+                   "sentence": GLUED, "page": 1, "snippet": "Cirrhosis leads",
                    "cosine": 0.89, "reason": "ok", "window": WINDOW}
 
     def test_v1_quotes_the_two_sentences_separately_and_says_so(self):
@@ -180,10 +180,10 @@ class TestViewerRendersHonestly(unittest.TestCase):
 
     def test_the_copy_button_never_carries_the_glued_string(self):
         page = _page(_analysis(self.ev))
-        self.assertNotIn('data-quote="The global burden of CLD is vast, with '
-                         'cirrhosis now estimated to affect 112 million people '
-                         'worldwide, resulting in 2 million deaths per year through '
-                         'hepatic decompensation and hepatocellular carcinoma '
+        self.assertNotIn('data-quote="Cirrhosis leads to 2 million deaths '
+                         'per year through '
+                         'hepatic decompensation '
+                         'and hepatocellular carcinoma '
                          '(HCC).2 , 3', page)
 
     def test_a_clean_quote_gets_no_warning(self):

@@ -411,7 +411,7 @@ def replay(rows: List[Dict[str, Any]], out_dir: str, data_dir: str = DEFAULT_DAT
     (the estimate does NOT include rescue-judge calls — rescues are rare,
     ~a handful per arm). `rescue_judge_model` / `judge_llm` (injectable for
     tests) turn on the real rescue re-judge — see _rejudge().
-    `fresh=True` (task #32 q6, 2026-09-10) also accepts claims that carry NO
+    `fresh=True` (2026-09-10) also accepts claims that carry NO
     recorded arbiter payload — a run made with the arbiter switched off, such
     as the repaired round-3 runs — and asks the candidate the question the
     recorded arbiter never got; those rows have `old` = None and

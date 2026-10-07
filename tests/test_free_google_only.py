@@ -63,7 +63,7 @@ def test_normal_mode_loads_all_distinct_keys_including_paid(clean_env):
 def test_free_mode_loads_only_no_billing_keys(clean_env, monkeypatch):
     """FREE_GOOGLE_ONLY=1 restricts key loading to *_free.txt files; the paid
     key in google_api_key.txt is never picked up. (A non-Gemma model: since
-    card 143 Gemma rotates over every key, see the Gemma tests below.)"""
+    2026-09-29 Gemma rotates over every key, see the Gemma tests below.)"""
     _write_keys(
         clean_env,
         **{
@@ -202,7 +202,7 @@ def test_free_mode_with_no_free_key_files_is_hard_error_no_env_fallback(
 ):
     """With no *_free.txt files present, free-only mode raises rather than
     falling back to a GEMINI_API_KEY environment variable, since that key
-    could be a paid one. (A non-Gemma model: since card 143 a Gemma model
+    could be a paid one. (A non-Gemma model: since 2026-09-29 a Gemma model
     may use the billed google_api_key.txt, because Gemma has no paid tier;
     Gemma's own no-file case is in test_free_mode_gemma_keeps_every_refusal.)"""
     _write_keys(clean_env, **{"google_api_key.txt": "PAIDKEY"})

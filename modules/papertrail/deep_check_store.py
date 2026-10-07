@@ -205,7 +205,7 @@ def report_sentence(report: Dict[str, Any], label: str = "deep-check",
     """One plain-language sentence for a log line or a report page.
 
     `label`/`noun_singular` let a second side-file with the same contract name
-    itself ("Granite answers" rather than "deep-check comments"); task #65.
+    itself ("Granite answers" rather than "deep-check comments").
     """
     if not report.get("present", True) or report.get("total", 0) == 0:
         return f"No {label} {noun_singular}s were found for this run."

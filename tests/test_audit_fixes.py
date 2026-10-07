@@ -162,7 +162,7 @@ class TestDegenerateFilters(unittest.TestCase):
 
     def test_auto_support_still_fires_without_contradiction(self):
         # false-alarm control for BUG-1: an ordinary >=0.97 match with a clean
-        # window still auto-accepts with no LLM call. Since card 133 only a
+        # window still auto-accepts with no LLM call. Now only a
         # word-identical claim qualifies (a paraphrase like "The US hosts…" is
         # judged — tests/test_near_verbatim_shortcut.py).
         matched = "The United States hosts about three quarters of global compute."

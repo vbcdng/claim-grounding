@@ -147,7 +147,7 @@ def _relevant_section(claim_text: str, sents: List[Dict[str, Any]],
     source may contribute to the prompt, and it wins over the word-based caps
     below. It exists because the seat's real limit is in characters: the free
     Google seat refuses any request over about 52,000 characters, so before
-    task #105 a ~20,000-word section (about 120,000 characters) was skipped
+    this budget existed a ~20,000-word section (about 120,000 characters) was skipped
     without being sent and the arbiter silently never saw any long source
     there. With no budget the behaviour is exactly what it was."""
     texts = [s.get("text", "") for s in sents]
@@ -560,7 +560,7 @@ def rescue(claims: List[Dict[str, Any]], sources: Dict[str, Dict], llm,
                     continue
                 title = src.get("title") or pid
                 w = _locate_window(proof, src) or proof
-                # Quantifier guard (task #75): a verbatim proof that gives the
+                # Quantifier guard: a verbatim proof that gives the
                 # group a SMALLER share than the claim ('some' vs 'most') must
                 # not re-buy the positive the matcher refused.
                 if matcher._quantifier_overreach(c.get("text") or "", [proof], [w]):

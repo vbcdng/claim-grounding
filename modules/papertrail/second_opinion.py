@@ -30,7 +30,7 @@ from .llm_client import parallel_map
 
 logger = logging.getLogger("papertrail.second_opinion")
 
-# Default picked 2026-09-10 (task #67, the pick moved here from #66). The old
+# Default picked 2026-09-10. The old
 # default `gemini/gemini-2.5-flash` retires 2026-10-16, so it had to move. Three
 # constraints decided it:
 #   1. It must not be the judge's own family. The judge default is Google's
@@ -44,7 +44,7 @@ logger = logging.getLogger("papertrail.second_opinion")
 #      MEASURED in this project (deep_check.py's own default; the grader ruling
 #      in CLAUDE_GRADER_BENCHMARK_TEST_PLAN_2026-07-26.md). DeepSeek V4 Flash was
 #      measured but retired 2026-09-10 into an unmeasured V4.1; Qwen 3.8 Flash and
-#      GLM 5.3 Flash are new and thinking-heavy, and task #32 measured that hidden
+#      GLM 5.3 Flash are new and thinking-heavy, and we measured that hidden
 #      reasoning makes a second reader STRICTER, i.e. worse here.
 # Cost is $0 on a Claude subscription; latency is higher than a raw API, which is
 # acceptable for an opt-in pass. Without the `claude` CLI the pass is skipped with

@@ -23,8 +23,8 @@
 #     bash benchmarks/run_gate_openrouter.sh <tag> [concurrency]
 #
 #   AUTHOR_GO      REQUIRED. Quote the go you are acting on, e.g.
-#                  AUTHOR_GO="author 2026-08-28: 'run the r7 arm on the paid
-#                  host, I do not want to wait for the free seat'". It is
+#                  AUTHOR_GO="EXAMPLE ONLY - replace with the real approval
+#                  text and date" (an invented placeholder). It is
 #                  printed at the top of the log and written into every output
 #                  folder as .paid_run_authorization, so a paid run can always
 #                  be traced back to the permission it rested on. The script
@@ -51,12 +51,12 @@
 #                  without making a single request. Free. Use this to show the
 #                  author what a paid arm would cost before asking for a go.
 #   EXTRA_FLAGS="--aida-grounder --aida-field-tools"
-#                  (card #85 follow-up 3, 2026-10-01) extra verify_my_text.py
+#                  (2026-10-01) extra verify_my_text.py
 #                  flags appended to BOTH passes, exactly as in the free script.
 #                  Word-split on purpose; quote nothing inside. Recorded in every
 #                  output folder as .extra_flags: one tag = one set of flags, a
 #                  re-run of the tag with different flags is refused (exit 2).
-#   REUSE_FROM=<tag> (card #85 follow-up 3; the free script's card #141 switch)
+#   REUSE_FROM=<tag> (the free script's answer-reuse switch)
 #                  serve every request that is byte-for-byte identical to one
 #                  the earlier PAID arm <tag> already asked from that arm's
 #                  recorded answer; only the rest is sent and paid for. Reused
@@ -66,7 +66,7 @@
 #                  sent): <tag> is this tag; STABILITY_RUN=1 or --verdict-vote in
 #                  EXTRA_FLAGS; and, unlike the free script, any text whose donor
 #                  folder is missing, was not judged on this paid host, or holds
-#                  no request fingerprints (recorded before card #141) — on this
+#                  no request fingerprints (recorded before this switch existed) — on this
 #                  script a donor that cannot donate means paying for the whole
 #                  arm, which is not what the go was priced for.
 #   RECORD_REQUESTS=1 default: write each request's fingerprint into
@@ -135,7 +135,7 @@ if [ "$TAG" = "canonical" ]; then
 fi
 
 # Answer reuse from an earlier arm: refuse the combinations that would make the
-# arm measure nothing (same rules as the free script, card #141).
+# arm measure nothing (same rules as the free script).
 if [ -n "$REUSE_FROM" ]; then
   if [ "$REUSE_FROM" = "$TAG" ]; then
     echo "ERROR: REUSE_FROM=$REUSE_FROM is this arm's own tag. Reuse copies answers" >&2
@@ -217,7 +217,7 @@ outdir_for() { echo "$OUT_ROOT/gate_${1}_$2"; }   # <tag> <name>
 
 # Can the REUSE_FROM arm's folder for <name> donate? Prints a reason and
 # returns 1 when it cannot: no call log, not judged on this paid host, or no
-# request fingerprints (recorded before card #141, or with RECORD_REQUESTS=0).
+# request fingerprints (recorded before answer reuse existed, or RECORD_REQUESTS=0).
 donor_problem() {  # <name>
   local d log
   d=$(outdir_for "$REUSE_FROM" "$1")
@@ -229,7 +229,7 @@ donor_problem() {  # <name>
     echo "$d was not judged on the paid full-precision host"; return 1
   fi
   if ! grep -q '"request_sha256"' "$log"; then
-    echo "$log holds no request fingerprints (recorded before card #141)"; return 1
+    echo "$log holds no request fingerprints (recorded before answer reuse existed)"; return 1
   fi
   return 0
 }
@@ -303,7 +303,7 @@ if [ "$ESTIMATE_ONLY" = "1" ]; then
   if [ -n "$REUSE_FROM" ]; then
     echo "  REUSE_FROM=$REUSE_FROM: every request identical to one that arm asked is"
     echo "  served from its recorded answer for \$0, so only the requests that differ"
-    echo "  are paid (93-100% repeat between arms one switch apart, card #141)."
+    echo "  are paid (93-100% repeat between arms one switch apart)."
     for row in "${TEXTS[@]}"; do
       IFS='|' read -r name _ _ _ <<< "$row"
       if why=$(donor_problem "$name"); then
@@ -375,7 +375,7 @@ if [ "$SCORE_ONLY" != "1" ]; then
     fi
     printf '%s' "$arm_now" > "$arm_file"
 
-    # One tag = one set of EXTRA_FLAGS (card #85 follow-up 3). A folder from
+    # One tag = one set of EXTRA_FLAGS. A folder from
     # before this stamp existed was run with no extra flags, so a missing file
     # reads as "none".
     flags_file="$out/.extra_flags"

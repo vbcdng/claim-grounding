@@ -121,7 +121,7 @@ def _log_call(model: str, purpose: str, claim_id: Optional[str], prompt: str,
         logger.warning(f"llm_calls.jsonl write failed (call not logged): {e}")
 
 
-# ---- Answer store (card #141, 2026-09-28; OFF unless PAPERTRAIL_REUSE_FROM is
+# ---- Answer store (2026-09-28; OFF unless PAPERTRAIL_REUSE_FROM is
 # set). A second arm of the same test re-asks thousands of questions the first
 # arm already asked word for word (measured offline: 93-100% of calls for a
 # one-switch pair, 63-71% after a prompt change — benchmarks/card141_reuse_measure.py).
@@ -171,7 +171,7 @@ def request_fingerprint(body: Dict[str, Any]) -> str:
 
 def load_answer_store(paths: list) -> Dict[str, list]:
     """fingerprint -> [(answer, path)] usable recorded answers (oldest first).
-    A line without request_sha256 (recorded before card #141, or with
+    A line without request_sha256 (recorded before answer reuse existed, or with
     recording off) cannot be matched exactly and is skipped. Raises
     FileNotFoundError for a missing file: asking to reuse a file that is not
     there is a typo, not a request to run everything live."""
@@ -222,7 +222,7 @@ def answer_store_active() -> bool:
             if not _REUSE_STATS["loaded"]:
                 logger.warning("Answer reuse ON but no answer could be loaded: the "
                                "earlier arm's call log carries no request "
-                               "fingerprints (recorded before card #141 or with "
+                               "fingerprints (recorded before answer reuse existed, or with "
                                "recording off). Every call is asked live.")
     return True
 
@@ -279,7 +279,7 @@ _BUILTIN_EXTRA_BODY: Dict[str, Dict[str, Any]] = {
     # RETIRED v4-flash and the old name now silently routes to this model, so
     # any measurement keyed to "deepseek-v4-flash" describes a model that is
     # gone. Same hidden-thinking behaviour, same switch — verified live on
-    # 2026-09-10 (task #32 q6 panel: 27 calls, ~460 visible output tokens each,
+    # 2026-09-10 (a model panel: 27 calls, ~460 visible output tokens each,
     # no empty answers). The OpenRouter route is prefix-excluded as usual.
     "deepseek/deepseek-flash": {"thinking": {"type": "disabled"}},
     # gemma-4 on Google's own API (free tier only): hidden thinking eats the
@@ -464,8 +464,8 @@ DEFAULT_GEMINI_KEY_PATH = os.path.join(PROJECT_ROOT, "config", "google_api_key.t
 # anomaly: waiting IS the pacing. Calls on these models retry rate errors up
 # to _MAX_RATE_WAITS without consuming regular attempts, so an overnight or
 # background run self-paces instead of dropping verdicts after 3 tries.
-# Google's Gemini Flash models on the free seat behave the same way (card #100,
-# 2026-09-09): the free tier throttles per minute AND per day, so a per-minute
+# Google's Gemini Flash models on the free seat behave the same way
+# (2026-09-09): the free tier throttles per minute AND per day, so a per-minute
 # 429 is the pacing, not a failure, and must not consume one of the three
 # regular attempts. Only the gemini/ routes are listed — an OpenRouter-hosted
 # Gemini would be a paid seat with ordinary retries.
@@ -484,7 +484,7 @@ _MAX_RATE_WAITS = 40   # worst case ~43 min on one key; a daily-quota 429 still 
 # "An internal error has occurred", 502/504) on the same free seat are also
 # transient and also come in waves: the two day75b gate runs of 2026-09-08/09
 # lost 341 and 52 calls to the three fast retries (1 s, 2 s) below and were
-# unscorable (task #37 rule). On paced models such errors now wait 60 s each,
+# unscorable (any refused call fails a gate run). On paced models such errors now wait 60 s each,
 # up to _MAX_SERVER_WAITS, without consuming a regular attempt (author go 2026-09-09).
 _MAX_SERVER_WAITS = 20   # worst case ~20 min per call
 _SERVER_ERROR_MARKERS = ("internalservererror", "internal server error",
@@ -498,7 +498,7 @@ def _free_google_only() -> bool:
     """FREE_GOOGLE_ONLY=1 (env) = money-lock mode: only Google keys from files
     named config/google_api_key*_free.txt (keys with NO billing attached, so
     Google cannot charge them) may be used — except by a Gemma model, which is
-    free on every key and rotates over all key files (card 143, see
+    free on every key and rotates over all key files (see
     _gemini_key_files) — and every non-Google paid provider
     is refused at client construction. The $0 claude-code backend is unaffected
     (it never runs this class's __init__). Set by the /free-google-api skill."""
@@ -509,7 +509,7 @@ def _is_gemma(model: Optional[str]) -> bool:
     """Exactly the litellm `gemini/gemma-*` family. Gemma on Google direct is
     free of charge on every key (Google offers it on the free tier only — no
     paid tier exists), so under FREE_GOOGLE_ONLY a Gemma call may use a billed
-    key without any charge (card 143, author 2026-09-29)."""
+    key without any charge (the author's decision, 2026-09-29)."""
     return str(model or "").startswith("gemini/gemma-")
 
 
@@ -520,7 +520,7 @@ def _gemini_key_files(model: Optional[str] = None) -> list:
     round-robin across them and a rate-limited call switches to the next key.
     Under FREE_GOOGLE_ONLY only *_free.txt files (no-billing keys) are eligible,
     EXCEPT for a Gemma model (_is_gemma), which gets every key file so a locked
-    Gemma job rotates over both Google accounts (card 143). model=None keeps
+    Gemma job rotates over both Google accounts. model=None keeps
     the strict free-only list (callers that don't name a model)."""
     import glob
     strict = _free_google_only() and not _is_gemma(model)
@@ -674,7 +674,7 @@ class LLMClient:
 
         This is the same number the size preflight in call() enforces, exposed
         so a caller can shape its context to fit instead of having the call
-        skipped (task #105). It is a measured provider limit, not a token
+        skipped. It is a measured provider limit, not a token
         estimate: on the free-tier-paced Google seats a bigger prompt is
         refused by the provider, so it can never succeed."""
         return _FREE_TIER_MAX_PROMPT_CHARS if self._patient_rate else None

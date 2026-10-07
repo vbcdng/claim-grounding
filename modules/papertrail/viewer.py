@@ -36,16 +36,16 @@ logger = logging.getLogger(__name__)
 # the rest behind a "show more" toggle.
 OMITTED_SHOWN = 15
 
-# Hover text of the grey "proof may exist?" chip (hhem_check.py, card 132), shared
+# Hover text of the grey "proof may exist?" chip (hhem_check.py), shared
 # by both viewers. The check is default-on since 2026-09-29, so a reader who never
 # asked for it sees this chip: one plain sentence, and it must say the verdict is
-# never changed. "About two in three" = 30 false marks / 47 marks (card 118).
+# never changed. "About two in three" = 30 false marks / 47 marks (measured).
 HHEM_CHIP_TITLE = ("A second, small checker model on this computer thinks the cited "
                    "source may prove this rejected claim after all; it is only a "
                    "question for you to check and it never changes the verdict "
                    "(about two in three of these marks turn out to be on a claim "
                    "that was rightly rejected).")
-# Card 166 (the author's decision of 2026-10-06, run-2 Q10): the public copy ships
+# The author's decision of 2026-10-06: the public copy ships
 # without the HHEM check. There the legend's explanation of the chip is replaced
 # by this one sentence, unless a claim in the run still carries an HHEM answer.
 HHEM_ABSENT_LEGEND = ('<div class="legrow">The small local checker on rejected claims '
@@ -359,7 +359,7 @@ def _one_blockquote(sentence: str) -> str:
 
 
 def _clamped_quote(sentence: str, window: Optional[str] = None) -> str:
-    """The card's quoted proof, rendered honestly (task #4, 2026-09-02).
+    """The card's quoted proof, rendered honestly (2026-09-02).
 
     A stored "sentence" is not always one sentence of the source. PDF text puts
     reference numbers on the line, so the splitter can glue two sentences from
@@ -506,7 +506,7 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
     if verdict == "unsupported" and cscope.get("scope") in ("methods", "concept", "related"):
         badge = f"SCOPED CITATION ({cscope['scope'].upper()})"
         badge_cls = "unsupported scoped"
-    # Never-checked rows (task #19, 2026-09-03): the source text could not be
+    # Never-checked rows (2026-09-03): the source text could not be
     # read at all, so a red "UNSUPPORTED" badge claims a judgment that was never
     # made — and contradicts the header, which already counts these rows as
     # unverifiable. DISPLAY ONLY: the verdict field and the filters are untouched.
@@ -849,7 +849,7 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                  f'({_esc(dc.get("model") or "")}, {_esc(dc.get("confidence") or "?")} '
                  f'confidence; testing aid, never a veto): '
                  f'{_esc(dc.get("commentary") or "")}{q}{better}</div>')
-    # Free local checker (granite_check.py, task #65): a checker model running
+    # Free local checker (granite_check.py): a checker model running
     # on this computer re-read an APPROVED claim against a large slice of the
     # cited source. Only its disagreement is shown, and only ever as a
     # question — measured on 122 approved claims it catches 89% of the tool's
@@ -869,9 +869,9 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                  f'every 2.3 concerns a claim that was perfectly fine, and this model '
                  f'cannot tell whether the citation points at the right paper at all. '
                  f'The verdict above is unchanged — read the evidence and decide.</div>')
-    # Small free local checker on REJECTED claims (hhem_check.py, card 132):
+    # Small free local checker on REJECTED claims (hhem_check.py):
     # HHEM scored the claim against ~6,000 characters of the cited source at or
-    # above card 118's pass mark. Measured on 114 rejected claims: 17 of 22 wrong
+    # above its measured pass mark. Measured on 114 rejected claims: 17 of 22 wrong
     # rejections marked, 30 of 92 correct ones too. A question, NEVER a veto.
     hh = c.get("hhem_check") or {}
     if hh.get("proof_may_exist") is True and verdict == "unsupported":
@@ -1082,7 +1082,7 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
     # its own ✓/✗ marker and a ✗ row says what to do — and added the case-4
     # contract: all parts found + nothing missing ⇒ the judges' objection is
     # quoted on the card (189 such rows in the runs on disk had an empty list
-    # and no stated objection). Proofs go through proof_display (task #4).
+    # and no stated objection). Proofs go through proof_display.
     # Display only; the verdict is untouched.
     cc = c.get("component_check") or {}
     if verdict == "unsupported" and cc:
@@ -1184,7 +1184,7 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
             chip += (f'<span class="kindchip" title="{_esc(ok.get("reason") or "")}">'
                      f'{_esc(ok["kind"])}</span>')
 
-    # Numeric cross-check (task #2): a figure the claim states that appears in
+    # Numeric cross-check: a figure the claim states that appears in
     # none of the cited sources. Deterministic, display-only — the verdict field
     # is untouched, so a green card can carry this amber warning.
     nc = c.get("number_check") or {}
@@ -1219,7 +1219,7 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
                  f'else. Check that the source states this figure for this statement.'
                  f'</div>')
 
-    # Direction check (task #2, only with --direction-check): the source
+    # Direction check (only with --direction-check): the source
     # passages do not carry the claim's cause-and-effect or increase/decrease
     # direction. Display-only.
     dc = c.get("direction_check") or {}
@@ -1288,8 +1288,8 @@ def _claim_card(c: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict
 
 def _aida_proof_row(pr: Dict[str, Any], fname_map: Dict[str, str], source_texts: Dict[str, str],
                     paper_meta: Dict[str, Dict[str, str]]) -> str:
-    """Card 86: one proof sentence of a proven part — the real quote (through
-    proof_display, task #4), its source's title and the usual open-in-source
+    """One proof sentence of a proven part — the real quote (through
+    proof_display), its source's title and the usual open-in-source
     action."""
     pid = pr.get("paper_id")
     shown = proof_display.primary_text(pr.get("sentence") or "")
@@ -2342,14 +2342,14 @@ def generate(analysis: Dict[str, Any], output_path: str, title: str = "Claim Ver
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
   .dc-note.flag {{ color:#374151; }}
   .dc-better {{ margin-top:4px; font-style:italic; }}
-  /* Free local checker (task #65) — a question about a green card, so the same
+  /* Free local checker — a question about a green card, so the same
      neutral grey ghost chip as every other piece of metadata, never a hue. */
   .gcchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
              border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
   .gc-note {{ font-size:12px; background:#f8fafc; border:1px solid #cbd5e1; color:#475569;
               border-radius:6px; padding:6px 10px; margin:8px 0 0; }}
-  /* Small local checker on rejected claims (card 132) — same neutral grey. */
+  /* Small local checker on rejected claims — same neutral grey. */
   .hhchip {{ font-size:9px; font-weight:700; letter-spacing:.02em; padding:1px 6px;
              border-radius:8px; margin-left:6px; vertical-align:middle; cursor:help;
              background:#fff; color:#6b7280; border:1px solid #d1d5db; }}
