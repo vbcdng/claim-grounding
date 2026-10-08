@@ -467,6 +467,8 @@ verdicts described in `docs/NEW_PAPER_AUDIT.md`.
 
 ## 8. How accurate is it
 
+**The short answer, with every number we have measured:** [`docs/MEASURED_RESULTS_2026-10-08.md`](docs/MEASURED_RESULTS_2026-10-08.md). It explains each test in plain language, gives the results for the current version and for earlier ones, sorts the tool's errors by cause, and says what we do not know yet.
+
 `FOR_REVIEWERS.md` explains how the tool decides, what
 each benchmark tests, and how to re-run the scoring yourself. The
 benchmark run outputs and human labels are checked into `benchmarks/`,
