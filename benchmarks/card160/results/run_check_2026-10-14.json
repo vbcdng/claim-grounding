@@ -1,0 +1,353 @@
+[
+ {
+  "run": "card160paidr1",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidr1_20261010_204830_1199474.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidr2",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidr2_20261013_142248_1302725.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidr3",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidr3_20261014_001627_2285620.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidprompt",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidprompt_20261011_004806_1589030.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidshuffle",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidshuffle_20261011_032514_1837332.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidbias",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidbias_20261011_060741_2087522.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      NO RESULT FILE at data/gate_card160paidbias_essay — this text was not verified",
+    "bohemia    NO RESULT FILE at data/gate_card160paidbias_bohemia — this text was not verified",
+    "pots       NO RESULT FILE at data/gate_card160paidbias_pots — this text was not verified",
+    "hard       NO RESULT FILE at data/gate_card160paidbias_hard — this text was not verified",
+    "WARNING: a text has no result file — check the log for a crash or the spending ceiling."
+   ],
+   "card160paidbias_20261013_095319_701114.log": [
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paiddoubt",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paiddoubt_20261013_111804_893652.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidreworded",
+  "texts": 6,
+  "judged_claims": 85,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidreworded_20261013_172719_1631940.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0"
+   ]
+  }
+ },
+ {
+  "run": "card160paidnegated",
+  "texts": 6,
+  "judged_claims": 85,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160paidnegated_20261013_202237_1921385.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0"
+   ]
+  }
+ },
+ {
+  "run": "card160freer1",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "q157.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160freer2",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "q156.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160freer3",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "q155.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160sonnetr1",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160sonnetr1_20261002_214542_3228999.log": null,
+   "card160sonnetr1_20261007_000257_3199672.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160sonnetr2",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160sonnetr2_20261007_043300_3756358.log": null,
+   "card160sonnetr2_20261007_202822_1189697.log": null,
+   "card160sonnetr2_20261009_220635_2346866.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160sonnetr3",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160sonnetr3_20261009_224018_2422252.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160haikur1",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160haikur1_20261007_202824_1189798.log": null,
+   "card160haikur1_20261010_074420_3522304.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160haikur2",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160haikur2_20261010_122646_13113.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ },
+ {
+  "run": "card160haikur3",
+  "texts": 7,
+  "judged_claims": 95,
+  "failed_call_verdicts": [],
+  "claims_with_extra_check_failed": 0,
+  "retry_reports": [],
+  "logs": {
+   "card160haikur3_20261010_161548_565493.log": [
+    "paper1     0",
+    "bentonite  0",
+    "chimp      0",
+    "essay      0",
+    "bohemia    0",
+    "pots       0",
+    "hard       0"
+   ]
+  }
+ }
+]

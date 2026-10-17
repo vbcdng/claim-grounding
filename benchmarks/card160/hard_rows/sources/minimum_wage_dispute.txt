@@ -1,0 +1,7 @@
+The New Jersey minimum-wage dispute: a constructed summary
+
+This is a constructed test document for a stability study of the claim checker. It is not a real publication. It was written to test how a checker reads a finding the writer reports from other authors, and a dispute the writer takes a side in.
+
+In April 1992 New Jersey raised its minimum wage. Card and Krueger surveyed fast-food restaurants in New Jersey and in neighbouring Pennsylvania before and after the increase, and reported that employment in the New Jersey restaurants did not fall. Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.
+
+We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them. In our reading the evidence does not show a fall in employment.

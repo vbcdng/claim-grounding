@@ -1,0 +1,68 @@
+{
+ "paper": "stability_hard_rows",
+ "text_file": "benchmarks/card160/hard_rows/my_text.md",
+ "created": "2026-10-02",
+ "basis": "Hard test sentences for the stability study: the raccoon-dog sentence, which argues for a natural origin while mentioning a laboratory leak, arguments a writer reports from someone else, and claims about claims, each with a twin that must be rejected. The two sources are constructed test documents, not real publications.",
+ "claims": [
+  {
+   "id": "t0",
+   "expect": "supported",
+   "note": "the raccoon-dog sentence: an argument FOR a natural origin that mentions a lab leak; the review states exactly this argument",
+   "text": "It would be an even more surprising coincidence if a lab-leak pandemic happened to first be detected at a raccoon-dog stall in a wet market."
+  },
+  {
+   "id": "t1",
+   "expect": "unsupported",
+   "note": "the raccoon-dog sentence read the wrong way round: the review argues the opposite",
+   "text": "The review argues that first detection at a raccoon-dog stall points to a laboratory leak."
+  },
+  {
+   "id": "t2",
+   "expect": "supported",
+   "note": "a claim about a claim: the review reports that Rootclaim argued this",
+   "text": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident linked to gain-of-function research."
+  },
+  {
+   "id": "t3",
+   "expect": "unsupported",
+   "note": "the same claim with the attribution removed: the review only reports it, and rejects it",
+   "text": "The outbreak was caused by a laboratory accident linked to gain-of-function research."
+  },
+  {
+   "id": "t4",
+   "expect": "supported",
+   "note": "a reported ruling: the review states that both judges found a natural origin more likely",
+   "text": "Both judges of the Rootclaim debate found a natural origin more likely."
+  },
+  {
+   "id": "t5",
+   "expect": "unsupported",
+   "note": "a reported argument credited to the wrong people: commentators argued it, the review's authors reject it",
+   "text": "The review's authors conclude that the market was only a place where a virus that was already circulating was amplified."
+  },
+  {
+   "id": "t6",
+   "expect": "supported",
+   "note": "the same reported argument credited correctly, with the review's rejection",
+   "text": "Some commentators have argued that the market was only a site of amplification, a view the review rejects."
+  },
+  {
+   "id": "t7",
+   "expect": "supported",
+   "note": "a reported finding credited correctly (Neumark and Wascher argued it)",
+   "text": "Neumark and Wascher argued that employment in New Jersey fast-food restaurants fell after the 1992 minimum-wage increase."
+  },
+  {
+   "id": "t8",
+   "expect": "unsupported",
+   "note": "the reported finding stated as fact: the paper reports a dispute and sides against it",
+   "text": "Employment in New Jersey fast-food restaurants fell after the 1992 minimum-wage increase."
+  },
+  {
+   "id": "t9",
+   "expect": "unsupported",
+   "note": "the paper's own judgement turned into its opposite",
+   "text": "The paper finds the payroll re-analysis more reliable than the original survey."
+  }
+ ]
+}

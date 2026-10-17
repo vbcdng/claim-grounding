@@ -1,0 +1,9 @@
+The market cluster and the origin of the 2019 outbreak: a constructed review
+
+This is a constructed test document for a stability study of the claim checker. It is not a real publication. It was written to test how a checker reads an argument, an argument the writer reports from someone else, and a claim about a claim.
+
+The earliest known cases of the 2019 outbreak clustered around the Huanan seafood market in Wuhan. The environmental samples that tested positive were concentrated in the south-western corner of the market, where stalls sold live wild animals, including raccoon dogs. We argue that this pattern favours a natural spillover from animals sold at the market. Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.
+
+In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research. Both judges of that debate ruled against Rootclaim and found a natural origin more likely. We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence.
+
+Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors. We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market.

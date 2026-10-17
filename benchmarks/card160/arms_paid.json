@@ -1,0 +1,92 @@
+{
+ "description": "stability study arms for host paid; baseline card160paidr1",
+ "arms": [
+  {
+   "name": "paid: first run (its own accuracy; nothing to compare)",
+   "kind": "baseline",
+   "run": "card160paidr1",
+   "baseline": "card160paidr1"
+  },
+  {
+   "name": "paid: r2 against r1 (nothing changed)",
+   "kind": "same",
+   "role": "repeat",
+   "run": "card160paidr2",
+   "baseline": "card160paidr1"
+  },
+  {
+   "name": "paid: r3 against r1 (nothing changed)",
+   "kind": "same",
+   "role": "repeat",
+   "run": "card160paidr3",
+   "baseline": "card160paidr1"
+  },
+  {
+   "name": "paid: r3 against r2 (nothing changed)",
+   "kind": "same",
+   "role": "repeat",
+   "run": "card160paidr3",
+   "baseline": "card160paidr2"
+  },
+  {
+   "name": "paid: both verdict instructions reworded with the same meaning",
+   "kind": "same",
+   "run": "card160paidprompt",
+   "baseline": "card160paidr1",
+   "repeats": [
+    "card160paidr2",
+    "card160paidr3"
+   ]
+  },
+  {
+   "name": "paid: the evidence handed to the judge in a different order",
+   "kind": "same",
+   "run": "card160paidshuffle",
+   "baseline": "card160paidr1",
+   "repeats": [
+    "card160paidr2",
+    "card160paidr3"
+   ]
+  },
+  {
+   "name": "paid: a note in the instruction: the writer is confident the claim is supported",
+   "kind": "same",
+   "run": "card160paidbias",
+   "baseline": "card160paidr1",
+   "repeats": [
+    "card160paidr2",
+    "card160paidr3"
+   ]
+  },
+  {
+   "name": "paid: a note in the instruction: a reviewer doubts the claim is supported",
+   "kind": "same",
+   "run": "card160paiddoubt",
+   "baseline": "card160paidr1",
+   "repeats": [
+    "card160paidr2",
+    "card160paidr3"
+   ]
+  },
+  {
+   "name": "paid: every judged claim reworded with the same meaning",
+   "kind": "reworded",
+   "run": "card160paidreworded",
+   "baseline": "card160paidr1",
+   "repeats": [
+    "card160paidr2",
+    "card160paidr3"
+   ]
+  },
+  {
+   "name": "paid: 53 claims an earlier run judged supported, turned into their opposite",
+   "kind": "negated",
+   "run": "card160paidnegated",
+   "baseline": "card160paidr1",
+   "repeats": [
+    "card160paidr2",
+    "card160paidr3"
+   ]
+  }
+ ]
+}

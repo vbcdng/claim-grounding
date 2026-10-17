@@ -1,0 +1,2 @@
+origin = origin_debate_review.txt
+wage = minimum_wage_dispute.txt

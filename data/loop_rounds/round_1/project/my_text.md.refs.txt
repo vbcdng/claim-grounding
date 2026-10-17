@@ -1,0 +1,8 @@
+karger2023 = karger2023.pdf
+kucinskas2025 = kucinskas2025.txt
+rosenberg2024 = rosenberg2024.txt
+mellers2023 = mellers2023.pdf
+gruetzemacher2021 = gruetzemacher2021.pdf
+steinhardt2023 = steinhardt2023.txt
+fri2026 = fri2026.txt
+lohn2026 = lohn2026.pdf

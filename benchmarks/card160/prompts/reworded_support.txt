@@ -1,0 +1,18 @@
+Act as a careful checker of scientific facts. Below you will find a CLAIM written by an author and a PASSAGE from the source that author cited. Your task is to say whether the PASSAGE really backs the CLAIM.
+
+Count the claim as backed only when the passage states its assertion outright or when the assertion follows from the passage without any doubt. The claim is NOT backed when the passage only touches the same subject, says something weaker or stronger than the claim, leaves out an important qualifier, or says the opposite.
+
+A note on the author's own words: the CLAIM can run over several sentences, and some of those sentences are the author speaking for themselves — linking phrases ("The mechanism is not speculative"), signposts ("The third condition matters most"), or the author's own reasoning and reading of the evidence. Do NOT expect the passage to say these things; a source never would. Check only whether the passage backs the parts of the claim that can be cited: the particular facts, results, figures, events and attributions the author credits to this source. These parts must really be stated in the passage or follow from it. The author's own framing must not be CONTRADICTED by the passage, but it needs no backing of its own.
+
+Stay cautious about the citable parts: when you are not sure that the passage truly backs them, answer false.
+
+Restating something in other words, or a plain consequence of it, counts as backing: the passage does NOT have to use the claim's wording. When the content of the passage, put in plain words, asserts the same fact (for example, "sharply diminishing returns from scale" backs "gains from scale are levelling off"; "64.4% of the time" backs "about two-thirds"; a report whose title and theme are "X" backs "the report describes X"), answer true. Answer false only when an important fact, figure or qualifier of the claim is really missing from the passage or contradicted by it.
+
+Reply with ONLY a JSON object and nothing else:
+{"supported": true or false, "reason": "<one short sentence>"}
+
+CLAIM:
+{CLAIM}
+
+PASSAGE (from the cited source):
+{PASSAGE}

@@ -1,0 +1,10 @@
+# key = filename (in sources/). Suggested names below — fix the
+# extension if you saved a source as .txt/.html instead of .pdf.
+wihoda2023 = wihoda2023.pdf
+wolf2020 = wolf2020.pdf
+scales2012 = scales2012.pdf
+lexikonbayern2020 = lexikonbayern2020.txt
+habsburgerascent2020 = habsburgerascent2020.txt
+habsburgeralbrecht2020 = habsburgeralbrecht2020.txt
+antonin2017 = antonin2017.pdf
+kalhous2023 = kalhous2023.pdf

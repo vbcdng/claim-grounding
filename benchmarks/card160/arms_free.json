@@ -1,0 +1,55 @@
+{
+ "description": "stability study arms for host free; baseline card160freer1",
+ "arms": [
+  {
+   "name": "free: first run (its own accuracy; nothing to compare)",
+   "kind": "baseline",
+   "run": "card160freer1",
+   "baseline": "card160freer1"
+  },
+  {
+   "name": "free: r2 against r1 (nothing changed)",
+   "kind": "same",
+   "role": "repeat",
+   "run": "card160freer2",
+   "baseline": "card160freer1"
+  },
+  {
+   "name": "free: r3 against r1 (nothing changed)",
+   "kind": "same",
+   "role": "repeat",
+   "run": "card160freer3",
+   "baseline": "card160freer1"
+  },
+  {
+   "name": "free: r3 against r2 (nothing changed)",
+   "kind": "same",
+   "role": "repeat",
+   "run": "card160freer3",
+   "baseline": "card160freer2"
+  },
+  {
+   "name": "free first run against paid Gemma's first run",
+   "kind": "same",
+   "role": "judges",
+   "run": "card160freer1",
+   "baseline": "card160paidr1"
+  },
+  {
+   "name": "free against paid Gemma, all three runs of each, claim by claim",
+   "kind": "judges",
+   "runs": [
+    "card160freer1",
+    "card160freer2",
+    "card160freer3"
+   ],
+   "baseline_runs": [
+    "card160paidr1",
+    "card160paidr2",
+    "card160paidr3"
+   ],
+   "run": "card160freer1",
+   "baseline": "card160paidr1"
+  }
+ ]
+}

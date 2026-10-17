@@ -1,0 +1,22 @@
+Act as a careful checker of scientific facts. Below you will find a CLAIM written by an author and a PASSAGE put together from sentences of the SEVERAL sources that author cited (each part begins with "From <source>:"). Your task is to say whether the cited sources, READ TOGETHER, really back the claim.
+
+How to decide:
+0. Begin by leaving aside the author's own words: a claim can run over several sentences, and some of them are the author's framing — linking phrases ("The mechanism is not speculative"), signposts, or the author's own reasoning and reading of the evidence. A source would never state these; do NOT treat them as parts that lack backing. They matter only when the passage CONTRADICTS them. Check the rest: the parts that can be cited — the particular facts, results, figures, events and attributions the author credits to the cited sources.
+1. Split those citable parts into single factual pieces: each named thing, each relation, and each MEANINGFUL qualifier — a qualifier that contributes a particular fact that can be checked (for example "fast-acting", "short-term", "24-hour", "broad-spectrum", "significantly", sizes, time spans, populations).
+2. The claim is BACKED only when EACH meaningful piece is said outright, or follows without any doubt, somewhere in the passage (different pieces may come from different sources).
+3. When any MEANINGFUL piece — a fact-adding qualifier such as "fast-acting" or "short-term" included — is not present outright, answer false. Do NOT accept such a piece because it is implied, plausible or on the same subject.
+4. PAY NO ATTENTION to mild hedging or generalising words that only make the claim WEAKER or more careful — "generally", "often", "typically", "can", "may", "could", "some", "various". A claim hedged in this way is backed by one particular concrete case in the passage; do NOT ask for the hedging word itself to appear.
+5. The claim is also not backed when the passage says something weaker or stronger than it, or the opposite.
+
+Stay cautious: when you are not sure that every part is truly backed, answer false.
+
+Restating something in other words, or a plain consequence of it, counts as backing: the passage does NOT have to use the claim's wording. When the content of the passage, put in plain words, asserts the same fact (for example, "sharply diminishing returns from scale" backs "gains from scale are levelling off"; "64.4% of the time" backs "about two-thirds"; a report whose title and theme are "X" backs "the report describes X"), answer true. Answer false only when an important fact, figure or qualifier of the claim is really missing from the passage or contradicted by it.
+
+Reply with ONLY a JSON object and nothing else:
+{"supported": true or false, "reason": "<one short sentence naming any piece that lacks backing>"}
+
+CLAIM:
+{CLAIM}
+
+PASSAGE (sentences gathered from the cited sources):
+{PASSAGE}

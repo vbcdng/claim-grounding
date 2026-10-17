@@ -1,0 +1,818 @@
+{
+  "text_claims": [
+    {
+      "id": "t0",
+      "text": "It would be an even more surprising coincidence if a lab-leak pandemic happened to first be detected at a raccoon-dog stall in a wet market.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "supported",
+      "method": "llm",
+      "cosine": 0.8472,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "supported": true,
+        "sentence": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.",
+        "page": 1,
+        "snippet": "Under a laboratory-leak scenario, the virus would",
+        "cosine": 0.8472,
+        "reason": "The passage explicitly states that a lab-leak scenario would make the virus coming to notice first at a raccoon-dog stall a 'far more surprising coincidence'.",
+        "window": "We argue that this pattern favours a natural spillover from animals sold at the market. Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin. In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "supported": true,
+          "sentence": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.",
+          "page": 1,
+          "snippet": "Under a laboratory-leak scenario, the virus would",
+          "cosine": 0.8472,
+          "reason": "The passage explicitly states that a lab-leak scenario would make the virus coming to notice first at a raccoon-dog stall a 'far more surprising coincidence'.",
+          "window": "We argue that this pattern favours a natural spillover from animals sold at the market. Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin. In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states that a lab-leak scenario would make the virus coming to notice first at a raccoon-dog stall a 'far more surprising coincidence'.",
+      "covering": {
+        "covered": [
+          {
+            "component": "a lab-leak pandemic first being detected at a raccoon-dog stall in a wet market would be a surprising coincidence",
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "sentence": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.",
+            "page": 1,
+            "snippet": "Under a laboratory-leak scenario, the virus would"
+          }
+        ],
+        "uncovered": [],
+        "common_knowledge": [],
+        "pick_verified": true,
+        "spans": [
+          {
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "text": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.",
+            "n_used": 1
+          }
+        ]
+      },
+      "covering_checked": true,
+      "proof_state": "full",
+      "partial_checked": true
+    },
+    {
+      "id": "t1",
+      "text": "The review argues that first detection at a raccoon-dog stall points to a laboratory leak.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "unsupported",
+      "method": "llm_fulltext",
+      "cosine": null,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "cosine": null,
+        "via": "llm_fulltext",
+        "evidence_cap": {
+          "cap": 8,
+          "pooled": 1,
+          "shown": 1,
+          "cut": 0,
+          "n_sents_in_source": 12,
+          "cut_sentences": []
+        },
+        "supported": false,
+        "sentence": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.",
+        "page": 1,
+        "snippet": "Under a laboratory-leak scenario, the virus would",
+        "reason": "The passage states that first detection at a raccoon-dog stall would be 'surprising' under a lab leak scenario, rather than arguing that it 'points to' one.",
+        "votes": "2-0",
+        "missing_parts": null,
+        "window": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "cosine": null,
+          "via": "llm_fulltext",
+          "evidence_cap": {
+            "cap": 8,
+            "pooled": 1,
+            "shown": 1,
+            "cut": 0,
+            "n_sents_in_source": 12,
+            "cut_sentences": []
+          },
+          "supported": false,
+          "sentence": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin.",
+          "page": 1,
+          "snippet": "Under a laboratory-leak scenario, the virus would",
+          "reason": "The passage states that first detection at a raccoon-dog stall would be 'surprising' under a lab leak scenario, rather than arguing that it 'points to' one.",
+          "votes": "2-0",
+          "missing_parts": null,
+          "window": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage states that first detection at a raccoon-dog stall would be 'surprising' under a lab leak scenario, rather than arguing that it 'points to' one.",
+      "judge_missing_parts": [
+        "The review argues that first detection at a raccoon-dog stall points to a laboratory leak."
+      ],
+      "citation_scope": {
+        "scope": "full",
+        "scoped_assertion": "",
+        "reason": "The passage explicitly attributes an argument to the cited review ('The review argues that...'), which triggers the attribution test for a 'full' scope.",
+        "model": "openrouter/google/gemma-4-31b-it",
+        "prompt_sha": "dc487e4f"
+      }
+    },
+    {
+      "id": "t2",
+      "text": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident linked to gain-of-function research.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "supported",
+      "method": "llm",
+      "cosine": 0.9895,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "supported": true,
+        "sentence": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+        "page": 1,
+        "snippet": "In the 2024 Rootclaim debate, Rootclaim argued",
+        "cosine": 0.9895,
+        "reason": "The passage explicitly states that Rootclaim argued the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+        "window": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin. In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research. Both judges of that debate ruled against Rootclaim and found a natural origin more likely."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "supported": true,
+          "sentence": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+          "page": 1,
+          "snippet": "In the 2024 Rootclaim debate, Rootclaim argued",
+          "cosine": 0.9895,
+          "reason": "The passage explicitly states that Rootclaim argued the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+          "window": "Under a laboratory-leak scenario, the virus would have had to come to notice first at a raccoon-dog stall in a wet market, which would be a far more surprising coincidence than under a natural origin. In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research. Both judges of that debate ruled against Rootclaim and found a natural origin more likely."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states that Rootclaim argued the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+      "covering": {
+        "covered": [
+          {
+            "component": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident linked to gain-of-function research",
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "sentence": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+            "page": 1,
+            "snippet": "In the 2024 Rootclaim debate, Rootclaim argued"
+          }
+        ],
+        "uncovered": [],
+        "common_knowledge": [],
+        "pick_verified": true,
+        "spans": [
+          {
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "text": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+            "n_used": 1
+          }
+        ]
+      },
+      "covering_checked": true,
+      "proof_state": "full",
+      "partial_checked": true
+    },
+    {
+      "id": "t3",
+      "text": "The outbreak was caused by a laboratory accident linked to gain-of-function research.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "unsupported",
+      "method": "llm_fulltext",
+      "cosine": null,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "cosine": null,
+        "via": "llm_fulltext",
+        "evidence_cap": {
+          "cap": 8,
+          "pooled": 1,
+          "shown": 1,
+          "cut": 0,
+          "n_sents_in_source": 12,
+          "cut_sentences": []
+        },
+        "supported": false,
+        "sentence": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+        "page": 1,
+        "snippet": "In the 2024 Rootclaim debate, Rootclaim argued",
+        "reason": "The passage only attributes the claim to a specific party (Rootclaim) rather than stating the cause of the outbreak as a fact.",
+        "votes": "2-0",
+        "missing_parts": null,
+        "window": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "cosine": null,
+          "via": "llm_fulltext",
+          "evidence_cap": {
+            "cap": 8,
+            "pooled": 1,
+            "shown": 1,
+            "cut": 0,
+            "n_sents_in_source": 12,
+            "cut_sentences": []
+          },
+          "supported": false,
+          "sentence": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research.",
+          "page": 1,
+          "snippet": "In the 2024 Rootclaim debate, Rootclaim argued",
+          "reason": "The passage only attributes the claim to a specific party (Rootclaim) rather than stating the cause of the outbreak as a fact.",
+          "votes": "2-0",
+          "missing_parts": null,
+          "window": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage only attributes the claim to a specific party (Rootclaim) rather than stating the cause of the outbreak as a fact.",
+      "judge_missing_parts": [
+        "The outbreak was caused by a laboratory accident linked to gain-of-function research."
+      ],
+      "citation_scope": {
+        "scope": "full",
+        "scoped_assertion": "",
+        "reason": "The passage makes a factual assertion about the cause of an outbreak and attributes this claim to the cited source.",
+        "model": "openrouter/google/gemma-4-31b-it",
+        "prompt_sha": "dc487e4f"
+      }
+    },
+    {
+      "id": "t4",
+      "text": "Both judges of the Rootclaim debate found a natural origin more likely.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "supported",
+      "method": "llm",
+      "cosine": 0.9779,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "supported": true,
+        "sentence": "Both judges of that debate ruled against Rootclaim and found a natural origin more likely.",
+        "page": 1,
+        "snippet": "Both judges of that debate ruled against",
+        "cosine": 0.9779,
+        "reason": "The passage explicitly states that both judges ruled against Rootclaim and found a natural origin more likely.",
+        "window": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research. Both judges of that debate ruled against Rootclaim and found a natural origin more likely. We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "supported": true,
+          "sentence": "Both judges of that debate ruled against Rootclaim and found a natural origin more likely.",
+          "page": 1,
+          "snippet": "Both judges of that debate ruled against",
+          "cosine": 0.9779,
+          "reason": "The passage explicitly states that both judges ruled against Rootclaim and found a natural origin more likely.",
+          "window": "In the 2024 Rootclaim debate, Rootclaim argued that the outbreak was caused by a laboratory accident connected to gain-of-function research. Both judges of that debate ruled against Rootclaim and found a natural origin more likely. We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states that both judges ruled against Rootclaim and found a natural origin more likely.",
+      "covering": {
+        "covered": [
+          {
+            "component": "Both judges of the Rootclaim debate found a natural origin more likely",
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "sentence": "Both judges of that debate ruled against Rootclaim and found a natural origin more likely.",
+            "page": 1,
+            "snippet": "Both judges of that debate ruled against"
+          }
+        ],
+        "uncovered": [],
+        "common_knowledge": [],
+        "pick_verified": true,
+        "spans": [
+          {
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "text": "Both judges of that debate ruled against Rootclaim and found a natural origin more likely.",
+            "n_used": 1
+          }
+        ]
+      },
+      "covering_checked": true,
+      "proof_state": "full",
+      "partial_checked": true
+    },
+    {
+      "id": "t5",
+      "text": "The review's authors conclude that the market was only a place where a virus that was already circulating was amplified.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "unsupported",
+      "method": "llm_fulltext",
+      "cosine": 0.922,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "supported": false,
+        "sentence": "Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors.",
+        "page": 1,
+        "snippet": "Some commentators have argued that the market",
+        "cosine": 0.922,
+        "reason": "The passage explicitly states that the authors 'do not accept' the view that the market was merely a site of amplification.",
+        "window": "We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence. Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors. We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "supported": false,
+          "sentence": "Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors.",
+          "page": 1,
+          "snippet": "Some commentators have argued that the market",
+          "cosine": 0.922,
+          "reason": "The passage explicitly states that the authors 'do not accept' the view that the market was merely a site of amplification.",
+          "window": "We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence. Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors. We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market."
+        }
+      ],
+      "votes": null,
+      "reason": "LLM found no sentence in the full source supporting the claim",
+      "judge_missing_parts": [
+        "The review's authors conclude that the market was only a place where a virus that was already circulating was amplified."
+      ],
+      "citation_scope": {
+        "scope": "full",
+        "scoped_assertion": "",
+        "reason": "The passage explicitly attributes a conclusion to the authors of the cited review ('The review's authors conclude that...'), which triggers the attribution test for a 'full' scope.",
+        "model": "openrouter/google/gemma-4-31b-it",
+        "prompt_sha": "dc487e4f"
+      }
+    },
+    {
+      "id": "t6",
+      "text": "Some commentators have argued that the market was only a site of amplification, a view the review rejects.",
+      "markers": [
+        "origin"
+      ],
+      "paper_ids": [
+        "2208e87519669339ce96341b654416b3137070ef"
+      ],
+      "verdict": "supported",
+      "method": "llm",
+      "cosine": 0.8742,
+      "evidence": {
+        "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+        "source_title": "origin_debate_review",
+        "supported": true,
+        "sentence": "Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors.",
+        "page": 1,
+        "snippet": "Some commentators have argued that the market",
+        "cosine": 0.8742,
+        "reason": "The passage explicitly states that some commentators argued the market was merely a site of amplification and that the authors do not accept this view.",
+        "window": "We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence. Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors. We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market."
+      },
+      "evidences": [
+        {
+          "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+          "source_title": "origin_debate_review",
+          "supported": true,
+          "sentence": "Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors.",
+          "page": 1,
+          "snippet": "Some commentators have argued that the market",
+          "cosine": 0.8742,
+          "reason": "The passage explicitly states that some commentators argued the market was merely a site of amplification and that the authors do not accept this view.",
+          "window": "We agree with the judges and do not consider the gain-of-function hypothesis supported by the available evidence. Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors. We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states that some commentators argued the market was merely a site of amplification and that the authors do not accept this view.",
+      "covering": {
+        "covered": [
+          {
+            "component": "commentators argued the market was only a site of amplification",
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "sentence": "Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors.",
+            "page": 1,
+            "snippet": "Some commentators have argued that the market"
+          },
+          {
+            "component": "the review rejects this view",
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "sentence": "We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market.",
+            "page": 1,
+            "snippet": "We do not accept this view, because"
+          }
+        ],
+        "uncovered": [],
+        "common_knowledge": [],
+        "pick_verified": true,
+        "spans": [
+          {
+            "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+            "source_title": "origin_debate_review",
+            "text": "Some commentators have argued that the market was merely a site of amplification, where a virus that was already circulating spread among visitors. We do not accept this view, because the positive samples were concentrated at the wildlife stalls rather than spread evenly across the market.",
+            "n_used": 2
+          }
+        ]
+      },
+      "covering_checked": true,
+      "proof_state": "full",
+      "partial_checked": true
+    },
+    {
+      "id": "t7",
+      "text": "Neumark and Wascher argued that employment in New Jersey fast-food restaurants fell after the 1992 minimum-wage increase.",
+      "markers": [
+        "wage"
+      ],
+      "paper_ids": [
+        "9db5391c82b90db987a89520a8c70a3f8888525e"
+      ],
+      "verdict": "supported",
+      "method": "llm",
+      "cosine": 0.9479,
+      "evidence": {
+        "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+        "source_title": "minimum_wage_dispute",
+        "supported": true,
+        "sentence": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+        "page": 1,
+        "snippet": "Neumark and Wascher later re-analysed the question",
+        "cosine": 0.9479,
+        "reason": "The passage explicitly states that Neumark and Wascher argued employment in New Jersey fast-food restaurants did fall after the increase.",
+        "window": "Card and Krueger surveyed fast-food restaurants in New Jersey and in neighbouring Pennsylvania before and after the increase, and reported that employment in the New Jersey restaurants did not fall. Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase. We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them."
+      },
+      "evidences": [
+        {
+          "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+          "source_title": "minimum_wage_dispute",
+          "supported": true,
+          "sentence": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+          "page": 1,
+          "snippet": "Neumark and Wascher later re-analysed the question",
+          "cosine": 0.9479,
+          "reason": "The passage explicitly states that Neumark and Wascher argued employment in New Jersey fast-food restaurants did fall after the increase.",
+          "window": "Card and Krueger surveyed fast-food restaurants in New Jersey and in neighbouring Pennsylvania before and after the increase, and reported that employment in the New Jersey restaurants did not fall. Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase. We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states that Neumark and Wascher argued employment in New Jersey fast-food restaurants did fall after the increase.",
+      "covering": {
+        "covered": [
+          {
+            "component": "Neumark and Wascher argued that employment in New Jersey fast-food restaurants fell after the 1992 minimum-wage increase",
+            "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+            "source_title": "minimum_wage_dispute",
+            "sentence": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+            "page": 1,
+            "snippet": "Neumark and Wascher later re-analysed the question",
+            "via": "escalation"
+          }
+        ],
+        "uncovered": [],
+        "common_knowledge": [],
+        "pick_verified": true,
+        "spans": [
+          {
+            "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+            "source_title": "minimum_wage_dispute",
+            "text": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+            "n_used": 1
+          }
+        ]
+      },
+      "covering_checked": true,
+      "proof_state": "full",
+      "partial_checked": true
+    },
+    {
+      "id": "t8",
+      "text": "Employment in New Jersey fast-food restaurants fell after the 1992 minimum-wage increase.",
+      "markers": [
+        "wage"
+      ],
+      "paper_ids": [
+        "9db5391c82b90db987a89520a8c70a3f8888525e"
+      ],
+      "verdict": "supported",
+      "method": "llm",
+      "cosine": 0.9006,
+      "evidence": {
+        "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+        "source_title": "minimum_wage_dispute",
+        "supported": true,
+        "sentence": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+        "page": 1,
+        "snippet": "Neumark and Wascher later re-analysed the question",
+        "cosine": 0.9006,
+        "reason": "The passage explicitly states that Neumark and Wascher argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+        "window": "Card and Krueger surveyed fast-food restaurants in New Jersey and in neighbouring Pennsylvania before and after the increase, and reported that employment in the New Jersey restaurants did not fall. Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase. We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them."
+      },
+      "evidences": [
+        {
+          "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+          "source_title": "minimum_wage_dispute",
+          "supported": true,
+          "sentence": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+          "page": 1,
+          "snippet": "Neumark and Wascher later re-analysed the question",
+          "cosine": 0.9006,
+          "reason": "The passage explicitly states that Neumark and Wascher argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+          "window": "Card and Krueger surveyed fast-food restaurants in New Jersey and in neighbouring Pennsylvania before and after the increase, and reported that employment in the New Jersey restaurants did not fall. Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase. We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states that Neumark and Wascher argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+      "covering": {
+        "covered": [
+          {
+            "component": "Employment in New Jersey fast-food restaurants fell after the 1992 minimum-wage increase",
+            "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+            "source_title": "minimum_wage_dispute",
+            "sentence": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+            "page": 1,
+            "snippet": "Neumark and Wascher later re-analysed the question"
+          }
+        ],
+        "uncovered": [],
+        "common_knowledge": [],
+        "pick_verified": true,
+        "spans": [
+          {
+            "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+            "source_title": "minimum_wage_dispute",
+            "text": "Neumark and Wascher later re-analysed the question with payroll records from a different set of restaurants and argued that employment in New Jersey fast-food restaurants did fall after the increase.",
+            "n_used": 1
+          }
+        ]
+      },
+      "covering_checked": true,
+      "proof_state": "full",
+      "partial_checked": true
+    },
+    {
+      "id": "t9",
+      "text": "The paper finds the payroll re-analysis more reliable than the original survey.",
+      "markers": [
+        "wage"
+      ],
+      "paper_ids": [
+        "9db5391c82b90db987a89520a8c70a3f8888525e"
+      ],
+      "verdict": "unsupported",
+      "method": "llm_fulltext",
+      "cosine": null,
+      "evidence": {
+        "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+        "source_title": "minimum_wage_dispute",
+        "cosine": null,
+        "via": "llm_fulltext",
+        "evidence_cap": {
+          "cap": 8,
+          "pooled": 1,
+          "shown": 1,
+          "cut": 0,
+          "n_sents_in_source": 8,
+          "cut_sentences": []
+        },
+        "supported": false,
+        "sentence": "We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them.",
+        "page": 1,
+        "snippet": "We consider the payroll re-analysis less reliable",
+        "reason": "The passage explicitly states the payroll re-analysis was 'less reliable' than the original survey, contradicting the claim.",
+        "votes": "2-0",
+        "missing_parts": null,
+        "window": "We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them."
+      },
+      "evidences": [
+        {
+          "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+          "source_title": "minimum_wage_dispute",
+          "cosine": null,
+          "via": "llm_fulltext",
+          "evidence_cap": {
+            "cap": 8,
+            "pooled": 1,
+            "shown": 1,
+            "cut": 0,
+            "n_sents_in_source": 8,
+            "cut_sentences": []
+          },
+          "supported": false,
+          "sentence": "We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them.",
+          "page": 1,
+          "snippet": "We consider the payroll re-analysis less reliable",
+          "reason": "The passage explicitly states the payroll re-analysis was 'less reliable' than the original survey, contradicting the claim.",
+          "votes": "2-0",
+          "missing_parts": null,
+          "window": "We consider the payroll re-analysis less reliable than the original survey, because the payroll records were collected after the dispute had started and from restaurants that volunteered them."
+        }
+      ],
+      "votes": null,
+      "reason": "The passage explicitly states the payroll re-analysis was 'less reliable' than the original survey, contradicting the claim.",
+      "judge_missing_parts": [
+        "The paper finds the payroll re-analysis more reliable than the original survey."
+      ],
+      "citation_scope": {
+        "scope": "full",
+        "scoped_assertion": "",
+        "reason": "The passage attributes a specific finding ('the paper finds...') to the cited source, which triggers the attribution test for 'full' scope.",
+        "model": "openrouter/google/gemma-4-31b-it",
+        "prompt_sha": "dc487e4f"
+      }
+    }
+  ],
+  "omitted": [],
+  "coverage": {
+    "per_source": {
+      "2208e87519669339ce96341b654416b3137070ef": {
+        "title": "origin_debate_review",
+        "total_source_claims": 0,
+        "used": 0,
+        "cited_by": 7,
+        "citing_supported": 4,
+        "supported": 4
+      },
+      "9db5391c82b90db987a89520a8c70a3f8888525e": {
+        "title": "minimum_wage_dispute",
+        "total_source_claims": 0,
+        "used": 0,
+        "cited_by": 3,
+        "citing_supported": 2,
+        "supported": 2
+      }
+    },
+    "totals": {
+      "claims": 10,
+      "supported": 6,
+      "unsupported": 4,
+      "own": 0,
+      "omitted": 0
+    }
+  },
+  "metadata": {
+    "text_file": "data/card160_texts/hard/my_text.md",
+    "sources_dir": "data/card160_texts/hard/sources",
+    "output_dir": "data/gate_card160paiddoubt_hard",
+    "model": "openrouter/google/gemma-4-31b-it",
+    "decompose": false,
+    "timestamp": "2026-10-13 14:22:44",
+    "marker_errors": [],
+    "processing_time_seconds": 6.2,
+    "source_hashes": {
+      "origin_debate_review.txt": "96ec2d59368e793e21de7fcca5fe4c3053487593",
+      "minimum_wage_dispute.txt": "236cc0b2abdef17d88d06e7d72e5da026598889e"
+    },
+    "source_reader": "pypdf 6.16.2",
+    "prompts": {
+      "fingerprints": {
+        "pt_arbiter_partial_map_prompt.txt": "9d3cdb1e2c08",
+        "pt_arbiter_v1.txt": "b2cbc6b2c2c8",
+        "pt_argmap_edges_prompt.txt": "657cf5801b86",
+        "pt_argmap_variants_prompt.txt": "fee99934e459",
+        "pt_citation_scope_v1.txt": "dc487e4fce90",
+        "pt_combined_judgment_prompt.txt": "103eb4e838c2",
+        "pt_component_split_prompt.txt": "104c6ba9985a",
+        "pt_covering_set_prompt.txt": "8f6ace1547dd",
+        "pt_crux_confirm_prompt.txt": "3f4fb698e050",
+        "pt_dedup_confirm_prompt.txt": "4b9090aacaa9",
+        "pt_evidence_sufficiency_v1.txt": "b60a4d34bfc9",
+        "pt_extract_claims_prompt.txt": "26d9bf01a0bb",
+        "pt_extract_evidence_prompt.txt": "0de5aede52dd",
+        "pt_independence_confirm_prompt.txt": "c85a1ed933b5",
+        "pt_missing_parts_prompt.txt": "d147273d01a7",
+        "pt_origin_attribution_prompt.txt": "e062b8490d55",
+        "pt_own_claim_class_prompt.txt": "6bd35e6c50ed",
+        "pt_owner_grader_v1.txt": "70e4152900d5",
+        "pt_owner_grader_v2.txt": "91af07d7e9ff",
+        "pt_owner_grader_v3.txt": "1e6cfa7f18ae",
+        "pt_pick_verify_prompt.txt": "c14a3935b76b",
+        "pt_rewrite_claim_prompt.txt": "7b2cdd397d5a",
+        "pt_support_judgment_prompt.txt": "55e92aa125f6"
+      },
+      "overridden": [
+        "pt_combined_judgment_prompt.txt",
+        "pt_support_judgment_prompt.txt"
+      ],
+      "used": [
+        "pt_citation_scope_v1.txt",
+        "pt_combined_judgment_prompt.txt",
+        "pt_component_split_prompt.txt",
+        "pt_covering_set_prompt.txt",
+        "pt_extract_evidence_prompt.txt",
+        "pt_missing_parts_prompt.txt",
+        "pt_own_claim_class_prompt.txt",
+        "pt_pick_verify_prompt.txt",
+        "pt_support_judgment_prompt.txt"
+      ],
+      "count": 23
+    },
+    "llm_usage": {
+      "openrouter/google/gemma-4-31b-it": {
+        "calls": 1,
+        "prompt_tokens": 20,
+        "completion_tokens": 2,
+        "cost_usd": 0.0,
+        "cached_prompt_tokens": 0,
+        "by_purpose": {
+          "sanity_check": {
+            "calls": 1,
+            "prompt_tokens": 20,
+            "completion_tokens": 2,
+            "cost_usd": 0.0,
+            "cached_prompt_tokens": 0
+          }
+        }
+      }
+    },
+    "incremental": {
+      "reused": 10,
+      "changed": 0,
+      "previous_timestamp": "2026-10-13 14:22:29"
+    },
+    "own_split": {
+      "counts": {
+        "structural": 0,
+        "opinion": 0,
+        "fact": 0
+      },
+      "fact_ids": [],
+      "unparsed": 0
+    },
+    "citation_scope": {
+      "counts": {
+        "full": 4,
+        "methods": 0,
+        "concept": 0,
+        "related": 0
+      },
+      "scoped_ids": [],
+      "unparsed": 0
+    },
+    "number_check": {
+      "checked": 0,
+      "flagged": 0,
+      "flagged_ids": []
+    },
+    "llm_failures": {
+      "failed_calls": 0,
+      "claims_affected": []
+    }
+  },
+  "sources": [
+    {
+      "paper_id": "2208e87519669339ce96341b654416b3137070ef",
+      "key": "origin",
+      "filename": "origin_debate_review.txt",
+      "title": "origin_debate_review",
+      "num_claims": 0
+    },
+    {
+      "paper_id": "9db5391c82b90db987a89520a8c70a3f8888525e",
+      "key": "wage",
+      "filename": "minimum_wage_dispute.txt",
+      "title": "minimum_wage_dispute",
+      "num_claims": 0
+    }
+  ]
+}
