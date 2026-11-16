@@ -1,0 +1,10 @@
+{
+ "about": "Card S1 (card 395). What a step is given for one piece: only the fields of the named set reach a prompt (records.step_input). never_shown names what no set may hold; loading a set that names one of them stops the program. Plan page 'Apart sprint - build plan for both branches', section 'The extra fields of a piece: the exact form' (D1866).",
+ "never_shown": ["label", "label_kind", "label_quote", "label_reason", "label_source", "claim_label", "tags", "door", "separate_groups", "kind", "checkable", "attribution", "row_id"],
+ "sets": {
+  "piece_only": {"fields": ["piece", "cited_works"], "wrong_values": false},
+  "fields_v1": {"fields": ["piece", "certainty", "earlier_sentence", "cited_works"], "wrong_values": false},
+  "fields_v1_orig": {"fields": ["piece", "certainty", "earlier_sentence", "original_sentence", "cited_works"], "wrong_values": false},
+  "fields_v1_wrong": {"fields": ["piece", "certainty", "earlier_sentence", "cited_works"], "wrong_values": true}
+ }
+}

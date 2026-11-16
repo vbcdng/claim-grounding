@@ -1,0 +1,220 @@
+{
+ "name": "branch_a_chain",
+ "about": "Card 405, branch A's chain (round r8b_repaired, frozen in session 5): the rules of round 8 (chain.json) unchanged; on the 24 pieces citing the 19 works card 398 repaired from raw PDF bytes every step reads answers given on the repaired texts (repaired_r8b.py build writes answers/r8b/). Card 405, branch A's chain (round r8_unsure_first, frozen in session 3: as r7s_objection_soft_unsure, but where Sonnet is unsure and Opus's neutral answer rejects with a reason, that rejection comes before the soft objection rule; r7s replaced round 5 r5_veto_haiku_only, which replaced card 397's round 4). Sonnet's no (neutral question) is final. Where a Haiku reader named an objection, Opus is shown it (questions/objection_v1.md): if Opus confirms the difference is real and changes the meaning, the piece is left undecided (Fable 5.2's softer rule: the hard rule rejected one right main-group piece). Sonnet's yes otherwise stands only when (1) Haiku asked again with the reworded question does not say not supported, or Sonnet asked the same reworded question says supported, and (2) Haiku (neutral question) names no difference in detail and no contradiction backed by a quote from the work, unless Opus judged that objection mistaken or a fair rewording. Where Sonnet is unsure, Opus's neutral answer decides: not supported with a named reason rejects; supported passes only when the reworded Haiku was asked and did not object. Everything else is left undecided. Gemma is not used. Run: ./venv/bin/python3 benchmarks/sprint_checker/branch_a/repaired_r8b.py combine benchmarks/sprint_checker/branch_a/chain.json --out <decisions file> (it reads the 19 repaired works for the quote checks; plain combine.py would read the raw PDF bytes).",
+ "steps": {
+  "h": {
+   "model": "claude-code/haiku (subscription)",
+   "question": "shared/questions/neutral_v1.md and questions/neutral_v1_earlier.md",
+   "question_sha1": "b6b02399c5f70af66fe3390fb6e2f0f8e811b927",
+   "earlier_question_sha1": "85bf7fae7a2ceb578176e80bf6d8827fe855e48d",
+   "field_set": "piece_only (fields_v1 with neutral_v1_earlier.md gives the same prompt for 294 pieces, plus the earlier sentence for 6)"
+  },
+  "s": {
+   "model": "claude-code/sonnet (subscription)",
+   "question": "shared/questions/neutral_v1.md and questions/neutral_v1_earlier.md",
+   "question_sha1": "b6b02399c5f70af66fe3390fb6e2f0f8e811b927",
+   "earlier_question_sha1": "85bf7fae7a2ceb578176e80bf6d8827fe855e48d",
+   "field_set": "as h"
+  },
+  "h2": {
+   "model": "claude-code/haiku (subscription)",
+   "question": "questions/scope_strength_v1.md",
+   "question_sha1": "addd6437c2471ce9abeff8f03d2edfa9c636867c",
+   "field_set": "fields_v1",
+   "asked_on": "every piece where h or s answered supported (pick_yes.py; no label read)"
+  },
+  "s2": {
+   "model": "claude-code/sonnet (subscription)",
+   "question": "questions/scope_strength_v1.md",
+   "question_sha1": "addd6437c2471ce9abeff8f03d2edfa9c636867c",
+   "field_set": "fields_v1",
+   "asked_on": "every piece where h2 answered not supported and s did not answer not supported (pick_tiebreak.py; no label read)"
+  },
+  "o": {
+   "model": "claude-code/opus (subscription)",
+   "question": "questions/objection_v1.md (frozen in questions.lock)",
+   "field_set": "objection_v1 (field_sets_a.json)",
+   "asked_on": "every piece with an objection on record and Sonnet's neutral answer not 'not supported' (ask_objection.py list; 36 tuning and 39 held-back pieces; no label read)"
+  },
+  "on": {
+   "model": "claude-code/opus (subscription)",
+   "question": "shared/questions/neutral_v1.md",
+   "field_set": "piece_only",
+   "asked_on": "every piece where Sonnet's neutral answer is unsure: tuning asked by card 405 (pick_unsure.py), held-back taken from card 400's saved_answers_night/opus_piece_only.jsonl (merge_unsure.py)"
+  },
+  "h2u": {
+   "model": "claude-code/haiku (subscription)",
+   "question": "questions/scope_strength_v1.md",
+   "field_set": "fields_v1",
+   "asked_on": "Sonnet-unsure pieces where Opus (on) said supported and h2 was never asked (4 tuning, 1 held-back)"
+  }
+ },
+ "answers": {
+  "h": "answers/r8b/haiku_po_e.jsonl",
+  "s": "answers/r8b/sonnet_po_e.jsonl",
+  "h2": "answers/r8b/haiku_ss_po_e.jsonl",
+  "s2": "answers/r8b/sonnet_ss_po_e.jsonl",
+  "o": "answers/r8b/opus_objection.jsonl",
+  "on": "answers/r8b/opus_po_unsure_all.jsonl",
+  "h2u": "answers/r8b/haiku_ss_unsure.jsonl"
+ },
+ "rules": [
+  {
+   "name": "sonnet rejects",
+   "if": [
+    {
+     "step": "s",
+     "is": "not_supported"
+    }
+   ],
+   "then": "not_supported"
+  },
+  {
+   "name": "sonnet unsure, Opus rejects with a reason",
+   "if": [
+    {
+     "step": "s",
+     "is": "unsure"
+    },
+    {
+     "step": "on",
+     "is": "not_supported"
+    },
+    {
+     "step": "on",
+     "reason_in": [
+      "differs_in_detail",
+      "contradicted",
+      "unproven"
+     ]
+    }
+   ],
+   "then": "not_supported"
+  },
+  {
+   "name": "objection confirmed by Opus (soft)",
+   "if": [
+    {
+     "step": "o",
+     "is": "not_supported"
+    }
+   ],
+   "then": "undecided"
+  },
+  {
+   "name": "rewording veto, Sonnet does not lift it",
+   "if": [
+    {
+     "step": "h2",
+     "is": "not_supported"
+    },
+    {
+     "not": {
+      "step": "s2",
+      "is": "supported"
+     }
+    }
+   ],
+   "then": "undecided"
+  },
+  {
+   "name": "sonnet unsure, Opus approves, reworded Haiku does not object",
+   "if": [
+    {
+     "step": "s",
+     "is": "unsure"
+    },
+    {
+     "step": "on",
+     "is": "supported"
+    },
+    {
+     "any": [
+      {
+       "step": "h2",
+       "is": [
+        "supported",
+        "unsure"
+       ]
+      },
+      {
+       "step": "h2u",
+       "is": [
+        "supported",
+        "unsure"
+       ]
+      }
+     ]
+    }
+   ],
+   "then": "supported"
+  },
+  {
+   "name": "veto",
+   "if": [
+    {
+     "step": "s",
+     "is": "supported"
+    },
+    {
+     "not": {
+      "step": "o",
+      "is": "supported"
+     }
+    },
+    {
+     "any": [
+      {
+       "all": [
+        {
+         "step": "h",
+         "is": "not_supported"
+        },
+        {
+         "step": "h",
+         "reason_in": [
+          "differs_in_detail"
+         ]
+        },
+        {
+         "step": "h",
+         "has_detail": true
+        }
+       ]
+      },
+      {
+       "all": [
+        {
+         "step": "h",
+         "is": "not_supported"
+        },
+        {
+         "step": "h",
+         "reason_in": [
+          "contradicted"
+         ]
+        },
+        {
+         "step": "h",
+         "quote_in_work": true
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "then": "undecided"
+  },
+  {
+   "name": "sonnet approves",
+   "if": [
+    {
+     "step": "s",
+     "is": "supported"
+    }
+   ],
+   "then": "supported"
+  }
+ ],
+ "otherwise": "undecided"
+}

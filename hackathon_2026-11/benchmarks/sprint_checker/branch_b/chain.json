@@ -1,0 +1,188 @@
+{
+ "name": "b_chain",
+ "about": "Branch B's chain, frozen 15 Nov about 13:00 by card 398 (session 2026-11-15-lineSprB-10) on the orchestrating session's answer of 15 Nov 12:48: round 12's rules (drafts/r12.json, changes 1 to 3 of fable_answer_3.md on round 9, written down before scoring), Jev lines fixed t = 0.3 and u = 0.65 (not fitted). It replaces round 9 because, on the repaired cited texts (repaired_texts.md), the wrongly-passed limit is Sonnet alone's own count on the same texts (14 of 75, was 12 on the old texts), and round 12 then meets all three limits: 3 of 75 right pieces wrongly rejected (round 9: 6), 14 of 75 wrong pieces wrongly passed (round 9: 14), 23 of 150 undecided (round 9: 20). Round 12's own description: Round 12: changes 1, 2 and 3 of fable_answer_3.md on round 9 with the Jev line fixed at 0.3 (not fitted), written down before scoring (15 Nov 11:50). Change 1: every rejection of round 9 is final unless Opus answered supported (Opus unsure or no Opus answer does not block). Change 2: when Sonnet says not supported and round 9's Sonnet rule did not fire, the piece is rejected if Opus says not supported and Gemma or Haiku also does. Change 3: when Sonnet says unsure, the piece is rejected if Opus says not supported and neither Gemma nor Haiku said supported. Opus = shared neutral_v1.md, piece_only, the same question as card 400's held-back answers. Used only if it meets all three limits (4 or fewer of 75 wrongly rejected, 30 or fewer of 150 undecided, 12 or fewer of 75 wrongly passed); no partial mixes otherwise.",
+ "answers": {
+  "g": "answers/gemma.jsonl",
+  "h": "answers/haiku.jsonl",
+  "j": "answers/jev.jsonl",
+  "s": "answers/sonnet.jsonl",
+  "o": "answers/opus_neutral.jsonl"
+ },
+ "params": {
+  "t": 0.3,
+  "u": 0.65
+ },
+ "rules": [
+  {
+   "name": "cheap_reject",
+   "if": [
+    {
+     "step": "g",
+     "is": "not_supported"
+    },
+    {
+     "step": "g",
+     "reason_in": [
+      "differs_in_detail",
+      "contradicted"
+     ]
+    },
+    {
+     "step": "g",
+     "has_detail": true
+    },
+    {
+     "step": "g",
+     "quote_in_work": true
+    },
+    {
+     "step": "j",
+     "score_below": "$t"
+    },
+    {
+     "step": "h",
+     "is": "not_supported"
+    },
+    {
+     "not": {
+      "step": "o",
+      "is": "supported"
+     }
+    }
+   ],
+   "then": "not_supported"
+  },
+  {
+   "name": "haiku_reject",
+   "if": [
+    {
+     "step": "h",
+     "is": "not_supported"
+    },
+    {
+     "step": "h",
+     "reason_in": [
+      "differs_in_detail",
+      "contradicted"
+     ]
+    },
+    {
+     "step": "h",
+     "has_detail": true
+    },
+    {
+     "step": "h",
+     "quote_in_work": true
+    },
+    {
+     "step": "j",
+     "score_below": "$t"
+    },
+    {
+     "step": "g",
+     "is": "not_supported"
+    },
+    {
+     "not": {
+      "step": "o",
+      "is": "supported"
+     }
+    }
+   ],
+   "then": "not_supported"
+  },
+  {
+   "name": "sonnet_supported",
+   "if": [
+    {
+     "step": "s",
+     "is": "supported"
+    }
+   ],
+   "then": "supported"
+  },
+  {
+   "name": "sonnet_reject",
+   "if": [
+    {
+     "step": "s",
+     "is": "not_supported"
+    },
+    {
+     "step": "g",
+     "is": "not_supported"
+    },
+    {
+     "step": "h",
+     "is": "not_supported"
+    },
+    {
+     "not": {
+      "step": "j",
+      "score_at_least": "$u"
+     }
+    },
+    {
+     "not": {
+      "step": "o",
+      "is": "supported"
+     }
+    }
+   ],
+   "then": "not_supported"
+  },
+  {
+   "name": "sonnet_opus_reject",
+   "if": [
+    {
+     "step": "s",
+     "is": "not_supported"
+    },
+    {
+     "step": "o",
+     "is": "not_supported"
+    },
+    {
+     "any": [
+      {
+       "step": "g",
+       "is": "not_supported"
+      },
+      {
+       "step": "h",
+       "is": "not_supported"
+      }
+     ]
+    }
+   ],
+   "then": "not_supported"
+  },
+  {
+   "name": "unsure_opus_reject",
+   "if": [
+    {
+     "step": "s",
+     "is": "unsure"
+    },
+    {
+     "step": "o",
+     "is": "not_supported"
+    },
+    {
+     "not": {
+      "step": "g",
+      "is": "supported"
+     }
+    },
+    {
+     "not": {
+      "step": "h",
+      "is": "supported"
+     }
+    }
+   ],
+   "then": "not_supported"
+  }
+ ],
+ "otherwise": "undecided"
+}
